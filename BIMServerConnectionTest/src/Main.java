@@ -18,15 +18,15 @@ public class Main {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		try
 		{			
 			//ProtocolBuffersBimServerClientFactory factory = new ProtocolBuffersBimServerClientFactory("localhost", 8020, "admin@bimserver.org", "admin");
-			ProtocolBuffersBimServerClientFactory factory = new ProtocolBuffersBimServerClientFactory("localhost", 8020);
-			AuthenticationInfo ai = new UsernamePasswordAuthenticationInfo("ndbl@itu.dk", "password");
+			ProtocolBuffersBimServerClientFactory factory = new ProtocolBuffersBimServerClientFactory("pillar.christianharrington.com", 8020);
+			AuthenticationInfo ai = new UsernamePasswordAuthenticationInfo("cnha@itu.dk", "password");
 			
-			BimServerClient bimServerClient = factory.create(ai, "localhost");
+			BimServerClient bimServerClient = factory.create(ai, "pillar.christianharrington.com");
 			SProject addProject = bimServerClient.getServiceInterface().addProject("p" + new Random().nextInt());
 			Session session = bimServerClient.createSession();
 	
@@ -37,7 +37,7 @@ public class Main {
 		}
 		catch(Exception e)
 		{
-			System.out.println(e);
+			throw e;
 		}
 		/*ServiceInterface i = bimServerClient.getServiceInterface();
 		Integer downloadId = i.download(roid, "Ifc2x3", true);
