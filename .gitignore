@@ -1,6 +1,32 @@
+# OSX stuff
+.DS_store
+
+*.tm_properties
+
+# Java stuff
 *.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# Tex files
+
+*.aux
+*.log
+report.pdf
+*.synctex.gz
+*.toc
+*.ent
+*.out
+*.bbl
+*.fls
+*.fmt
+*.ini
+*.watcher_pid
+*.bbl
+*.blg
+*.lof
+*.pyg
+.*.tex
