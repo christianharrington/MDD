@@ -1,0 +1,16 @@
+Main{
+	BIMServer BIMServerCredentials {
+		address "localhost"
+		port "8020"
+		projectName "Unknown"
+		userName "ndbl@itu.dk"
+		password "password"
+	}
+	
+	Lamp {
+		Lamp {
+			GlobalID "Unknown"
+			PredefinedType "OLED"
+		}
+	}
+}

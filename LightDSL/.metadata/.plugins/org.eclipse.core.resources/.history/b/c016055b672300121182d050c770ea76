@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_GqE7sCNWEeKpErzQzL9IJQ" type="EcoreTools" name="LightAST" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_SiFtsCNlEeK-IvxgzFC7fw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_SiGUwCNlEeK-IvxgzFC7fw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_SiG70CNlEeK-IvxgzFC7fw" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_WYTKQCNlEeK-IvxgzFC7fw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="LightAST.ecore#//BIMServerCredentials/address"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_WYTKQSNlEeK-IvxgzFC7fw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_YA9xMCNlEeK-IvxgzFC7fw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="LightAST.ecore#//BIMServerCredentials/port"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YA9xMSNlEeK-IvxgzFC7fw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_YcvuQCNlEeK-IvxgzFC7fw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="LightAST.ecore#//BIMServerCredentials/projectName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YcvuQSNlEeK-IvxgzFC7fw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_b_e1MCNlEeK-IvxgzFC7fw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="LightAST.ecore#//BIMServerCredentials/userName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_b_e1MSNlEeK-IvxgzFC7fw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_dc2yICNlEeK-IvxgzFC7fw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="LightAST.ecore#//BIMServerCredentials/password"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_dc2yISNlEeK-IvxgzFC7fw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SiG70SNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SiG70iNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SiG70yNlEeK-IvxgzFC7fw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_SiHi4CNlEeK-IvxgzFC7fw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SiHi4SNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SiHi4iNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SiHi4yNlEeK-IvxgzFC7fw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_SiFtsSNlEeK-IvxgzFC7fw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="LightAST.ecore#//BIMServerCredentials"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SiFtsiNlEeK-IvxgzFC7fw" x="209" y="133"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_VL5BgCNlEeK-IvxgzFC7fw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_VL5BgyNlEeK-IvxgzFC7fw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_VL5okCNlEeK-IvxgzFC7fw" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_VL5okSNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_VL5okiNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_VL5okyNlEeK-IvxgzFC7fw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_VL5olCNlEeK-IvxgzFC7fw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_VL5olSNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_VL5oliNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_VL5olyNlEeK-IvxgzFC7fw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_VL5BgSNlEeK-IvxgzFC7fw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="LightAST.ecore#//Main"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VL5BgiNlEeK-IvxgzFC7fw" x="255" y="47"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_h7tjECNlEeK-IvxgzFC7fw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_h7uKISNlEeK-IvxgzFC7fw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_h7uxMCNlEeK-IvxgzFC7fw" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_lF18wCNlEeK-IvxgzFC7fw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="LightAST.ecore#//Lamp/GlobalID"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lF18wSNlEeK-IvxgzFC7fw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_pOplMCNlEeK-IvxgzFC7fw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="LightAST.ecore#//Lamp/PredefinedType"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pOplMSNlEeK-IvxgzFC7fw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_h7uxMSNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_h7uxMiNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_h7uxMyNlEeK-IvxgzFC7fw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_h7uxNCNlEeK-IvxgzFC7fw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_h7uxNSNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_h7uxNiNlEeK-IvxgzFC7fw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_h7uxNyNlEeK-IvxgzFC7fw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_h7tjESNlEeK-IvxgzFC7fw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="LightAST.ecore#//Lamp"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h7uKICNlEeK-IvxgzFC7fw" x="505" y="209"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_GqE7sSNWEeKpErzQzL9IJQ"/>
+  <element xmi:type="ecore:EPackage" href="LightAST.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_ejrQQCNlEeK-IvxgzFC7fw" type="3002" source="_VL5BgCNlEeK-IvxgzFC7fw" target="_SiFtsCNlEeK-IvxgzFC7fw">
+    <children xmi:type="notation:Node" xmi:id="_ejrQRCNlEeK-IvxgzFC7fw" visible="false" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ejrQRSNlEeK-IvxgzFC7fw" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ejr3UCNlEeK-IvxgzFC7fw" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ejr3USNlEeK-IvxgzFC7fw" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ejrQQSNlEeK-IvxgzFC7fw" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ejrQQiNlEeK-IvxgzFC7fw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="LightAST.ecore#//Main/EReference0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ejrQQyNlEeK-IvxgzFC7fw" points="[-10, 20, 26, -101]$[-96, 122, -60, 1]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2D3kICNlEeK-IvxgzFC7fw" type="3002" source="_VL5BgCNlEeK-IvxgzFC7fw" target="_h7tjECNlEeK-IvxgzFC7fw">
+    <children xmi:type="notation:Node" xmi:id="_2D4LMCNlEeK-IvxgzFC7fw" visible="false" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2D4LMSNlEeK-IvxgzFC7fw" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2D4LMiNlEeK-IvxgzFC7fw" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2D4LMyNlEeK-IvxgzFC7fw" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2D3kISNlEeK-IvxgzFC7fw" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2D3kIiNlEeK-IvxgzFC7fw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="LightAST.ecore#//Main/EReference1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2D3kIyNlEeK-IvxgzFC7fw" points="[16, 13, -210, -153]$[229, 198, 3, 32]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2D6ncCNlEeK-IvxgzFC7fw" id="(0.7647058823529411,0.6904761904761905)"/>
+  </edges>
+</notation:Diagram>

@@ -1,0 +1,221 @@
+/**
+ */
+package lightast.impl;
+
+import java.util.Collection;
+
+import lightast.BIMServerCredentials;
+import lightast.Lamp;
+import lightast.LightastPackage;
+import lightast.Main;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Main</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link lightast.impl.MainImpl#getEReference0 <em>EReference0</em>}</li>
+ *   <li>{@link lightast.impl.MainImpl#getEReference1 <em>EReference1</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class MainImpl extends EObjectImpl implements Main {
+	/**
+	 * The cached value of the '{@link #getEReference0() <em>EReference0</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEReference0()
+	 * @generated
+	 * @ordered
+	 */
+	protected BIMServerCredentials eReference0;
+
+	/**
+	 * The cached value of the '{@link #getEReference1() <em>EReference1</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEReference1()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Lamp> eReference1;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MainImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return LightastPackage.Literals.MAIN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BIMServerCredentials getEReference0() {
+		return eReference0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetEReference0(BIMServerCredentials newEReference0, NotificationChain msgs) {
+		BIMServerCredentials oldEReference0 = eReference0;
+		eReference0 = newEReference0;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LightastPackage.MAIN__EREFERENCE0, oldEReference0, newEReference0);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEReference0(BIMServerCredentials newEReference0) {
+		if (newEReference0 != eReference0) {
+			NotificationChain msgs = null;
+			if (eReference0 != null)
+				msgs = ((InternalEObject)eReference0).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LightastPackage.MAIN__EREFERENCE0, null, msgs);
+			if (newEReference0 != null)
+				msgs = ((InternalEObject)newEReference0).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LightastPackage.MAIN__EREFERENCE0, null, msgs);
+			msgs = basicSetEReference0(newEReference0, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LightastPackage.MAIN__EREFERENCE0, newEReference0, newEReference0));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Lamp> getEReference1() {
+		if (eReference1 == null) {
+			eReference1 = new EObjectContainmentEList<Lamp>(Lamp.class, this, LightastPackage.MAIN__EREFERENCE1);
+		}
+		return eReference1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case LightastPackage.MAIN__EREFERENCE0:
+				return basicSetEReference0(null, msgs);
+			case LightastPackage.MAIN__EREFERENCE1:
+				return ((InternalEList<?>)getEReference1()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case LightastPackage.MAIN__EREFERENCE0:
+				return getEReference0();
+			case LightastPackage.MAIN__EREFERENCE1:
+				return getEReference1();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case LightastPackage.MAIN__EREFERENCE0:
+				setEReference0((BIMServerCredentials)newValue);
+				return;
+			case LightastPackage.MAIN__EREFERENCE1:
+				getEReference1().clear();
+				getEReference1().addAll((Collection<? extends Lamp>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case LightastPackage.MAIN__EREFERENCE0:
+				setEReference0((BIMServerCredentials)null);
+				return;
+			case LightastPackage.MAIN__EREFERENCE1:
+				getEReference1().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case LightastPackage.MAIN__EREFERENCE0:
+				return eReference0 != null;
+			case LightastPackage.MAIN__EREFERENCE1:
+				return eReference1 != null && !eReference1.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //MainImpl
