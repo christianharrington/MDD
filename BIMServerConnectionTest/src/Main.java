@@ -1,4 +1,5 @@
 
+import java.io.InputStream;
 import java.util.Random;
 
 import org.apache.log4j.Logger;
@@ -7,44 +8,41 @@ import org.bimserver.client.Session;
 import org.bimserver.client.factories.AuthenticationInfo;
 import org.bimserver.client.factories.ProtocolBuffersBimServerClientFactory;
 import org.bimserver.client.factories.UsernamePasswordAuthenticationInfo;
+import org.bimserver.interfaces.objects.SDownloadResult;
 import org.bimserver.interfaces.objects.SProject;
 import org.bimserver.models.ifc2x3tc1.IfcProject;
-
-
-
+import org.bimserver.shared.ServiceInterface;
+import org.bimserver.emf.*;
 
 public class Main {
-	
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) throws Exception {
-		
-		try
-		{			
-			//ProtocolBuffersBimServerClientFactory factory = new ProtocolBuffersBimServerClientFactory("localhost", 8020, "admin@bimserver.org", "admin");
-			ProtocolBuffersBimServerClientFactory factory = new ProtocolBuffersBimServerClientFactory("pillar.christianharrington.com", 8020);
-			AuthenticationInfo ai = new UsernamePasswordAuthenticationInfo("cnha@itu.dk", "password");
+	public static void main(String[] args) throws Exception {	
+		long poid = 33399;
 			
-			BimServerClient bimServerClient = factory.create(ai, "pillar.christianharrington.com");
-			SProject addProject = bimServerClient.getServiceInterface().addProject("p" + new Random().nextInt());
-			Session session = bimServerClient.createSession();
-	
-			session.startTransaction(addProject.getId());
-			IfcProject ifcProject = session.create(IfcProject.class);
-			ifcProject.setName("This is a test");
-			long roid = session.commitTransaction("");
+		// Make the connection
+		ProtocolBuffersBimServerClientFactory factory = new ProtocolBuffersBimServerClientFactory("pillar.christianharrington.com", 8020);
+		AuthenticationInfo ai = new UsernamePasswordAuthenticationInfo("cnha@itu.dk", "password");
+			
+		BimServerClient bimServerClient = factory.create(ai, "pillar.christianharrington.com");
+		ServiceInterface i = bimServerClient.getServiceInterface();
+			
+		// Get the project
+		SProject project = i.getProjectByPoid(poid);
+		
+		// Get the latest revision
+		long roid = project.getLastRevisionId();
+			
+		// Download the data
+		Integer downloadId = bimServerClient.getServiceInterface().download(roid, "Ifc2x3", true, true);
+		SDownloadResult data = bimServerClient.getServiceInterface().getDownloadData(downloadId);
+			
+		// Print the data
+		InputStream in = data.getFile().getInputStream();
+		int b;
+		while((b = in.read()) != -1) {
+		  System.out.print((char) b);
 		}
-		catch(Exception e)
-		{
-			throw e;
-		}
-		/*ServiceInterface i = bimServerClient.getServiceInterface();
-		Integer downloadId = i.download(roid, "Ifc2x3", true);
-		SDownloadResult downloadData = bimServerClient.getServiceInterface().getDownloadData(downloadId);
-		IOUtils.copy(downloadData.getFile().getInputStream(), new FileOutputStream(new File("model.ifc")));*/
-
 	}
-
 }
-
