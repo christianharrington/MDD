@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;BIMServerConnectionTest/src/(default package)&apos;&#x0A;- Original project: &apos;BIMServerConnectionTest&apos;&#x0A;- Destination element: &apos;BIMServerConnectionTest/src/(default package)&apos;&#x0A;- Original elements:&#x0A;     IFC2X4_RC3.exp&#x0A;     IFC2X3_TC1.exp&#x0A;- Update references to refactored element" description="Move files" destination="/src&lt;" element1="lib/IFC2X4_RC3.exp" element2="lib/IFC2X3_TC1.exp" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1351862154974" units="0" version="1.0"/>
+</session>

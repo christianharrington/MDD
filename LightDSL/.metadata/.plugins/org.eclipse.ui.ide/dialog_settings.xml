@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="275" key="DIALOG_Y_ORIGIN"/>
+		<item value="425" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.ui.wizards.new.project" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.team.cvs.ui.newWizards"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.emf.ecoretools.diagram"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.pde.PDE"/>
+			<item value="org.python.pydev.PythonCategory"/>
+			<item value="org.scala-ide.sdt.core.wizards"/>
+			<item value="org.eclipse.xpand.ui.newWizards"/>
+			<item value="org.eclipse.xtext.projectwiz"/>
+			<item value="org.eclipse.ui.Examples"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.ocl.examples.category"/>
+		</list>
+	</section>
+</section>

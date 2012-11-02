@@ -6,7 +6,6 @@
 # Java stuff
 *.class
 *.log
-.metadata
 
 # Package Files #
 *.jar

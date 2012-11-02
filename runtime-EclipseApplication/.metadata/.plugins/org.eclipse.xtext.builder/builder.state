@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:builderState="http://www.eclipse.org/xtext/builderstate/1.0">
+  <builderState:ResourceDescription URI="platform:/resource/Test/src/test1.mydsl"/>
+  <builderState:ResourceDescription URI="platform:/resource/Test/src/test2.light"/>
+</xmi:XMI>
