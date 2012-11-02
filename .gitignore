@@ -33,8 +33,6 @@ report.pdf
 *.pyg
 .*.tex
 
-.classpath
-.project
 .cache
 .DS_Store
 
