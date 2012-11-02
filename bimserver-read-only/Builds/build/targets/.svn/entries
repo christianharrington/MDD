@@ -1,0 +1,61 @@
+10
+
+dir
+2126
+http://bimserver.googlecode.com/svn/trunk/Builds/build/targets
+http://bimserver.googlecode.com/svn
+
+
+
+2012-10-24T15:51:42.847326Z
+2125
+ruben@logic-labs.nl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22d71240-4879-e6bd-ac50-c68132091b5d
+
+satellitejar
+dir
+
+demo
+dir
+
+clientlib
+dir
+
+shared
+dir
+
+cloud
+dir
+
+war
+dir
+
+combinedwar
+dir
+
+local
+dir
+
+jar
+dir
+
+combinedjar
+dir
+
+client
+dir
+

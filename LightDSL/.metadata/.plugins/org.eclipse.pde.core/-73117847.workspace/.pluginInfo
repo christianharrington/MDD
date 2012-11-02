@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map>
-	<bundle bundleID="1052" localization="OSGI-INF/l10n/bundle" name="org.xtext.example.light.tests" project="org.xtext.example.light.tests" provider="My Company"/>
-	<bundle bundleID="1051" localization="OSGI-INF/l10n/bundle" name="org.xtext.example.light" project="org.xtext.example.light" provider="My Company"/>
-	<bundle bundleID="1044" localization="plugin" name="%pluginName" project="LightDSL" provider="%providerName">
-		<library name="."/>
-	</bundle>
-	<bundle bundleID="1053" class="org.xtext.example.light.ui.internal.LightActivator" localization="OSGI-INF/l10n/bundle" name="org.xtext.example.light.ui" project="org.xtext.example.light.ui" provider="My Company"/>
-</map>

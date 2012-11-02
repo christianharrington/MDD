@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/2121/trunk/BimServerClientLib/src/org/bimserver/client/factories
+END
+DirectBimServerClientFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/2121/trunk/BimServerClientLib/src/org/bimserver/client/factories/DirectBimServerClientFactory.java
+END
+ProtocolBuffersBimServerClientFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/2121/trunk/BimServerClientLib/src/org/bimserver/client/factories/ProtocolBuffersBimServerClientFactory.java
+END
+BimServerClientFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/2082/trunk/BimServerClientLib/src/org/bimserver/client/factories/BimServerClientFactory.java
+END
+SoapBimServerClientFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/2121/trunk/BimServerClientLib/src/org/bimserver/client/factories/SoapBimServerClientFactory.java
+END

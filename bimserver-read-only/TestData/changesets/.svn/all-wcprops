@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/533/trunk/TestData/changesets
+END
+matching_org.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/533/trunk/TestData/changesets/matching_org.xml
+END
+docinfochangeset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/533/trunk/TestData/changesets/docinfochangeset.xml
+END
+matching.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/533/trunk/TestData/changesets/matching.xml
+END

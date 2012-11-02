@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/1782/trunk/BimWebServer/www/static/lib
+END
+app.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1782/trunk/BimWebServer/www/static/lib/app.js
+END
+app.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1782/trunk/BimWebServer/www/static/lib/app.min.js
+END

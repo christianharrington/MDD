@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="900" key="dialogWidth"/>
-		<item value="563" key="dialogHeight"/>
+		<item value="800" key="dialogWidth"/>
+		<item value="500" key="dialogHeight"/>
 		<list key="orderedProviders">
 		</list>
 		<list key="textArray">
@@ -20,5 +20,7 @@
 			<item value="org.eclipse.ui.Examples"/>
 			<item value="org.eclipse.ui.Examples/org.eclipse.xtext.ui.Examples"/>
 		</list>
+	</section>
+	<section name="ImportExportAction">
 	</section>
 </section>

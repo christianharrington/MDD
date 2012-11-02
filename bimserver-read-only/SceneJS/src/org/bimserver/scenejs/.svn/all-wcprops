@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2125/trunk/SceneJS/src/org/bimserver/scenejs
+END
+SceneJSSerializerPlugin.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2062/trunk/SceneJS/src/org/bimserver/scenejs/SceneJSSerializerPlugin.java
+END
+SceneJSSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/2116/trunk/SceneJS/src/org/bimserver/scenejs/SceneJSSerializer.java
+END
+StreamingSceneJSSerializerPlugin.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/2116/trunk/SceneJS/src/org/bimserver/scenejs/StreamingSceneJSSerializerPlugin.java
+END
+StreamingSceneJSSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/2125/trunk/SceneJS/src/org/bimserver/scenejs/StreamingSceneJSSerializer.java
+END

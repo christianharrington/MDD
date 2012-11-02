@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/2121/trunk/BimServerClientLib/src/org/bimserver/client/notifications
+END
+SocketNotificationsClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/2121/trunk/BimServerClientLib/src/org/bimserver/client/notifications/SocketNotificationsClient.java
+END
+NotificationLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/2097/trunk/BimServerClientLib/src/org/bimserver/client/notifications/NotificationLogger.java
+END
+HttpNotificationsClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/1733/trunk/BimServerClientLib/src/org/bimserver/client/notifications/HttpNotificationsClient.java
+END
+NotificationsClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/2097/trunk/BimServerClientLib/src/org/bimserver/client/notifications/NotificationsClient.java
+END
+Handler.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/2082/trunk/BimServerClientLib/src/org/bimserver/client/notifications/Handler.java
+END

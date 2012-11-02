@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2062/trunk/FileBasedObjectIDM
+END
+objectidm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1800/trunk/FileBasedObjectIDM/objectidm.xml
+END
+license.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1731/trunk/FileBasedObjectIDM/license.txt
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1954/trunk/FileBasedObjectIDM/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/1518/trunk/FileBasedObjectIDM/.project
+END

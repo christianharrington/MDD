@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/533/trunk/CityGML/schemas/GML/3.1.1/smil
+END
+smil20.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/533/trunk/CityGML/schemas/GML/3.1.1/smil/smil20.xsd
+END
+smil20-language.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/533/trunk/CityGML/schemas/GML/3.1.1/smil/smil20-language.xsd
+END
+xml-mod.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/533/trunk/CityGML/schemas/GML/3.1.1/smil/xml-mod.xsd
+END

@@ -1,0 +1,515 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2083/trunk/BimWebServer/www
+END
+main.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2054/trunk/BimWebServer/www/main.jsp
+END
+serversettings.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2062/trunk/BimWebServer/www/serversettings.jsp
+END
+adduser.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2060/trunk/BimWebServer/www/adduser.jsp
+END
+header.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2083/trunk/BimWebServer/www/header.jsp
+END
+deleteproject.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2060/trunk/BimWebServer/www/deleteproject.jsp
+END
+serializers.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2062/trunk/BimWebServer/www/serializers.jsp
+END
+branch.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2060/trunk/BimWebServer/www/branch.jsp
+END
+revision.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2067/trunk/BimWebServer/www/revision.jsp
+END
+getbestdeserializer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2060/trunk/BimWebServer/www/getbestdeserializer.jsp
+END
+addserializer1.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2060/trunk/BimWebServer/www/addserializer1.jsp
+END
+undeleteuser.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2060/trunk/BimWebServer/www/undeleteuser.jsp
+END
+addserializer2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2060/trunk/BimWebServer/www/addserializer2.jsp
+END
+addinternalservice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2060/trunk/BimWebServer/www/addinternalservice.jsp
+END
+sendcompareemail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2062/trunk/BimWebServer/www/sendcompareemail.jsp
+END
+addservice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2062/trunk/BimWebServer/www/addservice.jsp
+END
+mainmenu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1948/trunk/BimWebServer/www/mainmenu.jsp
+END
+editproject.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2060/trunk/BimWebServer/www/editproject.jsp
+END
+serversettingsmenu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1959/trunk/BimWebServer/www/serversettingsmenu.jsp
+END
+migrations.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2060/trunk/BimWebServer/www/migrations.jsp
+END
+loginExtra.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2060/trunk/BimWebServer/www/loginExtra.jsp
+END
+htmlheader.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2004/trunk/BimWebServer/www/htmlheader.jsp
+END
+user.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2067/trunk/BimWebServer/www/user.jsp
+END
+getqueryexample.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2060/trunk/BimWebServer/www/getqueryexample.jsp
+END
+addusertoproject.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2060/trunk/BimWebServer/www/addusertoproject.jsp
+END
+register.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2060/trunk/BimWebServer/www/register.jsp
+END
+addextendeddataschema.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2067/trunk/BimWebServer/www/addextendeddataschema.jsp
+END
+compare.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2062/trunk/BimWebServer/www/compare.jsp
+END
+renderengines.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2060/trunk/BimWebServer/www/renderengines.jsp
+END
+validate.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2060/trunk/BimWebServer/www/validate.jsp
+END
+getextendeddata.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2067/trunk/BimWebServer/www/getextendeddata.jsp
+END
+downloadprogress.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2060/trunk/BimWebServer/www/downloadprogress.jsp
+END
+footer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2060/trunk/BimWebServer/www/footer.jsp
+END
+extraInfo.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1639/trunk/BimWebServer/www/extraInfo.jsp
+END
+usersettings.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2062/trunk/BimWebServer/www/usersettings.jsp
+END
+addqueryengine.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2060/trunk/BimWebServer/www/addqueryengine.jsp
+END
+checkin.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2060/trunk/BimWebServer/www/checkin.jsp
+END
+deserializers.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2060/trunk/BimWebServer/www/deserializers.jsp
+END
+resetpassword.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2060/trunk/BimWebServer/www/resetpassword.jsp
+END
+query.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2060/trunk/BimWebServer/www/query.jsp
+END
+setrevisiontag.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2060/trunk/BimWebServer/www/setrevisiontag.jsp
+END
+project.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2062/trunk/BimWebServer/www/project.jsp
+END
+showdeleted.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1948/trunk/BimWebServer/www/showdeleted.jsp
+END
+login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2083/trunk/BimWebServer/www/login.jsp
+END
+logout.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/1948/trunk/BimWebServer/www/logout.jsp
+END
+addmodelmerger.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2060/trunk/BimWebServer/www/addmodelmerger.jsp
+END
+addmodelcompare.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2060/trunk/BimWebServer/www/addmodelcompare.jsp
+END
+plugins.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2060/trunk/BimWebServer/www/plugins.jsp
+END
+log.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2060/trunk/BimWebServer/www/log.jsp
+END
+usersettingsmenu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2060/trunk/BimWebServer/www/usersettingsmenu.jsp
+END
+edituser.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2060/trunk/BimWebServer/www/edituser.jsp
+END
+modelmergers.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2060/trunk/BimWebServer/www/modelmergers.jsp
+END
+migrationwrapper.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1639/trunk/BimWebServer/www/migrationwrapper.jsp
+END
+modelcompares.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2060/trunk/BimWebServer/www/modelcompares.jsp
+END
+internalservice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2060/trunk/BimWebServer/www/internalservice.jsp
+END
+bimsurfer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1775/trunk/BimWebServer/www/bimsurfer.jsp
+END
+setup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2060/trunk/BimWebServer/www/setup.jsp
+END
+deleteuser.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2060/trunk/BimWebServer/www/deleteuser.jsp
+END
+modelcompare.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2060/trunk/BimWebServer/www/modelcompare.jsp
+END
+changepassword.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2067/trunk/BimWebServer/www/changepassword.jsp
+END
+serializer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2060/trunk/BimWebServer/www/serializer.jsp
+END
+queryengines.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2060/trunk/BimWebServer/www/queryengines.jsp
+END
+addrenderengine.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2060/trunk/BimWebServer/www/addrenderengine.jsp
+END
+deserializer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2060/trunk/BimWebServer/www/deserializer.jsp
+END
+services.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2062/trunk/BimWebServer/www/services.jsp
+END
+browser.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2060/trunk/BimWebServer/www/browser.jsp
+END
+error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2060/trunk/BimWebServer/www/error.jsp
+END
+queryengine.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2060/trunk/BimWebServer/www/queryengine.jsp
+END
+info.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2067/trunk/BimWebServer/www/info.jsp
+END
+undeleteproject.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2060/trunk/BimWebServer/www/undeleteproject.jsp
+END
+extendeddataschemas.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2067/trunk/BimWebServer/www/extendeddataschemas.jsp
+END
+initiatedownload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2062/trunk/BimWebServer/www/initiatedownload.jsp
+END
+tree.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2060/trunk/BimWebServer/www/tree.jsp
+END
+objectidm.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2060/trunk/BimWebServer/www/objectidm.jsp
+END
+users.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2060/trunk/BimWebServer/www/users.jsp
+END
+modelmerger.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2060/trunk/BimWebServer/www/modelmerger.jsp
+END
+revokepermission.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2060/trunk/BimWebServer/www/revokepermission.jsp
+END
+renderengine.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2060/trunk/BimWebServer/www/renderengine.jsp
+END
+download.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2060/trunk/BimWebServer/www/download.jsp
+END
+addobjectidm.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2060/trunk/BimWebServer/www/addobjectidm.jsp
+END
+adddeserializer1.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2060/trunk/BimWebServer/www/adddeserializer1.jsp
+END
+adddeserializer2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2060/trunk/BimWebServer/www/adddeserializer2.jsp
+END
+addproject.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2060/trunk/BimWebServer/www/addproject.jsp
+END
+internalservices.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2060/trunk/BimWebServer/www/internalservices.jsp
+END
+objectidms.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2060/trunk/BimWebServer/www/objectidms.jsp
+END
+extra.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1639/trunk/BimWebServer/www/extra.jsp
+END
