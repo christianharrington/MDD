@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2000/trunk/Tests/src/org/bimserver/test/framework/tests
+END
+TestCollada.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1845/trunk/Tests/src/org/bimserver/test/framework/tests/TestCollada.java
+END
+TestCheckin.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1862/trunk/Tests/src/org/bimserver/test/framework/tests/TestCheckin.java
+END
+TestAll.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1845/trunk/Tests/src/org/bimserver/test/framework/tests/TestAll.java
+END
+TestJson.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/2000/trunk/Tests/src/org/bimserver/test/framework/tests/TestJson.java
+END
+TestProtocolBuffers.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1845/trunk/Tests/src/org/bimserver/test/framework/tests/TestProtocolBuffers.java
+END

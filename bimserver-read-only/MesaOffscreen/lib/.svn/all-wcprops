@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2120/trunk/MesaOffscreen/lib
+END
+osdemo.dll
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2120/trunk/MesaOffscreen/lib/osdemo.dll
+END
+IFC2X3_TC1.exp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2120/trunk/MesaOffscreen/lib/IFC2X3_TC1.exp
+END
+IFCEngine.dll
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2120/trunk/MesaOffscreen/lib/IFCEngine.dll
+END
+OPENGL32.dll
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2120/trunk/MesaOffscreen/lib/OPENGL32.dll
+END
+OSMESA32.dll
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2120/trunk/MesaOffscreen/lib/OSMESA32.dll
+END
+GLU32.dll
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2120/trunk/MesaOffscreen/lib/GLU32.dll
+END
+GLUT32.dll
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2120/trunk/MesaOffscreen/lib/GLUT32.dll
+END

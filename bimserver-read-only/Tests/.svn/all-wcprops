@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/2121/trunk/Tests
+END
+license.txt
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/1731/trunk/Tests/license.txt
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1954/trunk/Tests/.classpath
+END
+results.html
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2000/trunk/Tests/results.html
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/954/trunk/Tests/.project
+END
+test.sh
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/1824/trunk/Tests/test.sh
+END
+runtest.sh
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1821/trunk/Tests/runtest.sh
+END

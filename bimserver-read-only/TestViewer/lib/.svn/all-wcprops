@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/885/trunk/TestViewer/lib
+END
+vecmath.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/867/trunk/TestViewer/lib/vecmath.jar
+END
+j3dcore.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/867/trunk/TestViewer/lib/j3dcore.jar
+END
+unbboolean-1.1.exe.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/885/trunk/TestViewer/lib/unbboolean-1.1.exe.jar
+END
+j3dutils.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/867/trunk/TestViewer/lib/j3dutils.jar
+END

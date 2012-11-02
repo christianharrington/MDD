@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2062/trunk/JavaQueryEngine/src/org/bimserver/jqep
+END
+QueryInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1922/trunk/JavaQueryEngine/src/org/bimserver/jqep/QueryInterface.java
+END
+CompileException.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1887/trunk/JavaQueryEngine/src/org/bimserver/jqep/CompileException.java
+END
+JavaQueryEnginePlugin.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/2062/trunk/JavaQueryEngine/src/org/bimserver/jqep/JavaQueryEnginePlugin.java
+END
+JavaQueryEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1924/trunk/JavaQueryEngine/src/org/bimserver/jqep/JavaQueryEngine.java
+END

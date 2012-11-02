@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2122/trunk/Client/src/org/bimserver/client
+END
+Console.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/Console.java
+END
+UserTreeNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/UserTreeNode.java
+END
+CheckoutsPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/CheckoutsPanel.java
+END
+RootTreeNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/RootTreeNode.java
+END
+SettingsFrame.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1403/trunk/Client/src/org/bimserver/client/SettingsFrame.java
+END
+RevisionPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/RevisionPanel.java
+END
+Client.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2059/trunk/Client/src/org/bimserver/client/Client.java
+END
+LogHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/LogHandler.java
+END
+TreePanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1999/trunk/Client/src/org/bimserver/client/TreePanel.java
+END
+ProjectsTreeNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/ProjectsTreeNode.java
+END
+ConsoleAppender.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/ConsoleAppender.java
+END
+RevisionTableModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/RevisionTableModel.java
+END
+UsersTreeNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/UsersTreeNode.java
+END
+logo_small.png
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/533/trunk/Client/src/org/bimserver/client/logo_small.png
+END
+ProjectTreeNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/ProjectTreeNode.java
+END
+ServerTreeNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/ServerTreeNode.java
+END
+ServiceHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/2122/trunk/Client/src/org/bimserver/client/ServiceHolder.java
+END
+CheckoutTableModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1380/trunk/Client/src/org/bimserver/client/CheckoutTableModel.java
+END

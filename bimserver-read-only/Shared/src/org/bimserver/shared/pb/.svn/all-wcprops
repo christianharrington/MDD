@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2083/trunk/Shared/src/org/bimserver/shared/pb
+END
+ConvertException.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1800/trunk/Shared/src/org/bimserver/shared/pb/ConvertException.java
+END
+ProtocolBuffersMetaData.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1733/trunk/Shared/src/org/bimserver/shared/pb/ProtocolBuffersMetaData.java
+END
+SocketChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1733/trunk/Shared/src/org/bimserver/shared/pb/SocketChannel.java
+END
+ProtocolBuffersReflector.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/2083/trunk/Shared/src/org/bimserver/shared/pb/ProtocolBuffersReflector.java
+END
+ReflectiveRpcChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2083/trunk/Shared/src/org/bimserver/shared/pb/ReflectiveRpcChannel.java
+END
+ProtocolBuffersConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1947/trunk/Shared/src/org/bimserver/shared/pb/ProtocolBuffersConverter.java
+END
+Channel.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1954/trunk/Shared/src/org/bimserver/shared/pb/Channel.java
+END

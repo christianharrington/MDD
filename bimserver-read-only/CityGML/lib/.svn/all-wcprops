@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/1103/trunk/CityGML/lib
+END
+citygml4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1088/trunk/CityGML/lib/citygml4j.jar
+END
+sjsxp.jar
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/1088/trunk/CityGML/lib/sjsxp.jar
+END
+jsr173_1.0_api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/533/trunk/CityGML/lib/jsr173_1.0_api.jar
+END
+activation.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1084/trunk/CityGML/lib/activation.jar
+END

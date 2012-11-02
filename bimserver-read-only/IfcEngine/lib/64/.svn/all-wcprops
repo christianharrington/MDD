@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1840/trunk/IfcEngine/lib/64
+END
+libIFCEngine.dylib
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1838/trunk/IfcEngine/lib/64/libIFCEngine.dylib
+END
+IFCEngine.dll
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1840/trunk/IfcEngine/lib/64/IFCEngine.dll
+END
+libIFCEngine.so
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1837/trunk/IfcEngine/lib/64/libIFCEngine.so
+END

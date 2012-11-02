@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/2121/trunk/TestData
+END
+license.txt
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1731/trunk/TestData/license.txt
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/954/trunk/TestData/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/954/trunk/TestData/.project
+END
