@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Map;
 
+import nl.tue.buildingsmart.emf.Ifc2x3tc1;
 import nl.tue.buildingsmart.express.parser.ExpressSchemaParser;
 
 import org.apache.commons.io.IOUtils;
@@ -23,11 +24,14 @@ import org.bimserver.client.factories.UsernamePasswordAuthenticationInfo;
 import org.bimserver.ifc.step.deserializer.IfcStepDeserializer;
 import org.bimserver.interfaces.objects.SDownloadResult;
 import org.bimserver.interfaces.objects.SProject;
+import org.bimserver.models.ifc2x3tc1.Ifc2x3tc1Factory;
+import org.bimserver.models.ifc2x3tc1.IfcCartesianPoint;
 import org.bimserver.models.ifc2x3tc1.IfcLabel;
 import org.bimserver.models.ifc2x3tc1.IfcOrganization;
 import org.bimserver.models.ifc2x3tc1.IfcProject;
 import org.bimserver.models.ifc2x3tc1.IfcRoot;
 import org.bimserver.models.ifc2x3tc1.IfcWall;
+import org.bimserver.models.ifc2x3tc1.impl.IfcCartesianPointImpl;
 import org.bimserver.models.ifc2x3tc1.impl.IfcLabelImpl;
 import org.bimserver.plugins.deserializers.DeserializeException;
 import org.bimserver.plugins.schema.SchemaDefinition;
@@ -37,6 +41,7 @@ import org.bimserver.emf.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -88,6 +93,7 @@ public class Main {
 		IfcStepDeserializer isd = new IfcStepDeserializer();
 		isd.init(schema);
 		System.out.println("Done");
+		
 
 		IfcModelInterface ifcModel = isd.read(input2, null, false, size);
 		List<IfcOrganization> orgs = ifcModel.getAll(IfcOrganization.class);
@@ -106,12 +112,25 @@ public class Main {
 	            .createURI("/var/tmp/test.xmi"));
 	    
 	    for (EObject e : ifcModel) {
-	    	System.out.println(e);
-	    	resource.getContents().add(e);
+	    	walkModel(resource.getContents(), e);
 	    }
+	    
+	    System.out.println(resource.getContents().size());
+	    
 	    resource.save(Collections.EMPTY_MAP);
 
 	}
+	
+	private static void walkModel(EList<EObject> contents, EObject e) {
+		if (!contents.contains(e)) {
+			contents.add(e);
+			
+			for (EObject ee : e.eCrossReferences()) {
+				walkModel(contents, ee);
+			}
+		}
+	}
+	
 	/*
 	// Write a model example. File name is hardcoded and an added IfcLightSource object
 	// is added to the model to show how it can be done
