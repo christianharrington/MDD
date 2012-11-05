@@ -1,44 +1,20 @@
-
-import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.InputStream;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 import java.util.Map;
-
-import nl.tue.buildingsmart.emf.Ifc2x3tc1;
 import nl.tue.buildingsmart.express.parser.ExpressSchemaParser;
-
-import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
 import org.bimserver.client.BimServerClient;
-import org.bimserver.client.Session;
 import org.bimserver.client.factories.AuthenticationInfo;
 import org.bimserver.client.factories.ProtocolBuffersBimServerClientFactory;
 import org.bimserver.client.factories.UsernamePasswordAuthenticationInfo;
 import org.bimserver.ifc.step.deserializer.IfcStepDeserializer;
 import org.bimserver.interfaces.objects.SDownloadResult;
 import org.bimserver.interfaces.objects.SProject;
-import org.bimserver.models.ifc2x3tc1.Ifc2x3tc1Factory;
-import org.bimserver.models.ifc2x3tc1.IfcCartesianPoint;
-import org.bimserver.models.ifc2x3tc1.IfcLabel;
 import org.bimserver.models.ifc2x3tc1.IfcOrganization;
-import org.bimserver.models.ifc2x3tc1.IfcProject;
-import org.bimserver.models.ifc2x3tc1.IfcRoot;
-import org.bimserver.models.ifc2x3tc1.IfcWall;
-import org.bimserver.models.ifc2x3tc1.impl.IfcCartesianPointImpl;
-import org.bimserver.models.ifc2x3tc1.impl.IfcLabelImpl;
-import org.bimserver.plugins.deserializers.DeserializeException;
 import org.bimserver.plugins.schema.SchemaDefinition;
 import org.bimserver.plugins.serializers.IfcModelInterface;
 import org.bimserver.shared.ServiceInterface;
-import org.bimserver.emf.*;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.common.util.EList;
