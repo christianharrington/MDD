@@ -1,15 +1,15 @@
 module lamp2lamp;
 
--- @path Source=../models/Room.ecore
+-- @path Source=../../bimserver-read-only/BIMServer/models/models.ecore
 -- @path Target=../models/LightAST.ecore
 
 create OUT: Target from IN: Source;
 
 rule Lamp2Lamp {
 	from
-		s: 	Source!Lamp
+		s: 	Source!IfcCartesianPoint
 	to
 		t: Target!Lamp (
-			PredefinedType <- s.Type	
+			PredefinedType <- s.CoordinatesAsString
 		)
 }

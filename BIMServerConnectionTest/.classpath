@@ -154,5 +154,6 @@
 	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24-utils.jar"/>
 	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ATL2Java"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
