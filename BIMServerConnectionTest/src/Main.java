@@ -5,8 +5,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.InputStream;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.Map;
 
 import nl.tue.buildingsmart.express.parser.ExpressSchemaParser;
 
@@ -20,13 +23,24 @@ import org.bimserver.client.factories.UsernamePasswordAuthenticationInfo;
 import org.bimserver.ifc.step.deserializer.IfcStepDeserializer;
 import org.bimserver.interfaces.objects.SDownloadResult;
 import org.bimserver.interfaces.objects.SProject;
+import org.bimserver.models.ifc2x3tc1.IfcLabel;
 import org.bimserver.models.ifc2x3tc1.IfcOrganization;
 import org.bimserver.models.ifc2x3tc1.IfcProject;
+import org.bimserver.models.ifc2x3tc1.IfcRoot;
+import org.bimserver.models.ifc2x3tc1.IfcWall;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLabelImpl;
 import org.bimserver.plugins.deserializers.DeserializeException;
 import org.bimserver.plugins.schema.SchemaDefinition;
 import org.bimserver.plugins.serializers.IfcModelInterface;
 import org.bimserver.shared.ServiceInterface;
 import org.bimserver.emf.*;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
 public class Main {
 	/**
@@ -64,7 +78,7 @@ public class Main {
 
 		//Parse schema for deserialization
 		System.out.println("Parse schema");	
-		ExpressSchemaParser schemaParser = new ExpressSchemaParser(new File("//Users//ndahl89//Dropbox//ITU//Master//mdd//Project//mdd//BIMServerConnectionTest//src//IFC2X3_TC1.exp"));
+		ExpressSchemaParser schemaParser = new ExpressSchemaParser(new File("src/IFC2X3_TC1.exp"));
 		schemaParser.parse();
 		SchemaDefinition schema = schemaParser.getSchema();
 		System.out.println("Done");
@@ -75,18 +89,30 @@ public class Main {
 		isd.init(schema);
 		System.out.println("Done");
 
-		try {
 		IfcModelInterface ifcModel = isd.read(input2, null, false, size);
 		List<IfcOrganization> orgs = ifcModel.getAll(IfcOrganization.class);
+		
 		for(IfcOrganization org : orgs){
 		System.out.println("Org:" + org);
 		}
-		} catch (DeserializeException e1) {
-		// TODO Auto-generated catch block
-		e1.printStackTrace();
-		}
+		
+		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
+	    Map<String, Object> m = reg.getExtensionToFactoryMap();
+	    m.put("xmi", new XMIResourceFactoryImpl());
+		
+	    ResourceSet resSet = new ResourceSetImpl();
+	    
+	    Resource resource = resSet.createResource(URI
+	            .createURI("/var/tmp/test.xmi"));
+	    
+	    for (EObject e : ifcModel) {
+	    	System.out.println(e);
+	    	resource.getContents().add(e);
+	    }
+	    resource.save(Collections.EMPTY_MAP);
+
 	}
-	
+	/*
 	// Write a model example. File name is hardcoded and an added IfcLightSource object
 	// is added to the model to show how it can be done
 	private void SaveModel(IfcModel model){
@@ -144,5 +170,5 @@ public class Main {
 		} catch (SerializerException e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 }
