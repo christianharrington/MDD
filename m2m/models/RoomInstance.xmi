@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<room:Room xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:room="/m2m/models/Room.ecore"
+    xsi:schemaLocation="/m2m/models/Room.ecore Room.ecore">
+  <doors/>
+  <lights xsi:type="room:Lamp"
+      Type="Arkitektlampe"/>
+  <lights xsi:type="room:Lamp"
+      Type="L&#xe6;selampe"/>
+  <lights xsi:type="room:Candle"
+      Colour="Gul"/>
+</room:Room>

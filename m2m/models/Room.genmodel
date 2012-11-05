@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ATL2Java/src" modelPluginID="ATL2Java" modelName="Room"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>Room.ecore</foreignModel>
+  <genPackages prefix="Room" disposableProviderFactory="true" ecorePackage="Room.ecore#/">
+    <genClasses ecoreClass="Room.ecore#//Room">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Room.ecore#//Room/doors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Room.ecore#//Room/lights"/>
+    </genClasses>
+    <genClasses ecoreClass="Room.ecore#//Door"/>
+    <genClasses image="false" ecoreClass="Room.ecore#//Light"/>
+    <genClasses ecoreClass="Room.ecore#//Lamp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Room.ecore#//Lamp/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="Room.ecore#//Candle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Room.ecore#//Candle/Colour"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
