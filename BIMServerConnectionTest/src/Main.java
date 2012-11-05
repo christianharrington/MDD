@@ -94,6 +94,12 @@ public class Main {
 	    System.out.println(resource.getContents().size());
 	    
 	    resource.save(Collections.EMPTY_MAP);
+	    
+	    ATL2Java atj = new ATL2Java("../bimserver-read-only/BimServer/models/models.ecore", "../m2m/models/LightAST.ecore");
+	    //atj.transform("../bimserver-read-only/BimServer/models/IfcCartesianPoint.xmi", "instance.xmi", "../m2m/transformations/lamp2lamp.asm");
+	    atj.transform("/var/tmp/test.xmi", "instance.xmi", "../m2m/transformations/lamp2lamp.asm");
+
+	    //resource.save(Collections.EMPTY_MAP);
 
 	}
 	

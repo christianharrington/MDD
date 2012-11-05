@@ -23,7 +23,7 @@
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.m2m.atl.core_3.3.1.v201209061455.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.m2m.atl.core.ant_3.3.1.v201209061455.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.m2m.atl.core.ant.source_3.3.1.v201209061455.jar"/>
-	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.m2m.atl.core.emf_3.3.1.v201209061455.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.m2m.atl.core.emf_3.3.1.v201209061455.jar" sourcepath="/Applications/eclipse/plugins/org.eclipse.m2m.atl.core.emf_3.3.1.v201209061455.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.m2m.atl.core.emf.source_3.3.1.v201209061455.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.m2m.atl.core.source_3.3.1.v201209061455.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.m2m.atl.core.ui_3.3.1.v201209061455.jar"/>
