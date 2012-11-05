@@ -1,19 +1,37 @@
 import java.io.File;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.InputStream;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import nl.tue.buildingsmart.express.parser.ExpressSchemaParser;
+import org.apache.commons.io.IOUtils;
+import org.apache.log4j.Logger;
+import org.bimserver.LocalDevPluginLoader;
 import org.bimserver.client.BimServerClient;
 import org.bimserver.client.factories.AuthenticationInfo;
 import org.bimserver.client.factories.ProtocolBuffersBimServerClientFactory;
 import org.bimserver.client.factories.UsernamePasswordAuthenticationInfo;
+import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.step.deserializer.IfcStepDeserializer;
+import org.bimserver.ifc.step.serializer.IfcStepSerializer;
 import org.bimserver.interfaces.objects.SDownloadResult;
 import org.bimserver.interfaces.objects.SProject;
+import org.bimserver.models.ifc2x3tc1.Ifc2x3tc1Factory;
+import org.bimserver.models.ifc2x3tc1.IfcLightSource;
 import org.bimserver.models.ifc2x3tc1.IfcOrganization;
+import org.bimserver.models.ifc2x3tc1.IfcProject;
+import org.bimserver.plugins.PluginException;
+import org.bimserver.plugins.PluginManager;
+import org.bimserver.plugins.deserializers.DeserializeException;
 import org.bimserver.plugins.schema.SchemaDefinition;
 import org.bimserver.plugins.serializers.IfcModelInterface;
+import org.bimserver.plugins.serializers.ProjectInfo;
+import org.bimserver.plugins.serializers.SerializerException;
 import org.bimserver.shared.ServiceInterface;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
@@ -116,7 +134,7 @@ public class Main {
 	/*
 	// Write a model example. File name is hardcoded and an added IfcLightSource object
 	// is added to the model to show how it can be done
-	private void SaveModel(IfcModel model){
+	/*private void SaveModel(IfcModel model){
 		//The serializer wants a ProjectInfo object
 		ProjectInfo projectInfo = new ProjectInfo();
 		projectInfo.setName("Group 1337");

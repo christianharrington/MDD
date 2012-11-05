@@ -11,11 +11,43 @@
   <eClassifiers xsi:type="ecore:EClass" name="Main">
     <eStructuralFeatures xsi:type="ecore:EReference" name="BIMServer" eType="#//BIMServerCredentials"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Lamp" upperBound="-1" eType="#//Lamp"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixtures" upperBound="-1"
+        eType="#//LightFixture" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Lamp">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="GlobalID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PredefinedType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PredefinedType" lowerBound="1"
+        eType="#//LampType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consistsOf" eType="#//Material"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LampType">
+    <eLiterals name="COMPACTFLUORESCENT"/>
+    <eLiterals name="FLUORESCENT" value="1"/>
+    <eLiterals name="HALOGEN" value="2"/>
+    <eLiterals name="HIGHPRESSUREMERCURY" value="3"/>
+    <eLiterals name="HIGHPRESSURESODIUM" value="4"/>
+    <eLiterals name="LED" value="5"/>
+    <eLiterals name="METALHALIDE" value="6"/>
+    <eLiterals name="OLED" value="7"/>
+    <eLiterals name="TUNGSTENFILAMENT" value="8"/>
+    <eLiterals name="USERDEFINED" value="9"/>
+    <eLiterals name="NOTDEFINED" value="10"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Material">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LightFixture">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consistsOf" eType="#//Material"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PredefinedType" lowerBound="1"
+        eType="#//LightFixtureType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lamps" eType="#//Lamp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LightFixtureType">
+    <eLiterals name="POINTSOURCE"/>
+    <eLiterals name="DIRECTIONSOURCE" value="1"/>
+    <eLiterals name="SECURITYLIGHTING" value="2"/>
+    <eLiterals name="USERDEFINED" value="3"/>
+    <eLiterals name="NOTDEFINED" value="4"/>
   </eClassifiers>
 </ecore:EPackage>
