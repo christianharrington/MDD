@@ -1,0 +1,12 @@
+-- @path Source=../models/LightAST.ecore
+-- @path Target=../../bimserver-read-only/BIMServer/models/models.ecore
+
+module light2ifc;
+create OUT : Target from IN : Source;
+
+rule Lamp2Lamp {
+	from
+		s: 	Source!Lamp
+	to
+		t: Target!IfcCartesianPoint
+}
