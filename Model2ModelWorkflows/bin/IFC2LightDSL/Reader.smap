@@ -6,7 +6,5 @@ Xtend
 + 0 Reader.xtend
 src/IFC2LightDSL/Reader.xtend
 *L
-10:9,2
-14:14,2
-18:19,2
+8:9,2
 *E
