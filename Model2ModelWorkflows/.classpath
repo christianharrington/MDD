@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="xtend-gen"/>
+	<classpathentry kind="con" path="org.eclipse.xtend.XTEND_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.mwe.utils_1.2.1.v201206110920.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.mwe.core_1.2.1.v201206110920.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.mwe2.runtime_2.3.0.v201206110920.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.mwe2.lib_2.3.0.v201206110920.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.mwe2.launch_2.3.0.v201206120758.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.apache.commons.cli_1.2.0.v201105210650.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.apache.log4j_1.2.15.v201012070815.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
