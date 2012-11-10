@@ -96,9 +96,9 @@ public class Main {
 	    
 	    resource.save(Collections.EMPTY_MAP);
 	    
-	    ATL2Java atj = new ATL2Java("../bimserver-read-only/BimServer/models/models.ecore", "../m2m/models/LightAST.ecore");
+	    //ATL2Java atj = new ATL2Java("../bimserver-read-only/BimServer/models/models.ecore", "../m2m/models/LightAST.ecore");
 	    //atj.transform("../bimserver-read-only/BimServer/models/IfcCartesianPoint.xmi", "instance.xmi", "../m2m/transformations/lamp2lamp.asm");
-	    atj.transform("/var/tmp/test.xmi", "instance.xmi", "../m2m/transformations/lamp2lamp.asm");
+	    //atj.transform("/var/tmp/test.xmi", "instance.xmi", "../m2m/transformations/lamp2lamp.asm");
 
 	    //resource.save(Collections.EMPTY_MAP);
 
@@ -107,6 +107,8 @@ public class Main {
 	private static void walkModel(EList<EObject> contents, EObject e) {
 		if (!contents.contains(e)) {
 			contents.add(e);
+			
+			System.out.println(e);
 			
 			for (EObject ee : e.eCrossReferences()) {
 				walkModel(contents, ee);
