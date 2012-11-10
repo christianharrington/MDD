@@ -163,5 +163,15 @@
 	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24-utils.jar"/>
 	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.ecore_2.8.1.v20120911-0500.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.mwe2.language_2.3.0.v201206120758.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext_2.3.1.v201208210947.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.8.0.v20120911-0500.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.common_2.8.0.v20120911-0500.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/com.google.inject_3.0.0.v201203062045.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/javax.inject_1.0.0.v20091030.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext.common.types_2.3.1.v201208210947.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.antlr.runtime_3.2.0.v201101311130.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext.util_2.3.1.v201208210947.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

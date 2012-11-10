@@ -1,7 +1,7 @@
 module lamp2lamp;
 
 -- @path Source=../../bimserver-read-only/BIMServer/models/models.ecore
--- @path Target=../models/LightAST.ecore
+-- @path Target=../../LightDSL/models/LightAST.ecore
 
 create OUT: Target from IN: Source;
 

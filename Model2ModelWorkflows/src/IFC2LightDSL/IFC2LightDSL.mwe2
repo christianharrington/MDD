@@ -1,23 +1,24 @@
 module IFC2LightDSL.IFC2LightDSL
 
 var targetDir = 'model-gen'
+var modelSlot = 'model'
 
 Workflow {
 	
 	component = Reader {
-		slot = ''
+		slot = modelSlot
 	}
 	
-	component = org.eclipse.emf.mwe.utils.DirectoryCleaner {
-		directory = targetDir
-	}
+//	component = org.eclipse.emf.mwe.utils.DirectoryCleaner {
+//		directory = targetDir
+// 	}
 	
 	component = IFC2LightDSLTransformer {
-		slot = ''
+		slot = modelSlot
 	}
 	
 	component = Writer {
-		slot = ''
+		slot = modelSlot
 	}
 	
 }

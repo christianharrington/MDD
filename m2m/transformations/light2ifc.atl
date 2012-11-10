@@ -6,7 +6,7 @@ create OUT : Target from IN : Source;
 
 rule Lamp2Lamp {
 	from
-		s: 	Source!Lamp
+		s: Source!Lamp
 	to
 		t: Target!IfcCartesianPoint
 }

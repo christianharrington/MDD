@@ -1,0 +1,27 @@
+%!TEX root = ./report.tex
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\section{Introduction}
+Building Information Modelling (BIM) is the process of modelling various physical and functional aspects of a building. Currently, many BIM software products exist. These let a user model and analyze the many interactions between different parts of a building. Many of these software products use common file formats for modeling buildings, such as Industry Foundation Classes (IFC) or Green Building XML (gbXML). These formats were invented to help improve interoperability between different software packages in different domains, and as such cover many different systems. These formats have become widely used standards. 
+
+Reading and writing a huge, complex XML document, like the ones produced by BIM products, by hand is unfeasible. It’s desirable to be able to work with aspects of a model (such as heating, or electrical wiring) independently.(TODO insert reference) In this paper we present a setup, demonstrating that such projectional editing is feasible. 
+
+Introduction still missing:
+- Explanation of your solution, and how it improves on the work by others. Relation to related work can be very brief, given that you have a separate extensive section devoted to this.
+- A hint on how the solution was evaluated and what was the outcome of this evaluation (may be omitted in out case)
+- A summary (a map) of how the paper is organized.
+
+
+
+Outline:
+Feasibility study of whether it is possible to do projectional editing on IFC.
+
+What were the challenges?
+- Saving the subset back to the server after editing. Synchronization problem
+- Using MPS: it is not a freetext editor. We would want to improve on this later. XText is not flexible enough for this purpose.
+
+Important to mention:
+- Ideally this would be a visual editor, but in order to make the project feasible our prototype will use textual syntax - a DSL. 
+
+Perhaps as conclusion (from problem statement):
+- This DSL, along with the generated tools, will provide a human readable representation of these building models, and can serve as a building block for Energy Futures projects to come. Additionally, the experience gained by building this DSL, will contribute to the overall knowledge of this area for the Energy Futures research initiative.
