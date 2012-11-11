@@ -20,4 +20,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>BIMServerConenctionTest</name>
+			<type>2</type>
+			<location>/Users/ahkj/Desktop/MDD/MDD/BIMServerConnectionTest</location>
+		</link>
+	</linkedResources>
 </projectDescription>

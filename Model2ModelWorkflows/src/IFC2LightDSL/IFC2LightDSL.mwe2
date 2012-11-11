@@ -1,12 +1,16 @@
 module IFC2LightDSL.IFC2LightDSL
 
-var targetDir = 'model-gen'
+//var targetDir = 'model-gen'
 var modelSlot = 'model'
+var file = '../BIMServerConnectionTest/src/Test.ifc'
+var schema = '../BIMServerConnectionTest/IFC2X3_TC1.exp'
 
 Workflow {
 	
 	component = Reader {
 		slot = modelSlot
+		file = file
+		schema = schema
 	}
 	
 //	component = org.eclipse.emf.mwe.utils.DirectoryCleaner {
