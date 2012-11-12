@@ -41,7 +41,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="consistsOf" eType="#//Material"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="PredefinedType" lowerBound="1"
         eType="#//LightFixtureType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lamps" eType="#//Lamp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lamps" upperBound="-1"
+        eType="#//Lamp"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LightFixtureType">
     <eLiterals name="POINTSOURCE"/>

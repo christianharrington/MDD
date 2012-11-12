@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/LightDSL/src" modelPluginID="LightDSL" modelName="LightAST"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>LightAST.ecore</foreignModel>
+  <genPackages prefix="Lightast" disposableProviderFactory="true" ecorePackage="LightAST.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="LightAST.ecore#//LampType">
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/COMPACTFLUORESCENT"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/FLUORESCENT"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/HALOGEN"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/HIGHPRESSUREMERCURY"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/HIGHPRESSURESODIUM"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/LED"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/METALHALIDE"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/OLED"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/TUNGSTENFILAMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/USERDEFINED"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LampType/NOTDEFINED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="LightAST.ecore#//LightFixtureType">
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LightFixtureType/POINTSOURCE"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LightFixtureType/DIRECTIONSOURCE"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LightFixtureType/SECURITYLIGHTING"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LightFixtureType/USERDEFINED"/>
+      <genEnumLiterals ecoreEnumLiteral="LightAST.ecore#//LightFixtureType/NOTDEFINED"/>
+    </genEnums>
+    <genClasses ecoreClass="LightAST.ecore#//BIMServerCredentials">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LightAST.ecore#//BIMServerCredentials/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LightAST.ecore#//BIMServerCredentials/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LightAST.ecore#//BIMServerCredentials/projectName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LightAST.ecore#//BIMServerCredentials/userName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LightAST.ecore#//BIMServerCredentials/password"/>
+    </genClasses>
+    <genClasses ecoreClass="LightAST.ecore#//Main">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LightAST.ecore#//Main/BIMServer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LightAST.ecore#//Main/fixtures"/>
+    </genClasses>
+    <genClasses ecoreClass="LightAST.ecore#//Lamp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LightAST.ecore#//Lamp/GlobalID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LightAST.ecore#//Lamp/PredefinedType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LightAST.ecore#//Lamp/consistsOf"/>
+    </genClasses>
+    <genClasses ecoreClass="LightAST.ecore#//Material">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LightAST.ecore#//Material/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LightAST.ecore#//Material/Description"/>
+    </genClasses>
+    <genClasses ecoreClass="LightAST.ecore#//LightFixture">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LightAST.ecore#//LightFixture/consistsOf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LightAST.ecore#//LightFixture/PredefinedType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LightAST.ecore#//LightFixture/lamps"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

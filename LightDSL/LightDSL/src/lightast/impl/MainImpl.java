@@ -5,6 +5,7 @@ package lightast.impl;
 import java.util.Collection;
 
 import lightast.BIMServerCredentials;
+import lightast.LightFixture;
 import lightast.Lamp;
 import lightast.LightastPackage;
 import lightast.Main;
@@ -31,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link lightast.impl.MainImpl#getBIMServer <em>BIM Server</em>}</li>
- *   <li>{@link lightast.impl.MainImpl#getLamp <em>Lamp</em>}</li>
+ *   <li>{@link lightast.impl.MainImpl#getFixtures <em>Fixtures</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,14 +50,14 @@ public class MainImpl extends EObjectImpl implements Main {
 	protected BIMServerCredentials bimServer;
 
 	/**
-	 * The cached value of the '{@link #getLamp() <em>Lamp</em>}' containment reference list.
+	 * The cached value of the '{@link #getFixtures() <em>Fixtures</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLamp()
+	 * @see #getFixtures()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Lamp> lamp;
+	protected EList<LightFixture> fixtures;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,11 +126,11 @@ public class MainImpl extends EObjectImpl implements Main {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Lamp> getLamp() {
-		if (lamp == null) {
-			lamp = new EObjectContainmentEList<Lamp>(Lamp.class, this, LightastPackage.MAIN__LAMP);
+	public EList<LightFixture> getFixtures() {
+		if (fixtures == null) {
+			fixtures = new EObjectContainmentEList<LightFixture>(LightFixture.class, this, LightastPackage.MAIN__FIXTURES);
 		}
-		return lamp;
+		return fixtures;
 	}
 
 	/**
@@ -142,8 +143,8 @@ public class MainImpl extends EObjectImpl implements Main {
 		switch (featureID) {
 			case LightastPackage.MAIN__BIM_SERVER:
 				return basicSetBIMServer(null, msgs);
-			case LightastPackage.MAIN__LAMP:
-				return ((InternalEList<?>)getLamp()).basicRemove(otherEnd, msgs);
+			case LightastPackage.MAIN__FIXTURES:
+				return ((InternalEList<?>)getFixtures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -158,8 +159,8 @@ public class MainImpl extends EObjectImpl implements Main {
 		switch (featureID) {
 			case LightastPackage.MAIN__BIM_SERVER:
 				return getBIMServer();
-			case LightastPackage.MAIN__LAMP:
-				return getLamp();
+			case LightastPackage.MAIN__FIXTURES:
+				return getFixtures();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -176,9 +177,9 @@ public class MainImpl extends EObjectImpl implements Main {
 			case LightastPackage.MAIN__BIM_SERVER:
 				setBIMServer((BIMServerCredentials)newValue);
 				return;
-			case LightastPackage.MAIN__LAMP:
-				getLamp().clear();
-				getLamp().addAll((Collection<? extends Lamp>)newValue);
+			case LightastPackage.MAIN__FIXTURES:
+				getFixtures().clear();
+				getFixtures().addAll((Collection<? extends LightFixture>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,8 +196,8 @@ public class MainImpl extends EObjectImpl implements Main {
 			case LightastPackage.MAIN__BIM_SERVER:
 				setBIMServer((BIMServerCredentials)null);
 				return;
-			case LightastPackage.MAIN__LAMP:
-				getLamp().clear();
+			case LightastPackage.MAIN__FIXTURES:
+				getFixtures().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -212,8 +213,8 @@ public class MainImpl extends EObjectImpl implements Main {
 		switch (featureID) {
 			case LightastPackage.MAIN__BIM_SERVER:
 				return bimServer != null;
-			case LightastPackage.MAIN__LAMP:
-				return lamp != null && !lamp.isEmpty();
+			case LightastPackage.MAIN__FIXTURES:
+				return fixtures != null && !fixtures.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

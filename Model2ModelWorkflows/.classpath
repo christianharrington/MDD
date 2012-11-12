@@ -171,5 +171,6 @@
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext_2.3.1.v201208210947.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext.common.types_2.3.1.v201208210947.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext.util_2.3.1.v201208210947.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/LightDSL"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

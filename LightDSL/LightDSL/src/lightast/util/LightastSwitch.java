@@ -84,6 +84,18 @@ public class LightastSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case LightastPackage.MATERIAL: {
+				Material material = (Material)theEObject;
+				T result = caseMaterial(material);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case LightastPackage.LIGHT_FIXTURE: {
+				LightFixture lightFixture = (LightFixture)theEObject;
+				T result = caseLightFixture(lightFixture);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -130,6 +142,36 @@ public class LightastSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLamp(Lamp object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Material</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Material</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMaterial(Material object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Light Fixture</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Light Fixture</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLightFixture(LightFixture object) {
 		return null;
 	}
 

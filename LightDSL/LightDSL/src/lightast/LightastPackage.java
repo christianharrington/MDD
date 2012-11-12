@@ -4,6 +4,7 @@ package lightast;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -37,7 +38,7 @@ public interface LightastPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://lightast/1.0";
+	String eNS_URI = "/LightDSL/model/LightAST.ecore";
 
 	/**
 	 * The package namespace name.
@@ -139,13 +140,13 @@ public interface LightastPackage extends EPackage {
 	int MAIN__BIM_SERVER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Lamp</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Fixtures</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAIN__LAMP = 1;
+	int MAIN__FIXTURES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Main</em>' class.
@@ -185,13 +186,126 @@ public interface LightastPackage extends EPackage {
 	int LAMP__PREDEFINED_TYPE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Consists Of</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAMP__CONSISTS_OF = 2;
+
+	/**
 	 * The number of structural features of the '<em>Lamp</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAMP_FEATURE_COUNT = 2;
+	int LAMP_FEATURE_COUNT = 3;
+
+
+	/**
+	 * The meta object id for the '{@link lightast.impl.MaterialImpl <em>Material</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see lightast.impl.MaterialImpl
+	 * @see lightast.impl.LightastPackageImpl#getMaterial()
+	 * @generated
+	 */
+	int MATERIAL = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATERIAL__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATERIAL__DESCRIPTION = 1;
+
+	/**
+	 * The number of structural features of the '<em>Material</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATERIAL_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link lightast.impl.LightFixtureImpl <em>Light Fixture</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see lightast.impl.LightFixtureImpl
+	 * @see lightast.impl.LightastPackageImpl#getLightFixture()
+	 * @generated
+	 */
+	int LIGHT_FIXTURE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Consists Of</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIGHT_FIXTURE__CONSISTS_OF = 0;
+
+	/**
+	 * The feature id for the '<em><b>Predefined Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIGHT_FIXTURE__PREDEFINED_TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Lamps</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIGHT_FIXTURE__LAMPS = 2;
+
+	/**
+	 * The number of structural features of the '<em>Light Fixture</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIGHT_FIXTURE_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link lightast.LampType <em>Lamp Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see lightast.LampType
+	 * @see lightast.impl.LightastPackageImpl#getLampType()
+	 * @generated
+	 */
+	int LAMP_TYPE = 5;
+
+	/**
+	 * The meta object id for the '{@link lightast.LightFixtureType <em>Light Fixture Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see lightast.LightFixtureType
+	 * @see lightast.impl.LightastPackageImpl#getLightFixtureType()
+	 * @generated
+	 */
+	int LIGHT_FIXTURE_TYPE = 6;
 
 
 	/**
@@ -281,15 +395,15 @@ public interface LightastPackage extends EPackage {
 	EReference getMain_BIMServer();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link lightast.Main#getLamp <em>Lamp</em>}'.
+	 * Returns the meta object for the containment reference list '{@link lightast.Main#getFixtures <em>Fixtures</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lamp</em>'.
-	 * @see lightast.Main#getLamp()
+	 * @return the meta object for the containment reference list '<em>Fixtures</em>'.
+	 * @see lightast.Main#getFixtures()
 	 * @see #getMain()
 	 * @generated
 	 */
-	EReference getMain_Lamp();
+	EReference getMain_Fixtures();
 
 	/**
 	 * Returns the meta object for class '{@link lightast.Lamp <em>Lamp</em>}'.
@@ -322,6 +436,112 @@ public interface LightastPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLamp_PredefinedType();
+
+	/**
+	 * Returns the meta object for the reference '{@link lightast.Lamp#getConsistsOf <em>Consists Of</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Consists Of</em>'.
+	 * @see lightast.Lamp#getConsistsOf()
+	 * @see #getLamp()
+	 * @generated
+	 */
+	EReference getLamp_ConsistsOf();
+
+	/**
+	 * Returns the meta object for class '{@link lightast.Material <em>Material</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Material</em>'.
+	 * @see lightast.Material
+	 * @generated
+	 */
+	EClass getMaterial();
+
+	/**
+	 * Returns the meta object for the attribute '{@link lightast.Material#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see lightast.Material#getName()
+	 * @see #getMaterial()
+	 * @generated
+	 */
+	EAttribute getMaterial_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link lightast.Material#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see lightast.Material#getDescription()
+	 * @see #getMaterial()
+	 * @generated
+	 */
+	EAttribute getMaterial_Description();
+
+	/**
+	 * Returns the meta object for class '{@link lightast.LightFixture <em>Light Fixture</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Light Fixture</em>'.
+	 * @see lightast.LightFixture
+	 * @generated
+	 */
+	EClass getLightFixture();
+
+	/**
+	 * Returns the meta object for the reference '{@link lightast.LightFixture#getConsistsOf <em>Consists Of</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Consists Of</em>'.
+	 * @see lightast.LightFixture#getConsistsOf()
+	 * @see #getLightFixture()
+	 * @generated
+	 */
+	EReference getLightFixture_ConsistsOf();
+
+	/**
+	 * Returns the meta object for the attribute '{@link lightast.LightFixture#getPredefinedType <em>Predefined Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Predefined Type</em>'.
+	 * @see lightast.LightFixture#getPredefinedType()
+	 * @see #getLightFixture()
+	 * @generated
+	 */
+	EAttribute getLightFixture_PredefinedType();
+
+	/**
+	 * Returns the meta object for the reference list '{@link lightast.LightFixture#getLamps <em>Lamps</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lamps</em>'.
+	 * @see lightast.LightFixture#getLamps()
+	 * @see #getLightFixture()
+	 * @generated
+	 */
+	EReference getLightFixture_Lamps();
+
+	/**
+	 * Returns the meta object for enum '{@link lightast.LampType <em>Lamp Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Lamp Type</em>'.
+	 * @see lightast.LampType
+	 * @generated
+	 */
+	EEnum getLampType();
+
+	/**
+	 * Returns the meta object for enum '{@link lightast.LightFixtureType <em>Light Fixture Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Light Fixture Type</em>'.
+	 * @see lightast.LightFixtureType
+	 * @generated
+	 */
+	EEnum getLightFixtureType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -414,12 +634,12 @@ public interface LightastPackage extends EPackage {
 		EReference MAIN__BIM_SERVER = eINSTANCE.getMain_BIMServer();
 
 		/**
-		 * The meta object literal for the '<em><b>Lamp</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Fixtures</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MAIN__LAMP = eINSTANCE.getMain_Lamp();
+		EReference MAIN__FIXTURES = eINSTANCE.getMain_Fixtures();
 
 		/**
 		 * The meta object literal for the '{@link lightast.impl.LampImpl <em>Lamp</em>}' class.
@@ -446,6 +666,94 @@ public interface LightastPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LAMP__PREDEFINED_TYPE = eINSTANCE.getLamp_PredefinedType();
+
+		/**
+		 * The meta object literal for the '<em><b>Consists Of</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LAMP__CONSISTS_OF = eINSTANCE.getLamp_ConsistsOf();
+
+		/**
+		 * The meta object literal for the '{@link lightast.impl.MaterialImpl <em>Material</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see lightast.impl.MaterialImpl
+		 * @see lightast.impl.LightastPackageImpl#getMaterial()
+		 * @generated
+		 */
+		EClass MATERIAL = eINSTANCE.getMaterial();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MATERIAL__NAME = eINSTANCE.getMaterial_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MATERIAL__DESCRIPTION = eINSTANCE.getMaterial_Description();
+
+		/**
+		 * The meta object literal for the '{@link lightast.impl.LightFixtureImpl <em>Light Fixture</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see lightast.impl.LightFixtureImpl
+		 * @see lightast.impl.LightastPackageImpl#getLightFixture()
+		 * @generated
+		 */
+		EClass LIGHT_FIXTURE = eINSTANCE.getLightFixture();
+
+		/**
+		 * The meta object literal for the '<em><b>Consists Of</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIGHT_FIXTURE__CONSISTS_OF = eINSTANCE.getLightFixture_ConsistsOf();
+
+		/**
+		 * The meta object literal for the '<em><b>Predefined Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LIGHT_FIXTURE__PREDEFINED_TYPE = eINSTANCE.getLightFixture_PredefinedType();
+
+		/**
+		 * The meta object literal for the '<em><b>Lamps</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIGHT_FIXTURE__LAMPS = eINSTANCE.getLightFixture_Lamps();
+
+		/**
+		 * The meta object literal for the '{@link lightast.LampType <em>Lamp Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see lightast.LampType
+		 * @see lightast.impl.LightastPackageImpl#getLampType()
+		 * @generated
+		 */
+		EEnum LAMP_TYPE = eINSTANCE.getLampType();
+
+		/**
+		 * The meta object literal for the '{@link lightast.LightFixtureType <em>Light Fixture Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see lightast.LightFixtureType
+		 * @see lightast.impl.LightastPackageImpl#getLightFixtureType()
+		 * @generated
+		 */
+		EEnum LIGHT_FIXTURE_TYPE = eINSTANCE.getLightFixtureType();
 
 	}
 
