@@ -22,9 +22,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>BIMServerConenctionTest</name>
+			<name>IfcIO</name>
 			<type>2</type>
-			<location>/Users/ahkj/Desktop/MDD/MDD/BIMServerConnectionTest</location>
+			<locationURI>PARENT-1-PROJECT_LOC/BIMServerConnectionTest/src/IfcIO</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="xtend-gen"/>
+	<classpathentry kind="src" path="IfcIO"/>
 	<classpathentry kind="src" path="resource"/>
 	<classpathentry kind="con" path="org.eclipse.xtend.XTEND_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
@@ -157,19 +158,18 @@
 	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24-utils.jar"/>
 	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/org.eclipse.emf.mwe2.launch_2.3.0.v201206120758.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/org.apache.commons.cli_1.2.0.v201105210650.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/org.apache.log4j_1.2.15.v201012070815.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/org.eclipse.emf.mwe2.runtime_2.3.0.v201206110920.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/com.google.inject_3.0.0.v201203062045.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/org.eclipse.xtext.common.types_2.3.1.v201208210947.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/org.eclipse.emf.mwe2.lib_2.3.0.v201206110920.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/org.eclipse.emf.mwe2.language_2.3.0.v201206120758.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/org.apache.commons.logging_1.0.4.v201101211617.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/org.eclipse.xtext_2.3.1.v201208210947.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/javax.inject_1.0.0.v20091030.jar"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Applications/eclipse/plugins/org.eclipse.xtext.util_2.3.1.v201208210947.jar"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/BIMServerConnectionTest"/>
-	<classpathentry kind="lib" path="/Users/ahkj/Desktop/MDD/MDD/BIMServerConnectionTest/src/IfcIO"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/com.google.inject_3.0.0.v201203062045.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/javax.inject_1.0.0.v20091030.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.apache.log4j_1.2.15.v201012070815.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.apache.commons.cli_1.2.0.v201105210650.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.apache.commons.logging_1.1.1.v201101211721.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.mwe2.language_2.3.0.v201206120758.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.mwe2.launch_2.3.0.v201206120758.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.mwe2.lib_2.3.0.v201206110920.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.emf.mwe2.runtime_2.3.0.v201206110920.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext_2.3.1.v201208210947.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext.common.types_2.3.1.v201208210947.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext.util_2.3.1.v201208210947.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -50,7 +50,7 @@ public class IfcReader {
 
 	}
 
-	public static Resource ReadModel(String path, String schema) throws IOException, DeserializeException{
+	public static Resource ReadModel(String path, String schemaPath) throws IOException, DeserializeException{
 	//	long poid = 33399;
 
 		// Make the connection
@@ -90,7 +90,7 @@ public class IfcReader {
 
 		//Parse schema for deserialization
 		System.out.println("Parse schema");	
-		ExpressSchemaParser schemaParser = new ExpressSchemaParser(new File(String schema));
+		ExpressSchemaParser schemaParser = new ExpressSchemaParser(new File(schemaPath));
 		schemaParser.parse();
 		SchemaDefinition schema = schemaParser.getSchema();
 		System.out.println("Done");
