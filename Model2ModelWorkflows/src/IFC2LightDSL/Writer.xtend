@@ -1,7 +1,7 @@
 package IFC2LightDSL
 
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
-import IfcIO.IfcWriter;
+import IfcIO.IfcWriter
 import org.bimserver.ifc.IfcModel
 
 class Writer extends WorkflowComponentWithSlot {

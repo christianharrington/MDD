@@ -1,7 +1,7 @@
 package IFC2LightDSL
 
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
-import IfcIO.IfcReader;
+import IfcIO.IfcReader
 
 
 class Reader extends WorkflowComponentWithSlot {
