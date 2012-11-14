@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 49
-/svn/!svn/ver/2073/trunk/Builds/build/targets/war
+/svn/!svn/ver/2137/trunk/Builds/build/targets/war
 END
 MANIFEST.MF
 K 25
@@ -13,5 +13,5 @@ web.xml
 K 25
 svn:wc:ra_dav:version-url
 V 57
-/svn/!svn/ver/2073/trunk/Builds/build/targets/war/web.xml
+/svn/!svn/ver/2137/trunk/Builds/build/targets/war/web.xml
 END

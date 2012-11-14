@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svn/!svn/ver/2122/trunk/BimServer/src/org/bimserver/servlets
+/svn/!svn/ver/2171/trunk/BimServer/src/org/bimserver/servlets
 END
 EndPoint.java
 K 25
@@ -19,7 +19,7 @@ TomcatStreamInbound.java
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svn/!svn/ver/2109/trunk/BimServer/src/org/bimserver/servlets/TomcatStreamInbound.java
+/svn/!svn/ver/2158/trunk/BimServer/src/org/bimserver/servlets/TomcatStreamInbound.java
 END
 RestServlet.java
 K 25
@@ -67,7 +67,7 @@ UploadServlet.java
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svn/!svn/ver/2122/trunk/BimServer/src/org/bimserver/servlets/UploadServlet.java
+/svn/!svn/ver/2164/trunk/BimServer/src/org/bimserver/servlets/UploadServlet.java
 END
 EndPointManager.java
 K 25
@@ -79,7 +79,7 @@ DownloadServlet.java
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/svn/!svn/ver/2121/trunk/BimServer/src/org/bimserver/servlets/DownloadServlet.java
+/svn/!svn/ver/2171/trunk/BimServer/src/org/bimserver/servlets/DownloadServlet.java
 END
 StreamingServlet.java
 K 25

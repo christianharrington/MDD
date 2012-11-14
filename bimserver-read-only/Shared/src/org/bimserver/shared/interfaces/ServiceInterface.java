@@ -160,7 +160,8 @@ public interface ServiceInterface extends PublicInterface {
 	@Path("/checkin")
 	@Produces("text/plain")
 	@WebMethod(action = "checkin")
-	Long checkin(@WebParam(name = "poid", partName = "checkin.poid") Long poid,
+	Long checkin(
+			@WebParam(name = "poid", partName = "checkin.poid") Long poid,
 			@QueryParam("comment") @WebParam(name = "comment", partName = "checkin.comment") String comment,
 			@QueryParam("deserializerOid") @WebParam(name = "deserializerOid", partName = "checkin.deserializerOid") Long deserializerOid,
 			@QueryParam("fileSize") @WebParam(name = "fileSize", partName = "checkin.fileSize") Long fileSize,
@@ -296,6 +297,7 @@ public interface ServiceInterface extends PublicInterface {
 			@WebParam(name = "classNames", partName = "downloadByTypes.classNames") Set<String> classNames,
 			@WebParam(name = "serializerOid", partName = "download.serializerOid") Long serializerOid,
 			@WebParam(name = "includeAllSubtypes", partName = "downloadByTypes.includeAllSubtypes") Boolean includeAllSubtypes,
+			@WebParam(name = "useObjectIDM", partName = "downloadByTypes.useObjectIDM") Boolean useObjectIDM,
 			@WebParam(name = "sync", partName = "download.sync") Boolean sync) throws ServerException, UserException;
 
 	/**

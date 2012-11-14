@@ -132,6 +132,7 @@
 				<exclude name="ant-1.6.5.jar" />
 				<exclude name="core-3.1.1.jar" />
 				<exclude name="jetty/**" />
+				<exclude name="tomcat/**" />
 				<exclude name="**/*servlet*" />
 			</fileset>
 		</copy>
@@ -151,11 +152,5 @@
 		<copy todir="builds/BuildWar/WEB-INF/classes">
 			<fileset file="${defaultsettings}/${target}/log4j.xml" />
 		</copy>
-		<jar destfile="builds/bimserver-${version}.war" manifest="../../BimWebServer/www/META-INF/MANIFEST.MF">
-			<fileset dir="builds/BuildWar">
-				<exclude name="*.svn" />
-			</fileset>
-		</jar>
-		<delete dir="builds/BuildWar" failonerror="false" />
 	</target>
 </project>

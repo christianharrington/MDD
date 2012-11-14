@@ -22,6 +22,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.bimserver.BimServer;
+import org.bimserver.HideAllInversesObjectIDM;
 import org.bimserver.database.BimserverDatabaseException;
 import org.bimserver.database.BimserverLockConflictException;
 import org.bimserver.database.DatabaseSession;
@@ -34,18 +35,20 @@ import org.bimserver.models.store.ConcreteRevision;
 import org.bimserver.models.store.Geometry;
 import org.bimserver.models.store.Project;
 import org.bimserver.models.store.Revision;
+import org.bimserver.models.store.SerializerPluginConfiguration;
+import org.bimserver.models.store.StorePackage;
 import org.bimserver.models.store.User;
 import org.bimserver.plugins.IfcModelSet;
 import org.bimserver.plugins.ModelHelper;
+import org.bimserver.plugins.PluginException;
 import org.bimserver.plugins.Reporter;
 import org.bimserver.plugins.modelmerger.MergeException;
 import org.bimserver.plugins.objectidms.ObjectIDM;
 import org.bimserver.shared.exceptions.UserException;
+import org.bimserver.utils.CollectionUtils;
 import org.bimserver.webservices.Authorization;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
-
-import sun.net.www.protocol.gopher.GopherClient;
 
 public class DownloadByTypesDatabaseAction extends BimDatabaseAction<IfcModelInterface> {
 
@@ -56,12 +59,16 @@ public class DownloadByTypesDatabaseAction extends BimDatabaseAction<IfcModelInt
 	private final ObjectIDM objectIDM;
 	private final boolean includeAllSubtypes;
 	private Authorization authorization;
+	private long serializerOid;
+	private boolean useObjectIDM;
 
-	public DownloadByTypesDatabaseAction(BimServer bimServer, DatabaseSession databaseSession, AccessMethod accessMethod, Set<Long> roids, Set<String> classNames, boolean includeAllSubtypes, Authorization authorization, ObjectIDM objectIDM, Reporter reporter) {
+	public DownloadByTypesDatabaseAction(BimServer bimServer, DatabaseSession databaseSession, AccessMethod accessMethod, Set<Long> roids, Set<String> classNames, long serializerOid, boolean includeAllSubtypes, boolean useObjectIDM, Authorization authorization, ObjectIDM objectIDM, Reporter reporter) {
 		super(databaseSession, accessMethod);
 		this.bimServer = bimServer;
 		this.roids = roids;
+		this.serializerOid = serializerOid;
 		this.includeAllSubtypes = includeAllSubtypes;
+		this.useObjectIDM = useObjectIDM;
 		this.authorization = authorization;
 		this.classNames = classNames;
 		this.objectIDM = objectIDM;
@@ -73,9 +80,7 @@ public class DownloadByTypesDatabaseAction extends BimDatabaseAction<IfcModelInt
 		User user = getUserByUoid(authorization.getUoid());
 		Project project = null;
 		Set<EClass> eClasses = new HashSet<EClass>();
-//		eClasses.add(getDatabaseSession().getEClassForName("IfcProject"));
-//		eClasses.add(getDatabaseSession().getEClassForName("IfcUnitAssignment"));
-//		eClasses.add(getDatabaseSession().getEClassForName("IfcSIUnit"));
+		SerializerPluginConfiguration serializerPluginConfiguration = getDatabaseSession().get(StorePackage.eINSTANCE.getSerializerPluginConfiguration(), SerializerPluginConfiguration.class, serializerOid);
 		for (String className : classNames) {
 			eClasses.add(getDatabaseSession().getEClassForName(className));
 			if (includeAllSubtypes) {
@@ -100,9 +105,14 @@ public class DownloadByTypesDatabaseAction extends BimDatabaseAction<IfcModelInt
 				throw new UserException("User has insufficient rights to download revisions from this project");
 			}
 			for (ConcreteRevision concreteRevision : virtualRevision.getConcreteRevisions()) {
-				IfcModelInterface subModel = getDatabaseSession().getAllOfTypes(eClasses, concreteRevision.getProject().getId(), concreteRevision.getId(), true, objectIDM);
-				subModel.setDate(concreteRevision.getDate());
-				ifcModelSet.add(subModel);
+				try {
+					HideAllInversesObjectIDM hideAllInversesObjectIDM = new HideAllInversesObjectIDM(CollectionUtils.singleSet(Ifc2x3tc1Package.eINSTANCE), bimServer.getPluginManager().requireSchemaDefinition());
+					IfcModelInterface subModel = getDatabaseSession().getAllOfTypes(eClasses, concreteRevision.getProject().getId(), concreteRevision.getId(), true, useObjectIDM ? objectIDM : hideAllInversesObjectIDM);
+					subModel.setDate(concreteRevision.getDate());
+					ifcModelSet.add(subModel);
+				} catch (PluginException e) {
+					e.printStackTrace();
+				}
 			}
 			IfcModelInterface ifcModel;
 			try {
@@ -114,13 +124,16 @@ public class DownloadByTypesDatabaseAction extends BimDatabaseAction<IfcModelInt
 			ifcModel.setRevisionNr(project.getRevisions().indexOf(virtualRevision) + 1);
 			ifcModel.setAuthorizedUser(getUserByUoid(authorization.getUoid()).getName());
 			ifcModel.setDate(virtualRevision.getDate());
+			
 			for (IfcProduct ifcProduct : ifcModel.getAllWithSubTypes(IfcProduct.class)) {
 				GeometryInstance geometryInstance = ifcProduct.getGeometryInstance();
 				if (geometryInstance != null) {
-					geometryInstance.load();
-					geometryInstance.getBounds().load();
-					geometryInstance.getBounds().getMin().load();
-					geometryInstance.getBounds().getMax().load();
+					if (serializerPluginConfiguration.isNeedsGeometry()) {
+						geometryInstance.load();
+					}
+					ifcProduct.getBounds().load();
+					ifcProduct.getBounds().getMin().load();
+					ifcProduct.getBounds().getMax().load();
 				}
 			}
 		}

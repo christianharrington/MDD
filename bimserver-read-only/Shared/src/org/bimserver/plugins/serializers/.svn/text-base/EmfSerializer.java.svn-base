@@ -24,6 +24,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.bimserver.emf.IfcModelInterface;
 import org.bimserver.plugins.PluginManager;
@@ -39,15 +41,18 @@ public abstract class EmfSerializer implements Serializer {
 	private ProjectInfo projectInfo;
 	private PluginManager pluginManager;
 	private IfcEngine ifcEngine;
+	private boolean normalizeOids;
+	private final Map<Long, Long> oidMapper = new HashMap<Long, Long>();
 
 	protected static enum Mode {
 		HEADER, BODY, FOOTER, FINISHED
 	}
 
-	public void init(IfcModelInterface model, ProjectInfo projectInfo, PluginManager pluginManager, IfcEngine ifcEngine) throws SerializerException {
+	public void init(IfcModelInterface model, ProjectInfo projectInfo, PluginManager pluginManager, IfcEngine ifcEngine, boolean normalizeOids) throws SerializerException {
 		this.model = model;
 		this.projectInfo = projectInfo;
 		this.ifcEngine = ifcEngine;
+		this.normalizeOids = normalizeOids;
 		this.setPluginManager(pluginManager);
 		reset();
 	}
@@ -64,10 +69,27 @@ public abstract class EmfSerializer implements Serializer {
 		return mode;
 	}
 
+	public boolean isNormalizeOids() {
+		return normalizeOids;
+	}
+	
 	protected void setMode(Mode mode) {
 		this.mode = mode;
 	}
 
+	protected long convertKey(Long key) {
+		if (!normalizeOids) {
+			return key;
+		}
+		if (oidMapper.containsKey(key)) {
+			return oidMapper.get(key);
+		} else {
+			long size = oidMapper.size();
+			oidMapper.put(key, size);
+			return size;
+		}
+	}
+	
 	public byte[] getBytes() {
 		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 		try {
@@ -157,7 +179,7 @@ public abstract class EmfSerializer implements Serializer {
 	 * to do anything. Only when reusing a serializer, this method can be used
 	 * to cleanup/setup
 	 */
-	protected abstract void reset();
+	public abstract void reset();
 
 	/*
 	 * The serializer must implement this method and write data to the

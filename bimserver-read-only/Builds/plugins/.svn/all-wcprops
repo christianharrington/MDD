@@ -1,11 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
 V 39
-/svn/!svn/ver/2115/trunk/Builds/plugins
+/svn/!svn/ver/2164/trunk/Builds/plugins
 END
-opengl-2012-10-18.jar
+clashdetection-2012-10-30.jar
 K 25
 svn:wc:ra_dav:version-url
-V 61
-/svn/!svn/ver/2115/trunk/Builds/plugins/opengl-2012-10-18.jar
+V 69
+/svn/!svn/ver/2142/trunk/Builds/plugins/clashdetection-2012-10-30.jar
+END
+openglrenderer-2012-10-30.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2164/trunk/Builds/plugins/openglrenderer-2012-10-30.jar
 END

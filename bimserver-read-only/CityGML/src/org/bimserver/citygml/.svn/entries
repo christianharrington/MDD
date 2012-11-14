@@ -1,14 +1,14 @@
 10
 
 dir
-2126
+2173
 http://bimserver.googlecode.com/svn/trunk/CityGML/src/org/bimserver/citygml
 http://bimserver.googlecode.com/svn
 
 
 
-2012-10-04T16:20:13.329464Z
-2062
+2012-11-07T16:21:58.620095Z
+2171
 ruben@logic-labs.nl
 
 
@@ -32,10 +32,10 @@ file
 
 
 
-2012-10-25T22:49:52.000000Z
-9e503600b5cd8365a022518868662b4c
-2012-10-04T16:20:13.329464Z
-2062
+2012-11-14T13:00:35.000000Z
+f34229c23d3bbbaec950fac22e72f107
+2012-10-29T15:51:07.596241Z
+2128
 ruben@logic-labs.nl
 has-props
 
@@ -58,7 +58,7 @@ has-props
 
 
 
-2295
+2360
 
 CityGmlSerializer.java
 file
@@ -66,10 +66,10 @@ file
 
 
 
-2012-10-25T22:49:52.000000Z
-7f6bd03fe1e839f2bba11862eb4f723e
-2012-10-02T15:49:28.768456Z
-2052
+2012-11-14T13:00:35.000000Z
+ecb88107c356315c58b96f7ca6e39dfd
+2012-11-07T16:21:58.620095Z
+2171
 ruben@logic-labs.nl
 
 
@@ -92,7 +92,7 @@ ruben@logic-labs.nl
 
 
 
-32383
+32425
 
 BuildingCreator.java
 file
@@ -100,7 +100,7 @@ file
 
 
 
-2012-10-25T22:49:52.000000Z
+2012-11-14T13:00:35.000000Z
 7e5a875d291ea35c989e6acfdfbabecd
 2012-09-14T15:49:06.532253Z
 1934

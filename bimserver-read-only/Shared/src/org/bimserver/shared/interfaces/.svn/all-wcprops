@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/!svn/ver/2125/trunk/Shared/src/org/bimserver/shared/interfaces
+/svn/!svn/ver/2169/trunk/Shared/src/org/bimserver/shared/interfaces
 END
 PublicInterface.java
 K 25
@@ -13,7 +13,7 @@ ServiceInterface.java
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/2125/trunk/Shared/src/org/bimserver/shared/interfaces/ServiceInterface.java
+/svn/!svn/ver/2169/trunk/Shared/src/org/bimserver/shared/interfaces/ServiceInterface.java
 END
 NotificationInterface.java
 K 25

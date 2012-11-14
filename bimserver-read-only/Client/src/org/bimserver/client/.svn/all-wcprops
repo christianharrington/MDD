@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 56
-/svn/!svn/ver/2122/trunk/Client/src/org/bimserver/client
+/svn/!svn/ver/2128/trunk/Client/src/org/bimserver/client
 END
 Console.java
 K 25
@@ -103,7 +103,7 @@ ServiceHolder.java
 K 25
 svn:wc:ra_dav:version-url
 V 75
-/svn/!svn/ver/2122/trunk/Client/src/org/bimserver/client/ServiceHolder.java
+/svn/!svn/ver/2128/trunk/Client/src/org/bimserver/client/ServiceHolder.java
 END
 CheckoutTableModel.java
 K 25

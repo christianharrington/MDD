@@ -140,14 +140,6 @@ public class StreamingSceneJSSerializer extends EmfSerializer {
 		public float[] min = { Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY };
 		public float[] max = { Float.NEGATIVE_INFINITY, Float.NEGATIVE_INFINITY, Float.NEGATIVE_INFINITY };
 		
-		public void addToMinExtents(EList<Float> extents) {
-			addToMinExtents(new float[]{extents.get(0), extents.get(1), extents.get(2)});
-		}
-
-		public void addToMaxExtents(EList<Float> extents) {
-			addToMaxExtents(new float[]{extents.get(0), extents.get(1), extents.get(2)});
-		}
-
 		public void addToMinExtents(float[] vertex) {
 			for (int i=0; i<vertex.length; i++) {
 				min[i] = Math.min(vertex[i], min[i]);
@@ -179,8 +171,8 @@ public class StreamingSceneJSSerializer extends EmfSerializer {
 	private IfcEngine ifcEngine;
 
 	@Override
-	public void init(IfcModelInterface model, ProjectInfo projectInfo, PluginManager pluginManager, IfcEngine ifcEngine) throws SerializerException {
-		super.init(model, projectInfo, pluginManager, ifcEngine);
+	public void init(IfcModelInterface model, ProjectInfo projectInfo, PluginManager pluginManager, IfcEngine ifcEngine, boolean normalizeOids) throws SerializerException {
+		super.init(model, projectInfo, pluginManager, ifcEngine, normalizeOids);
 		this.ifcEngine = ifcEngine;
 		this.surfaceStyleIds = new ArrayList<String>();
 	}
@@ -190,7 +182,7 @@ public class StreamingSceneJSSerializer extends EmfSerializer {
 			try {
 				ifcEngine.init();
 				Serializer serializer = getPluginManager().requireIfcStepSerializer();
-				serializer.init(model, getProjectInfo(), getPluginManager(), ifcEngine);
+				serializer.init(model, getProjectInfo(), getPluginManager(), ifcEngine, false);
 				ifcEngineModel = ifcEngine.openModel(serializer.getBytes());
 				ifcEngineModel.setPostProcessing(true);
 				geometry = ifcEngineModel.finalizeModelling(ifcEngineModel.initializeModelling());
@@ -245,7 +237,7 @@ public class StreamingSceneJSSerializer extends EmfSerializer {
 	}
 	
 	@Override
-	protected void reset() {
+	public void reset() {
 		setMode(Mode.BODY);
 	}
 
@@ -380,7 +372,7 @@ public class StreamingSceneJSSerializer extends EmfSerializer {
 				extents.addToMaxExtents(new float[] { getVertex(i + 0), getVertex(i + 1), getVertex(i + 2) });
 			}
 		} else {
-			extents.integrate(ifcObject.getGeometryInstance().getBounds());
+			extents.integrate(ifcObject.getBounds());
 		}
 		sceneExtents.addToMinExtents(extents.min);
 		sceneExtents.addToMaxExtents(extents.max);
@@ -388,60 +380,60 @@ public class StreamingSceneJSSerializer extends EmfSerializer {
 
 	private void writeGeometries(JsonWriter jsonWriter) throws IfcEngineException, SerializerException, IOException {
 		for (IfcRoof ifcRoof : model.getAll(IfcRoof.class)) {
-			writeGeometricObject(jsonWriter, ifcRoof, ifcRoof.getGlobalId().getWrappedValue(), "Roof");
+			writeGeometricObject(jsonWriter, ifcRoof, "Roof");
 		}
 		for (IfcSlab ifcSlab : model.getAll(IfcSlab.class)) {
 			if (ifcSlab.getPredefinedType() == IfcSlabTypeEnum.ROOF) {
-				writeGeometricObject(jsonWriter, ifcSlab, ifcSlab.getGlobalId().getWrappedValue(), "Roof");
+				writeGeometricObject(jsonWriter, ifcSlab, "Roof");
 			} else {
-				writeGeometricObject(jsonWriter, ifcSlab, ifcSlab.getGlobalId().getWrappedValue(), "Slab");
+				writeGeometricObject(jsonWriter, ifcSlab, "Slab");
 			}
 		}
 		for (IfcWindow ifcWindow : model.getAll(IfcWindow.class)) {
-			writeGeometricObject(jsonWriter, ifcWindow, ifcWindow.getGlobalId().getWrappedValue(), "Window");
+			writeGeometricObject(jsonWriter, ifcWindow, "Window");
 		}
 		for (IfcDoor ifcDoor : model.getAll(IfcDoor.class)) {
-			writeGeometricObject(jsonWriter, ifcDoor, ifcDoor.getGlobalId().getWrappedValue(), "Door");
+			writeGeometricObject(jsonWriter, ifcDoor, "Door");
 		}
 		for (IfcWall ifcWall : model.getAll(IfcWall.class)) {
-			writeGeometricObject(jsonWriter, ifcWall, ifcWall.getGlobalId().getWrappedValue(), "Wall");
+			writeGeometricObject(jsonWriter, ifcWall, "Wall");
 		}
 		for (IfcStair ifcStair : model.getAll(IfcStair.class)) {
-			writeGeometricObject(jsonWriter, ifcStair, ifcStair.getGlobalId().getWrappedValue(), "Stair");
+			writeGeometricObject(jsonWriter, ifcStair, "Stair");
 		}
 		for (IfcStairFlight ifcStairFlight : model.getAll(IfcStairFlight.class)) {
-			writeGeometricObject(jsonWriter, ifcStairFlight, ifcStairFlight.getGlobalId().getWrappedValue(), "StairFlight");
+			writeGeometricObject(jsonWriter, ifcStairFlight, "StairFlight");
 		}
 		for (IfcFlowSegment ifcFlowSegment : model.getAll(IfcFlowSegment.class)) {
-			writeGeometricObject(jsonWriter, ifcFlowSegment, ifcFlowSegment.getGlobalId().getWrappedValue(), "FlowSegment");
+			writeGeometricObject(jsonWriter, ifcFlowSegment, "FlowSegment");
 		}
 		for (IfcFurnishingElement ifcFurnishingElement : model.getAll(IfcFurnishingElement.class)) {
-			writeGeometricObject(jsonWriter, ifcFurnishingElement, ifcFurnishingElement.getGlobalId().getWrappedValue(), "FurnishingElement");
+			writeGeometricObject(jsonWriter, ifcFurnishingElement, "FurnishingElement");
 		}
 		for (IfcPlate ifcPlate : model.getAll(IfcPlate.class)) {
-			writeGeometricObject(jsonWriter, ifcPlate, ifcPlate.getGlobalId().getWrappedValue(), "Plate");
+			writeGeometricObject(jsonWriter, ifcPlate, "Plate");
 		}
 		for (IfcMember ifcMember : model.getAll(IfcMember.class)) {
-			writeGeometricObject(jsonWriter, ifcMember, ifcMember.getGlobalId().getWrappedValue(), "Member");
+			writeGeometricObject(jsonWriter, ifcMember, "Member");
 		}
 		for (IfcWallStandardCase ifcWall : model.getAll(IfcWallStandardCase.class)) {
-			writeGeometricObject(jsonWriter, ifcWall, ifcWall.getGlobalId().getWrappedValue(), "WallStandardCase");
+			writeGeometricObject(jsonWriter, ifcWall, "WallStandardCase");
 		}
 		for (IfcCurtainWall ifcCurtainWall : model.getAll(IfcCurtainWall.class)) {
-			writeGeometricObject(jsonWriter, ifcCurtainWall, ifcCurtainWall.getGlobalId().getWrappedValue(), "CurtainWall");
+			writeGeometricObject(jsonWriter, ifcCurtainWall, "CurtainWall");
 		}
 		for (IfcRailing ifcRailing : model.getAll(IfcRailing.class)) {
-			writeGeometricObject(jsonWriter, ifcRailing, ifcRailing.getGlobalId().getWrappedValue(), "Railing");
+			writeGeometricObject(jsonWriter, ifcRailing, "Railing");
 		}
 		for (IfcColumn ifcColumn : model.getAll(IfcColumn.class)) {
-			writeGeometricObject(jsonWriter, ifcColumn, ifcColumn.getGlobalId().getWrappedValue(), "Column");
+			writeGeometricObject(jsonWriter, ifcColumn, "Column");
 		}
 		for (IfcBuildingElementProxy ifcBuildingElementProxy : model.getAll(IfcBuildingElementProxy.class)) {
-			writeGeometricObject(jsonWriter, ifcBuildingElementProxy, ifcBuildingElementProxy.getGlobalId().getWrappedValue(), "BuildingElementProxy");
+			writeGeometricObject(jsonWriter, ifcBuildingElementProxy, "BuildingElementProxy");
 		}
 	}
 
-	private void writeGeometricObject(JsonWriter jsonWriter, IfcProduct ifcRootObject, String id, String ifcObjectType) throws IfcEngineException, SerializerException, IOException {
+	private void writeGeometricObject(JsonWriter jsonWriter, IfcProduct ifcRootObject, String ifcObjectType) throws IfcEngineException, SerializerException, IOException {
 		//id = id.replace('$', '-'); // Remove the $ character from geometry id's.
 		//id = "_" + id; // Ensure that the id does not start with a digit
 
@@ -456,7 +448,7 @@ public class StreamingSceneJSSerializer extends EmfSerializer {
 				for (IfcRelDecomposes dcmp : isDecomposedBy) {
 					EList<IfcObjectDefinition> relatedObjects = dcmp.getRelatedObjects();
 					for (IfcObjectDefinition relatedObject : relatedObjects) {
-						writeGeometricObject(jsonWriter, (IfcProduct) relatedObject, relatedObject.getGlobalId().getWrappedValue(), ifcObjectType);
+						writeGeometricObject(jsonWriter, (IfcProduct) relatedObject, ifcObjectType);
 					}
 				}
 				return;
@@ -550,10 +542,10 @@ public class StreamingSceneJSSerializer extends EmfSerializer {
 		if (!materialGeometryRel.containsKey(material)) {
 			materialGeometryRel.put(material, new HashSet<String>());
 		}
-		materialGeometryRel.get(material).add(id);
+		materialGeometryRel.get(material).add("" + ifcRootObject.getOid());
 
 		// Serialize the geometric data itself
-		writeGeometry(jsonWriter, ifcRootObject, id);
+		writeGeometry(jsonWriter, ifcRootObject, "" + ifcRootObject.getObjectType());
 	}
 
 	private void writeGeometry(JsonWriter jsonWriter, IfcProduct ifcObject, String id) throws IfcEngineException, SerializerException, IOException {
