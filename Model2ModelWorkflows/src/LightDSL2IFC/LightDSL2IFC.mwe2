@@ -2,10 +2,11 @@ module LightDSL2IFC.LightDSL2IFC
 
 var modelSlot = 'model'
 var instanceFilePath = 'instance.xmi'
+var ifcWritePath = 'output.ifc'
 
 Workflow {
 	
-	component = Reader {
+	component = XMI2ModelReader {
 		slot = modelSlot
 		path = instanceFilePath
 	}
@@ -18,8 +19,9 @@ Workflow {
 		slot = modelSlot
 	}
 	
-	component = Writer {
+	component = Model2IFCWriter {
 		slot = modelSlot
+		path = ifcWritePath
 	}
 	
 }

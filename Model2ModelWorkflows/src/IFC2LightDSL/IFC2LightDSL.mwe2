@@ -8,7 +8,7 @@ var xmiWritePath = 'instance.xmi'
 
 Workflow {
 	
-	component = ModelReader {
+	component = IFC2ModelReader {
 		slot = modelSlot
 		file = IFCFilePath
 		schema = schema

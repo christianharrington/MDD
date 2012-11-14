@@ -11,12 +11,11 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.emf.common.util.URI
 import lightast.LightastPackage
 
-class Reader extends WorkflowComponentWithSlot {
+class XMI2ModelReader extends WorkflowComponentWithSlot {
 	
 	String path
 	
 	def getPath() { path }
-	
 	def setPath(String path) { this.path = path }
 	
 	override invoke(IWorkflowContext ctx) {

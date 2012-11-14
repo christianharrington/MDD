@@ -5,11 +5,17 @@ import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import IfcIO.IfcWriter
 import org.bimserver.ifc.IfcModel
 
-class Writer extends WorkflowComponentWithSlot {
+class Model2IFCWriter extends WorkflowComponentWithSlot {
+	
+	String path
+	
+	def getPath() { path }
+	
+	def setPath(String path) { this.path = path }
 	
 	override invoke(IWorkflowContext ctx) {
-		//var model = ctx.get(getSlot())
-	    //IfcWriter::SaveModel(model as IfcModel)
+		var IfcModel model = ctx.get(getSlot()) as IfcModel
+	    IfcWriter::SaveModel(model)
 	}
 	
 }

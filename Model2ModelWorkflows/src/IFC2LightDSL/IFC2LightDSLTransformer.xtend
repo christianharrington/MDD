@@ -19,8 +19,12 @@ class IFC2LightDSLTransformer extends WorkflowComponentWithSlot {
 	
 	def addLamp(LightFixture lif, IfcCartesianPoint cp) {
 		val lamp = lightFactory.createLamp()
-		cp.coordinatesAsString.forEach[	lamp.globalID = lamp.globalID + it + ", " ]
+		lamp.globalID = cp.getRid().toString()
+		/*cp.coordinatesAsString.forEach[	
+				lamp.globalID = lamp.globalID + it + ", "
+		]*/
 		lif.lamps.add(lamp)
+		
 	}
 
 	override invoke(IWorkflowContext ctx) {
@@ -31,9 +35,9 @@ class IFC2LightDSLTransformer extends WorkflowComponentWithSlot {
 		addLightFixture(lightModel, "POINTSOURCE")
 		for (f: lightModel.fixtures) {
 			model.forEach[
-				if(it instanceof IfcCartesianPoint){
+				if(it instanceof IfcCartesianPoint) {
 					addLamp(f, it as IfcCartesianPoint)
-				}				
+				}	
 			]			
 		}
 		ctx.put(getSlot(), lightModel)

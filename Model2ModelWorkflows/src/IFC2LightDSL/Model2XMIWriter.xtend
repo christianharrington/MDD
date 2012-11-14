@@ -2,16 +2,16 @@ package IFC2LightDSL
 
 import java.util.Collections
 import java.util.Map
+import lightast.Main
+import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.Resource$Factory$Registry
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
-import org.eclipse.emf.common.util.EList
-import org.eclipse.emf.ecore.EObject
-import lightast.LightFixture
 
 class Model2XMIWriter extends WorkflowComponentWithSlot {
 	

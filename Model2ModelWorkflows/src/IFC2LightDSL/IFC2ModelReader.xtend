@@ -4,7 +4,7 @@ import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import IfcIO.IfcReader
 
 
-class ModelReader extends WorkflowComponentWithSlot {
+class IFC2ModelReader extends WorkflowComponentWithSlot {
 	
 	String file
 	String schema
