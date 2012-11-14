@@ -2,13 +2,13 @@
 
 dir
 2173
-http://bimserver.googlecode.com/svn/trunk/buildingSMARTLibrary/bin
+http://bimserver.googlecode.com/svn/trunk/buildingSMARTLibrary/src
 http://bimserver.googlecode.com/svn
 
 
 
-2011-05-03T11:18:40.761323Z
-838
+2012-10-04T16:20:13.329464Z
+2062
 ruben@logic-labs.nl
 
 
@@ -25,4 +25,44 @@ ruben@logic-labs.nl
 
 
 22d71240-4879-e6bd-ac50-c68132091b5d
+
+net
+dir
+
+nl
+dir
+
+log4j.xml
+file
+
+
+
+
+2012-11-14T12:58:49.000000Z
+f5b4670ccaac1758c2909ba07b4e9f30
+2012-09-13T11:52:46.749918Z
+1916
+ruben@logic-labs.nl
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+856
 
