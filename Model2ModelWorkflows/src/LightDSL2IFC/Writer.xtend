@@ -8,8 +8,8 @@ import org.bimserver.ifc.IfcModel
 class Writer extends WorkflowComponentWithSlot {
 	
 	override invoke(IWorkflowContext ctx) {
-		var model = ctx.get(getSlot())  
-	    IfcWriter::SaveModel(model as IfcModel)
+		//var model = ctx.get(getSlot())
+	    //IfcWriter::SaveModel(model as IfcModel)
 	}
 	
 }

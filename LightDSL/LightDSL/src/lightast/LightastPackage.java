@@ -270,7 +270,7 @@ public interface LightastPackage extends EPackage {
 	int LIGHT_FIXTURE__PREDEFINED_TYPE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Lamps</b></em>' reference list.
+	 * The feature id for the '<em><b>Lamps</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -513,10 +513,10 @@ public interface LightastPackage extends EPackage {
 	EAttribute getLightFixture_PredefinedType();
 
 	/**
-	 * Returns the meta object for the reference list '{@link lightast.LightFixture#getLamps <em>Lamps</em>}'.
+	 * Returns the meta object for the containment reference list '{@link lightast.LightFixture#getLamps <em>Lamps</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Lamps</em>'.
+	 * @return the meta object for the containment reference list '<em>Lamps</em>'.
 	 * @see lightast.LightFixture#getLamps()
 	 * @see #getLightFixture()
 	 * @generated
@@ -728,7 +728,7 @@ public interface LightastPackage extends EPackage {
 		EAttribute LIGHT_FIXTURE__PREDEFINED_TYPE = eINSTANCE.getLightFixture_PredefinedType();
 
 		/**
-		 * The meta object literal for the '<em><b>Lamps</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Lamps</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

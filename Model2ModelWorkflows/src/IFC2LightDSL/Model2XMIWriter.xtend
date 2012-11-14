@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
+import lightast.LightFixture
 
 class Model2XMIWriter extends WorkflowComponentWithSlot {
 	
@@ -39,7 +40,18 @@ class Model2XMIWriter extends WorkflowComponentWithSlot {
 	    var ResourceSet resSet = new ResourceSetImpl();
 	    val Resource resource = resSet.createResource(URI::createURI(getPath()));
 	    
-	    lightModel.eContents.forEach(elem | walkModel(resource.contents, elem))
+	    resource.contents.add(lightModel)
+	    /*lightModel.eAllContents.forEach[
+	    	if (!resource.contents.contains(it)) {
+		    	resource.contents.add(it)
+		    	if (it instanceof LightFixture) {
+		    		val lf = it as LightFixture
+		    		for (l: lf.lamps) {
+		    			resource.contents.add(l)
+		    		}
+		    	}	
+	    	}
+	    ]*/
 	    
 	    resource.save(Collections::EMPTY_MAP)
 	}

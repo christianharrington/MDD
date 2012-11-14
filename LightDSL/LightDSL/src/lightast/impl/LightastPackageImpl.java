@@ -446,7 +446,7 @@ public class LightastPackageImpl extends EPackageImpl implements LightastPackage
 		initEClass(lightFixtureEClass, LightFixture.class, "LightFixture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLightFixture_ConsistsOf(), this.getMaterial(), null, "consistsOf", null, 0, 1, LightFixture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLightFixture_PredefinedType(), this.getLightFixtureType(), "PredefinedType", null, 1, 1, LightFixture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLightFixture_Lamps(), this.getLamp(), null, "lamps", null, 0, -1, LightFixture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLightFixture_Lamps(), this.getLamp(), null, "lamps", null, 0, -1, LightFixture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(lampTypeEEnum, LampType.class, "LampType");

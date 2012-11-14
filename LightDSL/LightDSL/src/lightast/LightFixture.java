@@ -80,7 +80,7 @@ public interface LightFixture extends EObject {
 	void setPredefinedType(LightFixtureType value);
 
 	/**
-	 * Returns the value of the '<em><b>Lamps</b></em>' reference list.
+	 * Returns the value of the '<em><b>Lamps</b></em>' containment reference list.
 	 * The list contents are of type {@link lightast.Lamp}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -88,9 +88,9 @@ public interface LightFixture extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lamps</em>' reference list.
+	 * @return the value of the '<em>Lamps</em>' containment reference list.
 	 * @see lightast.LightastPackage#getLightFixture_Lamps()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Lamp> getLamps();
