@@ -155,7 +155,9 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 				ifcModel = getModel();
 			}
 
-			Geometry geometry = generateGeometry(ifcModel, project.getId(), concreteRevision.getId());
+			setProgress("Generating Geometry...", -1);
+			
+			Geometry geometry = generateGeometry(ifcModel, project.getId(), concreteRevision.getId(), revision);
 			revision.setGeometry(geometry);
 			getDatabaseSession().store(geometry);
 
@@ -166,6 +168,7 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 			if (nrConcreteRevisionsBefore != 0 && !merge && clean) {
 				// There already was a revision, lets delete it (only when not
 				// merging)
+				setProgress("Cleaning up older revision...", -1);
 				getDatabaseSession().planClearProject(project.getId(), concreteRevision.getId() - 1, concreteRevision.getId());
 			}
 
@@ -196,21 +199,15 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 		return concreteRevision;
 	}
 
-	private Geometry generateGeometry(IfcModelInterface model, int pid, int rid) throws BimserverDatabaseException {
+	private Geometry generateGeometry(IfcModelInterface model, int pid, int rid, Revision revision) throws BimserverDatabaseException {
 		Collection<SerializerPlugin> allSerializerPlugins = bimServer.getPluginManager().getAllSerializerPlugins("application/ifc", true);
 		if (!allSerializerPlugins.isEmpty()) {
 			SerializerPlugin serializerPlugin = allSerializerPlugins.iterator().next();
 			Serializer serializer = serializerPlugin.createSerializer();
 			try {
-				serializer.init(model, null, bimServer.getPluginManager(), null);
+				serializer.init(model, null, bimServer.getPluginManager(), null, false);
 				ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 				serializer.writeToOutputStream(outputStream);
-				// try {
-				// FileUtils.writeByteArrayToFile(new File("test.ifc"),
-				// outputStream.toByteArray());
-				// } catch (IOException e1) {
-				// e1.printStackTrace();
-				// }
 				Collection<IfcEnginePlugin> allIfcEnginePlugins = bimServer.getPluginManager().getAllIfcEnginePlugins(true);
 				if (!allIfcEnginePlugins.isEmpty()) {
 					IfcEnginePlugin ifcEnginePlugin = allIfcEnginePlugins.iterator().next();
@@ -219,8 +216,9 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 						ifcEngine.init();
 						try {
 							IfcEngineModel ifcEngineModel = ifcEngine.openModel(new ByteArrayInputStream(outputStream.toByteArray()), outputStream.size());
+							ifcEngineModel.setPostProcessing(true);
+//							ifcEngineModel.setFormat(48, 48);
 							try {
-								ifcEngineModel.setPostProcessing(true);
 								IfcEngineGeometry ifcEngineGeometry = ifcEngineModel.finalizeModelling(ifcEngineModel.initializeModelling());
 								Geometry geometry = StoreFactory.eINSTANCE.createGeometry();
 
@@ -248,7 +246,7 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 								Bounds modelBounds = getDatabaseSession().create(StorePackage.eINSTANCE.getBounds());
 								modelBounds.setMin(createVector3f(Float.POSITIVE_INFINITY));
 								modelBounds.setMax(createVector3f(Float.NEGATIVE_INFINITY));
-								geometry.setBounds(modelBounds);
+								revision.setBounds(modelBounds);
 								
 								for (IfcProduct ifcProduct : model.getAllWithSubTypes(IfcProduct.class)) {
 									IfcEngineInstance ifcEngineInstance = ifcEngineModel.getInstanceFromExpressId((int) ifcProduct.getOid());
@@ -262,7 +260,7 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 									Bounds instanceBounds = getDatabaseSession().create(StorePackage.eINSTANCE.getBounds());
 									instanceBounds.setMin(createVector3f(Float.POSITIVE_INFINITY));
 									instanceBounds.setMax(createVector3f(Float.NEGATIVE_INFINITY));
-									geometryInstance.setBounds(instanceBounds);
+									ifcProduct.setBounds(instanceBounds);
 									for (int i = geometryInstance.getStartIndex(); i < geometryInstance.getPrimitiveCount() * 3 + geometryInstance.getStartIndex(); i++) {
 										int index = ifcEngineGeometry.getIndex(i) * 3;
 										processExtends(instanceBounds, ifcEngineGeometry, verticesBuffer, normalsBuffer, index);
@@ -273,7 +271,6 @@ public class CheckinDatabaseAction extends GenericCheckinDatabaseAction {
 									ifcProduct.setGeometryInstance(geometryInstance);
 									getDatabaseSession().store(geometryInstance, pid, rid);
 								}
-
 								return geometry;
 							} finally {
 								ifcEngineModel.close();

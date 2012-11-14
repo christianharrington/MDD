@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 45
-/svn/!svn/ver/1876/trunk/Builds/build/antlibs
+/svn/!svn/ver/2158/trunk/Builds/build/antlibs
 END
 one-jar-ant-task-0.96.jar
 K 25
@@ -19,7 +19,7 @@ catalina-ant.jar
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svn/!svn/ver/1229/trunk/Builds/build/antlibs/catalina-ant.jar
+/svn/!svn/ver/2158/trunk/Builds/build/antlibs/catalina-ant.jar
 END
 ant-googlecode-0.0.3.jar
 K 25

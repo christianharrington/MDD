@@ -116,12 +116,12 @@ public class ColladaSerializer extends EmfSerializer {
 	}
 
 	@Override
-	public void init(IfcModelInterface model, ProjectInfo projectInfo, PluginManager pluginManager, IfcEngine ifcEngine) throws SerializerException {
-		super.init(model, projectInfo, pluginManager, ifcEngine);
+	public void init(IfcModelInterface model, ProjectInfo projectInfo, PluginManager pluginManager, IfcEngine ifcEngine, boolean normalizeOids) throws SerializerException {
+		super.init(model, projectInfo, pluginManager, ifcEngine, normalizeOids);
 		this.lengthUnitPrefix = getLengthUnitPrefix(model);
 		try {
 			Serializer serializer = getPluginManager().requireIfcStepSerializer();
-			serializer.init(model, getProjectInfo(), getPluginManager(), ifcEngine);
+			serializer.init(model, getProjectInfo(), getPluginManager(), ifcEngine, false);
 			ifcEngine.init();
 			ifcEngineModel = ifcEngine.openModel(serializer.getBytes());
 			ifcEngineModel.setPostProcessing(true);
@@ -132,7 +132,7 @@ public class ColladaSerializer extends EmfSerializer {
 	}
 
 	@Override
-	protected void reset() {
+	public void reset() {
 		setMode(Mode.BODY);
 	}
 

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svn/!svn/ver/2125/trunk/BimServer/src/org/bimserver/database
+/svn/!svn/ver/2173/trunk/BimServer/src/org/bimserver/database
 END
 KeyValueStore.java
 K 25
@@ -25,7 +25,7 @@ Database.java
 K 25
 svn:wc:ra_dav:version-url
 V 75
-/svn/!svn/ver/2122/trunk/BimServer/src/org/bimserver/database/Database.java
+/svn/!svn/ver/2173/trunk/BimServer/src/org/bimserver/database/Database.java
 END
 ObjectsToCommit.java
 K 25
@@ -37,7 +37,7 @@ DatabaseSession.java
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/svn/!svn/ver/2123/trunk/BimServer/src/org/bimserver/database/DatabaseSession.java
+/svn/!svn/ver/2131/trunk/BimServer/src/org/bimserver/database/DatabaseSession.java
 END
 BimserverLockConflictException.java
 K 25

@@ -17,34 +17,24 @@
 package org.bimserver.models.ifc2x3tc1.impl;
 
 import java.io.IOException;
-
 import java.net.URL;
 
 import org.bimserver.models.ifc2x3tc1.Ifc2x3tc1Factory;
 import org.bimserver.models.ifc2x3tc1.Ifc2x3tc1Package;
-
 import org.bimserver.models.log.LogPackage;
-
 import org.bimserver.models.log.impl.LogPackageImpl;
-
 import org.bimserver.models.store.StorePackage;
-
 import org.bimserver.models.store.impl.StorePackageImpl;
-
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.WrappedException;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 /**
@@ -23435,6 +23425,15 @@ public class Ifc2x3tc1PackageImpl extends EPackageImpl implements Ifc2x3tc1Packa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcProduct_Bounds() {
+		return (EReference) getIfcProduct().getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcProductDefinitionShape() {
 		if (ifcProductDefinitionShapeEClass == null) {
 			ifcProductDefinitionShapeEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Ifc2x3tc1Package.eNS_URI).getEClassifiers().get(650);
@@ -35051,17 +35050,8 @@ public class Ifc2x3tc1PackageImpl extends EPackageImpl implements Ifc2x3tc1Packa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeometryInstance_Bounds() {
-		return (EReference) getGeometryInstance().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getGeometryInstance_Indices() {
-		return (EAttribute) getGeometryInstance().getEStructuralFeatures().get(4);
+		return (EAttribute) getGeometryInstance().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -35070,7 +35060,7 @@ public class Ifc2x3tc1PackageImpl extends EPackageImpl implements Ifc2x3tc1Packa
 	 * @generated
 	 */
 	public EAttribute getGeometryInstance_Vertices() {
-		return (EAttribute) getGeometryInstance().getEStructuralFeatures().get(5);
+		return (EAttribute) getGeometryInstance().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -35079,7 +35069,7 @@ public class Ifc2x3tc1PackageImpl extends EPackageImpl implements Ifc2x3tc1Packa
 	 * @generated
 	 */
 	public EAttribute getGeometryInstance_Normals() {
-		return (EAttribute) getGeometryInstance().getEStructuralFeatures().get(6);
+		return (EAttribute) getGeometryInstance().getEStructuralFeatures().get(5);
 	}
 
 	/**

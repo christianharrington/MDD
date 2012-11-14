@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/svn/!svn/ver/2121/trunk/BimServer/src/org/bimserver/notifications
+/svn/!svn/ver/2170/trunk/BimServer/src/org/bimserver/notifications
 END
 TokenAuthorization.java
 K 25
@@ -13,7 +13,7 @@ NotificationsManager.java
 K 25
 svn:wc:ra_dav:version-url
 V 92
-/svn/!svn/ver/2121/trunk/BimServer/src/org/bimserver/notifications/NotificationsManager.java
+/svn/!svn/ver/2170/trunk/BimServer/src/org/bimserver/notifications/NotificationsManager.java
 END
 RunningExternalService.java
 K 25

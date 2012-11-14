@@ -106,9 +106,11 @@ public class NotificationsManager extends Thread implements NotificationsManager
 					SLogAction notification = queue.take();
 					DatabaseSession session = bimServer.getDatabase().createSession();
 					try {
-						for (Entry<Long, Set<EndPoint>> endPoints : this.endPoints.entrySet()) {
-							for (EndPoint endPoint : endPoints.getValue()) {
-								endPoint.getNotificationInterface().newLogAction(UUID.randomUUID().toString(), notification, null, null, null, null);
+						synchronized(this.endPoints) {
+							for (Entry<Long, Set<EndPoint>> endPoints : this.endPoints.entrySet()) {
+								for (EndPoint endPoint : endPoints.getValue()) {
+									endPoint.getNotificationInterface().newLogAction(UUID.randomUUID().toString(), notification, null, null, null, null);
+								}
 							}
 						}
 						if (notification instanceof SNewProjectAdded) {
@@ -166,7 +168,7 @@ public class NotificationsManager extends Thread implements NotificationsManager
 					long readExtendedDataRoid = service.getReadExtendedData() != null ? newRevisionNotification.getRevisionId() : -1;
 					TokenAuthorization authorization = new TokenAuthorization(service.getUser().getOid(), readRevisionRoid, writeProjectPoid, readExtendedDataRoid, writeExtendedDataRoid);
 					((org.bimserver.webservices.Service)newService).setAuthorization(authorization);
-					notificationInterface.newLogAction(uuid, newRevisionNotification, service.getServiceIdentifier(), service.getProfileIdentifier(), newService.getCurrentToken(), siteAddress + "/jsonapi");
+					notificationInterface.newLogAction(uuid, newRevisionNotification, service.getServiceIdentifier(), service.getProfileIdentifier(), newService.getCurrentToken(), siteAddress);
 				} else {
 					notificationInterface.newLogAction(uuid, newRevisionNotification, service.getServiceIdentifier(), service.getProfileIdentifier(), null, null);
 				}
@@ -215,14 +217,16 @@ public class NotificationsManager extends Thread implements NotificationsManager
 	}
 
 	public void updateProgress(long id, LongActionState actionState) {
-		for (Entry<Long, Set<EndPoint>> endPoints : this.endPoints.entrySet()) {
-			for (EndPoint endPoint : endPoints.getValue()) {
-				try {
-					endPoint.getNotificationInterface().progress(id, new SConverter().convertToSObject(actionState));
-				} catch (UserException e) {
-					e.printStackTrace();
-				} catch (ServerException e) {
-					e.printStackTrace();
+		synchronized(this.endPoints) {
+			for (Entry<Long, Set<EndPoint>> endPoints : this.endPoints.entrySet()) {
+				for (EndPoint endPoint : endPoints.getValue()) {
+					try {
+						endPoint.getNotificationInterface().progress(id, new SConverter().convertToSObject(actionState));
+					} catch (UserException e) {
+						e.printStackTrace();
+					} catch (ServerException e) {
+						e.printStackTrace();
+					}
 				}
 			}
 		}
@@ -251,8 +255,6 @@ public class NotificationsManager extends Thread implements NotificationsManager
 					ServiceInterface object = bimServer.getServiceFactory().getService(ServiceInterface.class, token);
 					internalChannel.addServiceInterface(ServiceInterface.class, object);
 					ServiceInterface serviceInterface = internalChannel.getServiceInterface();
-//					JsonReflector jsonReflector = new JsonSocketReflector(bimServer.getServicesMap(), apiUrl, false, new TokenAuthentication(token));
-//					ServiceInterface serviceInterfaceReflectorImpl = bimServer.getReflectorFactory().createReflector(ServiceInterface.class, jsonReflector);
 					SService service = serviceInterface.getService(Long.parseLong(profileIdentifier));
 					SObjectType settings = serviceInterface.getPluginSettings(service.getInternalServiceId());
 					runningServices.put(uuid, new RunningExternalService());

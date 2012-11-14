@@ -36,9 +36,9 @@ import org.bimserver.plugins.Reporter;
 import org.bimserver.plugins.ifcengine.IfcEngine;
 import org.bimserver.plugins.ifcengine.IfcEngineException;
 import org.bimserver.plugins.ifcengine.IfcEnginePlugin;
+import org.bimserver.plugins.serializers.CacheStoringEmfSerializerDataSource;
 import org.bimserver.plugins.serializers.EmfSerializerDataSource;
 import org.bimserver.plugins.serializers.SerializerException;
-import org.bimserver.shared.IncrementingOidProvider;
 import org.bimserver.shared.exceptions.UserException;
 import org.bimserver.webservices.Authorization;
 import org.slf4j.Logger;
@@ -68,13 +68,15 @@ public abstract class LongDownloadOrCheckoutAction extends LongAction<DownloadPa
 			checkoutResult.setProjectName(project.getName());
 			checkoutResult.setRevisionNr(model.getRevisionNr());
 			try {
-				model.fixOids(new IncrementingOidProvider(1L));
-				
 				org.bimserver.plugins.serializers.Serializer serializer = getBimServer().getEmfSerializerFactory().create(project, username, model, ifcEngine, downloadParameters);
 				if (serializer == null) {
 					throw new UserException("Error, no serializer found " + downloadParameters.getSerializerOid());
 				}
-				checkoutResult.setFile(new DataHandler(new EmfSerializerDataSource(serializer)));
+				if (getBimServer().getDiskCacheManager().isEnabled() && !getBimServer().getDiskCacheManager().contains(downloadParameters)) {
+					checkoutResult.setFile(new DataHandler(new CacheStoringEmfSerializerDataSource(serializer, getBimServer().getDiskCacheManager().startCaching(downloadParameters))));
+				} else {
+					checkoutResult.setFile(new DataHandler(new EmfSerializerDataSource(serializer)));
+				}
 			} catch (SerializerException e) {
 				LOGGER.error("", e);
 			}
@@ -126,9 +128,6 @@ public abstract class LongDownloadOrCheckoutAction extends LongAction<DownloadPa
 				}
 
 				checkoutResult = convertModelToCheckoutResult(revision.getProject(), getUserName(), ifcModel, ifcEngine, downloadParameters);
-				if (checkoutResult != null) {
-					getBimServer().getDiskCacheManager().store(downloadParameters, checkoutResult.getFile());
-				}
 			}
 		} finally {
 			done();

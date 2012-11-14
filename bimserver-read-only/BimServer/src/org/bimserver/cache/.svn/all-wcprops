@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/svn/!svn/ver/1997/trunk/BimServer/src/org/bimserver/cache
+/svn/!svn/ver/2171/trunk/BimServer/src/org/bimserver/cache
 END
 GenericCache.java
 K 25
@@ -25,7 +25,7 @@ DiskCacheManager.java
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svn/!svn/ver/1921/trunk/BimServer/src/org/bimserver/cache/DiskCacheManager.java
+/svn/!svn/ver/2171/trunk/BimServer/src/org/bimserver/cache/DiskCacheManager.java
 END
 GenericCacheKey.java
 K 25

@@ -1,19 +1,25 @@
 K 25
 svn:wc:ra_dav:version-url
 V 52
-/svn/!svn/ver/2125/trunk/BimServer/src/org/bimserver
+/svn/!svn/ver/2173/trunk/BimServer/src/org/bimserver
 END
 LocalDevPluginLoader.java
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svn/!svn/ver/2086/trunk/BimServer/src/org/bimserver/LocalDevPluginLoader.java
+/svn/!svn/ver/2166/trunk/BimServer/src/org/bimserver/LocalDevPluginLoader.java
 END
 XSDSchemaReader.java
 K 25
 svn:wc:ra_dav:version-url
 V 73
 /svn/!svn/ver/1997/trunk/BimServer/src/org/bimserver/XSDSchemaReader.java
+END
+HideAllInversesObjectIDM.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/2169/trunk/BimServer/src/org/bimserver/HideAllInversesObjectIDM.java
 END
 XSDReader2.java
 K 25
@@ -69,17 +75,17 @@ svn:wc:ra_dav:version-url
 V 63
 /svn/!svn/ver/1698/trunk/BimServer/src/org/bimserver/IFC2X3.xsd
 END
-LocalDevBimServerStarter.java
-K 25
-svn:wc:ra_dav:version-url
-V 82
-/svn/!svn/ver/1934/trunk/BimServer/src/org/bimserver/LocalDevBimServerStarter.java
-END
 ServerInfoManager.java
 K 25
 svn:wc:ra_dav:version-url
 V 75
 /svn/!svn/ver/1921/trunk/BimServer/src/org/bimserver/ServerInfoManager.java
+END
+LocalDevBimServerStarter.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/2136/trunk/BimServer/src/org/bimserver/LocalDevBimServerStarter.java
 END
 EmbeddedWebServer.java
 K 25
@@ -103,7 +109,7 @@ CommandLine.java
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/!svn/ver/1974/trunk/BimServer/src/org/bimserver/CommandLine.java
+/svn/!svn/ver/2128/trunk/BimServer/src/org/bimserver/CommandLine.java
 END
 ex.xsd
 K 25
@@ -127,5 +133,5 @@ BimServer.java
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/!svn/ver/2114/trunk/BimServer/src/org/bimserver/BimServer.java
+/svn/!svn/ver/2129/trunk/BimServer/src/org/bimserver/BimServer.java
 END

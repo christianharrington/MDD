@@ -114,7 +114,12 @@
           eType="#/0/ExtendedData" eOpposite="#/0/ExtendedData/revision"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="logs" upperBound="-1"
           eType="#/2/LogAction"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="geometry" eType="#/0/Geometry"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="geometry" eType="#/0/Geometry">
+        <eAnnotations source="hidden"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="bounds" eType="#/0/Bounds">
+        <eAnnotations source="hidden"/>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ConcreteRevision">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -214,6 +219,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="settings" eType="#/0/ObjectType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SerializerPluginConfiguration" eSuperTypes="#/0/PluginConfiguration">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="needsGeometry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="extension" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="objectIDM" eType="#/0/ObjectIDMPluginConfiguration"
@@ -402,6 +408,8 @@
     <eClassifiers xsi:type="ecore:EClass" name="LongActionState">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="progress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#/0/ActionState"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="stage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="errors" upperBound="-1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="warnings" upperBound="-1"
@@ -677,6 +685,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Bounds">
+      <eAnnotations source="hidden"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="min" eType="#/0/Vector3f">
         <eAnnotations source="embedsreference"/>
       </eStructuralFeatures>
@@ -690,9 +699,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Geometry">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="bounds" eType="#/0/Bounds">
-        <eAnnotations source="hidden"/>
-      </eStructuralFeatures>
+      <eAnnotations source="hidden"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="indices" unique="false"
           upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="vertices" unique="false"
@@ -5692,6 +5699,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="geometryInstance" eType="#/1/GeometryInstance">
         <eAnnotations source="hidden"/>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="bounds" eType="#/0/Bounds">
+        <eAnnotations source="hidden"/>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IfcProductDefinitionShape" eSuperTypes="#/1/IfcProductRepresentation">
       <eStructuralFeatures xsi:type="ecore:EReference" name="ShapeOfProduct" upperBound="2"
@@ -7949,9 +7959,6 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="startVertex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="startIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="primitiveCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="bounds" eType="#/0/Bounds">
-        <eAnnotations source="hidden"/>
-      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="indices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByteArray"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="vertices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByteArray"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="normals" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByteArray"/>

@@ -1,19 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/svn/!svn/ver/2062/trunk/CityGML/src/org/bimserver/citygml
+/svn/!svn/ver/2171/trunk/CityGML/src/org/bimserver/citygml
 END
 CityGmlSerializerPlugin.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/!svn/ver/2062/trunk/CityGML/src/org/bimserver/citygml/CityGmlSerializerPlugin.java
+/svn/!svn/ver/2128/trunk/CityGML/src/org/bimserver/citygml/CityGmlSerializerPlugin.java
 END
 CityGmlSerializer.java
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svn/!svn/ver/2052/trunk/CityGML/src/org/bimserver/citygml/CityGmlSerializer.java
+/svn/!svn/ver/2171/trunk/CityGML/src/org/bimserver/citygml/CityGmlSerializer.java
 END
 BuildingCreator.java
 K 25
