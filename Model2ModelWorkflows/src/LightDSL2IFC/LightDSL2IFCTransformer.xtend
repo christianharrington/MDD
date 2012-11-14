@@ -6,6 +6,8 @@ import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 class LightDSL2IFCTransformer extends WorkflowComponentWithSlot {
 
 	override invoke(IWorkflowContext ctx) {
+		val dslModel = ctx.get(getSlot()) as lightast.Main
+		
 	}
 	
 }

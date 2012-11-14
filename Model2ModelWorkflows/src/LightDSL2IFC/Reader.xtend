@@ -15,6 +15,10 @@ class Reader extends WorkflowComponentWithSlot {
 	
 	String path
 	
+	def getPath() { path }
+	
+	def setPath(String path) { this.path = path }
+	
 	override invoke(IWorkflowContext ctx) {
 		// Initialize the model
     	LightastPackage::eINSTANCE.eClass()

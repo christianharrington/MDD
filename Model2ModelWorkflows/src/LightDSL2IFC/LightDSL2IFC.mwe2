@@ -1,11 +1,13 @@
 module LightDSL2IFC.LightDSL2IFC
 
 var modelSlot = 'model'
+var instanceFilePath
 
 Workflow {
 	
 	component = Reader {
 		slot = modelSlot
+		path = instanceFilePath
 	}
 	
 //	component = org.eclipse.emf.mwe.utils.DirectoryCleaner {
