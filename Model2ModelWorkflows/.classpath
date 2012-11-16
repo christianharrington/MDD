@@ -171,5 +171,7 @@
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext_2.3.1.v201208210947.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext.common.types_2.3.1.v201208210947.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext.util_2.3.1.v201208210947.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.apache.commons.logging_1.0.4.v201101211617.jar"/>
+	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext_2.3.0.v201206120633.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
