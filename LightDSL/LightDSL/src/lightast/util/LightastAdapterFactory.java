@@ -80,6 +80,14 @@ public class LightastAdapterFactory extends AdapterFactoryImpl {
 				return createLampAdapter();
 			}
 			@Override
+			public Adapter caseMaterial(Material object) {
+				return createMaterialAdapter();
+			}
+			@Override
+			public Adapter caseLightFixture(LightFixture object) {
+				return createLightFixtureAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -138,6 +146,34 @@ public class LightastAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLampAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link lightast.Material <em>Material</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see lightast.Material
+	 * @generated
+	 */
+	public Adapter createMaterialAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link lightast.LightFixture <em>Light Fixture</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see lightast.LightFixture
+	 * @generated
+	 */
+	public Adapter createLightFixtureAdapter() {
 		return null;
 	}
 

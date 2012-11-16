@@ -1319,6 +1319,15 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRevision_Bounds() {
+		return (EReference) getRevision().getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getConcreteRevision() {
 		if (concreteRevisionEClass == null) {
 			concreteRevisionEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(StorePackage.eNS_URI).getEClassifiers().get(6);
@@ -1943,7 +1952,7 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSerializerPluginConfiguration_Extension() {
+	public EAttribute getSerializerPluginConfiguration_NeedsGeometry() {
 		return (EAttribute) getSerializerPluginConfiguration().getEStructuralFeatures().get(0);
 	}
 
@@ -1952,7 +1961,7 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSerializerPluginConfiguration_ContentType() {
+	public EAttribute getSerializerPluginConfiguration_Extension() {
 		return (EAttribute) getSerializerPluginConfiguration().getEStructuralFeatures().get(1);
 	}
 
@@ -1961,8 +1970,8 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSerializerPluginConfiguration_ObjectIDM() {
-		return (EReference) getSerializerPluginConfiguration().getEStructuralFeatures().get(2);
+	public EAttribute getSerializerPluginConfiguration_ContentType() {
+		return (EAttribute) getSerializerPluginConfiguration().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1970,7 +1979,7 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSerializerPluginConfiguration_UserSettings() {
+	public EReference getSerializerPluginConfiguration_ObjectIDM() {
 		return (EReference) getSerializerPluginConfiguration().getEStructuralFeatures().get(3);
 	}
 
@@ -1979,8 +1988,17 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSerializerPluginConfiguration_IfcEngine() {
+	public EReference getSerializerPluginConfiguration_UserSettings() {
 		return (EReference) getSerializerPluginConfiguration().getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSerializerPluginConfiguration_IfcEngine() {
+		return (EReference) getSerializerPluginConfiguration().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -3047,7 +3065,7 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLongActionState_Errors() {
+	public EAttribute getLongActionState_Title() {
 		return (EAttribute) getLongActionState().getEStructuralFeatures().get(2);
 	}
 
@@ -3056,7 +3074,7 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLongActionState_Warnings() {
+	public EAttribute getLongActionState_Stage() {
 		return (EAttribute) getLongActionState().getEStructuralFeatures().get(3);
 	}
 
@@ -3065,8 +3083,26 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLongActionState_Infos() {
+	public EAttribute getLongActionState_Errors() {
 		return (EAttribute) getLongActionState().getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLongActionState_Warnings() {
+		return (EAttribute) getLongActionState().getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLongActionState_Infos() {
+		return (EAttribute) getLongActionState().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -4607,17 +4643,8 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeometry_Bounds() {
-		return (EReference) getGeometry().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getGeometry_Indices() {
-		return (EAttribute) getGeometry().getEStructuralFeatures().get(1);
+		return (EAttribute) getGeometry().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4626,7 +4653,7 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * @generated
 	 */
 	public EAttribute getGeometry_Vertices() {
-		return (EAttribute) getGeometry().getEStructuralFeatures().get(2);
+		return (EAttribute) getGeometry().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -4635,7 +4662,7 @@ public class StorePackageImpl extends EPackageImpl implements StorePackage {
 	 * @generated
 	 */
 	public EAttribute getGeometry_Normals() {
-		return (EAttribute) getGeometry().getEStructuralFeatures().get(3);
+		return (EAttribute) getGeometry().getEStructuralFeatures().get(2);
 	}
 
 	/**

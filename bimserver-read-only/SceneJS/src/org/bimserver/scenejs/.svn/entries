@@ -1,14 +1,14 @@
 10
 
 dir
-2126
+2173
 http://bimserver.googlecode.com/svn/trunk/SceneJS/src/org/bimserver/scenejs
 http://bimserver.googlecode.com/svn
 
 
 
-2012-10-24T15:51:42.847326Z
-2125
+2012-11-12T08:48:18.421941Z
+2172
 ruben@logic-labs.nl
 
 
@@ -32,10 +32,10 @@ file
 
 
 
-2012-10-25T22:47:07.000000Z
-5e94fd2a56b7e32e440bcf2fb146be5c
-2012-10-04T16:20:13.329464Z
-2062
+2012-11-14T12:58:49.000000Z
+858d13206f5165697eace8863200a72b
+2012-10-29T15:51:07.596241Z
+2128
 ruben@logic-labs.nl
 has-props
 
@@ -58,7 +58,7 @@ has-props
 
 
 
-2116
+2181
 
 SceneJSSerializer.java
 file
@@ -66,10 +66,10 @@ file
 
 
 
-2012-10-25T22:47:07.000000Z
-93fa4a435f83c12fc6bb31dbf7921aec
-2012-10-19T15:54:28.816534Z
-2116
+2012-11-14T12:58:49.000000Z
+0ebca017d56c7c7f5c9316f5547aa93d
+2012-11-07T16:21:58.620095Z
+2171
 ruben@logic-labs.nl
 has-props
 
@@ -92,7 +92,75 @@ has-props
 
 
 
-55654
+55688
+
+GeometrySerializer.java
+file
+
+
+
+
+2012-11-14T12:58:49.000000Z
+ad5173991db894572f4b64f91453354b
+2012-11-05T16:57:41.424602Z
+2169
+ruben@logic-labs.nl
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3603
+
+Extends.java
+file
+
+
+
+
+2012-11-14T12:58:49.000000Z
+4ed173772b386d3d2d3f7be4e2284446
+2012-10-29T15:04:11.240554Z
+2127
+ruben@logic-labs.nl
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1004
 
 StreamingSceneJSSerializerPlugin.java
 file
@@ -100,10 +168,10 @@ file
 
 
 
-2012-10-25T22:47:07.000000Z
-fe0088f8970c47d2f07363b397262086
-2012-10-19T15:54:28.816534Z
-2116
+2012-11-14T12:58:49.000000Z
+9991ecfdeddad7d70beeb047b6af5213
+2012-10-29T15:51:07.596241Z
+2128
 ruben@logic-labs.nl
 has-props
 
@@ -126,7 +194,7 @@ has-props
 
 
 
-2152
+2217
 
 StreamingSceneJSSerializer.java
 file
@@ -134,10 +202,10 @@ file
 
 
 
-2012-10-25T22:47:07.000000Z
-69dcd3a2356d3ac770d165b011b8e4a4
-2012-10-24T15:51:42.847326Z
-2125
+2012-11-14T12:58:49.000000Z
+b381ae65f582ea4853e1a97573285b81
+2012-11-12T08:48:18.421941Z
+2172
 ruben@logic-labs.nl
 has-props
 
@@ -160,5 +228,5 @@ has-props
 
 
 
-62685
+61666
 

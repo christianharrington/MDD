@@ -1,14 +1,14 @@
 10
 
 dir
-2126
+2173
 http://bimserver.googlecode.com/svn/trunk/Builds/plugins
 http://bimserver.googlecode.com/svn
 
 
 
-2012-10-19T10:45:06.354810Z
-2115
+2012-10-31T14:58:43.567975Z
+2164
 ruben@logic-labs.nl
 
 
@@ -26,16 +26,16 @@ ruben@logic-labs.nl
 
 22d71240-4879-e6bd-ac50-c68132091b5d
 
-opengl-2012-10-18.jar
+clashdetection-2012-10-30.jar
 file
 
 
 
 
-2012-10-25T22:46:47.000000Z
-f8a1b341b5db29a0658be4e93fae6b1c
-2012-10-19T10:45:06.354810Z
-2115
+2012-11-14T12:57:53.000000Z
+af1affc43f3ab3aa2903d94ee18ac8cc
+2012-10-30T14:31:35.212806Z
+2142
 ruben@logic-labs.nl
 has-props
 
@@ -58,5 +58,39 @@ has-props
 
 
 
-1921236
+30969
+
+openglrenderer-2012-10-30.jar
+file
+
+
+
+
+2012-11-14T12:57:53.000000Z
+823f1df5d49463b0f47a555c82dd9c55
+2012-10-31T14:58:43.567975Z
+2164
+ruben@logic-labs.nl
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1920753
 

@@ -146,10 +146,8 @@ public class JsonConverter {
 			} else {
 				if (jsonObject.entrySet().size() != 0) {
 					throw new ConvertException("Missing __type field in " + jsonObject.toString());
-				} else if (definedType.isVoid()) {
-					return null;
 				} else {
-					throw new UnsupportedOperationException();
+					return null;
 				}
 			}
 		} else if (object instanceof JsonArray) {

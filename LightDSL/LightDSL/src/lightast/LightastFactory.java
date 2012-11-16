@@ -49,6 +49,24 @@ public interface LightastFactory extends EFactory {
 	Lamp createLamp();
 
 	/**
+	 * Returns a new object of class '<em>Material</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Material</em>'.
+	 * @generated
+	 */
+	Material createMaterial();
+
+	/**
+	 * Returns a new object of class '<em>Light Fixture</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Light Fixture</em>'.
+	 * @generated
+	 */
+	LightFixture createLightFixture();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -1,19 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svn/!svn/ver/2123/trunk/IfcPlugins/src/org/bimserver/ifc/step/serializer
+/svn/!svn/ver/2171/trunk/IfcPlugins/src/org/bimserver/ifc/step/serializer
 END
 IfcStepSerializerPlugin.java
 K 25
 svn:wc:ra_dav:version-url
 V 102
-/svn/!svn/ver/2062/trunk/IfcPlugins/src/org/bimserver/ifc/step/serializer/IfcStepSerializerPlugin.java
+/svn/!svn/ver/2128/trunk/IfcPlugins/src/org/bimserver/ifc/step/serializer/IfcStepSerializerPlugin.java
 END
 IfcStepSerializer.java
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/svn/!svn/ver/2123/trunk/IfcPlugins/src/org/bimserver/ifc/step/serializer/IfcStepSerializer.java
+/svn/!svn/ver/2171/trunk/IfcPlugins/src/org/bimserver/ifc/step/serializer/IfcStepSerializer.java
 END
 IfcWriterException.java
 K 25

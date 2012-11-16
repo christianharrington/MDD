@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svn/!svn/ver/2121/trunk/Tests/src/org/bimserver/tests
+/svn/!svn/ver/2172/trunk/Tests/src/org/bimserver/tests
 END
 MergeTest.java
 K 25
@@ -25,7 +25,7 @@ Visualise.java
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/!svn/ver/2083/trunk/Tests/src/org/bimserver/tests/Visualise.java
+/svn/!svn/ver/2145/trunk/Tests/src/org/bimserver/tests/Visualise.java
 END
 GuidCompressor.java
 K 25
@@ -55,19 +55,19 @@ GuidHighlighter.java
 K 25
 svn:wc:ra_dav:version-url
 V 75
-/svn/!svn/ver/2052/trunk/Tests/src/org/bimserver/tests/GuidHighlighter.java
+/svn/!svn/ver/2145/trunk/Tests/src/org/bimserver/tests/GuidHighlighter.java
 END
 TestCityGML.java
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svn/!svn/ver/2052/trunk/Tests/src/org/bimserver/tests/TestCityGML.java
+/svn/!svn/ver/2145/trunk/Tests/src/org/bimserver/tests/TestCityGML.java
 END
 CityGmlTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svn/!svn/ver/2052/trunk/Tests/src/org/bimserver/tests/CityGmlTest.java
+/svn/!svn/ver/2145/trunk/Tests/src/org/bimserver/tests/CityGmlTest.java
 END
 TestJson.java
 K 25
@@ -97,7 +97,7 @@ RevisionMergeTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/svn/!svn/ver/2083/trunk/Tests/src/org/bimserver/tests/RevisionMergeTest.java
+/svn/!svn/ver/2145/trunk/Tests/src/org/bimserver/tests/RevisionMergeTest.java
 END
 TestFile.java
 K 25
@@ -157,7 +157,7 @@ TestCollada.java
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svn/!svn/ver/2052/trunk/Tests/src/org/bimserver/tests/TestCollada.java
+/svn/!svn/ver/2145/trunk/Tests/src/org/bimserver/tests/TestCollada.java
 END
 IfcToEmfAndBackTest.java
 K 25
@@ -175,19 +175,25 @@ TestIfcFile.java
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svn/!svn/ver/2052/trunk/Tests/src/org/bimserver/tests/TestIfcFile.java
+/svn/!svn/ver/2145/trunk/Tests/src/org/bimserver/tests/TestIfcFile.java
 END
 TestKmz.java
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/!svn/ver/2052/trunk/Tests/src/org/bimserver/tests/TestKmz.java
+/svn/!svn/ver/2145/trunk/Tests/src/org/bimserver/tests/TestKmz.java
 END
 HtmlWriter.java
 K 25
 svn:wc:ra_dav:version-url
 V 70
 /svn/!svn/ver/1816/trunk/Tests/src/org/bimserver/tests/HtmlWriter.java
+END
+TestJsonCall.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2172/trunk/Tests/src/org/bimserver/tests/TestJsonCall.java
 END
 StructureAnalyzer.java
 K 25
@@ -229,7 +235,7 @@ IfcXmlReadTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svn/!svn/ver/2052/trunk/Tests/src/org/bimserver/tests/IfcXmlReadTest.java
+/svn/!svn/ver/2145/trunk/Tests/src/org/bimserver/tests/IfcXmlReadTest.java
 END
 YetAnotherTest.java
 K 25
@@ -249,17 +255,17 @@ svn:wc:ra_dav:version-url
 V 79
 /svn/!svn/ver/2121/trunk/Tests/src/org/bimserver/tests/TestSceneJsDownload.java
 END
-RudeBackup.java
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/!svn/ver/1733/trunk/Tests/src/org/bimserver/tests/RudeBackup.java
-END
 SchemaChecker.java
 K 25
 svn:wc:ra_dav:version-url
 V 73
 /svn/!svn/ver/1974/trunk/Tests/src/org/bimserver/tests/SchemaChecker.java
+END
+RudeBackup.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1733/trunk/Tests/src/org/bimserver/tests/RudeBackup.java
 END
 ColladaTester.java
 K 25
@@ -289,7 +295,7 @@ TestColladaSerializer.java
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svn/!svn/ver/2052/trunk/Tests/src/org/bimserver/tests/TestColladaSerializer.java
+/svn/!svn/ver/2145/trunk/Tests/src/org/bimserver/tests/TestColladaSerializer.java
 END
 Ifc2Db.java
 K 25

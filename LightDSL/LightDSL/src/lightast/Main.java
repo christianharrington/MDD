@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link lightast.Main#getBIMServer <em>BIM Server</em>}</li>
- *   <li>{@link lightast.Main#getLamp <em>Lamp</em>}</li>
+ *   <li>{@link lightast.Main#getFixtures <em>Fixtures</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,19 +51,19 @@ public interface Main extends EObject {
 	void setBIMServer(BIMServerCredentials value);
 
 	/**
-	 * Returns the value of the '<em><b>Lamp</b></em>' containment reference list.
-	 * The list contents are of type {@link lightast.Lamp}.
+	 * Returns the value of the '<em><b>Fixtures</b></em>' containment reference list.
+	 * The list contents are of type {@link lightast.LightFixture}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Lamp</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Fixtures</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lamp</em>' containment reference list.
-	 * @see lightast.LightastPackage#getMain_Lamp()
+	 * @return the value of the '<em>Fixtures</em>' containment reference list.
+	 * @see lightast.LightastPackage#getMain_Fixtures()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Lamp> getLamp();
+	EList<LightFixture> getFixtures();
 
 } // Main

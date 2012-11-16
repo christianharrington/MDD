@@ -61,8 +61,17 @@ public class IfcWriter {
 		// The LocalDevPluginLoader has been modified to lookup the plugins in the IfcPlugins project
 		PluginManager pm = null;
 		try {
-			pm = LocalDevPluginLoader.createPluginManager(new File("leetFolder"));
-			LocalDevPluginLoader.loadPlugins(pm);
+			File home = new File("leetFolder");
+			if (!home.exists()) {
+				home.mkdir();
+			}
+			pm = new PluginManager(home, System.getProperty("java.class.path"));
+			pm.loadAllPluginsFromDirectoryOfJars(new File("lib/"));
+			pm.initAllLoadedPlugins();
+			
+//			
+//			pm = LocalDevPluginLoader.createPluginManager();
+//			LocalDevPluginLoader.loadPlugins(pm);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

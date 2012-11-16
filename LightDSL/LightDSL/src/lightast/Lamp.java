@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link lightast.Lamp#getGlobalID <em>Global ID</em>}</li>
  *   <li>{@link lightast.Lamp#getPredefinedType <em>Predefined Type</em>}</li>
+ *   <li>{@link lightast.Lamp#getConsistsOf <em>Consists Of</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,6 +51,7 @@ public interface Lamp extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Predefined Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link lightast.LampType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Predefined Type</em>' attribute isn't clear,
@@ -57,21 +59,49 @@ public interface Lamp extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Predefined Type</em>' attribute.
-	 * @see #setPredefinedType(String)
+	 * @see lightast.LampType
+	 * @see #setPredefinedType(LampType)
 	 * @see lightast.LightastPackage#getLamp_PredefinedType()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	String getPredefinedType();
+	LampType getPredefinedType();
 
 	/**
 	 * Sets the value of the '{@link lightast.Lamp#getPredefinedType <em>Predefined Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Predefined Type</em>' attribute.
+	 * @see lightast.LampType
 	 * @see #getPredefinedType()
 	 * @generated
 	 */
-	void setPredefinedType(String value);
+	void setPredefinedType(LampType value);
+
+	/**
+	 * Returns the value of the '<em><b>Consists Of</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Consists Of</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Consists Of</em>' reference.
+	 * @see #setConsistsOf(Material)
+	 * @see lightast.LightastPackage#getLamp_ConsistsOf()
+	 * @model
+	 * @generated
+	 */
+	Material getConsistsOf();
+
+	/**
+	 * Sets the value of the '{@link lightast.Lamp#getConsistsOf <em>Consists Of</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Consists Of</em>' reference.
+	 * @see #getConsistsOf()
+	 * @generated
+	 */
+	void setConsistsOf(Material value);
 
 } // Lamp

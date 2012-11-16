@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/!svn/ver/2121/trunk/Shared/src/org/bimserver/plugins/serializers
+/svn/!svn/ver/2171/trunk/Shared/src/org/bimserver/plugins/serializers
 END
 EmfSerializer.java
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/2052/trunk/Shared/src/org/bimserver/plugins/serializers/EmfSerializer.java
+/svn/!svn/ver/2171/trunk/Shared/src/org/bimserver/plugins/serializers/EmfSerializer.java
 END
 ProjectInfo.java
 K 25
@@ -15,11 +15,17 @@ svn:wc:ra_dav:version-url
 V 86
 /svn/!svn/ver/1954/trunk/Shared/src/org/bimserver/plugins/serializers/ProjectInfo.java
 END
+CacheStoringEmfSerializerDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/2171/trunk/Shared/src/org/bimserver/plugins/serializers/CacheStoringEmfSerializerDataSource.java
+END
 SerializerPlugin.java
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/!svn/ver/2052/trunk/Shared/src/org/bimserver/plugins/serializers/SerializerPlugin.java
+/svn/!svn/ver/2128/trunk/Shared/src/org/bimserver/plugins/serializers/SerializerPlugin.java
 END
 SerializerException.java
 K 25
@@ -31,11 +37,17 @@ Serializer.java
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svn/!svn/ver/2052/trunk/Shared/src/org/bimserver/plugins/serializers/Serializer.java
+/svn/!svn/ver/2171/trunk/Shared/src/org/bimserver/plugins/serializers/Serializer.java
+END
+DiskCacheOutputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/2171/trunk/Shared/src/org/bimserver/plugins/serializers/DiskCacheOutputStream.java
 END
 EmfSerializerDataSource.java
 K 25
 svn:wc:ra_dav:version-url
 V 98
-/svn/!svn/ver/2121/trunk/Shared/src/org/bimserver/plugins/serializers/EmfSerializerDataSource.java
+/svn/!svn/ver/2171/trunk/Shared/src/org/bimserver/plugins/serializers/EmfSerializerDataSource.java
 END

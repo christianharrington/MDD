@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 63
-/svn/!svn/ver/2083/trunk/BimServer/src/org/bimserver/longaction
+/svn/!svn/ver/2171/trunk/BimServer/src/org/bimserver/longaction
 END
 LongCheckinAction.java
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svn/!svn/ver/1952/trunk/BimServer/src/org/bimserver/longaction/LongCheckinAction.java
+/svn/!svn/ver/2171/trunk/BimServer/src/org/bimserver/longaction/LongCheckinAction.java
 END
 LongCheckoutAction.java
 K 25
@@ -19,7 +19,7 @@ LongDownloadAction.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/!svn/ver/2056/trunk/BimServer/src/org/bimserver/longaction/LongDownloadAction.java
+/svn/!svn/ver/2171/trunk/BimServer/src/org/bimserver/longaction/LongDownloadAction.java
 END
 LongActionKey.java
 K 25
@@ -49,17 +49,17 @@ DownloadParameters.java
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/!svn/ver/1980/trunk/BimServer/src/org/bimserver/longaction/DownloadParameters.java
+/svn/!svn/ver/2171/trunk/BimServer/src/org/bimserver/longaction/DownloadParameters.java
 END
 LongDownloadOrCheckoutAction.java
 K 25
 svn:wc:ra_dav:version-url
 V 97
-/svn/!svn/ver/2083/trunk/BimServer/src/org/bimserver/longaction/LongDownloadOrCheckoutAction.java
+/svn/!svn/ver/2171/trunk/BimServer/src/org/bimserver/longaction/LongDownloadOrCheckoutAction.java
 END
 LongAction.java
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/svn/!svn/ver/1999/trunk/BimServer/src/org/bimserver/longaction/LongAction.java
+/svn/!svn/ver/2171/trunk/BimServer/src/org/bimserver/longaction/LongAction.java
 END

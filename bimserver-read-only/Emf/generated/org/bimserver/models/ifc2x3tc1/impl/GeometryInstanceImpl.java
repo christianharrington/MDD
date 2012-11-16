@@ -17,12 +17,8 @@
 package org.bimserver.models.ifc2x3tc1.impl;
 
 import org.bimserver.emf.IdEObjectImpl;
-
 import org.bimserver.models.ifc2x3tc1.GeometryInstance;
 import org.bimserver.models.ifc2x3tc1.Ifc2x3tc1Package;
-
-import org.bimserver.models.store.Bounds;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -35,7 +31,6 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link org.bimserver.models.ifc2x3tc1.impl.GeometryInstanceImpl#getStartVertex <em>Start Vertex</em>}</li>
  *   <li>{@link org.bimserver.models.ifc2x3tc1.impl.GeometryInstanceImpl#getStartIndex <em>Start Index</em>}</li>
  *   <li>{@link org.bimserver.models.ifc2x3tc1.impl.GeometryInstanceImpl#getPrimitiveCount <em>Primitive Count</em>}</li>
- *   <li>{@link org.bimserver.models.ifc2x3tc1.impl.GeometryInstanceImpl#getBounds <em>Bounds</em>}</li>
  *   <li>{@link org.bimserver.models.ifc2x3tc1.impl.GeometryInstanceImpl#getIndices <em>Indices</em>}</li>
  *   <li>{@link org.bimserver.models.ifc2x3tc1.impl.GeometryInstanceImpl#getVertices <em>Vertices</em>}</li>
  *   <li>{@link org.bimserver.models.ifc2x3tc1.impl.GeometryInstanceImpl#getNormals <em>Normals</em>}</li>
@@ -126,24 +121,6 @@ public class GeometryInstanceImpl extends IdEObjectImpl implements GeometryInsta
 	 */
 	public void setPrimitiveCount(Integer newPrimitiveCount) {
 		eSet(Ifc2x3tc1Package.Literals.GEOMETRY_INSTANCE__PRIMITIVE_COUNT, newPrimitiveCount);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Bounds getBounds() {
-		return (Bounds) eGet(Ifc2x3tc1Package.Literals.GEOMETRY_INSTANCE__BOUNDS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBounds(Bounds newBounds) {
-		eSet(Ifc2x3tc1Package.Literals.GEOMETRY_INSTANCE__BOUNDS, newBounds);
 	}
 
 	/**

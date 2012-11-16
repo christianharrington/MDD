@@ -50,7 +50,7 @@ public class IfcReader {
 
 	}
 
-	public static Resource ReadModel(String path, String schemaPath) throws IOException, DeserializeException{
+	public static IfcModel ReadModel(String path, String schemaPath) throws IOException, DeserializeException{
 	//	long poid = 33399;
 
 		// Make the connection
@@ -131,8 +131,7 @@ public class IfcReader {
 
 		//resource.save(Collections.EMPTY_MAP);
 
-		//return (IfcModel) ifcModel;
-		return resource;
+		return (IfcModel) ifcModel;		
 	}
 
 	private static void walkModel(EList<EObject> contents, EObject e) {

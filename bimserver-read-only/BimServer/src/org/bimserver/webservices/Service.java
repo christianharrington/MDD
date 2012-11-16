@@ -36,7 +36,6 @@ import java.util.Set;
 
 import javax.activation.DataHandler;
 import javax.jws.WebMethod;
-import javax.jws.WebParam;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
@@ -326,7 +325,7 @@ public class Service implements ServiceInterface {
 	public Long checkout(Long roid, Long serializerOid, Boolean sync) throws ServerException, UserException {
 		requireAuthenticationAndRunningServer();
 		authorization.canDownload(roid);
-		org.bimserver.plugins.serializers.Serializer serializer = bimServer.getEmfSerializerFactory().get(serializerOid);
+		org.bimserver.plugins.serializers.Serializer serializer = bimServer.getEmfSerializerFactory().get(serializerOid).createSerializer();
 		if (serializer == null) {
 			throw new UserException("No serializer with id " + serializerOid + " could be found");
 		}
@@ -769,9 +768,11 @@ public class Service implements ServiceInterface {
 	}
 
 	@Override
-	public Long downloadByTypes(Set<Long> roids, Set<String> classNames, Long serializerOid, Boolean includeAllSubtypes, Boolean sync) throws ServerException, UserException {
+	public Long downloadByTypes(Set<Long> roids, Set<String> classNames, Long serializerOid, Boolean includeAllSubtypes, Boolean useObjectIDM, Boolean sync) throws ServerException, UserException {
 		requireAuthenticationAndRunningServer();
-		return download(DownloadParameters.fromClassNames(bimServer, roids, classNames, includeAllSubtypes, serializerOid), sync);
+		DownloadParameters fromClassNames = DownloadParameters.fromClassNames(bimServer, roids, classNames, includeAllSubtypes, serializerOid);
+		fromClassNames.setUseObjectIDM(useObjectIDM);
+		return download(fromClassNames, sync);
 	}
 
 	@Override
@@ -963,7 +964,7 @@ public class Service implements ServiceInterface {
 		requireRealUserAuthentication();
 		DatabaseSession session = bimServer.getDatabase().createSession();
 		try {
-			BimDatabaseAction<CompareResult> action = new CompareDatabaseAction(bimServer, session, accessMethod, authorization, roid1, roid2,
+			BimDatabaseAction<CompareResult> action = new CompareDatabaseAction(bimServer, session, accessMethod, authorization, -1, roid1, roid2,
 					converter.convertFromSObject(sCompareType), mcid);
 			return converter.convertToSObject(session.executeAndCommitAction(action));
 		} catch (Exception e) {
@@ -3940,7 +3941,7 @@ public class Service implements ServiceInterface {
 		DatabaseSession session = bimServer.getDatabase().createSession();
 		try {
 			Revision revision = (Revision)session.get(StorePackage.eINSTANCE.getRevision(), roid, false, null);
-			return converter.convertToSObject(revision.getGeometry().getBounds());
+			return converter.convertToSObject(revision.getBounds());
 		} catch (Exception e) {
 			return handleException(e);
 		} finally {

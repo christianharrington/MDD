@@ -597,13 +597,22 @@ public interface StorePackage extends EPackage {
 	int REVISION__GEOMETRY = 15;
 
 	/**
+	 * The feature id for the '<em><b>Bounds</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REVISION__BOUNDS = 16;
+
+	/**
 	 * The number of structural features of the '<em>Revision</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REVISION_FEATURE_COUNT = 16;
+	int REVISION_FEATURE_COUNT = 17;
 
 	/**
 	 * The meta object id for the '{@link org.bimserver.models.store.impl.ConcreteRevisionImpl <em>Concrete Revision</em>}' class.
@@ -1315,13 +1324,22 @@ public interface StorePackage extends EPackage {
 	int SERIALIZER_PLUGIN_CONFIGURATION__SETTINGS = PLUGIN_CONFIGURATION__SETTINGS;
 
 	/**
+	 * The feature id for the '<em><b>Needs Geometry</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERIALIZER_PLUGIN_CONFIGURATION__NEEDS_GEOMETRY = PLUGIN_CONFIGURATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Extension</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERIALIZER_PLUGIN_CONFIGURATION__EXTENSION = PLUGIN_CONFIGURATION_FEATURE_COUNT + 0;
+	int SERIALIZER_PLUGIN_CONFIGURATION__EXTENSION = PLUGIN_CONFIGURATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Content Type</b></em>' attribute.
@@ -1330,7 +1348,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERIALIZER_PLUGIN_CONFIGURATION__CONTENT_TYPE = PLUGIN_CONFIGURATION_FEATURE_COUNT + 1;
+	int SERIALIZER_PLUGIN_CONFIGURATION__CONTENT_TYPE = PLUGIN_CONFIGURATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Object IDM</b></em>' reference.
@@ -1339,7 +1357,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERIALIZER_PLUGIN_CONFIGURATION__OBJECT_IDM = PLUGIN_CONFIGURATION_FEATURE_COUNT + 2;
+	int SERIALIZER_PLUGIN_CONFIGURATION__OBJECT_IDM = PLUGIN_CONFIGURATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>User Settings</b></em>' reference.
@@ -1348,7 +1366,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERIALIZER_PLUGIN_CONFIGURATION__USER_SETTINGS = PLUGIN_CONFIGURATION_FEATURE_COUNT + 3;
+	int SERIALIZER_PLUGIN_CONFIGURATION__USER_SETTINGS = PLUGIN_CONFIGURATION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Ifc Engine</b></em>' reference.
@@ -1357,7 +1375,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERIALIZER_PLUGIN_CONFIGURATION__IFC_ENGINE = PLUGIN_CONFIGURATION_FEATURE_COUNT + 4;
+	int SERIALIZER_PLUGIN_CONFIGURATION__IFC_ENGINE = PLUGIN_CONFIGURATION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Serializer Plugin Configuration</em>' class.
@@ -1366,7 +1384,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERIALIZER_PLUGIN_CONFIGURATION_FEATURE_COUNT = PLUGIN_CONFIGURATION_FEATURE_COUNT + 5;
+	int SERIALIZER_PLUGIN_CONFIGURATION_FEATURE_COUNT = PLUGIN_CONFIGURATION_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.bimserver.models.store.impl.ObjectIDMPluginConfigurationImpl <em>Object IDM Plugin Configuration</em>}' class.
@@ -2994,13 +3012,31 @@ public interface StorePackage extends EPackage {
 	int LONG_ACTION_STATE__STATE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LONG_ACTION_STATE__TITLE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Stage</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LONG_ACTION_STATE__STAGE = 3;
+
+	/**
 	 * The feature id for the '<em><b>Errors</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LONG_ACTION_STATE__ERRORS = 2;
+	int LONG_ACTION_STATE__ERRORS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Warnings</b></em>' attribute list.
@@ -3009,7 +3045,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LONG_ACTION_STATE__WARNINGS = 3;
+	int LONG_ACTION_STATE__WARNINGS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Infos</b></em>' attribute list.
@@ -3018,7 +3054,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LONG_ACTION_STATE__INFOS = 4;
+	int LONG_ACTION_STATE__INFOS = 6;
 
 	/**
 	 * The number of structural features of the '<em>Long Action State</em>' class.
@@ -3027,7 +3063,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LONG_ACTION_STATE_FEATURE_COUNT = 5;
+	int LONG_ACTION_STATE_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link org.bimserver.models.store.impl.ServerInfoImpl <em>Server Info</em>}' class.
@@ -5260,22 +5296,13 @@ public interface StorePackage extends EPackage {
 	int GEOMETRY = 84;
 
 	/**
-	 * The feature id for the '<em><b>Bounds</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEOMETRY__BOUNDS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Indices</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEOMETRY__INDICES = 1;
+	int GEOMETRY__INDICES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Vertices</b></em>' attribute list.
@@ -5284,7 +5311,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEOMETRY__VERTICES = 2;
+	int GEOMETRY__VERTICES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute list.
@@ -5293,7 +5320,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEOMETRY__NORMALS = 3;
+	int GEOMETRY__NORMALS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Geometry</em>' class.
@@ -5302,7 +5329,7 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEOMETRY_FEATURE_COUNT = 4;
+	int GEOMETRY_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link org.bimserver.models.store.UserType <em>User Type</em>}' enum.
@@ -6038,6 +6065,17 @@ public interface StorePackage extends EPackage {
 	EReference getRevision_Geometry();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.bimserver.models.store.Revision#getBounds <em>Bounds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Bounds</em>'.
+	 * @see org.bimserver.models.store.Revision#getBounds()
+	 * @see #getRevision()
+	 * @generated
+	 */
+	EReference getRevision_Bounds();
+
+	/**
 	 * Returns the meta object for class '{@link org.bimserver.models.store.ConcreteRevision <em>Concrete Revision</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6766,6 +6804,17 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSerializerPluginConfiguration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.bimserver.models.store.SerializerPluginConfiguration#isNeedsGeometry <em>Needs Geometry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Needs Geometry</em>'.
+	 * @see org.bimserver.models.store.SerializerPluginConfiguration#isNeedsGeometry()
+	 * @see #getSerializerPluginConfiguration()
+	 * @generated
+	 */
+	EAttribute getSerializerPluginConfiguration_NeedsGeometry();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.bimserver.models.store.SerializerPluginConfiguration#getExtension <em>Extension</em>}'.
@@ -7966,6 +8015,28 @@ public interface StorePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLongActionState_State();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.bimserver.models.store.LongActionState#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see org.bimserver.models.store.LongActionState#getTitle()
+	 * @see #getLongActionState()
+	 * @generated
+	 */
+	EAttribute getLongActionState_Title();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.bimserver.models.store.LongActionState#getStage <em>Stage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Stage</em>'.
+	 * @see org.bimserver.models.store.LongActionState#getStage()
+	 * @see #getLongActionState()
+	 * @generated
+	 */
+	EAttribute getLongActionState_Stage();
 
 	/**
 	 * Returns the meta object for the attribute list '{@link org.bimserver.models.store.LongActionState#getErrors <em>Errors</em>}'.
@@ -9674,17 +9745,6 @@ public interface StorePackage extends EPackage {
 	EClass getGeometry();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.bimserver.models.store.Geometry#getBounds <em>Bounds</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Bounds</em>'.
-	 * @see org.bimserver.models.store.Geometry#getBounds()
-	 * @see #getGeometry()
-	 * @generated
-	 */
-	EReference getGeometry_Bounds();
-
-	/**
 	 * Returns the meta object for the attribute list '{@link org.bimserver.models.store.Geometry#getIndices <em>Indices</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10315,6 +10375,14 @@ public interface StorePackage extends EPackage {
 		EReference REVISION__GEOMETRY = eINSTANCE.getRevision_Geometry();
 
 		/**
+		 * The meta object literal for the '<em><b>Bounds</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REVISION__BOUNDS = eINSTANCE.getRevision_Bounds();
+
+		/**
 		 * The meta object literal for the '{@link org.bimserver.models.store.impl.ConcreteRevisionImpl <em>Concrete Revision</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10863,6 +10931,14 @@ public interface StorePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SERIALIZER_PLUGIN_CONFIGURATION = eINSTANCE.getSerializerPluginConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Needs Geometry</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SERIALIZER_PLUGIN_CONFIGURATION__NEEDS_GEOMETRY = eINSTANCE.getSerializerPluginConfiguration_NeedsGeometry();
 
 		/**
 		 * The meta object literal for the '<em><b>Extension</b></em>' attribute feature.
@@ -11823,6 +11899,22 @@ public interface StorePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LONG_ACTION_STATE__STATE = eINSTANCE.getLongActionState_State();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LONG_ACTION_STATE__TITLE = eINSTANCE.getLongActionState_Title();
+
+		/**
+		 * The meta object literal for the '<em><b>Stage</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LONG_ACTION_STATE__STAGE = eINSTANCE.getLongActionState_Stage();
 
 		/**
 		 * The meta object literal for the '<em><b>Errors</b></em>' attribute list feature.
@@ -13181,14 +13273,6 @@ public interface StorePackage extends EPackage {
 		 * @generated
 		 */
 		EClass GEOMETRY = eINSTANCE.getGeometry();
-
-		/**
-		 * The meta object literal for the '<em><b>Bounds</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GEOMETRY__BOUNDS = eINSTANCE.getGeometry_Bounds();
 
 		/**
 		 * The meta object literal for the '<em><b>Indices</b></em>' attribute list feature.

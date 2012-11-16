@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 50
-/svn/!svn/ver/2118/trunk/Ifc/src/org/bimserver/ifc
+/svn/!svn/ver/2169/trunk/Ifc/src/org/bimserver/ifc
 END
 IfcModel.java
 K 25
 svn:wc:ra_dav:version-url
 V 64
-/svn/!svn/ver/2118/trunk/Ifc/src/org/bimserver/ifc/IfcModel.java
+/svn/!svn/ver/2169/trunk/Ifc/src/org/bimserver/ifc/IfcModel.java
 END
 IfcNormalizer.java
 K 25
@@ -31,7 +31,7 @@ IfcSerializer.java
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/!svn/ver/1903/trunk/Ifc/src/org/bimserver/ifc/IfcSerializer.java
+/svn/!svn/ver/2145/trunk/Ifc/src/org/bimserver/ifc/IfcSerializer.java
 END
 ReferenceCounter.java
 K 25

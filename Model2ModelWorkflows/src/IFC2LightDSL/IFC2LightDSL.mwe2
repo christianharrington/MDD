@@ -2,14 +2,15 @@ module IFC2LightDSL.IFC2LightDSL
 
 //var targetDir = 'model-gen'
 var modelSlot = 'model'
-var file = '../BIMServerConnectionTest/src/Test.ifc'
+var IFCFilePath = '../BIMServerConnectionTest/src/Test.ifc'
 var schema = '../BIMServerConnectionTest/IFC2X3_TC1.exp'
+var xmiWritePath = 'instance.xmi'
 
 Workflow {
 	
-	component = Reader {
+	component = IFC2ModelReader {
 		slot = modelSlot
-		file = file
+		file = IFCFilePath
 		schema = schema
 	}
 	
@@ -21,8 +22,9 @@ Workflow {
 		slot = modelSlot
 	}
 	
-	component = Writer {
+	component = Model2XMIWriter {
 		slot = modelSlot
+		path = xmiWritePath
 	}
 	
 }
