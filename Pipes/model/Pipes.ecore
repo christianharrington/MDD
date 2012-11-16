@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pipes" nsURI="http://pipes/1.0" nsPrefix="pipes">
+  <eClassifiers xsi:type="ecore:EClass" name="Wall" eSuperTypes="#//GUIDElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//WallRelation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Opening" eSuperTypes="#//GUIDElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//LocalPlacement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WallRelation" eSuperTypes="#//GUIDElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Pipe" eSuperTypes="#//GUIDElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//WallRelation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LocalPlacement" eSuperTypes="#//GUIDElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//Axis2Placement3D"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference1" eType="#//LocalPlacement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Axis2Placement3D" eSuperTypes="#//GUIDElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GUIDElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="GUID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
