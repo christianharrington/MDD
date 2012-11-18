@@ -242,7 +242,7 @@
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_6iAqIS_sEeKR_6VT5PxaNQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_6iAqIi_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="Pipes.ecore#//Opening/EReference0"/>
+    <element xmi:type="ecore:EReference" href="Pipes.ecore#//Opening/placement"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6iAqIy_sEeKR_6VT5PxaNQ" points="[-50, -2, 337, 12]$[-385, -32, 2, -18]"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6iCfUC_sEeKR_6VT5PxaNQ" id="(0.7745098039215687,0.4523809523809524)"/>
   </edges>

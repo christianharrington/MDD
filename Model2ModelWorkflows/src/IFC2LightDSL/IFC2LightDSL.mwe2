@@ -1,5 +1,7 @@
 module IFC2LightDSL.IFC2LightDSL
 
+import general.IFC2ModelReader
+
 //var targetDir = 'model-gen'
 var modelSlot = 'model'
 var IFCFilePath = '../BIMServerConnectionTest/src/Test.ifc'

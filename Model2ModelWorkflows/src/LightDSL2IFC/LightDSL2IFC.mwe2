@@ -1,5 +1,7 @@
 module LightDSL2IFC.LightDSL2IFC
 
+import general.Model2IFCWriter
+
 var modelSlot = 'model'
 var instanceFilePath = 'instance.xmi'
 var ifcWritePath = 'output.ifc'

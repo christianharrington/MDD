@@ -170,7 +170,6 @@
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext_2.3.1.v201208210947.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext.common.types_2.3.1.v201208210947.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.eclipse.xtext.util_2.3.1.v201208210947.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/LightDSL"/>
 	<classpathentry kind="lib" path="dep/org.apache.commons.cli_1.2.0.v201105210650.jar"/>
 	<classpathentry kind="lib" path="dep/org.apache.commons.logging_1.0.4.v201101211617.jar"/>
 	<classpathentry kind="lib" path="dep/org.apache.log4j_1.2.15.v201012070815.jar"/>
@@ -181,5 +180,7 @@
 	<classpathentry kind="lib" path="dep/org.eclipse.xtext_2.3.1.v201208210947.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.xtext.common.types_2.3.1.v201208210947.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.xtext.util_2.3.1.v201208210947.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Pipes"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/LightDSL"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
