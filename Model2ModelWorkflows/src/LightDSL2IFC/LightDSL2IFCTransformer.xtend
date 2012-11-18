@@ -1,12 +1,13 @@
 package LightDSL2IFC
 
-import IFC2LightDSL.WorkflowComponentWithSlot
-import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
-import org.bimserver.ifc.IfcModel
 import lightast.Lamp
-import org.bimserver.plugins.serializers.IfcModelInterface
-import org.bimserver.models.ifc2x3tc1.impl.Ifc2x3tc1FactoryImpl
+import lightast.Main
+import org.bimserver.ifc.IfcModel
 import org.bimserver.models.ifc2x3tc1.IfcCartesianPoint
+import org.bimserver.models.ifc2x3tc1.impl.Ifc2x3tc1FactoryImpl
+import org.bimserver.plugins.serializers.IfcModelInterface
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
+import general.WorkflowComponentWithSlot
 
 class LightDSL2IFCTransformer extends WorkflowComponentWithSlot {
 	
@@ -15,6 +16,8 @@ class LightDSL2IFCTransformer extends WorkflowComponentWithSlot {
 	def addIfcCartesianPoint(IfcModelInterface model, Lamp lamp) {
 		var IfcCartesianPoint cp = ifcFactory.createIfcCartesianPoint()
 		cp.coordinatesAsString.add(lamp.globalID)
+		cp.coordinates.add(12.0)
+		cp.coordinates.add(47.7)
 		model.add(cp)
 	}
 
