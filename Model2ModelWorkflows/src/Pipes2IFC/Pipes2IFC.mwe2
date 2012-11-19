@@ -35,7 +35,6 @@ Workflow {
 		//to
 		mainModelSlot = modelSlot
 		extractModelSlot = emSlot
-
 	}
 	
 	component = Model2IFCWriter {
