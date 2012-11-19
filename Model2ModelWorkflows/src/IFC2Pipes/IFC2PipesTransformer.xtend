@@ -9,8 +9,6 @@ import pipes.Model
 import pipes.Opening
 import org.bimserver.models.ifc2x3tc1.IfcLocalPlacement
 import pipes.LocalPlacement
-import org.bimserver.models.ifc2x3tc1.IfcAxis2Placement
-import pipes.Axis2Placement3D
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	

@@ -1,28 +1,45 @@
 module Pipes2IFC.Pies2IFC
 
 import general.Model2IFCWriter
+import general.IFC2ModelReader
 
 var modelSlot = 'model'
-var instanceFilePath = 'instance.xmi'
+var emSlot = 'extractedModelSlot'
+var poSlot = 'pipesOpeningsSlot'
 var ifcWritePath = 'output.ifc'
+
+var IFCFilePath = 'NanoLabBuilding/NanoBuilding_v2.ifc'
+var schema = '../BIMServerConnectionTest/IFC2X3_TC1.exp'
+var xmiReadPath = 'instance.xmi'
 
 Workflow {
 	
 	component = PipesXMI2ModelReader {
-		slot = modelSlot
-		path = instanceFilePath
+		pipesOpeningsSlot = poSlot
+		path = xmiReadPath
 	}
 	
-//	component = org.eclipse.emf.mwe.utils.DirectoryCleaner {
-//		directory = targetDir
-// 	}
+	component = IFC2ModelReader {
+		mainModelSlot = modelSlot
+		file = IFCFilePath
+		schema = schema
+	}
+	
+	component = general.IFCPipesOpeningsExtractor {
+		mainModelSlot = modelSlot
+		extractModelSlot = emSlot
+	}
 	
 	component = Pipes2IFCTransformer {
-		slot = modelSlot
+		pipesOpeningsSlot = poSlot
+		//to
+		mainModelSlot = modelSlot
+		extractModelSlot = emSlot
+
 	}
 	
 	component = Model2IFCWriter {
-		slot = modelSlot
+		mainModelSlot = modelSlot
 		path = ifcWritePath
 	}
 	

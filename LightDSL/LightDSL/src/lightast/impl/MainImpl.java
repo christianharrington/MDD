@@ -6,7 +6,7 @@ import java.util.Collection;
 
 import lightast.BIMServerCredentials;
 import lightast.LightFixture;
-import lightast.Lamp;
+
 import lightast.LightastPackage;
 import lightast.Main;
 

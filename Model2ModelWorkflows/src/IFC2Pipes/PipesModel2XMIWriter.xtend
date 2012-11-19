@@ -3,7 +3,6 @@ package IFC2Pipes
 import general.WorkflowComponentWithSlot
 import java.util.Collections
 import java.util.Map
-import lightast.Main
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.EObject
