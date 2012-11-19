@@ -18,6 +18,7 @@ import pipes.Model;
 import pipes.Opening;
 import pipes.PipesFactory;
 import pipes.PipesPackage;
+import pipes.Product;
 import pipes.Wall;
 import pipes.WallRelation;
 
@@ -90,6 +91,13 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 * @generated
 	 */
 	private EClass directionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass productEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -175,15 +183,6 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWall_Placement() {
-		return (EReference)wallEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getOpening() {
 		return openingEClass;
 	}
@@ -193,17 +192,8 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOpening_Placement() {
-		return (EReference)openingEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getOpening_Walls() {
-		return (EReference)openingEClass.getEStructuralFeatures().get(1);
+		return (EReference)openingEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -240,15 +230,6 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 */
 	public EClass getFlowSegment() {
 		return flowSegmentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getFlowSegment_Placement() {
-		return (EReference)flowSegmentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -427,6 +408,24 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getProduct() {
+		return productEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProduct_Placement() {
+		return (EReference)productEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PipesFactory getPipesFactory() {
 		return (PipesFactory)getEFactoryInstance();
 	}
@@ -452,10 +451,8 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 		// Create classes and their features
 		wallEClass = createEClass(WALL);
 		createEReference(wallEClass, WALL__OPENINGS);
-		createEReference(wallEClass, WALL__PLACEMENT);
 
 		openingEClass = createEClass(OPENING);
-		createEReference(openingEClass, OPENING__PLACEMENT);
 		createEReference(openingEClass, OPENING__WALLS);
 
 		wallRelationEClass = createEClass(WALL_RELATION);
@@ -463,7 +460,6 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 		createEReference(wallRelationEClass, WALL_RELATION__OPENING);
 
 		flowSegmentEClass = createEClass(FLOW_SEGMENT);
-		createEReference(flowSegmentEClass, FLOW_SEGMENT__PLACEMENT);
 
 		localPlacementEClass = createEClass(LOCAL_PLACEMENT);
 		createEReference(localPlacementEClass, LOCAL_PLACEMENT__AXIS2PLACEMENT3D);
@@ -488,6 +484,9 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 		createEAttribute(directionEClass, DIRECTION__X);
 		createEAttribute(directionEClass, DIRECTION__Y);
 		createEAttribute(directionEClass, DIRECTION__Z);
+
+		productEClass = createEClass(PRODUCT);
+		createEReference(productEClass, PRODUCT__PLACEMENT);
 	}
 
 	/**
@@ -519,19 +518,20 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 
 		// Add supertypes to classes
 		wallEClass.getESuperTypes().add(this.getGUIDElement());
+		wallEClass.getESuperTypes().add(this.getProduct());
 		openingEClass.getESuperTypes().add(this.getGUIDElement());
+		openingEClass.getESuperTypes().add(this.getProduct());
 		wallRelationEClass.getESuperTypes().add(this.getGUIDElement());
 		flowSegmentEClass.getESuperTypes().add(this.getGUIDElement());
+		flowSegmentEClass.getESuperTypes().add(this.getProduct());
 		localPlacementEClass.getESuperTypes().add(this.getGUIDElement());
 		axis2Placement3DEClass.getESuperTypes().add(this.getGUIDElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(wallEClass, Wall.class, "Wall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWall_Openings(), this.getWallRelation(), null, "openings", null, 0, -1, Wall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWall_Placement(), this.getLocalPlacement(), null, "placement", null, 0, 1, Wall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(openingEClass, Opening.class, "Opening", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOpening_Placement(), this.getLocalPlacement(), null, "placement", null, 0, 1, Opening.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOpening_Walls(), this.getWallRelation(), null, "walls", null, 0, -1, Opening.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(wallRelationEClass, WallRelation.class, "WallRelation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -539,7 +539,6 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 		initEReference(getWallRelation_Opening(), this.getOpening(), null, "opening", null, 1, 1, WallRelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(flowSegmentEClass, FlowSegment.class, "FlowSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFlowSegment_Placement(), this.getLocalPlacement(), null, "placement", null, 0, 1, FlowSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(localPlacementEClass, LocalPlacement.class, "LocalPlacement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocalPlacement_Axis2placement3d(), this.getAxis2Placement3D(), null, "axis2placement3d", null, 0, 1, LocalPlacement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -564,6 +563,9 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 		initEAttribute(getDirection_X(), ecorePackage.getEFloat(), "x", null, 1, 1, Direction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDirection_Y(), ecorePackage.getEFloat(), "y", null, 1, 1, Direction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDirection_Z(), ecorePackage.getEFloat(), "z", null, 0, 1, Direction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(productEClass, Product.class, "Product", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProduct_Placement(), this.getLocalPlacement(), null, "placement", null, 1, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

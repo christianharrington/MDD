@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import pipes.FlowSegment;
 import pipes.LocalPlacement;
 import pipes.PipesPackage;
+import pipes.Product;
 
 /**
  * <!-- begin-user-doc -->
@@ -151,6 +152,38 @@ public class FlowSegmentImpl extends GUIDElementImpl implements FlowSegment {
 				return placement != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Product.class) {
+			switch (derivedFeatureID) {
+				case PipesPackage.FLOW_SEGMENT__PLACEMENT: return PipesPackage.PRODUCT__PLACEMENT;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Product.class) {
+			switch (baseFeatureID) {
+				case PipesPackage.PRODUCT__PLACEMENT: return PipesPackage.FLOW_SEGMENT__PLACEMENT;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //FlowSegmentImpl

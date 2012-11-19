@@ -9,6 +9,10 @@ import pipes.Model
 import pipes.Opening
 import org.bimserver.models.ifc2x3tc1.IfcLocalPlacement
 import pipes.LocalPlacement
+import pipes.FlowSegment
+import pipes.Product
+import org.bimserver.models.ifc2x3tc1.IfcFlowSegment
+import org.bimserver.models.ifc2x3tc1.IfcAxis2Placement3D
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
@@ -29,10 +33,22 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		pipesModel.elements.add(op)
 	}
 	
-	def private addLocalPlacement(Opening op, IfcLocalPlacement ifcLocalPlacement) {
+	def private addFlowSegment(Model pipesModel, IfcFlowSegment ifcFlowSegment) {
+		var FlowSegment fs = pipesFactory.createFlowSegment()
+		fs.name = ifcFlowSegment.name
+		fs.description = ifcFlowSegment.description
+		var placement = ifcFlowSegment.objectPlacement as IfcLocalPlacement
+		addLocalPlacement(fs, placement)		
+		pipesModel.elements.add(fs)
+	}
+	
+	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement) {
 		var LocalPlacement lp = pipesFactory.createLocalPlacement()
+		var IfcAxis2Placement3D axis = ifcLocalPlacement.relativePlacement as IfcAxis2Placement3D
+		println("axis " + axis)
+		
 		//addAxis2Placement3D(lp, ifcLocalPlacement.relativePlacement)
-		op.placement = lp
+		product.placement = lp;
 	}
 	/*
 	def private addAxis2Placement3D(LocalPlacement lp, IfcAxis2Placement ifcPlacement) {
@@ -54,6 +70,12 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		println("openings: " + openings.size())
 		openings.forEach[
 			addOpening(pipesModel, it)
+		]
+		
+		var flowSegments = ifcmodel.filter(typeof(IfcFlowSegment))
+		println("flow segments: " + flowSegments.size())
+		flowSegments.forEach[
+			addFlowSegment(pipesModel, it)
 		]
 		
 		ctx.put(pipesOpeningsSlot, pipesModel)

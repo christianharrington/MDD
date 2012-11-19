@@ -70,6 +70,7 @@ public class PipesSwitch<T> extends Switch<T> {
 				Wall wall = (Wall)theEObject;
 				T result = caseWall(wall);
 				if (result == null) result = caseGUIDElement(wall);
+				if (result == null) result = caseProduct(wall);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -77,6 +78,7 @@ public class PipesSwitch<T> extends Switch<T> {
 				Opening opening = (Opening)theEObject;
 				T result = caseOpening(opening);
 				if (result == null) result = caseGUIDElement(opening);
+				if (result == null) result = caseProduct(opening);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -91,6 +93,7 @@ public class PipesSwitch<T> extends Switch<T> {
 				FlowSegment flowSegment = (FlowSegment)theEObject;
 				T result = caseFlowSegment(flowSegment);
 				if (result == null) result = caseGUIDElement(flowSegment);
+				if (result == null) result = caseProduct(flowSegment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -123,6 +126,12 @@ public class PipesSwitch<T> extends Switch<T> {
 			case PipesPackage.DIRECTION: {
 				Direction direction = (Direction)theEObject;
 				T result = caseDirection(direction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PipesPackage.PRODUCT: {
+				Product product = (Product)theEObject;
+				T result = caseProduct(product);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -262,6 +271,21 @@ public class PipesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDirection(Direction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Product</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Product</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProduct(Product object) {
 		return null;
 	}
 
