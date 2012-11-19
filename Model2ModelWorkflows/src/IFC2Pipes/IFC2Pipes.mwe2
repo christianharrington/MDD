@@ -1,0 +1,27 @@
+module IFC2Pipes.IFC2Pipes
+
+import general.IFC2ModelReader
+
+var modelSlot = 'model'
+var IFCFilePath = 'NanoLabBuilding/NanoBuilding_v2.ifc'
+var schema = '../BIMServerConnectionTest/IFC2X3_TC1.exp'
+var xmiWritePath = 'instance.xmi'
+
+Workflow {
+	
+	component = IFC2ModelReader {
+		slot = modelSlot
+		file = IFCFilePath
+		schema = schema
+	}
+	
+	component = IFC2PipesTransformer {
+		slot = modelSlot
+	}
+
+	component = Model2XMIWriter {
+		slot = modelSlot
+		path = xmiWritePath
+	}
+		
+}

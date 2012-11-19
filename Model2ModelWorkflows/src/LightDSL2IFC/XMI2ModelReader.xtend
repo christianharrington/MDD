@@ -1,15 +1,16 @@
 package LightDSL2IFC
 
-import IFC2LightDSL.WorkflowComponentWithSlot
-import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
-import org.eclipse.emf.ecore.resource.ResourceSet
-import org.eclipse.emf.ecore.resource.Resource
 import java.util.Map
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
-import org.eclipse.emf.ecore.resource.Resource$Factory$Registry
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
-import org.eclipse.emf.common.util.URI
 import lightast.LightastPackage
+import lightast.Main
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.emf.ecore.resource.Resource$Factory$Registry
+import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
+import general.WorkflowComponentWithSlot
 
 class XMI2ModelReader extends WorkflowComponentWithSlot {
 	

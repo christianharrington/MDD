@@ -1,65 +1,79 @@
 %!TEX TS-options = -shell-escape
 \documentclass{llncs}
-% Quick analysis
+\usepackage{makeidx}  % allows for indexgeneration
+\bibliographystyle{splncs}
+
 %\usepackage{syntonly}
 \usepackage[utf8]{inputenc}
-\usepackage[nottoc,numbib]{tocbibind}
-\usepackage[center]{caption}
-\usepackage{url}
+% \usepackage[nottoc,numbib]{tocbibind}
+% \usepackage[center]{caption}
+% \usepackage{url}
 
-%% to make urls look better in bibliography
-\makeatletter
-\def\url@leostyle{%
-  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
-\makeatother
-%% Now actually use the newly defined style.
-\urlstyle{leo}
+% %% to make urls look better in bibliography
+% \makeatletter
+% \def\url@leostyle{%
+%   \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+% \makeatother
+% %% Now actually use the newly defined style.
+% \urlstyle{leo}
 
-\bibliographystyle{acm}
- 
+% \bibliographystyle{acm}
+
 \begin{document}
 
+% insert the table of contents if want, it is not required
+% llncs says: "If you are the author of a single contribution you
+% normally have no running heads and no table of contents."
+% \tableofcontents
 
-% generates the title page
-\begin{titlepage}
-\ \\
-\vspace{3cm}
-\begin{center}
-{\huge\sffamily
-Title
-\\}\bigskip
-{\large\sffamily
-Date
-\\}
-{\sffamily Fall Semester, 2012}
-\end{center}
-\vspace{3cm}
-\large
-\begin{center}
-\begin{tabular}{r@{  }l}
-\emph{\sffamily Authors:} & \textsf{Nicolai Dahl Blicher-Petersen, ndbl@itu.dk, 27-08-89}\\
- & \textsf{Christian Harrington, cnha@itu.dk, 05-06-89}\\
- & \textsf{Thomas Didriksen, thdi@itu.dk, FIXME}\\
- & \textsf{Sune Alkærsig, sual@itu.dk, FIXME}\\
- & \textsf{Anders Høst, ahkj@itu.dk, FIXME}\\
-\emph{\sffamily Supervisor:} & \textsf{Andrzej Wasowski}
-\end{tabular}
-\end{center}
-\vfill
-%\includegraphics[width=4cm]{ITU_logo_ENG_horisontal}
-\end{titlepage}
+\mainmatter              % start of the contributionsmainmatter
+\title{DSL for Textual Editing of IFC partial model\thanks{Supervised by Andrzej Wasowski, IT University, Copenhagen, Denmark}}
+
+\author{Nicolai Dahl Blicher-Petersen\inst{1} \and Christian Harrington\inst{1}
+Thomas Hallier Didriksen\inst{1} \and Sune Alkærsig\inst{1} \and Anders Høst Kjærgaard\inst{1}}
+
+% Do we want to show our emails?
+\institute{IT University, Rued Langgaards Vej 7, 2300 Copenhagen S, Denmark}
+% \email{ndbl@itu.dk}}
+% \and
+% IT University, Rued Langgaards Vej 7, 2300 Copenhagen S, Denmark
+% \email{cnha@itu.dk},
+% \and
+% IT University, Rued Langgaards Vej 7, 2300 Copenhagen S, Denmark
+% \email{thdi@itu.dk},
+% \and
+% IT University, Rued Langgaards Vej 7, 2300 Copenhagen S, Denmark
+% \email{sual@itu.dk},
+% \and
+% IT University, Rued Langgaards Vej 7, 2300 Copenhagen S, Denmark
+% \email{ahkj@itu.dk}}
+
+\maketitle              % typeset the title of the contribution
+
+\begin{abstract}
+Industry Foundation Classes (IFC) are often big and complex, and a key challange is how work can be done on a partial model or aspect - such as heating or electrical weiring. This is a challange for IFC projects in general, as projects often involve various stakeholders, all interested in only a part of the IFC relevant to their sub-domain. In this paper we demonstrate how the model-driven methodology can support the extraction of a partial model from the IFC model, transform it to a DSL (Domain Specific Language) for editing, and synchronize it back to the IFC model. We argue that our approach can leverage the adpotion of IFC in emerging domains.
+
+% Andrzej example of an abstract:
+% Feature modeling is an important element of development of Software Product Lines. Much research exists on feature modeling languages, and feature modeling tools. It is surprising though, that no experience reports exist of using feature modeling in industrial practice, and no characteristics of industrial models is openly available.
+% In this work we identify, present, and analyze two real life feature models of operating system kernels, eCos and Linux. We find that many assumptions about feature models made by tool builders in academia do not hold in reality, and thus many tools are potentially not useful; real models are substantially larger, and with higher density of constraints than previously anticipated.
+
+\keywords{IFC, DSL, model-driven development, model transformation}
+\end{abstract}
 
 % Number the first pages with Roman numbers
 \pagenumbering{roman}
-%\include{abstract}
-
-% insert the table of contents
-\tableofcontents
-
-\listoffigures
 
 \include{introduction}
+\include{background}
+\include{ifc} %Realstuffcomeshere...
+\include{solution} %Describe the solution
+\include{evaluation}
+\include{threats_to_validity}
 \include{related_work}
+\include{conclusion}
+\include{references}
+
+\listoffigures
 
 \end{document}
 

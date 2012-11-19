@@ -6,6 +6,7 @@ import lightast.impl.LightastFactoryImpl
 import org.bimserver.ifc.IfcModel
 import org.bimserver.models.ifc2x3tc1.IfcCartesianPoint
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
+import general.WorkflowComponentWithSlot
 
 class IFC2LightDSLTransformer extends WorkflowComponentWithSlot {
 	

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Pipes/src" modelPluginID="Pipes" modelName="Pipes"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>Pipes.ecore</foreignModel>
+  <genPackages prefix="Pipes" disposableProviderFactory="true" ecorePackage="Pipes.ecore#/">
+    <genClasses ecoreClass="Pipes.ecore#//Wall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pipes.ecore#//Wall/openings"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pipes.ecore#//Wall/placement"/>
+    </genClasses>
+    <genClasses ecoreClass="Pipes.ecore#//Opening">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pipes.ecore#//Opening/placement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pipes.ecore#//Opening/walls"/>
+    </genClasses>
+    <genClasses ecoreClass="Pipes.ecore#//WallRelation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pipes.ecore#//WallRelation/wall"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pipes.ecore#//WallRelation/opening"/>
+    </genClasses>
+    <genClasses ecoreClass="Pipes.ecore#//FlowSegment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pipes.ecore#//FlowSegment/placement"/>
+    </genClasses>
+    <genClasses ecoreClass="Pipes.ecore#//LocalPlacement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pipes.ecore#//LocalPlacement/axis2placement3d"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pipes.ecore#//LocalPlacement/relativeTo"/>
+    </genClasses>
+    <genClasses ecoreClass="Pipes.ecore#//Axis2Placement3D">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pipes.ecore#//Axis2Placement3D/cartesianX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pipes.ecore#//Axis2Placement3D/cartesianY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pipes.ecore#//Axis2Placement3D/cartesianZ"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pipes.ecore#//Axis2Placement3D/axis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pipes.ecore#//Axis2Placement3D/refDirection"/>
+    </genClasses>
+    <genClasses ecoreClass="Pipes.ecore#//GUIDElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pipes.ecore#//GUIDElement/GUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pipes.ecore#//GUIDElement/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pipes.ecore#//GUIDElement/Description"/>
+    </genClasses>
+    <genClasses ecoreClass="Pipes.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pipes.ecore#//Model/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="Pipes.ecore#//Direction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pipes.ecore#//Direction/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pipes.ecore#//Direction/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pipes.ecore#//Direction/z"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
