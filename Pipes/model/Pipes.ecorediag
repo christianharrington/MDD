@@ -1,348 +1,411 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_I43QYC_sEeKR_6VT5PxaNQ" type="EcoreTools" name="Pipes" measurementUnit="Pixel">
-  <children xmi:type="notation:Node" xmi:id="_Jx9bkC_sEeKR_6VT5PxaNQ" type="1001">
-    <children xmi:type="notation:Node" xmi:id="_Jx-psC_sEeKR_6VT5PxaNQ" type="4001"/>
-    <children xmi:type="notation:Node" xmi:id="_JyBtAC_sEeKR_6VT5PxaNQ" type="5001">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_JyCUEC_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_JyCUES_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_JyCUEi_sEeKR_6VT5PxaNQ"/>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_EtmWYDJIEeKo0Lyi_RqD5Q" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_EtoyoDJIEeKo0Lyi_RqD5Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_EtpZsDJIEeKo0Lyi_RqD5Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_EtpZsTJIEeKo0Lyi_RqD5Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtpZsjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtpZszJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtpZtDJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_JyCUEy_sEeKR_6VT5PxaNQ" type="5002">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_JyCUFC_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_JyCUFS_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_JyCUFi_sEeKR_6VT5PxaNQ"/>
+    <children xmi:type="notation:Node" xmi:id="_EtpZtTJIEeKo0Lyi_RqD5Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtpZtjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtpZtzJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtpZuDJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_Jx9bkS_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_EtoyoTJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Pipes.ecore#//Wall"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jx9bki_sEeKR_6VT5PxaNQ" x="594" y="297"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EtoyojJIEeKo0Lyi_RqD5Q" x="289" y="486"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_PkCu8C_sEeKR_6VT5PxaNQ" type="1001">
-    <children xmi:type="notation:Node" xmi:id="_PkDWAC_sEeKR_6VT5PxaNQ" type="4001"/>
-    <children xmi:type="notation:Node" xmi:id="_PkDWAS_sEeKR_6VT5PxaNQ" type="5001">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_PkDWAi_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_PkDWAy_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_PkDWBC_sEeKR_6VT5PxaNQ"/>
+  <children xmi:type="notation:Node" xmi:id="_EtpZuTJIEeKo0Lyi_RqD5Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_EtqAwDJIEeKo0Lyi_RqD5Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_EtqAwTJIEeKo0Lyi_RqD5Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtqAwjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtqAwzJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtqAxDJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_PkDWBS_sEeKR_6VT5PxaNQ" type="5002">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_PkDWBi_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_PkDWBy_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_PkDWCC_sEeKR_6VT5PxaNQ"/>
+    <children xmi:type="notation:Node" xmi:id="_EtqAxTJIEeKo0Lyi_RqD5Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtqAxjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtqAxzJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtqAyDJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_PkCu8S_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_EtpZujJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Pipes.ecore#//Opening"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PkCu8i_sEeKR_6VT5PxaNQ" x="756" y="162"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EtpZuzJIEeKo0Lyi_RqD5Q" x="127" y="486"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_QiLLIC_sEeKR_6VT5PxaNQ" type="1001">
-    <children xmi:type="notation:Node" xmi:id="_QiLyMC_sEeKR_6VT5PxaNQ" type="4001"/>
-    <children xmi:type="notation:Node" xmi:id="_QiLyMS_sEeKR_6VT5PxaNQ" type="5001">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_QiLyMi_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_QiLyMy_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_QiLyNC_sEeKR_6VT5PxaNQ"/>
+  <children xmi:type="notation:Node" xmi:id="_EtqAyTJIEeKo0Lyi_RqD5Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_Etqn0DJIEeKo0Lyi_RqD5Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_Etqn0TJIEeKo0Lyi_RqD5Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Etqn0jJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Etqn0zJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Etqn1DJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_QiLyNS_sEeKR_6VT5PxaNQ" type="5002">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_QiLyNi_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_QiLyNy_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_QiLyOC_sEeKR_6VT5PxaNQ"/>
+    <children xmi:type="notation:Node" xmi:id="_Etqn1TJIEeKo0Lyi_RqD5Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Etqn1jJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Etqn1zJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Etqn2DJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_QiLLIS_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_EtqAyjJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Pipes.ecore#//WallRelation"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QiLLIi_sEeKR_6VT5PxaNQ" x="774" y="252"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EtqAyzJIEeKo0Lyi_RqD5Q" x="193" y="384"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_T5HRwC_sEeKR_6VT5PxaNQ" type="1001">
-    <children xmi:type="notation:Node" xmi:id="_T5HRwy_sEeKR_6VT5PxaNQ" type="4001"/>
-    <children xmi:type="notation:Node" xmi:id="_T5H40C_sEeKR_6VT5PxaNQ" type="5001">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_T5H40S_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_T5H40i_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_T5H40y_sEeKR_6VT5PxaNQ"/>
+  <children xmi:type="notation:Node" xmi:id="_EtrO4DJIEeKo0Lyi_RqD5Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_EtrO4zJIEeKo0Lyi_RqD5Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_EtrO5DJIEeKo0Lyi_RqD5Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtrO5TJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtrO5jJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtrO5zJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_T5If4C_sEeKR_6VT5PxaNQ" type="5002">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_T5If4S_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_T5If4i_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_T5If4y_sEeKR_6VT5PxaNQ"/>
+    <children xmi:type="notation:Node" xmi:id="_EtrO6DJIEeKo0Lyi_RqD5Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Etr18DJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Etr18TJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Etr18jJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_T5HRwS_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_EtrO4TJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Pipes.ecore#//FlowSegment"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T5HRwi_sEeKR_6VT5PxaNQ" x="306" y="189"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EtrO4jJIEeKo0Lyi_RqD5Q" x="482" y="486"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_X2o3QC_sEeKR_6VT5PxaNQ" type="1001">
-    <children xmi:type="notation:Node" xmi:id="_X2peUC_sEeKR_6VT5PxaNQ" type="4001"/>
-    <children xmi:type="notation:Node" xmi:id="_X2peUS_sEeKR_6VT5PxaNQ" type="5001">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_X2peUi_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_X2peUy_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_X2peVC_sEeKR_6VT5PxaNQ"/>
+  <children xmi:type="notation:Node" xmi:id="_Etr18zJIEeKo0Lyi_RqD5Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_Etr19jJIEeKo0Lyi_RqD5Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_EtsdADJIEeKo0Lyi_RqD5Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtsdATJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtsdAjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtsdAzJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_X2peVS_sEeKR_6VT5PxaNQ" type="5002">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_X2peVi_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_X2peVy_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_X2peWC_sEeKR_6VT5PxaNQ"/>
+    <children xmi:type="notation:Node" xmi:id="_EtsdBDJIEeKo0Lyi_RqD5Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtsdBTJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtsdBjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtsdBzJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_X2o3QS_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Etr19DJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Pipes.ecore#//LocalPlacement"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_X2o3Qi_sEeKR_6VT5PxaNQ" x="234" y="288"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Etr19TJIEeKo0Lyi_RqD5Q" x="386" y="282"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_ZWqfkC_sEeKR_6VT5PxaNQ" type="1001">
-    <children xmi:type="notation:Node" xmi:id="_ZWrGoC_sEeKR_6VT5PxaNQ" type="4001"/>
-    <children xmi:type="notation:Node" xmi:id="_ZWrGoS_sEeKR_6VT5PxaNQ" type="5001">
-      <children xmi:type="notation:Node" xmi:id="_m_7qQC_vEeKR_6VT5PxaNQ" type="2001">
+  <children xmi:type="notation:Node" xmi:id="_EtsdCDJIEeKo0Lyi_RqD5Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_EttEEDJIEeKo0Lyi_RqD5Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_EttEETJIEeKo0Lyi_RqD5Q" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_EttEGTJIEeKo0Lyi_RqD5Q" type="2001">
         <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//Axis2Placement3D/cartesianX"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_m_7qQS_vEeKR_6VT5PxaNQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EttEGjJIEeKo0Lyi_RqD5Q"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_HYDBEC_wEeKR_6VT5PxaNQ" type="2001">
+      <children xmi:type="notation:Node" xmi:id="_EttEGzJIEeKo0Lyi_RqD5Q" type="2001">
         <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//Axis2Placement3D/cartesianY"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_HYDBES_wEeKR_6VT5PxaNQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EttEHDJIEeKo0Lyi_RqD5Q"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_HeqmcC_wEeKR_6VT5PxaNQ" type="2001">
+      <children xmi:type="notation:Node" xmi:id="_EttrIDJIEeKo0Lyi_RqD5Q" type="2001">
         <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//Axis2Placement3D/cartesianZ"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_HeqmcS_wEeKR_6VT5PxaNQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EttrITJIEeKo0Lyi_RqD5Q"/>
       </children>
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_ZWrGoi_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_ZWrGoy_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_ZWrGpC_sEeKR_6VT5PxaNQ"/>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EttEEjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EttEEzJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EttEFDJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_ZWrGpS_sEeKR_6VT5PxaNQ" type="5002">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_ZWrGpi_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_ZWrGpy_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_ZWrGqC_sEeKR_6VT5PxaNQ"/>
+    <children xmi:type="notation:Node" xmi:id="_EttEFTJIEeKo0Lyi_RqD5Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EttEFjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EttEFzJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EttEGDJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_ZWqfkS_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_EtsdCTJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Pipes.ecore#//Axis2Placement3D"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZWqfki_sEeKR_6VT5PxaNQ" x="27" y="270"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EtsdCjJIEeKo0Lyi_RqD5Q" x="579" y="141"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_bpNJ8C_sEeKR_6VT5PxaNQ" type="1001">
-    <children xmi:type="notation:Node" xmi:id="_bpNxAC_sEeKR_6VT5PxaNQ" type="4001"/>
-    <children xmi:type="notation:Node" xmi:id="_bpNxAS_sEeKR_6VT5PxaNQ" type="5001">
-      <children xmi:type="notation:Node" xmi:id="_FonyMC_tEeKR_6VT5PxaNQ" type="2001">
+  <children xmi:type="notation:Node" xmi:id="_EttrIjJIEeKo0Lyi_RqD5Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_EtuSMDJIEeKo0Lyi_RqD5Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_EtuSMTJIEeKo0Lyi_RqD5Q" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_EtuSOTJIEeKo0Lyi_RqD5Q" type="2001">
         <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//GUIDElement/GUID"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_FonyMS_tEeKR_6VT5PxaNQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EtuSOjJIEeKo0Lyi_RqD5Q"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_OnaSIC_tEeKR_6VT5PxaNQ" type="2001">
+      <children xmi:type="notation:Node" xmi:id="_EtuSOzJIEeKo0Lyi_RqD5Q" type="2001">
         <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//GUIDElement/Name"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_OnaSIS_tEeKR_6VT5PxaNQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EtuSPDJIEeKo0Lyi_RqD5Q"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_QMG_EC_tEeKR_6VT5PxaNQ" type="2001">
+      <children xmi:type="notation:Node" xmi:id="_Etu5QDJIEeKo0Lyi_RqD5Q" type="2001">
         <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//GUIDElement/Description"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_QMHmIC_tEeKR_6VT5PxaNQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Etu5QTJIEeKo0Lyi_RqD5Q"/>
       </children>
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_bpNxAi_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_bpNxAy_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_bpNxBC_sEeKR_6VT5PxaNQ"/>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtuSMjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtuSMzJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtuSNDJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_bpNxBS_sEeKR_6VT5PxaNQ" type="5002">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_bpNxBi_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_bpNxBy_sEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_bpNxCC_sEeKR_6VT5PxaNQ"/>
+    <children xmi:type="notation:Node" xmi:id="_EtuSNTJIEeKo0Lyi_RqD5Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtuSNjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtuSNzJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtuSODJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_bpNJ8S_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_EttrIzJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Pipes.ecore#//GUIDElement"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bpNJ8i_sEeKR_6VT5PxaNQ" x="126" y="18"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EttrJDJIEeKo0Lyi_RqD5Q" x="275"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_lyobkC_tEeKR_6VT5PxaNQ" type="1001">
-    <children xmi:type="notation:Node" xmi:id="_lypCoC_tEeKR_6VT5PxaNQ" type="4001"/>
-    <children xmi:type="notation:Node" xmi:id="_lypCoS_tEeKR_6VT5PxaNQ" type="5001">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_lypCoi_tEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_lypCoy_tEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_lypCpC_tEeKR_6VT5PxaNQ"/>
+  <children xmi:type="notation:Node" xmi:id="_Etu5QjJIEeKo0Lyi_RqD5Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_Etu5RTJIEeKo0Lyi_RqD5Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_Etu5RjJIEeKo0Lyi_RqD5Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Etu5RzJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Etu5SDJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Etu5STJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_lyppsC_tEeKR_6VT5PxaNQ" type="5002">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_lyppsS_tEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_lyppsi_tEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_lyppsy_tEeKR_6VT5PxaNQ"/>
+    <children xmi:type="notation:Node" xmi:id="_EtvgUDJIEeKo0Lyi_RqD5Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtvgUTJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtvgUjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtvgUzJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_lyobkS_tEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Etu5QzJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Pipes.ecore#//Model"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lyobki_tEeKR_6VT5PxaNQ" x="589" y="38"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Etu5RDJIEeKo0Lyi_RqD5Q" y="141"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_L_yoQC_wEeKR_6VT5PxaNQ" type="1001">
-    <children xmi:type="notation:Node" xmi:id="_L_zPUC_wEeKR_6VT5PxaNQ" type="4001"/>
-    <children xmi:type="notation:Node" xmi:id="_L_zPUS_wEeKR_6VT5PxaNQ" type="5001">
-      <children xmi:type="notation:Node" xmi:id="_XIDWIC_wEeKR_6VT5PxaNQ" type="2001">
+  <children xmi:type="notation:Node" xmi:id="_EtvgVDJIEeKo0Lyi_RqD5Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_EtvgVzJIEeKo0Lyi_RqD5Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_EtvgWDJIEeKo0Lyi_RqD5Q" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_EtwHZzJIEeKo0Lyi_RqD5Q" type="2001">
         <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//Direction/x"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_XIDWIS_wEeKR_6VT5PxaNQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EtwHaDJIEeKo0Lyi_RqD5Q"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_enDeUC_wEeKR_6VT5PxaNQ" type="2001">
+      <children xmi:type="notation:Node" xmi:id="_EtwHaTJIEeKo0Lyi_RqD5Q" type="2001">
         <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//Direction/y"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_enDeUS_wEeKR_6VT5PxaNQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EtwHajJIEeKo0Lyi_RqD5Q"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_fUyuEC_wEeKR_6VT5PxaNQ" type="2001">
+      <children xmi:type="notation:Node" xmi:id="_EtwHazJIEeKo0Lyi_RqD5Q" type="2001">
         <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//Direction/z"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_fUyuES_wEeKR_6VT5PxaNQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EtwHbDJIEeKo0Lyi_RqD5Q"/>
       </children>
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_L_zPUi_wEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_L_zPUy_wEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_L_zPVC_wEeKR_6VT5PxaNQ"/>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtwHYDJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtwHYTJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtwHYjJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_L_zPVS_wEeKR_6VT5PxaNQ" type="5002">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_L_zPVi_wEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:SortingStyle" xmi:id="_L_zPVy_wEeKR_6VT5PxaNQ"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_L_zPWC_wEeKR_6VT5PxaNQ"/>
+    <children xmi:type="notation:Node" xmi:id="_EtwHYzJIEeKo0Lyi_RqD5Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtwHZDJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtwHZTJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtwHZjJIEeKo0Lyi_RqD5Q"/>
     </children>
-    <styles xmi:type="notation:ShapeStyle" xmi:id="_L_yoQS_wEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_EtvgVTJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Pipes.ecore#//Direction"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L_yoQi_wEeKR_6VT5PxaNQ" x="45" y="414"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EtvgVjJIEeKo0Lyi_RqD5Q" x="588"/>
   </children>
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_I43QYS_sEeKR_6VT5PxaNQ"/>
+  <children xmi:type="notation:Node" xmi:id="_EtwucDJIEeKo0Lyi_RqD5Q" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_EtwuczJIEeKo0Lyi_RqD5Q" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_EtwudDJIEeKo0Lyi_RqD5Q" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtwudTJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtwudjJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtwudzJIEeKo0Lyi_RqD5Q"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_EtwueDJIEeKo0Lyi_RqD5Q" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_EtwueTJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_EtwuejJIEeKo0Lyi_RqD5Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_EtwuezJIEeKo0Lyi_RqD5Q"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_EtwucTJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="Pipes.ecore#//Product"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EtwucjJIEeKo0Lyi_RqD5Q" x="386" y="384"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_EtmWYTJIEeKo0Lyi_RqD5Q"/>
   <element xmi:type="ecore:EPackage" href="Pipes.ecore#/"/>
-  <edges xmi:type="notation:Edge" xmi:id="_c7X8cC_sEeKR_6VT5PxaNQ" type="3003" source="_X2o3QC_sEeKR_6VT5PxaNQ" target="_bpNJ8C_sEeKR_6VT5PxaNQ">
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_c7X8cS_sEeKR_6VT5PxaNQ" routing="Rectilinear" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_c7X8ci_sEeKR_6VT5PxaNQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Edge" xmi:id="_EtxVgDJIEeKo0Lyi_RqD5Q" type="3002" source="_EtoyoDJIEeKo0Lyi_RqD5Q" target="_EtqAyTJIEeKo0Lyi_RqD5Q">
+    <children xmi:type="notation:Node" xmi:id="_EtxVhDJIEeKo0Lyi_RqD5Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_EtxVhTJIEeKo0Lyi_RqD5Q" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_EtxVhjJIEeKo0Lyi_RqD5Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_EtxVhzJIEeKo0Lyi_RqD5Q" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_EtxVgTJIEeKo0Lyi_RqD5Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_EtxVgjJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Pipes.ecore#//Wall/openings"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EtxVgzJIEeKo0Lyi_RqD5Q" points="[0, 0, 52, 60]$[-52, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvnvoDJIEeKo0Lyi_RqD5Q" id="(0.16666666666666666,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvnvoTJIEeKo0Lyi_RqD5Q" id="(0.5980392156862745,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Etx8kDJIEeKo0Lyi_RqD5Q" type="3003" source="_EtoyoDJIEeKo0Lyi_RqD5Q" target="_EttrIjJIEeKo0Lyi_RqD5Q">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Etx8kTJIEeKo0Lyi_RqD5Q" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Etx8kjJIEeKo0Lyi_RqD5Q" fontName="Lucida Grande"/>
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_c7X8cy_sEeKR_6VT5PxaNQ" points="[12, -20, -55, 88]$[68, -114, 1, -6]"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_c7nNAC_sEeKR_6VT5PxaNQ" id="(0.4215686274509804,0.16666666666666666)"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Etx8kzJIEeKo0Lyi_RqD5Q" points="[0, 0, 0, 405]$[0, -405, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvqL4DJIEeKo0Lyi_RqD5Q" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvqL4TJIEeKo0Lyi_RqD5Q" id="(0.5,1.0)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_deeCcC_sEeKR_6VT5PxaNQ" type="3003" source="_Jx9bkC_sEeKR_6VT5PxaNQ" target="_bpNJ8C_sEeKR_6VT5PxaNQ">
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_deeCcS_sEeKR_6VT5PxaNQ" routing="Rectilinear" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_deeCci_sEeKR_6VT5PxaNQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Edge" xmi:id="_Etx8lDJIEeKo0Lyi_RqD5Q" type="3003" source="_EtoyoDJIEeKo0Lyi_RqD5Q" target="_EtwucDJIEeKo0Lyi_RqD5Q">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Etx8lTJIEeKo0Lyi_RqD5Q" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Etx8ljJIEeKo0Lyi_RqD5Q" fontName="Lucida Grande"/>
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_deeCcy_sEeKR_6VT5PxaNQ" points="[-16, -20, 64, 76]$[-80, -116, 0, -20]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Etx8lzJIEeKo0Lyi_RqD5Q" points="[0, 0, -72, 60]$[0, -30, -72, 30]$[72, -30, 0, 30]$[72, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvnIkjJIEeKo0Lyi_RqD5Q" id="(0.7450980392156863,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvnIkzJIEeKo0Lyi_RqD5Q" id="(0.5,1.0)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_eBR0kC_sEeKR_6VT5PxaNQ" type="3003" source="_PkCu8C_sEeKR_6VT5PxaNQ" target="_bpNJ8C_sEeKR_6VT5PxaNQ">
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_eBR0kS_sEeKR_6VT5PxaNQ" routing="Rectilinear" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_eBR0ki_sEeKR_6VT5PxaNQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Edge" xmi:id="_Etx8mDJIEeKo0Lyi_RqD5Q" type="3002" source="_EtpZuTJIEeKo0Lyi_RqD5Q" target="_EtqAyTJIEeKo0Lyi_RqD5Q">
+    <children xmi:type="notation:Node" xmi:id="_EtyjoDJIEeKo0Lyi_RqD5Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_EtyjoTJIEeKo0Lyi_RqD5Q" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_EtyjojJIEeKo0Lyi_RqD5Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_EtyjozJIEeKo0Lyi_RqD5Q" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Etx8mTJIEeKo0Lyi_RqD5Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Etx8mjJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Pipes.ecore#//Opening/walls"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Etx8mzJIEeKo0Lyi_RqD5Q" points="[0, 0, -46, 60]$[46, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvksUTJIEeKo0Lyi_RqD5Q" id="(0.39215686274509803,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvksUjJIEeKo0Lyi_RqD5Q" id="(0.19607843137254902,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_EtyjpDJIEeKo0Lyi_RqD5Q" type="3003" source="_EtpZuTJIEeKo0Lyi_RqD5Q" target="_EttrIjJIEeKo0Lyi_RqD5Q">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_EtyjpTJIEeKo0Lyi_RqD5Q" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_EtyjpjJIEeKo0Lyi_RqD5Q" fontName="Lucida Grande"/>
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_eBR0ky_sEeKR_6VT5PxaNQ" points="[-50, -16, 289, 90]$[-331, -86, 8, 20]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EtyjpzJIEeKo0Lyi_RqD5Q" points="[0, 0, -139, 405]$[0, -375, -139, 30]$[139, -375, 0, 30]$[139, -405, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evpk0DJIEeKo0Lyi_RqD5Q" id="(0.19607843137254902,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evpk0TJIEeKo0Lyi_RqD5Q" id="(0.08461538461538462,1.0)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_fR-ncC_sEeKR_6VT5PxaNQ" type="3003" source="_T5HRwC_sEeKR_6VT5PxaNQ" target="_bpNJ8C_sEeKR_6VT5PxaNQ">
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_fR-ncS_sEeKR_6VT5PxaNQ" routing="Rectilinear" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_fR-nci_sEeKR_6VT5PxaNQ" fontName="Lucida Grande"/>
+  <edges xmi:type="notation:Edge" xmi:id="_EtyjqDJIEeKo0Lyi_RqD5Q" type="3003" source="_EtpZuTJIEeKo0Lyi_RqD5Q" target="_EtwucDJIEeKo0Lyi_RqD5Q">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_EtyjqTJIEeKo0Lyi_RqD5Q" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_EtyjqjJIEeKo0Lyi_RqD5Q" fontName="Lucida Grande"/>
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fR-ncy_sEeKR_6VT5PxaNQ" points="[5, -20, -41, 191]$[96, -220, 50, -9]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EtyjqzJIEeKo0Lyi_RqD5Q" points="[0, 0, -203, 60]$[0, -30, -203, 30]$[203, -30, 0, 30]$[203, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvkFQTJIEeKo0Lyi_RqD5Q" id="(0.7941176470588235,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvksUDJIEeKo0Lyi_RqD5Q" id="(0.24509803921568626,1.0)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_fzxs8C_sEeKR_6VT5PxaNQ" type="3003" source="_QiLLIC_sEeKR_6VT5PxaNQ" target="_bpNJ8C_sEeKR_6VT5PxaNQ">
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_fzxs8S_sEeKR_6VT5PxaNQ" routing="Rectilinear" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_fzxs8i_sEeKR_6VT5PxaNQ" fontName="Lucida Grande"/>
-    <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fzxs8y_sEeKR_6VT5PxaNQ" points="[-8, -14, 125, 215]$[-127, -249, 6, -20]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fzziIC_sEeKR_6VT5PxaNQ" id="(0.20588235294117646,0.35714285714285715)"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_gULEQC_sEeKR_6VT5PxaNQ" type="3003" source="_ZWqfkC_sEeKR_6VT5PxaNQ" target="_bpNJ8C_sEeKR_6VT5PxaNQ">
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_gULEQS_sEeKR_6VT5PxaNQ" routing="Rectilinear" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_gULEQi_sEeKR_6VT5PxaNQ" fontName="Lucida Grande"/>
-    <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gULEQy_sEeKR_6VT5PxaNQ" points="[-55, 3, 232, 1]$[-285, -13, 2, -15]"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gUM5cC_sEeKR_6VT5PxaNQ" id="(0.7843137254901961,0.38095238095238093)"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_16UGQC_sEeKR_6VT5PxaNQ" type="3002" source="_X2o3QC_sEeKR_6VT5PxaNQ" target="_ZWqfkC_sEeKR_6VT5PxaNQ">
-    <children xmi:type="notation:Node" xmi:id="_16UtUC_sEeKR_6VT5PxaNQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_16UtUS_sEeKR_6VT5PxaNQ" x="-10" y="-10"/>
+  <edges xmi:type="notation:Edge" xmi:id="_EtzKsDJIEeKo0Lyi_RqD5Q" type="3002" source="_EtqAyTJIEeKo0Lyi_RqD5Q" target="_EtoyoDJIEeKo0Lyi_RqD5Q">
+    <children xmi:type="notation:Node" xmi:id="_EtzKtDJIEeKo0Lyi_RqD5Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_EtzKtTJIEeKo0Lyi_RqD5Q" x="-10" y="-10"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_16UtUi_sEeKR_6VT5PxaNQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_16UtUy_sEeKR_6VT5PxaNQ" x="10" y="10"/>
+    <children xmi:type="notation:Node" xmi:id="_EtzKtjJIEeKo0Lyi_RqD5Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_EtzKtzJIEeKo0Lyi_RqD5Q" x="10" y="10"/>
     </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_16UGQS_sEeKR_6VT5PxaNQ" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_16UGQi_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="Pipes.ecore#//LocalPlacement/axis2placement3d"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_16UGQy_sEeKR_6VT5PxaNQ" points="[50, -14, -340, 87]$[391, -121, 1, -20]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_6iAqIC_sEeKR_6VT5PxaNQ" type="3002" source="_PkCu8C_sEeKR_6VT5PxaNQ" target="_X2o3QC_sEeKR_6VT5PxaNQ">
-    <children xmi:type="notation:Node" xmi:id="_6iAqJC_sEeKR_6VT5PxaNQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_6iAqJS_sEeKR_6VT5PxaNQ" x="-10" y="-10"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_6iAqJi_sEeKR_6VT5PxaNQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_6iAqJy_sEeKR_6VT5PxaNQ" x="10" y="10"/>
-    </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_6iAqIS_sEeKR_6VT5PxaNQ" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_6iAqIi_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="Pipes.ecore#//Opening/placement"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6iAqIy_sEeKR_6VT5PxaNQ" points="[-50, -2, 337, 12]$[-385, -32, 2, -18]"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6iCfUC_sEeKR_6VT5PxaNQ" id="(0.7745098039215687,0.4523809523809524)"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_7gGqEC_sEeKR_6VT5PxaNQ" type="3002" source="_X2o3QC_sEeKR_6VT5PxaNQ" target="_X2o3QC_sEeKR_6VT5PxaNQ">
-    <children xmi:type="notation:Node" xmi:id="_7gHRIC_sEeKR_6VT5PxaNQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_7gHRIS_sEeKR_6VT5PxaNQ" x="-10" y="-10"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_7gHRIi_sEeKR_6VT5PxaNQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_7gHRIy_sEeKR_6VT5PxaNQ" x="10" y="10"/>
-    </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_7gGqES_sEeKR_6VT5PxaNQ" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_7gGqEi_sEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="Pipes.ecore#//LocalPlacement/relativeTo"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7gGqEy_sEeKR_6VT5PxaNQ" points="[50, 9, 50, 9]$[50, 9, 50, 9]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_my4-sC_tEeKR_6VT5PxaNQ" type="3002" source="_lyobkC_tEeKR_6VT5PxaNQ" target="_bpNJ8C_sEeKR_6VT5PxaNQ">
-    <children xmi:type="notation:Node" xmi:id="_my4-tC_tEeKR_6VT5PxaNQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_my4-tS_tEeKR_6VT5PxaNQ" x="-10" y="-10"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_my4-ti_tEeKR_6VT5PxaNQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_my4-ty_tEeKR_6VT5PxaNQ" x="10" y="10"/>
-    </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_my4-sS_tEeKR_6VT5PxaNQ" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_my4-si_tEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="Pipes.ecore#//Model/elements"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_my4-sy_tEeKR_6VT5PxaNQ" points="[-50, -9, 399, -8]$[-445, -40, 4, -39]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_CmnkUC_uEeKR_6VT5PxaNQ" type="3002" source="_Jx9bkC_sEeKR_6VT5PxaNQ" target="_X2o3QC_sEeKR_6VT5PxaNQ">
-    <children xmi:type="notation:Node" xmi:id="_CmoLYC_uEeKR_6VT5PxaNQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_CmoLYS_uEeKR_6VT5PxaNQ" x="-10" y="-10"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_CmoLYi_uEeKR_6VT5PxaNQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_CmoLYy_uEeKR_6VT5PxaNQ" x="10" y="10"/>
-    </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_CmnkUS_uEeKR_6VT5PxaNQ" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_CmnkUi_uEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="Pipes.ecore#//Wall/placement"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CmnkUy_uEeKR_6VT5PxaNQ" points="[-50, -2, 310, 7]$[-310, -11, 50, -2]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_WMfXsC_uEeKR_6VT5PxaNQ" type="3002" source="_QiLLIC_sEeKR_6VT5PxaNQ" target="_Jx9bkC_sEeKR_6VT5PxaNQ">
-    <children xmi:type="notation:Node" xmi:id="_WMf-wC_uEeKR_6VT5PxaNQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_WMf-wS_uEeKR_6VT5PxaNQ" x="-10" y="-10"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_WMf-wi_uEeKR_6VT5PxaNQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_WMf-wy_uEeKR_6VT5PxaNQ" x="10" y="10"/>
-    </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_WMfXsS_uEeKR_6VT5PxaNQ" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_WMfXsi_uEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_EtzKsTJIEeKo0Lyi_RqD5Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_EtzKsjJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="Pipes.ecore#//WallRelation/wall"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WMfXsy_uEeKR_6VT5PxaNQ" points="[-50, 10, 130, -35]$[-130, 36, 50, -9]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EtzKszJIEeKo0Lyi_RqD5Q" points="[0, 0, -49, -60]$[49, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EviQEjJIEeKo0Lyi_RqD5Q" id="(0.7941176470588235,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evi3IDJIEeKo0Lyi_RqD5Q" id="(0.3333333333333333,0.0)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_XQM3cC_uEeKR_6VT5PxaNQ" type="3002" source="_QiLLIC_sEeKR_6VT5PxaNQ" target="_PkCu8C_sEeKR_6VT5PxaNQ">
-    <children xmi:type="notation:Node" xmi:id="_XQNegC_uEeKR_6VT5PxaNQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_XQNegS_uEeKR_6VT5PxaNQ" x="-10" y="-10"/>
+  <edges xmi:type="notation:Edge" xmi:id="_EtzKuDJIEeKo0Lyi_RqD5Q" type="3002" source="_EtqAyTJIEeKo0Lyi_RqD5Q" target="_EtpZuTJIEeKo0Lyi_RqD5Q">
+    <children xmi:type="notation:Node" xmi:id="_EtzxwDJIEeKo0Lyi_RqD5Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_EtzxwTJIEeKo0Lyi_RqD5Q" x="-10" y="-10"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_XQNegi_uEeKR_6VT5PxaNQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_XQNegy_uEeKR_6VT5PxaNQ" x="10" y="10"/>
+    <children xmi:type="notation:Node" xmi:id="_EtzxwjJIEeKo0Lyi_RqD5Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_EtzxwzJIEeKo0Lyi_RqD5Q" x="10" y="10"/>
     </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_XQM3cS_uEeKR_6VT5PxaNQ" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_XQM3ci_uEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_EtzKuTJIEeKo0Lyi_RqD5Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_EtzKujJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="Pipes.ecore#//WallRelation/opening"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XQM3cy_uEeKR_6VT5PxaNQ" points="[-8, -20, 10, 70]$[-68, -97, -50, -7]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EtzKuzJIEeKo0Lyi_RqD5Q" points="[0, 0, 45, -60]$[-45, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EviQEDJIEeKo0Lyi_RqD5Q" id="(0.39215686274509803,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EviQETJIEeKo0Lyi_RqD5Q" id="(0.5980392156862745,0.0)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_omkGUC_uEeKR_6VT5PxaNQ" type="3002" source="_T5HRwC_sEeKR_6VT5PxaNQ" target="_X2o3QC_sEeKR_6VT5PxaNQ">
-    <children xmi:type="notation:Node" xmi:id="_omkGVC_uEeKR_6VT5PxaNQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_omkGVS_uEeKR_6VT5PxaNQ" x="-10" y="-10"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_omktYC_uEeKR_6VT5PxaNQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_omktYS_uEeKR_6VT5PxaNQ" x="10" y="10"/>
-    </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_omkGUS_uEeKR_6VT5PxaNQ" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_omkGUi_uEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
-    <element xmi:type="ecore:EReference" href="Pipes.ecore#//FlowSegment/placement"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_omkGUy_uEeKR_6VT5PxaNQ" points="[-8, 9, 39, -63]$[-97, 70, -50, -2]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ommikC_uEeKR_6VT5PxaNQ" id="(0.3431372549019608,0.8163265306122449)"/>
+  <edges xmi:type="notation:Edge" xmi:id="_EtzxxDJIEeKo0Lyi_RqD5Q" type="3003" source="_EtqAyTJIEeKo0Lyi_RqD5Q" target="_EttrIjJIEeKo0Lyi_RqD5Q">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_EtzxxTJIEeKo0Lyi_RqD5Q" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_EtzxxjJIEeKo0Lyi_RqD5Q" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EtzxxzJIEeKo0Lyi_RqD5Q" points="[0, 0, -48, 303]$[0, -30, -48, 273]$[48, -30, 0, 273]$[48, -303, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evo9wDJIEeKo0Lyi_RqD5Q" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evo9wTJIEeKo0Lyi_RqD5Q" id="(0.13076923076923078,1.0)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_NACkUC_wEeKR_6VT5PxaNQ" type="3002" source="_ZWqfkC_sEeKR_6VT5PxaNQ" target="_L_yoQC_wEeKR_6VT5PxaNQ">
-    <children xmi:type="notation:Node" xmi:id="_NACkVC_wEeKR_6VT5PxaNQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_NACkVS_wEeKR_6VT5PxaNQ" x="-10" y="-10"/>
+  <edges xmi:type="notation:Edge" xmi:id="_EtzxyDJIEeKo0Lyi_RqD5Q" type="3003" source="_EtrO4DJIEeKo0Lyi_RqD5Q" target="_EttrIjJIEeKo0Lyi_RqD5Q">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_EtzxyTJIEeKo0Lyi_RqD5Q" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_EtzxyjJIEeKo0Lyi_RqD5Q" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EtzxyzJIEeKo0Lyi_RqD5Q" points="[0, 0, 140, 405]$[0, -375, 140, 30]$[-140, -375, 0, 30]$[-140, -405, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evpk0jJIEeKo0Lyi_RqD5Q" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evpk0zJIEeKo0Lyi_RqD5Q" id="(0.9076923076923077,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Et0Y0DJIEeKo0Lyi_RqD5Q" type="3003" source="_EtrO4DJIEeKo0Lyi_RqD5Q" target="_EtwucDJIEeKo0Lyi_RqD5Q">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Et0Y0TJIEeKo0Lyi_RqD5Q" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Et0Y0jJIEeKo0Lyi_RqD5Q" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Et0Y0zJIEeKo0Lyi_RqD5Q" points="[0, 0, 45, 60]$[0, -30, 45, 30]$[-45, -30, 0, 30]$[-45, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvnIkDJIEeKo0Lyi_RqD5Q" id="(0.24509803921568626,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvnIkTJIEeKo0Lyi_RqD5Q" id="(0.7450980392156863,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Et0Y1DJIEeKo0Lyi_RqD5Q" type="3002" source="_Etr18zJIEeKo0Lyi_RqD5Q" target="_EtsdCDJIEeKo0Lyi_RqD5Q">
+    <children xmi:type="notation:Node" xmi:id="_Et0_4DJIEeKo0Lyi_RqD5Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et0_4TJIEeKo0Lyi_RqD5Q" x="-10" y="-10"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_NACkVi_wEeKR_6VT5PxaNQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_NACkVy_wEeKR_6VT5PxaNQ" x="10" y="10"/>
+    <children xmi:type="notation:Node" xmi:id="_Et0_4jJIEeKo0Lyi_RqD5Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et0_4zJIEeKo0Lyi_RqD5Q" x="10" y="10"/>
     </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_NACkUS_wEeKR_6VT5PxaNQ" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_NACkUi_wEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Et0Y1TJIEeKo0Lyi_RqD5Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Et0Y1jJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Pipes.ecore#//LocalPlacement/axis2placement3d"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Et0Y1zJIEeKo0Lyi_RqD5Q" points="[0, 0, -185, 60]$[185, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvoWsDJIEeKo0Lyi_RqD5Q" id="(0.6666666666666666,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvoWsTJIEeKo0Lyi_RqD5Q" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Et0_5DJIEeKo0Lyi_RqD5Q" type="3002" source="_Etr18zJIEeKo0Lyi_RqD5Q" target="_Etr18zJIEeKo0Lyi_RqD5Q">
+    <children xmi:type="notation:Node" xmi:id="_Et0_6DJIEeKo0Lyi_RqD5Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et0_6TJIEeKo0Lyi_RqD5Q" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Et0_6jJIEeKo0Lyi_RqD5Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et0_6zJIEeKo0Lyi_RqD5Q" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Et0_5TJIEeKo0Lyi_RqD5Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Et0_5jJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Pipes.ecore#//LocalPlacement/relativeTo"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Et0_5zJIEeKo0Lyi_RqD5Q" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Et0_7DJIEeKo0Lyi_RqD5Q" type="3003" source="_Etr18zJIEeKo0Lyi_RqD5Q" target="_EttrIjJIEeKo0Lyi_RqD5Q">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Et0_7TJIEeKo0Lyi_RqD5Q" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Et0_7jJIEeKo0Lyi_RqD5Q" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Et1m8DJIEeKo0Lyi_RqD5Q" points="[0, 0, 32, 201]$[0, -30, 32, 171]$[-32, -30, 0, 171]$[-32, -201, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvqL4jJIEeKo0Lyi_RqD5Q" id="(0.3333333333333333,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evqy8DJIEeKo0Lyi_RqD5Q" id="(0.8692307692307693,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Et1m8TJIEeKo0Lyi_RqD5Q" type="3002" source="_EtsdCDJIEeKo0Lyi_RqD5Q" target="_EtvgVDJIEeKo0Lyi_RqD5Q">
+    <children xmi:type="notation:Node" xmi:id="_Et1m9TJIEeKo0Lyi_RqD5Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et1m9jJIEeKo0Lyi_RqD5Q" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Et1m9zJIEeKo0Lyi_RqD5Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et1m-DJIEeKo0Lyi_RqD5Q" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Et1m8jJIEeKo0Lyi_RqD5Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Et1m8zJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="Pipes.ecore#//Axis2Placement3D/axis"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NACkUy_wEeKR_6VT5PxaNQ" points="[1, 40, -23, -86]$[-26, 118, -50, -8]"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mNRBwC_wEeKR_6VT5PxaNQ" id="(0.8921568627450981,0.04938271604938271)"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Et1m9DJIEeKo0Lyi_RqD5Q" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evl6cDJIEeKo0Lyi_RqD5Q" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evl6cTJIEeKo0Lyi_RqD5Q" id="(0.5,1.0)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_SZG6wC_wEeKR_6VT5PxaNQ" type="3002" source="_ZWqfkC_sEeKR_6VT5PxaNQ" target="_L_yoQC_wEeKR_6VT5PxaNQ">
-    <children xmi:type="notation:Node" xmi:id="_SZHh0C_wEeKR_6VT5PxaNQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_SZHh0S_wEeKR_6VT5PxaNQ" x="-10" y="-10"/>
+  <edges xmi:type="notation:Edge" xmi:id="_Et2OADJIEeKo0Lyi_RqD5Q" type="3002" source="_EtsdCDJIEeKo0Lyi_RqD5Q" target="_EtvgVDJIEeKo0Lyi_RqD5Q">
+    <children xmi:type="notation:Node" xmi:id="_Et2OBDJIEeKo0Lyi_RqD5Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et2OBTJIEeKo0Lyi_RqD5Q" x="-10" y="-10"/>
     </children>
-    <children xmi:type="notation:Node" xmi:id="_SZHh0i_wEeKR_6VT5PxaNQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_SZHh0y_wEeKR_6VT5PxaNQ" x="10" y="10"/>
+    <children xmi:type="notation:Node" xmi:id="_Et2OBjJIEeKo0Lyi_RqD5Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et2OBzJIEeKo0Lyi_RqD5Q" x="10" y="10"/>
     </children>
-    <styles xmi:type="notation:ConnectorStyle" xmi:id="_SZG6wS_wEeKR_6VT5PxaNQ" lineColor="4210752"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_SZG6wi_wEeKR_6VT5PxaNQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Et2OATJIEeKo0Lyi_RqD5Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Et2OAjJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="Pipes.ecore#//Axis2Placement3D/refDirection"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SZG6wy_wEeKR_6VT5PxaNQ" points="[-6, 40, 1, -92]$[-6, 146, 1, 14]"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SZJXAC_wEeKR_6VT5PxaNQ" id="(0.19607843137254902,0.6666666666666666)"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Et2OAzJIEeKo0Lyi_RqD5Q" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvmhgDJIEeKo0Lyi_RqD5Q" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvmhgTJIEeKo0Lyi_RqD5Q" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Et2OCDJIEeKo0Lyi_RqD5Q" type="3003" source="_EtsdCDJIEeKo0Lyi_RqD5Q" target="_EttrIjJIEeKo0Lyi_RqD5Q">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Et2OCTJIEeKo0Lyi_RqD5Q" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Et2OCjJIEeKo0Lyi_RqD5Q" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Et2OCzJIEeKo0Lyi_RqD5Q" points="[0, 0, 210, 60]$[0, -30, 210, 30]$[-210, -30, 0, 30]$[-210, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvlTYDJIEeKo0Lyi_RqD5Q" id="(0.25,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvlTYTJIEeKo0Lyi_RqD5Q" id="(0.9538461538461539,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Et2ODDJIEeKo0Lyi_RqD5Q" type="3002" source="_Etu5QjJIEeKo0Lyi_RqD5Q" target="_EttrIjJIEeKo0Lyi_RqD5Q">
+    <children xmi:type="notation:Node" xmi:id="_Et21EjJIEeKo0Lyi_RqD5Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et21EzJIEeKo0Lyi_RqD5Q" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Et21FDJIEeKo0Lyi_RqD5Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et21FTJIEeKo0Lyi_RqD5Q" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Et2ODTJIEeKo0Lyi_RqD5Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Et21EDJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Pipes.ecore#//Model/elements"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Et21ETJIEeKo0Lyi_RqD5Q" points="[0, 0, -229, 60]$[229, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvjeMTJIEeKo0Lyi_RqD5Q" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvkFQDJIEeKo0Lyi_RqD5Q" id="(0.038461538461538464,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Et21FjJIEeKo0Lyi_RqD5Q" type="3002" source="_EtwucDJIEeKo0Lyi_RqD5Q" target="_Etr18zJIEeKo0Lyi_RqD5Q">
+    <children xmi:type="notation:Node" xmi:id="_Et21GjJIEeKo0Lyi_RqD5Q" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et21GzJIEeKo0Lyi_RqD5Q" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Et3cIDJIEeKo0Lyi_RqD5Q" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Et3cITJIEeKo0Lyi_RqD5Q" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Et21FzJIEeKo0Lyi_RqD5Q" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Et21GDJIEeKo0Lyi_RqD5Q" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Pipes.ecore#//Product/placement"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Et21GTJIEeKo0Lyi_RqD5Q" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Evi3ITJIEeKo0Lyi_RqD5Q" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EvjeMDJIEeKo0Lyi_RqD5Q" id="(0.5,1.0)"/>
   </edges>
 </notation:Diagram>

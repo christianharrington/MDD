@@ -14,7 +14,7 @@ class Model2IFCWriter extends WorkflowComponentWithSlot {
 	def setPath(String path) { this.path = path }
 	
 	override invoke(IWorkflowContext ctx) {
-		var IfcModel model = ctx.get(getSlot()) as IfcModel
+		var IfcModel model = ctx.get(mainModelSlot) as IfcModel
 	    IfcWriter::SaveModel(model)
 	}
 	

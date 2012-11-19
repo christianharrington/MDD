@@ -4,11 +4,18 @@ import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowComponent
 
 abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	
-	var String slot
+	var String pipesOpeningsSlot //Pipes DSL object graph
+	var String mainModelSlot //IFC main model object graph
+	var String extractModelSlot //IFC extracted model object graph 
 	
-	def getSlot() { slot }
+	def getPipesOpeningsSlot() { pipesOpeningsSlot }
+	def setPipesOpeningsSlot(String slot) { this.pipesOpeningsSlot = slot  }
+
+	def getMainModelSlot() { mainModelSlot }
+	def setMainModelSlot(String slot) { this.mainModelSlot = slot}	
 	
-	def setSlot(String slot) { this.slot = slot  }
+	def getExtractModelSlot() { extractModelSlot }
+	def setExtractModelSlot(String slot) { this.extractModelSlot = slot}	
 	
 	
 	override postInvoke() {	}

@@ -31,7 +31,7 @@ class PipesXMI2ModelReader extends WorkflowComponentWithSlot {
 
     	var Resource resource = resSet.getResource(URI::createURI(path), true)
     	
-    	ctx.put(getSlot(), resource.contents.get(0) as Model)
+    	ctx.put(pipesOpeningsSlot, resource.contents.get(0) as Model)
 	}
 	
 }
