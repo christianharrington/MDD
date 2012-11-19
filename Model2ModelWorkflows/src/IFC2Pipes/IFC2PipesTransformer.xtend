@@ -47,7 +47,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
 
 	override invoke(IWorkflowContext ctx) {
-		val IfcModel ifcmodel = ctx.get(getSlot()) as IfcModel
+		val IfcModel ifcmodel = ctx.get(extractModelSlot) as IfcModel
 		
 		pipesFactory = new PipesFactoryImpl()
 		val pipesModel = pipesFactory.createModel()
@@ -58,7 +58,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 			addOpening(pipesModel, it)
 		]
 		
-		ctx.put(getSlot(), pipesModel)
+		ctx.put(pipesOpeningsSlot, pipesModel)
 		
 	}
 	

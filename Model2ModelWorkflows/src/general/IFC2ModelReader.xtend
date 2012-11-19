@@ -10,7 +10,7 @@ class IFC2ModelReader extends WorkflowComponentWithSlot {
 	String schema
 	
 	override invoke(IWorkflowContext ctx) {
-		ctx.put(getSlot(), IfcReader::ReadModel(getFile(), getSchema()))		
+		ctx.put(mainModelSlot, IfcReader::ReadModel(getFile(), getSchema()))		
 	}
 	
 	def getFile() { file }	

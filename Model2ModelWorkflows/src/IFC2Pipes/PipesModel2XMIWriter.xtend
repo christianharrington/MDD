@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import pipes.Model
 
-class Model2XMIWriter extends WorkflowComponentWithSlot {
+class PipesModel2XMIWriter extends WorkflowComponentWithSlot {
 	
 	String path
 	
@@ -33,7 +33,7 @@ class Model2XMIWriter extends WorkflowComponentWithSlot {
 	}
 	
 	override invoke(IWorkflowContext ctx) {	
-		var targetModel = ctx.get(getSlot()) as Model
+		var targetModel = ctx.get(pipesOpeningsSlot) as Model
 		
 		var Registry reg = Registry::INSTANCE;
 	    var Map<String, Object> m = reg.getExtensionToFactoryMap();
