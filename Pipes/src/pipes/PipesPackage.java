@@ -139,22 +139,22 @@ public interface PipesPackage extends EPackage {
 	int WALL__DESCRIPTION = GUID_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Openings</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__OPENINGS = GUID_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Placement</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WALL__PLACEMENT = GUID_ELEMENT_FEATURE_COUNT + 1;
+	int WALL__PLACEMENT = GUID_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Openings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALL__OPENINGS = GUID_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Wall</em>' class.
@@ -203,7 +203,7 @@ public interface PipesPackage extends EPackage {
 	int OPENING__DESCRIPTION = GUID_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Placement</b></em>' containment reference.
+	 * The feature id for the '<em><b>Placement</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -579,6 +579,35 @@ public interface PipesPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link pipes.impl.ProductImpl <em>Product</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pipes.impl.ProductImpl
+	 * @see pipes.impl.PipesPackageImpl#getProduct()
+	 * @generated
+	 */
+	int PRODUCT = 9;
+
+	/**
+	 * The feature id for the '<em><b>Placement</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__PLACEMENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Product</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_FEATURE_COUNT = 1;
+
+
+	/**
 	 * Returns the meta object for class '{@link pipes.Wall <em>Wall</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -600,17 +629,6 @@ public interface PipesPackage extends EPackage {
 	EReference getWall_Openings();
 
 	/**
-	 * Returns the meta object for the reference '{@link pipes.Wall#getPlacement <em>Placement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Placement</em>'.
-	 * @see pipes.Wall#getPlacement()
-	 * @see #getWall()
-	 * @generated
-	 */
-	EReference getWall_Placement();
-
-	/**
 	 * Returns the meta object for class '{@link pipes.Opening <em>Opening</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -619,17 +637,6 @@ public interface PipesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getOpening();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link pipes.Opening#getPlacement <em>Placement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Placement</em>'.
-	 * @see pipes.Opening#getPlacement()
-	 * @see #getOpening()
-	 * @generated
-	 */
-	EReference getOpening_Placement();
 
 	/**
 	 * Returns the meta object for the reference list '{@link pipes.Opening#getWalls <em>Walls</em>}'.
@@ -683,17 +690,6 @@ public interface PipesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFlowSegment();
-
-	/**
-	 * Returns the meta object for the reference '{@link pipes.FlowSegment#getPlacement <em>Placement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Placement</em>'.
-	 * @see pipes.FlowSegment#getPlacement()
-	 * @see #getFlowSegment()
-	 * @generated
-	 */
-	EReference getFlowSegment_Placement();
 
 	/**
 	 * Returns the meta object for class '{@link pipes.LocalPlacement <em>Local Placement</em>}'.
@@ -900,6 +896,27 @@ public interface PipesPackage extends EPackage {
 	EAttribute getDirection_Z();
 
 	/**
+	 * Returns the meta object for class '{@link pipes.Product <em>Product</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Product</em>'.
+	 * @see pipes.Product
+	 * @generated
+	 */
+	EClass getProduct();
+
+	/**
+	 * Returns the meta object for the reference '{@link pipes.Product#getPlacement <em>Placement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Placement</em>'.
+	 * @see pipes.Product#getPlacement()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EReference getProduct_Placement();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -940,14 +957,6 @@ public interface PipesPackage extends EPackage {
 		EReference WALL__OPENINGS = eINSTANCE.getWall_Openings();
 
 		/**
-		 * The meta object literal for the '<em><b>Placement</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WALL__PLACEMENT = eINSTANCE.getWall_Placement();
-
-		/**
 		 * The meta object literal for the '{@link pipes.impl.OpeningImpl <em>Opening</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -956,14 +965,6 @@ public interface PipesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OPENING = eINSTANCE.getOpening();
-
-		/**
-		 * The meta object literal for the '<em><b>Placement</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OPENING__PLACEMENT = eINSTANCE.getOpening_Placement();
 
 		/**
 		 * The meta object literal for the '<em><b>Walls</b></em>' reference list feature.
@@ -1008,14 +1009,6 @@ public interface PipesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FLOW_SEGMENT = eINSTANCE.getFlowSegment();
-
-		/**
-		 * The meta object literal for the '<em><b>Placement</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FLOW_SEGMENT__PLACEMENT = eINSTANCE.getFlowSegment_Placement();
 
 		/**
 		 * The meta object literal for the '{@link pipes.impl.LocalPlacementImpl <em>Local Placement</em>}' class.
@@ -1178,6 +1171,24 @@ public interface PipesPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DIRECTION__Z = eINSTANCE.getDirection_Z();
+
+		/**
+		 * The meta object literal for the '{@link pipes.impl.ProductImpl <em>Product</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pipes.impl.ProductImpl
+		 * @see pipes.impl.PipesPackageImpl#getProduct()
+		 * @generated
+		 */
+		EClass PRODUCT = eINSTANCE.getProduct();
+
+		/**
+		 * The meta object literal for the '<em><b>Placement</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT__PLACEMENT = eINSTANCE.getProduct_Placement();
 
 	}
 

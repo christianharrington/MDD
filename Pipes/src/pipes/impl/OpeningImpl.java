@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import pipes.LocalPlacement;
 import pipes.Opening;
 import pipes.PipesPackage;
+import pipes.Product;
 import pipes.WallRelation;
 
 /**
@@ -37,7 +38,7 @@ import pipes.WallRelation;
  */
 public class OpeningImpl extends GUIDElementImpl implements Opening {
 	/**
-	 * The cached value of the '{@link #getPlacement() <em>Placement</em>}' containment reference.
+	 * The cached value of the '{@link #getPlacement() <em>Placement</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPlacement()
@@ -81,6 +82,14 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 	 * @generated
 	 */
 	public LocalPlacement getPlacement() {
+		if (placement != null && placement.eIsProxy()) {
+			InternalEObject oldPlacement = (InternalEObject)placement;
+			placement = (LocalPlacement)eResolveProxy(oldPlacement);
+			if (placement != oldPlacement) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PipesPackage.OPENING__PLACEMENT, oldPlacement, placement));
+			}
+		}
 		return placement;
 	}
 
@@ -89,14 +98,8 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPlacement(LocalPlacement newPlacement, NotificationChain msgs) {
-		LocalPlacement oldPlacement = placement;
-		placement = newPlacement;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PipesPackage.OPENING__PLACEMENT, oldPlacement, newPlacement);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public LocalPlacement basicGetPlacement() {
+		return placement;
 	}
 
 	/**
@@ -105,17 +108,10 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 	 * @generated
 	 */
 	public void setPlacement(LocalPlacement newPlacement) {
-		if (newPlacement != placement) {
-			NotificationChain msgs = null;
-			if (placement != null)
-				msgs = ((InternalEObject)placement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PipesPackage.OPENING__PLACEMENT, null, msgs);
-			if (newPlacement != null)
-				msgs = ((InternalEObject)newPlacement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PipesPackage.OPENING__PLACEMENT, null, msgs);
-			msgs = basicSetPlacement(newPlacement, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.OPENING__PLACEMENT, newPlacement, newPlacement));
+		LocalPlacement oldPlacement = placement;
+		placement = newPlacement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.OPENING__PLACEMENT, oldPlacement, placement));
 	}
 
 	/**
@@ -136,24 +132,11 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case PipesPackage.OPENING__PLACEMENT:
-				return basicSetPlacement(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case PipesPackage.OPENING__PLACEMENT:
-				return getPlacement();
+				if (resolve) return getPlacement();
+				return basicGetPlacement();
 			case PipesPackage.OPENING__WALLS:
 				return getWalls();
 		}
@@ -212,6 +195,38 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 				return walls != null && !walls.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Product.class) {
+			switch (derivedFeatureID) {
+				case PipesPackage.OPENING__PLACEMENT: return PipesPackage.PRODUCT__PLACEMENT;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Product.class) {
+			switch (baseFeatureID) {
+				case PipesPackage.PRODUCT__PLACEMENT: return PipesPackage.OPENING__PLACEMENT;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //OpeningImpl

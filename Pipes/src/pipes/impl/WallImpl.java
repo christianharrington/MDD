@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import pipes.LocalPlacement;
 import pipes.PipesPackage;
+import pipes.Product;
 import pipes.Wall;
 import pipes.WallRelation;
 
@@ -27,24 +28,14 @@ import pipes.WallRelation;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link pipes.impl.WallImpl#getOpenings <em>Openings</em>}</li>
  *   <li>{@link pipes.impl.WallImpl#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link pipes.impl.WallImpl#getOpenings <em>Openings</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class WallImpl extends GUIDElementImpl implements Wall {
-	/**
-	 * The cached value of the '{@link #getOpenings() <em>Openings</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOpenings()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<WallRelation> openings;
-
 	/**
 	 * The cached value of the '{@link #getPlacement() <em>Placement</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -54,6 +45,16 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	 * @ordered
 	 */
 	protected LocalPlacement placement;
+
+	/**
+	 * The cached value of the '{@link #getOpenings() <em>Openings</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOpenings()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<WallRelation> openings;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,11 +133,11 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PipesPackage.WALL__OPENINGS:
-				return getOpenings();
 			case PipesPackage.WALL__PLACEMENT:
 				if (resolve) return getPlacement();
 				return basicGetPlacement();
+			case PipesPackage.WALL__OPENINGS:
+				return getOpenings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -150,12 +151,12 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case PipesPackage.WALL__PLACEMENT:
+				setPlacement((LocalPlacement)newValue);
+				return;
 			case PipesPackage.WALL__OPENINGS:
 				getOpenings().clear();
 				getOpenings().addAll((Collection<? extends WallRelation>)newValue);
-				return;
-			case PipesPackage.WALL__PLACEMENT:
-				setPlacement((LocalPlacement)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -169,11 +170,11 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PipesPackage.WALL__OPENINGS:
-				getOpenings().clear();
-				return;
 			case PipesPackage.WALL__PLACEMENT:
 				setPlacement((LocalPlacement)null);
+				return;
+			case PipesPackage.WALL__OPENINGS:
+				getOpenings().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -187,12 +188,44 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PipesPackage.WALL__OPENINGS:
-				return openings != null && !openings.isEmpty();
 			case PipesPackage.WALL__PLACEMENT:
 				return placement != null;
+			case PipesPackage.WALL__OPENINGS:
+				return openings != null && !openings.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Product.class) {
+			switch (derivedFeatureID) {
+				case PipesPackage.WALL__PLACEMENT: return PipesPackage.PRODUCT__PLACEMENT;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Product.class) {
+			switch (baseFeatureID) {
+				case PipesPackage.PRODUCT__PLACEMENT: return PipesPackage.WALL__PLACEMENT;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //WallImpl

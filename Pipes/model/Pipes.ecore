@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pipes" nsURI="/Pipes/model/Pipes.ecore" nsPrefix="pipes">
-  <eClassifiers xsi:type="ecore:EClass" name="Wall" eSuperTypes="#//GUIDElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Wall" eSuperTypes="#//GUIDElement #//Product">
     <eStructuralFeatures xsi:type="ecore:EReference" name="openings" upperBound="-1"
         eType="#//WallRelation"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="placement" eType="#//LocalPlacement"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Opening" eSuperTypes="#//GUIDElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="placement" eType="#//LocalPlacement"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Opening" eSuperTypes="#//GUIDElement #//Product">
     <eStructuralFeatures xsi:type="ecore:EReference" name="walls" upperBound="-1"
         eType="#//WallRelation"/>
   </eClassifiers>
@@ -17,9 +14,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="opening" lowerBound="1"
         eType="#//Opening"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FlowSegment" eSuperTypes="#//GUIDElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="placement" eType="#//LocalPlacement"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowSegment" eSuperTypes="#//GUIDElement #//Product"/>
   <eClassifiers xsi:type="ecore:EClass" name="LocalPlacement" eSuperTypes="#//GUIDElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="axis2placement3d" eType="#//Axis2Placement3D"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relativeTo" eType="#//LocalPlacement"/>
@@ -48,5 +43,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Product" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="placement" lowerBound="1"
+        eType="#//LocalPlacement"/>
   </eClassifiers>
 </ecore:EPackage>
