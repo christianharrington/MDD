@@ -11,7 +11,7 @@ xtend-gen
 bin/
 /*.edit
 /*.editor
-/*.test
+/*.tests
 
 # Package Files #
 *.jar
