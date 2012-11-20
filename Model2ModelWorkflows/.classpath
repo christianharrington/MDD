@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="xtend-gen"/>
-	<classpathentry kind="src" path="IfcIO"/>
 	<classpathentry kind="src" path="resource"/>
 	<classpathentry kind="con" path="org.eclipse.xtend.XTEND_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
@@ -158,7 +157,6 @@
 	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24-utils.jar"/>
 	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/BIMServerConnectionTest"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/com.google.inject_3.0.0.v201203062045.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/javax.inject_1.0.0.v20091030.jar"/>
 	<classpathentry kind="lib" path="/Applications/eclipse/plugins/org.apache.log4j_1.2.15.v201012070815.jar"/>
@@ -182,5 +180,6 @@
 	<classpathentry kind="lib" path="dep/org.eclipse.xtext.util_2.3.1.v201208210947.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Pipes"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/LightDSL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/IfcXML"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

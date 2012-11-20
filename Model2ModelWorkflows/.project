@@ -20,11 +20,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>IfcIO</name>
-			<type>2</type>
-			<locationURI>PARENT-1-PROJECT_LOC/BIMServerConnectionTest/src</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
