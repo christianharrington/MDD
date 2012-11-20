@@ -182,5 +182,6 @@
 	<classpathentry kind="lib" path="dep/org.eclipse.xtext.util_2.3.1.v201208210947.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Pipes"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/LightDSL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/IfcXML"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

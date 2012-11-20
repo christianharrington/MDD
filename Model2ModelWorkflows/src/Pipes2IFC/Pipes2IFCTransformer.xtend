@@ -12,13 +12,12 @@ import pipes.Wall
 import pipes.WallRelation
 import pipes.Axis2Placement3D
 import java.util.HashSet
-import org.bimserver.models.ifc2x3tc1.IfcAxis2Placement3D
-import org.eclipse.emf.common.util.EList
-import org.bimserver.models.ifc2x3tc1.impl.Ifc2x3tc1FactoryImpl
+import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.FinalFactoryImpl
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
-	Ifc2x3tc1FactoryImpl ifcFactory
+	FinalFactoryImpl ifcFactory
 	
 	/*def private addIfcOpening(IfcModel ifcModel, Opening pipesOpening) {
 		var ifcOpening = ifcFactory.createIfcOpeningElement()
@@ -75,7 +74,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			markedSet.add(o.GUID)
 			
 			val axis = product as IfcAxis2Placement3D
-			//axis.axis.directionRatios = new ArrayList<Double>(o.axis.x, o.axis.y, o.axis.z) 
+			axis.axis.directionRatios = new ArrayList<Double>(o.axis.x, o.axis.y, o.axis.z) 
 			
 			val refdir = ifcFactory.createIfcDirection()
 			//new IfcDirection
@@ -94,7 +93,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		val extractedModel = ctx.get(extractModelSlot) as ArrayList<IfcProduct>
 		
 		markedSet = new HashSet<String>()
-		ifcFactory = new Ifc2x3tc1FactoryImpl()
+		ifcFactory = new FinalFactoryImpl()
 				
 		//Run through entire object graph and update
 		pipesModel.elements.forEach[po |
