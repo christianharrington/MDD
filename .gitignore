@@ -9,6 +9,9 @@
 .metadata
 xtend-gen
 bin/
+/*.edit
+/*.editor
+/*.test
 
 # Package Files #
 *.jar
