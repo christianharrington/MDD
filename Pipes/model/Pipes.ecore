@@ -44,7 +44,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Product" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Product" abstract="true" eSuperTypes="#//GUIDElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="placement" lowerBound="1"
         eType="#//LocalPlacement"/>
   </eClassifiers>
