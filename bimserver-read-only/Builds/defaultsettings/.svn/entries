@@ -1,46 +1,0 @@
-10
-
-dir
-2173
-http://bimserver.googlecode.com/svn/trunk/Builds/defaultsettings
-http://bimserver.googlecode.com/svn
-
-
-
-2012-10-30T14:15:33.582252Z
-2139
-ruben@logic-labs.nl
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-22d71240-4879-e6bd-ac50-c68132091b5d
-
-demo
-dir
-
-shared
-dir
-
-cloud
-dir
-
-war
-dir
-
-local
-dir
-
-jar
-dir
-

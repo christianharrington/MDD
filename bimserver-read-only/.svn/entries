@@ -1,115 +1,0 @@
-10
-
-dir
-2173
-http://bimserver.googlecode.com/svn/trunk
-http://bimserver.googlecode.com/svn
-
-
-
-2012-11-12T09:07:38.405272Z
-2173
-ruben@logic-labs.nl
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-22d71240-4879-e6bd-ac50-c68132091b5d
-
-GeneratedSoapClient
-dir
-
-MesaOffscreen
-dir
-
-Builds
-dir
-
-XsltSerializer
-dir
-
-BimServerClientLib
-dir
-
-Report1Serializer
-dir
-
-IfcEngine
-dir
-
-buildingSMARTLibrary
-dir
-
-ClashDetection
-dir
-
-SceneJS
-dir
-
-GeneratedProtocolBuffersClient
-dir
-
-BimWebServer
-dir
-
-JavaQueryEngine
-dir
-
-BimServer
-dir
-
-Collada
-dir
-
-FileBasedObjectIDM
-dir
-
-Utils
-dir
-
-Ifc
-dir
-
-TestViewer
-dir
-
-Tests
-dir
-
-IfcPlugins
-dir
-
-Mergers
-dir
-
-Shared
-dir
-
-Emf
-dir
-
-MiscSerializers
-dir
-
-CityGML
-dir
-
-BimCombined
-dir
-
-TestData
-dir
-
-Client
-dir
-
