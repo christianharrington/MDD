@@ -74,7 +74,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			markedSet.add(o.GUID)
 			
 			val axis = product as IfcAxis2Placement3D
-			axis.axis.directionRatios = new ArrayList<Double>(o.axis.x, o.axis.y, o.axis.z) 
+			//axis.axis.directionRatios = new ArrayList<Double>(o.axis.x, o.axis.y, o.axis.z) 
 			
 			val refdir = ifcFactory.createIfcDirection()
 			//new IfcDirection
