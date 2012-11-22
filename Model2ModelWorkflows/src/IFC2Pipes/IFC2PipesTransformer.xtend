@@ -1,18 +1,19 @@
 package IFC2Pipes
 
 import general.WorkflowComponentWithSlot
-import org.bimserver.ifc.IfcModel
-import org.bimserver.models.ifc2x3tc1.IfcOpeningElement
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import pipes.impl.PipesFactoryImpl
 import pipes.Model
 import pipes.Opening
-import org.bimserver.models.ifc2x3tc1.IfcLocalPlacement
 import pipes.LocalPlacement
 import pipes.FlowSegment
 import pipes.Product
-import org.bimserver.models.ifc2x3tc1.IfcFlowSegment
-import org.bimserver.models.ifc2x3tc1.IfcAxis2Placement3D
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
+import java.util.ArrayList
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
@@ -61,7 +62,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
 
 	override invoke(IWorkflowContext ctx) {
-		val IfcModel ifcmodel = ctx.get(extractModelSlot) as IfcModel
+		val ifcmodel = ctx.get(extractModelSlot) as ArrayList<IfcProduct>
 		
 		pipesFactory = new PipesFactoryImpl()
 		val pipesModel = pipesFactory.createModel()

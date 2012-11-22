@@ -6,7 +6,6 @@ import pipes.Model
 import pipes.Opening
 import pipes.LocalPlacement
 import java.util.ArrayList
-import org.bimserver.models.ifc2x3tc1.IfcProduct
 import pipes.FlowSegment
 import pipes.Wall
 import pipes.WallRelation
@@ -14,6 +13,7 @@ import pipes.Axis2Placement3D
 import java.util.HashSet
 import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.FinalFactoryImpl
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	

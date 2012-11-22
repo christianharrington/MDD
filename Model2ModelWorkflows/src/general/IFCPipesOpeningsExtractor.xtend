@@ -1,14 +1,10 @@
 package general
 
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
-import org.bimserver.ifc.IfcModel
-import org.bimserver.models.ifc2x3tc1.IfcOpeningElement
-import org.bimserver.models.ifc2x3tc1.IfcFlowSegment
 import java.util.ArrayList
-import org.bimserver.models.ifc2x3tc1.IfcProduct
-import org.bimserver.models.ifc2x3tc1.IfcPipeSegmentType
-import org.bimserver.models.ifc2x3tc1.impl.IfcPipeSegmentTypeImpl
-import org.bimserver.models.ifc2x3tc1.IfcRelDefinesByProperties
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 
 class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 	
@@ -21,7 +17,7 @@ class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 	}
 		
 	override invoke(IWorkflowContext ctx) {
-		var ifcModel = ctx.get(mainModelSlot) as IfcModel
+		var ifcModel = ResourceUnwrapper::unwrap(ctx.get(mainModelSlot))
 		
 		var openings = ifcModel.filter(typeof(IfcOpeningElement))
 		var flows = ifcModel.filter(typeof(IfcFlowSegment)) 
@@ -34,6 +30,6 @@ class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 				list.add(it)
 		]
 		
-		ctx.put(extractModelSlot, ifcModel)
+		ctx.put(extractModelSlot, list)
 	}
 }

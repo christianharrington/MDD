@@ -17,13 +17,13 @@ class Model2XMLWriter extends WorkflowComponentWithSlot {
 	
 	override invoke(IWorkflowContext ctx) {
 		var FinalResourceImpl resource = ctx.get(mainModelSlot) as FinalResourceImpl
-		resource.setURI(URI::createFileURI(path));
+		resource.setURI(URI::createFileURI(path))
 		
 		var Map options = new HashMap<String, Object>()
         options.put(XMLResource::OPTION_ENCODING, "UTF-8")
         options.put(XMLResource::OPTION_XML_VERSION, "1.0")     
 
-        resource.save(options);
+        resource.save(options)
 	}
 	
 }
