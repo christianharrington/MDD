@@ -47,7 +47,7 @@ public class IfcVectorImpl extends IfcGeometricRepresentationItemImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double MAGNITUDE_EDEFAULT = 0.0;
+	protected static final Double MAGNITUDE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getMagnitude() <em>Magnitude</em>}' attribute.
@@ -57,7 +57,7 @@ public class IfcVectorImpl extends IfcGeometricRepresentationItemImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected double magnitude = MAGNITUDE_EDEFAULT;
+	protected Double magnitude = MAGNITUDE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,7 +126,7 @@ public class IfcVectorImpl extends IfcGeometricRepresentationItemImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getMagnitude() {
+	public Double getMagnitude() {
 		return magnitude;
 	}
 
@@ -135,8 +135,8 @@ public class IfcVectorImpl extends IfcGeometricRepresentationItemImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMagnitude(double newMagnitude) {
-		double oldMagnitude = magnitude;
+	public void setMagnitude(Double newMagnitude) {
+		Double oldMagnitude = magnitude;
 		magnitude = newMagnitude;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_VECTOR__MAGNITUDE, oldMagnitude, magnitude));
@@ -219,7 +219,7 @@ public class IfcVectorImpl extends IfcGeometricRepresentationItemImpl implements
 			case FinalPackage.IFC_VECTOR__ORIENTATION:
 				return orientation != null;
 			case FinalPackage.IFC_VECTOR__MAGNITUDE:
-				return magnitude != MAGNITUDE_EDEFAULT;
+				return MAGNITUDE_EDEFAULT == null ? magnitude != null : !MAGNITUDE_EDEFAULT.equals(magnitude);
 		}
 		return super.eIsSet(featureID);
 	}

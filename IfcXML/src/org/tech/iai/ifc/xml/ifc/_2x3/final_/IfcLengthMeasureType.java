@@ -37,13 +37,13 @@ public interface IfcLengthMeasureType extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(double)
+	 * @see #setValue(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcLengthMeasureType_Value()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure"
 	 *        extendedMetaData="name=':0' kind='simple'"
 	 * @generated
 	 */
-	double getValue();
+	Double getValue();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasureType#getValue <em>Value</em>}' attribute.
@@ -53,7 +53,7 @@ public interface IfcLengthMeasureType extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(double value);
+	void setValue(Double value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

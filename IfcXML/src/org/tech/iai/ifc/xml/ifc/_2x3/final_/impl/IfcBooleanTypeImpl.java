@@ -23,7 +23,7 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBooleanType;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcBooleanTypeImpl#isValue <em>Value</em>}</li>
+ *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcBooleanTypeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcBooleanTypeImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcBooleanTypeImpl#getPath <em>Path</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcBooleanTypeImpl#getPos <em>Pos</em>}</li>
@@ -34,24 +34,24 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBooleanType;
  */
 public class IfcBooleanTypeImpl extends EObjectImpl implements IfcBooleanType {
 	/**
-	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isValue()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean VALUE_EDEFAULT = false;
+	protected static final Boolean VALUE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isValue()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean value = VALUE_EDEFAULT;
+	protected Boolean value = VALUE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -137,7 +137,7 @@ public class IfcBooleanTypeImpl extends EObjectImpl implements IfcBooleanType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isValue() {
+	public Boolean getValue() {
 		return value;
 	}
 
@@ -146,8 +146,8 @@ public class IfcBooleanTypeImpl extends EObjectImpl implements IfcBooleanType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(boolean newValue) {
-		boolean oldValue = value;
+	public void setValue(Boolean newValue) {
+		Boolean oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_BOOLEAN_TYPE__VALUE, oldValue, value));
@@ -225,7 +225,7 @@ public class IfcBooleanTypeImpl extends EObjectImpl implements IfcBooleanType {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case FinalPackage.IFC_BOOLEAN_TYPE__VALUE:
-				return isValue();
+				return getValue();
 			case FinalPackage.IFC_BOOLEAN_TYPE__ID:
 				return getId();
 			case FinalPackage.IFC_BOOLEAN_TYPE__PATH:
@@ -294,7 +294,7 @@ public class IfcBooleanTypeImpl extends EObjectImpl implements IfcBooleanType {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FinalPackage.IFC_BOOLEAN_TYPE__VALUE:
-				return value != VALUE_EDEFAULT;
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case FinalPackage.IFC_BOOLEAN_TYPE__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case FinalPackage.IFC_BOOLEAN_TYPE__PATH:

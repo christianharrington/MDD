@@ -93,7 +93,7 @@ public class IfcMaterialLayerSetUsageImpl extends EntityImpl implements IfcMater
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double OFFSET_FROM_REFERENCE_LINE_EDEFAULT = 0.0;
+	protected static final Double OFFSET_FROM_REFERENCE_LINE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getOffsetFromReferenceLine() <em>Offset From Reference Line</em>}' attribute.
@@ -103,7 +103,7 @@ public class IfcMaterialLayerSetUsageImpl extends EntityImpl implements IfcMater
 	 * @generated
 	 * @ordered
 	 */
-	protected double offsetFromReferenceLine = OFFSET_FROM_REFERENCE_LINE_EDEFAULT;
+	protected Double offsetFromReferenceLine = OFFSET_FROM_REFERENCE_LINE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,7 +214,7 @@ public class IfcMaterialLayerSetUsageImpl extends EntityImpl implements IfcMater
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getOffsetFromReferenceLine() {
+	public Double getOffsetFromReferenceLine() {
 		return offsetFromReferenceLine;
 	}
 
@@ -223,8 +223,8 @@ public class IfcMaterialLayerSetUsageImpl extends EntityImpl implements IfcMater
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOffsetFromReferenceLine(double newOffsetFromReferenceLine) {
-		double oldOffsetFromReferenceLine = offsetFromReferenceLine;
+	public void setOffsetFromReferenceLine(Double newOffsetFromReferenceLine) {
+		Double oldOffsetFromReferenceLine = offsetFromReferenceLine;
 		offsetFromReferenceLine = newOffsetFromReferenceLine;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_MATERIAL_LAYER_SET_USAGE__OFFSET_FROM_REFERENCE_LINE, oldOffsetFromReferenceLine, offsetFromReferenceLine));
@@ -327,7 +327,7 @@ public class IfcMaterialLayerSetUsageImpl extends EntityImpl implements IfcMater
 			case FinalPackage.IFC_MATERIAL_LAYER_SET_USAGE__DIRECTION_SENSE:
 				return directionSense != DIRECTION_SENSE_EDEFAULT;
 			case FinalPackage.IFC_MATERIAL_LAYER_SET_USAGE__OFFSET_FROM_REFERENCE_LINE:
-				return offsetFromReferenceLine != OFFSET_FROM_REFERENCE_LINE_EDEFAULT;
+				return OFFSET_FROM_REFERENCE_LINE_EDEFAULT == null ? offsetFromReferenceLine != null : !OFFSET_FROM_REFERENCE_LINE_EDEFAULT.equals(offsetFromReferenceLine);
 		}
 		return super.eIsSet(featureID);
 	}

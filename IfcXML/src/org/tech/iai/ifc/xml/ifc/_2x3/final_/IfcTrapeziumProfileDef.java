@@ -113,13 +113,13 @@ public interface IfcTrapeziumProfileDef extends IfcParameterizedProfileDef {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Top XOffset</em>' attribute.
-	 * @see #setTopXOffset(double)
+	 * @see #setTopXOffset(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcTrapeziumProfileDef_TopXOffset()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='TopXOffset' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getTopXOffset();
+	Double getTopXOffset();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcTrapeziumProfileDef#getTopXOffset <em>Top XOffset</em>}' attribute.
@@ -129,6 +129,6 @@ public interface IfcTrapeziumProfileDef extends IfcParameterizedProfileDef {
 	 * @see #getTopXOffset()
 	 * @generated
 	 */
-	void setTopXOffset(double value);
+	void setTopXOffset(Double value);
 
 } // IfcTrapeziumProfileDef

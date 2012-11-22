@@ -45,7 +45,7 @@ public class IfcSectionReinforcementPropertiesImpl extends EntityImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double LONGITUDINAL_START_POSITION_EDEFAULT = 0.0;
+	protected static final Double LONGITUDINAL_START_POSITION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getLongitudinalStartPosition() <em>Longitudinal Start Position</em>}' attribute.
@@ -55,7 +55,7 @@ public class IfcSectionReinforcementPropertiesImpl extends EntityImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected double longitudinalStartPosition = LONGITUDINAL_START_POSITION_EDEFAULT;
+	protected Double longitudinalStartPosition = LONGITUDINAL_START_POSITION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getLongitudinalEndPosition() <em>Longitudinal End Position</em>}' attribute.
@@ -65,7 +65,7 @@ public class IfcSectionReinforcementPropertiesImpl extends EntityImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double LONGITUDINAL_END_POSITION_EDEFAULT = 0.0;
+	protected static final Double LONGITUDINAL_END_POSITION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getLongitudinalEndPosition() <em>Longitudinal End Position</em>}' attribute.
@@ -75,7 +75,7 @@ public class IfcSectionReinforcementPropertiesImpl extends EntityImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected double longitudinalEndPosition = LONGITUDINAL_END_POSITION_EDEFAULT;
+	protected Double longitudinalEndPosition = LONGITUDINAL_END_POSITION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTransversePosition() <em>Transverse Position</em>}' attribute.
@@ -161,7 +161,7 @@ public class IfcSectionReinforcementPropertiesImpl extends EntityImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getLongitudinalStartPosition() {
+	public Double getLongitudinalStartPosition() {
 		return longitudinalStartPosition;
 	}
 
@@ -170,8 +170,8 @@ public class IfcSectionReinforcementPropertiesImpl extends EntityImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLongitudinalStartPosition(double newLongitudinalStartPosition) {
-		double oldLongitudinalStartPosition = longitudinalStartPosition;
+	public void setLongitudinalStartPosition(Double newLongitudinalStartPosition) {
+		Double oldLongitudinalStartPosition = longitudinalStartPosition;
 		longitudinalStartPosition = newLongitudinalStartPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_SECTION_REINFORCEMENT_PROPERTIES__LONGITUDINAL_START_POSITION, oldLongitudinalStartPosition, longitudinalStartPosition));
@@ -182,7 +182,7 @@ public class IfcSectionReinforcementPropertiesImpl extends EntityImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getLongitudinalEndPosition() {
+	public Double getLongitudinalEndPosition() {
 		return longitudinalEndPosition;
 	}
 
@@ -191,8 +191,8 @@ public class IfcSectionReinforcementPropertiesImpl extends EntityImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLongitudinalEndPosition(double newLongitudinalEndPosition) {
-		double oldLongitudinalEndPosition = longitudinalEndPosition;
+	public void setLongitudinalEndPosition(Double newLongitudinalEndPosition) {
+		Double oldLongitudinalEndPosition = longitudinalEndPosition;
 		longitudinalEndPosition = newLongitudinalEndPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_SECTION_REINFORCEMENT_PROPERTIES__LONGITUDINAL_END_POSITION, oldLongitudinalEndPosition, longitudinalEndPosition));
@@ -435,9 +435,9 @@ public class IfcSectionReinforcementPropertiesImpl extends EntityImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FinalPackage.IFC_SECTION_REINFORCEMENT_PROPERTIES__LONGITUDINAL_START_POSITION:
-				return longitudinalStartPosition != LONGITUDINAL_START_POSITION_EDEFAULT;
+				return LONGITUDINAL_START_POSITION_EDEFAULT == null ? longitudinalStartPosition != null : !LONGITUDINAL_START_POSITION_EDEFAULT.equals(longitudinalStartPosition);
 			case FinalPackage.IFC_SECTION_REINFORCEMENT_PROPERTIES__LONGITUDINAL_END_POSITION:
-				return longitudinalEndPosition != LONGITUDINAL_END_POSITION_EDEFAULT;
+				return LONGITUDINAL_END_POSITION_EDEFAULT == null ? longitudinalEndPosition != null : !LONGITUDINAL_END_POSITION_EDEFAULT.equals(longitudinalEndPosition);
 			case FinalPackage.IFC_SECTION_REINFORCEMENT_PROPERTIES__TRANSVERSE_POSITION:
 				return TRANSVERSE_POSITION_EDEFAULT == null ? transversePosition != null : !TRANSVERSE_POSITION_EDEFAULT.equals(transversePosition);
 			case FinalPackage.IFC_SECTION_REINFORCEMENT_PROPERTIES__REINFORCEMENT_ROLE:

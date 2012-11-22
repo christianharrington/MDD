@@ -14,7 +14,7 @@ import org.iso.standard._10303.part._28.version._2.xmlschema.common.Entity;
  * <ul>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcGridAxis#getAxisTag <em>Axis Tag</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcGridAxis#getAxisCurve <em>Axis Curve</em>}</li>
- *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcGridAxis#isSameSense <em>Same Sense</em>}</li>
+ *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcGridAxis#getSameSense <em>Same Sense</em>}</li>
  * </ul>
  * </p>
  *
@@ -86,22 +86,22 @@ public interface IfcGridAxis extends Entity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Same Sense</em>' attribute.
-	 * @see #setSameSense(boolean)
+	 * @see #setSameSense(Boolean)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcGridAxis_SameSense()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBoolean" required="true"
 	 *        extendedMetaData="kind='element' name='SameSense' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	boolean isSameSense();
+	Boolean getSameSense();
 
 	/**
-	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcGridAxis#isSameSense <em>Same Sense</em>}' attribute.
+	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcGridAxis#getSameSense <em>Same Sense</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Same Sense</em>' attribute.
-	 * @see #isSameSense()
+	 * @see #getSameSense()
 	 * @generated
 	 */
-	void setSameSense(boolean value);
+	void setSameSense(Boolean value);
 
 } // IfcGridAxis

@@ -47,7 +47,7 @@ public class IfcSurfaceOfLinearExtrusionImpl extends IfcSweptSurfaceImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double DEPTH_EDEFAULT = 0.0;
+	protected static final Double DEPTH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getDepth() <em>Depth</em>}' attribute.
@@ -57,7 +57,7 @@ public class IfcSurfaceOfLinearExtrusionImpl extends IfcSweptSurfaceImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected double depth = DEPTH_EDEFAULT;
+	protected Double depth = DEPTH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,7 +126,7 @@ public class IfcSurfaceOfLinearExtrusionImpl extends IfcSweptSurfaceImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getDepth() {
+	public Double getDepth() {
 		return depth;
 	}
 
@@ -135,8 +135,8 @@ public class IfcSurfaceOfLinearExtrusionImpl extends IfcSweptSurfaceImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDepth(double newDepth) {
-		double oldDepth = depth;
+	public void setDepth(Double newDepth) {
+		Double oldDepth = depth;
 		depth = newDepth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_SURFACE_OF_LINEAR_EXTRUSION__DEPTH, oldDepth, depth));
@@ -219,7 +219,7 @@ public class IfcSurfaceOfLinearExtrusionImpl extends IfcSweptSurfaceImpl impleme
 			case FinalPackage.IFC_SURFACE_OF_LINEAR_EXTRUSION__EXTRUDED_DIRECTION:
 				return extrudedDirection != null;
 			case FinalPackage.IFC_SURFACE_OF_LINEAR_EXTRUSION__DEPTH:
-				return depth != DEPTH_EDEFAULT;
+				return DEPTH_EDEFAULT == null ? depth != null : !DEPTH_EDEFAULT.equals(depth);
 		}
 		return super.eIsSet(featureID);
 	}

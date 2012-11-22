@@ -41,7 +41,7 @@ public class IfcIntegerTypeImpl extends EObjectImpl implements IfcIntegerType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long VALUE_EDEFAULT = 0L;
+	protected static final Long VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -51,7 +51,7 @@ public class IfcIntegerTypeImpl extends EObjectImpl implements IfcIntegerType {
 	 * @generated
 	 * @ordered
 	 */
-	protected long value = VALUE_EDEFAULT;
+	protected Long value = VALUE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -137,7 +137,7 @@ public class IfcIntegerTypeImpl extends EObjectImpl implements IfcIntegerType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getValue() {
+	public Long getValue() {
 		return value;
 	}
 
@@ -146,8 +146,8 @@ public class IfcIntegerTypeImpl extends EObjectImpl implements IfcIntegerType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(long newValue) {
-		long oldValue = value;
+	public void setValue(Long newValue) {
+		Long oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_INTEGER_TYPE__VALUE, oldValue, value));
@@ -294,7 +294,7 @@ public class IfcIntegerTypeImpl extends EObjectImpl implements IfcIntegerType {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FinalPackage.IFC_INTEGER_TYPE__VALUE:
-				return value != VALUE_EDEFAULT;
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case FinalPackage.IFC_INTEGER_TYPE__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case FinalPackage.IFC_INTEGER_TYPE__PATH:

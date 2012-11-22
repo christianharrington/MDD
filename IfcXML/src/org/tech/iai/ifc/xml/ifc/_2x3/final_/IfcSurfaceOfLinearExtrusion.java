@@ -57,13 +57,13 @@ public interface IfcSurfaceOfLinearExtrusion extends IfcSweptSurface {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Depth</em>' attribute.
-	 * @see #setDepth(double)
+	 * @see #setDepth(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcSurfaceOfLinearExtrusion_Depth()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='Depth' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getDepth();
+	Double getDepth();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcSurfaceOfLinearExtrusion#getDepth <em>Depth</em>}' attribute.
@@ -73,6 +73,6 @@ public interface IfcSurfaceOfLinearExtrusion extends IfcSweptSurface {
 	 * @see #getDepth()
 	 * @generated
 	 */
-	void setDepth(double value);
+	void setDepth(Double value);
 
 } // IfcSurfaceOfLinearExtrusion

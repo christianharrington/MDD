@@ -37,13 +37,13 @@ public interface IfcIntegerType extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(long)
+	 * @see #setValue(Long)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcIntegerType_Value()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcInteger"
 	 *        extendedMetaData="name=':0' kind='simple'"
 	 * @generated
 	 */
-	long getValue();
+	Long getValue();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcIntegerType#getValue <em>Value</em>}' attribute.
@@ -53,7 +53,7 @@ public interface IfcIntegerType extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(long value);
+	void setValue(Long value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

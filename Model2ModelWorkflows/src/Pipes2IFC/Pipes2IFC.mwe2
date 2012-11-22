@@ -1,6 +1,6 @@
 module Pipes2IFC.Pies2IFC
 
-import general.Model2IFCWriter
+import general.Model2XMLWriter
 import general.IFC2ModelReader
 
 var modelSlot = 'model'
@@ -37,7 +37,7 @@ Workflow {
 		extractModelSlot = emSlot
 	}
 	
-	component = Model2IFCWriter {
+	component = Model2XMLWriter {
 		mainModelSlot = modelSlot
 		path = ifcWritePath
 	}

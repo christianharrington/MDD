@@ -57,13 +57,13 @@ public interface IfcVector extends IfcGeometricRepresentationItem {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Magnitude</em>' attribute.
-	 * @see #setMagnitude(double)
+	 * @see #setMagnitude(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcVector_Magnitude()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='Magnitude' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getMagnitude();
+	Double getMagnitude();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcVector#getMagnitude <em>Magnitude</em>}' attribute.
@@ -73,6 +73,6 @@ public interface IfcVector extends IfcGeometricRepresentationItem {
 	 * @see #getMagnitude()
 	 * @generated
 	 */
-	void setMagnitude(double value);
+	void setMagnitude(Double value);
 
 } // IfcVector

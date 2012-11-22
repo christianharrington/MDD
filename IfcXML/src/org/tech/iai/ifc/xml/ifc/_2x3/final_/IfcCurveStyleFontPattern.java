@@ -31,13 +31,13 @@ public interface IfcCurveStyleFontPattern extends Entity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Visible Segment Length</em>' attribute.
-	 * @see #setVisibleSegmentLength(double)
+	 * @see #setVisibleSegmentLength(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcCurveStyleFontPattern_VisibleSegmentLength()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='VisibleSegmentLength' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getVisibleSegmentLength();
+	Double getVisibleSegmentLength();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCurveStyleFontPattern#getVisibleSegmentLength <em>Visible Segment Length</em>}' attribute.
@@ -47,7 +47,7 @@ public interface IfcCurveStyleFontPattern extends Entity {
 	 * @see #getVisibleSegmentLength()
 	 * @generated
 	 */
-	void setVisibleSegmentLength(double value);
+	void setVisibleSegmentLength(Double value);
 
 	/**
 	 * Returns the value of the '<em><b>Invisible Segment Length</b></em>' attribute.

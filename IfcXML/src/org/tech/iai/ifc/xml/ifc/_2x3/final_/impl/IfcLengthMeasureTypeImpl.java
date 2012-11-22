@@ -41,7 +41,7 @@ public class IfcLengthMeasureTypeImpl extends EObjectImpl implements IfcLengthMe
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double VALUE_EDEFAULT = 0.0;
+	protected static final Double VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -51,7 +51,7 @@ public class IfcLengthMeasureTypeImpl extends EObjectImpl implements IfcLengthMe
 	 * @generated
 	 * @ordered
 	 */
-	protected double value = VALUE_EDEFAULT;
+	protected Double value = VALUE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -137,7 +137,7 @@ public class IfcLengthMeasureTypeImpl extends EObjectImpl implements IfcLengthMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getValue() {
+	public Double getValue() {
 		return value;
 	}
 
@@ -146,8 +146,8 @@ public class IfcLengthMeasureTypeImpl extends EObjectImpl implements IfcLengthMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(double newValue) {
-		double oldValue = value;
+	public void setValue(Double newValue) {
+		Double oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_LENGTH_MEASURE_TYPE__VALUE, oldValue, value));
@@ -294,7 +294,7 @@ public class IfcLengthMeasureTypeImpl extends EObjectImpl implements IfcLengthMe
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FinalPackage.IFC_LENGTH_MEASURE_TYPE__VALUE:
-				return value != VALUE_EDEFAULT;
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case FinalPackage.IFC_LENGTH_MEASURE_TYPE__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case FinalPackage.IFC_LENGTH_MEASURE_TYPE__PATH:

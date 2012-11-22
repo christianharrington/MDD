@@ -32,13 +32,13 @@ public interface IfcPixelTexture extends IfcSurfaceTexture {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(long)
+	 * @see #setWidth(Long)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcPixelTexture_Width()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcInteger" required="true"
 	 *        extendedMetaData="kind='element' name='Width' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	long getWidth();
+	Long getWidth();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcPixelTexture#getWidth <em>Width</em>}' attribute.
@@ -48,7 +48,7 @@ public interface IfcPixelTexture extends IfcSurfaceTexture {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(long value);
+	void setWidth(Long value);
 
 	/**
 	 * Returns the value of the '<em><b>Height</b></em>' attribute.
@@ -59,13 +59,13 @@ public interface IfcPixelTexture extends IfcSurfaceTexture {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(long)
+	 * @see #setHeight(Long)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcPixelTexture_Height()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcInteger" required="true"
 	 *        extendedMetaData="kind='element' name='Height' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	long getHeight();
+	Long getHeight();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcPixelTexture#getHeight <em>Height</em>}' attribute.
@@ -75,7 +75,7 @@ public interface IfcPixelTexture extends IfcSurfaceTexture {
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(long value);
+	void setHeight(Long value);
 
 	/**
 	 * Returns the value of the '<em><b>Colour Components</b></em>' attribute.
@@ -86,13 +86,13 @@ public interface IfcPixelTexture extends IfcSurfaceTexture {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Colour Components</em>' attribute.
-	 * @see #setColourComponents(long)
+	 * @see #setColourComponents(Long)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcPixelTexture_ColourComponents()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcInteger" required="true"
 	 *        extendedMetaData="kind='element' name='ColourComponents' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	long getColourComponents();
+	Long getColourComponents();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcPixelTexture#getColourComponents <em>Colour Components</em>}' attribute.
@@ -102,7 +102,7 @@ public interface IfcPixelTexture extends IfcSurfaceTexture {
 	 * @see #getColourComponents()
 	 * @generated
 	 */
-	void setColourComponents(long value);
+	void setColourComponents(Long value);
 
 	/**
 	 * Returns the value of the '<em><b>Pixel</b></em>' containment reference.

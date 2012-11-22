@@ -20115,7 +20115,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="IfcBoolean" instanceClassName="boolean">
+  <eClassifiers xsi:type="ecore:EDataType" name="IfcBoolean" instanceClassName="java.lang.Boolean">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="IfcBoolean"/>
       <details key="baseType" value="http://www.eclipse.org/emf/2003/XMLType#boolean"/>
@@ -30784,7 +30784,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="IfcInteger" instanceClassName="long">
+  <eClassifiers xsi:type="ecore:EDataType" name="IfcInteger" instanceClassName="java.lang.Long">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="IfcInteger"/>
       <details key="baseType" value="http://www.eclipse.org/emf/2003/XMLType#long"/>
@@ -31505,7 +31505,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="IfcLengthMeasure" instanceClassName="double">
+  <eClassifiers xsi:type="ecore:EDataType" name="IfcLengthMeasure" instanceClassName="java.lang.Double">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="IfcLengthMeasure"/>
       <details key="baseType" value="http://www.eclipse.org/emf/2003/XMLType#double"/>

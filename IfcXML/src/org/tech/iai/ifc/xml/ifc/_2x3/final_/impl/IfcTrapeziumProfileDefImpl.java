@@ -96,7 +96,7 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double TOP_XOFFSET_EDEFAULT = 0.0;
+	protected static final Double TOP_XOFFSET_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getTopXOffset() <em>Top XOffset</em>}' attribute.
@@ -106,7 +106,7 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * @generated
 	 * @ordered
 	 */
-	protected double topXOffset = TOP_XOFFSET_EDEFAULT;
+	protected Double topXOffset = TOP_XOFFSET_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -195,7 +195,7 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getTopXOffset() {
+	public Double getTopXOffset() {
 		return topXOffset;
 	}
 
@@ -204,8 +204,8 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTopXOffset(double newTopXOffset) {
-		double oldTopXOffset = topXOffset;
+	public void setTopXOffset(Double newTopXOffset) {
+		Double oldTopXOffset = topXOffset;
 		topXOffset = newTopXOffset;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_TRAPEZIUM_PROFILE_DEF__TOP_XOFFSET, oldTopXOffset, topXOffset));
@@ -294,7 +294,7 @@ public class IfcTrapeziumProfileDefImpl extends IfcParameterizedProfileDefImpl i
 			case FinalPackage.IFC_TRAPEZIUM_PROFILE_DEF__YDIM:
 				return yDim != YDIM_EDEFAULT;
 			case FinalPackage.IFC_TRAPEZIUM_PROFILE_DEF__TOP_XOFFSET:
-				return topXOffset != TOP_XOFFSET_EDEFAULT;
+				return TOP_XOFFSET_EDEFAULT == null ? topXOffset != null : !TOP_XOFFSET_EDEFAULT.equals(topXOffset);
 		}
 		return super.eIsSet(featureID);
 	}

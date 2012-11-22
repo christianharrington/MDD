@@ -36,7 +36,7 @@ public class IfcCurveStyleFontPatternImpl extends EntityImpl implements IfcCurve
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double VISIBLE_SEGMENT_LENGTH_EDEFAULT = 0.0;
+	protected static final Double VISIBLE_SEGMENT_LENGTH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getVisibleSegmentLength() <em>Visible Segment Length</em>}' attribute.
@@ -46,7 +46,7 @@ public class IfcCurveStyleFontPatternImpl extends EntityImpl implements IfcCurve
 	 * @generated
 	 * @ordered
 	 */
-	protected double visibleSegmentLength = VISIBLE_SEGMENT_LENGTH_EDEFAULT;
+	protected Double visibleSegmentLength = VISIBLE_SEGMENT_LENGTH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getInvisibleSegmentLength() <em>Invisible Segment Length</em>}' attribute.
@@ -92,7 +92,7 @@ public class IfcCurveStyleFontPatternImpl extends EntityImpl implements IfcCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getVisibleSegmentLength() {
+	public Double getVisibleSegmentLength() {
 		return visibleSegmentLength;
 	}
 
@@ -101,8 +101,8 @@ public class IfcCurveStyleFontPatternImpl extends EntityImpl implements IfcCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVisibleSegmentLength(double newVisibleSegmentLength) {
-		double oldVisibleSegmentLength = visibleSegmentLength;
+	public void setVisibleSegmentLength(Double newVisibleSegmentLength) {
+		Double oldVisibleSegmentLength = visibleSegmentLength;
 		visibleSegmentLength = newVisibleSegmentLength;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_CURVE_STYLE_FONT_PATTERN__VISIBLE_SEGMENT_LENGTH, oldVisibleSegmentLength, visibleSegmentLength));
@@ -190,7 +190,7 @@ public class IfcCurveStyleFontPatternImpl extends EntityImpl implements IfcCurve
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FinalPackage.IFC_CURVE_STYLE_FONT_PATTERN__VISIBLE_SEGMENT_LENGTH:
-				return visibleSegmentLength != VISIBLE_SEGMENT_LENGTH_EDEFAULT;
+				return VISIBLE_SEGMENT_LENGTH_EDEFAULT == null ? visibleSegmentLength != null : !VISIBLE_SEGMENT_LENGTH_EDEFAULT.equals(visibleSegmentLength);
 			case FinalPackage.IFC_CURVE_STYLE_FONT_PATTERN__INVISIBLE_SEGMENT_LENGTH:
 				return invisibleSegmentLength != INVISIBLE_SEGMENT_LENGTH_EDEFAULT;
 		}

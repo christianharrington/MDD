@@ -120,13 +120,13 @@ public interface IfcMaterialLayerSetUsage extends Entity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Offset From Reference Line</em>' attribute.
-	 * @see #setOffsetFromReferenceLine(double)
+	 * @see #setOffsetFromReferenceLine(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcMaterialLayerSetUsage_OffsetFromReferenceLine()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='OffsetFromReferenceLine' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getOffsetFromReferenceLine();
+	Double getOffsetFromReferenceLine();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcMaterialLayerSetUsage#getOffsetFromReferenceLine <em>Offset From Reference Line</em>}' attribute.
@@ -136,6 +136,6 @@ public interface IfcMaterialLayerSetUsage extends Entity {
 	 * @see #getOffsetFromReferenceLine()
 	 * @generated
 	 */
-	void setOffsetFromReferenceLine(double value);
+	void setOffsetFromReferenceLine(Double value);
 
 } // IfcMaterialLayerSetUsage

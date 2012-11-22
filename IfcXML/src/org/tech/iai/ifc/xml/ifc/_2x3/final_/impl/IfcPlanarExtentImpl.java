@@ -34,7 +34,7 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double SIZE_IN_X_EDEFAULT = 0.0;
+	protected static final Double SIZE_IN_X_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getSizeInX() <em>Size In X</em>}' attribute.
@@ -44,7 +44,7 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected double sizeInX = SIZE_IN_X_EDEFAULT;
+	protected Double sizeInX = SIZE_IN_X_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSizeInY() <em>Size In Y</em>}' attribute.
@@ -54,7 +54,7 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double SIZE_IN_Y_EDEFAULT = 0.0;
+	protected static final Double SIZE_IN_Y_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getSizeInY() <em>Size In Y</em>}' attribute.
@@ -64,7 +64,7 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected double sizeInY = SIZE_IN_Y_EDEFAULT;
+	protected Double sizeInY = SIZE_IN_Y_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,7 +90,7 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getSizeInX() {
+	public Double getSizeInX() {
 		return sizeInX;
 	}
 
@@ -99,8 +99,8 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSizeInX(double newSizeInX) {
-		double oldSizeInX = sizeInX;
+	public void setSizeInX(Double newSizeInX) {
+		Double oldSizeInX = sizeInX;
 		sizeInX = newSizeInX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_PLANAR_EXTENT__SIZE_IN_X, oldSizeInX, sizeInX));
@@ -111,7 +111,7 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getSizeInY() {
+	public Double getSizeInY() {
 		return sizeInY;
 	}
 
@@ -120,8 +120,8 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSizeInY(double newSizeInY) {
-		double oldSizeInY = sizeInY;
+	public void setSizeInY(Double newSizeInY) {
+		Double oldSizeInY = sizeInY;
 		sizeInY = newSizeInY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_PLANAR_EXTENT__SIZE_IN_Y, oldSizeInY, sizeInY));
@@ -188,9 +188,9 @@ public class IfcPlanarExtentImpl extends IfcGeometricRepresentationItemImpl impl
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FinalPackage.IFC_PLANAR_EXTENT__SIZE_IN_X:
-				return sizeInX != SIZE_IN_X_EDEFAULT;
+				return SIZE_IN_X_EDEFAULT == null ? sizeInX != null : !SIZE_IN_X_EDEFAULT.equals(sizeInX);
 			case FinalPackage.IFC_PLANAR_EXTENT__SIZE_IN_Y:
-				return sizeInY != SIZE_IN_Y_EDEFAULT;
+				return SIZE_IN_Y_EDEFAULT == null ? sizeInY != null : !SIZE_IN_Y_EDEFAULT.equals(sizeInY);
 		}
 		return super.eIsSet(featureID);
 	}

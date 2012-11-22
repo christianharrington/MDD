@@ -33,7 +33,7 @@ public class IfcQuantityLengthImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double LENGTH_VALUE_EDEFAULT = 0.0;
+	protected static final Double LENGTH_VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getLengthValue() <em>Length Value</em>}' attribute.
@@ -43,7 +43,7 @@ public class IfcQuantityLengthImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected double lengthValue = LENGTH_VALUE_EDEFAULT;
+	protected Double lengthValue = LENGTH_VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class IfcQuantityLengthImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getLengthValue() {
+	public Double getLengthValue() {
 		return lengthValue;
 	}
 
@@ -78,8 +78,8 @@ public class IfcQuantityLengthImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLengthValue(double newLengthValue) {
-		double oldLengthValue = lengthValue;
+	public void setLengthValue(Double newLengthValue) {
+		Double oldLengthValue = lengthValue;
 		lengthValue = newLengthValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_QUANTITY_LENGTH__LENGTH_VALUE, oldLengthValue, lengthValue));
@@ -138,7 +138,7 @@ public class IfcQuantityLengthImpl extends IfcPhysicalSimpleQuantityImpl impleme
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FinalPackage.IFC_QUANTITY_LENGTH__LENGTH_VALUE:
-				return lengthValue != LENGTH_VALUE_EDEFAULT;
+				return LENGTH_VALUE_EDEFAULT == null ? lengthValue != null : !LENGTH_VALUE_EDEFAULT.equals(lengthValue);
 		}
 		return super.eIsSet(featureID);
 	}

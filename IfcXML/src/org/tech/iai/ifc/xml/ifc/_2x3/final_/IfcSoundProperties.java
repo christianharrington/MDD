@@ -11,7 +11,7 @@ package org.tech.iai.ifc.xml.ifc._2x3.final_;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcSoundProperties#isIsAttenuating <em>Is Attenuating</em>}</li>
+ *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcSoundProperties#getIsAttenuating <em>Is Attenuating</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcSoundProperties#getSoundScale <em>Sound Scale</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcSoundProperties#getSoundValues <em>Sound Values</em>}</li>
  * </ul>
@@ -31,23 +31,23 @@ public interface IfcSoundProperties extends IfcPropertySetDefinition {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Attenuating</em>' attribute.
-	 * @see #setIsAttenuating(boolean)
+	 * @see #setIsAttenuating(Boolean)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcSoundProperties_IsAttenuating()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBoolean" required="true"
 	 *        extendedMetaData="kind='element' name='IsAttenuating' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	boolean isIsAttenuating();
+	Boolean getIsAttenuating();
 
 	/**
-	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcSoundProperties#isIsAttenuating <em>Is Attenuating</em>}' attribute.
+	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcSoundProperties#getIsAttenuating <em>Is Attenuating</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Attenuating</em>' attribute.
-	 * @see #isIsAttenuating()
+	 * @see #getIsAttenuating()
 	 * @generated
 	 */
-	void setIsAttenuating(boolean value);
+	void setIsAttenuating(Boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Sound Scale</b></em>' attribute.

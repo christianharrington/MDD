@@ -59,13 +59,13 @@ public interface IfcOffsetCurve2D extends IfcCurve {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Distance</em>' attribute.
-	 * @see #setDistance(double)
+	 * @see #setDistance(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcOffsetCurve2D_Distance()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='Distance' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getDistance();
+	Double getDistance();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOffsetCurve2D#getDistance <em>Distance</em>}' attribute.
@@ -75,7 +75,7 @@ public interface IfcOffsetCurve2D extends IfcCurve {
 	 * @see #getDistance()
 	 * @generated
 	 */
-	void setDistance(double value);
+	void setDistance(Double value);
 
 	/**
 	 * Returns the value of the '<em><b>Self Intersect</b></em>' attribute.

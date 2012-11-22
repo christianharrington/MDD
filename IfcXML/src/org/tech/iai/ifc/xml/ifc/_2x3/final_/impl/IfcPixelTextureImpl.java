@@ -39,7 +39,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long WIDTH_EDEFAULT = 0L;
+	protected static final Long WIDTH_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -49,7 +49,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * @generated
 	 * @ordered
 	 */
-	protected long width = WIDTH_EDEFAULT;
+	protected Long width = WIDTH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -59,7 +59,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long HEIGHT_EDEFAULT = 0L;
+	protected static final Long HEIGHT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -69,7 +69,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * @generated
 	 * @ordered
 	 */
-	protected long height = HEIGHT_EDEFAULT;
+	protected Long height = HEIGHT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getColourComponents() <em>Colour Components</em>}' attribute.
@@ -79,7 +79,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long COLOUR_COMPONENTS_EDEFAULT = 0L;
+	protected static final Long COLOUR_COMPONENTS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getColourComponents() <em>Colour Components</em>}' attribute.
@@ -89,7 +89,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * @generated
 	 * @ordered
 	 */
-	protected long colourComponents = COLOUR_COMPONENTS_EDEFAULT;
+	protected Long colourComponents = COLOUR_COMPONENTS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getPixel() <em>Pixel</em>}' containment reference.
@@ -125,7 +125,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getWidth() {
+	public Long getWidth() {
 		return width;
 	}
 
@@ -134,8 +134,8 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(long newWidth) {
-		long oldWidth = width;
+	public void setWidth(Long newWidth) {
+		Long oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_PIXEL_TEXTURE__WIDTH, oldWidth, width));
@@ -146,7 +146,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getHeight() {
+	public Long getHeight() {
 		return height;
 	}
 
@@ -155,8 +155,8 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeight(long newHeight) {
-		long oldHeight = height;
+	public void setHeight(Long newHeight) {
+		Long oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_PIXEL_TEXTURE__HEIGHT, oldHeight, height));
@@ -167,7 +167,7 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getColourComponents() {
+	public Long getColourComponents() {
 		return colourComponents;
 	}
 
@@ -176,8 +176,8 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setColourComponents(long newColourComponents) {
-		long oldColourComponents = colourComponents;
+	public void setColourComponents(Long newColourComponents) {
+		Long oldColourComponents = colourComponents;
 		colourComponents = newColourComponents;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_PIXEL_TEXTURE__COLOUR_COMPONENTS, oldColourComponents, colourComponents));
@@ -317,11 +317,11 @@ public class IfcPixelTextureImpl extends IfcSurfaceTextureImpl implements IfcPix
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FinalPackage.IFC_PIXEL_TEXTURE__WIDTH:
-				return width != WIDTH_EDEFAULT;
+				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
 			case FinalPackage.IFC_PIXEL_TEXTURE__HEIGHT:
-				return height != HEIGHT_EDEFAULT;
+				return HEIGHT_EDEFAULT == null ? height != null : !HEIGHT_EDEFAULT.equals(height);
 			case FinalPackage.IFC_PIXEL_TEXTURE__COLOUR_COMPONENTS:
-				return colourComponents != COLOUR_COMPONENTS_EDEFAULT;
+				return COLOUR_COMPONENTS_EDEFAULT == null ? colourComponents != null : !COLOUR_COMPONENTS_EDEFAULT.equals(colourComponents);
 			case FinalPackage.IFC_PIXEL_TEXTURE__PIXEL:
 				return pixel != null;
 		}

@@ -35,13 +35,13 @@ public interface IfcSectionReinforcementProperties extends Entity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Longitudinal Start Position</em>' attribute.
-	 * @see #setLongitudinalStartPosition(double)
+	 * @see #setLongitudinalStartPosition(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcSectionReinforcementProperties_LongitudinalStartPosition()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='LongitudinalStartPosition' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getLongitudinalStartPosition();
+	Double getLongitudinalStartPosition();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcSectionReinforcementProperties#getLongitudinalStartPosition <em>Longitudinal Start Position</em>}' attribute.
@@ -51,7 +51,7 @@ public interface IfcSectionReinforcementProperties extends Entity {
 	 * @see #getLongitudinalStartPosition()
 	 * @generated
 	 */
-	void setLongitudinalStartPosition(double value);
+	void setLongitudinalStartPosition(Double value);
 
 	/**
 	 * Returns the value of the '<em><b>Longitudinal End Position</b></em>' attribute.
@@ -62,13 +62,13 @@ public interface IfcSectionReinforcementProperties extends Entity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Longitudinal End Position</em>' attribute.
-	 * @see #setLongitudinalEndPosition(double)
+	 * @see #setLongitudinalEndPosition(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcSectionReinforcementProperties_LongitudinalEndPosition()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='LongitudinalEndPosition' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getLongitudinalEndPosition();
+	Double getLongitudinalEndPosition();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcSectionReinforcementProperties#getLongitudinalEndPosition <em>Longitudinal End Position</em>}' attribute.
@@ -78,7 +78,7 @@ public interface IfcSectionReinforcementProperties extends Entity {
 	 * @see #getLongitudinalEndPosition()
 	 * @generated
 	 */
-	void setLongitudinalEndPosition(double value);
+	void setLongitudinalEndPosition(Double value);
 
 	/**
 	 * Returns the value of the '<em><b>Transverse Position</b></em>' attribute.

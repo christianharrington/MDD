@@ -19107,7 +19107,7 @@ public class FinalValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateIfcBoolean(boolean ifcBoolean, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateIfcBoolean(Boolean ifcBoolean, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -20172,7 +20172,7 @@ public class FinalValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateIfcInteger(long ifcInteger, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateIfcInteger(Long ifcInteger, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -20316,7 +20316,7 @@ public class FinalValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateIfcLengthMeasure(double ifcLengthMeasure, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateIfcLengthMeasure(Double ifcLengthMeasure, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

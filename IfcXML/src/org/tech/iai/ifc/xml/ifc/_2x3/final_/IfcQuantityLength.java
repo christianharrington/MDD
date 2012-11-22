@@ -29,13 +29,13 @@ public interface IfcQuantityLength extends IfcPhysicalSimpleQuantity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Length Value</em>' attribute.
-	 * @see #setLengthValue(double)
+	 * @see #setLengthValue(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcQuantityLength_LengthValue()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='LengthValue' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getLengthValue();
+	Double getLengthValue();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcQuantityLength#getLengthValue <em>Length Value</em>}' attribute.
@@ -45,6 +45,6 @@ public interface IfcQuantityLength extends IfcPhysicalSimpleQuantity {
 	 * @see #getLengthValue()
 	 * @generated
 	 */
-	void setLengthValue(double value);
+	void setLengthValue(Double value);
 
 } // IfcQuantityLength

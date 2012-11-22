@@ -25,7 +25,7 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcGridAxis;
  * <ul>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcGridAxisImpl#getAxisTag <em>Axis Tag</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcGridAxisImpl#getAxisCurve <em>Axis Curve</em>}</li>
- *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcGridAxisImpl#isSameSense <em>Same Sense</em>}</li>
+ *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcGridAxisImpl#getSameSense <em>Same Sense</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,24 +63,24 @@ public class IfcGridAxisImpl extends EntityImpl implements IfcGridAxis {
 	protected AxisCurveType axisCurve;
 
 	/**
-	 * The default value of the '{@link #isSameSense() <em>Same Sense</em>}' attribute.
+	 * The default value of the '{@link #getSameSense() <em>Same Sense</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isSameSense()
+	 * @see #getSameSense()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean SAME_SENSE_EDEFAULT = false;
+	protected static final Boolean SAME_SENSE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isSameSense() <em>Same Sense</em>}' attribute.
+	 * The cached value of the '{@link #getSameSense() <em>Same Sense</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isSameSense()
+	 * @see #getSameSense()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean sameSense = SAME_SENSE_EDEFAULT;
+	protected Boolean sameSense = SAME_SENSE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -170,7 +170,7 @@ public class IfcGridAxisImpl extends EntityImpl implements IfcGridAxis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isSameSense() {
+	public Boolean getSameSense() {
 		return sameSense;
 	}
 
@@ -179,8 +179,8 @@ public class IfcGridAxisImpl extends EntityImpl implements IfcGridAxis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSameSense(boolean newSameSense) {
-		boolean oldSameSense = sameSense;
+	public void setSameSense(Boolean newSameSense) {
+		Boolean oldSameSense = sameSense;
 		sameSense = newSameSense;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_GRID_AXIS__SAME_SENSE, oldSameSense, sameSense));
@@ -213,7 +213,7 @@ public class IfcGridAxisImpl extends EntityImpl implements IfcGridAxis {
 			case FinalPackage.IFC_GRID_AXIS__AXIS_CURVE:
 				return getAxisCurve();
 			case FinalPackage.IFC_GRID_AXIS__SAME_SENSE:
-				return isSameSense();
+				return getSameSense();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -273,7 +273,7 @@ public class IfcGridAxisImpl extends EntityImpl implements IfcGridAxis {
 			case FinalPackage.IFC_GRID_AXIS__AXIS_CURVE:
 				return axisCurve != null;
 			case FinalPackage.IFC_GRID_AXIS__SAME_SENSE:
-				return sameSense != SAME_SENSE_EDEFAULT;
+				return SAME_SENSE_EDEFAULT == null ? sameSense != null : !SAME_SENSE_EDEFAULT.equals(sameSense);
 		}
 		return super.eIsSet(featureID);
 	}

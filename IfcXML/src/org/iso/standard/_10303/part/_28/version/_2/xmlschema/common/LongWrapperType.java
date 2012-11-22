@@ -37,13 +37,13 @@ public interface LongWrapperType extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(long)
+	 * @see #setValue(Long)
 	 * @see org.iso.standard._10303.part._28.version._2.xmlschema.common.CommonPackage#getLongWrapperType_Value()
-	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Long"
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.LongObject"
 	 *        extendedMetaData="name=':0' kind='simple'"
 	 * @generated
 	 */
-	long getValue();
+	Long getValue();
 
 	/**
 	 * Sets the value of the '{@link org.iso.standard._10303.part._28.version._2.xmlschema.common.LongWrapperType#getValue <em>Value</em>}' attribute.
@@ -53,7 +53,7 @@ public interface LongWrapperType extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(long value);
+	void setValue(Long value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

@@ -22,7 +22,7 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.SoundValuesType;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcSoundPropertiesImpl#isIsAttenuating <em>Is Attenuating</em>}</li>
+ *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcSoundPropertiesImpl#getIsAttenuating <em>Is Attenuating</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcSoundPropertiesImpl#getSoundScale <em>Sound Scale</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcSoundPropertiesImpl#getSoundValues <em>Sound Values</em>}</li>
  * </ul>
@@ -32,24 +32,24 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.SoundValuesType;
  */
 public class IfcSoundPropertiesImpl extends IfcPropertySetDefinitionImpl implements IfcSoundProperties {
 	/**
-	 * The default value of the '{@link #isIsAttenuating() <em>Is Attenuating</em>}' attribute.
+	 * The default value of the '{@link #getIsAttenuating() <em>Is Attenuating</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsAttenuating()
+	 * @see #getIsAttenuating()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean IS_ATTENUATING_EDEFAULT = false;
+	protected static final Boolean IS_ATTENUATING_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isIsAttenuating() <em>Is Attenuating</em>}' attribute.
+	 * The cached value of the '{@link #getIsAttenuating() <em>Is Attenuating</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsAttenuating()
+	 * @see #getIsAttenuating()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean isAttenuating = IS_ATTENUATING_EDEFAULT;
+	protected Boolean isAttenuating = IS_ATTENUATING_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSoundScale() <em>Sound Scale</em>}' attribute.
@@ -105,7 +105,7 @@ public class IfcSoundPropertiesImpl extends IfcPropertySetDefinitionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsAttenuating() {
+	public Boolean getIsAttenuating() {
 		return isAttenuating;
 	}
 
@@ -114,8 +114,8 @@ public class IfcSoundPropertiesImpl extends IfcPropertySetDefinitionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsAttenuating(boolean newIsAttenuating) {
-		boolean oldIsAttenuating = isAttenuating;
+	public void setIsAttenuating(Boolean newIsAttenuating) {
+		Boolean oldIsAttenuating = isAttenuating;
 		isAttenuating = newIsAttenuating;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_SOUND_PROPERTIES__IS_ATTENUATING, oldIsAttenuating, isAttenuating));
@@ -208,7 +208,7 @@ public class IfcSoundPropertiesImpl extends IfcPropertySetDefinitionImpl impleme
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case FinalPackage.IFC_SOUND_PROPERTIES__IS_ATTENUATING:
-				return isIsAttenuating();
+				return getIsAttenuating();
 			case FinalPackage.IFC_SOUND_PROPERTIES__SOUND_SCALE:
 				return getSoundScale();
 			case FinalPackage.IFC_SOUND_PROPERTIES__SOUND_VALUES:
@@ -268,7 +268,7 @@ public class IfcSoundPropertiesImpl extends IfcPropertySetDefinitionImpl impleme
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FinalPackage.IFC_SOUND_PROPERTIES__IS_ATTENUATING:
-				return isAttenuating != IS_ATTENUATING_EDEFAULT;
+				return IS_ATTENUATING_EDEFAULT == null ? isAttenuating != null : !IS_ATTENUATING_EDEFAULT.equals(isAttenuating);
 			case FinalPackage.IFC_SOUND_PROPERTIES__SOUND_SCALE:
 				return SOUND_SCALE_EDEFAULT == null ? soundScale != null : !SOUND_SCALE_EDEFAULT.equals(soundScale);
 			case FinalPackage.IFC_SOUND_PROPERTIES__SOUND_VALUES:

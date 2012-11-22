@@ -52,7 +52,7 @@ public class IfcOffsetCurve3DImpl extends IfcCurveImpl implements IfcOffsetCurve
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double DISTANCE_EDEFAULT = 0.0;
+	protected static final Double DISTANCE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getDistance() <em>Distance</em>}' attribute.
@@ -62,7 +62,7 @@ public class IfcOffsetCurve3DImpl extends IfcCurveImpl implements IfcOffsetCurve
 	 * @generated
 	 * @ordered
 	 */
-	protected double distance = DISTANCE_EDEFAULT;
+	protected Double distance = DISTANCE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSelfIntersect() <em>Self Intersect</em>}' attribute.
@@ -161,7 +161,7 @@ public class IfcOffsetCurve3DImpl extends IfcCurveImpl implements IfcOffsetCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getDistance() {
+	public Double getDistance() {
 		return distance;
 	}
 
@@ -170,8 +170,8 @@ public class IfcOffsetCurve3DImpl extends IfcCurveImpl implements IfcOffsetCurve
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDistance(double newDistance) {
-		double oldDistance = distance;
+	public void setDistance(Double newDistance) {
+		Double oldDistance = distance;
 		distance = newDistance;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_OFFSET_CURVE3_D__DISTANCE, oldDistance, distance));
@@ -336,7 +336,7 @@ public class IfcOffsetCurve3DImpl extends IfcCurveImpl implements IfcOffsetCurve
 			case FinalPackage.IFC_OFFSET_CURVE3_D__BASIS_CURVE:
 				return basisCurve != null;
 			case FinalPackage.IFC_OFFSET_CURVE3_D__DISTANCE:
-				return distance != DISTANCE_EDEFAULT;
+				return DISTANCE_EDEFAULT == null ? distance != null : !DISTANCE_EDEFAULT.equals(distance);
 			case FinalPackage.IFC_OFFSET_CURVE3_D__SELF_INTERSECT:
 				return selfIntersect != SELF_INTERSECT_EDEFAULT;
 			case FinalPackage.IFC_OFFSET_CURVE3_D__REF_DIRECTION:

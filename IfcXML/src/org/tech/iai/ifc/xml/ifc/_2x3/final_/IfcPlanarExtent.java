@@ -30,13 +30,13 @@ public interface IfcPlanarExtent extends IfcGeometricRepresentationItem {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Size In X</em>' attribute.
-	 * @see #setSizeInX(double)
+	 * @see #setSizeInX(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcPlanarExtent_SizeInX()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='SizeInX' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getSizeInX();
+	Double getSizeInX();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcPlanarExtent#getSizeInX <em>Size In X</em>}' attribute.
@@ -46,7 +46,7 @@ public interface IfcPlanarExtent extends IfcGeometricRepresentationItem {
 	 * @see #getSizeInX()
 	 * @generated
 	 */
-	void setSizeInX(double value);
+	void setSizeInX(Double value);
 
 	/**
 	 * Returns the value of the '<em><b>Size In Y</b></em>' attribute.
@@ -57,13 +57,13 @@ public interface IfcPlanarExtent extends IfcGeometricRepresentationItem {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Size In Y</em>' attribute.
-	 * @see #setSizeInY(double)
+	 * @see #setSizeInY(Double)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcPlanarExtent_SizeInY()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasure" required="true"
 	 *        extendedMetaData="kind='element' name='SizeInY' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	double getSizeInY();
+	Double getSizeInY();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcPlanarExtent#getSizeInY <em>Size In Y</em>}' attribute.
@@ -73,6 +73,6 @@ public interface IfcPlanarExtent extends IfcGeometricRepresentationItem {
 	 * @see #getSizeInY()
 	 * @generated
 	 */
-	void setSizeInY(double value);
+	void setSizeInY(Double value);
 
 } // IfcPlanarExtent

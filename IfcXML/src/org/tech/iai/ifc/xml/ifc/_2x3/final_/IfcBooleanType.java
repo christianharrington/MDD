@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBooleanType#isValue <em>Value</em>}</li>
+ *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBooleanType#getValue <em>Value</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBooleanType#getId <em>Id</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBooleanType#getPath <em>Path</em>}</li>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBooleanType#getPos <em>Pos</em>}</li>
@@ -37,23 +37,23 @@ public interface IfcBooleanType extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(boolean)
+	 * @see #setValue(Boolean)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcBooleanType_Value()
 	 * @model unsettable="true" dataType="org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBoolean"
 	 *        extendedMetaData="name=':0' kind='simple'"
 	 * @generated
 	 */
-	boolean isValue();
+	Boolean getValue();
 
 	/**
-	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBooleanType#isValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcBooleanType#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #isValue()
+	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(boolean value);
+	void setValue(Boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

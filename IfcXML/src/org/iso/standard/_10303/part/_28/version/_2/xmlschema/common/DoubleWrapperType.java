@@ -37,13 +37,13 @@ public interface DoubleWrapperType extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(double)
+	 * @see #setValue(Double)
 	 * @see org.iso.standard._10303.part._28.version._2.xmlschema.common.CommonPackage#getDoubleWrapperType_Value()
-	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Double"
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.DoubleObject"
 	 *        extendedMetaData="name=':0' kind='simple'"
 	 * @generated
 	 */
-	double getValue();
+	Double getValue();
 
 	/**
 	 * Sets the value of the '{@link org.iso.standard._10303.part._28.version._2.xmlschema.common.DoubleWrapperType#getValue <em>Value</em>}' attribute.
@@ -53,7 +53,7 @@ public interface DoubleWrapperType extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(double value);
+	void setValue(Double value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
