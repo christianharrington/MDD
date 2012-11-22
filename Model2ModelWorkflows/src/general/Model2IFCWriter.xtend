@@ -1,6 +1,6 @@
 package general
 
-import IfcIO.IfcWriter
+//import IfcIO.IfcWriter
 import org.bimserver.ifc.IfcModel
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import general.WorkflowComponentWithSlot
@@ -15,7 +15,7 @@ class Model2IFCWriter extends WorkflowComponentWithSlot {
 	
 	override invoke(IWorkflowContext ctx) {
 		var IfcModel model = ctx.get(mainModelSlot) as IfcModel
-	    IfcWriter::SaveModel(model)
+//	    IfcWriter::SaveModel(model)
 	}
 	
 }
