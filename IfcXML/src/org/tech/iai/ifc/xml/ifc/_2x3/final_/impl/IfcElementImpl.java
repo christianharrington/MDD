@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -113,38 +114,9 @@ public abstract class IfcElementImpl extends IfcProductImpl implements IfcElemen
 	 */
 	public EList<IfcRelVoidsElement> getHasOpenings() {
 		if (hasOpenings == null) {
-			hasOpenings = new EObjectWithInverseResolvingEList<IfcRelVoidsElement>(IfcRelVoidsElement.class, this, FinalPackage.IFC_ELEMENT__HAS_OPENINGS, FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT);
+			hasOpenings = new EObjectResolvingEList<IfcRelVoidsElement>(IfcRelVoidsElement.class, this, FinalPackage.IFC_ELEMENT__HAS_OPENINGS);
 		}
 		return hasOpenings;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case FinalPackage.IFC_ELEMENT__HAS_OPENINGS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getHasOpenings()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case FinalPackage.IFC_ELEMENT__HAS_OPENINGS:
-				return ((InternalEList<?>)getHasOpenings()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

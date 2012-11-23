@@ -27744,7 +27744,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasOpenings" upperBound="-1"
-        eType="#//IfcRelVoidsElement" unsettable="true" eOpposite="#//IfcRelVoidsElement/relatingBuildingElement"/>
+        eType="#//IfcRelVoidsElement" unsettable="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IfcElementarySurface" abstract="true"
       eSuperTypes="#//IfcSurface">
@@ -40057,7 +40057,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relatingBuildingElement"
-        eType="#//IfcElement" eOpposite="#//IfcElement/HasOpenings">
+        eType="#//RelatingBuildingElementType">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="RelatingBuildingElement"/>

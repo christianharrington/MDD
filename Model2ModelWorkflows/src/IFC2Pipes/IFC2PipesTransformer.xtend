@@ -30,7 +30,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		var Opening op = pipesFactory.createOpening()
 		op.name = ifcOpening.name
 		op.description = ifcOpening.description
-		var placement = ifcOpening.objectPlacement as IfcLocalPlacement
+		var placement = ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement
 		addLocalPlacement(op, placement)
 		
 		pipesModel.elements.add(op)

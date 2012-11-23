@@ -23,7 +23,6 @@ package org.tech.iai.ifc.xml.ifc._2x3.final_;
 public interface IfcRelVoidsElement extends IfcRelConnects {
 	/**
 	 * Returns the value of the '<em><b>Relating Building Element</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement#getHasOpenings <em>Has Openings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Relating Building Element</em>' reference isn't clear,
@@ -31,14 +30,12 @@ public interface IfcRelVoidsElement extends IfcRelConnects {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relating Building Element</em>' reference.
-	 * @see #setRelatingBuildingElement(IfcElement)
+	 * @see #setRelatingBuildingElement(RelatingBuildingElementType)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcRelVoidsElement_RelatingBuildingElement()
-	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement#getHasOpenings
-	 * @model opposite="HasOpenings"
-	 *        extendedMetaData="kind='element' name='RelatingBuildingElement' namespace='##targetNamespace'"
+	 * @model extendedMetaData="kind='element' name='RelatingBuildingElement' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	IfcElement getRelatingBuildingElement();
+	RelatingBuildingElementType getRelatingBuildingElement();
 
 	/**
 	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement#getRelatingBuildingElement <em>Relating Building Element</em>}' reference.
@@ -48,7 +45,7 @@ public interface IfcRelVoidsElement extends IfcRelConnects {
 	 * @see #getRelatingBuildingElement()
 	 * @generated
 	 */
-	void setRelatingBuildingElement(IfcElement value);
+	void setRelatingBuildingElement(RelatingBuildingElementType value);
 
 	/**
 	 * Returns the value of the '<em><b>Related Opening Element</b></em>' containment reference.
