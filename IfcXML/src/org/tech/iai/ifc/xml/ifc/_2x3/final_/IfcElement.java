@@ -2,6 +2,7 @@
  */
 package org.tech.iai.ifc.xml.ifc._2x3.final_;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,6 +13,7 @@ package org.tech.iai.ifc.xml.ifc._2x3.final_;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement#getTag <em>Tag</em>}</li>
+ *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement#getHasOpenings <em>Has Openings</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,5 +49,23 @@ public interface IfcElement extends IfcProduct {
 	 * @generated
 	 */
 	void setTag(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Has Openings</b></em>' reference list.
+	 * The list contents are of type {@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement}.
+	 * It is bidirectional and its opposite is '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement#getRelatingBuildingElement <em>Relating Building Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Has Openings</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Has Openings</em>' reference list.
+	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcElement_HasOpenings()
+	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement#getRelatingBuildingElement
+	 * @model opposite="relatingBuildingElement" unsettable="true"
+	 * @generated
+	 */
+	EList<IfcRelVoidsElement> getHasOpenings();
 
 } // IfcElement

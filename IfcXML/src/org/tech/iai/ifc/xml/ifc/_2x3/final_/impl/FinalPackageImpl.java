@@ -43651,6 +43651,15 @@ public class FinalPackageImpl extends EPackageImpl implements FinalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIfcElement_HasOpenings() {
+        return (EReference)getIfcElement().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIfcElementarySurface() {
 		if (ifcElementarySurfaceEClass == null) {
 			ifcElementarySurfaceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FinalPackage.eNS_URI).getEClassifiers().get(612);
