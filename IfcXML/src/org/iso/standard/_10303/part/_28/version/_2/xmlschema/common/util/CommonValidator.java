@@ -12,11 +12,8 @@ import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-
 import org.eclipse.emf.ecore.xml.type.util.XMLTypeValidator;
 
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.*;
