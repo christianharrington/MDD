@@ -11,9 +11,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage;
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement;
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement;
 import org.tech.iai.ifc.xml.ifc._2x3.final_.RelatedOpeningElementType;
-import org.tech.iai.ifc.xml.ifc._2x3.final_.RelatingBuildingElementType;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,14 +31,14 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.RelatingBuildingElementType;
  */
 public class IfcRelVoidsElementImpl extends IfcRelConnectsImpl implements IfcRelVoidsElement {
 	/**
-	 * The cached value of the '{@link #getRelatingBuildingElement() <em>Relating Building Element</em>}' containment reference.
+	 * The cached value of the '{@link #getRelatingBuildingElement() <em>Relating Building Element</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRelatingBuildingElement()
 	 * @generated
 	 * @ordered
 	 */
-	protected RelatingBuildingElementType relatingBuildingElement;
+	protected IfcElement relatingBuildingElement;
 
 	/**
 	 * The cached value of the '{@link #getRelatedOpeningElement() <em>Related Opening Element</em>}' containment reference.
@@ -74,7 +74,15 @@ public class IfcRelVoidsElementImpl extends IfcRelConnectsImpl implements IfcRel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RelatingBuildingElementType getRelatingBuildingElement() {
+	public IfcElement getRelatingBuildingElement() {
+		if (relatingBuildingElement != null && relatingBuildingElement.eIsProxy()) {
+			InternalEObject oldRelatingBuildingElement = (InternalEObject)relatingBuildingElement;
+			relatingBuildingElement = (IfcElement)eResolveProxy(oldRelatingBuildingElement);
+			if (relatingBuildingElement != oldRelatingBuildingElement) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT, oldRelatingBuildingElement, relatingBuildingElement));
+			}
+		}
 		return relatingBuildingElement;
 	}
 
@@ -83,8 +91,17 @@ public class IfcRelVoidsElementImpl extends IfcRelConnectsImpl implements IfcRel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRelatingBuildingElement(RelatingBuildingElementType newRelatingBuildingElement, NotificationChain msgs) {
-		RelatingBuildingElementType oldRelatingBuildingElement = relatingBuildingElement;
+	public IfcElement basicGetRelatingBuildingElement() {
+		return relatingBuildingElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRelatingBuildingElement(IfcElement newRelatingBuildingElement, NotificationChain msgs) {
+		IfcElement oldRelatingBuildingElement = relatingBuildingElement;
 		relatingBuildingElement = newRelatingBuildingElement;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT, oldRelatingBuildingElement, newRelatingBuildingElement);
@@ -98,13 +115,13 @@ public class IfcRelVoidsElementImpl extends IfcRelConnectsImpl implements IfcRel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRelatingBuildingElement(RelatingBuildingElementType newRelatingBuildingElement) {
+	public void setRelatingBuildingElement(IfcElement newRelatingBuildingElement) {
 		if (newRelatingBuildingElement != relatingBuildingElement) {
 			NotificationChain msgs = null;
 			if (relatingBuildingElement != null)
-				msgs = ((InternalEObject)relatingBuildingElement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT, null, msgs);
+				msgs = ((InternalEObject)relatingBuildingElement).eInverseRemove(this, FinalPackage.IFC_ELEMENT__HAS_OPENINGS, IfcElement.class, msgs);
 			if (newRelatingBuildingElement != null)
-				msgs = ((InternalEObject)newRelatingBuildingElement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT, null, msgs);
+				msgs = ((InternalEObject)newRelatingBuildingElement).eInverseAdd(this, FinalPackage.IFC_ELEMENT__HAS_OPENINGS, IfcElement.class, msgs);
 			msgs = basicSetRelatingBuildingElement(newRelatingBuildingElement, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -161,6 +178,22 @@ public class IfcRelVoidsElementImpl extends IfcRelConnectsImpl implements IfcRel
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT:
+				if (relatingBuildingElement != null)
+					msgs = ((InternalEObject)relatingBuildingElement).eInverseRemove(this, FinalPackage.IFC_ELEMENT__HAS_OPENINGS, IfcElement.class, msgs);
+				return basicSetRelatingBuildingElement((IfcElement)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT:
@@ -180,7 +213,8 @@ public class IfcRelVoidsElementImpl extends IfcRelConnectsImpl implements IfcRel
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT:
-				return getRelatingBuildingElement();
+				if (resolve) return getRelatingBuildingElement();
+				return basicGetRelatingBuildingElement();
 			case FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATED_OPENING_ELEMENT:
 				return getRelatedOpeningElement();
 		}
@@ -196,7 +230,7 @@ public class IfcRelVoidsElementImpl extends IfcRelConnectsImpl implements IfcRel
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT:
-				setRelatingBuildingElement((RelatingBuildingElementType)newValue);
+				setRelatingBuildingElement((IfcElement)newValue);
 				return;
 			case FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATED_OPENING_ELEMENT:
 				setRelatedOpeningElement((RelatedOpeningElementType)newValue);
@@ -214,7 +248,7 @@ public class IfcRelVoidsElementImpl extends IfcRelConnectsImpl implements IfcRel
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT:
-				setRelatingBuildingElement((RelatingBuildingElementType)null);
+				setRelatingBuildingElement((IfcElement)null);
 				return;
 			case FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATED_OPENING_ELEMENT:
 				setRelatedOpeningElement((RelatedOpeningElementType)null);

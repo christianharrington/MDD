@@ -22,31 +22,33 @@ package org.tech.iai.ifc.xml.ifc._2x3.final_;
  */
 public interface IfcRelVoidsElement extends IfcRelConnects {
 	/**
-	 * Returns the value of the '<em><b>Relating Building Element</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Relating Building Element</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement#getHasOpenings <em>Has Openings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Relating Building Element</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Relating Building Element</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relating Building Element</em>' containment reference.
-	 * @see #setRelatingBuildingElement(RelatingBuildingElementType)
+	 * @return the value of the '<em>Relating Building Element</em>' reference.
+	 * @see #setRelatingBuildingElement(IfcElement)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcRelVoidsElement_RelatingBuildingElement()
-	 * @model containment="true" required="true"
+	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement#getHasOpenings
+	 * @model opposite="HasOpenings"
 	 *        extendedMetaData="kind='element' name='RelatingBuildingElement' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	RelatingBuildingElementType getRelatingBuildingElement();
+	IfcElement getRelatingBuildingElement();
 
 	/**
-	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement#getRelatingBuildingElement <em>Relating Building Element</em>}' containment reference.
+	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement#getRelatingBuildingElement <em>Relating Building Element</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Relating Building Element</em>' containment reference.
+	 * @param value the new value of the '<em>Relating Building Element</em>' reference.
 	 * @see #getRelatingBuildingElement()
 	 * @generated
 	 */
-	void setRelatingBuildingElement(RelatingBuildingElementType value);
+	void setRelatingBuildingElement(IfcElement value);
 
 	/**
 	 * Returns the value of the '<em><b>Related Opening Element</b></em>' containment reference.
