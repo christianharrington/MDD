@@ -36,7 +36,7 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float X_EDEFAULT = 0.0F;
+	protected static final double X_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
@@ -46,7 +46,7 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * @generated
 	 * @ordered
 	 */
-	protected float x = X_EDEFAULT;
+	protected double x = X_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -56,7 +56,7 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float Y_EDEFAULT = 0.0F;
+	protected static final double Y_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -66,7 +66,7 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * @generated
 	 * @ordered
 	 */
-	protected float y = Y_EDEFAULT;
+	protected double y = Y_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getZ() <em>Z</em>}' attribute.
@@ -76,7 +76,7 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float Z_EDEFAULT = 0.0F;
+	protected static final double Z_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getZ() <em>Z</em>}' attribute.
@@ -86,7 +86,7 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * @generated
 	 * @ordered
 	 */
-	protected float z = Z_EDEFAULT;
+	protected double z = Z_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,7 +112,7 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getX() {
+	public double getX() {
 		return x;
 	}
 
@@ -121,8 +121,8 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setX(float newX) {
-		float oldX = x;
+	public void setX(double newX) {
+		double oldX = x;
 		x = newX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.DIRECTION__X, oldX, x));
@@ -133,7 +133,7 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getY() {
+	public double getY() {
 		return y;
 	}
 
@@ -142,8 +142,8 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setY(float newY) {
-		float oldY = y;
+	public void setY(double newY) {
+		double oldY = y;
 		y = newY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.DIRECTION__Y, oldY, y));
@@ -154,7 +154,7 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getZ() {
+	public double getZ() {
 		return z;
 	}
 
@@ -163,8 +163,8 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setZ(float newZ) {
-		float oldZ = z;
+	public void setZ(double newZ) {
+		double oldZ = z;
 		z = newZ;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.DIRECTION__Z, oldZ, z));
@@ -197,13 +197,13 @@ public class DirectionImpl extends EObjectImpl implements Direction {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PipesPackage.DIRECTION__X:
-				setX((Float)newValue);
+				setX((Double)newValue);
 				return;
 			case PipesPackage.DIRECTION__Y:
-				setY((Float)newValue);
+				setY((Double)newValue);
 				return;
 			case PipesPackage.DIRECTION__Z:
-				setZ((Float)newValue);
+				setZ((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

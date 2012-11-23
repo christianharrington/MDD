@@ -32,12 +32,12 @@ public interface Direction extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
-	 * @see #setX(float)
+	 * @see #setX(double)
 	 * @see pipes.PipesPackage#getDirection_X()
 	 * @model required="true"
 	 * @generated
 	 */
-	float getX();
+	double getX();
 
 	/**
 	 * Sets the value of the '{@link pipes.Direction#getX <em>X</em>}' attribute.
@@ -47,7 +47,7 @@ public interface Direction extends EObject {
 	 * @see #getX()
 	 * @generated
 	 */
-	void setX(float value);
+	void setX(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Y</b></em>' attribute.
@@ -58,12 +58,12 @@ public interface Direction extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
-	 * @see #setY(float)
+	 * @see #setY(double)
 	 * @see pipes.PipesPackage#getDirection_Y()
 	 * @model required="true"
 	 * @generated
 	 */
-	float getY();
+	double getY();
 
 	/**
 	 * Sets the value of the '{@link pipes.Direction#getY <em>Y</em>}' attribute.
@@ -73,7 +73,7 @@ public interface Direction extends EObject {
 	 * @see #getY()
 	 * @generated
 	 */
-	void setY(float value);
+	void setY(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Z</b></em>' attribute.
@@ -84,12 +84,12 @@ public interface Direction extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Z</em>' attribute.
-	 * @see #setZ(float)
+	 * @see #setZ(double)
 	 * @see pipes.PipesPackage#getDirection_Z()
 	 * @model
 	 * @generated
 	 */
-	float getZ();
+	double getZ();
 
 	/**
 	 * Sets the value of the '{@link pipes.Direction#getZ <em>Z</em>}' attribute.
@@ -99,6 +99,6 @@ public interface Direction extends EObject {
 	 * @see #getZ()
 	 * @generated
 	 */
-	void setZ(float value);
+	void setZ(double value);
 
 } // Direction

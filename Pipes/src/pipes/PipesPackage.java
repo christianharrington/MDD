@@ -589,13 +589,40 @@ public interface PipesPackage extends EPackage {
 	int PRODUCT = 9;
 
 	/**
+	 * The feature id for the '<em><b>GUID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__GUID = GUID_ELEMENT__GUID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__NAME = GUID_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__DESCRIPTION = GUID_ELEMENT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Placement</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__PLACEMENT = 0;
+	int PRODUCT__PLACEMENT = GUID_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Product</em>' class.
@@ -604,7 +631,7 @@ public interface PipesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT_FEATURE_COUNT = 1;
+	int PRODUCT_FEATURE_COUNT = GUID_ELEMENT_FEATURE_COUNT + 1;
 
 
 	/**

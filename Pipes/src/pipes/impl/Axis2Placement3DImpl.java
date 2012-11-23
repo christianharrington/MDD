@@ -39,7 +39,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float CARTESIAN_X_EDEFAULT = 0.0F;
+	protected static final double CARTESIAN_X_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getCartesianX() <em>Cartesian X</em>}' attribute.
@@ -49,7 +49,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * @generated
 	 * @ordered
 	 */
-	protected float cartesianX = CARTESIAN_X_EDEFAULT;
+	protected double cartesianX = CARTESIAN_X_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCartesianY() <em>Cartesian Y</em>}' attribute.
@@ -59,7 +59,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float CARTESIAN_Y_EDEFAULT = 0.0F;
+	protected static final double CARTESIAN_Y_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getCartesianY() <em>Cartesian Y</em>}' attribute.
@@ -69,7 +69,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * @generated
 	 * @ordered
 	 */
-	protected float cartesianY = CARTESIAN_Y_EDEFAULT;
+	protected double cartesianY = CARTESIAN_Y_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCartesianZ() <em>Cartesian Z</em>}' attribute.
@@ -79,7 +79,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float CARTESIAN_Z_EDEFAULT = 0.0F;
+	protected static final double CARTESIAN_Z_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getCartesianZ() <em>Cartesian Z</em>}' attribute.
@@ -89,7 +89,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * @generated
 	 * @ordered
 	 */
-	protected float cartesianZ = CARTESIAN_Z_EDEFAULT;
+	protected double cartesianZ = CARTESIAN_Z_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getAxis() <em>Axis</em>}' reference.
@@ -135,7 +135,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getCartesianX() {
+	public double getCartesianX() {
 		return cartesianX;
 	}
 
@@ -144,8 +144,8 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCartesianX(float newCartesianX) {
-		float oldCartesianX = cartesianX;
+	public void setCartesianX(double newCartesianX) {
+		double oldCartesianX = cartesianX;
 		cartesianX = newCartesianX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_X, oldCartesianX, cartesianX));
@@ -156,7 +156,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getCartesianY() {
+	public double getCartesianY() {
 		return cartesianY;
 	}
 
@@ -165,8 +165,8 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCartesianY(float newCartesianY) {
-		float oldCartesianY = cartesianY;
+	public void setCartesianY(double newCartesianY) {
+		double oldCartesianY = cartesianY;
 		cartesianY = newCartesianY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Y, oldCartesianY, cartesianY));
@@ -177,7 +177,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getCartesianZ() {
+	public double getCartesianZ() {
 		return cartesianZ;
 	}
 
@@ -186,8 +186,8 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCartesianZ(float newCartesianZ) {
-		float oldCartesianZ = cartesianZ;
+	public void setCartesianZ(double newCartesianZ) {
+		double oldCartesianZ = cartesianZ;
 		cartesianZ = newCartesianZ;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z, oldCartesianZ, cartesianZ));
@@ -302,13 +302,13 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_X:
-				setCartesianX((Float)newValue);
+				setCartesianX((Double)newValue);
 				return;
 			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Y:
-				setCartesianY((Float)newValue);
+				setCartesianY((Double)newValue);
 				return;
 			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z:
-				setCartesianZ((Float)newValue);
+				setCartesianZ((Double)newValue);
 				return;
 			case PipesPackage.AXIS2_PLACEMENT3_D__AXIS:
 				setAxis((Direction)newValue);
