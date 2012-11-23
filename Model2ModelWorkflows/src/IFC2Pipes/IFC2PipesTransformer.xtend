@@ -53,37 +53,37 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		var Direction axisDir = pipesFactory.createDirection
 		var Direction refDir = pipesFactory.createDirection
 		var IfcAxis2Placement3D ifcAxis = ifcLocalPlacement.relativePlacement as IfcAxis2Placement3D
-//TODO update this to new Ifc metamodel!
-//		var IfcCartesianPoint loc = ifcAxis.location
-//		
-//		//Coordibates are X,Y,Z http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcgeometryresource/lexical/ifccartesianpoint.htm
-//		if(loc.coordinates.size != 3){
-//			println("Non 3D cartesian point for local placement. Count " + loc.coordinates.size)
-//			System::exit(1)
-//		}
-//		axis.cartesianX = (float)loc.coordinates.get(0)
-//		axis.cartesianY = (float)loc.coordinates.get(1)
-//		axis.cartesianZ = (float)loc.coordinates.get(2)
-//		
-//		//If Axis and/or RefDirection is omitted, these directions are taken from the geometric coordinate system.
-//		//We add these if they are there. If any is missing we treat it as undefined - documentation only states the above
-//		if(ifcAxis.axis.directionRatios.size == 3){		
-//			axisDir.x = (float)ifcAxis.axis.directionRatios.get(0)
-//			axisDir.y = (float)ifcAxis.axis.directionRatios.get(1)
-//			axisDir.z = (float)ifcAxis.axis.directionRatios.get(2)
-//		}
-//		
-//		if(ifcAxis.refDirection.directionRatios.size == 3){		
-//			refDir.x = (float)ifcAxis.refDirection.directionRatios.get(0)
-//			refDir.y = (float)ifcAxis.refDirection.directionRatios.get(1)
-//			refDir.z = (float)ifcAxis.refDirection.directionRatios.get(2)
-//		}
-//		
-//		axis.axis = axisDir
-//		axis.refDirection = refDir
-//		lp.axis2placement3d = axis
-//		
-//		product.placement = lp;
+		
+		var IfcCartesianPoint loc = ifcAxis.location.ifcCartesianPoint
+		
+		//Coordibates are X,Y,Z http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcgeometryresource/lexical/ifccartesianpoint.htm
+		if(loc.coordinates.ifcLengthMeasure.size != 3){
+			println("Non 3D cartesian point for local placement. Count " + loc.coordinates.ifcLengthMeasure.size)
+			System::exit(1)
+		}
+		axis.cartesianX = (float)loc.coordinates.ifcLengthMeasure.get(0)
+		axis.cartesianY = (float)loc.coordinates.ifcLengthMeasure.get(1)
+		axis.cartesianZ = (float)loc.coordinates.ifcLengthMeasure.get(2)
+		
+		//If Axis and/or RefDirection is omitted, these directions are taken from the geometric coordinate system.
+		//We add these if they are there. If any is missing we treat it as undefined - documentation only states the above
+		if(ifcAxis.axis.ifcDirection.directionRatios.arraySize == 3){		
+			axisDir.x = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(0)
+			axisDir.y = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(1)
+			axisDir.z = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(2)
+		}
+		
+		if(ifcAxis.refDirection.ifcDirection.directionRatios.arraySize == 3){		
+			refDir.x = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(0)
+			refDir.y = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(1)
+			refDir.z = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(2)
+		}
+		
+		axis.axis = axisDir
+		axis.refDirection = refDir
+		lp.axis2placement3d = axis
+		
+		product.placement = lp;
 	}
 	
 	//def private addDirection(Axis2Placement3D a2p, )
