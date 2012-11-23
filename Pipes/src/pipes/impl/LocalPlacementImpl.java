@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import pipes.Axis2Placement3D;
 import pipes.LocalPlacement;
 import pipes.PipesPackage;
-import pipes.Product;
 
 /**
  * <!-- begin-user-doc -->

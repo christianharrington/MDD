@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
-import org.bimserver.LocalDevPluginLoader;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.step.serializer.IfcStepSerializer;
 import org.bimserver.models.ifc2x3tc1.Ifc2x3tc1Factory;
