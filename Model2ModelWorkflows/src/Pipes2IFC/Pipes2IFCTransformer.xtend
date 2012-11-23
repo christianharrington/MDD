@@ -14,6 +14,17 @@ import java.util.HashSet
 import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.FinalFactoryImpl
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
+import pipes.GUIDElement
+import org.tech.iai.ifc.xml.ifc._2x3.final_.AxisType2
+import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.AxisType2Impl
+import pipes.Direction
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcDirection
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcWall
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRoot
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
@@ -31,66 +42,115 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}*/
 	
 	HashSet<String> markedSet
+	ArrayList<IfcProduct> extrModel
 	
-	def dispatch updateIfcElement(FlowSegment o, IfcProduct product){
-		if(!markedSet.contains(o.GUID))
-		{
-			markedSet.add(o.GUID)
-		}
-		
+	def private updateMetaData(GUIDElement o, IfcRoot product) {
+		product.setName(o.name)
+		product.setDescription(o.description)
 	}
 	
-	def dispatch updateIfcElement(Opening o, IfcProduct product){
-		if(!markedSet.contains(o.GUID))
-		{
-			markedSet.add(o.GUID)
-		}
-	}
-	
-	def dispatch updateIfcElement(Wall o, IfcProduct product){
-		if(!markedSet.contains(o.GUID))
-		{
-			markedSet.add(o.GUID)
-		}
-	}
-	
-	def dispatch updateIfcElement(WallRelation o, IfcProduct product){
-		if(!markedSet.contains(o.GUID))
-		{
-			markedSet.add(o.GUID)
-		}
-	}
-	
-	def dispatch updateIfcElement(LocalPlacement o, IfcProduct product){
-		if(!markedSet.contains(o.GUID))
-		{
-			markedSet.add(o.GUID)
-		}
-	}
-	
-	def dispatch updateIfcElement(Axis2Placement3D o, IfcProduct product){
+	def dispatch updateIfcElement(FlowSegment o, IfcFlowSegment product){
 		if(!markedSet.contains(o.GUID))
 		{
 			markedSet.add(o.GUID)
 			
-			val axis = product as IfcAxis2Placement3D
-			//axis.axis.directionRatios = new ArrayList<Double>(o.axis.x, o.axis.y, o.axis.z) 
+			updateMetaData(o, product)
 			
-			val refdir = ifcFactory.createIfcDirection()
-			//new IfcDirection
-			//axis.refDirection = refdir.
-			//new ArrayList<Double>(o.refDirection.x, o.refDirection.y, o.refDirection.z)
+			// References
+			updateIfcElement(o.placement, product.objectPlacement.ifcObjectPlacement as IfcLocalPlacement)
 		}
 		
+	}
+	
+	def dispatch updateIfcElement(Opening o, IfcOpeningElement product){
+		if(!markedSet.contains(o.GUID))
+		{
+			markedSet.add(o.GUID)
+			
+			updateMetaData(o, product)
+			
+			
+			o.walls.forEach[w |
+				extrModel.forEach[p |
+					if(w.GUID == p.globalId) {
+						updateIfcElement(w, p)
+					}
+				]
+			]
+			updateIfcElement(o.placement, product.objectPlacement.ifcObjectPlacement as IfcLocalPlacement)
+		}
+	}
+	
+	def dispatch updateIfcElement(Wall o, IfcWall product){
+		if(!markedSet.contains(o.GUID))
+		{
+			markedSet.add(o.GUID)
+			
+			updateMetaData(o, product)
+			
+			o.openings.forEach[w |
+				extrModel.forEach[p |
+					if(w.GUID == p.globalId) {
+						updateIfcElement(w, p)
+					}					
+				]
+			]
+			
+			true	
+		}
+	}
+	
+	def dispatch updateIfcElement(WallRelation o, IfcRelVoidsElement product){
+		if(!markedSet.contains(o.GUID))
+		{
+			markedSet.add(o.GUID)
+			updateMetaData(o, product)
+			if(product.relatingBuildingElement instanceof IfcWall) {
+				updateIfcElement(o.wall, product.relatingBuildingElement as IfcWall)
+			}
+			if(product.relatedOpeningElement instanceof IfcOpeningElement) {
+				updateIfcElement(o.opening, product.relatedOpeningElement as IfcOpeningElement)
+			}
+			true
+		}
+	}
+	
+	def dispatch updateIfcElement(LocalPlacement o, IfcLocalPlacement product){
+		if(!markedSet.contains(o.GUID))
+		{
+			markedSet.add(o.GUID)
+	
+			updateIfcElement(o.axis2placement3d, product.relativePlacement.ifcAxis2Placement3D)		
+		}
+	}
+	
+	def dispatch updateIfcElement(Axis2Placement3D o, IfcAxis2Placement3D product){
+		if(!markedSet.contains(o.GUID))
+		{
+			markedSet.add(o.GUID)
+			var lengthMeasure = product.location.ifcCartesianPoint.coordinates.ifcLengthMeasure  
+			lengthMeasure.get(0).setValue(o.cartesianX)
+			lengthMeasure.get(1).setValue(o.cartesianY)
+			lengthMeasure.get(2).setValue(o.cartesianZ)
+			updateIfcElement(o.axis, product.axis.ifcDirection)
+			updateIfcElement(o.refDirection, product.refDirection.ifcDirection)
+		}
+	}
+		
+	def dispatch updateIfcElement(Direction o, IfcDirection product) {
+		var ratios = product.directionRatios.doubleWrapper
+		ratios.get(0).setValue(o.x)
+		ratios.get(1).setValue(o.y)
+		ratios.get(2).setValue(o.z)
 		true
 	}
-	
 
 	override invoke(IWorkflowContext ctx) {
 		
 		//Initialization
 		val pipesModel = ctx.get(pipesOpeningsSlot) as Model
 		val extractedModel = ctx.get(extractModelSlot) as ArrayList<IfcProduct>
+		extrModel = extractedModel
 		
 		markedSet = new HashSet<String>()
 		ifcFactory = new FinalFactoryImpl()
