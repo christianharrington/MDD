@@ -2,19 +2,30 @@ module IFC2Pipes.IFC2Pipes
 
 import general.IFC2ModelReader
 
+var fileSlot = 'fileSlot'
 var modelSlot = 'model'
 var emSlot = 'extractedModelSlot'
 var poSlot = 'pipesOpeningsSlot'
-var IFCFilePath = 'NanoLabBuilding/NanoBuilding_v2.ifc'
-var schema = '../BIMServerConnectionTest/IFC2X3_TC1.exp'
+//var IFCFilePath = 'NanoLabBuilding/Merging_Test.2.ifcxml'
+//var schema = '../BIMServerConnectionTest/IFC2X3_TC1.exp'
 var xmiWritePath = 'instance.xmi'
 
+var server = "pillar.christianharrington.com"
+var user = "cnha@itu.dk"
+var password = "password"
+var poid = "33399"
+
 Workflow {
+	component = general.BimServer2XMLFileWriter {
+		server = server
+		user = user
+		password = password
+		poid = poid
+	}
 	
 	component = IFC2ModelReader {
 		mainModelSlot = modelSlot
-		file = IFCFilePath
-		schema = schema
+		file = fileSlot
 	}
 	
 	component = general.IFCPipesOpeningsExtractor {
