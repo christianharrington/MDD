@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface Product extends EObject {
+public interface Product extends GUIDElement {
 
 	/**
 	 * Returns the value of the '<em><b>Placement</b></em>' reference.

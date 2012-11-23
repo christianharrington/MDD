@@ -26,7 +26,7 @@ import pipes.Product;
  *
  * @generated
  */
-public abstract class ProductImpl extends EObjectImpl implements Product {
+public abstract class ProductImpl extends GUIDElementImpl implements Product {
 	/**
 	 * The cached value of the '{@link #getPlacement() <em>Placement</em>}' reference.
 	 * <!-- begin-user-doc -->

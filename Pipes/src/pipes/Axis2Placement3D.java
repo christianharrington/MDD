@@ -33,12 +33,12 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cartesian X</em>' attribute.
-	 * @see #setCartesianX(float)
+	 * @see #setCartesianX(double)
 	 * @see pipes.PipesPackage#getAxis2Placement3D_CartesianX()
 	 * @model required="true"
 	 * @generated
 	 */
-	float getCartesianX();
+	double getCartesianX();
 
 	/**
 	 * Sets the value of the '{@link pipes.Axis2Placement3D#getCartesianX <em>Cartesian X</em>}' attribute.
@@ -48,7 +48,7 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * @see #getCartesianX()
 	 * @generated
 	 */
-	void setCartesianX(float value);
+	void setCartesianX(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Cartesian Y</b></em>' attribute.
@@ -59,12 +59,12 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cartesian Y</em>' attribute.
-	 * @see #setCartesianY(float)
+	 * @see #setCartesianY(double)
 	 * @see pipes.PipesPackage#getAxis2Placement3D_CartesianY()
 	 * @model required="true"
 	 * @generated
 	 */
-	float getCartesianY();
+	double getCartesianY();
 
 	/**
 	 * Sets the value of the '{@link pipes.Axis2Placement3D#getCartesianY <em>Cartesian Y</em>}' attribute.
@@ -74,7 +74,7 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * @see #getCartesianY()
 	 * @generated
 	 */
-	void setCartesianY(float value);
+	void setCartesianY(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Cartesian Z</b></em>' attribute.
@@ -85,12 +85,12 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cartesian Z</em>' attribute.
-	 * @see #setCartesianZ(float)
+	 * @see #setCartesianZ(double)
 	 * @see pipes.PipesPackage#getAxis2Placement3D_CartesianZ()
 	 * @model required="true"
 	 * @generated
 	 */
-	float getCartesianZ();
+	double getCartesianZ();
 
 	/**
 	 * Sets the value of the '{@link pipes.Axis2Placement3D#getCartesianZ <em>Cartesian Z</em>}' attribute.
@@ -100,7 +100,7 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * @see #getCartesianZ()
 	 * @generated
 	 */
-	void setCartesianZ(float value);
+	void setCartesianZ(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Axis</b></em>' reference.

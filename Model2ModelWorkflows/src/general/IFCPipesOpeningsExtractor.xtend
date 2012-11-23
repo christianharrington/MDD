@@ -24,7 +24,10 @@ class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 		
 		val list = new ArrayList<IfcProduct>()
 		
-		openings.forEach[list.add(it)]
+		openings.forEach[
+			list.add(it)
+			println("Opening: " + it)
+		]
 		flows.forEach[
 			if(flowIsPipe(it)) 
 				list.add(it)

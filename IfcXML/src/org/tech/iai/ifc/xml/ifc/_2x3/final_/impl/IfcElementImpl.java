@@ -2,14 +2,24 @@
  */
 package org.tech.iai.ifc.xml.ifc._2x3.final_.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage;
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement;
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,6 +29,7 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcElementImpl#getTag <em>Tag</em>}</li>
+ *   <li>{@link org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcElementImpl#getHasOpenings <em>Has Openings</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,6 +55,16 @@ public abstract class IfcElementImpl extends IfcProductImpl implements IfcElemen
 	 * @ordered
 	 */
 	protected String tag = TAG_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getHasOpenings() <em>Has Openings</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHasOpenings()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IfcRelVoidsElement> hasOpenings;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,11 +111,54 @@ public abstract class IfcElementImpl extends IfcProductImpl implements IfcElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<IfcRelVoidsElement> getHasOpenings() {
+		if (hasOpenings == null) {
+			hasOpenings = new EObjectWithInverseResolvingEList<IfcRelVoidsElement>(IfcRelVoidsElement.class, this, FinalPackage.IFC_ELEMENT__HAS_OPENINGS, FinalPackage.IFC_REL_VOIDS_ELEMENT__RELATING_BUILDING_ELEMENT);
+		}
+		return hasOpenings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FinalPackage.IFC_ELEMENT__HAS_OPENINGS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getHasOpenings()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FinalPackage.IFC_ELEMENT__HAS_OPENINGS:
+				return ((InternalEList<?>)getHasOpenings()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case FinalPackage.IFC_ELEMENT__TAG:
 				return getTag();
+			case FinalPackage.IFC_ELEMENT__HAS_OPENINGS:
+				return getHasOpenings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -104,11 +168,16 @@ public abstract class IfcElementImpl extends IfcProductImpl implements IfcElemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FinalPackage.IFC_ELEMENT__TAG:
 				setTag((String)newValue);
+				return;
+			case FinalPackage.IFC_ELEMENT__HAS_OPENINGS:
+				getHasOpenings().clear();
+				getHasOpenings().addAll((Collection<? extends IfcRelVoidsElement>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -125,6 +194,9 @@ public abstract class IfcElementImpl extends IfcProductImpl implements IfcElemen
 			case FinalPackage.IFC_ELEMENT__TAG:
 				setTag(TAG_EDEFAULT);
 				return;
+			case FinalPackage.IFC_ELEMENT__HAS_OPENINGS:
+				getHasOpenings().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -139,6 +211,8 @@ public abstract class IfcElementImpl extends IfcProductImpl implements IfcElemen
 		switch (featureID) {
 			case FinalPackage.IFC_ELEMENT__TAG:
 				return TAG_EDEFAULT == null ? tag != null : !TAG_EDEFAULT.equals(tag);
+			case FinalPackage.IFC_ELEMENT__HAS_OPENINGS:
+				return hasOpenings != null && !hasOpenings.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

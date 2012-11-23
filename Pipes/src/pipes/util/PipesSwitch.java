@@ -69,16 +69,16 @@ public class PipesSwitch<T> extends Switch<T> {
 			case PipesPackage.WALL: {
 				Wall wall = (Wall)theEObject;
 				T result = caseWall(wall);
-				if (result == null) result = caseGUIDElement(wall);
 				if (result == null) result = caseProduct(wall);
+				if (result == null) result = caseGUIDElement(wall);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PipesPackage.OPENING: {
 				Opening opening = (Opening)theEObject;
 				T result = caseOpening(opening);
-				if (result == null) result = caseGUIDElement(opening);
 				if (result == null) result = caseProduct(opening);
+				if (result == null) result = caseGUIDElement(opening);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -92,8 +92,8 @@ public class PipesSwitch<T> extends Switch<T> {
 			case PipesPackage.FLOW_SEGMENT: {
 				FlowSegment flowSegment = (FlowSegment)theEObject;
 				T result = caseFlowSegment(flowSegment);
-				if (result == null) result = caseGUIDElement(flowSegment);
 				if (result == null) result = caseProduct(flowSegment);
+				if (result == null) result = caseGUIDElement(flowSegment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -132,6 +132,7 @@ public class PipesSwitch<T> extends Switch<T> {
 			case PipesPackage.PRODUCT: {
 				Product product = (Product)theEObject;
 				T result = caseProduct(product);
+				if (result == null) result = caseGUIDElement(product);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
