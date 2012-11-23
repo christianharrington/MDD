@@ -53,16 +53,16 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		var Direction refDir = pipesFactory.createDirection
 		var IfcAxis2Placement3D ifcAxis = ifcLocalPlacement.relativePlacement as IfcAxis2Placement3D
 		
-		var IfcCartesianPoint loc = ifcAxis.location.ifcCartesianPoint
+		//var IfcCartesianPoint loc = ifcAxis.location.ifcCartesianPoint
 		
 		//Coordibates are X,Y,Z http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcgeometryresource/lexical/ifccartesianpoint.htm
-		if(loc.coordinates.ifcLengthMeasure.size != 3){
-			println("Non 3D cartesian point for local placement. Count " + loc.coordinates.ifcLengthMeasure.size)
-			System::exit(1)
-		}
-		axis.cartesianX = (float)loc.coordinates.ifcLengthMeasure.get(0)
-		axis.cartesianY = (float)loc.coordinates.ifcLengthMeasure.get(1)
-		axis.cartesianZ = (float)loc.coordinates.ifcLengthMeasure.get(2)
+		//if(loc.coordinates.ifcLengthMeasure.size != 3){
+		//	println("Non 3D cartesian point for local placement. Count " + loc.coordinates.ifcLengthMeasure.size)
+		//	System::exit(1)
+		//}
+		//axis.cartesianX = (float)loc.coordinates.ifcLengthMeasure.get(0)
+		//axis.cartesianY = (float)loc.coordinates.ifcLengthMeasure.get(1)
+		//axis.cartesianZ = (float)loc.coordinates.ifcLengthMeasure.get(2)
 		
 		//If Axis and/or RefDirection is omitted, these directions are taken from the geometric coordinate system.
 		//We add these if they are there. If any is missing we treat it as undefined - documentation only states the above
