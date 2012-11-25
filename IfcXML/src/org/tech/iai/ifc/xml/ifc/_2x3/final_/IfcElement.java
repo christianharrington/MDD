@@ -53,7 +53,6 @@ public interface IfcElement extends IfcProduct {
 	/**
 	 * Returns the value of the '<em><b>Has Openings</b></em>' reference list.
 	 * The list contents are of type {@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement}.
-	 * It is bidirectional and its opposite is '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement#getRelatingBuildingElement <em>Relating Building Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Has Openings</em>' reference list isn't clear,
@@ -62,8 +61,7 @@ public interface IfcElement extends IfcProduct {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Has Openings</em>' reference list.
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getIfcElement_HasOpenings()
-	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement#getRelatingBuildingElement
-	 * @model opposite="relatingBuildingElement" unsettable="true"
+	 * @model unsettable="true"
 	 * @generated
 	 */
 	EList<IfcRelVoidsElement> getHasOpenings();

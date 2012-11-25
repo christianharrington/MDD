@@ -44,7 +44,7 @@ class IFC2ModelReader extends WorkflowComponentWithSlot {
 		options.put(XMLResource::OPTION_ENCODING, "UTF-8")
 		
 		var ResourceSet resourceSet = new ResourceSetImpl()
-		var Resource resource = resourceSet.getResource(URI::createFileURI(getFile()), true)
+		var Resource resource = resourceSet.getResource(URI::createFileURI(ctx.get(getFile()) as String), true)
 		resource.load(options)
 		
 		ctx.put(mainModelSlot, resource)

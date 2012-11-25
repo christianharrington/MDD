@@ -5,6 +5,7 @@ import java.util.ArrayList
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement
 
 class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 	
@@ -27,6 +28,9 @@ class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 		openings.forEach[
 			list.add(it)
 			println("Opening: " + it)
+			it.hasOpenings.forEach[ rel |
+				println("Rel: " + rel)
+			]
 		]
 		flows.forEach[
 			if(flowIsPipe(it)) 
