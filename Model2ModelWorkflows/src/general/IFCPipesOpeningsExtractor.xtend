@@ -34,8 +34,11 @@ class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 				both.add(it as IfcOpeningElement)
 			}
 			else if (it instanceof IfcFlowSegment) {
-				flowSegments.add(it as IfcFlowSegment)
-				both.add(it as IfcFlowSegment)
+				val fs = it as IfcFlowSegment
+				if (fs.id != null) {
+					flowSegments.add(fs)
+					both.add(fs)
+				}
 			}
 		]
 		
