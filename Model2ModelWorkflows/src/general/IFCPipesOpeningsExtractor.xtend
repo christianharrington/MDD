@@ -22,7 +22,7 @@ class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 	override invoke(IWorkflowContext ctx) {
 		println("Starting: IFCPipesOpeningsExtractor")
 		
-		val ifcResource = ctx.get(mainModelSlot) as Resource //ResourceUnwrapper::unwrap(ctx.get(mainModelSlot))
+		val ifcResource = ctx.get(mainModelSlot) as Resource
 		
 		val openings = new ArrayList<IfcOpeningElement>()
 		val flowSegments = new ArrayList<IfcFlowSegment>()
