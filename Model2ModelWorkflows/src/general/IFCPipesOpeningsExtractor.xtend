@@ -5,9 +5,7 @@ import java.util.ArrayList
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement
 import org.eclipse.emf.ecore.resource.Resource
-import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcFlowSegmentImpl
 
 class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 	
