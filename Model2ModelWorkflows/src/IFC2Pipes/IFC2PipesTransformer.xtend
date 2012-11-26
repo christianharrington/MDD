@@ -16,6 +16,7 @@ import java.util.ArrayList
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 import pipes.Axis2Placement3D
 import pipes.Direction
+import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcFlowSegmentImpl
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
@@ -31,6 +32,8 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		op.name = ifcOpening.name
 		op.description = ifcOpening.description
 		var placement = ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement
+		println(op)
+		println(placement.relativePlacement == null)
 		addLocalPlacement(op, placement)
 		
 		pipesModel.elements.add(op)
@@ -40,7 +43,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		var FlowSegment fs = pipesFactory.createFlowSegment()
 		fs.name = ifcFlowSegment.name
 		fs.description = ifcFlowSegment.description
-		var placement = ifcFlowSegment.objectPlacement as IfcLocalPlacement
+		var placement = ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement
 		addLocalPlacement(fs, placement)		
 		pipesModel.elements.add(fs)
 	}
@@ -51,6 +54,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		var Axis2Placement3D axis = pipesFactory.createAxis2Placement3D
 		var Direction axisDir = pipesFactory.createDirection
 		var Direction refDir = pipesFactory.createDirection
+		println("relativePlacement is null: " + (null == ifcLocalPlacement.relativePlacement))
 		var IfcAxis2Placement3D ifcAxis = ifcLocalPlacement.relativePlacement as IfcAxis2Placement3D
 		
 		//var IfcCartesianPoint loc = ifcAxis.location.ifcCartesianPoint
@@ -91,6 +95,14 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	override invoke(IWorkflowContext ctx) {
 		val ifcmodel = ctx.get(extractModelSlot) as ArrayList<IfcProduct>
 		
+		//var flowSegments = ifcmodel.filter(typeof(IfcFlowSegmentImpl))
+		val flowSegments = new ArrayList<IfcFlowSegmentImpl>
+		ifcmodel.forEach[
+			if (it instanceof IfcFlowSegmentImpl) {
+				flowSegments.add(it as IfcFlowSegmentImpl)
+			}
+		]
+		
 		pipesFactory = new PipesFactoryImpl()
 		val pipesModel = pipesFactory.createModel()
 		
@@ -100,7 +112,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 			addOpening(pipesModel, it)
 		]
 		
-		var flowSegments = ifcmodel.filter(typeof(IfcFlowSegment))
+		
 		println("flow segments: " + flowSegments.size())
 		flowSegments.forEach[
 			addFlowSegment(pipesModel, it)
