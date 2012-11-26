@@ -6,11 +6,11 @@ import general.IFC2ModelReader
 var modelSlot = 'model'
 var emSlot = 'extractedModelSlot'
 var poSlot = 'pipesOpeningsSlot'
-var ifcWritePath = 'output.ifc'
+var ifcWritePath = 'bin/output.ifc'
 
 var IFCFilePath = 'NanoLabBuilding/Merging_Test.2.ifcxml'
 //var schema = '../BIMServerConnectionTest/IFC2X3_TC1.exp'
-var xmiReadPath = 'instance.xmi'
+var xmiReadPath = 'bin/instance.xmi'
 
 Workflow {
 	
