@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<iso_10303_28 version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common" xsi:schemaLocation="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common  http://www.iai-tech.org/ifcXML/IFC2x3/FINAL/ex.xsd">
+	<uos id="uos_1" description="" configuration="i-ifc2x3" edo="" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL" xmlns:ex="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common" xsi:schemaLocation="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL http://www.iai-tech.org/ifcXML/IFC2x3/FINAL/IFC2X3.xsd">
+		<IfcOpeningElement id="i536511">
+			<GlobalId>0nHTRzg7P1Mx2h9$obAF_8</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i536545"/></OwnerHistory>
+			<ObjectType>Opening</ObjectType>
+			<ObjectPlacement><IfcLocalPlacement ref="i536509"/></ObjectPlacement>
+			<Representation><IfcProductDefinitionShape ref="i536535"/></Representation>
+		</IfcOpeningElement>
+		<IfcOrganization id="i536510">
+			<Id>GS</Id>
+			<Name>Graphisoft</Name>
+			<Description>Graphisoft</Description>
+		</IfcOrganization>
+		<IfcLocalPlacement id="i536509">
+			<PlacementRelTo><IfcLocalPlacement ref="i536549"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i536516"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcDirection id="i536554">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>-1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcPolyLoop id="i536616">
+			<Polygon ex:cType="list-unique" >
+				<IfcCartesianPoint pos="0" ref="i536551" />
+				<IfcCartesianPoint pos="1" ref="i536548" />
+				<IfcCartesianPoint pos="2" ref="i536547" />
+				<IfcCartesianPoint pos="3" ref="i536591" />
+			</Polygon>
+		</IfcPolyLoop>
+		<IfcCartesianPoint id="i536555">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-3760.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcPolyLoop id="i536617">
+			<Polygon ex:cType="list-unique" >
+				<IfcCartesianPoint pos="0" ref="i536572" />
+				<IfcCartesianPoint pos="1" ref="i536567" />
+				<IfcCartesianPoint pos="2" ref="i536574" />
+				<IfcCartesianPoint pos="3" ref="i536603" />
+			</Polygon>
+		</IfcPolyLoop>
+		<IfcCartesianPoint id="i536552">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>61508.471</IfcLengthMeasure>
+				<IfcLengthMeasure>15820.15</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcFaceOuterBound id="i536618">
+			<Bound><IfcPolyLoop ref="i536617"/></Bound>
+			<Orientation>true</Orientation>
+		</IfcFaceOuterBound>
+		<IfcAxis2Placement3D id="i536553">
+			<Location><IfcCartesianPoint ref="i536552"/></Location>
+			<Axis><IfcDirection ref="i536524"/></Axis>
+			<RefDirection><IfcDirection ref="i536554"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcFace id="i536619">
+			<Bounds ex:cType="set" >
+				<IfcFaceOuterBound pos="0" ref="i536618" />
+			</Bounds>
+		</IfcFace>
+		<IfcAxis2Placement3D id="i536558">
+			<Location><IfcCartesianPoint ref="i536526"/></Location>
+			<Axis><IfcDirection ref="i536524"/></Axis>
+			<RefDirection><IfcDirection ref="i536538"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i536620">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-9.70074</IfcLengthMeasure>
+				<IfcLengthMeasure>-4.01818</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcLocalPlacement id="i536559">
+			<PlacementRelTo><IfcLocalPlacement ref="i536570"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i536533"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcRepresentationContext id="i536621">
+			<ContextIdentifier>Plan</ContextIdentifier>
+			<ContextType>Design</ContextType>
+		</IfcRepresentationContext>
+		<IfcPropertySet id="i536622">
+			<GlobalId>3Nhg$i0mL7$RclWRFA$y6E</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i536513"/></OwnerHistory>
+			<Name>Pset_PipeSegmentTypeCommon</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertyListValue pos="0" ref="i536623" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPolyline id="i536556">
+			<Points ex:cType="list" >
+				<IfcCartesianPoint pos="0" ref="i536585" />
+				<IfcCartesianPoint pos="1" ref="i536587" />
+				<IfcCartesianPoint pos="2" ref="i536561" />
+				<IfcCartesianPoint pos="3" ref="i536562" />
+				<IfcCartesianPoint pos="4" ref="i536585" />
+			</Points>
+		</IfcPolyline>
+		<IfcPropertyListValue id="i536623">
+			<Name>NominalDiameter</Name>
+			<ListValues ex:cType="list" >
+				<IfcPositiveLengthMeasure pos="0">15.0</IfcPositiveLengthMeasure>
+			</ListValues>
+		</IfcPropertyListValue>
+		<IfcLocalPlacement id="i536557">
+			<PlacementRelTo><IfcLocalPlacement ref="i536559"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i536550"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcRelVoidsElement id="i536546">
+			<GlobalId>2ko4VxnQrCjPH$Kdyap3jx</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i536545"/></OwnerHistory>
+			<RelatingBuildingElement><IfcWallStandardCase ref="i536605"/></RelatingBuildingElement>
+			<RelatedOpeningElement><IfcOpeningElement ref="i536511"/></RelatedOpeningElement>
+		</IfcRelVoidsElement>
+		<IfcDirection id="i536608">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcGeometricRepresentationContext id="i536609">
+			<ContextIdentifier>Plan</ContextIdentifier>
+			<ContextType>Sketch</ContextType>
+			<CoordinateSpaceDimension>3</CoordinateSpaceDimension>
+			<Precision>1.0E-5</Precision>
+			<WorldCoordinateSystem><IfcAxis2Placement3D ref="i536533"/></WorldCoordinateSystem>
+			<TrueNorth><IfcDirection ref="i536611"/></TrueNorth>
+		</IfcGeometricRepresentationContext>
+		<IfcCartesianPoint id="i536547">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-9.70074</IfcLengthMeasure>
+				<IfcLengthMeasure>-4.01818</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcCartesianPoint id="i536544">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>506.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcFace id="i536610">
+			<Bounds ex:cType="set" >
+				<IfcFaceOuterBound pos="0" ref="i536613" />
+			</Bounds>
+		</IfcFace>
+		<IfcDirection id="i536611">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>6.1230318E-17</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcOwnerHistory id="i536545">
+			<OwningUser><IfcPersonAndOrganization ref="i536517"/></OwningUser>
+			<OwningApplication><IfcApplication ref="i536514"/></OwningApplication>
+			<ChangeAction>nochange</ChangeAction>
+			<LastModifiedDate>0</LastModifiedDate>
+			<CreationDate>1183634672</CreationDate>
+		</IfcOwnerHistory>
+		<IfcAxis2Placement3D id="i536550">
+			<Location><IfcCartesianPoint ref="i536555"/></Location>
+			<Axis><IfcDirection ref="i536524"/></Axis>
+			<RefDirection><IfcDirection ref="i536538"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcFaceOuterBound id="i536612">
+			<Bound><IfcPolyLoop ref="i536616"/></Bound>
+			<Orientation>true</Orientation>
+		</IfcFaceOuterBound>
+		<IfcCartesianPoint id="i536551">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-10.5</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcFaceOuterBound id="i536613">
+			<Bound><IfcPolyLoop ref="i536615"/></Bound>
+			<Orientation>true</Orientation>
+		</IfcFaceOuterBound>
+		<IfcFace id="i536614">
+			<Bounds ex:cType="set" >
+				<IfcFaceOuterBound pos="0" ref="i536612" />
+			</Bounds>
+		</IfcFace>
+		<IfcCartesianPoint id="i536548">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-9.70074</IfcLengthMeasure>
+				<IfcLengthMeasure>-4.01818</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcLocalPlacement id="i536549">
+			<PlacementRelTo><IfcLocalPlacement ref="i536557"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i536553"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcPolyLoop id="i536615">
+			<Polygon ex:cType="list-unique" >
+				<IfcCartesianPoint pos="0" ref="i536593" />
+				<IfcCartesianPoint pos="1" ref="i536564" />
+				<IfcCartesianPoint pos="2" ref="i536563" />
+				<IfcCartesianPoint pos="3" ref="i536620" />
+			</Polygon>
+		</IfcPolyLoop>
+		<IfcAxis2Placement3D id="i536571">
+			<Location><IfcCartesianPoint ref="i536604"/></Location>
+			<Axis><IfcDirection ref="i536606"/></Axis>
+			<RefDirection><IfcDirection ref="i536608"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcLocalPlacement id="i536570">
+			<RelativePlacement><IfcAxis2Placement3D ref="i536533"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcFlowSegment id="i536569">
+			<GlobalId>07VQlSdwrBlBqEZXQCBTUV</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i536513"/></OwnerHistory>
+			<Name>-</Name>
+			<ObjectPlacement><IfcLocalPlacement ref="i536590"/></ObjectPlacement>
+			<Representation><IfcProductDefinitionShape ref="i536581"/></Representation>
+		</IfcFlowSegment>
+		<IfcBoundingBox id="i536568">
+			<Corner><IfcCartesianPoint ref="i536565"/></Corner>
+			<XDim>1440.0</XDim>
+			<YDim>120.0</YDim>
+			<ZDim>3570.0</ZDim>
+		</IfcBoundingBox>
+		<IfcShapeRepresentation id="i536575">
+			<ContextOfItems><IfcGeometricRepresentationContext ref="i536529"/></ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>SweptSolid</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcExtrudedAreaSolid pos="0" ref="i536573" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcCartesianPoint id="i536574">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-4.01818</IfcLengthMeasure>
+				<IfcLengthMeasure>9.70074</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcExtrudedAreaSolid id="i536573">
+			<SweptArea><IfcArbitraryClosedProfileDef ref="i536560"/></SweptArea>
+			<Position><IfcAxis2Placement3D ref="i536558"/></Position>
+			<ExtrudedDirection><IfcDirection ref="i536524"/></ExtrudedDirection>
+			<Depth>3570.0</Depth>
+		</IfcExtrudedAreaSolid>
+		<IfcCartesianPoint id="i536572">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>10.5</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcShapeRepresentation id="i536625">
+			<ContextOfItems><IfcRepresentationContext ref="i536621"/></ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>SurfaceModel</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcShellBasedSurfaceModel pos="0" ref="i536624" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcCartesianPoint id="i536563">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-7.42462</IfcLengthMeasure>
+				<IfcLengthMeasure>-7.42462</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcCartesianPoint id="i536562">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>60.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcShellBasedSurfaceModel id="i536624">
+			<SbsmBoundary ex:cType="set" >
+				<IfcOpenShell pos="0" ref="i536626" />
+			</SbsmBoundary>
+		</IfcShellBasedSurfaceModel>
+		<IfcCartesianPoint id="i536561">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>1440.0</IfcLengthMeasure>
+				<IfcLengthMeasure>60.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcArbitraryClosedProfileDef id="i536560">
+			<ProfileType>area</ProfileType>
+			<OuterCurve><IfcPolyline ref="i536556"/></OuterCurve>
+		</IfcArbitraryClosedProfileDef>
+		<IfcOpenShell id="i536626">
+			<CfsFaces ex:cType="set" >
+				<IfcFace pos="0" ref="i536619" />
+				<IfcFace pos="1" ref="i536614" />
+				<IfcFace pos="2" ref="i536610" />
+			</CfsFaces>
+		</IfcOpenShell>
+		<IfcCartesianPoint id="i536567">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-4.01818</IfcLengthMeasure>
+				<IfcLengthMeasure>9.70074</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcCartesianTransformationOperator3DnonUniform id="i536566">
+			<LocalOrigin><IfcCartesianPoint ref="i536576"/></LocalOrigin>
+			<Scale>0.552</Scale>
+			<Scale2>1.0</Scale2>
+			<Scale3>1.0</Scale3>
+		</IfcCartesianTransformationOperator3DnonUniform>
+		<IfcCartesianPoint id="i536565">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-60.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcCartesianPoint id="i536564">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-7.42462</IfcLengthMeasure>
+				<IfcLengthMeasure>-7.42462</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcPersonAndOrganization id="i536520">
+			<ThePerson><IfcPerson ref="i536518"/></ThePerson>
+			<TheOrganization><IfcOrganization ref="i536519"/></TheOrganization>
+		</IfcPersonAndOrganization>
+		<IfcDirection id="i536586">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcApplication id="i536521">
+			<ApplicationDeveloper><IfcOrganization ref="i536519"/></ApplicationDeveloper>
+			<Version>2006.5</Version>
+			<ApplicationFullName>MagiCAD HPV 2006.5</ApplicationFullName>
+			<ApplicationIdentifier>MagiCAD HPV</ApplicationIdentifier>
+		</IfcApplication>
+		<IfcCartesianPoint id="i536587">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>1440.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-60.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcPropertySet id="i536584">
+			<GlobalId>22cUssHmLEJQvckhiIksrt</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i536513"/></OwnerHistory>
+			<Name>Pset_FlowSegmentPipeSegment</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i536596" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcDirection id="i536522">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>6.1230318E-17</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i536523">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>-1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcCartesianPoint id="i536585">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-60.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcLocalPlacement id="i536590">
+			<PlacementRelTo><IfcLocalPlacement ref="i536602"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i536588"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcDirection id="i536524">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcExtrudedAreaSolid id="i536525">
+			<SweptArea><IfcArbitraryClosedProfileDef ref="i536532"/></SweptArea>
+			<Position><IfcAxis2Placement3D ref="i536528"/></Position>
+			<ExtrudedDirection><IfcDirection ref="i536524"/></ExtrudedDirection>
+			<Depth>120.0</Depth>
+		</IfcExtrudedAreaSolid>
+		<IfcCartesianPoint id="i536591">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-10.5</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcAxis2Placement3D id="i536588">
+			<Location><IfcCartesianPoint ref="i536530"/></Location>
+			<Axis><IfcDirection ref="i536586"/></Axis>
+			<RefDirection><IfcDirection ref="i536527"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i536526">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcShapeRepresentation id="i536589">
+			<ContextOfItems><IfcGeometricRepresentationContext ref="i536529"/></ContextOfItems>
+			<RepresentationIdentifier>Axis</RepresentationIdentifier>
+			<RepresentationType>Curve2D</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcPolyline pos="0" ref="i536580" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcDirection id="i536527">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcPerson id="i536512">
+			<Id>superuser</Id>
+			<FamilyName>Joergensen</FamilyName>
+			<GivenName></GivenName>
+		</IfcPerson>
+		<IfcCartesianPoint id="i536578">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>1500.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcOwnerHistory id="i536513">
+			<OwningUser><IfcPersonAndOrganization ref="i536520"/></OwningUser>
+			<OwningApplication><IfcApplication ref="i536521"/></OwningApplication>
+			<ChangeAction>nochange</ChangeAction>
+			<LastModifiedDate>0</LastModifiedDate>
+			<CreationDate>1175093014</CreationDate>
+		</IfcOwnerHistory>
+		<IfcMappedItem id="i536579">
+			<MappingSource><IfcRepresentationMap ref="i536577"/></MappingSource>
+			<MappingTarget><IfcCartesianTransformationOperator3DnonUniform ref="i536566"/></MappingTarget>
+		</IfcMappedItem>
+		<IfcApplication id="i536514">
+			<ApplicationDeveloper><IfcOrganization ref="i536510"/></ApplicationDeveloper>
+			<Version>10.0</Version>
+			<ApplicationFullName>ArchiCAD 10.0</ApplicationFullName>
+			<ApplicationIdentifier>ArchiCAD</ApplicationIdentifier>
+		</IfcApplication>
+		<IfcCartesianPoint id="i536576">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcOrganization id="i536515">
+			<Id>sdai-group</Id>
+			<Name>Aalborg University</Name>
+			<Description></Description>
+		</IfcOrganization>
+		<IfcRepresentationMap id="i536577">
+			<MappingOrigin><IfcAxis2Placement3D ref="i536571"/></MappingOrigin>
+			<MappedRepresentation><IfcShapeRepresentation ref="i536625"/></MappedRepresentation>
+		</IfcRepresentationMap>
+		<IfcRelDefinesByProperties id="i536582">
+			<GlobalId>1gJsyACb9BsfTRlJq8Li5E</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i536513"/></OwnerHistory>
+			<Name>UDP</Name>
+			<Description>User Defined Properties</Description>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i536569" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i536584"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcAxis2Placement3D id="i536516">
+			<Location><IfcCartesianPoint ref="i536537"/></Location>
+			<Axis><IfcDirection ref="i536524"/></Axis>
+			<RefDirection><IfcDirection ref="i536538"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcPersonAndOrganization id="i536517">
+			<ThePerson><IfcPerson ref="i536512"/></ThePerson>
+			<TheOrganization><IfcOrganization ref="i536515"/></TheOrganization>
+		</IfcPersonAndOrganization>
+		<IfcCartesianPoint id="i536583">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcPerson id="i536518">
+			<FamilyName>MagiCAD Product family</FamilyName>
+			<GivenName>MagiCAD-R</GivenName>
+		</IfcPerson>
+		<IfcPolyline id="i536580">
+			<Points ex:cType="list" >
+				<IfcCartesianPoint pos="0" ref="i536583" />
+				<IfcCartesianPoint pos="1" ref="i536578" />
+			</Points>
+		</IfcPolyline>
+		<IfcProductDefinitionShape id="i536581">
+			<Representations ex:cType="list" >
+				<IfcShapeRepresentation pos="0" ref="i536592" />
+			</Representations>
+		</IfcProductDefinitionShape>
+		<IfcOrganization id="i536519">
+			<Name>MagiCAD</Name>
+		</IfcOrganization>
+		<IfcCartesianPoint id="i536537">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>626.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-60.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcCartesianPoint id="i536603">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>10.5</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcLocalPlacement id="i536602">
+			<PlacementRelTo><IfcLocalPlacement ref="i536594"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i536600"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcDirection id="i536536">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcCartesianPoint id="i536601">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-3760.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcShapeRepresentation id="i536539">
+			<ContextOfItems><IfcGeometricRepresentationContext ref="i536529"/></ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>SweptSolid</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcExtrudedAreaSolid pos="0" ref="i536525" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcAxis2Placement3D id="i536600">
+			<Location><IfcCartesianPoint ref="i536601"/></Location>
+			<Axis><IfcDirection ref="i536598"/></Axis>
+			<RefDirection><IfcDirection ref="i536599"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcDirection id="i536538">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcAxis2Placement3D id="i536607">
+			<Location><IfcCartesianPoint ref="i536604"/></Location>
+			<Axis><IfcDirection ref="i536606"/></Axis>
+			<RefDirection><IfcDirection ref="i536608"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i536541">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-506.0</IfcLengthMeasure>
+				<IfcLengthMeasure>2000.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcCartesianPoint id="i536540">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>506.0</IfcLengthMeasure>
+				<IfcLengthMeasure>2000.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcDirection id="i536606">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcWallStandardCase id="i536605">
+			<GlobalId>33hqQYyrPCm9WLCwmspXkA</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i536545"/></OwnerHistory>
+			<Name></Name>
+			<ObjectPlacement><IfcLocalPlacement ref="i536549"/></ObjectPlacement>
+			<Representation><IfcProductDefinitionShape ref="i536543"/></Representation>
+		</IfcWallStandardCase>
+		<IfcProductDefinitionShape id="i536543">
+			<Representations ex:cType="list" >
+				<IfcShapeRepresentation pos="0" ref="i536589" />
+				<IfcShapeRepresentation pos="1" ref="i536575" />
+				<IfcShapeRepresentation pos="2" ref="i536534" />
+			</Representations>
+		</IfcProductDefinitionShape>
+		<IfcCartesianPoint id="i536542">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-506.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcCartesianPoint id="i536604">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcLocalPlacement id="i536595">
+			<RelativePlacement><IfcAxis2Placement3D ref="i536607"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcGeometricRepresentationContext id="i536529">
+			<ContextIdentifier>Plan</ContextIdentifier>
+			<ContextType>Design</ContextType>
+			<CoordinateSpaceDimension>3</CoordinateSpaceDimension>
+			<Precision>1.0E-5</Precision>
+			<WorldCoordinateSystem><IfcAxis2Placement3D ref="i536533"/></WorldCoordinateSystem>
+			<TrueNorth><IfcDirection ref="i536522"/></TrueNorth>
+		</IfcGeometricRepresentationContext>
+		<IfcLocalPlacement id="i536594">
+			<PlacementRelTo><IfcLocalPlacement ref="i536595"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i536607"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcAxis2Placement3D id="i536528">
+			<Location><IfcCartesianPoint ref="i536526"/></Location>
+			<Axis><IfcDirection ref="i536536"/></Axis>
+			<RefDirection><IfcDirection ref="i536523"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcPolyline id="i536531">
+			<Points ex:cType="list" >
+				<IfcCartesianPoint pos="0" ref="i536542" />
+				<IfcCartesianPoint pos="1" ref="i536544" />
+				<IfcCartesianPoint pos="2" ref="i536540" />
+				<IfcCartesianPoint pos="3" ref="i536541" />
+				<IfcCartesianPoint pos="4" ref="i536542" />
+			</Points>
+		</IfcPolyline>
+		<IfcCartesianPoint id="i536593">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-50.0</IfcLengthMeasure>
+				<IfcLengthMeasure>-9.70074</IfcLengthMeasure>
+				<IfcLengthMeasure>-4.01818</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcCartesianPoint id="i536530">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>55356.5</IfcLengthMeasure>
+				<IfcLengthMeasure>10752.0</IfcLengthMeasure>
+				<IfcLengthMeasure>10304.9</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcShapeRepresentation id="i536592">
+			<ContextOfItems><IfcRepresentationContext ref="i536621"/></ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>MappedRepresentation</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcMappedItem pos="0" ref="i536579" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcAxis2Placement3D id="i536533">
+			<Location><IfcCartesianPoint ref="i536526"/></Location>
+			<Axis><IfcDirection ref="i536524"/></Axis>
+			<RefDirection><IfcDirection ref="i536538"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcDirection id="i536599">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcArbitraryClosedProfileDef id="i536532">
+			<ProfileType>area</ProfileType>
+			<OuterCurve><IfcPolyline ref="i536531"/></OuterCurve>
+		</IfcArbitraryClosedProfileDef>
+		<IfcDirection id="i536598">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcPipeSegmentType id="i536597">
+			<GlobalId>1DmWumzrDESOvaspEBauFB</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i536513"/></OwnerHistory>
+			<Name>-</Name>
+			<Description>5</Description>
+			<HasPropertySets ex:cType="set" >
+				<IfcPropertySet pos="0" ref="i536622" />
+			</HasPropertySets>
+			<PredefinedType>rigidsegment</PredefinedType>
+		</IfcPipeSegmentType>
+		<IfcProductDefinitionShape id="i536535">
+			<Representations ex:cType="list" >
+				<IfcShapeRepresentation pos="0" ref="i536539" />
+			</Representations>
+		</IfcProductDefinitionShape>
+		<IfcShapeRepresentation id="i536534">
+			<ContextOfItems><IfcGeometricRepresentationContext ref="i536609"/></ContextOfItems>
+			<RepresentationIdentifier>IAI</RepresentationIdentifier>
+			<RepresentationType>BoundingBox</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcBoundingBox pos="0" ref="i536568" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcPropertySingleValue id="i536596">
+			<Name>Length</Name>
+			<NominalValue><IfcReal>55.200001</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+	</uos>
+</iso_10303_28>

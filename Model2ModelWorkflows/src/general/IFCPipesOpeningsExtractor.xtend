@@ -6,6 +6,8 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement
+import org.eclipse.emf.ecore.resource.Resource
+import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcFlowSegmentImpl
 
 class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 	
@@ -18,25 +20,31 @@ class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
 	}
 		
 	override invoke(IWorkflowContext ctx) {
-		var ifcModel = ResourceUnwrapper::unwrap(ctx.get(mainModelSlot))
+		println("Starting: IFCPipesOpeningsExtractor")
 		
-		var openings = ifcModel.filter(typeof(IfcOpeningElement))
-		var flows = ifcModel.filter(typeof(IfcFlowSegment)) 
+		val ifcResource = ctx.get(mainModelSlot) as Resource
 		
-		val list = new ArrayList<IfcProduct>()
+		val openings = new ArrayList<IfcOpeningElement>()
+		val flowSegments = new ArrayList<IfcFlowSegment>()
+		val both = new ArrayList<IfcProduct>()
 		
-		openings.forEach[
-			list.add(it)
-			println("Opening: " + it)
-			it.hasOpenings.forEach[ rel |
-				println("Rel: " + rel)
-			]
+		ifcResource.contents.get(0).eAllContents.forEach[
+			if (it instanceof IfcOpeningElement) {
+				openings.add(it as IfcOpeningElement)
+				both.add(it as IfcOpeningElement)
+			}
+			else if (it instanceof IfcFlowSegment) {
+				val fs = it as IfcFlowSegment
+				if (fs.id != null) {
+					flowSegments.add(fs)
+					both.add(fs)
+				}
+			}
 		]
-		flows.forEach[
-			if(flowIsPipe(it)) 
-				list.add(it)
-		]
 		
-		ctx.put(extractModelSlot, list)
+		println("Openings: " + openings.size + "\nFlow segments: " + flowSegments.size())
+
+		ctx.put(extractModelSlot, both)
+		println("Done: IFCPipesOpeningsExtractor")
 	}
 }

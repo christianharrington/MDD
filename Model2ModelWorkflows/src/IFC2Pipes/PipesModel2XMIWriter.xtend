@@ -32,6 +32,7 @@ class PipesModel2XMIWriter extends WorkflowComponentWithSlot {
 	}
 	
 	override invoke(IWorkflowContext ctx) {	
+		println("Starting: PipesModel2XMIWriter")
 		var targetModel = ctx.get(pipesOpeningsSlot) as Model
 		
 		var Registry reg = Registry::INSTANCE;
@@ -42,8 +43,9 @@ class PipesModel2XMIWriter extends WorkflowComponentWithSlot {
 	    val Resource resource = resSet.createResource(URI::createURI(getPath()));
 	    
 	    resource.contents.add(targetModel)
-	    
+	    println(targetModel.elements.size())
 	    resource.save(Collections::EMPTY_MAP)
+	    println("Starting: PipesModel2XMIWriter")
 	}
 	
 }
