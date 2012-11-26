@@ -1,0 +1,2709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<iso_10303_28 version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common" xsi:schemaLocation="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common  http://www.iai-tech.org/ifcXML/IFC2x3/FINAL/ex.xsd">
+	<uos id="uos_1" description="" configuration="i-ifc2x3" edo="" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL" xmlns:ex="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common" xsi:schemaLocation="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL http://www.iai-tech.org/ifcXML/IFC2x3/FINAL/IFC2X3.xsd">
+		<IfcPropertySet id="i555973">
+			<GlobalId>1R$5pACYb5DQ4HCxXA7ItV</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Identity Data</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555961" />
+				<IfcPropertySingleValue pos="1" ref="i555962" />
+				<IfcPropertySingleValue pos="2" ref="i555968" />
+				<IfcPropertySingleValue pos="3" ref="i555969" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555972">
+			<GlobalId>0E1DKe1u91Dx9SQ8qQOyuH</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcBuilding pos="0" ref="i555587" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555971"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcRelAssociatesMaterial id="i555975">
+			<GlobalId>2nNMppsZr07u7KSrouQw4y</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+			</RelatedObjects>
+			<RelatingMaterial><IfcMaterialLayerSetUsage ref="i555689"/></RelatingMaterial>
+		</IfcRelAssociatesMaterial>
+		<IfcRelDefinesByProperties id="i555974">
+			<GlobalId>0DsNeOOjLELAuYcFagGC_a</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcBuilding pos="0" ref="i555587" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555973"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555969">
+			<Name>Author</Name>
+			<NominalValue><IfcLabel></IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555968">
+			<Name>Organization Name</Name>
+			<NominalValue><IfcLabel></IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555971">
+			<GlobalId>24uDocVMTE4OzeB1LUx4_1</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Other</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555963" />
+				<IfcPropertySingleValue pos="1" ref="i555964" />
+				<IfcPropertySingleValue pos="2" ref="i555965" />
+				<IfcPropertySingleValue pos="3" ref="i555966" />
+				<IfcPropertySingleValue pos="4" ref="i555967" />
+				<IfcPropertySingleValue pos="5" ref="i555970" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i555970">
+			<Name>Project Issue Date</Name>
+			<NominalValue><IfcLabel>Issue Date</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcRelDefinesByProperties id="i555977">
+			<GlobalId>1sg$$5Z$zEfBU5vJuKsK6y</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555646"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcRelDefinesByType id="i555976">
+			<GlobalId>0vXHasAEH3QgJsweSwTK$D</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555716" />
+				<IfcFlowSegment pos="1" ref="i555759" />
+				<IfcFlowSegment pos="2" ref="i555804" />
+				<IfcFlowSegment pos="3" ref="i555863" />
+				<IfcFlowSegment pos="4" ref="i555907" />
+			</RelatedObjects>
+			<RelatingType><IfcPipeSegmentType ref="i555717"/></RelatingType>
+		</IfcRelDefinesByType>
+		<IfcRelDefinesByProperties id="i555979">
+			<GlobalId>2wHiuFWz95VAHkZ4dEYhsA</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555657"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcRelDefinesByProperties id="i555978">
+			<GlobalId>2ZxdbAfQ1809g4fQglWp4b</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555656"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555905">
+			<Name>Relative Roughness</Name>
+			<NominalValue><IfcReal>34.2920676582094</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555904">
+			<Name>System Classification</Name>
+			<NominalValue><IfcLabel>Hydronic Supply</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcFlowSegment id="i555907">
+			<GlobalId>2MFXaS0_1CExpPIggqpYxC</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Pipe Types:Default:338860</Name>
+			<ObjectType>Pipe Types:Default:338632</ObjectType>
+			<ObjectPlacement><IfcLocalPlacement ref="i555873"/></ObjectPlacement>
+			<Representation><IfcProductDefinitionShape ref="i555912"/></Representation>
+			<Tag>338860</Tag>
+		</IfcFlowSegment>
+		<IfcPropertySingleValue id="i555906">
+			<Name>Invert Elevation</Name>
+			<NominalValue><IfcLengthMeasure>2504.2622</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555909">
+			<Name>Connection Type</Name>
+			<NominalValue><IfcLabel>Generic</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555908">
+			<Name>Outer Diameter</Name>
+			<NominalValue><IfcReal>1.66666666666667</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcExtrudedAreaSolid id="i555911">
+			<SweptArea><IfcCircleProfileDef ref="i555914"/></SweptArea>
+			<Position><IfcAxis2Placement3D ref="i555915"/></Position>
+			<ExtrudedDirection><IfcDirection ref="i555553"/></ExtrudedDirection>
+			<Depth>7404.51062781128</Depth>
+		</IfcExtrudedAreaSolid>
+		<IfcShapeRepresentation id="i555910">
+			<ContextOfItems><IfcGeometricRepresentationSubContext ref="i555576"/></ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>SweptSolid</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcExtrudedAreaSolid pos="0" ref="i555911" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcCartesianPoint id="i555913">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>2890.94678866889</IfcLengthMeasure>
+				<IfcLengthMeasure>-1108.57253901661</IfcLengthMeasure>
+				<IfcLengthMeasure>2743.2</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcProductDefinitionShape id="i555912">
+			<Representations ex:cType="list" >
+				<IfcShapeRepresentation pos="0" ref="i555910" />
+			</Representations>
+		</IfcProductDefinitionShape>
+		<IfcAxis2Placement3D id="i555915">
+			<Location><IfcCartesianPoint ref="i555913"/></Location>
+			<Axis><IfcDirection ref="i555551"/></Axis>
+			<RefDirection><IfcDirection ref="i555550"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCircleProfileDef id="i555914">
+			<ProfileType>area</ProfileType>
+			<ProfileName>Default</ProfileName>
+			<Position><IfcAxis2Placement2D ref="i555872"/></Position>
+			<Radius>254.0</Radius>
+		</IfcCircleProfileDef>
+		<IfcPropertySingleValue id="i555917">
+			<Name>Color</Name>
+			<NominalValue><IfcInteger>0</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555916">
+			<Name>Symbol</Name>
+			<NominalValue><IfcLabel>Level Head: Level Head</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555919">
+			<Name>Symbol at End 2 Default</Name>
+			<NominalValue><IfcBoolean>true</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555918">
+			<Name>Elevation Base</Name>
+			<NominalValue><IfcInteger>0</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555920">
+			<Name>Name</Name>
+			<NominalValue><IfcLabel>Level 1</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555921">
+			<Name>Building Story</Name>
+			<NominalValue><IfcBoolean>true</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555922">
+			<Name>Computation Height</Name>
+			<NominalValue><IfcLengthMeasure>0.0</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555923">
+			<Name>Elevation</Name>
+			<NominalValue><IfcLengthMeasure>0.0</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555924">
+			<GlobalId>1bh1lYGYz9mQtLnRs2KmZU</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Dimensions</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555922" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555925">
+			<GlobalId>3WvnZ1Dxf5jefpH4ViLaHo</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcBuildingStorey pos="0" ref="i555590" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555927"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555926">
+			<Name>Line Weight</Name>
+			<NominalValue><IfcInteger>1</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555927">
+			<GlobalId>15f4sB8vbDj9XND_AEOXPP</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Constraints</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555923" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i555928">
+			<Name>Line Pattern</Name>
+			<NominalValue><IfcLabel>bips_MODUL</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555929">
+			<Name>Symbol at End 1 Default</Name>
+			<NominalValue><IfcBoolean>true</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555930">
+			<GlobalId>1WJYZHqSL1vPUq5zG3pGHy</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Constraints</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555918" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555931">
+			<GlobalId>0dhrCrHwL7bQySgGIn7khG</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcBuildingStorey pos="0" ref="i555590" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555932"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555932">
+			<GlobalId>24Ajxtp$z6_vPr_i2nUDbJ</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Identity Data</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555920" />
+				<IfcPropertySingleValue pos="1" ref="i555921" />
+				<IfcPropertySingleValue pos="2" ref="i555626" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555933">
+			<GlobalId>2df1STxPb2iRyCqdAZ1VpS</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcBuildingStorey pos="0" ref="i555590" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555924"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555934">
+			<Name>NumberOfStoreys</Name>
+			<NominalValue><IfcInteger>1</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcRelAggregates id="i555935">
+			<GlobalId>27PCKGLxT4mxtV9cw6mgBW</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatingObject><IfcBuilding ref="i555587"/></RelatingObject>
+			<RelatedObjects ex:cType="set" >
+				<IfcBuildingStorey pos="0" ref="i555590" />
+			</RelatedObjects>
+		</IfcRelAggregates>
+		<IfcPropertySet id="i555939">
+			<GlobalId>1wvy5YiEj8CgnxP0Nv4udn</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Phasing</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555617" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555938">
+			<GlobalId>3OpkqH5ab7VQKZb8GVZQLQ</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555907" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555941"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555937">
+			<GlobalId>2$YW1TyL50IfCnsbRp1$F7</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Graphics</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555919" />
+				<IfcPropertySingleValue pos="1" ref="i555916" />
+				<IfcPropertySingleValue pos="2" ref="i555917" />
+				<IfcPropertySingleValue pos="3" ref="i555928" />
+				<IfcPropertySingleValue pos="4" ref="i555929" />
+				<IfcPropertySingleValue pos="5" ref="i555926" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelContainedInSpatialStructure id="i555936">
+			<GlobalId>3Zu5Bv0LOHrPC10066FoQQ</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedElements ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+				<IfcFlowSegment pos="1" ref="i555716" />
+				<IfcFlowSegment pos="2" ref="i555759" />
+				<IfcFlowSegment pos="3" ref="i555804" />
+				<IfcFlowSegment pos="4" ref="i555863" />
+				<IfcFlowSegment pos="5" ref="i555907" />
+			</RelatedElements>
+			<RelatingStructure><IfcBuildingStorey ref="i555590"/></RelatingStructure>
+		</IfcRelContainedInSpatialStructure>
+		<IfcPropertySet id="i555943">
+			<GlobalId>33St5uhR176hnNvvsEm6GH</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Mechanical - Flow</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555731" />
+				<IfcPropertySingleValue pos="1" ref="i555749" />
+				<IfcPropertySingleValue pos="2" ref="i555713" />
+				<IfcPropertySingleValue pos="3" ref="i555905" />
+				<IfcPropertySingleValue pos="4" ref="i555730" />
+				<IfcPropertySingleValue pos="5" ref="i555734" />
+				<IfcPropertySingleValue pos="6" ref="i555750" />
+				<IfcPropertySingleValue pos="7" ref="i555706" />
+				<IfcPropertySingleValue pos="8" ref="i555728" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555942">
+			<GlobalId>0pE4Jre$j6FwUeTFDh88r$</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555907" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555945"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555941">
+			<GlobalId>1xxI$sH9v978UxpxnnEAkK</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Insulation</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555895" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555940">
+			<GlobalId>3JdI_LGfr5teQ4B4BvrMUj</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555907" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555890"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcAxis2Placement3D id="i555947">
+			<Location><IfcCartesianPoint ref="i555547"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcRelDefinesByProperties id="i555946">
+			<GlobalId>1wY1GzMaPFf8LF6ozxI_XK</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555907" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555949"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555945">
+			<GlobalId>3LNyZP8gb9YPbSvqnOyzSw</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Constraints</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555747" />
+				<IfcPropertySingleValue pos="1" ref="i555711" />
+				<IfcPropertySingleValue pos="2" ref="i555745" />
+				<IfcPropertySingleValue pos="3" ref="i555903" />
+				<IfcPropertySingleValue pos="4" ref="i555729" />
+				<IfcPropertySingleValue pos="5" ref="i555902" />
+				<IfcPropertySingleValue pos="6" ref="i555896" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555944">
+			<GlobalId>1Dy$2ztZP8Pg55Ux4AHHUt</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555907" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555939"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcRelAggregates id="i555951">
+			<GlobalId>0XLlbGf75EH9NoWHUel9$3</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatingObject><IfcSite ref="i555952"/></RelatingObject>
+			<RelatedObjects ex:cType="set" >
+				<IfcBuilding pos="0" ref="i555587" />
+			</RelatedObjects>
+		</IfcRelAggregates>
+		<IfcRelAggregates id="i555950">
+			<GlobalId>0l4kdL2pH5OODF_kLL71fB</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatingObject><IfcProject ref="i555583"/></RelatingObject>
+			<RelatedObjects ex:cType="set" >
+				<IfcSite pos="0" ref="i555952" />
+			</RelatedObjects>
+		</IfcRelAggregates>
+		<IfcPropertySet id="i555949">
+			<GlobalId>1tlVMr35fAV9rZcdXbyduI</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Identity Data</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555901" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555948">
+			<GlobalId>2kNTPSwC58aulG4RIdpXoi</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555907" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555943"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcRelDefinesByProperties id="i555954">
+			<GlobalId>0BrGVzssj2jRTH$Mg$LfC1</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555716" />
+				<IfcFlowSegment pos="1" ref="i555759" />
+				<IfcFlowSegment pos="2" ref="i555804" />
+				<IfcFlowSegment pos="3" ref="i555863" />
+				<IfcFlowSegment pos="4" ref="i555907" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555772"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcRelDefinesByProperties id="i555955">
+			<GlobalId>2zcmGilhv1buXviSXr69lf</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555658"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcSite id="i555952">
+			<GlobalId>3$uLGYKUL0CeCZ6ivJ_m9M</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Default</Name>
+			<ObjectType></ObjectType>
+			<ObjectPlacement><IfcLocalPlacement ref="i555953"/></ObjectPlacement>
+			<CompositionType>element</CompositionType>
+			<RefLatitude ex:cType="list" >
+				<ex:long-wrapper>55</ex:long-wrapper>
+				<ex:long-wrapper>40</ex:long-wrapper>
+				<ex:long-wrapper>58</ex:long-wrapper>
+				<ex:long-wrapper>799999</ex:long-wrapper>
+			</RefLatitude>
+			<RefLongitude ex:cType="list" >
+				<ex:long-wrapper>12</ex:long-wrapper>
+				<ex:long-wrapper>32</ex:long-wrapper>
+				<ex:long-wrapper>59</ex:long-wrapper>
+				<ex:long-wrapper>999999</ex:long-wrapper>
+			</RefLongitude>
+			<RefElevation>-0.0</RefElevation>
+		</IfcSite>
+		<IfcLocalPlacement id="i555953">
+			<RelativePlacement><IfcAxis2Placement3D ref="i555947"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcPresentationLayerAssignment id="i555958">
+			<Name>A-WALL</Name>
+			<AssignedItems ex:cType="set" >
+				<IfcShapeRepresentation pos="0" ref="i555599" />
+				<IfcShapeRepresentation pos="1" ref="i555610" />
+			</AssignedItems>
+		</IfcPresentationLayerAssignment>
+		<IfcPropertySet id="i555959">
+			<GlobalId>0xUm3X9iz13PeyFxSQrUtR</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Pset_BuildingCommon</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555934" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555956">
+			<GlobalId>1N165$4UDAnO$PQhzlHKOE</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcBuildingStorey pos="0" ref="i555590" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555937"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcRelDefinesByProperties id="i555957">
+			<GlobalId>0zgoHFNY9Blfbzce3F_j5Z</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcBuildingStorey pos="0" ref="i555590" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555930"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555962">
+			<Name>Building Name</Name>
+			<NominalValue><IfcLabel></IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555963">
+			<Name>Client Name</Name>
+			<NominalValue><IfcLabel>Owner</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcRelDefinesByProperties id="i555960">
+			<GlobalId>0eHxNGDsr5cBF5rKX8Jlh8</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcBuilding pos="0" ref="i555587" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555959"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555961">
+			<Name>Organization Description</Name>
+			<NominalValue><IfcLabel></IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555966">
+			<Name>Project Status</Name>
+			<NominalValue><IfcLabel>Project Status</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555967">
+			<Name>Project Name</Name>
+			<NominalValue><IfcLabel>Project Name</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555964">
+			<Name>Project Address</Name>
+			<NominalValue><IfcLabel>Enter address here</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555965">
+			<Name>Project Number</Name>
+			<NominalValue><IfcLabel>Number</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555852">
+			<Name>Relative Roughness</Name>
+			<NominalValue><IfcReal>23.9246135899679</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555853">
+			<Name>Length</Name>
+			<NominalValue><IfcLengthMeasure>7404.51062781128</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555854">
+			<Name>Inner Diameter</Name>
+			<NominalValue><IfcReal>1.09383333333333</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555855">
+			<Name>Start Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555848">
+			<Name>Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555849">
+			<Name>Overall Size</Name>
+			<NominalValue><IfcLabel>350 mm\X2\00F8\X0\</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555850">
+			<Name>System Classification</Name>
+			<NominalValue><IfcLabel>Hydronic Supply</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555851">
+			<GlobalId>2Hq0R0G1nBNAl_ixdIKo7h</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Mechanical</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555865" />
+				<IfcPropertySingleValue pos="1" ref="i555707" />
+				<IfcPropertySingleValue pos="2" ref="i555705" />
+				<IfcPropertySingleValue pos="3" ref="i555859" />
+				<IfcPropertySingleValue pos="4" ref="i555844" />
+				<IfcPropertySingleValue pos="5" ref="i555845" />
+				<IfcPropertySingleValue pos="6" ref="i555846" />
+				<IfcPropertySingleValue pos="7" ref="i555847" />
+				<IfcPropertySingleValue pos="8" ref="i555725" />
+				<IfcPropertySingleValue pos="9" ref="i555850" />
+				<IfcPropertySingleValue pos="10" ref="i555709" />
+				<IfcPropertySingleValue pos="11" ref="i555746" />
+				<IfcPropertySingleValue pos="12" ref="i555719" />
+				<IfcPropertySingleValue pos="13" ref="i555752" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i555844">
+			<Name>Connection Type</Name>
+			<NominalValue><IfcLabel>Generic</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555845">
+			<Name>Diameter</Name>
+			<NominalValue><IfcReal>1.14829396325459</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555846">
+			<Name>Invert Elevation</Name>
+			<NominalValue><IfcLengthMeasure>2576.4998</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555847">
+			<Name>Area</Name>
+			<NominalValue><IfcAreaMeasure>8141684.66711581</IfcAreaMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555840">
+			<Name>Invert Elevation</Name>
+			<NominalValue><IfcLengthMeasure>2692.0698</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555841">
+			<Name>Mark</Name>
+			<NominalValue><IfcLabel>4</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555842">
+			<GlobalId>1wQwA3hwX86x0je4heN4Zo</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Mechanical - Flow</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555806" />
+				<IfcPropertySingleValue pos="1" ref="i555730" />
+				<IfcPropertySingleValue pos="2" ref="i555731" />
+				<IfcPropertySingleValue pos="3" ref="i555706" />
+				<IfcPropertySingleValue pos="4" ref="i555734" />
+				<IfcPropertySingleValue pos="5" ref="i555728" />
+				<IfcPropertySingleValue pos="6" ref="i555713" />
+				<IfcPropertySingleValue pos="7" ref="i555750" />
+				<IfcPropertySingleValue pos="8" ref="i555749" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555843">
+			<GlobalId>2E577T0L14kB_e2WvdA4pS</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555804" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555838"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcCartesianPoint id="i555869">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>1557.61345533556</IfcLengthMeasure>
+				<IfcLengthMeasure>-1108.57253901661</IfcLengthMeasure>
+				<IfcLengthMeasure>2743.2</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcAxis2Placement2D id="i555868">
+			<Location><IfcCartesianPoint ref="i555866"/></Location>
+			<RefDirection><IfcDirection ref="i555555"/></RefDirection>
+		</IfcAxis2Placement2D>
+		<IfcAxis2Placement3D id="i555871">
+			<Location><IfcCartesianPoint ref="i555869"/></Location>
+			<Axis><IfcDirection ref="i555551"/></Axis>
+			<RefDirection><IfcDirection ref="i555550"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCircleProfileDef id="i555870">
+			<ProfileType>area</ProfileType>
+			<ProfileName>Default</ProfileName>
+			<Position><IfcAxis2Placement2D ref="i555868"/></Position>
+			<Radius>177.8</Radius>
+		</IfcCircleProfileDef>
+		<IfcPropertySingleValue id="i555865">
+			<Name>System Name</Name>
+			<NominalValue><IfcLabel>Hydronic Supply 4</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555864">
+			<Name>Outer Diameter</Name>
+			<NominalValue><IfcReal>1.16666666666667</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcLocalPlacement id="i555867">
+			<PlacementRelTo><IfcLocalPlacement ref="i555585"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i555828"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcCartesianPoint id="i555866">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-5.68505242881656E-12</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcExtrudedAreaSolid id="i555861">
+			<SweptArea><IfcCircleProfileDef ref="i555870"/></SweptArea>
+			<Position><IfcAxis2Placement3D ref="i555871"/></Position>
+			<ExtrudedDirection><IfcDirection ref="i555553"/></ExtrudedDirection>
+			<Depth>7404.51062781128</Depth>
+		</IfcExtrudedAreaSolid>
+		<IfcShapeRepresentation id="i555860">
+			<ContextOfItems><IfcGeometricRepresentationSubContext ref="i555576"/></ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>SweptSolid</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcExtrudedAreaSolid pos="0" ref="i555861" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcFlowSegment id="i555863">
+			<GlobalId>2MFXaS0_1CExpPIggqpYxy</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Pipe Types:Default:338844</Name>
+			<ObjectType>Pipe Types:Default:338632</ObjectType>
+			<ObjectPlacement><IfcLocalPlacement ref="i555867"/></ObjectPlacement>
+			<Representation><IfcProductDefinitionShape ref="i555862"/></Representation>
+			<Tag>338844</Tag>
+		</IfcFlowSegment>
+		<IfcProductDefinitionShape id="i555862">
+			<Representations ex:cType="list" >
+				<IfcShapeRepresentation pos="0" ref="i555860" />
+			</Representations>
+		</IfcProductDefinitionShape>
+		<IfcPropertySingleValue id="i555857">
+			<Name>Size</Name>
+			<NominalValue><IfcLabel>350 mm\X2\00F8\X0\</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555856">
+			<Name>Mark</Name>
+			<NominalValue><IfcLabel>5</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555859">
+			<Name>Roughness</Name>
+			<NominalValue><IfcReal>0.04572</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555858">
+			<Name>End Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcRelDefinesByProperties id="i555886">
+			<GlobalId>0bYNjylK900PugSpyFuCUy</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555863" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555887"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555887">
+			<GlobalId>2YYPtQegr0ueckMS$eVN48</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Dimensions</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555864" />
+				<IfcPropertySingleValue pos="1" ref="i555853" />
+				<IfcPropertySingleValue pos="2" ref="i555854" />
+				<IfcPropertySingleValue pos="3" ref="i555857" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555884">
+			<GlobalId>2UvR6VF6zE$ffsdZP_YYVU</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555863" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555885"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555885">
+			<GlobalId>1_9pslXxDDggls_ycepq3p</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Mechanical - Flow</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555706" />
+				<IfcPropertySingleValue pos="1" ref="i555852" />
+				<IfcPropertySingleValue pos="2" ref="i555713" />
+				<IfcPropertySingleValue pos="3" ref="i555750" />
+				<IfcPropertySingleValue pos="4" ref="i555730" />
+				<IfcPropertySingleValue pos="5" ref="i555734" />
+				<IfcPropertySingleValue pos="6" ref="i555749" />
+				<IfcPropertySingleValue pos="7" ref="i555731" />
+				<IfcPropertySingleValue pos="8" ref="i555728" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555882">
+			<GlobalId>2cQDWYHbz3DxuU_6sd99E9</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555863" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555883"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555883">
+			<GlobalId>3towEr2mXBaAwitzz2$DaF</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Insulation</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555849" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555880">
+			<GlobalId>3snbPt26z1EvyPiT6jFlMp</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555863" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555881"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555881">
+			<GlobalId>0wXYyQZwPCXeM5bhQIW5Dr</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Identity Data</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555856" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555878">
+			<GlobalId>3Cs_tjsZ91yxsW0Yo5y$ed</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555863" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555879"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555879">
+			<GlobalId>38Dbd0LIP6jAjbeKXI1nLa</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Constraints</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555855" />
+				<IfcPropertySingleValue pos="1" ref="i555711" />
+				<IfcPropertySingleValue pos="2" ref="i555745" />
+				<IfcPropertySingleValue pos="3" ref="i555858" />
+				<IfcPropertySingleValue pos="4" ref="i555747" />
+				<IfcPropertySingleValue pos="5" ref="i555848" />
+				<IfcPropertySingleValue pos="6" ref="i555729" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555876">
+			<GlobalId>14JhPBaa96ZvAJAI$6Kpzr</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555863" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555877"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555877">
+			<GlobalId>0xS$mOOsD8JgFiAZ4yxkuX</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Phasing</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555617" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcCartesianPoint id="i555874">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-5.95576921114116E-12</IfcLengthMeasure>
+				<IfcLengthMeasure>-5.41433564649196E-13</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcAxis2Placement3D id="i555875">
+			<Location><IfcCartesianPoint ref="i555547"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcAxis2Placement2D id="i555872">
+			<Location><IfcCartesianPoint ref="i555874"/></Location>
+			<RefDirection><IfcDirection ref="i555555"/></RefDirection>
+		</IfcAxis2Placement2D>
+		<IfcLocalPlacement id="i555873">
+			<PlacementRelTo><IfcLocalPlacement ref="i555585"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i555875"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcPropertySingleValue id="i555903">
+			<Name>End Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555902">
+			<Name>Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555901">
+			<Name>Mark</Name>
+			<NominalValue><IfcLabel>6</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555900">
+			<Name>Area</Name>
+			<NominalValue><IfcAreaMeasure>1.16309780958797E7</IfcAreaMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555899">
+			<Name>System Name</Name>
+			<NominalValue><IfcLabel>Hydronic Supply 5</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555898">
+			<Name>Inner Diameter</Name>
+			<NominalValue><IfcReal>1.56783333333333</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555897">
+			<Name>Roughness</Name>
+			<NominalValue><IfcReal>0.04572</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555896">
+			<Name>Start Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555895">
+			<Name>Overall Size</Name>
+			<NominalValue><IfcLabel>500 mm\X2\00F8\X0\</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555894">
+			<GlobalId>27FQDxVgT00fMss$_wr12v</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Mechanical</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555752" />
+				<IfcPropertySingleValue pos="1" ref="i555719" />
+				<IfcPropertySingleValue pos="2" ref="i555909" />
+				<IfcPropertySingleValue pos="3" ref="i555746" />
+				<IfcPropertySingleValue pos="4" ref="i555709" />
+				<IfcPropertySingleValue pos="5" ref="i555904" />
+				<IfcPropertySingleValue pos="6" ref="i555906" />
+				<IfcPropertySingleValue pos="7" ref="i555707" />
+				<IfcPropertySingleValue pos="8" ref="i555899" />
+				<IfcPropertySingleValue pos="9" ref="i555900" />
+				<IfcPropertySingleValue pos="10" ref="i555705" />
+				<IfcPropertySingleValue pos="11" ref="i555725" />
+				<IfcPropertySingleValue pos="12" ref="i555897" />
+				<IfcPropertySingleValue pos="13" ref="i555892" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i555893">
+			<Name>Length</Name>
+			<NominalValue><IfcLengthMeasure>7404.51062781128</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555892">
+			<Name>Diameter</Name>
+			<NominalValue><IfcReal>1.64041994750656</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555891">
+			<Name>Size</Name>
+			<NominalValue><IfcLabel>500 mm\X2\00F8\X0\</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555890">
+			<GlobalId>2lkRvZWyrBAhSy7eZf7bnn</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Dimensions</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555908" />
+				<IfcPropertySingleValue pos="1" ref="i555898" />
+				<IfcPropertySingleValue pos="2" ref="i555891" />
+				<IfcPropertySingleValue pos="3" ref="i555893" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555889">
+			<GlobalId>1XXS8KABTFWOV6XkhUYBGn</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555907" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555894"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcRelDefinesByProperties id="i555888">
+			<GlobalId>1a$NXeUV1CgPmiY_yOs4pk</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555863" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555851"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555784">
+			<GlobalId>1nt7JwKw9C_eDG_6poGfH0</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Phasing</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555617" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555785">
+			<GlobalId>0orAnlEgj9aQygqRlF_4eg</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555759" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555786"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555786">
+			<GlobalId>3Thg7rXUfB3Qhbo4iiiToR</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Identity Data</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555791" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555787">
+			<GlobalId>0BHdZfJvL4vhRQ$TmHlgZV</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555759" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555780"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555788">
+			<Name>Outer Diameter</Name>
+			<NominalValue><IfcReal>0.552083333333333</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555789">
+			<GlobalId>1JAEXf8VT2vRlLngmkPK9e</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Mechanical</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555761" />
+				<IfcPropertySingleValue pos="1" ref="i555725" />
+				<IfcPropertySingleValue pos="2" ref="i555763" />
+				<IfcPropertySingleValue pos="3" ref="i555762" />
+				<IfcPropertySingleValue pos="4" ref="i555752" />
+				<IfcPropertySingleValue pos="5" ref="i555707" />
+				<IfcPropertySingleValue pos="6" ref="i555769" />
+				<IfcPropertySingleValue pos="7" ref="i555746" />
+				<IfcPropertySingleValue pos="8" ref="i555794" />
+				<IfcPropertySingleValue pos="9" ref="i555705" />
+				<IfcPropertySingleValue pos="10" ref="i555709" />
+				<IfcPropertySingleValue pos="11" ref="i555792" />
+				<IfcPropertySingleValue pos="12" ref="i555719" />
+				<IfcPropertySingleValue pos="13" ref="i555790" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i555790">
+			<Name>System Classification</Name>
+			<NominalValue><IfcLabel>Hydronic Supply</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555791">
+			<Name>Mark</Name>
+			<NominalValue><IfcLabel>3</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcAxis2Placement2D id="i555776">
+			<Location><IfcCartesianPoint ref="i555775"/></Location>
+			<RefDirection><IfcDirection ref="i555555"/></RefDirection>
+		</IfcAxis2Placement2D>
+		<IfcCircleProfileDef id="i555777">
+			<ProfileType>area</ProfileType>
+			<ProfileName>Default</ProfileName>
+			<Position><IfcAxis2Placement2D ref="i555776"/></Position>
+			<Radius>84.1375</Radius>
+		</IfcCircleProfileDef>
+		<IfcCartesianPoint id="i555778">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-1109.05321133111</IfcLengthMeasure>
+				<IfcLengthMeasure>-1108.57253901661</IfcLengthMeasure>
+				<IfcLengthMeasure>2743.2</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcAxis2Placement3D id="i555779">
+			<Location><IfcCartesianPoint ref="i555778"/></Location>
+			<Axis><IfcDirection ref="i555551"/></Axis>
+			<RefDirection><IfcDirection ref="i555550"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcPropertySet id="i555780">
+			<GlobalId>3dlxEydTnFrfA2PXurdOc9</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Dimensions</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555765" />
+				<IfcPropertySingleValue pos="1" ref="i555768" />
+				<IfcPropertySingleValue pos="2" ref="i555793" />
+				<IfcPropertySingleValue pos="3" ref="i555788" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555781">
+			<GlobalId>3WMKx4_Lv97AI45j9VKJ7z</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555759" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555782"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555782">
+			<GlobalId>1ewyihOdLDFPrNZcdKRn70</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Insulation</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555766" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555783">
+			<GlobalId>3e9462KJ9D0RUUeO64_2O9</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555759" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555796"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555801">
+			<Name>Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555800">
+			<Name>System Classification</Name>
+			<NominalValue><IfcLabel>Hydronic Supply</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555803">
+			<Name>End Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555802">
+			<Name>Start Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555805">
+			<Name>Length</Name>
+			<NominalValue><IfcLengthMeasure>7404.51062781128</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcFlowSegment id="i555804">
+			<GlobalId>2MFXaS0_1CExpPIggqpYuR</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Pipe Types:Default:338811</Name>
+			<ObjectType>Pipe Types:Default:338632</ObjectType>
+			<ObjectPlacement><IfcLocalPlacement ref="i555815"/></ObjectPlacement>
+			<Representation><IfcProductDefinitionShape ref="i555822"/></Representation>
+			<Tag>338811</Tag>
+		</IfcFlowSegment>
+		<IfcPropertySingleValue id="i555807">
+			<Name>Area</Name>
+			<NominalValue><IfcAreaMeasure>2326195.61917594</IfcAreaMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555806">
+			<Name>Relative Roughness</Name>
+			<NominalValue><IfcReal>7.33814523184602</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555793">
+			<Name>Inner Diameter</Name>
+			<NominalValue><IfcReal>0.505416666666667</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555792">
+			<Name>Roughness</Name>
+			<NominalValue><IfcReal>0.04572</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555795">
+			<Name>Start Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555794">
+			<Name>Diameter</Name>
+			<NominalValue><IfcReal>0.492125984251969</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcRelDefinesByProperties id="i555797">
+			<GlobalId>0zt8ePnxL0FA$Loj$lafBU</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555759" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555798"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555796">
+			<GlobalId>0LnGU$YeP6S8Hi7pkw5Pc5</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Constraints</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555711" />
+				<IfcPropertySingleValue pos="1" ref="i555760" />
+				<IfcPropertySingleValue pos="2" ref="i555745" />
+				<IfcPropertySingleValue pos="3" ref="i555729" />
+				<IfcPropertySingleValue pos="4" ref="i555764" />
+				<IfcPropertySingleValue pos="5" ref="i555747" />
+				<IfcPropertySingleValue pos="6" ref="i555795" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555799">
+			<GlobalId>1l$PlRfCX7cf3n0C1lhgL7</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555759" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555789"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555798">
+			<GlobalId>3uHnVA$PvEWg4yHZnUJzId</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Mechanical - Flow</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555749" />
+				<IfcPropertySingleValue pos="1" ref="i555734" />
+				<IfcPropertySingleValue pos="2" ref="i555713" />
+				<IfcPropertySingleValue pos="3" ref="i555750" />
+				<IfcPropertySingleValue pos="4" ref="i555767" />
+				<IfcPropertySingleValue pos="5" ref="i555706" />
+				<IfcPropertySingleValue pos="6" ref="i555730" />
+				<IfcPropertySingleValue pos="7" ref="i555728" />
+				<IfcPropertySingleValue pos="8" ref="i555731" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555818">
+			<GlobalId>17GFxM5m5C6ufmORGF6_et</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555759" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555784"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcAxis2Placement3D id="i555819">
+			<Location><IfcCartesianPoint ref="i555547"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i555816">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-5.95576921114116E-12</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcAxis2Placement2D id="i555817">
+			<Location><IfcCartesianPoint ref="i555816"/></Location>
+			<RefDirection><IfcDirection ref="i555555"/></RefDirection>
+		</IfcAxis2Placement2D>
+		<IfcProductDefinitionShape id="i555822">
+			<Representations ex:cType="list" >
+				<IfcShapeRepresentation pos="0" ref="i555821" />
+			</Representations>
+		</IfcProductDefinitionShape>
+		<IfcCircleProfileDef id="i555823">
+			<ProfileType>area</ProfileType>
+			<ProfileName>Default</ProfileName>
+			<Position><IfcAxis2Placement2D ref="i555817"/></Position>
+			<Radius>57.15</Radius>
+		</IfcCircleProfileDef>
+		<IfcExtrudedAreaSolid id="i555820">
+			<SweptArea><IfcCircleProfileDef ref="i555823"/></SweptArea>
+			<Position><IfcAxis2Placement3D ref="i555825"/></Position>
+			<ExtrudedDirection><IfcDirection ref="i555553"/></ExtrudedDirection>
+			<Depth>7404.51062781128</Depth>
+		</IfcExtrudedAreaSolid>
+		<IfcShapeRepresentation id="i555821">
+			<ContextOfItems><IfcGeometricRepresentationSubContext ref="i555576"/></ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>SweptSolid</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcExtrudedAreaSolid pos="0" ref="i555820" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcPropertySingleValue id="i555810">
+			<Name>Connection Type</Name>
+			<NominalValue><IfcLabel>Generic</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555811">
+			<Name>System Name</Name>
+			<NominalValue><IfcLabel>Hydronic Supply 3</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555808">
+			<Name>Roughness</Name>
+			<NominalValue><IfcReal>0.04572</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555809">
+			<Name>Size</Name>
+			<NominalValue><IfcLabel>100 mm\X2\00F8\X0\</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555814">
+			<Name>Outer Diameter</Name>
+			<NominalValue><IfcReal>0.375</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcLocalPlacement id="i555815">
+			<PlacementRelTo><IfcLocalPlacement ref="i555585"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i555819"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcPropertySingleValue id="i555812">
+			<Name>Overall Size</Name>
+			<NominalValue><IfcLabel>100 mm\X2\00F8\X0\</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555813">
+			<Name>Inner Diameter</Name>
+			<NominalValue><IfcReal>0.3355</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcRelDefinesByProperties id="i555835">
+			<GlobalId>2l0h21YmTDQQRAYqslztB9</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555804" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555842"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555834">
+			<GlobalId>3chjp0$j15KAOiiMAMYmyP</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Dimensions</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555805" />
+				<IfcPropertySingleValue pos="1" ref="i555814" />
+				<IfcPropertySingleValue pos="2" ref="i555813" />
+				<IfcPropertySingleValue pos="3" ref="i555809" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555833">
+			<GlobalId>3oMR22birDYeBN9q4PZ3ce</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555804" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555830"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555832">
+			<GlobalId>0vENTVjtH7uPUoqd$JGpSX</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Constraints</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555801" />
+				<IfcPropertySingleValue pos="1" ref="i555711" />
+				<IfcPropertySingleValue pos="2" ref="i555803" />
+				<IfcPropertySingleValue pos="3" ref="i555802" />
+				<IfcPropertySingleValue pos="4" ref="i555747" />
+				<IfcPropertySingleValue pos="5" ref="i555745" />
+				<IfcPropertySingleValue pos="6" ref="i555729" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i555839">
+			<Name>Diameter</Name>
+			<NominalValue><IfcReal>0.328083989501312</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555838">
+			<GlobalId>2J1EmpJR97KBUGElN9ywRc</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Mechanical</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555705" />
+				<IfcPropertySingleValue pos="1" ref="i555746" />
+				<IfcPropertySingleValue pos="2" ref="i555752" />
+				<IfcPropertySingleValue pos="3" ref="i555800" />
+				<IfcPropertySingleValue pos="4" ref="i555707" />
+				<IfcPropertySingleValue pos="5" ref="i555811" />
+				<IfcPropertySingleValue pos="6" ref="i555808" />
+				<IfcPropertySingleValue pos="7" ref="i555807" />
+				<IfcPropertySingleValue pos="8" ref="i555810" />
+				<IfcPropertySingleValue pos="9" ref="i555725" />
+				<IfcPropertySingleValue pos="10" ref="i555840" />
+				<IfcPropertySingleValue pos="11" ref="i555709" />
+				<IfcPropertySingleValue pos="12" ref="i555719" />
+				<IfcPropertySingleValue pos="13" ref="i555839" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555837">
+			<GlobalId>3x9UvymZjAFA4mWanAGOW4</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555804" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555834"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555836">
+			<GlobalId>2vK4upk5DDdwMTdc$aTesa</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Identity Data</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555841" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555827">
+			<GlobalId>0ThcDOZAT8Ug$$7q7KTFSd</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555804" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555832"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555826">
+			<GlobalId>1P5YUN46z4p8CH9vnADbpk</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Insulation</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555812" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcAxis2Placement3D id="i555825">
+			<Location><IfcCartesianPoint ref="i555824"/></Location>
+			<Axis><IfcDirection ref="i555551"/></Axis>
+			<RefDirection><IfcDirection ref="i555550"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i555824">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-2442.38654466445</IfcLengthMeasure>
+				<IfcLengthMeasure>-1108.57253901661</IfcLengthMeasure>
+				<IfcLengthMeasure>2743.2</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcRelDefinesByProperties id="i555831">
+			<GlobalId>3ylE9PRg56Q8XG1fRFnaqA</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555804" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555836"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555830">
+			<GlobalId>0npElWpnPFDPuYc$vYk7Db</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Phasing</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555617" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555829">
+			<GlobalId>0w1EWY4d57Mh_abLt05J_a</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555804" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555826"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcAxis2Placement3D id="i555828">
+			<Location><IfcCartesianPoint ref="i555547"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcPropertySingleValue id="i555734">
+			<Name>Reynolds Number</Name>
+			<NominalValue><IfcReal>0.0</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcRelDefinesByProperties id="i555735">
+			<GlobalId>2sd$IDQIb2dR26ZbpezeeP</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555716" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555736"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555732">
+			<Name>Overall Size</Name>
+			<NominalValue><IfcLabel>200 mm\X2\00F8\X0\</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555733">
+			<Name>End Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555730">
+			<Name>Additional Flow</Name>
+			<NominalValue><IfcReal>0.0</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555731">
+			<Name>Flow State</Name>
+			<NominalValue><IfcInteger>0</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555728">
+			<Name>Pressure Drop</Name>
+			<NominalValue><IfcReal>0.0</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555729">
+			<Name>Reference Level</Name>
+			<NominalValue><IfcLabel>Level: Level 1</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555742">
+			<GlobalId>2eZ0YmmiPAQ87R6kgF3h$D</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Identity Data</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555721" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i555743">
+			<Name>Outer Diameter</Name>
+			<NominalValue><IfcReal>0.71875</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555740">
+			<GlobalId>2au7gFunD4YQ1rzOTxugiq</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Insulation</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555732" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555741">
+			<GlobalId>3VDW05uBf62RqPpVj_Mxoq</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555716" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555742"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555738">
+			<GlobalId>0b1T2L6Dn3du_nmxou2kqD</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Constraints</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555712" />
+				<IfcPropertySingleValue pos="1" ref="i555711" />
+				<IfcPropertySingleValue pos="2" ref="i555733" />
+				<IfcPropertySingleValue pos="3" ref="i555729" />
+				<IfcPropertySingleValue pos="4" ref="i555722" />
+				<IfcPropertySingleValue pos="5" ref="i555745" />
+				<IfcPropertySingleValue pos="6" ref="i555747" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555739">
+			<GlobalId>1KfpGRHa93$wGCQtZeQ$3v</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555716" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555740"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555736">
+			<GlobalId>3z3vcWKHvBERALboIDrAF8</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Mechanical - Flow</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555713" />
+				<IfcPropertySingleValue pos="1" ref="i555706" />
+				<IfcPropertySingleValue pos="2" ref="i555734" />
+				<IfcPropertySingleValue pos="3" ref="i555731" />
+				<IfcPropertySingleValue pos="4" ref="i555730" />
+				<IfcPropertySingleValue pos="5" ref="i555728" />
+				<IfcPropertySingleValue pos="6" ref="i555720" />
+				<IfcPropertySingleValue pos="7" ref="i555749" />
+				<IfcPropertySingleValue pos="8" ref="i555750" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555737">
+			<GlobalId>1XteRJ2dP2$99ugxasQ1eZ</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555716" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555738"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555719">
+			<Name>System Type</Name>
+			<NominalValue><IfcLabel>Piping System: Hydronic Supply</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcProductDefinitionShape id="i555718">
+			<Representations ex:cType="list" >
+				<IfcShapeRepresentation pos="0" ref="i555696" />
+			</Representations>
+		</IfcProductDefinitionShape>
+		<IfcPipeSegmentType id="i555717">
+			<GlobalId>2MFXaS0_1CExpPIggqpY_e</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Pipe Types:Default:338634</Name>
+			<ApplicableOccurrence></ApplicableOccurrence>
+			<Tag>338632</Tag>
+			<ElementType>Pipe Types:Default:338634</ElementType>
+			<PredefinedType>notdefined</PredefinedType>
+		</IfcPipeSegmentType>
+		<IfcFlowSegment id="i555716">
+			<GlobalId>2MFXaS0_1CExpPIggqpY_g</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Pipe Types:Default:338634</Name>
+			<ObjectType>Pipe Types:Default:338632</ObjectType>
+			<ObjectPlacement><IfcLocalPlacement ref="i555701"/></ObjectPlacement>
+			<Representation><IfcProductDefinitionShape ref="i555718"/></Representation>
+			<Tag>338634</Tag>
+		</IfcFlowSegment>
+		<IfcPropertySingleValue id="i555715">
+			<Name>Inner Diameter</Name>
+			<NominalValue><IfcReal>0.665083333333333</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555714">
+			<Name>System Name</Name>
+			<NominalValue><IfcLabel>Hydronic Supply 1</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555713">
+			<Name>Friction Factor</Name>
+			<NominalValue><IfcReal>0.0</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555712">
+			<Name>Start Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555727">
+			<Name>Length</Name>
+			<NominalValue><IfcLengthMeasure>7404.51062781128</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555726">
+			<Name>Diameter</Name>
+			<NominalValue><IfcReal>0.656167979002625</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555725">
+			<Name>Section</Name>
+			<NominalValue><IfcInteger>1</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555724">
+			<Name>Invert Elevation</Name>
+			<NominalValue><IfcLengthMeasure>2641.8413</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555723">
+			<Name>Area</Name>
+			<NominalValue><IfcAreaMeasure>4652391.23835189</IfcAreaMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555722">
+			<Name>Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555721">
+			<Name>Mark</Name>
+			<NominalValue><IfcLabel>1</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555720">
+			<Name>Relative Roughness</Name>
+			<NominalValue><IfcReal>14.5468795567221</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555764">
+			<Name>Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555765">
+			<Name>Size</Name>
+			<NominalValue><IfcLabel>150 mm\X2\00F8\X0\</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555766">
+			<Name>Overall Size</Name>
+			<NominalValue><IfcLabel>150 mm\X2\00F8\X0\</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555767">
+			<Name>Relative Roughness</Name>
+			<NominalValue><IfcReal>11.0546077573637</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555760">
+			<Name>End Offset</Name>
+			<NominalValue><IfcLengthMeasure>2743.2</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555761">
+			<Name>Invert Elevation</Name>
+			<NominalValue><IfcLengthMeasure>2666.1745</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555762">
+			<Name>Area</Name>
+			<NominalValue><IfcAreaMeasure>3489293.42876392</IfcAreaMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555763">
+			<Name>Connection Type</Name>
+			<NominalValue><IfcLabel>Generic</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555772">
+			<GlobalId>3aSMx23Eb0dOqHOSLwv2bJ</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Identity Data</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555631" />
+				<IfcPropertySingleValue pos="1" ref="i555639" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcAxis2Placement3D id="i555773">
+			<Location><IfcCartesianPoint ref="i555547"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcLocalPlacement id="i555774">
+			<PlacementRelTo><IfcLocalPlacement ref="i555585"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i555773"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcCartesianPoint id="i555775">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-5.82041081997886E-12</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcPropertySingleValue id="i555768">
+			<Name>Length</Name>
+			<NominalValue><IfcLengthMeasure>7404.51062781128</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555769">
+			<Name>System Name</Name>
+			<NominalValue><IfcLabel>Hydronic Supply 2</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555770">
+			<GlobalId>1i7SJbqpHCww_yk0z5APCc</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Phasing</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555617" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555771">
+			<GlobalId>1Fin1tsGn1pRAEXTPsT3UN</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555716" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555770"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555749">
+			<Name>Flow</Name>
+			<NominalValue><IfcReal>0.0</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555748">
+			<Name>Connection Type</Name>
+			<NominalValue><IfcLabel>Generic</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcRelDefinesByProperties id="i555751">
+			<GlobalId>3qKanWoSv6chjv$gCa$HOg</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555716" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555753"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555750">
+			<Name>Friction</Name>
+			<NominalValue><IfcReal>0.0</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555745">
+			<Name>Vertical Justification</Name>
+			<NominalValue><IfcInteger>0</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555744">
+			<Name>Roughness</Name>
+			<NominalValue><IfcReal>0.04572</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555747">
+			<Name>Horizontal Justification</Name>
+			<NominalValue><IfcInteger>0</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555746">
+			<Name>Segment Description</Name>
+			<NominalValue><IfcLabel></IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcExtrudedAreaSolid id="i555757">
+			<SweptArea><IfcCircleProfileDef ref="i555777"/></SweptArea>
+			<Position><IfcAxis2Placement3D ref="i555779"/></Position>
+			<ExtrudedDirection><IfcDirection ref="i555553"/></ExtrudedDirection>
+			<Depth>7404.51062781128</Depth>
+		</IfcExtrudedAreaSolid>
+		<IfcShapeRepresentation id="i555756">
+			<ContextOfItems><IfcGeometricRepresentationSubContext ref="i555576"/></ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>SweptSolid</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcExtrudedAreaSolid pos="0" ref="i555757" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcFlowSegment id="i555759">
+			<GlobalId>2MFXaS0_1CExpPIggqpYu9</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Pipe Types:Default:338793</Name>
+			<ObjectType>Pipe Types:Default:338632</ObjectType>
+			<ObjectPlacement><IfcLocalPlacement ref="i555774"/></ObjectPlacement>
+			<Representation><IfcProductDefinitionShape ref="i555758"/></Representation>
+			<Tag>338793</Tag>
+		</IfcFlowSegment>
+		<IfcProductDefinitionShape id="i555758">
+			<Representations ex:cType="list" >
+				<IfcShapeRepresentation pos="0" ref="i555756" />
+			</Representations>
+		</IfcProductDefinitionShape>
+		<IfcPropertySet id="i555753">
+			<GlobalId>2pst1$TIP81wbtOaOOpgP0</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Dimensions</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555715" />
+				<IfcPropertySingleValue pos="1" ref="i555710" />
+				<IfcPropertySingleValue pos="2" ref="i555727" />
+				<IfcPropertySingleValue pos="3" ref="i555743" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i555752">
+			<Name>Schedule/Type</Name>
+			<NominalValue><IfcLabel>Pipe Schedule Types: Schedule 40</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555755">
+			<GlobalId>1DvW_CZIjEEf23ONEJTg9x</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Mechanical</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555714" />
+				<IfcPropertySingleValue pos="1" ref="i555709" />
+				<IfcPropertySingleValue pos="2" ref="i555708" />
+				<IfcPropertySingleValue pos="3" ref="i555707" />
+				<IfcPropertySingleValue pos="4" ref="i555705" />
+				<IfcPropertySingleValue pos="5" ref="i555725" />
+				<IfcPropertySingleValue pos="6" ref="i555726" />
+				<IfcPropertySingleValue pos="7" ref="i555723" />
+				<IfcPropertySingleValue pos="8" ref="i555724" />
+				<IfcPropertySingleValue pos="9" ref="i555719" />
+				<IfcPropertySingleValue pos="10" ref="i555746" />
+				<IfcPropertySingleValue pos="11" ref="i555744" />
+				<IfcPropertySingleValue pos="12" ref="i555748" />
+				<IfcPropertySingleValue pos="13" ref="i555752" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555754">
+			<GlobalId>3wZgzYWzX1Q9cTesTcoUwW</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcFlowSegment pos="0" ref="i555716" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555755"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcSurfaceStyleRendering id="i555666">
+			<SurfaceColour><IfcColourRgb ref="i555667"/></SurfaceColour>
+			<Transparency>0.0</Transparency>
+			<SpecularColour><IfcNormalisedRatioMeasure>0.5</IfcNormalisedRatioMeasure></SpecularColour>
+			<SpecularHighlight><IfcSpecularExponent>64.0</IfcSpecularExponent></SpecularHighlight>
+			<ReflectanceMethod>notdefined</ReflectanceMethod>
+		</IfcSurfaceStyleRendering>
+		<IfcColourRgb id="i555667">
+			<Red>1.0</Red>
+			<Green>1.0</Green>
+			<Blue>0.0</Blue>
+		</IfcColourRgb>
+		<IfcMaterialDefinitionRepresentation id="i555664">
+			<Representations ex:cType="list" >
+				<IfcStyledRepresentation pos="0" ref="i555665" />
+			</Representations>
+			<RepresentedMaterial><IfcMaterial ref="i555659"/></RepresentedMaterial>
+		</IfcMaterialDefinitionRepresentation>
+		<IfcStyledRepresentation id="i555665">
+			<ContextOfItems><IfcGeometricRepresentationContext ref="i555571"/></ContextOfItems>
+			<RepresentationIdentifier>Style</RepresentationIdentifier>
+			<RepresentationType>Material</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcStyledItem pos="0" ref="i555655" />
+			</Items>
+		</IfcStyledRepresentation>
+		<IfcCurveStyle id="i555670">
+			<CurveFont><IfcDraughtingPreDefinedCurveFont ref="i555673"/></CurveFont>
+			<CurveColour><IfcColourRgb ref="i555672"/></CurveColour>
+		</IfcCurveStyle>
+		<IfcFillAreaStyleHatching id="i555671">
+			<HatchLineAppearance><IfcCurveStyle ref="i555670"/></HatchLineAppearance>
+			<StartOfNextHatchLine><IfcPositiveLengthMeasure>100.0</IfcPositiveLengthMeasure></StartOfNextHatchLine>
+			<PatternStart><IfcCartesianPoint ref="i555548"/></PatternStart>
+			<HatchLineAngle>45.0</HatchLineAngle>
+		</IfcFillAreaStyleHatching>
+		<IfcMaterial id="i555668">
+			<Name>Batt insulation</Name>
+		</IfcMaterial>
+		<IfcMaterialLayer id="i555669">
+			<Material><IfcMaterial ref="i555659"/></Material>
+			<LayerThickness>108.0</LayerThickness>
+			<IsVentilated>true</IsVentilated>
+		</IfcMaterialLayer>
+		<IfcFillAreaStyle id="i555674">
+			<Name>Diagonal crosshatch 1.0mm</Name>
+			<FillStyles ex:cType="set" >
+				<IfcFillAreaStyleHatching pos="0" ref="i555671" />
+				<IfcFillAreaStyleHatching pos="1" ref="i555676" />
+			</FillStyles>
+		</IfcFillAreaStyle>
+		<IfcCurveStyle id="i555675">
+			<CurveFont><IfcDraughtingPreDefinedCurveFont ref="i555673"/></CurveFont>
+			<CurveColour><IfcColourRgb ref="i555672"/></CurveColour>
+		</IfcCurveStyle>
+		<IfcColourRgb id="i555672">
+			<Red>0.0</Red>
+			<Green>0.0</Green>
+			<Blue>0.0</Blue>
+		</IfcColourRgb>
+		<IfcDraughtingPreDefinedCurveFont id="i555673">
+			<Name>continuous</Name>
+		</IfcDraughtingPreDefinedCurveFont>
+		<IfcMaterial id="i555678">
+			<Name>Concrete, Lightweight</Name>
+		</IfcMaterial>
+		<IfcMaterialDefinitionRepresentation id="i555679">
+			<Representations ex:cType="list" >
+				<IfcStyledRepresentation pos="0" ref="i555662" />
+			</Representations>
+			<RepresentedMaterial><IfcMaterial ref="i555668"/></RepresentedMaterial>
+		</IfcMaterialDefinitionRepresentation>
+		<IfcFillAreaStyleHatching id="i555676">
+			<HatchLineAppearance><IfcCurveStyle ref="i555675"/></HatchLineAppearance>
+			<StartOfNextHatchLine><IfcPositiveLengthMeasure>100.0</IfcPositiveLengthMeasure></StartOfNextHatchLine>
+			<PatternStart><IfcCartesianPoint ref="i555548"/></PatternStart>
+			<HatchLineAngle>135.0</HatchLineAngle>
+		</IfcFillAreaStyleHatching>
+		<IfcMaterialLayer id="i555677">
+			<Material><IfcMaterial ref="i555668"/></Material>
+			<LayerThickness>180.0</LayerThickness>
+			<IsVentilated>true</IsVentilated>
+		</IfcMaterialLayer>
+		<IfcColourRgb id="i555651">
+			<Red>0.298039215686275</Red>
+			<Green>0.215686274509804</Green>
+			<Blue>0.231372549019608</Blue>
+		</IfcColourRgb>
+		<IfcPropertySet id="i555650">
+			<GlobalId>3GADDeffnEOuiUkJ5umkhS</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Constraints</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555618" />
+				<IfcPropertySingleValue pos="1" ref="i555615" />
+				<IfcPropertySingleValue pos="2" ref="i555616" />
+				<IfcPropertySingleValue pos="3" ref="i555613" />
+				<IfcPropertySingleValue pos="4" ref="i555611" />
+				<IfcPropertySingleValue pos="5" ref="i555625" />
+				<IfcPropertySingleValue pos="6" ref="i555623" />
+				<IfcPropertySingleValue pos="7" ref="i555624" />
+				<IfcPropertySingleValue pos="8" ref="i555621" />
+				<IfcPropertySingleValue pos="9" ref="i555622" />
+				<IfcPropertySingleValue pos="10" ref="i555620" />
+				<IfcPropertySingleValue pos="11" ref="i555633" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555649">
+			<GlobalId>3p4v76JCHFQuyyMXvXuqGy</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555648"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555648">
+			<GlobalId>2USRePPrf739RLeRHDiMae</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Phasing</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555617" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcStyledItem id="i555655">
+			<Styles ex:cType="set" >
+				<IfcPresentationStyleAssignment pos="0" ref="i555654" />
+			</Styles>
+		</IfcStyledItem>
+		<IfcPresentationStyleAssignment id="i555654">
+			<Styles ex:cType="set" >
+				<IfcSurfaceStyle pos="0" ref="i555653" />
+			</Styles>
+		</IfcPresentationStyleAssignment>
+		<IfcSurfaceStyle id="i555653">
+			<Name>Brick, Common</Name>
+			<Side>both</Side>
+			<Styles ex:cType="set" >
+				<IfcSurfaceStyleRendering pos="0" ref="i555652" />
+			</Styles>
+		</IfcSurfaceStyle>
+		<IfcSurfaceStyleRendering id="i555652">
+			<SurfaceColour><IfcColourRgb ref="i555651"/></SurfaceColour>
+			<Transparency>0.0</Transparency>
+			<SpecularColour><IfcNormalisedRatioMeasure>0.5</IfcNormalisedRatioMeasure></SpecularColour>
+			<SpecularHighlight><IfcSpecularExponent>128.0</IfcSpecularExponent></SpecularHighlight>
+			<ReflectanceMethod>notdefined</ReflectanceMethod>
+		</IfcSurfaceStyleRendering>
+		<IfcMaterial id="i555659">
+			<Name>Brick, Common</Name>
+		</IfcMaterial>
+		<IfcPropertySet id="i555658">
+			<GlobalId>2HyY7bEe9BNOh1VbRe2aXj</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Analytical Properties</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555629" />
+				<IfcPropertySingleValue pos="1" ref="i555641" />
+				<IfcPropertySingleValue pos="2" ref="i555640" />
+				<IfcPropertySingleValue pos="3" ref="i555637" />
+				<IfcPropertySingleValue pos="4" ref="i555636" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySet id="i555657">
+			<GlobalId>2W5rWrzCjE6h9ABrmR5GIY</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Construction</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555630" />
+				<IfcPropertySingleValue pos="1" ref="i555628" />
+				<IfcPropertySingleValue pos="2" ref="i555642" />
+				<IfcPropertySingleValue pos="3" ref="i555638" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySet id="i555656">
+			<GlobalId>1z6LW5OND9z8iBUfjmG7Px</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Graphics</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555632" />
+				<IfcPropertySingleValue pos="1" ref="i555627" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcStyledItem id="i555663">
+			<Styles ex:cType="set" >
+				<IfcPresentationStyleAssignment pos="0" ref="i555660" />
+			</Styles>
+		</IfcStyledItem>
+		<IfcStyledRepresentation id="i555662">
+			<ContextOfItems><IfcGeometricRepresentationContext ref="i555571"/></ContextOfItems>
+			<RepresentationIdentifier>Style</RepresentationIdentifier>
+			<RepresentationType>Material</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcStyledItem pos="0" ref="i555663" />
+			</Items>
+		</IfcStyledRepresentation>
+		<IfcSurfaceStyle id="i555661">
+			<Name>Batt insulation</Name>
+			<Side>both</Side>
+			<Styles ex:cType="set" >
+				<IfcSurfaceStyleRendering pos="0" ref="i555666" />
+			</Styles>
+		</IfcSurfaceStyle>
+		<IfcPresentationStyleAssignment id="i555660">
+			<Styles ex:cType="set" >
+				<IfcSurfaceStyle pos="0" ref="i555661" />
+			</Styles>
+		</IfcPresentationStyleAssignment>
+		<IfcShapeRepresentation id="i555696">
+			<ContextOfItems><IfcGeometricRepresentationSubContext ref="i555576"/></ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>SweptSolid</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcExtrudedAreaSolid pos="0" ref="i555695" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcAxis2Placement2D id="i555697">
+			<Location><IfcCartesianPoint ref="i555702"/></Location>
+			<RefDirection><IfcDirection ref="i555555"/></RefDirection>
+		</IfcAxis2Placement2D>
+		<IfcCircleProfileDef id="i555698">
+			<ProfileType>area</ProfileType>
+			<ProfileName>Default</ProfileName>
+			<Position><IfcAxis2Placement2D ref="i555697"/></Position>
+			<Radius>109.5375</Radius>
+		</IfcCircleProfileDef>
+		<IfcCartesianPoint id="i555699">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>224.280122002227</IfcLengthMeasure>
+				<IfcLengthMeasure>-1108.57253901661</IfcLengthMeasure>
+				<IfcLengthMeasure>2743.2</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcAxis2Placement3D id="i555700">
+			<Location><IfcCartesianPoint ref="i555547"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcLocalPlacement id="i555701">
+			<PlacementRelTo><IfcLocalPlacement ref="i555585"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i555700"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcCartesianPoint id="i555702">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>2.36877184534023E-13</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcPropertySet id="i555703">
+			<GlobalId>2MFXaS0_1CExpPIgkqpYzu</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Pset_WallCommon</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555684" />
+				<IfcPropertySingleValue pos="1" ref="i555683" />
+				<IfcPropertySingleValue pos="2" ref="i555686" />
+				<IfcPropertySingleValue pos="3" ref="i555685" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555704">
+			<GlobalId>24rGAD0p18ov7uq0HlDLV6</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555703"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555705">
+			<Name>Material</Name>
+			<NominalValue><IfcLabel>Steel</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555706">
+			<Name>Velocity</Name>
+			<NominalValue><IfcReal>0.0</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555707">
+			<Name>System Abbreviation</Name>
+			<NominalValue><IfcLabel></IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555708">
+			<Name>System Classification</Name>
+			<NominalValue><IfcLabel>Hydronic Supply</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555709">
+			<Name>Pipe Segment</Name>
+			<NominalValue><IfcLabel>Carbon Steel - Schedule 40</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555710">
+			<Name>Size</Name>
+			<NominalValue><IfcLabel>200 mm\X2\00F8\X0\</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555711">
+			<Name>Slope</Name>
+			<NominalValue><IfcReal>0.0</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcColourRgb id="i555681">
+			<Red>0.470588235294118</Red>
+			<Green>0.470588235294118</Green>
+			<Blue>0.470588235294118</Blue>
+		</IfcColourRgb>
+		<IfcSurfaceStyle id="i555680">
+			<Name>Concrete, Lightweight</Name>
+			<Side>both</Side>
+			<Styles ex:cType="set" >
+				<IfcSurfaceStyleRendering pos="0" ref="i555682" />
+			</Styles>
+		</IfcSurfaceStyle>
+		<IfcPropertySingleValue id="i555683">
+			<Name>LoadBearing</Name>
+			<NominalValue><IfcBoolean>false</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcSurfaceStyleRendering id="i555682">
+			<SurfaceColour><IfcColourRgb ref="i555681"/></SurfaceColour>
+			<Transparency>0.0</Transparency>
+			<SpecularColour><IfcNormalisedRatioMeasure>0.5</IfcNormalisedRatioMeasure></SpecularColour>
+			<SpecularHighlight><IfcSpecularExponent>64.0</IfcSpecularExponent></SpecularHighlight>
+			<ReflectanceMethod>notdefined</ReflectanceMethod>
+		</IfcSurfaceStyleRendering>
+		<IfcPropertySingleValue id="i555685">
+			<Name>IsExternal</Name>
+			<NominalValue><IfcBoolean>true</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555684">
+			<Name>Reference</Name>
+			<NominalValue><IfcIdentifier>Exterior - 408mm Masonry / LW Concrete 2</IfcIdentifier></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcMaterialLayerSet id="i555687">
+			<MaterialLayers ex:cType="list" >
+				<IfcMaterialLayer pos="0" ref="i555669" />
+				<IfcMaterialLayer pos="1" ref="i555677" />
+				<IfcMaterialLayer pos="2" ref="i555688" />
+			</MaterialLayers>
+			<LayerSetName>Basic Wall:Exterior - 408mm Masonry / LW Concrete 2</LayerSetName>
+		</IfcMaterialLayerSet>
+		<IfcPropertySingleValue id="i555686">
+			<Name>ExtendToStructure</Name>
+			<NominalValue><IfcBoolean>false</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcMaterialLayerSetUsage id="i555689">
+			<ForLayerSet><IfcMaterialLayerSet ref="i555687"/></ForLayerSet>
+			<LayerSetDirection>axis2</LayerSetDirection>
+			<DirectionSense>negative</DirectionSense>
+			<OffsetFromReferenceLine>204.0</OffsetFromReferenceLine>
+		</IfcMaterialLayerSetUsage>
+		<IfcMaterialLayer id="i555688">
+			<Material><IfcMaterial ref="i555678"/></Material>
+			<LayerThickness>120.0</LayerThickness>
+			<IsVentilated>true</IsVentilated>
+		</IfcMaterialLayer>
+		<IfcMaterialDefinitionRepresentation id="i555691">
+			<Representations ex:cType="list" >
+				<IfcStyledRepresentation pos="0" ref="i555690" />
+			</Representations>
+			<RepresentedMaterial><IfcMaterial ref="i555678"/></RepresentedMaterial>
+		</IfcMaterialDefinitionRepresentation>
+		<IfcStyledRepresentation id="i555690">
+			<ContextOfItems><IfcGeometricRepresentationContext ref="i555571"/></ContextOfItems>
+			<RepresentationIdentifier>Style</RepresentationIdentifier>
+			<RepresentationType>Material and Cut Pattern</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcStyledItem pos="0" ref="i555693" />
+			</Items>
+		</IfcStyledRepresentation>
+		<IfcStyledItem id="i555693">
+			<Styles ex:cType="set" >
+				<IfcPresentationStyleAssignment pos="0" ref="i555692" />
+			</Styles>
+		</IfcStyledItem>
+		<IfcPresentationStyleAssignment id="i555692">
+			<Styles ex:cType="set" >
+				<IfcSurfaceStyle pos="0" ref="i555680" />
+				<IfcFillAreaStyle pos="1" ref="i555674" />
+			</Styles>
+		</IfcPresentationStyleAssignment>
+		<IfcExtrudedAreaSolid id="i555695">
+			<SweptArea><IfcCircleProfileDef ref="i555698"/></SweptArea>
+			<Position><IfcAxis2Placement3D ref="i555694"/></Position>
+			<ExtrudedDirection><IfcDirection ref="i555553"/></ExtrudedDirection>
+			<Depth>7404.51062781128</Depth>
+		</IfcExtrudedAreaSolid>
+		<IfcAxis2Placement3D id="i555694">
+			<Location><IfcCartesianPoint ref="i555699"/></Location>
+			<Axis><IfcDirection ref="i555551"/></Axis>
+			<RefDirection><IfcDirection ref="i555549"/></RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcPropertySingleValue id="i555615">
+			<Name>Base is Attached</Name>
+			<NominalValue><IfcBoolean>false</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555614">
+			<Name>Enable Analytical Model</Name>
+			<NominalValue><IfcBoolean>false</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555613">
+			<Name>Top Constraint</Name>
+			<NominalValue><IfcLabel>Level: Level 2</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555612">
+			<Name>Volume</Name>
+			<NominalValue><IfcVolumeMeasure>1.04448E10</IfcVolumeMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555611">
+			<Name>Base Offset</Name>
+			<NominalValue><IfcLengthMeasure>0.0</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcShapeRepresentation id="i555610">
+			<ContextOfItems><IfcGeometricRepresentationSubContext ref="i555576"/></ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>SweptSolid</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcExtrudedAreaSolid pos="0" ref="i555602" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcStyledItem id="i555609">
+			<Item><IfcExtrudedAreaSolid ref="i555602"/></Item>
+			<Styles ex:cType="set" >
+				<IfcPresentationStyleAssignment pos="0" ref="i555601" />
+			</Styles>
+		</IfcStyledItem>
+		<IfcWallStandardCase id="i555608">
+			<GlobalId>2MFXaS0_1CExpPIggqpYzu</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Basic Wall:Exterior - 408mm Masonry / LW Concrete 2:338456</Name>
+			<ObjectType>Basic Wall:Exterior - 408mm Masonry / LW Concrete 2:338335</ObjectType>
+			<ObjectPlacement><IfcLocalPlacement ref="i555592"/></ObjectPlacement>
+			<Representation><IfcProductDefinitionShape ref="i555606"/></Representation>
+			<Tag>338456</Tag>
+		</IfcWallStandardCase>
+		<IfcPropertySingleValue id="i555607">
+			<Name>Structural Usage</Name>
+			<NominalValue><IfcInteger>0</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcProductDefinitionShape id="i555606">
+			<Representations ex:cType="list" >
+				<IfcShapeRepresentation pos="0" ref="i555599" />
+				<IfcShapeRepresentation pos="1" ref="i555610" />
+			</Representations>
+		</IfcProductDefinitionShape>
+		<IfcColourRgb id="i555605">
+			<Red>0.501960784313725</Red>
+			<Green>0.501960784313725</Green>
+			<Blue>0.501960784313725</Blue>
+		</IfcColourRgb>
+		<IfcSurfaceStyleRendering id="i555604">
+			<SurfaceColour><IfcColourRgb ref="i555605"/></SurfaceColour>
+			<Transparency>0.0</Transparency>
+			<SpecularColour><IfcNormalisedRatioMeasure>0.5</IfcNormalisedRatioMeasure></SpecularColour>
+			<SpecularHighlight><IfcSpecularExponent>64.0</IfcSpecularExponent></SpecularHighlight>
+			<ReflectanceMethod>notdefined</ReflectanceMethod>
+		</IfcSurfaceStyleRendering>
+		<IfcAxis2Placement3D id="i555603">
+			<Location><IfcCartesianPoint ref="i555547"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcExtrudedAreaSolid id="i555602">
+			<SweptArea><IfcRectangleProfileDef ref="i555597"/></SweptArea>
+			<Position><IfcAxis2Placement3D ref="i555603"/></Position>
+			<ExtrudedDirection><IfcDirection ref="i555553"/></ExtrudedDirection>
+			<Depth>3200.0</Depth>
+		</IfcExtrudedAreaSolid>
+		<IfcPresentationStyleAssignment id="i555601">
+			<Styles ex:cType="set" >
+				<IfcSurfaceStyle pos="0" ref="i555600" />
+			</Styles>
+		</IfcPresentationStyleAssignment>
+		<IfcSurfaceStyle id="i555600">
+			<Name>Default Wall</Name>
+			<Side>both</Side>
+			<Styles ex:cType="set" >
+				<IfcSurfaceStyleRendering pos="0" ref="i555604" />
+			</Styles>
+		</IfcSurfaceStyle>
+		<IfcPolyline id="i555598">
+			<Points ex:cType="list" >
+				<IfcCartesianPoint pos="0" ref="i555548" />
+				<IfcCartesianPoint pos="1" ref="i555593" />
+			</Points>
+		</IfcPolyline>
+		<IfcShapeRepresentation id="i555599">
+			<ContextOfItems><IfcGeometricRepresentationSubContext ref="i555572"/></ContextOfItems>
+			<RepresentationIdentifier>Axis</RepresentationIdentifier>
+			<RepresentationType>Curve2D</RepresentationType>
+			<Items ex:cType="set" >
+				<IfcPolyline pos="0" ref="i555598" />
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcAxis2Placement2D id="i555596">
+			<Location><IfcCartesianPoint ref="i555595"/></Location>
+			<RefDirection><IfcDirection ref="i555556"/></RefDirection>
+		</IfcAxis2Placement2D>
+		<IfcRectangleProfileDef id="i555597">
+			<ProfileType>area</ProfileType>
+			<Position><IfcAxis2Placement2D ref="i555596"/></Position>
+			<XDim>8000.0</XDim>
+			<YDim>408.0</YDim>
+		</IfcRectangleProfileDef>
+		<IfcCartesianPoint id="i555594">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>-3775.71987799777</IfcLengthMeasure>
+				<IfcLengthMeasure>2488.50343067506</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcCartesianPoint id="i555595">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>4000.0</IfcLengthMeasure>
+				<IfcLengthMeasure>7.105427357601E-14</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcLocalPlacement id="i555592">
+			<PlacementRelTo><IfcLocalPlacement ref="i555585"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i555591"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcCartesianPoint id="i555593">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>8000.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcBuildingStorey id="i555590">
+			<GlobalId>3$uLGYKUL0CeCZ6iwi1FoJ</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Level 1</Name>
+			<ObjectPlacement><IfcLocalPlacement ref="i555585"/></ObjectPlacement>
+			<LongName>Level 1</LongName>
+			<CompositionType>element</CompositionType>
+			<Elevation>0.0</Elevation>
+		</IfcBuildingStorey>
+		<IfcAxis2Placement3D id="i555591">
+			<Location><IfcCartesianPoint ref="i555594"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcAxis2Placement3D id="i555588">
+			<Location><IfcCartesianPoint ref="i555589"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i555589">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>3200.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcAxis2Placement3D id="i555586">
+			<Location><IfcCartesianPoint ref="i555547"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcBuilding id="i555587">
+			<GlobalId>3$uLGYKUL0CeCZ6ivJ_m9L</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name></Name>
+			<ObjectPlacement><IfcLocalPlacement ref="i555568"/></ObjectPlacement>
+			<LongName></LongName>
+			<CompositionType>element</CompositionType>
+			<ElevationOfRefHeight>0.0</ElevationOfRefHeight>
+			<ElevationOfTerrain>0.0</ElevationOfTerrain>
+			<BuildingAddress><IfcPostalAddress ref="i555582"/></BuildingAddress>
+		</IfcBuilding>
+		<IfcOwnerHistory id="i555584">
+			<OwningUser><IfcPersonAndOrganization ref="i555578"/></OwningUser>
+			<OwningApplication><IfcApplication ref="i555546"/></OwningApplication>
+			<ChangeAction>nochange</ChangeAction>
+			<LastModifiedDate>0</LastModifiedDate>
+			<CreationDate>0</CreationDate>
+		</IfcOwnerHistory>
+		<IfcLocalPlacement id="i555585">
+			<PlacementRelTo><IfcLocalPlacement ref="i555568"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i555586"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcRelDefinesByProperties id="i555645">
+			<GlobalId>2u$05ZXKn8KvhpJBQ97k5l</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555644"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555644">
+			<GlobalId>3kOhvhZHr6Rv7GCBsTmoXf</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Dimensions</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555612" />
+				<IfcPropertySingleValue pos="1" ref="i555619" />
+				<IfcPropertySingleValue pos="2" ref="i555634" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcRelDefinesByProperties id="i555647">
+			<GlobalId>0UE2mNrQjBMR1Uec29WDcx</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555635"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i555646">
+			<GlobalId>1t16JPCOj7S8Re8_lpCmEn</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Identity Data</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555631" />
+				<IfcPropertySingleValue pos="1" ref="i555639" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i555641">
+			<Name>Heat Transfer Coefficient (U)</Name>
+			<NominalValue><IfcReal>0.16479133233769</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555640">
+			<Name>Roughness</Name>
+			<NominalValue><IfcInteger>1</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcRelDefinesByProperties id="i555643">
+			<GlobalId>1Ok_auwrf4sRtqSEVUWQ4H</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<RelatedObjects ex:cType="set" >
+				<IfcWallStandardCase pos="0" ref="i555608" />
+			</RelatedObjects>
+			<RelatingPropertyDefinition><IfcPropertySet ref="i555650"/></RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySingleValue id="i555642">
+			<Name>Wrapping at Inserts</Name>
+			<NominalValue><IfcInteger>0</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555637">
+			<Name>Absorptance</Name>
+			<NominalValue><IfcReal>0.1</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555636">
+			<Name>Thermal mass</Name>
+			<NominalValue><IfcReal>241074.0</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555639">
+			<Name>Assembly Description</Name>
+			<NominalValue><IfcLabel></IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555638">
+			<Name>Function</Name>
+			<NominalValue><IfcInteger>1</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555633">
+			<Name>Top Offset</Name>
+			<NominalValue><IfcLengthMeasure>0.0</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555632">
+			<Name>Coarse Scale Fill Color</Name>
+			<NominalValue><IfcInteger>12632256</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i555635">
+			<GlobalId>3Q8i96W_T1rwbujYsEw5X1</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Structural</Name>
+			<HasProperties ex:cType="set" >
+				<IfcPropertySingleValue pos="0" ref="i555607" />
+				<IfcPropertySingleValue pos="1" ref="i555614" />
+				<IfcPropertySingleValue pos="2" ref="i555626" />
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i555634">
+			<Name>Area</Name>
+			<NominalValue><IfcAreaMeasure>2.56E7</IfcAreaMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555628">
+			<Name>Wrapping at Ends</Name>
+			<NominalValue><IfcInteger>0</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555629">
+			<Name>Thermal Resistance (R)</Name>
+			<NominalValue><IfcReal>6.06828032648466</IfcReal></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555630">
+			<Name>Width</Name>
+			<NominalValue><IfcLengthMeasure>408.0</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555631">
+			<Name>Assembly Code</Name>
+			<NominalValue><IfcLabel></IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555624">
+			<Name>Base Constraint</Name>
+			<NominalValue><IfcLabel>Level: Level 1</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555625">
+			<Name>Unconnected Height</Name>
+			<NominalValue><IfcLengthMeasure>3200.0</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555626">
+			<Name>Structural</Name>
+			<NominalValue><IfcBoolean>false</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555627">
+			<Name>Coarse Scale Fill Pattern</Name>
+			<NominalValue><IfcLabel>Solid fill</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555620">
+			<Name>Base Extension Distance</Name>
+			<NominalValue><IfcLengthMeasure>0.0</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555621">
+			<Name>Room Bounding</Name>
+			<NominalValue><IfcBoolean>true</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555622">
+			<Name>Related to Mass</Name>
+			<NominalValue><IfcBoolean>false</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555623">
+			<Name>Top is Attached</Name>
+			<NominalValue><IfcBoolean>false</IfcBoolean></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555616">
+			<Name>Location Line</Name>
+			<NominalValue><IfcInteger>0</IfcInteger></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555617">
+			<Name>Phase Created</Name>
+			<NominalValue><IfcLabel>New Construction</IfcLabel></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555618">
+			<Name>Top Extension Distance</Name>
+			<NominalValue><IfcLengthMeasure>0.0</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i555619">
+			<Name>Length</Name>
+			<NominalValue><IfcLengthMeasure>8000.0</IfcLengthMeasure></NominalValue>
+		</IfcPropertySingleValue>
+		<IfcCartesianPoint id="i555547">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcApplication id="i555546">
+			<ApplicationDeveloper><IfcOrganization ref="i555545"/></ApplicationDeveloper>
+			<Version>2013</Version>
+			<ApplicationFullName>Autodesk Revit 2013</ApplicationFullName>
+			<ApplicationIdentifier>Revit</ApplicationIdentifier>
+		</IfcApplication>
+		<IfcOrganization id="i555545">
+			<Name>Autodesk Revit 2013</Name>
+		</IfcOrganization>
+		<IfcDirection id="i555551">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i555550">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>-1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i555549">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcCartesianPoint id="i555548">
+			<Coordinates ex:cType="list" >
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+				<IfcLengthMeasure>0.0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcGeometricRepresentationSubContext id="i555577">
+			<ContextIdentifier>Box</ContextIdentifier>
+			<ContextType>Model</ContextType>
+			<ParentContext><IfcGeometricRepresentationContext ref="i555571"/></ParentContext>
+			<TargetScale>0.0</TargetScale>
+			<TargetView>model_view</TargetView>
+		</IfcGeometricRepresentationSubContext>
+		<IfcGeometricRepresentationSubContext id="i555576">
+			<ContextIdentifier>Body</ContextIdentifier>
+			<ContextType>Model</ContextType>
+			<ParentContext><IfcGeometricRepresentationContext ref="i555571"/></ParentContext>
+			<TargetScale>0.0</TargetScale>
+			<TargetView>model_view</TargetView>
+		</IfcGeometricRepresentationSubContext>
+		<IfcOrganization id="i555579">
+			<Name></Name>
+			<Description></Description>
+		</IfcOrganization>
+		<IfcPersonAndOrganization id="i555578">
+			<ThePerson><IfcPerson ref="i555580"/></ThePerson>
+			<TheOrganization><IfcOrganization ref="i555579"/></TheOrganization>
+		</IfcPersonAndOrganization>
+		<IfcGeometricRepresentationSubContext id="i555581">
+			<ContextType>Annotation</ContextType>
+			<ParentContext><IfcGeometricRepresentationContext ref="i555575"/></ParentContext>
+			<TargetScale>0.01</TargetScale>
+			<TargetView>plan_view</TargetView>
+		</IfcGeometricRepresentationSubContext>
+		<IfcPerson id="i555580">
+			<FamilyName>Deamnt</FamilyName>
+			<GivenName>Mathias</GivenName>
+		</IfcPerson>
+		<IfcProject id="i555583">
+			<GlobalId>3$uLGYKUL0CeCZ6ivJ_m9K</GlobalId>
+			<OwnerHistory><IfcOwnerHistory ref="i555584"/></OwnerHistory>
+			<Name>Number</Name>
+			<LongName>Project Name</LongName>
+			<Phase>Project Status</Phase>
+			<RepresentationContexts ex:cType="set" >
+				<IfcGeometricRepresentationContext pos="0" ref="i555571" />
+				<IfcGeometricRepresentationContext pos="1" ref="i555575" />
+			</RepresentationContexts>
+			<UnitsInContext><IfcUnitAssignment ref="i555565"/></UnitsInContext>
+		</IfcProject>
+		<IfcPostalAddress id="i555582">
+			<AddressLines ex:cType="list" >
+				<IfcLabel>Enter address here</IfcLabel>
+			</AddressLines>
+			<Town></Town>
+			<Region>Copenhagen</Region>
+			<PostalCode></PostalCode>
+			<Country>Denmark</Country>
+		</IfcPostalAddress>
+		<IfcAxis2Placement3D id="i555569">
+			<Location><IfcCartesianPoint ref="i555547"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcLocalPlacement id="i555568">
+			<PlacementRelTo><IfcLocalPlacement ref="i555953"/></PlacementRelTo>
+			<RelativePlacement><IfcAxis2Placement3D ref="i555570"/></RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcGeometricRepresentationContext id="i555571">
+			<ContextType>Model</ContextType>
+			<CoordinateSpaceDimension>3</CoordinateSpaceDimension>
+			<Precision>1.0E-6</Precision>
+			<WorldCoordinateSystem><IfcAxis2Placement3D ref="i555569"/></WorldCoordinateSystem>
+			<TrueNorth><IfcDirection ref="i555573"/></TrueNorth>
+		</IfcGeometricRepresentationContext>
+		<IfcAxis2Placement3D id="i555570">
+			<Location><IfcCartesianPoint ref="i555547"/></Location>
+		</IfcAxis2Placement3D>
+		<IfcDirection id="i555573">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>2.0</ex:double-wrapper>
+				<ex:double-wrapper>6.12303176911189E-17</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcGeometricRepresentationSubContext id="i555572">
+			<ContextIdentifier>Axis</ContextIdentifier>
+			<ContextType>Model</ContextType>
+			<ParentContext><IfcGeometricRepresentationContext ref="i555571"/></ParentContext>
+			<TargetScale>0.0</TargetScale>
+			<TargetView>graph_view</TargetView>
+		</IfcGeometricRepresentationSubContext>
+		<IfcGeometricRepresentationContext id="i555575">
+			<ContextType>Annotation</ContextType>
+			<CoordinateSpaceDimension>3</CoordinateSpaceDimension>
+			<Precision>1.0E-6</Precision>
+			<WorldCoordinateSystem><IfcAxis2Placement3D ref="i555569"/></WorldCoordinateSystem>
+			<TrueNorth><IfcDirection ref="i555573"/></TrueNorth>
+		</IfcGeometricRepresentationContext>
+		<IfcGeometricRepresentationSubContext id="i555574">
+			<ContextIdentifier>FootPrint</ContextIdentifier>
+			<ContextType>Model</ContextType>
+			<ParentContext><IfcGeometricRepresentationContext ref="i555571"/></ParentContext>
+			<TargetScale>0.0</TargetScale>
+			<TargetView>model_view</TargetView>
+		</IfcGeometricRepresentationSubContext>
+		<IfcSIUnit id="i555560">
+			<UnitType>volumeunit</UnitType>
+			<Prefix>milli</Prefix>
+			<Name>cubic_metre</Name>
+		</IfcSIUnit>
+		<IfcSIUnit id="i555561">
+			<UnitType>areaunit</UnitType>
+			<Prefix>milli</Prefix>
+			<Name>square_metre</Name>
+		</IfcSIUnit>
+		<IfcDimensionalExponents id="i555562">
+			<LengthExponent>0</LengthExponent>
+			<MassExponent>0</MassExponent>
+			<TimeExponent>0</TimeExponent>
+			<ElectricCurrentExponent>0</ElectricCurrentExponent>
+			<ThermodynamicTemperatureExponent>0</ThermodynamicTemperatureExponent>
+			<AmountOfSubstanceExponent>0</AmountOfSubstanceExponent>
+			<LuminousIntensityExponent>0</LuminousIntensityExponent>
+		</IfcDimensionalExponents>
+		<IfcSIUnit id="i555563">
+			<UnitType>planeangleunit</UnitType>
+			<Name>radian</Name>
+		</IfcSIUnit>
+		<IfcSIUnit id="i555564">
+			<UnitType>timeunit</UnitType>
+			<Name>second</Name>
+		</IfcSIUnit>
+		<IfcUnitAssignment id="i555565">
+			<Units ex:cType="set" >
+				<IfcSIUnit pos="0" ref="i555559" />
+				<IfcSIUnit pos="1" ref="i555561" />
+				<IfcSIUnit pos="2" ref="i555560" />
+				<IfcConversionBasedUnit pos="3" ref="i555567" />
+				<IfcSIUnit pos="4" ref="i555564" />
+			</Units>
+		</IfcUnitAssignment>
+		<IfcMeasureWithUnit id="i555566">
+			<ValueComponent><IfcRatioMeasure>0.0174532925199433</IfcRatioMeasure></ValueComponent>
+			<UnitComponent><IfcSIUnit ref="i555563"/></UnitComponent>
+		</IfcMeasureWithUnit>
+		<IfcConversionBasedUnit id="i555567">
+			<Dimensions><IfcDimensionalExponents ref="i555562"/></Dimensions>
+			<UnitType>planeangleunit</UnitType>
+			<Name>DEGREE</Name>
+			<ConversionFactor><IfcMeasureWithUnit ref="i555566"/></ConversionFactor>
+		</IfcConversionBasedUnit>
+		<IfcDirection id="i555552">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>-1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i555553">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i555554">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>-1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i555555">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i555556">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>-1.0</ex:double-wrapper>
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i555557">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i555558">
+			<DirectionRatios ex:cType="list" >
+				<ex:double-wrapper>0.0</ex:double-wrapper>
+				<ex:double-wrapper>-1.0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcSIUnit id="i555559">
+			<UnitType>lengthunit</UnitType>
+			<Prefix>milli</Prefix>
+			<Name>metre</Name>
+		</IfcSIUnit>
+	</uos>
+</iso_10303_28>
