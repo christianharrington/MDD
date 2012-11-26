@@ -19,15 +19,13 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.util.FinalResourceFactoryImpl;
 import java.util.HashMap
 import java.util.Map
 
-class IFC2ModelReader extends WorkflowComponentWithSlot {
-	
+class IFC2ModelReader extends WorkflowComponentWithSlot {	
 	String file
-	String schema
 	
 	override invoke(IWorkflowContext ctx) {
-		//ctx.put(mainModelSlot, IfcReader::ReadModel(getFile(), getSchema()))
-		var CommonPackage commonPackage = CommonPackageImpl::eINSTANCE
-		var FinalPackage finalPackage = FinalPackageImpl::eINSTANCE
+		println("Starting: IFC2ModelReader")
+		val CommonPackage commonPackage = CommonPackageImpl::eINSTANCE
+		val FinalPackage finalPackage = FinalPackageImpl::eINSTANCE
 		
 		// add file extension to registry
 		ResourceFactoryRegistryImpl::INSTANCE.getExtensionToFactoryMap().put("ifcxml", new FinalResourceFactoryImpl())
@@ -39,15 +37,17 @@ class IFC2ModelReader extends WorkflowComponentWithSlot {
 		commonPackage.setEFactoryInstance(new CommonFactoryImpl())
 		finalPackage.setEFactoryInstance(new FinalFactoryImpl())
 		
-		var Map<String, Object> options = new HashMap<String, Object>()
+		val Map<String, Object> options = new HashMap<String, Object>()
 		options.put(XMLResource::OPTION_EXTENDED_META_DATA, Boolean::TRUE)
 		options.put(XMLResource::OPTION_ENCODING, "UTF-8")
 		
-		var ResourceSet resourceSet = new ResourceSetImpl()
-		var Resource resource = resourceSet.getResource(URI::createFileURI(ctx.get(getFile()) as String), true)
+		val ResourceSet resourceSet = new ResourceSetImpl()
+		//val Resource resource = resourceSet.getResource(URI::createFileURI(ctx.get(getFile()) as String), true)
+		val Resource resource = resourceSet.getResource(URI::createFileURI(file), true)
 		resource.load(options)
 		
 		ctx.put(mainModelSlot, resource)
+		println("Done: IFC2ModelReader")
 	}
 	
 	def getFile() { file }	
