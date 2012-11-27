@@ -1,0 +1,23 @@
+%!TEX root = ./report.tex
+\section{Desirable Features}
+In this section we discuss some of the main features of our solution
+\subsection(Working with a Partial model)
+With the before mentioned complexities and challenges of IFC in mind, a primary focus is to be able to extract a well specified
+subset of the IFC.  We want an architecture that separates this concern from the rest of the workflow into one component, that extracts the
+partial model that we are interested in. Reversely the concern of re-inserting this partial model we can also
+see as a workflow component in isolation. It is not at all trivial to define how such a partial model is extracted, thus, it is a concern we
+don't want to take account for at other stages of the workflow. An evolved standard for this kind of operation is by
+Model View Definition(MVD)\cite(MVD text).\cite(Muhammed fra Tyskland project)  describes, what seems to be, a promising MVD
+implementation for IFC, that allows for fine-grained XML definitions of a partial IFC model. It is yet to be obtained and tested on our part.
+(How else do we say we know about this, but that we did'nt use it? Also notes say something about using BimServer for getting the partial model, how?) However, we want a well defined subset the model, that, as a minimum, defines what is of interest in the target model, and what is it needed to make it possible to synchronize back to the source at a later stage.
+
+\subsection(Valid Model to Model Transformation (M2M))
+We want assurance that our model transformations are valid. By valid, we refer to not corrupting any model during a transformation, and that operations
+performed in the editor are synchronized back to the source model as we desire. This is not trivial, and for the scope of this project, we want to identify a limited subset and be able to trace some key cases of valid transformation. This implies that the subset we work on may not be applicable in a real-world work context, but simply serve as a proof of concept for the M2M. To enforce the implemented M2M and make it extensible for the future, we want to make use of standard and wide-spread tools (see ref-to-sub-section-on-standard=tools).
+
+\subsection(A Simple DSL)
+We want to target a simple DSL that can easily be exchanged with a new one. We are not aiming at a rich and flexible DSL, but rather a simple
+language that represents the target domain. In our case, we want to show that the an incomprehensible IFC instance can be modified in a domain where we work on simple notions like the position of a pipe and a hole in a wall. With the use of EMF and Xtext we can generate an integrated text-editor for the DSL.
+
+\subsection(Tools)
+We want to use standard and wide-spread model driven development tools for the implementation. The main reason is the drastic cut-down in development time by using the automatic code generation done by EMF and Xtext, and to demonstrate that the complex problems of M2M in IFC based projects, can be handled with a wide-spread and open platform like EMF. Collaborative and distributed work is key in many BIM projects, so to meet this requirement, we want to be able to integrate with BIMServer that supports this kind of work.
