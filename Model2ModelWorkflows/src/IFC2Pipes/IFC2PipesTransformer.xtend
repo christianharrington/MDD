@@ -17,6 +17,7 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 import pipes.Axis2Placement3D
 import pipes.Direction
 import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcFlowSegmentImpl
+import java.util.HashMap
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
@@ -49,7 +50,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement) {
-	val float = 0 as float
+	    val float = 0 as float
 		var LocalPlacement lp = pipesFactory.createLocalPlacement()
 		var Axis2Placement3D axis = pipesFactory.createAxis2Placement3D
 		var Direction axisDir = pipesFactory.createDirection
@@ -90,36 +91,28 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	//def private addDirection(Axis2Placement3D a2p, )
-	
 
 	override invoke(IWorkflowContext ctx) {
-		val ifcmodel = ctx.get(extractModelSlot) as ArrayList<IfcProduct>
+		println("Starting: IFC2PipesTransformer")
+		// Get openings and flow segments from the context
+		val openings = ctx.get(openingsSlot) as HashMap<String, IfcOpeningElement>
+		val flowSegments = ctx.get(flowSegmentsSlot) as HashMap<String, IfcFlowSegment>
 		
-		//var flowSegments = ifcmodel.filter(typeof(IfcFlowSegmentImpl))
-		val flowSegments = new ArrayList<IfcFlowSegmentImpl>
-		ifcmodel.forEach[
-			if (it instanceof IfcFlowSegmentImpl) {
-				flowSegments.add(it as IfcFlowSegmentImpl)
-			}
-		]
-		
+		// Creates a pipe factory, iterates through openings and flow segments to transforms them
 		pipesFactory = new PipesFactoryImpl()
 		val pipesModel = pipesFactory.createModel()
 		
-		var openings = ifcmodel.filter(typeof(IfcOpeningElement))
-		println("openings: " + openings.size())
-		openings.forEach[
+		println("Openings: " + openings.size())
+		openings.values.forEach[
 			addOpening(pipesModel, it)
 		]
 		
-		
-		println("flow segments: " + flowSegments.size())
-		flowSegments.forEach[
+		println("Flow segments: " + flowSegments.size())
+		flowSegments.values.forEach[
 			addFlowSegment(pipesModel, it)
 		]
 		
 		ctx.put(pipesOpeningsSlot, pipesModel)
-		
+		println("Done: IFC2PipesTransformer")
 	}
-	
 }
