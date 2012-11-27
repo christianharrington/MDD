@@ -32,7 +32,7 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	
 	override preInvoke() { }
 		
-	def <T extends EObject> getEObjectFromReference(T refObject, IWorkflowContext ctx) {
+	def <T extends EObject> getEObjectFromRefObject(T refObject, IWorkflowContext ctx) {
 		if (refObject instanceof IfcOpeningElement) {
 			val openings = ctx.get(openingsSlot) as HashMap<String, IfcOpeningElement>
 			val opening = refObject as IfcOpeningElement
