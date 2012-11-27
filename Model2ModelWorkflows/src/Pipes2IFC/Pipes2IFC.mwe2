@@ -18,7 +18,7 @@ Workflow {
 		file = IFCFilePath
 	}
 	
-	component = general.IFCPipesOpeningsExtractor {}
+	component = general.IFCExtractor {}
 	
 	component = Pipes2IFCTransformer {}
 	

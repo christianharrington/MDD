@@ -3,12 +3,12 @@ package general
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
 import org.eclipse.emf.ecore.resource.Resource
 import java.util.HashMap
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
 
-class IFCPipesOpeningsExtractor extends WorkflowComponentWithSlot {
-	
+
+class IFCExtractor extends WorkflowComponentWithSlot {
 	// Current doesn't work - always true
 	def flowIsPipe(IfcFlowSegment flow) {
 		// var rels = flow.isDefinedBy
