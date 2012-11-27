@@ -9,24 +9,24 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
 import java.util.HashMap
 
 abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
-	
-	var String fileSlot // The path to the XML file
-	var String pipesOpeningsSlot //Pipes DSL object graph
-	var String mainModelSlot //IFC main model object graph
-	var String extractModelSlot //IFC extracted model object graph 
+	val String fileSlot = 'file' // The path to the XML file
+	val String pipesOpeningsSlot = 'pipesOpenings' //Pipes DSL object graph
+	val String mainModelSlot = 'mainModel' //IFC main model object graph
+	val String openingsSlot = 'openings'
+	val String flowSegmentsSlot = 'flowSegments'
+	val String placementsSlot = 'placements'
 	
 	def getFileSlot() { fileSlot }
-	def setFileSlot(String slot) { this.fileSlot = slot  }
 	
 	def getPipesOpeningsSlot() { pipesOpeningsSlot }
-	def setPipesOpeningsSlot(String slot) { this.pipesOpeningsSlot = slot  }
 
 	def getMainModelSlot() { mainModelSlot }
-	def setMainModelSlot(String slot) { this.mainModelSlot = slot}	
 	
-	def getExtractModelSlot() { extractModelSlot }
-	def setExtractModelSlot(String slot) { this.extractModelSlot = slot}	
+	def getOpeningsSlot() { openingsSlot }
 	
+	def getFlowSegmentsSlot() { flowSegmentsSlot }
+	
+	def getPlacementsSlot() { placementsSlot }
 	
 	override postInvoke() {	}
 	

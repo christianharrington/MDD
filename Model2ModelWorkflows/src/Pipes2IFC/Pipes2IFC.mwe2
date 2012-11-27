@@ -3,41 +3,26 @@ module Pipes2IFC.Pies2IFC
 import general.Model2XMLWriter
 import general.IFC2ModelReader
 
-var modelSlot = 'model'
-var emSlot = 'extractedModelSlot'
-var poSlot = 'pipesOpeningsSlot'
 var ifcWritePath = 'bin/output.ifc'
 
 var IFCFilePath = 'NanoLabBuilding/Merging_Test.2.ifcxml'
-//var schema = '../BIMServerConnectionTest/IFC2X3_TC1.exp'
 var xmiReadPath = 'bin/instance.xmi'
 
 Workflow {
 	
 	component = PipesXMI2ModelReader {
-		pipesOpeningsSlot = poSlot
 		path = xmiReadPath
 	}
 	
 	component = IFC2ModelReader {
-		mainModelSlot = modelSlot
 		file = IFCFilePath
 	}
 	
-	component = general.IFCPipesOpeningsExtractor {
-		mainModelSlot = modelSlot
-		extractModelSlot = emSlot
-	}
+	component = general.IFCPipesOpeningsExtractor {}
 	
-	component = Pipes2IFCTransformer {
-		pipesOpeningsSlot = poSlot
-		//to
-		mainModelSlot = modelSlot
-		extractModelSlot = emSlot
-	}
+	component = Pipes2IFCTransformer {}
 	
 	component = Model2XMLWriter {
-		mainModelSlot = modelSlot
 		path = ifcWritePath
 	}
 	
