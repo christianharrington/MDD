@@ -21,3 +21,13 @@ language that represents the target domain. In our case, we want to show that th
 
 \subsection(Tools)
 We want to use standard and wide-spread model driven development tools for the implementation. The main reason is the drastic cut-down in development time by using the automatic code generation done by EMF and Xtext, and to demonstrate that the complex problems of M2M in IFC based projects, can be handled with a wide-spread and open platform like EMF. Collaborative and distributed work is key in many BIM projects, so to meet this requirement, we want to be able to integrate with BIMServer that supports this kind of work.
+
+In this section we present a list of desirable features when working with projectional editing on IFC.
+\paragraph{}
+Design decisions we faced when making this setup. List a bunch of requirements that we can reference in the next section:
+\begin{enumerate}[itemsep=0pt,parsep=2pt,topsep=10pt]
+	\item {\it Full control over projection software.} Write about: Extracting subset on server og client? Why not trying to do this on the BIMServer? We could have extended the open source project
+	\item {\it Accurate ecore meta-model for IFC domain.} Using BIMServer library ecore metamodel or using XSD generated ecore metamodel
+	\item {\it Proper subset definition.} How is the subset defined? MVD could have been used, but we chose not to.
+	\item {\it Flexible model to model framework.} Which model2model tool to use? ATL, QVT, Xtend?
+\end{enumerate}

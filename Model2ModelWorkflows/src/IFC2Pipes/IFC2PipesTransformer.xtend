@@ -16,6 +16,8 @@ import java.util.ArrayList
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 import pipes.Axis2Placement3D
 import pipes.Direction
+import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcFlowSegmentImpl
+import java.util.HashMap
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
@@ -26,32 +28,35 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	 * create new targetModelElements with factory
 	 */
 	 
-	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening) {
+	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening, IWorkflowContext ctx) {
 		var Opening op = pipesFactory.createOpening()
 		op.name = ifcOpening.name
 		op.description = ifcOpening.description
 		var placement = ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement
-		addLocalPlacement(op, placement)
+		println(op)
+		println(placement.relativePlacement == null)
+		addLocalPlacement(op, placement, ctx)
 		
 		pipesModel.elements.add(op)
 	}
 	
-	def private addFlowSegment(Model pipesModel, IfcFlowSegment ifcFlowSegment) {
+	def private addFlowSegment(Model pipesModel, IfcFlowSegment ifcFlowSegment, IWorkflowContext ctx) {
 		var FlowSegment fs = pipesFactory.createFlowSegment()
 		fs.name = ifcFlowSegment.name
 		fs.description = ifcFlowSegment.description
-		var placement = ifcFlowSegment.objectPlacement as IfcLocalPlacement
-		addLocalPlacement(fs, placement)		
+		val placement = getEObjectFromRefObject(ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
+		addLocalPlacement(fs, placement, ctx)		
 		pipesModel.elements.add(fs)
 	}
 	
-	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement) {
-	val float = 0 as float
+	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement, IWorkflowContext ctx) {
+	    val float = 0 as float
 		var LocalPlacement lp = pipesFactory.createLocalPlacement()
 		var Axis2Placement3D axis = pipesFactory.createAxis2Placement3D
 		var Direction axisDir = pipesFactory.createDirection
 		var Direction refDir = pipesFactory.createDirection
-		var IfcAxis2Placement3D ifcAxis = ifcLocalPlacement.relativePlacement as IfcAxis2Placement3D
+		println("relativePlacement is null: " + (null == ifcLocalPlacement.relativePlacement))
+		var IfcAxis2Placement3D ifcAxis = getEObjectFromRefObject(ifcLocalPlacement.relativePlacement.ifcAxis2Placement3D, ctx)
 		
 		//var IfcCartesianPoint loc = ifcAxis.location.ifcCartesianPoint
 		
@@ -86,28 +91,28 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	//def private addDirection(Axis2Placement3D a2p, )
-	
 
 	override invoke(IWorkflowContext ctx) {
-		val ifcmodel = ctx.get(extractModelSlot) as ArrayList<IfcProduct>
+		println("Starting: IFC2PipesTransformer")
+		// Get openings and flow segments from the context
+		val openings = ctx.get(openingsSlot) as HashMap<String, IfcOpeningElement>
+		val flowSegments = ctx.get(flowSegmentsSlot) as HashMap<String, IfcFlowSegment>
 		
+		// Creates a pipe factory, iterates through openings and flow segments to transforms them
 		pipesFactory = new PipesFactoryImpl()
 		val pipesModel = pipesFactory.createModel()
 		
-		var openings = ifcmodel.filter(typeof(IfcOpeningElement))
-		println("openings: " + openings.size())
-		openings.forEach[
-			addOpening(pipesModel, it)
+		println("Openings: " + openings.size())
+		openings.values.forEach[
+			addOpening(pipesModel, it, ctx)
 		]
 		
-		var flowSegments = ifcmodel.filter(typeof(IfcFlowSegment))
-		println("flow segments: " + flowSegments.size())
-		flowSegments.forEach[
-			addFlowSegment(pipesModel, it)
+		println("Flow segments: " + flowSegments.size())
+		flowSegments.values.forEach[
+			addFlowSegment(pipesModel, it, ctx)
 		]
 		
 		ctx.put(pipesOpeningsSlot, pipesModel)
-		
+		println("Done: IFC2PipesTransformer")
 	}
-	
 }
