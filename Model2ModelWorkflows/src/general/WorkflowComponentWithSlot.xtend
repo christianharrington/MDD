@@ -28,6 +28,8 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	
 	def getFlowSegmentsSlot() { flowSegmentsSlot }
 	
+	def getAxis2Placement3DsSlot() { axis2Placement3DsSlot }
+	
 	def getPlacementsSlot() { placementsSlot }
 	
 	override postInvoke() {	}

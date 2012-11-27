@@ -28,35 +28,35 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	 * create new targetModelElements with factory
 	 */
 	 
-	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening) {
+	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening, IWorkflowContext ctx) {
 		var Opening op = pipesFactory.createOpening()
 		op.name = ifcOpening.name
 		op.description = ifcOpening.description
 		var placement = ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement
 		println(op)
 		println(placement.relativePlacement == null)
-		addLocalPlacement(op, placement)
+		addLocalPlacement(op, placement, ctx)
 		
 		pipesModel.elements.add(op)
 	}
 	
-	def private addFlowSegment(Model pipesModel, IfcFlowSegment ifcFlowSegment) {
+	def private addFlowSegment(Model pipesModel, IfcFlowSegment ifcFlowSegment, IWorkflowContext ctx) {
 		var FlowSegment fs = pipesFactory.createFlowSegment()
 		fs.name = ifcFlowSegment.name
 		fs.description = ifcFlowSegment.description
-		var placement = ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement
-		addLocalPlacement(fs, placement)		
+		val placement = getEObjectFromRefObject(ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
+		addLocalPlacement(fs, placement, ctx)		
 		pipesModel.elements.add(fs)
 	}
 	
-	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement) {
+	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement, IWorkflowContext ctx) {
 	    val float = 0 as float
 		var LocalPlacement lp = pipesFactory.createLocalPlacement()
 		var Axis2Placement3D axis = pipesFactory.createAxis2Placement3D
 		var Direction axisDir = pipesFactory.createDirection
 		var Direction refDir = pipesFactory.createDirection
 		println("relativePlacement is null: " + (null == ifcLocalPlacement.relativePlacement))
-		var IfcAxis2Placement3D ifcAxis = ifcLocalPlacement.relativePlacement as IfcAxis2Placement3D
+		var IfcAxis2Placement3D ifcAxis = getEObjectFromRefObject(ifcLocalPlacement.relativePlacement.ifcAxis2Placement3D, ctx)
 		
 		//var IfcCartesianPoint loc = ifcAxis.location.ifcCartesianPoint
 		
@@ -104,12 +104,12 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		
 		println("Openings: " + openings.size())
 		openings.values.forEach[
-			addOpening(pipesModel, it)
+			addOpening(pipesModel, it, ctx)
 		]
 		
 		println("Flow segments: " + flowSegments.size())
 		flowSegments.values.forEach[
-			addFlowSegment(pipesModel, it)
+			addFlowSegment(pipesModel, it, ctx)
 		]
 		
 		ctx.put(pipesOpeningsSlot, pipesModel)
