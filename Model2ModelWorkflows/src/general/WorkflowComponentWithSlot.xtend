@@ -7,6 +7,7 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
 import java.util.HashMap
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 
 abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	val String fileSlot = 'file' // The path to the XML file
@@ -14,6 +15,7 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	val String mainModelSlot = 'mainModel' //IFC main model object graph
 	val String openingsSlot = 'openings'
 	val String flowSegmentsSlot = 'flowSegments'
+	val String axis2Placement3DsSlot = 'axis2Placement3D'
 	val String placementsSlot = 'placements'
 	
 	def getFileSlot() { fileSlot }
@@ -47,6 +49,11 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 			val placements = ctx.get(placementsSlot) as HashMap<String, IfcLocalPlacement>
 			val placement = refObject as IfcLocalPlacement
 			placements.get(placement.ref) as T
+		}
+		else if (refObject instanceof IfcAxis2Placement3D) {
+			val axis2Placement3Ds = ctx.get(axis2Placement3DsSlot) as HashMap<String, IfcAxis2Placement3D>
+			val axis2Placement3D = refObject as IfcAxis2Placement3D
+			axis2Placement3Ds.get(axis2Placement3D.ref) as T			
 		}
 	}
 	
