@@ -1,9 +1,18 @@
 %!TEX root = ./report.tex
 \section{Solution}
-The final product combines several technologies to attain an extendable solution with two reusable Xtend workflows at its core. The setup allows the user to edit a subset of IFC in a generated Eclipse editor in between the two workflows. The main model is stored on a BIMServer for merging, versioning and extensibility purposes, as this section will further explain.
+The final product combines several technologies to attain an extendable solution with two reusable Xtend client side workflows at its core. The setup allows the user to edit a subset of IFC in a generated Eclipse editor in between the two workflows. The main model is stored on a BIMServer for merging, versioning and extensibility purposes, as this section will further explain.
 
 \subsection{Server Side}
-As described in (TODO reference Kan Jørgensens workflow document) a construction model and a plumbing model are combined into one single model that needs to be verified for consistency. So called openings, i.e. holes, in walls and floors need to be in place where the plumbing model describes flow segments to be installed. We let a BIMServer handle this merging of models. Many tools exist for this job, but the special advantage of the BIMServer is that it also provides version control, a java client library as well as conversion tools enabling the user to extract the saved building in other formats.
+The overall workflow of the end product is depicted in figure \ref{fig:overall_product_workflow}. As described in (TODO reference Kan Jørgensens workflow document) a construction model and a plumbing model are combined into one single model that needs to be verified for consistency. So called openings, i.e. holes in walls and floors need to be in place where the plumbing model describes flow segments to be installed. The merging of these models is executed on the BIMServer by the user as the first step of the workflow. When completed the client side of the end product allows the user to edit and add elements to the subset of the model.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=120mm]{images/CompleteWorkflow.pdf}
+    \caption{Overall Product Workflow}
+    \label{fig:overall_product_workflow}
+\end{figure}
+
+We let a BIMServer handle the merging of models. Many tools exist for this job, but the special advantage of the BIMServer is that it also provides version control, conversion tools allowing the user to retrieve the saved building in other formats as well as Java client library. Especially the last feature is important for automating the workflow, as it allows for programatic server communication.
 
 \subsection{Client Side}
 Figure \ref{fig:IFC2PipesWorkflow} shows the IFC to Pipes workflow retrieving an IFC model from the BIMServer as XML, processing it to the corresponding ecore instance, extracting the pipes and opening elements and converting these to an editable DSL instance saved to disk as an XMI file. The XML file loaded from the server is saved to the local disk for use by the second workflow explained below.
@@ -15,6 +24,8 @@ Figure \ref{fig:IFC2PipesWorkflow} shows the IFC to Pipes workflow retrieving an
     \label{fig:IFC2PipesWorkflow}
 \end{figure}
 
+The 
+\paragraph{}
 The second workflow is depicted on Figure \ref{fig:Pipes2IFCWorkflow}, where the edited XMI file is loaded into a Main model updater workflow module together with a non-updated extracted instance of the main model. Notice how the extraction is loaded in using the same workflow modules as in the first workflow, except the XML file is not fetched from the server but from the local disk. This makes for an easier update process in the Main Model Updater as the extracted instance is guaranteed to not have changed while the user was editing the XMI file. After the main model instance has been updated to reflect the users changes it is converted to XML and this new file is saved back to the BIMServer.
 
 \begin{figure}[htbp]
@@ -24,16 +35,6 @@ The second workflow is depicted on Figure \ref{fig:Pipes2IFCWorkflow}, where the
     \label{fig:Pipes2IFCWorkflow}
 \end{figure}
 
-\subsection{This section should be included earlier perhaps?}
-In this section we present a list of desirable features when working with projectional editing on IFC.
-\paragraph{}
-Design decisions we faced when making this setup. List a bunch of requirements that we can reference in the next section: 
-\begin{enumerate}[itemsep=0pt,parsep=2pt,topsep=10pt]
-	\item {\it Full control over projection software.} Write about: Extracting subset on server og client? Why not trying to do this on the BIMServer? We could have extended the open source project
-	\item {\it Accurate ecore meta-model for IFC domain.} Using BIMServer library ecore metamodel or using XSD generated ecore metamodel
-	\item {\it Proper subset definition.} How is the subset defined? MVD could have been used, but we chose not to.
-	\item {\it Flexible model to model framework.} Which model2model tool to use? ATL, QVT, Xtend?
-\end{enumerate}
 
 
 
