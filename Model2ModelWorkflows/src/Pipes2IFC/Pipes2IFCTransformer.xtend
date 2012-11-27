@@ -25,6 +25,7 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcWall
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRoot
+import java.util.HashMap
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
@@ -146,24 +147,26 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 
 	override invoke(IWorkflowContext ctx) {
-		
+		println("Starting: Pipes2IFCTransformer")
 		//Initialization
 		val pipesModel = ctx.get(pipesOpeningsSlot) as Model
-		val extractedModel = ctx.get(extractModelSlot) as ArrayList<IfcProduct>
-		extrModel = extractedModel
+		val openings = ctx.get(openingsSlot) as HashMap<String, IfcOpeningElement>
+		val flowSegments = ctx.get(flowSegmentsSlot) as HashMap<String, IfcFlowSegment>
+		
+		val openingsAndFlowSegments = new ArrayList<IfcProduct>()
+		openingsAndFlowSegments.addAll(openings.values)
+		openingsAndFlowSegments.addAll(flowSegments.values)
 		
 		markedSet = new HashSet<String>()
 		ifcFactory = new FinalFactoryImpl()
 				
 		//Run through entire object graph and update
 		pipesModel.elements.forEach[po |
-			extractedModel.forEach[e |
+			openingsAndFlowSegments.forEach[e |
 				if(po.GUID.equals(e.globalId))
 					updateIfcElement(po, e)
 			]
 		]
-		
-
 		
 		/*val IfcModel ifcModel = new IfcModel()
 		var openings = pipesModel.elements.filter(typeof(Opening))
@@ -171,5 +174,6 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		openings.forEach[
 			addIfcOpening(ifcModel, it)
 		]*/
+		println("Done: Pipes2IFCTransformer")
 	}
 }
