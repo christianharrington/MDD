@@ -22,7 +22,7 @@ Workflow {
 		file = IFCFilePath //fileSlot		
 	}
 	
-	component = general.IFCPipesOpeningsExtractor {}
+	component = general.IFCExtractor {}
 	
 	component = IFC2PipesTransformer {}
 
