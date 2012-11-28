@@ -24,6 +24,15 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcWall
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRelVoidsElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcRoot
 import java.util.HashMap
+import org.tech.iai.ifc.xml.ifc._2x3.final_.ObjectPlacementType
+import org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage
+import org.tech.iai.ifc.xml.ifc._2x3.final_.RelativePlacementType
+import org.tech.iai.ifc.xml.ifc._2x3.final_.PlacementRelToType
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
+import org.tech.iai.ifc.xml.ifc._2x3.final_.AxisType2
+import org.tech.iai.ifc.xml.ifc._2x3.final_.RefDirectionType1
+import org.iso.standard._10303.part._28.version._2.xmlschema.common.Entity
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
@@ -42,7 +51,11 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
 	HashSet<String> markedSet
 	ArrayList<IfcProduct> extrModel
+	Model pipesModel
+	HashMap<String, Entity> entityMap
 	
+	
+	// Update elements
 	def private updateMetaData(GUIDElement o, IfcRoot product) {
 		product.setName(o.name)
 		product.setDescription(o.description)
@@ -104,11 +117,11 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		{
 			markedSet.add(o.GUID)
 			updateMetaData(o, product)
-			if(product.relatingBuildingElement instanceof IfcWall) {
-				updateIfcElement(o.wall, product.relatingBuildingElement as IfcWall)
+			if(product.relatingBuildingElement.ifcElement instanceof IfcWall) {
+				updateIfcElement(o.wall, product.relatingBuildingElement.ifcElement as IfcWall)
 			}
-			if(product.relatedOpeningElement instanceof IfcOpeningElement) {
-				updateIfcElement(o.opening, product.relatedOpeningElement as IfcOpeningElement)
+			if(product.relatedOpeningElement.ifcFeatureElementSubtraction instanceof IfcOpeningElement) {
+				updateIfcElement(o.opening, product.relatedOpeningElement.ifcFeatureElementSubtraction as IfcOpeningElement)
 			}
 			true
 		}
@@ -143,13 +156,110 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		ratios.get(2).setValue(o.z)
 		true
 	}
-
+	// End update elements
+	
+	// Creating new opening element
+	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createOpening(Opening o) {
+		f.setGlobalId(o.GUID)
+		f.setDescription(o.description)
+		f.setName(o.name)
+		
+		f.setObjectPlacement(createObjectPlacementType(o.placement))
+		// Create WallRelations
+		pipesModel.elements.forEach[
+			if(it instanceof WallRelation) {
+				var wr = it as WallRelation
+				if(wr.opening.GUID == o.GUID) {
+					createIfcRelVoidsElementFromOpening(wr, f)
+				} 
+			}
+		]
+	}
+	
+	def ObjectPlacementType create f: ifcFactory.createObjectPlacementType() createObjectPlacementType(LocalPlacement p) {
+		f.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createLocalPlacement(p))
+	}
+	
+	def IfcLocalPlacement create f: ifcFactory.createIfcLocalPlacement() createLocalPlacement(LocalPlacement p) {
+		if(p.relativeTo != null) {
+			f.setPlacementRelTo(createPlacementRelToType(p))
+		}
+		f.setRelativePlacement(createRelativePlacementType(p))
+	}
+	
+	def PlacementRelToType create f: ifcFactory.createPlacementRelToType createPlacementRelToType(LocalPlacement p) {
+		f.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createLocalPlacement(p))
+	}
+	
+	def RelativePlacementType create f: ifcFactory.createRelativePlacementType createRelativePlacementType(LocalPlacement p) {
+		// 
+		f.setIfcAxis2Placement3D(createAxis2Placement3D(p.axis2placement3d))
+	}
+	
+	def IfcAxis2Placement3D create f: ifcFactory.createIfcAxis2Placement3D() createAxis2Placement3D(Axis2Placement3D a) {
+		if(!(a.axis == null && a.refDirection == null)) {
+			f.setAxis(createAxisType2(a))
+			f.setRefDirection(createRefDirectionType1(a))
+		}
+		f.location.setIfcCartesianPoint(createIfcCartesianPoint(a))
+	}
+	
+	def AxisType2 create f: ifcFactory.createAxisType2() createAxisType2(Axis2Placement3D a) {
+		f.setIfcDirection(createIfcDirection(a.axis))
+	}
+	
+	def RefDirectionType1 create f: ifcFactory.createRefDirectionType1 createRefDirectionType1(Axis2Placement3D a) {
+		f.setIfcDirection(createIfcDirection(a.refDirection))
+	}
+	
+	def IfcDirection create f: ifcFactory.createIfcDirection() createIfcDirection(Direction d) {
+		var ratios = f.directionRatios.doubleWrapper
+		ratios.get(0).setValue(d.x)
+		ratios.get(1).setValue(d.y)
+		ratios.get(2).setValue(d.z)
+	}
+	
+	def IfcCartesianPoint create f: ifcFactory.createIfcCartesianPoint createIfcCartesianPoint(Axis2Placement3D a) {
+		var lengthMeasure = f.coordinates.ifcLengthMeasure  
+		lengthMeasure.get(0).setValue(a.cartesianX)
+		lengthMeasure.get(1).setValue(a.cartesianY)
+		lengthMeasure.get(2).setValue(a.cartesianZ)
+	}
+	
+	def IfcRelVoidsElement create f: ifcFactory.createIfcRelVoidsElement() createIfcRelVoidsElementFromOpening(WallRelation wr, IfcOpeningElement o) {
+		f.setGlobalId(wr.GUID)
+		f.setDescription(wr.description)
+		f.setName(wr.name)
+		
+		//Set opening
+		f.relatedOpeningElement.ifcFeatureElementSubtractionGroup.set(
+			FinalPackage::eINSTANCE.relatedOpeningElementType_IfcFeatureElementSubtraction, o
+		)
+		
+		//Find original wall
+		pipesModel.elements.forEach[pe |
+			if(pe instanceof Wall) {
+				entityMap.values.forEach[v |
+					if(v instanceof IfcRoot) {
+						if(pe.GUID == (v as IfcElement).globalId) {
+							f.relatingBuildingElement.ifcElementGroup.set(
+								FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, v as IfcElement
+							)
+						}
+					}
+				]
+			}			
+		]	
+	}
+	//End creating new object
+	
 	override invoke(IWorkflowContext ctx) {
 		println("Starting: Pipes2IFCTransformer")
 		//Initialization
-		val pipesModel = ctx.get(pipesOpeningsSlot) as Model
+		pipesModel = ctx.get(pipesOpeningsSlot) as Model
 		val openings = ctx.get(openingsSlot) as HashMap<String, IfcOpeningElement>
 		val flowSegments = ctx.get(flowSegmentsSlot) as HashMap<String, IfcFlowSegment>
+		
 		
 		val openingsAndFlowSegments = new ArrayList<IfcProduct>()
 		openingsAndFlowSegments.addAll(openings.values)
@@ -159,19 +269,36 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		ifcFactory = new FinalFactoryImpl()
 				
 		//Run through entire object graph and update
+		//If the object is a new opening - add it
 		pipesModel.elements.forEach[po |
-			openingsAndFlowSegments.forEach[e |
-				if(po.GUID.equals(e.globalId))
-					updateIfcElement(po, e)
-			]
+			var found = true
+			if(po instanceof Opening) {
+				found = openings.values.exists[ifcO |
+					po.GUID == ifcO.globalId
+				]
+				if(!found) {
+					createOpening(po as Opening)
+				}
+			}
+			if(found) {
+				openingsAndFlowSegments.forEach[e |
+					if(po.GUID.equals(e.globalId))
+						updateIfcElement(po, e)
+				]
+			}
 		]
 		
-		/*val IfcModel ifcModel = new IfcModel()
-		var openings = pipesModel.elements.filter(typeof(Opening))
 		
-		openings.forEach[
-			addIfcOpening(ifcModel, it)
-		]*/
+		// Remove deleted flow segments
+		flowSegments.values.forEach[ifcF |
+			var found = pipesModel.elements.exists[f |
+				ifcF.globalId == f.GUID
+			]
+			if(!found) {
+				
+			}
+		]
+		
 		println("Done: Pipes2IFCTransformer")
 	}
 }
