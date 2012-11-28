@@ -6,6 +6,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -13,6 +14,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import pipes.LocalPlacement;
@@ -37,7 +40,7 @@ import pipes.WallRelation;
  */
 public class WallImpl extends GUIDElementImpl implements Wall {
 	/**
-	 * The cached value of the '{@link #getPlacement() <em>Placement</em>}' reference.
+	 * The cached value of the '{@link #getPlacement() <em>Placement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPlacement()
@@ -47,7 +50,7 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	protected LocalPlacement placement;
 
 	/**
-	 * The cached value of the '{@link #getOpenings() <em>Openings</em>}' reference list.
+	 * The cached value of the '{@link #getOpenings() <em>Openings</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOpenings()
@@ -82,7 +85,7 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	 */
 	public EList<WallRelation> getOpenings() {
 		if (openings == null) {
-			openings = new EObjectResolvingEList<WallRelation>(WallRelation.class, this, PipesPackage.WALL__OPENINGS);
+			openings = new EObjectContainmentEList<WallRelation>(WallRelation.class, this, PipesPackage.WALL__OPENINGS);
 		}
 		return openings;
 	}
@@ -92,15 +95,23 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocalPlacement getPlacement() {
-		if (placement != null && placement.eIsProxy()) {
-			InternalEObject oldPlacement = (InternalEObject)placement;
-			placement = (LocalPlacement)eResolveProxy(oldPlacement);
-			if (placement != oldPlacement) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PipesPackage.WALL__PLACEMENT, oldPlacement, placement));
-			}
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PipesPackage.WALL__PLACEMENT:
+				return basicSetPlacement(null, msgs);
+			case PipesPackage.WALL__OPENINGS:
+				return ((InternalEList<?>)getOpenings()).basicRemove(otherEnd, msgs);
 		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LocalPlacement getPlacement() {
 		return placement;
 	}
 
@@ -109,8 +120,14 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocalPlacement basicGetPlacement() {
-		return placement;
+	public NotificationChain basicSetPlacement(LocalPlacement newPlacement, NotificationChain msgs) {
+		LocalPlacement oldPlacement = placement;
+		placement = newPlacement;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PipesPackage.WALL__PLACEMENT, oldPlacement, newPlacement);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -119,10 +136,17 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	 * @generated
 	 */
 	public void setPlacement(LocalPlacement newPlacement) {
-		LocalPlacement oldPlacement = placement;
-		placement = newPlacement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.WALL__PLACEMENT, oldPlacement, placement));
+		if (newPlacement != placement) {
+			NotificationChain msgs = null;
+			if (placement != null)
+				msgs = ((InternalEObject)placement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PipesPackage.WALL__PLACEMENT, null, msgs);
+			if (newPlacement != null)
+				msgs = ((InternalEObject)newPlacement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PipesPackage.WALL__PLACEMENT, null, msgs);
+			msgs = basicSetPlacement(newPlacement, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.WALL__PLACEMENT, newPlacement, newPlacement));
 	}
 
 	/**
@@ -134,8 +158,7 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case PipesPackage.WALL__PLACEMENT:
-				if (resolve) return getPlacement();
-				return basicGetPlacement();
+				return getPlacement();
 			case PipesPackage.WALL__OPENINGS:
 				return getOpenings();
 		}

@@ -4,6 +4,7 @@ package pipes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -92,7 +93,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	protected double cartesianZ = CARTESIAN_Z_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAxis() <em>Axis</em>}' reference.
+	 * The cached value of the '{@link #getAxis() <em>Axis</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAxis()
@@ -102,7 +103,7 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	protected Direction axis;
 
 	/**
-	 * The cached value of the '{@link #getRefDirection() <em>Ref Direction</em>}' reference.
+	 * The cached value of the '{@link #getRefDirection() <em>Ref Direction</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRefDirection()
@@ -199,14 +200,6 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * @generated
 	 */
 	public Direction getAxis() {
-		if (axis != null && axis.eIsProxy()) {
-			InternalEObject oldAxis = (InternalEObject)axis;
-			axis = (Direction)eResolveProxy(oldAxis);
-			if (axis != oldAxis) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PipesPackage.AXIS2_PLACEMENT3_D__AXIS, oldAxis, axis));
-			}
-		}
 		return axis;
 	}
 
@@ -215,8 +208,14 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Direction basicGetAxis() {
-		return axis;
+	public NotificationChain basicSetAxis(Direction newAxis, NotificationChain msgs) {
+		Direction oldAxis = axis;
+		axis = newAxis;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PipesPackage.AXIS2_PLACEMENT3_D__AXIS, oldAxis, newAxis);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -225,10 +224,17 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * @generated
 	 */
 	public void setAxis(Direction newAxis) {
-		Direction oldAxis = axis;
-		axis = newAxis;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.AXIS2_PLACEMENT3_D__AXIS, oldAxis, axis));
+		if (newAxis != axis) {
+			NotificationChain msgs = null;
+			if (axis != null)
+				msgs = ((InternalEObject)axis).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PipesPackage.AXIS2_PLACEMENT3_D__AXIS, null, msgs);
+			if (newAxis != null)
+				msgs = ((InternalEObject)newAxis).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PipesPackage.AXIS2_PLACEMENT3_D__AXIS, null, msgs);
+			msgs = basicSetAxis(newAxis, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.AXIS2_PLACEMENT3_D__AXIS, newAxis, newAxis));
 	}
 
 	/**
@@ -237,14 +243,6 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * @generated
 	 */
 	public Direction getRefDirection() {
-		if (refDirection != null && refDirection.eIsProxy()) {
-			InternalEObject oldRefDirection = (InternalEObject)refDirection;
-			refDirection = (Direction)eResolveProxy(oldRefDirection);
-			if (refDirection != oldRefDirection) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION, oldRefDirection, refDirection));
-			}
-		}
 		return refDirection;
 	}
 
@@ -253,8 +251,14 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Direction basicGetRefDirection() {
-		return refDirection;
+	public NotificationChain basicSetRefDirection(Direction newRefDirection, NotificationChain msgs) {
+		Direction oldRefDirection = refDirection;
+		refDirection = newRefDirection;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION, oldRefDirection, newRefDirection);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -263,10 +267,33 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 	 * @generated
 	 */
 	public void setRefDirection(Direction newRefDirection) {
-		Direction oldRefDirection = refDirection;
-		refDirection = newRefDirection;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION, oldRefDirection, refDirection));
+		if (newRefDirection != refDirection) {
+			NotificationChain msgs = null;
+			if (refDirection != null)
+				msgs = ((InternalEObject)refDirection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION, null, msgs);
+			if (newRefDirection != null)
+				msgs = ((InternalEObject)newRefDirection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION, null, msgs);
+			msgs = basicSetRefDirection(newRefDirection, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION, newRefDirection, newRefDirection));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PipesPackage.AXIS2_PLACEMENT3_D__AXIS:
+				return basicSetAxis(null, msgs);
+			case PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION:
+				return basicSetRefDirection(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -284,11 +311,9 @@ public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placem
 			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z:
 				return getCartesianZ();
 			case PipesPackage.AXIS2_PLACEMENT3_D__AXIS:
-				if (resolve) return getAxis();
-				return basicGetAxis();
+				return getAxis();
 			case PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION:
-				if (resolve) return getRefDirection();
-				return basicGetRefDirection();
+				return getRefDirection();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
