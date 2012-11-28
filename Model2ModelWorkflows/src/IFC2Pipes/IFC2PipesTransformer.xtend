@@ -13,11 +13,8 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 import java.util.ArrayList
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 import pipes.Axis2Placement3D
 import pipes.Direction
-import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcFlowSegmentImpl
-import java.util.HashMap
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
@@ -44,7 +41,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		var FlowSegment fs = pipesFactory.createFlowSegment()
 		fs.name = ifcFlowSegment.name
 		fs.description = ifcFlowSegment.description
-		val placement = getEObjectFromRefObject(ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
+		val placement = objFromRef(ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
 		addLocalPlacement(fs, placement, ctx)		
 		pipesModel.elements.add(fs)
 	}
@@ -56,7 +53,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		var Direction axisDir = pipesFactory.createDirection
 		var Direction refDir = pipesFactory.createDirection
 		println("relativePlacement is null: " + (null == ifcLocalPlacement.relativePlacement))
-		var IfcAxis2Placement3D ifcAxis = getEObjectFromRefObject(ifcLocalPlacement.relativePlacement.ifcAxis2Placement3D, ctx)
+		var IfcAxis2Placement3D ifcAxis = objFromRef(ifcLocalPlacement.relativePlacement.ifcAxis2Placement3D, ctx)
 		
 		//var IfcCartesianPoint loc = ifcAxis.location.ifcCartesianPoint
 		
@@ -95,20 +92,20 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	override invoke(IWorkflowContext ctx) {
 		println("Starting: IFC2PipesTransformer")
 		// Get openings and flow segments from the context
-		val openings = ctx.get(openingsSlot) as HashMap<String, IfcOpeningElement>
-		val flowSegments = ctx.get(flowSegmentsSlot) as HashMap<String, IfcFlowSegment>
+		val openings = ctx.get(openingsSlot) as ArrayList<IfcOpeningElement>
+		val flowSegments = ctx.get(flowSegmentsSlot) as ArrayList<IfcFlowSegment>
 		
 		// Creates a pipe factory, iterates through openings and flow segments to transforms them
 		pipesFactory = new PipesFactoryImpl()
 		val pipesModel = pipesFactory.createModel()
 		
 		println("Openings: " + openings.size())
-		openings.values.forEach[
+		openings.forEach[
 			addOpening(pipesModel, it, ctx)
 		]
 		
 		println("Flow segments: " + flowSegments.size())
-		flowSegments.values.forEach[
+		flowSegments.forEach[
 			addFlowSegment(pipesModel, it, ctx)
 		]
 		

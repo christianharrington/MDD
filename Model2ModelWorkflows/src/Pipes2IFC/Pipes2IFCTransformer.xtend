@@ -17,8 +17,6 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
 import pipes.GUIDElement
-import org.tech.iai.ifc.xml.ifc._2x3.final_.AxisType2
-import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.AxisType2Impl
 import pipes.Direction
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcDirection
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
