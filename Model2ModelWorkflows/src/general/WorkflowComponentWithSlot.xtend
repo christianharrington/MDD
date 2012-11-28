@@ -31,8 +31,14 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	override preInvoke() { }
 		
 	def <T extends Entity> T objFromRef(T refObject, IWorkflowContext ctx) {
-		val entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
-		entityMap.get(refObject.ref) as T		
+		if (refObject.id != null && refObject.ref == null) return refObject
+		else if (refObject.ref != null) {
+			val entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
+			entityMap.get(refObject.ref) as T
+		}
+		else {
+			throw new InvalidEntityException("Both ID and Ref is null for entity " + refObject)
+		}		
 	}
 	
 }
