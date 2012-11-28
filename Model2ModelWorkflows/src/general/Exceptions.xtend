@@ -19,3 +19,21 @@ class InvalidIFCException extends Exception {
 		super(cause)
 	}
 }
+
+class InvalidEntityException extends Exception {
+	new() {
+		super()
+	}
+	
+	new(String message) {
+		super(message)
+	}
+	
+	new(String message, Throwable cause) {
+		super(message, cause)
+	}
+	
+	new(Throwable cause) {
+		super(cause)
+	}
+}
