@@ -17,6 +17,7 @@ import pipes.Axis2Placement3D
 import pipes.Direction
 import general.InvalidIFCException
 import org.eclipse.xtext.xbase.lib.BooleanExtensions
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
@@ -30,6 +31,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening, IWorkflowContext ctx) {
 		val Opening op = pipesFactory.createOpening()
 		op.name = ifcOpening.name
+		op.GUID = ifcOpening.globalId
 		op.description = ifcOpening.description
 		
 		val placement = objFromRef(ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
@@ -41,6 +43,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	def private addFlowSegment(Model pipesModel, IfcFlowSegment ifcFlowSegment, IWorkflowContext ctx) {
 		val FlowSegment fs = pipesFactory.createFlowSegment()
 		fs.name = ifcFlowSegment.name
+		fs.GUID = ifcFlowSegment.globalId
 		fs.description = ifcFlowSegment.description
 		
 		val placement = objFromRef(ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
@@ -50,39 +53,41 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement, IWorkflowContext ctx) {
-	    val float = 0 as float
-		var LocalPlacement lp = pipesFactory.createLocalPlacement()
-		var Axis2Placement3D axis = pipesFactory.createAxis2Placement3D
-		var Direction axisDir = pipesFactory.createDirection
-		var Direction refDir = pipesFactory.createDirection
+		val LocalPlacement lp = pipesFactory.createLocalPlacement()
+		val Axis2Placement3D axis = pipesFactory.createAxis2Placement3D
+		val Direction axisDir = pipesFactory.createDirection
+		val Direction refDir = pipesFactory.createDirection
 		
-		var IfcAxis2Placement3D ifcAxis = objFromRef(ifcLocalPlacement.relativePlacement.ifcAxis2Placement3D, ctx)
+		val IfcAxis2Placement3D ifcAxis = objFromRef(ifcLocalPlacement.relativePlacement.ifcAxis2Placement3D, ctx)
 		
-		//var IfcCartesianPoint loc = ifcAxis.location.ifcCartesianPoint
+		val IfcCartesianPoint loc = objFromRef(ifcAxis.location.ifcCartesianPoint as IfcCartesianPoint, ctx)
 		
 		//Coordinates are X,Y,Z http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcgeometryresource/lexical/ifccartesianpoint.htm
-		//if(loc.coordinates.ifcLengthMeasure.size != 3){
-		//	println("Non 3D cartesian point for local placement. Count " + loc.coordinates.ifcLengthMeasure.size)
-		//	System::exit(1)
-		//}
-		//axis.cartesianX = (float)loc.coordinates.ifcLengthMeasure.get(0)
-		//axis.cartesianY = (float)loc.coordinates.ifcLengthMeasure.get(1)
-		//axis.cartesianZ = (float)loc.coordinates.ifcLengthMeasure.get(2)
+		if(loc.coordinates.ifcLengthMeasure.size != 3){
+			println("Non 3D cartesian point for local placement. Count " + loc.coordinates.ifcLengthMeasure.size)
+			System::exit(1)
+		}
+		axis.cartesianX = loc.coordinates.ifcLengthMeasure.get(0).value
+		axis.cartesianY = loc.coordinates.ifcLengthMeasure.get(1).value
+		axis.cartesianZ = loc.coordinates.ifcLengthMeasure.get(2).value
 		
 		//If Axis and/or RefDirection is omitted, these directions are taken from the geometric coordinate system.
 		//We add these if they are there. If any is missing we treat it as undefined - documentation only states the above
 		
 		if(ifcAxis.axis != null && ifcAxis.refDirection != null) {
-			if(objFromRef(ifcAxis.axis.ifcDirection, ctx).directionRatios.arraySize == 3){		
-				axisDir.x = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(0)
-				axisDir.y = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(1)
-				axisDir.z = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(2)
+			val ifcDirection = objFromRef(ifcAxis.axis.ifcDirection, ctx)
+			val refDirection = objFromRef(ifcAxis.refDirection.ifcDirection, ctx)
+			
+			if(ifcDirection.directionRatios.doubleWrapper.size == 3){		
+				axisDir.x = ifcDirection.directionRatios.doubleWrapper.get(0).value
+				axisDir.y = ifcDirection.directionRatios.doubleWrapper.get(1).value
+				axisDir.z = ifcDirection.directionRatios.doubleWrapper.get(2).value
 			}
 			
-			if(objFromRef(ifcAxis.refDirection.ifcDirection, ctx).directionRatios.arraySize == 3){		
-				refDir.x = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(0)
-				refDir.y = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(1)
-				refDir.z = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(2)
+			if(refDirection.directionRatios.doubleWrapper.size == 3){		
+				refDir.x = refDirection.directionRatios.doubleWrapper.get(0).value
+				refDir.y = refDirection.directionRatios.doubleWrapper.get(1).value
+				refDir.z = refDirection.directionRatios.doubleWrapper.get(2).value
 			}
 		}
 		else if (BooleanExtensions::xor(ifcAxis.axis == null, ifcAxis.refDirection == null)) {
