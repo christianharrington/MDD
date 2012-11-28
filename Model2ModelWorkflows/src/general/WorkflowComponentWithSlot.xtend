@@ -37,7 +37,7 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 			entityMap.get(refObject.ref) as T
 		}
 		else {
-			throw new InvalidEntityException("Both ID and Ref is null for entity " + refObject)
+			throw new InvalidEntityException("Both id and ref is null for entity " + refObject)
 		}		
 	}
 	
