@@ -15,6 +15,8 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 import java.util.ArrayList
 import pipes.Axis2Placement3D
 import pipes.Direction
+import general.InvalidIFCException
+import org.eclipse.xtext.xbase.lib.BooleanExtensions
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
@@ -26,23 +28,24 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	 */
 	 
 	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening, IWorkflowContext ctx) {
-		var Opening op = pipesFactory.createOpening()
+		val Opening op = pipesFactory.createOpening()
 		op.name = ifcOpening.name
 		op.description = ifcOpening.description
-		var placement = ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement
-		println(op)
-		println(placement.relativePlacement == null)
-		addLocalPlacement(op, placement, ctx)
 		
+		val placement = objFromRef(ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
+		addLocalPlacement(op, placement, ctx)
+	
 		pipesModel.elements.add(op)
 	}
 	
 	def private addFlowSegment(Model pipesModel, IfcFlowSegment ifcFlowSegment, IWorkflowContext ctx) {
-		var FlowSegment fs = pipesFactory.createFlowSegment()
+		val FlowSegment fs = pipesFactory.createFlowSegment()
 		fs.name = ifcFlowSegment.name
 		fs.description = ifcFlowSegment.description
+		
 		val placement = objFromRef(ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
 		addLocalPlacement(fs, placement, ctx)		
+		
 		pipesModel.elements.add(fs)
 	}
 	
@@ -52,12 +55,12 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		var Axis2Placement3D axis = pipesFactory.createAxis2Placement3D
 		var Direction axisDir = pipesFactory.createDirection
 		var Direction refDir = pipesFactory.createDirection
-		println("relativePlacement is null: " + (null == ifcLocalPlacement.relativePlacement))
+		
 		var IfcAxis2Placement3D ifcAxis = objFromRef(ifcLocalPlacement.relativePlacement.ifcAxis2Placement3D, ctx)
 		
 		//var IfcCartesianPoint loc = ifcAxis.location.ifcCartesianPoint
 		
-		//Coordibates are X,Y,Z http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcgeometryresource/lexical/ifccartesianpoint.htm
+		//Coordinates are X,Y,Z http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcgeometryresource/lexical/ifccartesianpoint.htm
 		//if(loc.coordinates.ifcLengthMeasure.size != 3){
 		//	println("Non 3D cartesian point for local placement. Count " + loc.coordinates.ifcLengthMeasure.size)
 		//	System::exit(1)
@@ -68,16 +71,22 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		
 		//If Axis and/or RefDirection is omitted, these directions are taken from the geometric coordinate system.
 		//We add these if they are there. If any is missing we treat it as undefined - documentation only states the above
-		if(ifcAxis.axis.ifcDirection.directionRatios.arraySize == 3){		
-			axisDir.x = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(0)
-			axisDir.y = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(1)
-			axisDir.z = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(2)
-		}
 		
-		if(ifcAxis.refDirection.ifcDirection.directionRatios.arraySize == 3){		
-			refDir.x = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(0)
-			refDir.y = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(1)
-			refDir.z = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(2)
+		if(ifcAxis.axis != null && ifcAxis.refDirection != null) {
+			if(objFromRef(ifcAxis.axis.ifcDirection, ctx).directionRatios.arraySize == 3){		
+				axisDir.x = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(0)
+				axisDir.y = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(1)
+				axisDir.z = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(2)
+			}
+			
+			if(objFromRef(ifcAxis.refDirection.ifcDirection, ctx).directionRatios.arraySize == 3){		
+				refDir.x = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(0)
+				refDir.y = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(1)
+				refDir.z = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(2)
+			}
+		}
+		else if (BooleanExtensions::xor(ifcAxis.axis == null, ifcAxis.refDirection == null)) {
+			throw new InvalidIFCException("Both the axis and the ref direction must be set");
 		}
 		
 		axis.axis = axisDir
