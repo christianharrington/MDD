@@ -174,6 +174,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 				} 
 			}
 		]
+		
+		entityMap.put(f.globalId, f)
 	}
 	
 	def ObjectPlacementType create f: ifcFactory.createObjectPlacementType() createObjectPlacementType(LocalPlacement p) {
@@ -289,13 +291,15 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		]
 		
 		
-		// Remove deleted flow segments
+		//Remove deleted flow segments
+		//Doesn't remove anything else
+		//This will result in garbage object left in the model 
 		flowSegments.forEach[ifcF |
 			var found = pipesModel.elements.exists[f |
 				ifcF.globalId == f.GUID
 			]
 			if(!found) {
-				
+				entityMap.remove(ifcF)
 			}
 		]
 		
