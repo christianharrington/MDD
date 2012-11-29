@@ -61,49 +61,49 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		product.setDescription(o.description)
 	}
 	
-	def dispatch updateIfcElement(FlowSegment o, IfcFlowSegment product){
+	def dispatch updateIfcElement(FlowSegment o, IfcFlowSegment product, IWorkflowContext ctx){
 		if(!markedSet.contains(o.GUID))
 		{
 			markedSet.add(o.GUID)
 			
-			updateMetaData(o, product)
+			updateMetaData(o, objFromRef(product, ctx))
 			
 			// References
-			updateIfcElement(o.placement, product.objectPlacement.ifcObjectPlacement as IfcLocalPlacement)
+			updateIfcElement(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
 		}
 		
 	}
 	
-	def dispatch updateIfcElement(Opening o, IfcOpeningElement product){
+	def dispatch updateIfcElement(Opening o, IfcOpeningElement product, IWorkflowContext ctx){
 		if(!markedSet.contains(o.GUID))
 		{
 			markedSet.add(o.GUID)
 			
-			updateMetaData(o, product)
+			updateMetaData(o, objFromRef(product, ctx))
 			
 			
 			o.walls.forEach[w |
 				extrModel.forEach[p |
 					if(w.GUID == p.globalId) {
-						updateIfcElement(w, p)
+						updateIfcElement(w, objFromRef(p, ctx), ctx)
 					}
 				]
 			]
-			updateIfcElement(o.placement, product.objectPlacement.ifcObjectPlacement as IfcLocalPlacement)
+			updateIfcElement(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
 		}
 	}
 	
-	def dispatch updateIfcElement(Wall o, IfcWall product){
+	def dispatch updateIfcElement(Wall o, IfcWall product, IWorkflowContext ctx){
 		if(!markedSet.contains(o.GUID))
 		{
 			markedSet.add(o.GUID)
 			
-			updateMetaData(o, product)
+			updateMetaData(o, objFromRef(product, ctx))
 			
 			o.openings.forEach[w |
 				extrModel.forEach[p |
 					if(w.GUID == p.globalId) {
-						updateIfcElement(w, p)
+						updateIfcElement(w, objFromRef(p, ctx), ctx)
 					}					
 				]
 			]
@@ -112,45 +112,45 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		}
 	}
 	
-	def dispatch updateIfcElement(WallRelation o, IfcRelVoidsElement product){
+	def dispatch updateIfcElement(WallRelation o, IfcRelVoidsElement product, IWorkflowContext ctx){
 		if(!markedSet.contains(o.GUID))
 		{
 			markedSet.add(o.GUID)
-			updateMetaData(o, product)
-			if(product.relatingBuildingElement.ifcElement instanceof IfcWall) {
-				updateIfcElement(o.wall, product.relatingBuildingElement.ifcElement as IfcWall)
+			updateMetaData(o, objFromRef(product, ctx))
+			if(objFromRef(product, ctx).relatingBuildingElement.ifcElement instanceof IfcWall) {
+				updateIfcElement(o.wall, objFromRef(product, ctx).relatingBuildingElement.ifcElement as IfcWall, ctx)
 			}
-			if(product.relatedOpeningElement.ifcFeatureElementSubtraction instanceof IfcOpeningElement) {
-				updateIfcElement(o.opening, product.relatedOpeningElement.ifcFeatureElementSubtraction as IfcOpeningElement)
+			if(objFromRef(product, ctx).relatedOpeningElement.ifcFeatureElementSubtraction instanceof IfcOpeningElement) {
+				updateIfcElement(o.opening, objFromRef(product, ctx).relatedOpeningElement.ifcFeatureElementSubtraction as IfcOpeningElement, ctx)
 			}
 			true
 		}
 	}
 	
-	def dispatch updateIfcElement(LocalPlacement o, IfcLocalPlacement product){
+	def dispatch updateIfcElement(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx){
 		if(!markedSet.contains(o.GUID))
 		{
 			markedSet.add(o.GUID)
 	
-			updateIfcElement(o.axis2placement3d, product.relativePlacement.ifcAxis2Placement3D)		
+			updateIfcElement(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)		
 		}
 	}
 	
-	def dispatch updateIfcElement(Axis2Placement3D o, IfcAxis2Placement3D product){
+	def dispatch updateIfcElement(Axis2Placement3D o, IfcAxis2Placement3D product, IWorkflowContext ctx){
 		if(!markedSet.contains(o.GUID))
 		{
 			markedSet.add(o.GUID)
-			var lengthMeasure = product.location.ifcCartesianPoint.coordinates.ifcLengthMeasure  
+			var lengthMeasure = objFromRef(product, ctx).location.ifcCartesianPoint.coordinates.ifcLengthMeasure  
 			lengthMeasure.get(0).setValue(o.cartesianX)
 			lengthMeasure.get(1).setValue(o.cartesianY)
 			lengthMeasure.get(2).setValue(o.cartesianZ)
-			updateIfcElement(o.axis, product.axis.ifcDirection)
-			updateIfcElement(o.refDirection, product.refDirection.ifcDirection)
+			updateIfcElement(o.axis, objFromRef(product, ctx).axis.ifcDirection, ctx)
+			updateIfcElement(o.refDirection, objFromRef(product, ctx).refDirection.ifcDirection, ctx)
 		}
 	}
 		
-	def dispatch updateIfcElement(Direction o, IfcDirection product) {
-		var ratios = product.directionRatios.doubleWrapper
+	def dispatch updateIfcElement(Direction o, IfcDirection product, IWorkflowContext ctx) {
+		var ratios = objFromRef(product, ctx).directionRatios.doubleWrapper
 		ratios.get(0).setValue(o.x)
 		ratios.get(1).setValue(o.y)
 		ratios.get(2).setValue(o.z)
@@ -257,13 +257,13 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		println("Starting: Pipes2IFCTransformer")
 		//Initialization
 		pipesModel = ctx.get(pipesOpeningsSlot) as Model
-		val openings = ctx.get(openingsSlot) as HashMap<String, IfcOpeningElement>
-		val flowSegments = ctx.get(flowSegmentsSlot) as HashMap<String, IfcFlowSegment>
+		val openings = ctx.get(openingsSlot) as ArrayList<IfcOpeningElement>
+		val flowSegments = ctx.get(flowSegmentsSlot) as ArrayList<IfcFlowSegment>
 		
 		
 		val openingsAndFlowSegments = new ArrayList<IfcProduct>()
-		openingsAndFlowSegments.addAll(openings.values)
-		openingsAndFlowSegments.addAll(flowSegments.values)
+		openingsAndFlowSegments.addAll(openings)
+		openingsAndFlowSegments.addAll(flowSegments)
 		
 		markedSet = new HashSet<String>()
 		ifcFactory = new FinalFactoryImpl()
@@ -273,7 +273,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		pipesModel.elements.forEach[po |
 			var found = true
 			if(po instanceof Opening) {
-				found = openings.values.exists[ifcO |
+				found = openings.exists[ifcO |
 					po.GUID == ifcO.globalId
 				]
 				if(!found) {
@@ -283,14 +283,14 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			if(found) {
 				openingsAndFlowSegments.forEach[e |
 					if(po.GUID.equals(e.globalId))
-						updateIfcElement(po, e)
+						updateIfcElement(po, e, ctx)
 				]
 			}
 		]
 		
 		
 		// Remove deleted flow segments
-		flowSegments.values.forEach[ifcF |
+		flowSegments.forEach[ifcF |
 			var found = pipesModel.elements.exists[f |
 				ifcF.globalId == f.GUID
 			]
