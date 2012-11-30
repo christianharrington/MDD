@@ -94,22 +94,19 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def dispatch updateIfcElement(Wall o, IfcWall product, IWorkflowContext ctx){
-		if(!markedSet.contains(o.GUID))
-		{
-			markedSet.add(o.GUID)
-			
-			updateMetaData(o, objFromRef(product, ctx))
-			
-			o.openings.forEach[w |
-				extrModel.forEach[p |
-					if(w.GUID == p.globalId) {
-						updateIfcElement(w, objFromRef(p, ctx), ctx)
-					}					
-				]
+		markedSet.add(o.GUID)
+		
+		updateMetaData(o, objFromRef(product, ctx))
+		
+		o.openings.forEach[w |
+			extrModel.forEach[p |
+				if(w.GUID == p.globalId) {
+					updateIfcElement(w, objFromRef(p, ctx), ctx)
+				}					
 			]
-			
-			true	
-		}
+		]
+		
+		true
 	}
 	
 	def dispatch updateIfcElement(WallRelation o, IfcRelVoidsElement product, IWorkflowContext ctx){
@@ -127,26 +124,20 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		}
 	}
 	
-	def dispatch updateIfcElement(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx){
-		if(!markedSet.contains(o.GUID))
-		{
-			markedSet.add(o.GUID)
+	def dispatch updateIfcElement(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
+		markedSet.add(o.GUID)
 	
-			updateIfcElement(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)		
-		}
+		updateIfcElement(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)
 	}
 	
 	def dispatch updateIfcElement(Axis2Placement3D o, IfcAxis2Placement3D product, IWorkflowContext ctx){
-		if(!markedSet.contains(o.GUID))
-		{
-			markedSet.add(o.GUID)
-			var lengthMeasure = objFromRef(product, ctx).location.ifcCartesianPoint.coordinates.ifcLengthMeasure  
-			lengthMeasure.get(0).setValue(o.cartesianX)
-			lengthMeasure.get(1).setValue(o.cartesianY)
-			lengthMeasure.get(2).setValue(o.cartesianZ)
-			updateIfcElement(o.axis, objFromRef(product, ctx).axis.ifcDirection, ctx)
-			updateIfcElement(o.refDirection, objFromRef(product, ctx).refDirection.ifcDirection, ctx)
-		}
+		markedSet.add(o.GUID)
+		var lengthMeasure = objFromRef(objFromRef(product, ctx).location.ifcCartesianPoint, ctx).coordinates.ifcLengthMeasure
+		lengthMeasure.get(0).setValue(o.cartesianX)
+		lengthMeasure.get(1).setValue(o.cartesianY)
+		lengthMeasure.get(2).setValue(o.cartesianZ)
+		updateIfcElement(o.axis, objFromRef(product, ctx).axis.ifcDirection, ctx)
+		updateIfcElement(o.refDirection, objFromRef(product, ctx).refDirection.ifcDirection, ctx)
 	}
 		
 	def dispatch updateIfcElement(Direction o, IfcDirection product, IWorkflowContext ctx) {

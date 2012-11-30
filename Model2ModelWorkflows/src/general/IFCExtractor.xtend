@@ -28,7 +28,7 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 		
 		ifcResource.contents.get(0).eAllContents.forEach[
 			if (it instanceof Entity) {
-				// If the object has an ID, add it to our map
+				// If the object has an ID it is an entity not a ref, add it to our map
 				val en = it as Entity
 				if (en.id != null) {
 					entityMap.put(en.id, en)
