@@ -5,6 +5,7 @@ package pipes.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -12,6 +13,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import pipes.LocalPlacement;
@@ -36,7 +39,7 @@ import pipes.WallRelation;
  */
 public class OpeningImpl extends GUIDElementImpl implements Opening {
 	/**
-	 * The cached value of the '{@link #getPlacement() <em>Placement</em>}' reference.
+	 * The cached value of the '{@link #getPlacement() <em>Placement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPlacement()
@@ -46,7 +49,7 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 	protected LocalPlacement placement;
 
 	/**
-	 * The cached value of the '{@link #getWalls() <em>Walls</em>}' reference list.
+	 * The cached value of the '{@link #getWalls() <em>Walls</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getWalls()
@@ -80,14 +83,6 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 	 * @generated
 	 */
 	public LocalPlacement getPlacement() {
-		if (placement != null && placement.eIsProxy()) {
-			InternalEObject oldPlacement = (InternalEObject)placement;
-			placement = (LocalPlacement)eResolveProxy(oldPlacement);
-			if (placement != oldPlacement) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PipesPackage.OPENING__PLACEMENT, oldPlacement, placement));
-			}
-		}
 		return placement;
 	}
 
@@ -96,8 +91,14 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocalPlacement basicGetPlacement() {
-		return placement;
+	public NotificationChain basicSetPlacement(LocalPlacement newPlacement, NotificationChain msgs) {
+		LocalPlacement oldPlacement = placement;
+		placement = newPlacement;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PipesPackage.OPENING__PLACEMENT, oldPlacement, newPlacement);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -106,10 +107,17 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 	 * @generated
 	 */
 	public void setPlacement(LocalPlacement newPlacement) {
-		LocalPlacement oldPlacement = placement;
-		placement = newPlacement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.OPENING__PLACEMENT, oldPlacement, placement));
+		if (newPlacement != placement) {
+			NotificationChain msgs = null;
+			if (placement != null)
+				msgs = ((InternalEObject)placement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PipesPackage.OPENING__PLACEMENT, null, msgs);
+			if (newPlacement != null)
+				msgs = ((InternalEObject)newPlacement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PipesPackage.OPENING__PLACEMENT, null, msgs);
+			msgs = basicSetPlacement(newPlacement, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.OPENING__PLACEMENT, newPlacement, newPlacement));
 	}
 
 	/**
@@ -119,9 +127,25 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 	 */
 	public EList<WallRelation> getWalls() {
 		if (walls == null) {
-			walls = new EObjectResolvingEList<WallRelation>(WallRelation.class, this, PipesPackage.OPENING__WALLS);
+			walls = new EObjectContainmentEList<WallRelation>(WallRelation.class, this, PipesPackage.OPENING__WALLS);
 		}
 		return walls;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PipesPackage.OPENING__PLACEMENT:
+				return basicSetPlacement(null, msgs);
+			case PipesPackage.OPENING__WALLS:
+				return ((InternalEList<?>)getWalls()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -133,8 +157,7 @@ public class OpeningImpl extends GUIDElementImpl implements Opening {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case PipesPackage.OPENING__PLACEMENT:
-				if (resolve) return getPlacement();
-				return basicGetPlacement();
+				return getPlacement();
 			case PipesPackage.OPENING__WALLS:
 				return getWalls();
 		}

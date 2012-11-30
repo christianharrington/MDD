@@ -3,21 +3,24 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pipes" nsURI="/Pipes/model/Pipes.ecore" nsPrefix="pipes">
   <eClassifiers xsi:type="ecore:EClass" name="Wall" eSuperTypes="#//GUIDElement #//Product">
     <eStructuralFeatures xsi:type="ecore:EReference" name="openings" upperBound="-1"
-        eType="#//WallRelation"/>
+        eType="#//WallRelation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Opening" eSuperTypes="#//GUIDElement #//Product">
     <eStructuralFeatures xsi:type="ecore:EReference" name="walls" upperBound="-1"
-        eType="#//WallRelation"/>
+        eType="#//WallRelation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WallRelation" eSuperTypes="#//GUIDElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="wall" lowerBound="1" eType="#//Wall"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wall" lowerBound="1" eType="#//Wall"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="opening" lowerBound="1"
-        eType="#//Opening"/>
+        eType="#//Opening" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FlowSegment" eSuperTypes="#//GUIDElement #//Product"/>
   <eClassifiers xsi:type="ecore:EClass" name="LocalPlacement" eSuperTypes="#//GUIDElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="axis2placement3d" eType="#//Axis2Placement3D"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relativeTo" eType="#//LocalPlacement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="axis2placement3d" eType="#//Axis2Placement3D"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relativeTo" eType="#//LocalPlacement"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Axis2Placement3D" eSuperTypes="#//GUIDElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cartesianX" lowerBound="1"
@@ -26,9 +29,10 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cartesianZ" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="axis" lowerBound="1" eType="#//Direction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="axis" lowerBound="1" eType="#//Direction"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="refDirection" lowerBound="1"
-        eType="#//Direction"/>
+        eType="#//Direction" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GUIDElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="GUID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -46,6 +50,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Product" abstract="true" eSuperTypes="#//GUIDElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="placement" lowerBound="1"
-        eType="#//LocalPlacement"/>
+        eType="#//LocalPlacement" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

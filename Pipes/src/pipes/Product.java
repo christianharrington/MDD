@@ -23,26 +23,26 @@ import org.eclipse.emf.ecore.EObject;
 public interface Product extends GUIDElement {
 
 	/**
-	 * Returns the value of the '<em><b>Placement</b></em>' reference.
+	 * Returns the value of the '<em><b>Placement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Placement</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Placement</em>' reference.
+	 * @return the value of the '<em>Placement</em>' containment reference.
 	 * @see #setPlacement(LocalPlacement)
 	 * @see pipes.PipesPackage#getProduct_Placement()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	LocalPlacement getPlacement();
 
 	/**
-	 * Sets the value of the '{@link pipes.Product#getPlacement <em>Placement</em>}' reference.
+	 * Sets the value of the '{@link pipes.Product#getPlacement <em>Placement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Placement</em>' reference.
+	 * @param value the new value of the '<em>Placement</em>' containment reference.
 	 * @see #getPlacement()
 	 * @generated
 	 */

@@ -13,11 +13,11 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 import java.util.ArrayList
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 import pipes.Axis2Placement3D
 import pipes.Direction
-import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.IfcFlowSegmentImpl
-import java.util.HashMap
+import general.InvalidIFCException
+import org.eclipse.xtext.xbase.lib.BooleanExtensions
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	
@@ -28,59 +28,70 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	 * create new targetModelElements with factory
 	 */
 	 
-	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening) {
-		var Opening op = pipesFactory.createOpening()
+	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening, IWorkflowContext ctx) {
+		val Opening op = pipesFactory.createOpening()
 		op.name = ifcOpening.name
+		op.GUID = ifcOpening.globalId
 		op.description = ifcOpening.description
-		var placement = ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement
-		println(op)
-		println(placement.relativePlacement == null)
-		addLocalPlacement(op, placement)
 		
+		val placement = objFromRef(ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
+		addLocalPlacement(op, placement, ctx)
+	
 		pipesModel.elements.add(op)
 	}
 	
-	def private addFlowSegment(Model pipesModel, IfcFlowSegment ifcFlowSegment) {
-		var FlowSegment fs = pipesFactory.createFlowSegment()
+	def private addFlowSegment(Model pipesModel, IfcFlowSegment ifcFlowSegment, IWorkflowContext ctx) {
+		val FlowSegment fs = pipesFactory.createFlowSegment()
 		fs.name = ifcFlowSegment.name
+		fs.GUID = ifcFlowSegment.globalId
 		fs.description = ifcFlowSegment.description
-		var placement = ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement
-		addLocalPlacement(fs, placement)		
+		
+		val placement = objFromRef(ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
+		addLocalPlacement(fs, placement, ctx)		
+		
 		pipesModel.elements.add(fs)
 	}
 	
-	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement) {
-	    val float = 0 as float
-		var LocalPlacement lp = pipesFactory.createLocalPlacement()
-		var Axis2Placement3D axis = pipesFactory.createAxis2Placement3D
-		var Direction axisDir = pipesFactory.createDirection
-		var Direction refDir = pipesFactory.createDirection
-		println("relativePlacement is null: " + (null == ifcLocalPlacement.relativePlacement))
-		var IfcAxis2Placement3D ifcAxis = ifcLocalPlacement.relativePlacement as IfcAxis2Placement3D
+	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement, IWorkflowContext ctx) {
+		val LocalPlacement lp = pipesFactory.createLocalPlacement()
+		val Axis2Placement3D axis = pipesFactory.createAxis2Placement3D
+		val Direction axisDir = pipesFactory.createDirection
+		val Direction refDir = pipesFactory.createDirection
 		
-		//var IfcCartesianPoint loc = ifcAxis.location.ifcCartesianPoint
+		val IfcAxis2Placement3D ifcAxis = objFromRef(ifcLocalPlacement.relativePlacement.ifcAxis2Placement3D, ctx)
 		
-		//Coordibates are X,Y,Z http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcgeometryresource/lexical/ifccartesianpoint.htm
-		//if(loc.coordinates.ifcLengthMeasure.size != 3){
-		//	println("Non 3D cartesian point for local placement. Count " + loc.coordinates.ifcLengthMeasure.size)
-		//	System::exit(1)
-		//}
-		//axis.cartesianX = (float)loc.coordinates.ifcLengthMeasure.get(0)
-		//axis.cartesianY = (float)loc.coordinates.ifcLengthMeasure.get(1)
-		//axis.cartesianZ = (float)loc.coordinates.ifcLengthMeasure.get(2)
+		val IfcCartesianPoint loc = objFromRef(ifcAxis.location.ifcCartesianPoint as IfcCartesianPoint, ctx)
+		
+		//Coordinates are X,Y,Z http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcgeometryresource/lexical/ifccartesianpoint.htm
+		if(loc.coordinates.ifcLengthMeasure.size != 3){
+			println("Non 3D cartesian point for local placement. Count " + loc.coordinates.ifcLengthMeasure.size)
+			System::exit(1)
+		}
+		axis.cartesianX = loc.coordinates.ifcLengthMeasure.get(0).value
+		axis.cartesianY = loc.coordinates.ifcLengthMeasure.get(1).value
+		axis.cartesianZ = loc.coordinates.ifcLengthMeasure.get(2).value
 		
 		//If Axis and/or RefDirection is omitted, these directions are taken from the geometric coordinate system.
 		//We add these if they are there. If any is missing we treat it as undefined - documentation only states the above
-		if(ifcAxis.axis.ifcDirection.directionRatios.arraySize == 3){		
-			axisDir.x = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(0)
-			axisDir.y = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(1)
-			axisDir.z = (float)ifcAxis.axis.ifcDirection.directionRatios.doubleWrapper.get(2)
-		}
 		
-		if(ifcAxis.refDirection.ifcDirection.directionRatios.arraySize == 3){		
-			refDir.x = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(0)
-			refDir.y = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(1)
-			refDir.z = (float)ifcAxis.refDirection.ifcDirection.directionRatios.doubleWrapper.get(2)
+		if(ifcAxis.axis != null && ifcAxis.refDirection != null) {
+			val ifcDirection = objFromRef(ifcAxis.axis.ifcDirection, ctx)
+			val refDirection = objFromRef(ifcAxis.refDirection.ifcDirection, ctx)
+			
+			if(ifcDirection.directionRatios.doubleWrapper.size == 3){		
+				axisDir.x = ifcDirection.directionRatios.doubleWrapper.get(0).value
+				axisDir.y = ifcDirection.directionRatios.doubleWrapper.get(1).value
+				axisDir.z = ifcDirection.directionRatios.doubleWrapper.get(2).value
+			}
+			
+			if(refDirection.directionRatios.doubleWrapper.size == 3){		
+				refDir.x = refDirection.directionRatios.doubleWrapper.get(0).value
+				refDir.y = refDirection.directionRatios.doubleWrapper.get(1).value
+				refDir.z = refDirection.directionRatios.doubleWrapper.get(2).value
+			}
+		}
+		else if (BooleanExtensions::xor(ifcAxis.axis == null, ifcAxis.refDirection == null)) {
+			throw new InvalidIFCException("Both the axis and the ref direction must be set");
 		}
 		
 		axis.axis = axisDir
@@ -95,21 +106,21 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	override invoke(IWorkflowContext ctx) {
 		println("Starting: IFC2PipesTransformer")
 		// Get openings and flow segments from the context
-		val openings = ctx.get(openingsSlot) as HashMap<String, IfcOpeningElement>
-		val flowSegments = ctx.get(flowSegmentsSlot) as HashMap<String, IfcFlowSegment>
+		val openings = ctx.get(openingsSlot) as ArrayList<IfcOpeningElement>
+		val flowSegments = ctx.get(flowSegmentsSlot) as ArrayList<IfcFlowSegment>
 		
 		// Creates a pipe factory, iterates through openings and flow segments to transforms them
 		pipesFactory = new PipesFactoryImpl()
 		val pipesModel = pipesFactory.createModel()
 		
 		println("Openings: " + openings.size())
-		openings.values.forEach[
-			addOpening(pipesModel, it)
+		openings.forEach[
+			addOpening(pipesModel, it, ctx)
 		]
 		
 		println("Flow segments: " + flowSegments.size())
-		flowSegments.values.forEach[
-			addFlowSegment(pipesModel, it)
+		flowSegments.forEach[
+			addFlowSegment(pipesModel, it, ctx)
 		]
 		
 		ctx.put(pipesOpeningsSlot, pipesModel)

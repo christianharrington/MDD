@@ -139,7 +139,7 @@ public interface PipesPackage extends EPackage {
 	int WALL__DESCRIPTION = GUID_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Placement</b></em>' reference.
+	 * The feature id for the '<em><b>Placement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,7 +148,7 @@ public interface PipesPackage extends EPackage {
 	int WALL__PLACEMENT = GUID_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Openings</b></em>' reference list.
+	 * The feature id for the '<em><b>Openings</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -203,7 +203,7 @@ public interface PipesPackage extends EPackage {
 	int OPENING__DESCRIPTION = GUID_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Placement</b></em>' reference.
+	 * The feature id for the '<em><b>Placement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -212,7 +212,7 @@ public interface PipesPackage extends EPackage {
 	int OPENING__PLACEMENT = GUID_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Walls</b></em>' reference list.
+	 * The feature id for the '<em><b>Walls</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -267,7 +267,7 @@ public interface PipesPackage extends EPackage {
 	int WALL_RELATION__DESCRIPTION = GUID_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Wall</b></em>' reference.
+	 * The feature id for the '<em><b>Wall</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -276,7 +276,7 @@ public interface PipesPackage extends EPackage {
 	int WALL_RELATION__WALL = GUID_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Opening</b></em>' reference.
+	 * The feature id for the '<em><b>Opening</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -331,7 +331,7 @@ public interface PipesPackage extends EPackage {
 	int FLOW_SEGMENT__DESCRIPTION = GUID_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Placement</b></em>' reference.
+	 * The feature id for the '<em><b>Placement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -386,7 +386,7 @@ public interface PipesPackage extends EPackage {
 	int LOCAL_PLACEMENT__DESCRIPTION = GUID_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Axis2placement3d</b></em>' reference.
+	 * The feature id for the '<em><b>Axis2placement3d</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -395,7 +395,7 @@ public interface PipesPackage extends EPackage {
 	int LOCAL_PLACEMENT__AXIS2PLACEMENT3D = GUID_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Relative To</b></em>' reference.
+	 * The feature id for the '<em><b>Relative To</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -477,7 +477,7 @@ public interface PipesPackage extends EPackage {
 	int AXIS2_PLACEMENT3_D__CARTESIAN_Z = GUID_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Axis</b></em>' reference.
+	 * The feature id for the '<em><b>Axis</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -486,7 +486,7 @@ public interface PipesPackage extends EPackage {
 	int AXIS2_PLACEMENT3_D__AXIS = GUID_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Ref Direction</b></em>' reference.
+	 * The feature id for the '<em><b>Ref Direction</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -616,7 +616,7 @@ public interface PipesPackage extends EPackage {
 	int PRODUCT__DESCRIPTION = GUID_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Placement</b></em>' reference.
+	 * The feature id for the '<em><b>Placement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -645,10 +645,10 @@ public interface PipesPackage extends EPackage {
 	EClass getWall();
 
 	/**
-	 * Returns the meta object for the reference list '{@link pipes.Wall#getOpenings <em>Openings</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pipes.Wall#getOpenings <em>Openings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Openings</em>'.
+	 * @return the meta object for the containment reference list '<em>Openings</em>'.
 	 * @see pipes.Wall#getOpenings()
 	 * @see #getWall()
 	 * @generated
@@ -666,10 +666,10 @@ public interface PipesPackage extends EPackage {
 	EClass getOpening();
 
 	/**
-	 * Returns the meta object for the reference list '{@link pipes.Opening#getWalls <em>Walls</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pipes.Opening#getWalls <em>Walls</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Walls</em>'.
+	 * @return the meta object for the containment reference list '<em>Walls</em>'.
 	 * @see pipes.Opening#getWalls()
 	 * @see #getOpening()
 	 * @generated
@@ -687,10 +687,10 @@ public interface PipesPackage extends EPackage {
 	EClass getWallRelation();
 
 	/**
-	 * Returns the meta object for the reference '{@link pipes.WallRelation#getWall <em>Wall</em>}'.
+	 * Returns the meta object for the containment reference '{@link pipes.WallRelation#getWall <em>Wall</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Wall</em>'.
+	 * @return the meta object for the containment reference '<em>Wall</em>'.
 	 * @see pipes.WallRelation#getWall()
 	 * @see #getWallRelation()
 	 * @generated
@@ -698,10 +698,10 @@ public interface PipesPackage extends EPackage {
 	EReference getWallRelation_Wall();
 
 	/**
-	 * Returns the meta object for the reference '{@link pipes.WallRelation#getOpening <em>Opening</em>}'.
+	 * Returns the meta object for the containment reference '{@link pipes.WallRelation#getOpening <em>Opening</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Opening</em>'.
+	 * @return the meta object for the containment reference '<em>Opening</em>'.
 	 * @see pipes.WallRelation#getOpening()
 	 * @see #getWallRelation()
 	 * @generated
@@ -729,10 +729,10 @@ public interface PipesPackage extends EPackage {
 	EClass getLocalPlacement();
 
 	/**
-	 * Returns the meta object for the reference '{@link pipes.LocalPlacement#getAxis2placement3d <em>Axis2placement3d</em>}'.
+	 * Returns the meta object for the containment reference '{@link pipes.LocalPlacement#getAxis2placement3d <em>Axis2placement3d</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Axis2placement3d</em>'.
+	 * @return the meta object for the containment reference '<em>Axis2placement3d</em>'.
 	 * @see pipes.LocalPlacement#getAxis2placement3d()
 	 * @see #getLocalPlacement()
 	 * @generated
@@ -740,10 +740,10 @@ public interface PipesPackage extends EPackage {
 	EReference getLocalPlacement_Axis2placement3d();
 
 	/**
-	 * Returns the meta object for the reference '{@link pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}'.
+	 * Returns the meta object for the containment reference '{@link pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Relative To</em>'.
+	 * @return the meta object for the containment reference '<em>Relative To</em>'.
 	 * @see pipes.LocalPlacement#getRelativeTo()
 	 * @see #getLocalPlacement()
 	 * @generated
@@ -794,10 +794,10 @@ public interface PipesPackage extends EPackage {
 	EAttribute getAxis2Placement3D_CartesianZ();
 
 	/**
-	 * Returns the meta object for the reference '{@link pipes.Axis2Placement3D#getAxis <em>Axis</em>}'.
+	 * Returns the meta object for the containment reference '{@link pipes.Axis2Placement3D#getAxis <em>Axis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Axis</em>'.
+	 * @return the meta object for the containment reference '<em>Axis</em>'.
 	 * @see pipes.Axis2Placement3D#getAxis()
 	 * @see #getAxis2Placement3D()
 	 * @generated
@@ -805,10 +805,10 @@ public interface PipesPackage extends EPackage {
 	EReference getAxis2Placement3D_Axis();
 
 	/**
-	 * Returns the meta object for the reference '{@link pipes.Axis2Placement3D#getRefDirection <em>Ref Direction</em>}'.
+	 * Returns the meta object for the containment reference '{@link pipes.Axis2Placement3D#getRefDirection <em>Ref Direction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ref Direction</em>'.
+	 * @return the meta object for the containment reference '<em>Ref Direction</em>'.
 	 * @see pipes.Axis2Placement3D#getRefDirection()
 	 * @see #getAxis2Placement3D()
 	 * @generated
@@ -933,10 +933,10 @@ public interface PipesPackage extends EPackage {
 	EClass getProduct();
 
 	/**
-	 * Returns the meta object for the reference '{@link pipes.Product#getPlacement <em>Placement</em>}'.
+	 * Returns the meta object for the containment reference '{@link pipes.Product#getPlacement <em>Placement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Placement</em>'.
+	 * @return the meta object for the containment reference '<em>Placement</em>'.
 	 * @see pipes.Product#getPlacement()
 	 * @see #getProduct()
 	 * @generated
@@ -976,7 +976,7 @@ public interface PipesPackage extends EPackage {
 		EClass WALL = eINSTANCE.getWall();
 
 		/**
-		 * The meta object literal for the '<em><b>Openings</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Openings</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -994,7 +994,7 @@ public interface PipesPackage extends EPackage {
 		EClass OPENING = eINSTANCE.getOpening();
 
 		/**
-		 * The meta object literal for the '<em><b>Walls</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Walls</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1012,7 +1012,7 @@ public interface PipesPackage extends EPackage {
 		EClass WALL_RELATION = eINSTANCE.getWallRelation();
 
 		/**
-		 * The meta object literal for the '<em><b>Wall</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Wall</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1020,7 +1020,7 @@ public interface PipesPackage extends EPackage {
 		EReference WALL_RELATION__WALL = eINSTANCE.getWallRelation_Wall();
 
 		/**
-		 * The meta object literal for the '<em><b>Opening</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Opening</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1048,7 +1048,7 @@ public interface PipesPackage extends EPackage {
 		EClass LOCAL_PLACEMENT = eINSTANCE.getLocalPlacement();
 
 		/**
-		 * The meta object literal for the '<em><b>Axis2placement3d</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Axis2placement3d</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1056,7 +1056,7 @@ public interface PipesPackage extends EPackage {
 		EReference LOCAL_PLACEMENT__AXIS2PLACEMENT3D = eINSTANCE.getLocalPlacement_Axis2placement3d();
 
 		/**
-		 * The meta object literal for the '<em><b>Relative To</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Relative To</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1098,7 +1098,7 @@ public interface PipesPackage extends EPackage {
 		EAttribute AXIS2_PLACEMENT3_D__CARTESIAN_Z = eINSTANCE.getAxis2Placement3D_CartesianZ();
 
 		/**
-		 * The meta object literal for the '<em><b>Axis</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Axis</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1106,7 +1106,7 @@ public interface PipesPackage extends EPackage {
 		EReference AXIS2_PLACEMENT3_D__AXIS = eINSTANCE.getAxis2Placement3D_Axis();
 
 		/**
-		 * The meta object literal for the '<em><b>Ref Direction</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Ref Direction</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1210,7 +1210,7 @@ public interface PipesPackage extends EPackage {
 		EClass PRODUCT = eINSTANCE.getProduct();
 
 		/**
-		 * The meta object literal for the '<em><b>Placement</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Placement</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

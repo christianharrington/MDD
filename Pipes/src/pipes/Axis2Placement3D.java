@@ -103,52 +103,52 @@ public interface Axis2Placement3D extends GUIDElement {
 	void setCartesianZ(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Axis</b></em>' reference.
+	 * Returns the value of the '<em><b>Axis</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Axis</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Axis</em>' reference.
+	 * @return the value of the '<em>Axis</em>' containment reference.
 	 * @see #setAxis(Direction)
 	 * @see pipes.PipesPackage#getAxis2Placement3D_Axis()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Direction getAxis();
 
 	/**
-	 * Sets the value of the '{@link pipes.Axis2Placement3D#getAxis <em>Axis</em>}' reference.
+	 * Sets the value of the '{@link pipes.Axis2Placement3D#getAxis <em>Axis</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Axis</em>' reference.
+	 * @param value the new value of the '<em>Axis</em>' containment reference.
 	 * @see #getAxis()
 	 * @generated
 	 */
 	void setAxis(Direction value);
 
 	/**
-	 * Returns the value of the '<em><b>Ref Direction</b></em>' reference.
+	 * Returns the value of the '<em><b>Ref Direction</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ref Direction</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ref Direction</em>' reference.
+	 * @return the value of the '<em>Ref Direction</em>' containment reference.
 	 * @see #setRefDirection(Direction)
 	 * @see pipes.PipesPackage#getAxis2Placement3D_RefDirection()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Direction getRefDirection();
 
 	/**
-	 * Sets the value of the '{@link pipes.Axis2Placement3D#getRefDirection <em>Ref Direction</em>}' reference.
+	 * Sets the value of the '{@link pipes.Axis2Placement3D#getRefDirection <em>Ref Direction</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ref Direction</em>' reference.
+	 * @param value the new value of the '<em>Ref Direction</em>' containment reference.
 	 * @see #getRefDirection()
 	 * @generated
 	 */

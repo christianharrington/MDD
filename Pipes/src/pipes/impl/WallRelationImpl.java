@@ -4,6 +4,7 @@ package pipes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -30,7 +31,7 @@ import pipes.WallRelation;
  */
 public class WallRelationImpl extends GUIDElementImpl implements WallRelation {
 	/**
-	 * The cached value of the '{@link #getWall() <em>Wall</em>}' reference.
+	 * The cached value of the '{@link #getWall() <em>Wall</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getWall()
@@ -40,7 +41,7 @@ public class WallRelationImpl extends GUIDElementImpl implements WallRelation {
 	protected Wall wall;
 
 	/**
-	 * The cached value of the '{@link #getOpening() <em>Opening</em>}' reference.
+	 * The cached value of the '{@link #getOpening() <em>Opening</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOpening()
@@ -74,14 +75,6 @@ public class WallRelationImpl extends GUIDElementImpl implements WallRelation {
 	 * @generated
 	 */
 	public Wall getWall() {
-		if (wall != null && wall.eIsProxy()) {
-			InternalEObject oldWall = (InternalEObject)wall;
-			wall = (Wall)eResolveProxy(oldWall);
-			if (wall != oldWall) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PipesPackage.WALL_RELATION__WALL, oldWall, wall));
-			}
-		}
 		return wall;
 	}
 
@@ -90,8 +83,14 @@ public class WallRelationImpl extends GUIDElementImpl implements WallRelation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Wall basicGetWall() {
-		return wall;
+	public NotificationChain basicSetWall(Wall newWall, NotificationChain msgs) {
+		Wall oldWall = wall;
+		wall = newWall;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PipesPackage.WALL_RELATION__WALL, oldWall, newWall);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -100,10 +99,17 @@ public class WallRelationImpl extends GUIDElementImpl implements WallRelation {
 	 * @generated
 	 */
 	public void setWall(Wall newWall) {
-		Wall oldWall = wall;
-		wall = newWall;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.WALL_RELATION__WALL, oldWall, wall));
+		if (newWall != wall) {
+			NotificationChain msgs = null;
+			if (wall != null)
+				msgs = ((InternalEObject)wall).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PipesPackage.WALL_RELATION__WALL, null, msgs);
+			if (newWall != null)
+				msgs = ((InternalEObject)newWall).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PipesPackage.WALL_RELATION__WALL, null, msgs);
+			msgs = basicSetWall(newWall, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.WALL_RELATION__WALL, newWall, newWall));
 	}
 
 	/**
@@ -112,14 +118,6 @@ public class WallRelationImpl extends GUIDElementImpl implements WallRelation {
 	 * @generated
 	 */
 	public Opening getOpening() {
-		if (opening != null && opening.eIsProxy()) {
-			InternalEObject oldOpening = (InternalEObject)opening;
-			opening = (Opening)eResolveProxy(oldOpening);
-			if (opening != oldOpening) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PipesPackage.WALL_RELATION__OPENING, oldOpening, opening));
-			}
-		}
 		return opening;
 	}
 
@@ -128,8 +126,14 @@ public class WallRelationImpl extends GUIDElementImpl implements WallRelation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Opening basicGetOpening() {
-		return opening;
+	public NotificationChain basicSetOpening(Opening newOpening, NotificationChain msgs) {
+		Opening oldOpening = opening;
+		opening = newOpening;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PipesPackage.WALL_RELATION__OPENING, oldOpening, newOpening);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -138,10 +142,33 @@ public class WallRelationImpl extends GUIDElementImpl implements WallRelation {
 	 * @generated
 	 */
 	public void setOpening(Opening newOpening) {
-		Opening oldOpening = opening;
-		opening = newOpening;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.WALL_RELATION__OPENING, oldOpening, opening));
+		if (newOpening != opening) {
+			NotificationChain msgs = null;
+			if (opening != null)
+				msgs = ((InternalEObject)opening).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PipesPackage.WALL_RELATION__OPENING, null, msgs);
+			if (newOpening != null)
+				msgs = ((InternalEObject)newOpening).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PipesPackage.WALL_RELATION__OPENING, null, msgs);
+			msgs = basicSetOpening(newOpening, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.WALL_RELATION__OPENING, newOpening, newOpening));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PipesPackage.WALL_RELATION__WALL:
+				return basicSetWall(null, msgs);
+			case PipesPackage.WALL_RELATION__OPENING:
+				return basicSetOpening(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -153,11 +180,9 @@ public class WallRelationImpl extends GUIDElementImpl implements WallRelation {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case PipesPackage.WALL_RELATION__WALL:
-				if (resolve) return getWall();
-				return basicGetWall();
+				return getWall();
 			case PipesPackage.WALL_RELATION__OPENING:
-				if (resolve) return getOpening();
-				return basicGetOpening();
+				return getOpening();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

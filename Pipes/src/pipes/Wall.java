@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Wall extends GUIDElement, Product {
 	/**
-	 * Returns the value of the '<em><b>Openings</b></em>' reference list.
+	 * Returns the value of the '<em><b>Openings</b></em>' containment reference list.
 	 * The list contents are of type {@link pipes.WallRelation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -30,9 +30,9 @@ public interface Wall extends GUIDElement, Product {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Openings</em>' reference list.
+	 * @return the value of the '<em>Openings</em>' containment reference list.
 	 * @see pipes.PipesPackage#getWall_Openings()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<WallRelation> getOpenings();
