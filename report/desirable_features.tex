@@ -1,7 +1,9 @@
 %!TEX root = ./report.tex
 \section{Desirable Features}
-In this section we discuss some of the main features of our solution
-\subsection(Working with a Partial model)
+In the following we will discuss a set of desirable features for a solution, that can edit a partial IFC model.
+As stated earlier, a key challenge in working with IFC, is the ability to work on a partial model, and eventhough a variety many advanced implementations exist, most of them have mainly been focused on graphical editing for architectural domains, leaving out a world of domains that are being involved with the IFC. Also, across the existing implementation, it is not at all consistent how models are treated.[Model interoperability in Building Information Modelling]. The features we list here focus on how we in general can go from the complex IFC to a simple editing environment.
+
+\subsection{Working with a Partial model}
 With the before mentioned complexities and challenges of IFC in mind, a primary focus is to be able to extract a well specified
 subset of the IFC.  We want an architecture that separates this concern from the rest of the workflow into one component, that extracts the
 partial model that we are interested in. Reversely the concern of re-inserting this partial model we can also
@@ -9,18 +11,23 @@ see as a workflow component in isolation. It is not at all trivial to define how
 don't want to take account for at other stages of the workflow. An evolved standard for this kind of operation is by
 Model View Definition(MVD)\cite(MVD text).\cite(Muhammed fra Tyskland project)  describes, what seems to be, a promising MVD
 implementation for IFC, that allows for fine-grained XML definitions of a partial IFC model. It is yet to be obtained and tested on our part.
-(How else do we say we know about this, but that we did'nt use it? Also notes say something about using BimServer for getting the partial model, how?) However, we want a well defined subset the model, that, as a minimum, defines what is of interest in the target model, and what is it needed to make it possible to synchronize back to the source at a later stage.
+(How else do we say we know about this, but that we did'nt use it? Also notes say something about using BimServer for getting the partial model, how?) However, defining a partial model for the MVD seems, to our experience, in itself not as a trivial or easy task, so making this step simpler would be ideal. Also, as the IFC standard is continuously updated, it would be desirable to be able to replace the IFC meta model when it is updated.
+    In the solution we want a well defined subset of the model, that, as a minimum, defines what is of interest in the target model, and what is it needed
+to make it possible to synchronize back to the source at a later stage.
 
-\subsection(Valid Model to Model Transformation (M2M))
-We want assurance that our model transformations are valid. By valid, we refer to not corrupting any model during a transformation, and that operations
-performed in the editor are synchronized back to the source model as we desire. This is not trivial, and for the scope of this project, we want to identify a limited subset and be able to trace some key cases of valid transformation. This implies that the subset we work on may not be applicable in a real-world work context, but simply serve as a proof of concept for the M2M. To enforce the implemented M2M and make it extensible for the future, we want to make use of standard and wide-spread tools (see ref-to-sub-section-on-standard=tools).
+\subsection{Valid Model to Model Transformation (M2M)}
+An ideal solution would produce model transformations that are verifiable and correct. By verifiable, we refer to being able to trace that transformations actually occur in the way that we require. By correct, we primarily refer to not corrupting any model structure during a transformation, but also to not breaking any constraints in the domains. However, with the complexity of IFC in mind, we will relax the requirement on not breaking any constraints. As such, the ideal solution would show that a making a valid M2M is feasible, but we accept that some IFC constraints might have to be accounted for in a real-world implementation.
 
-\subsection(A Simple DSL)
-We want to target a simple DSL that can easily be exchanged with a new one. We are not aiming at a rich and flexible DSL, but rather a simple
-language that represents the target domain. In our case, we want to show that the an incomprehensible IFC instance can be modified in a domain where we work on simple notions like the position of a pipe and a hole in a wall. With the use of EMF and Xtext we can generate an integrated text-editor for the DSL.
+\subsection{A Simple DSL}
+Key to the solution, is that is shows a part of the complex source domain can be represented and edited in a simple way. Targeting a simple DSL model would show this, and it will demonstrate that the target model can easily be exchanged with a new one. The latter is important, as we can imagine that future target domains, may be any arbitrary sub-domain of IFC or graphical editors. Again, we are not aiming at a rich and flexible DSL, but rather a simple language that we can easily modify. For our solution, we would like to show a target domain where we work on simple notions like the position of a pipe and a hole in a wall. To support this in being extensible and reusable, it should be build with wide-spread tools like EMF and Xtext.
 
-\subsection(Tools)
-We want to use standard and wide-spread model driven development tools for the implementation. The main reason is the drastic cut-down in development time by using the automatic code generation done by EMF and Xtext, and to demonstrate that the complex problems of M2M in IFC based projects, can be handled with a wide-spread and open platform like EMF. Collaborative and distributed work is key in many BIM projects, so to meet this requirement, we want to be able to integrate with BIMServer that supports this kind of work.
+\subsection{Structural Editing}
+The DSL should allow for structural editing.
+
+\subsection{Correct Meta Model}
+It is vital for the solution that we work on a correct meta model and model instances of the IFC. The meta model can be obtained from several sources,
+and is of course required that we are able to port an instance of this to ecore. Accordingly we want to be able to serialize and deserialize IFC model instances from IFC files, that, for the most part, exist in the EXPRESS format or IFCXML. The ideal solution would reuse an existing solution for this, where http://www.ifcwiki.org/index.php/Open_Source lists a good handful.
+
 
 In this section we present a list of desirable features when working with projectional editing on IFC.
 \paragraph{}
