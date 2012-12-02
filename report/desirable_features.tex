@@ -1,10 +1,10 @@
 %!TEX root = ./report.tex
 \section{Desirable Features}
 In the following we will discuss a set of desirable features for a solution, that can edit a partial IFC model.
-As stated earlier, a key challenge in working with IFC, is the ability to work on a partial model, and eventhough a variety many advanced implementations exist, most of them have mainly been focused on graphical editing for architectural domains, leaving out a world of domains that are being involved with the IFC. Also, across the existing implementation, it is not at all consistent how models are treated.[Model interoperability in Building Information Modelling]. The features we list here focus on how we in general can go from the complex IFC to a simple editing environment.
+As stated earlier, a key challenge in working with IFC, is the ability to work on a partial model, and even though many advanced implementations exist, most of them have mainly been focused on graphical editing for architectural domains, leaving out a world of domains that are being involved with the IFC. Also, across the existing implementation, it is not at all consistent how models are treated.[Model interoperability in Building Information Modelling]. The features we list here focus on how we in general can go from the complex IFC to a simple editing environment.
 
 \subsection{Working with a Partial model}
-With the before mentioned complexities and challenges of IFC in mind, a primary focus is to be able to extract a well specified
+With the aforementioned complexities and challenges of IFC in mind, a primary focus is to be able to extract a well-specified
 subset of the IFC.  We want an architecture that separates this concern from the rest of the workflow into one component, that extracts the
 partial model that we are interested in. Reversely the concern of re-inserting this partial model we can also
 see as a workflow component in isolation. It is not at all trivial to define how such a partial model is extracted, thus, it is a concern we
@@ -26,7 +26,7 @@ The DSL should allow for structural editing.
 
 \subsection{Correct Meta Model}
 It is vital for the solution that we work on a correct meta model and model instances of the IFC. The meta model can be obtained from several sources,
-and is of course required that we are able to port an instance of this to ecore. Accordingly we want to be able to serialize and deserialize IFC model instances from IFC files, that, for the most part, exist in the EXPRESS format or IFCXML. The ideal solution would reuse an existing solution for this, where http://www.ifcwiki.org/index.php/Open_Source lists a good handful.
+and is of course required that we are able to port an instance of this to ecore. Accordingly we want to be able to serialize and deserialize IFC model instances from IFC files, that, for the most part, exist in the EXPRESS format or IFCXML. The ideal solution would reuse an existing solution for this, where http://www.ifcwiki.org/index.php/Open\_Source lists a good handful.
 
 
 In this section we present a list of desirable features when working with projectional editing on IFC.
