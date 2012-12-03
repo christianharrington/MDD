@@ -3,7 +3,7 @@ module Pipes2IFC.Pies2IFC
 import general.Model2XMLWriter
 import general.IFC2ModelReader
 
-var ifcWritePath = 'bin/output.ifc'
+var ifcWritePath = 'bin/output.ifcxml'
 
 var IFCFilePath = 'NanoLabBuilding/Merging_test_small.ifcxml'
 var xmiReadPath = 'bin/instance.xmi'
