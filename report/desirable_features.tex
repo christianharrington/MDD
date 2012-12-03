@@ -1,7 +1,7 @@
 %!TEX root = ./report.tex
 \section{Desirable Features}
 In the following we will discuss a set of desirable features for a solution, that can edit a partial IFC model.
-As stated earlier, a key challenge in working with IFC, is the ability to work on a partial model, and even though many advanced implementations exist, most of them have mainly been focused on graphical editing for architectural domains, leaving out a world of domains that are being involved with the IFC. Also, across the existing implementation, it is not at all consistent how models are treated.[Model interoperability in Building Information Modelling]. The features we list here focus on how we in general can go from the complex IFC to a simple editing environment.
+As stated earlier, a key challenge in working with IFC, is the ability to work on a partial model, and even though many advanced implementations exist, most of them have mainly been focused on graphical editing for architectural domains, leaving out a world of domains that are being involved with the IFC. Also, across the existing implementation, it is not at all consistent how models are treated\cite{quteprints37725}. The features we list here focus on what we see as  IFC to a simple editing environment.
 
 \subsection{Working with a Partial model}
 With the aforementioned complexities and challenges of IFC in mind, a primary focus is to be able to extract a well-specified
@@ -9,7 +9,7 @@ subset of the IFC.  We want an architecture that separates this concern from the
 partial model that we are interested in. Reversely the concern of re-inserting this partial model we can also
 see as a workflow component in isolation. It is not at all trivial to define how such a partial model is extracted, thus, it is a concern we
 don't want to take account for at other stages of the workflow. An evolved standard for this kind of operation is by
-Model View Definition(MVD)\cite(MVD text).\cite(Muhammed fra Tyskland project)  describes, what seems to be, a promising MVD
+Model View Definition(MVD) \cite{nour08} describes, what seems to be, a promising MVD
 implementation for IFC, that allows for fine-grained XML definitions of a partial IFC model. It is yet to be obtained and tested on our part.
 (How else do we say we know about this, but that we did'nt use it? Also notes say something about using BimServer for getting the partial model, how?) However, defining a partial model for the MVD seems, to our experience, in itself not as a trivial or easy task, so making this step simpler would be ideal. Also, as the IFC standard is continuously updated, it would be desirable to be able to replace the IFC meta model when it is updated.
     In the solution we want a well defined subset of the model, that, as a minimum, defines what is of interest in the target model, and what is it needed
@@ -26,15 +26,4 @@ A meaningful scope of what should be possible to do with the DSL, is the ability
 
 \subsection{Correct Meta Model}
 It is vital for the solution that we work on a correct meta model and model instances of the IFC. The meta model can be obtained from several sources,
-and is of course required that we are able to port an instance of this to ecore. Accordingly we want to be able to serialize and deserialize IFC model instances from IFC files, that, for the most part, exist in the EXPRESS format or IFCXML. The ideal solution would reuse an existing solution for this, where http://www.ifcwiki.org/index.php/Open\_Source lists a good handful.
-
-
-In this section we present a list of desirable features when working with projectional editing on IFC.
-\paragraph{}
-Design decisions we faced when making this setup. List a bunch of requirements that we can reference in the next section:
-\begin{enumerate}[itemsep=0pt,parsep=2pt,topsep=10pt]
-	\item {\it Full control over projection software.} Write about: Extracting subset on server og client? Why not trying to do this on the BIMServer? We could have extended the open source project
-	\item {\it Accurate ecore meta-model for IFC domain.} Using BIMServer library ecore metamodel or using XSD generated ecore metamodel
-	\item {\it Proper subset definition.} How is the subset defined? MVD could have been used, but we chose not to.
-	\item {\it Flexible model to model framework.} Which model2model tool to use? ATL, QVT, Xtend?
-\end{enumerate}
+and is of course required that we are able to port an instance of this to ecore. Accordingly we want to be able to serialize and deserialize IFC model instances from IFC files, that, for the most part, exist in the EXPRESS format or IFCXML. The ideal solution would reuse an existing solution for this, where\cite{ifcwiki} lists a good handful.
