@@ -20,6 +20,7 @@ bin/
 
 # Tex files
 
+*.fdb_latexmk
 *.aux
 *.log
 report.pdf

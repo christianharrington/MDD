@@ -22,7 +22,7 @@ An ideal solution would produce model transformations that are verifiable and co
 Key to the solution, is that is shows a part of the complex source domain can be represented and edited in a simple way. Targeting a simple DSL model would show this, and it will demonstrate that the target model can easily be exchanged with a new one. The latter is important, as we can imagine that future target domains, may be any arbitrary sub-domain of IFC or graphical editors. Again, we are not aiming at a rich and flexible DSL, but rather a simple language that we can easily modify. For our solution, we would like to show a target domain where we work on simple notions like the position of a pipe and a hole in a wall. To support this in being extensible and reusable, it should be build with wide-spread tools like EMF and Xtext.
 
 \subsection{Structural Editing}
-The DSL should allow for structural editing.
+A meaningful scope of what should be possible to do with the DSL, is the ability to edit existing values, say the position of a pipe, and more importantly, the ability to remove or add elements. The latter should be possible to resemble a real-world use case scenario, and we want to be able to do this without corrupting the IFC instance.
 
 \subsection{Correct Meta Model}
 It is vital for the solution that we work on a correct meta model and model instances of the IFC. The meta model can be obtained from several sources,
