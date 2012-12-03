@@ -3,7 +3,7 @@
 The solution combines several technologies to attain an extensible solution with two reusable Xtend client side workflows at its core. The setup allows the user to edit a subset of IFC in a generated Eclipse editor in between the two workflows. The main model is stored on a BIMServer for merging, versioning and extensibility purposes, as this section will further explain.
 
 \subsection{Server Side}
-The overall workflow of the end product is depicted in Figure \ref{fig:overall_product_workflow}. As described in Kaj Jørgensen's workflow document\cite{jorgensen12} a construction model and a plumbing model are combined into one single model that needs to be verified for consistency. So called openings, i.e. holes in walls and floors need to be in place where the plumbing model describes flow segments to be installed. The merging of these models is executed on the BIMServer by the user as the first step of the workflow. When completed the client side of the end product allows the user to edit and add elements to the subset of the model.
+The overall workflow of the end product is depicted in Figure \ref{fig:overall_product_workflow}. As described in Kaj Jørgensen's workflow document\cite{jorgensen12} a construction model and a plumbing model are combined into one single model that needs to be verified for consistency. So called openings, i.e. holes in walls and floors need to be in place where the plumbing model describes flow segments to be installed. The merging of these models is executed on the BIMServer by the user as the first step of the workflow. When merging has finished, the client side of the solution can retrive the merged building as XML. The user is now allowed to edit and add elements to the subset of the model on the client side before saving the building back to the BIMServer as XML.
 
 \begin{figure}[htbp]
     \centering
@@ -25,7 +25,7 @@ Figure \ref{fig:IFC2PipesWorkflow} shows the IFC to Pipes workflow retrieving an
 \end{figure}
 
 The extraction process where relevant IFC elements are collected from the main model for conversion is implemented by a simple filtering mechanism extracting the pipes and opening elements. The real work of the IFC to Pipes workflow is done when this extract is converted to the corresponding Pipes DSL instance by utilizing the model to model transformation capabilities of the Xtend language. Each of the possible object occurences has a transformation rule specified here, making the conversion possible.
-\paragraph{}
+\\
 The second client side Xtend workflow, Pipes to IFC, is depicted on Figure \ref{fig:Pipes2IFCWorkflow}, where the user-edited XMI file is loaded into a Main Model Updater workflow module together with the non-updated extracted instance of the main model. Notice how the extraction is loaded in using the same workflow modules as in the first workflow, except the XML file is not fetched from the server but from the local disk. This makes for an easier update process in the Main Model Updater as the extracted instance is guaranteed not to have changed while the user was editing the XMI file. After the main model instance has been updated to reflect the users changes it is converted to XML and this new file is saved back to the BIMServer.
 
 \begin{figure}[htbp]
@@ -38,7 +38,7 @@ The second client side Xtend workflow, Pipes to IFC, is depicted on Figure \ref{
 Clearly, most of the work in this workflow lies with the Main Model Updater, which uses a pattern match-like dispacth language feature of Xtend to elegantly update the java object graph of the extracted model. The routine runs through all elements in the Java object graph to update the corresponding Pipes DSL objects by looking at matching GUIDs. Only traversing an extract of the main model guarantees a better running time and still guarantees a correct update procedure, as the Pipes DSL does not allow any updates to elements outside of this extract anyway.
 \subsubsection{Adding and Removing}
 The setup not only supports updating the attributes of elements, it also allows the user to do structural changes on the model. The Main Model Updater looks for elements in the Pipes DSL object graph without a GUID to determine if a new element should be created in the IFC model. This feature allows the user to add missing openings for pipe segments and is therefore crucial for the usefulness of the end product. 
-\paragraph{}
+\\
 Likewise, if the updater fails to find an element in Pipes DSL object graph that corresponds to the existing one in the Java object graph it means the element has been deleted and that the Main Model Updater should take appropriate action to update references.
 
 \subsection{Pipes DSL}

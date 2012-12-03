@@ -12,11 +12,12 @@
 \setcounter{page}{1}
 \section{Introduction}
 Building Information Modelling (BIM) is the process of modelling various physical and functional aspects of a building. Currently, many BIM software products exist. These let a user model and analyze the many interactions between different parts of a building. Many of these software products use common file formats for modeling buildings, such as Industry Foundation Classes (IFC) or Green Building XML (gbXML). These formats were invented as industry standards to help improve interoperability between different software packages in different domains, and as such cover many different systems.
-\paragraph{}
+\\
 Reading and writing huge, complex XML documents, like the ones produced by BIM products, by hand is unfeasible. It’s desirable to be able to work with aspects of a model (such as heating, electrical wiring or plumbing) independently.(TODO insert reference) In this paper we present a setup, demonstrating that such projectional editing is feasible using modern modelling tools.
-\paragraph{}
+\\
 Specifically, this paper focusses on solving a common problem of combining a construction model with a plumbing model in a managable way. The solution entails a central server storing a merged version of these models and a client side enabling a user to edit and verify the correctness of the merging in a domain specific language (DSL), called Pipes DSL, in a Xtext-generated Eclipse editor, making sure that the construction is prepared to handle the plumbing installations. The solution is extensible in several ways making it a good starting point for future automatization and visualization.
-\paragraph{}
+\\
 This paper first gives a background of the problem space before laying out a list of desirable features for the end product. The solution is described and then evaluated with test buildings and reference to the desirable features. Finally, we present a list of future work to be carried out as well as a conclusion.
-
+\subsection{Acknowledgements}
+People that did proof reading. Andrzej out supervisor. Kaj Jørgensen for providing example buildings as well guidance in selecting a fitting IFC domain for our project. Mathias Demant for example buildings for test data.
 
