@@ -2,6 +2,11 @@
 \section{Solution}
 The solution combines several technologies to attain an extensible solution with two reusable Xtend client side workflows at its core. The setup allows the user to edit a subset of IFC in a generated Eclipse editor in between the two workflows. The main model is stored on a BIMServer for merging, versioning and extensibility purposes, as this section will further explain.
 
+\subsubsection{Model}
+We considered a few different IFC meta models. We decided not to create a meta model from scratch, as this would demand a substantial time investment outside the scope of this project. The first meta model we examined is the one used by the BIMServer project. Serializers for both the EXPRESS and XML versions of IFC exists for this meta model, although they are very tightly coupled with the rest of the BIMServer project, making them hard to use without including large parts of the BIMServer source in our solution. Further, this meta model has some undesirable features, such as references being modeled as strings, instead of pointing directly to the elements in question.
+\paragraph{}
+Instead, we chose to auto generate the model based on the XML Schema Definition (XSD) for ifcXML. This generated model also includes serializers for ifcXML, but not for IFC-EXPRESS. As the files are served through BIMServer, this is not a problem, since BIMServer can accept many different formats, and output ifcXML from them. This solution has the benefit that when the ifcXML schema is updated, it is trivial to produce a new meta model. A drawback is that the generated meta model has many more elements than the one from BIMServer, has it contains wrapper elements for most object types. Several other problems were also encountered because of the large size of IFC. This are described in Section \ref{Evaluation_EMF}. 
+
 \subsection{Server Side}
 The overall workflow of the end product is depicted in Figure \ref{fig:overall_product_workflow}. As described in Kaj Jørgensen's workflow document\cite{jorgensen12} a construction model and a plumbing model are combined into one single model that needs to be verified for consistency. So called openings, i.e. holes in walls and floors need to be in place where the plumbing model describes flow segments to be installed. The merging of these models is executed on the BIMServer by the user as the first step of the workflow.\cite{bimserver} When merging has finished, the client side of the solution can retrieve the merged building as XML. The user is now allowed to edit and add elements to the subset of the model on the client side before saving the building back to the BIMServer as XML.
 
@@ -41,7 +46,8 @@ Clearly, most of the work in this workflow lies with the Main Model Updater, whi
 \subsubsection{Adding and Removing}
 The setup not only supports updating the attributes of elements, it also allows the user to do structural changes on the model. The Main Model Updater looks for elements in the Pipes DSL object graph without a GUID to determine if a new element should be created in the IFC model. This feature allows the user to add missing openings for pipe segments and is therefore crucial for the usefulness of the end product. 
 
-Likewise, if the updater fails to find an element in Pipes DSL object graph that corresponds to the existing one in the Java object graph it means the element has been deleted and that the Main Model Updater should take appropriate action to update references.
+Likewise, if the updater fails to find an element in Pipes DSL object graph that corresponds to the existing one in the Java object graph it means the element has been deleted and that the Main Model Updater should take appropriate action to update references
+
 
 \subsection{Pipes DSL}
 An example or two about the DSL and why it simplifies the work with the Pipes/Openings domain.

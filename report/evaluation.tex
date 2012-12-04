@@ -13,8 +13,9 @@ What were the challenges?
 Threats to validity
 Harrington point: We know that we only make changes to elements in our own domain in the IFC model and can show the correctness of the operations performed on these. But we have no way of showing that the open and save operations on the XML file work as intended. We say that our solution works correctly under the assumption that these methods work.
 
-\subsection{Our experience with EMF}
-During this project, we encountered several problems with EMF, which we believe are due to the large size of the IFC meta model. Our meta metal for IFC was generated from the XML Schema Definition (XSD) for the IFC XML specification. During this generation, several bugs were encountered, such as some methods not being generated (FIXME: reference), and methods exceeding the maximal size allowed by the Java Virtual Machine (FIXME: reference). While we were able to work around these bugs after some effort, they indicated that EMF had trouble handling meta models of this size (more than 2000 elements).
+\subsection{EMF}
+\label{Evaluation_EMF}
+During this project, we encountered several problems with EMF, which we believe are due to the large size of the IFC meta model. Our meta metal for IFC was generated from the XSD for the ifcXML. During this generation, several bugs were encountered, such as some methods not being generated (FIXME: reference), and methods exceeding the maximal size allowed by the Java Virtual Machine (FIXME: reference). While we were able to work around these bugs after some effort, they indicated that EMF had trouble handling meta models of this size (more than 2000 elements).
 \paragraph{}
 When working with an instance of a realistic model, we experienced load and save times in excess of 10 minutes using the default XML resource deserializer. Several optimization methods were tried\cite{emfperformancetips, emfperformanceandextensibility}, to no effect. In the interest of time, we decided not to spend time writing a custom serializer/deserializer. Instead we decided to test with smaller subsets of the models we had available.
 \paragraph{}
