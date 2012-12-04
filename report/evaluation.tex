@@ -19,4 +19,4 @@ During this project, we encountered several problems with EMF, which we believe 
 \paragraph{}
 When working with an instance of a realistic model, we experienced load and save times in excess of 10 minutes using the default XML resource deserializer. Several optimization methods were tried\cite{emfperformancetips, emfperformanceandextensibility}, to no effect. In the interest of time, we decided not to spend time writing a custom serializer/deserializer. Instead we decided to test with smaller subsets of the models we had available.
 \paragraph{}
-It is our experience that EMF is not well suited to meta models of this size without a great deal of customization and workarounds. %FIXME: Better conclusion
+Given the nature of the problems we experienced, and the large size of the IFC meta model and models, it would be appropriate to look into other modeling frameworks, or alternatively, attempt to minimise the size of the models.
