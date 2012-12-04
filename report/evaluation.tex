@@ -1,21 +1,25 @@
 %!TEX root = ./report.tex
 \section{Evaluation}
-Discussion of applicability of product. What should be done in order to make this project usable in a real world scenario?
+In this section we evaluate the solution, with reference to the desirable feature list. Furthermore, we describe the methods used to verify the product.
 
-Point out: It is not relevant to have evaluations of the usability of the textual language as it is only experimental. One would obviously make a visual editor if the product should be usable.
+%Discussion of applicability of product. What should be done in order to make this project usable in a real world scenario?
 
-What were the challenges?
-- Saving the subset back to the server after editing. Synchronization problem
-- Using MPS: it is not a freetext editor. We would want to improve on this later. XText is not flexible enough for this purpose.
+%Point out: It is not relevant to have evaluations of the usability of the textual language as it is only experimental. One would obviously make a visual editor if the product should be usable.
 
+%What were the challenges?
+%- Saving the subset back to the server after editing. Synchronization problem
+%- Using MPS: it is not a freetext editor. We would want to improve on this later. XText is not flexible enough for this purpose.
 
+\subsection{Threats to validity}
+%Harrington point: We know that we only make changes to elements in our own domain in the IFC model and can show the correctness of the operations performed on these. But we have no way of showing that the open and save operations on the XML file work as intended. We say that our solution works correctly under the assumption that these methods work.
 
-Threats to validity
-Harrington point: We know that we only make changes to elements in our own domain in the IFC model and can show the correctness of the operations performed on these. But we have no way of showing that the open and save operations on the XML file work as intended. We say that our solution works correctly under the assumption that these methods work.
+\subsection{Output verification}
+In this section we describe our verification methods and their results, with reference to threats to validity %FIXME
 
-\subsection{Our experience with EMF}
-During this project, we encountered several problems with EMF, which we believe are due to the large size of the IFC meta model. Our meta metal for IFC was generated from the XML Schema Definition (XSD) for the IFC XML specification. During this generation, several bugs were encountered, such as some methods not being generated (FIXME: reference), and methods exceeding the maximal size allowed by the Java Virtual Machine (FIXME: reference). While we were able to work around these bugs after some effort, they indicated that EMF had trouble handling meta models of this size (more than 2000 elements).
+\subsection{EMF}
+\label{Evaluation_EMF}
+During this project, we encountered several problems with EMF, which we believe are due to the large size of the IFC meta model. Our meta metal for IFC was generated from the XSD for the ifcXML. During this generation, several bugs were encountered, such as some methods not being generated (FIXME: reference), and methods exceeding the maximal size allowed by the Java Virtual Machine (FIXME: reference). While we were able to work around these bugs after some effort, they indicated that EMF had trouble handling meta models of this size (more than 2000 elements).
 \paragraph{}
 When working with an instance of a realistic model, we experienced load and save times in excess of 10 minutes using the default XML resource deserializer. Several optimization methods were tried\cite{emfperformancetips, emfperformanceandextensibility}, to no effect. In the interest of time, we decided not to spend time writing a custom serializer/deserializer. Instead we decided to test with smaller subsets of the models we had available.
 \paragraph{}
-It is our experience that EMF is not well suited to meta models of this size without a great deal of customization and workarounds. %FIXME: Better conclusion
+Given the nature of the problems we experienced, and the large size of the IFC meta model and models, it would be appropriate to look into other modeling frameworks, or alternatively, attempt to minimise the size of the models.
