@@ -1,6 +1,19 @@
 /**
  */
-package pipes.impl;
+package Pipes.impl;
+
+import Pipes.Axis2Placement3D;
+import Pipes.Direction;
+import Pipes.FlowSegment;
+import Pipes.GUIDElement;
+import Pipes.LocalPlacement;
+import Pipes.Model;
+import Pipes.Opening;
+import Pipes.PipesFactory;
+import Pipes.PipesPackage;
+import Pipes.Product;
+import Pipes.Wall;
+import Pipes.WallRelation;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -8,19 +21,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import pipes.Axis2Placement3D;
-import pipes.Direction;
-import pipes.FlowSegment;
-import pipes.GUIDElement;
-import pipes.LocalPlacement;
-import pipes.Model;
-import pipes.Opening;
-import pipes.PipesFactory;
-import pipes.PipesPackage;
-import pipes.Product;
-import pipes.Wall;
-import pipes.WallRelation;
 
 /**
  * <!-- begin-user-doc -->
@@ -110,7 +110,7 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see pipes.PipesPackage#eNS_URI
+	 * @see Pipes.PipesPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */

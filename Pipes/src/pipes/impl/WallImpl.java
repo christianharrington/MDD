@@ -1,12 +1,18 @@
 /**
  */
-package pipes.impl;
+package Pipes.impl;
+
+import Pipes.LocalPlacement;
+import Pipes.PipesPackage;
+import Pipes.Product;
+import Pipes.Wall;
+import Pipes.WallRelation;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -16,13 +22,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
-import pipes.LocalPlacement;
-import pipes.PipesPackage;
-import pipes.Product;
-import pipes.Wall;
-import pipes.WallRelation;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,8 +30,8 @@ import pipes.WallRelation;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link pipes.impl.WallImpl#getPlacement <em>Placement</em>}</li>
- *   <li>{@link pipes.impl.WallImpl#getOpenings <em>Openings</em>}</li>
+ *   <li>{@link Pipes.impl.WallImpl#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link Pipes.impl.WallImpl#getOpenings <em>Openings</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,34 +82,6 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<WallRelation> getOpenings() {
-		if (openings == null) {
-			openings = new EObjectContainmentEList<WallRelation>(WallRelation.class, this, PipesPackage.WALL__OPENINGS);
-		}
-		return openings;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case PipesPackage.WALL__PLACEMENT:
-				return basicSetPlacement(null, msgs);
-			case PipesPackage.WALL__OPENINGS:
-				return ((InternalEList<?>)getOpenings()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public LocalPlacement getPlacement() {
 		return placement;
 	}
@@ -147,6 +118,34 @@ public class WallImpl extends GUIDElementImpl implements Wall {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.WALL__PLACEMENT, newPlacement, newPlacement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<WallRelation> getOpenings() {
+		if (openings == null) {
+			openings = new EObjectContainmentEList<WallRelation>(WallRelation.class, this, PipesPackage.WALL__OPENINGS);
+		}
+		return openings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PipesPackage.WALL__PLACEMENT:
+				return basicSetPlacement(null, msgs);
+			case PipesPackage.WALL__OPENINGS:
+				return ((InternalEList<?>)getOpenings()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

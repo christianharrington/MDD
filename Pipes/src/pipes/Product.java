@@ -1,8 +1,7 @@
 /**
  */
-package pipes;
+package Pipes;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,34 +11,33 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link pipes.Product#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link Pipes.Product#getPlacement <em>Placement</em>}</li>
  * </ul>
  * </p>
  *
- * @see pipes.PipesPackage#getProduct()
+ * @see Pipes.PipesPackage#getProduct()
  * @model abstract="true"
  * @generated
  */
 public interface Product extends GUIDElement {
-
 	/**
 	 * Returns the value of the '<em><b>Placement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Placement</em>' reference isn't clear,
+	 * If the meaning of the '<em>Placement</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Placement</em>' containment reference.
 	 * @see #setPlacement(LocalPlacement)
-	 * @see pipes.PipesPackage#getProduct_Placement()
+	 * @see Pipes.PipesPackage#getProduct_Placement()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	LocalPlacement getPlacement();
 
 	/**
-	 * Sets the value of the '{@link pipes.Product#getPlacement <em>Placement</em>}' containment reference.
+	 * Sets the value of the '{@link Pipes.Product#getPlacement <em>Placement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Placement</em>' containment reference.
@@ -47,4 +45,5 @@ public interface Product extends GUIDElement {
 	 * @generated
 	 */
 	void setPlacement(LocalPlacement value);
+
 } // Product

@@ -1,6 +1,6 @@
 /**
  */
-package pipes;
+package Pipes;
 
 
 /**
@@ -9,10 +9,9 @@ package pipes;
  * <!-- end-user-doc -->
  *
  *
- * @see pipes.PipesPackage#getFlowSegment()
+ * @see Pipes.PipesPackage#getFlowSegment()
  * @model
  * @generated
  */
 public interface FlowSegment extends GUIDElement, Product {
-
 } // FlowSegment

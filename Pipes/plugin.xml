@@ -8,8 +8,8 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://pipes/1.0"
-            class="pipes.PipesPackage"
+            uri="platform:/resource/Pipes/model/Pipes.ecore"
+            class="Pipes.PipesPackage"
             genModel="model/Pipes.genmodel"/>
    </extension>
 

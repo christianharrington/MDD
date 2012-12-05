@@ -1,6 +1,8 @@
 /**
  */
-package pipes.impl;
+package Pipes.impl;
+
+import Pipes.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -9,8 +11,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import pipes.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ public class PipesFactoryImpl extends EFactoryImpl implements PipesFactory {
 	 */
 	public static PipesFactory init() {
 		try {
-			PipesFactory thePipesFactory = (PipesFactory)EPackage.Registry.INSTANCE.getEFactory("/Pipes/model/Pipes.ecore"); 
+			PipesFactory thePipesFactory = (PipesFactory)EPackage.Registry.INSTANCE.getEFactory("platform:/resource/Pipes/model/Pipes.ecore"); 
 			if (thePipesFactory != null) {
 				return thePipesFactory;
 			}

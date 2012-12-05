@@ -1,19 +1,19 @@
 /**
  */
-package pipes.impl;
+package Pipes.impl;
+
+import Pipes.FlowSegment;
+import Pipes.LocalPlacement;
+import Pipes.PipesPackage;
+import Pipes.Product;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import pipes.FlowSegment;
-import pipes.LocalPlacement;
-import pipes.PipesPackage;
-import pipes.Product;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import pipes.Product;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link pipes.impl.FlowSegmentImpl#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link Pipes.impl.FlowSegmentImpl#getPlacement <em>Placement</em>}</li>
  * </ul>
  * </p>
  *
