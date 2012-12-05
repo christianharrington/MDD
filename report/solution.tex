@@ -2,19 +2,22 @@
 \section{Solution}
 The solution combines several technologies to attain an extensible solution with two reusable Xtend client side workflows at its core. The setup allows the user to edit a subset of IFC in a generated Eclipse editor in between the two workflows. The main model is stored on a BIMServer for merging, versioning and extensibility purposes, as this section will further explain.
 
-\subsection{Model}
+\subsection{IFC Meta Model}
 We considered a few different IFC meta models. We decided not to create a meta model from scratch, as this would demand a substantial time investment outside the scope of this project. The first meta model we examined is the one used by the BIMServer project. Serializers for both the EXPRESS and XML versions of IFC exists for this meta model, although they are very tightly coupled with the rest of the BIMServer project, making them hard to use without including large parts of the BIMServer source in our solution. Further, this meta model has some undesirable features, such as references being modeled as strings, instead of pointing directly to the elements in question.
 \paragraph{}
 Instead, we chose to auto generate the model based on the XML Schema Definition (XSD) for ifcXML. This generated model also includes serializers for ifcXML, but not for IFC-EXPRESS. As the files are served through BIMServer, this is not a problem, since BIMServer can accept many different formats, and output ifcXML from them. This solution has the benefit that when the ifcXML schema is updated, it is trivial to produce a new meta model. A drawback is that the generated meta model has many more elements than the one from BIMServer, has it contains wrapper elements for most object types. Several other problems were also encountered because of the large size of IFC. This are described in Section \ref{Evaluation_EMF}. 
 
+\subsection{Pipes DSL}
+An example or two about the DSL and why it simplifies the work with the Pipes/Openings domain. %Simple subset of IFC, give comparisons of IFC vs. Pipes concrete syntax. What is supported by the DSL?
+
 \subsection{Server Side}
-The overall workflow of the end product is depicted in Figure \ref{fig:overall_product_workflow}. As described in Kaj Jørgensen's workflow document\cite{jorgensen12} a construction model and a plumbing model are combined into one single model that needs to be verified for consistency. So called openings, i.e. holes in walls and floors need to be in place where the plumbing model describes flow segments to be installed. The merging of these models is executed on the BIMServer by the user as the first step of the workflow.\cite{bimserver} When merging has finished, the client side of the solution can retrieve the merged building as XML. The user is now allowed to edit and add elements to the subset of the model on the client side before saving the building back to the BIMServer as XML.
+The overall workflow of the end product is depicted in Figure \ref{fig:overall_product_workflow}. As described in Kaj Jørgensen's workflow document\,\cite{jorgensen12} a construction model and a plumbing model are combined into one single model that needs to be verified for consistency. So called openings, i.e. holes in walls and floors need to be in place where the plumbing model describes flow segments to be installed. The merging of these models is executed on the BIMServer by the user as the first step of the workflow\footnote{BIMServer Documentation can be found at \url{http://bimserver.org/documentation/}}. When merging has finished, the client side of the solution can retrieve the merged building as XML. The user is now allowed to edit and add elements to the subset of the model on the client side before saving the building back to the BIMServer as XML.
 
 Note that the solution does not take concurrent editing by multiple clients into account although the BIMServer does support version control as well as merging. We will leave it for future work to ensure correct handling of current editing by clients.
 
-\begin{figure}[htbp]
+\begin{figure}[t]
     \centering
-        \includegraphics[width=120mm]{images/CompleteWorkflow.pdf}
+        \includegraphics[width=80mm]{images/CompleteWorkflow.pdf}
     \caption{Overall Product Workflow}
     \label{fig:overall_product_workflow}
 \end{figure}
@@ -24,18 +27,18 @@ We let a BIMServer handle the initial merging of plumbing and construction model
 \subsection{Client Side}
 Figure \ref{fig:IFC2PipesWorkflow} shows the IFC to Pipes workflow retrieving an IFC model from the BIMServer as XML, processing it to the corresponding Java object graph, extracting the pipes and opening elements and converting these to an editable DSL instance, which is in turn saved to disk as an XMI file. The XML file loaded from the server is saved to the local disk for use by the second workflow explained below.
 
-\begin{figure}[htbp]
+\begin{figure}[t]
     \centering
         \includegraphics[width=120mm]{images/IFC2Pipes.pdf}
     \caption{IFC to Pipes DSL workflow}
     \label{fig:IFC2PipesWorkflow}
 \end{figure}
 
-The extraction process where relevant IFC elements are collected from the main model for conversion is implemented by a simple filtering mechanism extracting the pipe and opening elements. The real work of the IFC to Pipes workflow is done when this extract is converted to the corresponding Pipes DSL instance in the second to last step of the workflow. By utilizing the convenient model to model transformation language features of the Xtend language, each object is transformed from the IFC model to the corresponding PipesDSL object. Every IFC object inside the solution domain specified in Section \ref{label:solution_domain_definition} has a transformation rule specified here, making the conversion possible.
+The extraction process where relevant IFC elements are collected from the main model for conversion is implemented by a simple filtering mechanism extracting the pipe and opening elements. The real work of the IFC to Pipes workflow is done when this extract is converted to the corresponding Pipes DSL instance in the second to last step of the workflow. By utilizing the convenient model to model transformation language features of the Xtend language, each object is transformed from the IFC model to the corresponding PipesDSL object. Every IFC object inside the solution domain specified in Section \ref{problem_analysis} has a transformation rule specified here, making the conversion possible.
 
 The second client side Xtend workflow, Pipes to IFC, is depicted on Figure \ref{fig:Pipes2IFCWorkflow}, where the user-edited XMI file is loaded into a Main Model Updater workflow module together with the non-updated extracted instance of the main model. Notice how the extraction is loaded in using the same workflow modules as in the first workflow, except the XML file is not fetched from the server but from the local disk. This makes for an easier update process in the Main Model Updater as the extracted instance is guaranteed not to have changed while the user was editing the XMI file. After the main model instance has been updated to reflect the users changes it is converted to XML and this new file is saved back to the BIMServer.
 
-\begin{figure}[htbp]
+\begin{figure}[t]
     \centering
         \includegraphics[width=120mm]{images/Pipes2IFC.pdf}
     \caption{Pipes DSL to IFC workflow}
@@ -47,20 +50,3 @@ Clearly, most of the work in this workflow lies with the Main Model Updater, whi
 The setup not only supports updating the attributes of elements, it also allows the user to do structural changes on the model. The Main Model Updater looks for elements in the Pipes DSL object graph without a GUID to determine if a new element should be created in the IFC model. This feature allows the user to add missing openings for pipe segments and is therefore crucial for the usefulness of the end product. 
 
 Likewise, if the updater fails to find an element in Pipes DSL object graph that corresponds to the existing one in the Java object graph it means the element has been deleted and that the Main Model Updater should take appropriate action to update references
-
-
-\subsection{Pipes DSL}
-An example or two about the DSL and why it simplifies the work with the Pipes/Openings domain.
-
-
-
-
-
-
-
-
-
-
-
-
-
