@@ -1,4 +1,4 @@
-module Pipes2IFC.Pies2IFC
+module Pipes2IFC.Pipes2IFC
 
 import general.Model2XMLWriter
 import general.IFC2ModelReader
