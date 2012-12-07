@@ -2,22 +2,22 @@ package Pipes2IFC
 
 import general.WorkflowComponentWithSlot
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
-import pipes.Model
-import pipes.Opening
-import pipes.LocalPlacement
+import Pipes.Model
+import Pipes.Opening
+import Pipes.LocalPlacement
 import java.util.ArrayList
-import pipes.FlowSegment
-import pipes.Wall
-import pipes.WallRelation
-import pipes.Axis2Placement3D
+import Pipes.FlowSegment
+import Pipes.Wall
+import Pipes.WallRelation
+import Pipes.Axis2Placement3D
 import java.util.HashSet
 import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.FinalFactoryImpl
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
-import pipes.GUIDElement
-import pipes.Direction
+import Pipes.GUIDElement
+import Pipes.Direction
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcDirection
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcWall
@@ -54,6 +54,37 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	Model pipesModel
 	HashMap<String, Entity> entityMap
 	
+	def private localPlacementIsChange(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
+		var ifcAxis2Placement3D = objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D
+		var lengthMeasure = objFromRef(objFromRef(ifcAxis2Placement3D, ctx).location.ifcCartesianPoint, ctx).coordinates.ifcLengthMeasure
+		var ifcX = lengthMeasure.get(0)
+		var ifcY = lengthMeasure.get(1)
+		var ifcZ = lengthMeasure.get(2)
+		var ifcRefDirection = objFromRef(ifcAxis2Placement3D, ctx).axis.ifcDirection
+		var ifcAxis = objFromRef(ifcAxis2Placement3D, ctx).refDirection.ifcDirection
+		var refRatios = objFromRef(ifcRefDirection, ctx).directionRatios.doubleWrapper
+		var axisRatios = objFromRef(ifcAxis, ctx).directionRatios.doubleWrapper
+		var refRatioX = refRatios.get(0)
+		var refRatioY = refRatios.get(1)
+		var refRatioZ = refRatios.get(2)
+		var axisRatioX = axisRatios.get(0)
+		var axisRatioY = axisRatios.get(1)
+		var axisRatioZ = axisRatios.get(2)
+		
+		o.axis2placement3d.cartesianX
+		o.axis2placement3d.cartesianY
+		o.axis2placement3d.cartesianZ
+		o.axis2placement3d.refDirection
+		o.axis2placement3d.axis
+	}
+	
+	def private axis2Placement3DIsChange(Axis2Placement3D o, IfcAxis2Placement3D product, IWorkflowContext ctx) {
+		
+	}
+	
+	def private directionIsChanged(Direction o, IfcAxis2Placement3D product, IWorkflowContext ctx) {
+		
+	}
 	
 	// Update elements
 	def private updateMetaData(GUIDElement o, IfcRoot product) {
