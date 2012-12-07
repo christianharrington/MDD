@@ -27,6 +27,7 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 		val openings = new ArrayList<IfcOpeningElement>()
 		val flowSegments = new ArrayList<IfcFlowSegment>()
 		val entityMap = new HashMap<String, Entity>()
+		val guidMap = new HashMap<String, Entity>()
 		
 		ifcResource.contents.get(0).eAllContents.forEach[
 			if (it instanceof Entity) {
@@ -43,15 +44,21 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 					val op = en as IfcOpeningElement
 					if (op.id != null) {
 						openings.add(op)
+						if (!op.globalId.nullOrEmpty) {
+							guidMap.put(op.globalId, op)
+						}
 					}
 				}
 				else if (en instanceof IfcFlowSegment) {
 					val fs = en as IfcFlowSegment
 					if (fs.id != null) {
 						flowSegments.add(fs)
+						if (!fs.globalId.nullOrEmpty) {
+							guidMap.put(fs.globalId, fs)
+						}
 					}
 				}
-			}		
+			}
 		]
 		
 		println("Openings: " + openings.size + "\nFlow segments: " + flowSegments.size())
@@ -60,6 +67,7 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 		ctx.put(flowSegmentsSlot, flowSegments)
 		ctx.put(entityMapSlot, entityMap)
 		ctx.put(highestIdSlot, highestId)
+		ctx.put(guidMapSlot, guidMap)
 		println("Done: IFCPipesOpeningsExtractor")
 	}
 }
