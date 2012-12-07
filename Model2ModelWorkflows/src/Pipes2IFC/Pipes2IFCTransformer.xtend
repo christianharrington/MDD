@@ -8,7 +8,6 @@ import pipes.LocalPlacement
 import java.util.ArrayList
 import pipes.FlowSegment
 import pipes.Wall
-import pipes.WallRelation
 import pipes.Axis2Placement3D
 import java.util.HashSet
 import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.FinalFactoryImpl
@@ -47,8 +46,8 @@ import org.iso.standard._10303.part._28.version._2.xmlschema.common.impl.CommonF
 import org.tech.iai.ifc.xml.ifc._2x3.final_.CoordinatesType1
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasureType
 import org.tech.iai.ifc.xml.ifc._2x3.final_.LocationType
-import org.eclipse.emf.ecore.util.FeatureMap
 import org.eclipse.emf.ecore.resource.Resource
+import java.util.UUID
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
@@ -58,6 +57,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	ArrayList<IfcProduct> extrModel
 	Model pipesModel
 	HashMap<String, Entity> entityMap
+	HashMap<String, Entity> guidMap
 	Resource resource
 	
 	def private localPlacementIsChanged(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
@@ -141,21 +141,6 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		true
 	}
 	
-	def dispatch updateIfcElement(WallRelation o, IfcRelVoidsElement product, IWorkflowContext ctx){
-		if(!markedSet.contains(o.GUID))
-		{
-			markedSet.add(o.GUID)
-			updateMetaData(o, objFromRef(product, ctx))
-			if(objFromRef(product, ctx).relatingBuildingElement.ifcElement instanceof IfcWall) {
-				updateIfcElement(o.wall, objFromRef(product, ctx).relatingBuildingElement.ifcElement as IfcWall, ctx)
-			}
-			if(objFromRef(product, ctx).relatedOpeningElement.ifcFeatureElementSubtraction instanceof IfcOpeningElement) {
-				updateIfcElement(o.opening, objFromRef(product, ctx).relatedOpeningElement.ifcFeatureElementSubtraction as IfcOpeningElement, ctx)
-			}
-			true
-		}
-	}
-	
 	def dispatch updateIfcElement(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
 		
 	
@@ -188,16 +173,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.setName(o.name)
 		
 		f.setObjectPlacement(createObjectPlacementType(o.placement))
-		// Create WallRelations
-		pipesModel.elements.forEach[
-			if(it instanceof WallRelation) {
-				var wr = it as WallRelation
-				if(wr.opening.GUID == o.GUID) {
-					createIfcRelVoidsElementFromOpening(wr, f)
-				} 
-			}
-		]
 		
+		
+
 		entityMap.put(f.globalId, f)
 	}
 	
@@ -272,10 +250,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.setValue(d)
 	}
 	
-	def IfcRelVoidsElement create f: ifcFactory.createIfcRelVoidsElement() createIfcRelVoidsElementFromOpening(WallRelation wr, IfcOpeningElement o) {
-		f.setGlobalId(wr.GUID)
-		f.setDescription(wr.description)
-		f.setName(wr.name)
+	def IfcRelVoidsElement create f: ifcFactory.createIfcRelVoidsElement() createIfcRelVoidsElementFromOpening(Wall w, IfcOpeningElement o) {
+		val uuid = UUID::randomUUID().toString()
+		f.setGlobalId(uuid)
 		
 		//Set opening
 		f.relatedOpeningElement.ifcFeatureElementSubtractionGroup.set(
@@ -374,7 +351,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		commonFactory = new CommonFactoryImpl()
 		
 		entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
-		val guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
+		guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
 		resource = ctx.get(mainModelSlot) as Resource
 				
 		//Run through entire object graph and update
