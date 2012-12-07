@@ -1,8 +1,10 @@
 package IFC2Pipes
 
-import general.WorkflowComponentWithSlot
-import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import pipes.impl.PipesFactoryImpl
+import general.InvalidIFCException
+import general.WorkflowComponentWithSlot
+import java.util.ArrayList
+import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import pipes.Model
 import pipes.Opening
 import pipes.LocalPlacement

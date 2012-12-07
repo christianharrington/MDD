@@ -291,24 +291,18 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		markedSet = new HashSet<String>()
 		ifcFactory = new FinalFactoryImpl()
+		val guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
 				
 		//Run through entire object graph and update
 		//If the object is a new opening - add it
 		pipesModel.elements.forEach[po |
-			var found = true
-			if(po instanceof Opening) {
-				found = openings.exists[ifcO |
-					po.GUID == ifcO.globalId
-				]
-				if(!found) {
+			if(guidMap.containsKey(po.GUID)) {
+				updateIfcElement(po, guidMap.get(po.GUID), ctx)
+			}
+			else {
+				if(po instanceof Opening) {
 					createOpening(po as Opening)
 				}
-			}
-			if(found) {
-				openingsAndFlowSegments.forEach[e |
-					if(po.GUID.equals(e.globalId))
-						updateIfcElement(po, e, ctx)
-				]
 			}
 		]
 		
