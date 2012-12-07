@@ -12,6 +12,7 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	val String openingsSlot = 'openings'
 	val String flowSegmentsSlot = 'flowSegments'
 	val String entityMapSlot = 'entityMap'
+	val String guidMapSlot = 'guidMap'
 
 
 	def getFileSlot() { fileSlot }
@@ -25,6 +26,8 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	def getFlowSegmentsSlot() { flowSegmentsSlot }
 	
 	def getEntityMapSlot() { entityMapSlot }
+	
+	def getGuidMapSlot() { guidMapSlot }
 	
 	override postInvoke() {	}
 	
