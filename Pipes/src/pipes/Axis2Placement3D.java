@@ -2,6 +2,7 @@
  */
 package pipes;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +24,7 @@ package pipes;
  * @model
  * @generated
  */
-public interface Axis2Placement3D extends GUIDElement {
+public interface Axis2Placement3D extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Cartesian X</b></em>' attribute.
 	 * <!-- begin-user-doc -->

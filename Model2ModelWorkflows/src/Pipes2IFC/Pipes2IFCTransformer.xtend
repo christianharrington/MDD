@@ -41,31 +41,29 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcDirection
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
+import org.tech.iai.ifc.xml.ifc._2x3.final_.DirectionRatiosType
+import org.iso.standard._10303.part._28.version._2.xmlschema.common.DoubleWrapperType
+import org.iso.standard._10303.part._28.version._2.xmlschema.common.impl.CommonFactoryImpl
+import org.tech.iai.ifc.xml.ifc._2x3.final_.CoordinatesType1
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasureType
+import org.tech.iai.ifc.xml.ifc._2x3.final_.LocationType
+import org.eclipse.emf.ecore.util.FeatureMap
+import org.eclipse.emf.ecore.resource.Resource
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
 	FinalFactoryImpl ifcFactory
-	
-	/*def private addIfcOpening(IfcModel ifcModel, Opening pipesOpening) {
-		var ifcOpening = ifcFactory.createIfcOpeningElement()
-		addIfcLocalPlacement(ifcOpening, pipesOpening.placement)
-		ifcModel.add(ifcOpening)
-	}
-	
-	def private addIfcLocalPlacement(IfcOpeningElement ifcOpening, LocalPlacement pipesPlacement) { 
-		var ifcLocalPlacement = ifcFactory.createIfcLocalPlacement()
-		ifcOpening.objectPlacement = ifcLocalPlacement
-	}*/
-	
+	CommonFactoryImpl commonFactory
 	HashSet<String> markedSet
 	ArrayList<IfcProduct> extrModel
 	Model pipesModel
 	HashMap<String, Entity> entityMap
+	Resource resource
 	
 	def private localPlacementIsChanged(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
 		if(product != null) {
 			return axis2Placement3DIsChanged(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)
-				|| localPlacementIsChanged(o.relativeTo, product.placementRelTo.ifcObjectPlacement as IfcLocalPlacement, ctx)
+				|| localPlacementIsChanged(o.relativeTo, objFromRef(product, ctx).placementRelTo.ifcObjectPlacement as IfcLocalPlacement, ctx)
 		} else { 
 			return true
 		}
@@ -119,7 +117,11 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 					}
 				]
 			]
-			updateIfcElement(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
+			if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
+				product.objectPlacement.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createLocalPlacement(o.placement))
+			}
+		
+			true
 		}
 	}
 	
@@ -127,14 +129,14 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		markedSet.add(o.GUID)
 		
 		updateMetaData(o, objFromRef(product, ctx))
-		
+		/*
 		o.openings.forEach[w |
 			extrModel.forEach[p |
 				if(w.GUID == p.globalId) {
 					updateIfcElement(w, objFromRef(p, ctx), ctx)
 				}					
 			]
-		]
+		] */
 		
 		true
 	}
@@ -155,13 +157,13 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def dispatch updateIfcElement(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
-		markedSet.add(o.GUID)
+		
 	
 		updateIfcElement(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)
 	}
 	
 	def dispatch updateIfcElement(Axis2Placement3D o, IfcAxis2Placement3D product, IWorkflowContext ctx){
-		markedSet.add(o.GUID)
+		
 		var lengthMeasure = objFromRef(objFromRef(product, ctx).location.ifcCartesianPoint, ctx).coordinates.ifcLengthMeasure
 		lengthMeasure.get(0).setValue(o.cartesianX)
 		lengthMeasure.get(1).setValue(o.cartesianY)
@@ -200,7 +202,11 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def ObjectPlacementType create f: ifcFactory.createObjectPlacementType() createObjectPlacementType(LocalPlacement p) {
-		f.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createLocalPlacement(p))
+		//f.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE., createLocalPlacement(p))
+		val instance = FinalPackage::eINSTANCE
+		//f.ifcObjectPlacementGroup.add(fisk.objectPlacementType_IfcObjectPlacement, createLocalPlacement(p))
+		var op = f.eGet(instance.objectPlacementType_IfcObjectPlacement)
+		op = createLocalPlacement(p)
 	}
 	
 	def IfcLocalPlacement create f: ifcFactory.createIfcLocalPlacement() createLocalPlacement(LocalPlacement p) {
@@ -224,8 +230,11 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			f.setAxis(createAxisType2(a))
 			f.setRefDirection(createRefDirectionType1(a))
 		}
+		f.location = createLocationType()
 		f.location.setIfcCartesianPoint(createIfcCartesianPoint(a))
 	}
+	
+	def LocationType create f: ifcFactory.createLocationType() createLocationType() {}
 	
 	def AxisType2 create f: ifcFactory.createAxisType2() createAxisType2(Axis2Placement3D a) {
 		f.setIfcDirection(createIfcDirection(a.axis))
@@ -236,17 +245,31 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def IfcDirection create f: ifcFactory.createIfcDirection() createIfcDirection(Direction d) {
+		f.directionRatios = createDirectionRatiosType()
 		var ratios = f.directionRatios.doubleWrapper
-		ratios.get(0).setValue(d.x)
-		ratios.get(1).setValue(d.y)
-		ratios.get(2).setValue(d.z)
+		ratios.add(createDoubleWrapperTypeFromDouble(d.x))
+		ratios.add(createDoubleWrapperTypeFromDouble(d.y))
+		ratios.add(createDoubleWrapperTypeFromDouble(d.z))
+	}
+	
+	def DirectionRatiosType create f: ifcFactory.createDirectionRatiosType() createDirectionRatiosType() {}
+	
+	def DoubleWrapperType create f: commonFactory.createDoubleWrapperType() createDoubleWrapperTypeFromDouble(double d) {
+		f.setValue(d)
 	}
 	
 	def IfcCartesianPoint create f: ifcFactory.createIfcCartesianPoint createIfcCartesianPoint(Axis2Placement3D a) {
-		var lengthMeasure = f.coordinates.ifcLengthMeasure  
-		lengthMeasure.get(0).setValue(a.cartesianX)
-		lengthMeasure.get(1).setValue(a.cartesianY)
-		lengthMeasure.get(2).setValue(a.cartesianZ)
+		f.coordinates = createCoordinatesType1()
+		var lengthMeasure = f.coordinates.ifcLengthMeasure
+		lengthMeasure.add(createIfcLengthMeasureTypeFromDouble(a.cartesianX))
+		lengthMeasure.add(createIfcLengthMeasureTypeFromDouble(a.cartesianY))
+		lengthMeasure.add(createIfcLengthMeasureTypeFromDouble(a.cartesianZ))
+	}
+	
+	def CoordinatesType1 create f: ifcFactory.createCoordinatesType1() createCoordinatesType1() {}
+	
+	def IfcLengthMeasureType create f: ifcFactory.createIfcLengthMeasureType() createIfcLengthMeasureTypeFromDouble(double d) {
+		f.setValue(d)
 	}
 	
 	def IfcRelVoidsElement create f: ifcFactory.createIfcRelVoidsElement() createIfcRelVoidsElementFromOpening(WallRelation wr, IfcOpeningElement o) {
@@ -348,6 +371,11 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		val removedSet = new HashSet<String>()
 		markedSet = new HashSet<String>()
 		ifcFactory = new FinalFactoryImpl()
+		commonFactory = new CommonFactoryImpl()
+		
+		entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
+		val guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
+		resource = ctx.get(mainModelSlot) as Resource
 				
 		//Run through entire object graph and update
 		//If the object is a new opening - add it

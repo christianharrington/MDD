@@ -16,6 +16,6 @@ Require-Bundle: org.xtext.pipes;visibility:=reexport,
  org.eclipse.xtext.builder
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.xtext.example.pipes.ui.contentassist,
- org.xtext.example.pipes.ui.contentassist.antlr
-Bundle-Activator: org.xtext.example.pipes.ui.internal.PipesActivator
+Export-Package: org.xtext.pipes.ui.contentassist,
+ org.xtext.pipes.ui.contentassist.antlr
+Bundle-Activator: org.xtext.pipes.ui.internal.PipesActivator

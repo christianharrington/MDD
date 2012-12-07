@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import pipes.Axis2Placement3D;
 import pipes.Direction;
@@ -31,7 +32,7 @@ import pipes.PipesPackage;
  *
  * @generated
  */
-public class Axis2Placement3DImpl extends GUIDElementImpl implements Axis2Placement3D {
+public class Axis2Placement3DImpl extends EObjectImpl implements Axis2Placement3D {
 	/**
 	 * The default value of the '{@link #getCartesianX() <em>Cartesian X</em>}' attribute.
 	 * <!-- begin-user-doc -->

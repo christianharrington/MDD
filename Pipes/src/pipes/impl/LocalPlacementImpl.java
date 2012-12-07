@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import pipes.Axis2Placement3D;
 import pipes.LocalPlacement;
@@ -28,7 +29,7 @@ import pipes.PipesPackage;
  *
  * @generated
  */
-public class LocalPlacementImpl extends GUIDElementImpl implements LocalPlacement {
+public class LocalPlacementImpl extends EObjectImpl implements LocalPlacement {
 	/**
 	 * The cached value of the '{@link #getAxis2placement3d() <em>Axis2placement3d</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -40,7 +41,7 @@ public class LocalPlacementImpl extends GUIDElementImpl implements LocalPlacemen
 	protected Axis2Placement3D axis2placement3d;
 
 	/**
-	 * The cached value of the '{@link #getRelativeTo() <em>Relative To</em>}' containment reference.
+	 * The cached value of the '{@link #getRelativeTo() <em>Relative To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRelativeTo()
@@ -117,6 +118,14 @@ public class LocalPlacementImpl extends GUIDElementImpl implements LocalPlacemen
 	 * @generated
 	 */
 	public LocalPlacement getRelativeTo() {
+		if (relativeTo != null && relativeTo.eIsProxy()) {
+			InternalEObject oldRelativeTo = (InternalEObject)relativeTo;
+			relativeTo = (LocalPlacement)eResolveProxy(oldRelativeTo);
+			if (relativeTo != oldRelativeTo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, oldRelativeTo, relativeTo));
+			}
+		}
 		return relativeTo;
 	}
 
@@ -125,14 +134,8 @@ public class LocalPlacementImpl extends GUIDElementImpl implements LocalPlacemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRelativeTo(LocalPlacement newRelativeTo, NotificationChain msgs) {
-		LocalPlacement oldRelativeTo = relativeTo;
-		relativeTo = newRelativeTo;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, oldRelativeTo, newRelativeTo);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public LocalPlacement basicGetRelativeTo() {
+		return relativeTo;
 	}
 
 	/**
@@ -141,17 +144,10 @@ public class LocalPlacementImpl extends GUIDElementImpl implements LocalPlacemen
 	 * @generated
 	 */
 	public void setRelativeTo(LocalPlacement newRelativeTo) {
-		if (newRelativeTo != relativeTo) {
-			NotificationChain msgs = null;
-			if (relativeTo != null)
-				msgs = ((InternalEObject)relativeTo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, null, msgs);
-			if (newRelativeTo != null)
-				msgs = ((InternalEObject)newRelativeTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, null, msgs);
-			msgs = basicSetRelativeTo(newRelativeTo, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, newRelativeTo, newRelativeTo));
+		LocalPlacement oldRelativeTo = relativeTo;
+		relativeTo = newRelativeTo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, oldRelativeTo, relativeTo));
 	}
 
 	/**
@@ -164,8 +160,6 @@ public class LocalPlacementImpl extends GUIDElementImpl implements LocalPlacemen
 		switch (featureID) {
 			case PipesPackage.LOCAL_PLACEMENT__AXIS2PLACEMENT3D:
 				return basicSetAxis2placement3d(null, msgs);
-			case PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO:
-				return basicSetRelativeTo(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -181,7 +175,8 @@ public class LocalPlacementImpl extends GUIDElementImpl implements LocalPlacemen
 			case PipesPackage.LOCAL_PLACEMENT__AXIS2PLACEMENT3D:
 				return getAxis2placement3d();
 			case PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO:
-				return getRelativeTo();
+				if (resolve) return getRelativeTo();
+				return basicGetRelativeTo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
