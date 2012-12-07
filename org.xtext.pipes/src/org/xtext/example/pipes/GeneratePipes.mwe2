@@ -13,7 +13,7 @@ Workflow {
 	bean = StandaloneSetup {
 		scanClassPath  = true
 		platformUri = "${runtimeProject}/.."
-	registerGeneratedEPackage = "Pipes.PipesPackage"
+	registerGeneratedEPackage = "pipes.PipesPackage"
 	// registerGenModelFile = "platform:/resource/Pipes/model/Pipes.genmodel"
 	
 	}

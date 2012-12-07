@@ -1,6 +1,6 @@
 /**
  */
-package Pipes;
+package pipes;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -12,18 +12,18 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Pipes.Wall#getOpenings <em>Openings</em>}</li>
+ *   <li>{@link pipes.Wall#getOpenings <em>Openings</em>}</li>
  * </ul>
  * </p>
  *
- * @see Pipes.PipesPackage#getWall()
+ * @see pipes.PipesPackage#getWall()
  * @model
  * @generated
  */
 public interface Wall extends GUIDElement, Product {
 	/**
 	 * Returns the value of the '<em><b>Openings</b></em>' containment reference list.
-	 * The list contents are of type {@link Pipes.WallRelation}.
+	 * The list contents are of type {@link pipes.WallRelation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Openings</em>' containment reference list isn't clear,
@@ -31,7 +31,7 @@ public interface Wall extends GUIDElement, Product {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Openings</em>' containment reference list.
-	 * @see Pipes.PipesPackage#getWall_Openings()
+	 * @see pipes.PipesPackage#getWall_Openings()
 	 * @model containment="true"
 	 * @generated
 	 */

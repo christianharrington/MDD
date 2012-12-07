@@ -1,10 +1,6 @@
 /**
  */
-package Pipes.impl;
-
-import Pipes.GUIDElement;
-import Pipes.Model;
-import Pipes.PipesPackage;
+package pipes.impl;
 
 import java.util.Collection;
 
@@ -20,6 +16,10 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import pipes.GUIDElement;
+import pipes.Model;
+import pipes.PipesPackage;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Model</b></em>'.
@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Pipes.impl.ModelImpl#getElements <em>Elements</em>}</li>
+ *   <li>{@link pipes.impl.ModelImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *

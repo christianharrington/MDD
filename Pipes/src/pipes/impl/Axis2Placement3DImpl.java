@@ -1,10 +1,6 @@
 /**
  */
-package Pipes.impl;
-
-import Pipes.Axis2Placement3D;
-import Pipes.Direction;
-import Pipes.PipesPackage;
+package pipes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -14,6 +10,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import pipes.Axis2Placement3D;
+import pipes.Direction;
+import pipes.PipesPackage;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Axis2 Placement3 D</b></em>'.
@@ -21,11 +21,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Pipes.impl.Axis2Placement3DImpl#getCartesianX <em>Cartesian X</em>}</li>
- *   <li>{@link Pipes.impl.Axis2Placement3DImpl#getCartesianY <em>Cartesian Y</em>}</li>
- *   <li>{@link Pipes.impl.Axis2Placement3DImpl#getCartesianZ <em>Cartesian Z</em>}</li>
- *   <li>{@link Pipes.impl.Axis2Placement3DImpl#getAxis <em>Axis</em>}</li>
- *   <li>{@link Pipes.impl.Axis2Placement3DImpl#getRefDirection <em>Ref Direction</em>}</li>
+ *   <li>{@link pipes.impl.Axis2Placement3DImpl#getCartesianX <em>Cartesian X</em>}</li>
+ *   <li>{@link pipes.impl.Axis2Placement3DImpl#getCartesianY <em>Cartesian Y</em>}</li>
+ *   <li>{@link pipes.impl.Axis2Placement3DImpl#getCartesianZ <em>Cartesian Z</em>}</li>
+ *   <li>{@link pipes.impl.Axis2Placement3DImpl#getAxis <em>Axis</em>}</li>
+ *   <li>{@link pipes.impl.Axis2Placement3DImpl#getRefDirection <em>Ref Direction</em>}</li>
  * </ul>
  * </p>
  *

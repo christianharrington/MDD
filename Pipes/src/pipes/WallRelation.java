@@ -1,6 +1,6 @@
 /**
  */
-package Pipes;
+package pipes;
 
 
 /**
@@ -11,12 +11,12 @@ package Pipes;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Pipes.WallRelation#getWall <em>Wall</em>}</li>
- *   <li>{@link Pipes.WallRelation#getOpening <em>Opening</em>}</li>
+ *   <li>{@link pipes.WallRelation#getWall <em>Wall</em>}</li>
+ *   <li>{@link pipes.WallRelation#getOpening <em>Opening</em>}</li>
  * </ul>
  * </p>
  *
- * @see Pipes.PipesPackage#getWallRelation()
+ * @see pipes.PipesPackage#getWallRelation()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface WallRelation extends GUIDElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Wall</em>' containment reference.
 	 * @see #setWall(Wall)
-	 * @see Pipes.PipesPackage#getWallRelation_Wall()
+	 * @see pipes.PipesPackage#getWallRelation_Wall()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Wall getWall();
 
 	/**
-	 * Sets the value of the '{@link Pipes.WallRelation#getWall <em>Wall</em>}' containment reference.
+	 * Sets the value of the '{@link pipes.WallRelation#getWall <em>Wall</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Wall</em>' containment reference.
@@ -57,14 +57,14 @@ public interface WallRelation extends GUIDElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Opening</em>' containment reference.
 	 * @see #setOpening(Opening)
-	 * @see Pipes.PipesPackage#getWallRelation_Opening()
+	 * @see pipes.PipesPackage#getWallRelation_Opening()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Opening getOpening();
 
 	/**
-	 * Sets the value of the '{@link Pipes.WallRelation#getOpening <em>Opening</em>}' containment reference.
+	 * Sets the value of the '{@link pipes.WallRelation#getOpening <em>Opening</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Opening</em>' containment reference.

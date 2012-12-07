@@ -1,9 +1,6 @@
 /**
  */
-package Pipes.impl;
-
-import Pipes.GUIDElement;
-import Pipes.PipesPackage;
+package pipes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -12,6 +9,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import pipes.GUIDElement;
+import pipes.PipesPackage;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>GUID Element</b></em>'.
@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Pipes.impl.GUIDElementImpl#getGUID <em>GUID</em>}</li>
- *   <li>{@link Pipes.impl.GUIDElementImpl#getName <em>Name</em>}</li>
- *   <li>{@link Pipes.impl.GUIDElementImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link pipes.impl.GUIDElementImpl#getGUID <em>GUID</em>}</li>
+ *   <li>{@link pipes.impl.GUIDElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link pipes.impl.GUIDElementImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *

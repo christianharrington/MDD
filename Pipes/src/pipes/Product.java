@@ -1,6 +1,6 @@
 /**
  */
-package Pipes;
+package pipes;
 
 
 /**
@@ -11,11 +11,11 @@ package Pipes;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Pipes.Product#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link pipes.Product#getPlacement <em>Placement</em>}</li>
  * </ul>
  * </p>
  *
- * @see Pipes.PipesPackage#getProduct()
+ * @see pipes.PipesPackage#getProduct()
  * @model abstract="true"
  * @generated
  */
@@ -30,14 +30,14 @@ public interface Product extends GUIDElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Placement</em>' containment reference.
 	 * @see #setPlacement(LocalPlacement)
-	 * @see Pipes.PipesPackage#getProduct_Placement()
+	 * @see pipes.PipesPackage#getProduct_Placement()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	LocalPlacement getPlacement();
 
 	/**
-	 * Sets the value of the '{@link Pipes.Product#getPlacement <em>Placement</em>}' containment reference.
+	 * Sets the value of the '{@link pipes.Product#getPlacement <em>Placement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Placement</em>' containment reference.

@@ -1,10 +1,6 @@
 /**
  */
-package Pipes.impl;
-
-import Pipes.LocalPlacement;
-import Pipes.PipesPackage;
-import Pipes.Product;
+package pipes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -14,6 +10,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import pipes.LocalPlacement;
+import pipes.PipesPackage;
+import pipes.Product;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Product</b></em>'.
@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Pipes.impl.ProductImpl#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link pipes.impl.ProductImpl#getPlacement <em>Placement</em>}</li>
  * </ul>
  * </p>
  *

@@ -1,6 +1,6 @@
 /**
  */
-package Pipes;
+package pipes;
 
 
 /**
@@ -11,15 +11,15 @@ package Pipes;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Pipes.Axis2Placement3D#getCartesianX <em>Cartesian X</em>}</li>
- *   <li>{@link Pipes.Axis2Placement3D#getCartesianY <em>Cartesian Y</em>}</li>
- *   <li>{@link Pipes.Axis2Placement3D#getCartesianZ <em>Cartesian Z</em>}</li>
- *   <li>{@link Pipes.Axis2Placement3D#getAxis <em>Axis</em>}</li>
- *   <li>{@link Pipes.Axis2Placement3D#getRefDirection <em>Ref Direction</em>}</li>
+ *   <li>{@link pipes.Axis2Placement3D#getCartesianX <em>Cartesian X</em>}</li>
+ *   <li>{@link pipes.Axis2Placement3D#getCartesianY <em>Cartesian Y</em>}</li>
+ *   <li>{@link pipes.Axis2Placement3D#getCartesianZ <em>Cartesian Z</em>}</li>
+ *   <li>{@link pipes.Axis2Placement3D#getAxis <em>Axis</em>}</li>
+ *   <li>{@link pipes.Axis2Placement3D#getRefDirection <em>Ref Direction</em>}</li>
  * </ul>
  * </p>
  *
- * @see Pipes.PipesPackage#getAxis2Placement3D()
+ * @see pipes.PipesPackage#getAxis2Placement3D()
  * @model
  * @generated
  */
@@ -34,14 +34,14 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cartesian X</em>' attribute.
 	 * @see #setCartesianX(double)
-	 * @see Pipes.PipesPackage#getAxis2Placement3D_CartesianX()
+	 * @see pipes.PipesPackage#getAxis2Placement3D_CartesianX()
 	 * @model required="true"
 	 * @generated
 	 */
 	double getCartesianX();
 
 	/**
-	 * Sets the value of the '{@link Pipes.Axis2Placement3D#getCartesianX <em>Cartesian X</em>}' attribute.
+	 * Sets the value of the '{@link pipes.Axis2Placement3D#getCartesianX <em>Cartesian X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cartesian X</em>' attribute.
@@ -60,14 +60,14 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cartesian Y</em>' attribute.
 	 * @see #setCartesianY(double)
-	 * @see Pipes.PipesPackage#getAxis2Placement3D_CartesianY()
+	 * @see pipes.PipesPackage#getAxis2Placement3D_CartesianY()
 	 * @model required="true"
 	 * @generated
 	 */
 	double getCartesianY();
 
 	/**
-	 * Sets the value of the '{@link Pipes.Axis2Placement3D#getCartesianY <em>Cartesian Y</em>}' attribute.
+	 * Sets the value of the '{@link pipes.Axis2Placement3D#getCartesianY <em>Cartesian Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cartesian Y</em>' attribute.
@@ -86,14 +86,14 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cartesian Z</em>' attribute.
 	 * @see #setCartesianZ(double)
-	 * @see Pipes.PipesPackage#getAxis2Placement3D_CartesianZ()
+	 * @see pipes.PipesPackage#getAxis2Placement3D_CartesianZ()
 	 * @model required="true"
 	 * @generated
 	 */
 	double getCartesianZ();
 
 	/**
-	 * Sets the value of the '{@link Pipes.Axis2Placement3D#getCartesianZ <em>Cartesian Z</em>}' attribute.
+	 * Sets the value of the '{@link pipes.Axis2Placement3D#getCartesianZ <em>Cartesian Z</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cartesian Z</em>' attribute.
@@ -112,14 +112,14 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis</em>' containment reference.
 	 * @see #setAxis(Direction)
-	 * @see Pipes.PipesPackage#getAxis2Placement3D_Axis()
+	 * @see pipes.PipesPackage#getAxis2Placement3D_Axis()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Direction getAxis();
 
 	/**
-	 * Sets the value of the '{@link Pipes.Axis2Placement3D#getAxis <em>Axis</em>}' containment reference.
+	 * Sets the value of the '{@link pipes.Axis2Placement3D#getAxis <em>Axis</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Axis</em>' containment reference.
@@ -138,14 +138,14 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ref Direction</em>' containment reference.
 	 * @see #setRefDirection(Direction)
-	 * @see Pipes.PipesPackage#getAxis2Placement3D_RefDirection()
+	 * @see pipes.PipesPackage#getAxis2Placement3D_RefDirection()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Direction getRefDirection();
 
 	/**
-	 * Sets the value of the '{@link Pipes.Axis2Placement3D#getRefDirection <em>Ref Direction</em>}' containment reference.
+	 * Sets the value of the '{@link pipes.Axis2Placement3D#getRefDirection <em>Ref Direction</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ref Direction</em>' containment reference.

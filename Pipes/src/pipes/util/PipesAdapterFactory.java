@@ -1,8 +1,6 @@
 /**
  */
-package Pipes.util;
-
-import Pipes.*;
+package pipes.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -11,12 +9,14 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
+import pipes.*;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see Pipes.PipesPackage
+ * @see pipes.PipesPackage
  * @generated
  */
 public class PipesAdapterFactory extends AdapterFactoryImpl {
@@ -128,13 +128,13 @@ public class PipesAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pipes.Wall <em>Wall</em>}'.
+	 * Creates a new adapter for an object of class '{@link pipes.Wall <em>Wall</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pipes.Wall
+	 * @see pipes.Wall
 	 * @generated
 	 */
 	public Adapter createWallAdapter() {
@@ -142,13 +142,13 @@ public class PipesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pipes.Opening <em>Opening</em>}'.
+	 * Creates a new adapter for an object of class '{@link pipes.Opening <em>Opening</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pipes.Opening
+	 * @see pipes.Opening
 	 * @generated
 	 */
 	public Adapter createOpeningAdapter() {
@@ -156,13 +156,13 @@ public class PipesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pipes.WallRelation <em>Wall Relation</em>}'.
+	 * Creates a new adapter for an object of class '{@link pipes.WallRelation <em>Wall Relation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pipes.WallRelation
+	 * @see pipes.WallRelation
 	 * @generated
 	 */
 	public Adapter createWallRelationAdapter() {
@@ -170,13 +170,13 @@ public class PipesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pipes.FlowSegment <em>Flow Segment</em>}'.
+	 * Creates a new adapter for an object of class '{@link pipes.FlowSegment <em>Flow Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pipes.FlowSegment
+	 * @see pipes.FlowSegment
 	 * @generated
 	 */
 	public Adapter createFlowSegmentAdapter() {
@@ -184,13 +184,13 @@ public class PipesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pipes.LocalPlacement <em>Local Placement</em>}'.
+	 * Creates a new adapter for an object of class '{@link pipes.LocalPlacement <em>Local Placement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pipes.LocalPlacement
+	 * @see pipes.LocalPlacement
 	 * @generated
 	 */
 	public Adapter createLocalPlacementAdapter() {
@@ -198,13 +198,13 @@ public class PipesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pipes.Axis2Placement3D <em>Axis2 Placement3 D</em>}'.
+	 * Creates a new adapter for an object of class '{@link pipes.Axis2Placement3D <em>Axis2 Placement3 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pipes.Axis2Placement3D
+	 * @see pipes.Axis2Placement3D
 	 * @generated
 	 */
 	public Adapter createAxis2Placement3DAdapter() {
@@ -212,13 +212,13 @@ public class PipesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pipes.GUIDElement <em>GUID Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link pipes.GUIDElement <em>GUID Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pipes.GUIDElement
+	 * @see pipes.GUIDElement
 	 * @generated
 	 */
 	public Adapter createGUIDElementAdapter() {
@@ -226,13 +226,13 @@ public class PipesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pipes.Model <em>Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link pipes.Model <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pipes.Model
+	 * @see pipes.Model
 	 * @generated
 	 */
 	public Adapter createModelAdapter() {
@@ -240,13 +240,13 @@ public class PipesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pipes.Direction <em>Direction</em>}'.
+	 * Creates a new adapter for an object of class '{@link pipes.Direction <em>Direction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pipes.Direction
+	 * @see pipes.Direction
 	 * @generated
 	 */
 	public Adapter createDirectionAdapter() {
@@ -254,13 +254,13 @@ public class PipesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pipes.Product <em>Product</em>}'.
+	 * Creates a new adapter for an object of class '{@link pipes.Product <em>Product</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pipes.Product
+	 * @see pipes.Product
 	 * @generated
 	 */
 	public Adapter createProductAdapter() {

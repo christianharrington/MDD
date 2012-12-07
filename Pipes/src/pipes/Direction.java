@@ -1,6 +1,6 @@
 /**
  */
-package Pipes;
+package pipes;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -12,13 +12,13 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Pipes.Direction#getX <em>X</em>}</li>
- *   <li>{@link Pipes.Direction#getY <em>Y</em>}</li>
- *   <li>{@link Pipes.Direction#getZ <em>Z</em>}</li>
+ *   <li>{@link pipes.Direction#getX <em>X</em>}</li>
+ *   <li>{@link pipes.Direction#getY <em>Y</em>}</li>
+ *   <li>{@link pipes.Direction#getZ <em>Z</em>}</li>
  * </ul>
  * </p>
  *
- * @see Pipes.PipesPackage#getDirection()
+ * @see pipes.PipesPackage#getDirection()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface Direction extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see Pipes.PipesPackage#getDirection_X()
+	 * @see pipes.PipesPackage#getDirection_X()
 	 * @model required="true"
 	 * @generated
 	 */
 	double getX();
 
 	/**
-	 * Sets the value of the '{@link Pipes.Direction#getX <em>X</em>}' attribute.
+	 * Sets the value of the '{@link pipes.Direction#getX <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>X</em>' attribute.
@@ -59,14 +59,14 @@ public interface Direction extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see Pipes.PipesPackage#getDirection_Y()
+	 * @see pipes.PipesPackage#getDirection_Y()
 	 * @model required="true"
 	 * @generated
 	 */
 	double getY();
 
 	/**
-	 * Sets the value of the '{@link Pipes.Direction#getY <em>Y</em>}' attribute.
+	 * Sets the value of the '{@link pipes.Direction#getY <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Y</em>' attribute.
@@ -85,14 +85,14 @@ public interface Direction extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Z</em>' attribute.
 	 * @see #setZ(double)
-	 * @see Pipes.PipesPackage#getDirection_Z()
+	 * @see pipes.PipesPackage#getDirection_Z()
 	 * @model
 	 * @generated
 	 */
 	double getZ();
 
 	/**
-	 * Sets the value of the '{@link Pipes.Direction#getZ <em>Z</em>}' attribute.
+	 * Sets the value of the '{@link pipes.Direction#getZ <em>Z</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Z</em>' attribute.

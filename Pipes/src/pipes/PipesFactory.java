@@ -1,6 +1,6 @@
 /**
  */
-package Pipes;
+package pipes;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see Pipes.PipesPackage
+ * @see pipes.PipesPackage
  * @generated
  */
 public interface PipesFactory extends EFactory {
@@ -19,7 +19,7 @@ public interface PipesFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	PipesFactory eINSTANCE = Pipes.impl.PipesFactoryImpl.init();
+	PipesFactory eINSTANCE = pipes.impl.PipesFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Wall</em>'.

@@ -1,6 +1,6 @@
 /**
  */
-package Pipes;
+package pipes;
 
 
 /**
@@ -9,7 +9,7 @@ package Pipes;
  * <!-- end-user-doc -->
  *
  *
- * @see Pipes.PipesPackage#getFlowSegment()
+ * @see pipes.PipesPackage#getFlowSegment()
  * @model
  * @generated
  */

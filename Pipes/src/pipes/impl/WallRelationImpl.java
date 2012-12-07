@@ -1,11 +1,6 @@
 /**
  */
-package Pipes.impl;
-
-import Pipes.Opening;
-import Pipes.PipesPackage;
-import Pipes.Wall;
-import Pipes.WallRelation;
+package pipes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -15,6 +10,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import pipes.Opening;
+import pipes.PipesPackage;
+import pipes.Wall;
+import pipes.WallRelation;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Wall Relation</b></em>'.
@@ -22,8 +22,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Pipes.impl.WallRelationImpl#getWall <em>Wall</em>}</li>
- *   <li>{@link Pipes.impl.WallRelationImpl#getOpening <em>Opening</em>}</li>
+ *   <li>{@link pipes.impl.WallRelationImpl#getWall <em>Wall</em>}</li>
+ *   <li>{@link pipes.impl.WallRelationImpl#getOpening <em>Opening</em>}</li>
  * </ul>
  * </p>
  *

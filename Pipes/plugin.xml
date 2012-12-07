@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="platform:/resource/Pipes/model/Pipes.ecore"
-            class="Pipes.PipesPackage"
+            class="pipes.PipesPackage"
             genModel="model/Pipes.genmodel"/>
    </extension>
 

@@ -1,6 +1,6 @@
 /**
  */
-package Pipes;
+package pipes;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Pipes.Model#getElements <em>Elements</em>}</li>
+ *   <li>{@link pipes.Model#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
- * @see Pipes.PipesPackage#getModel()
+ * @see pipes.PipesPackage#getModel()
  * @model
  * @generated
  */
 public interface Model extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link Pipes.GUIDElement}.
+	 * The list contents are of type {@link pipes.GUIDElement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Elements</em>' containment reference list isn't clear,
@@ -33,7 +33,7 @@ public interface Model extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elements</em>' containment reference list.
-	 * @see Pipes.PipesPackage#getModel_Elements()
+	 * @see pipes.PipesPackage#getModel_Elements()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
-import Pipes.Model
-import Pipes.PipesPackage
+import pipes.Model
+import pipes.PipesPackage
 
 class PipesXMI2ModelReader extends WorkflowComponentWithSlot {
 	

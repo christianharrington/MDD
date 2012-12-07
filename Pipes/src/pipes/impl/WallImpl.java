@@ -1,12 +1,6 @@
 /**
  */
-package Pipes.impl;
-
-import Pipes.LocalPlacement;
-import Pipes.PipesPackage;
-import Pipes.Product;
-import Pipes.Wall;
-import Pipes.WallRelation;
+package pipes.impl;
 
 import java.util.Collection;
 
@@ -23,6 +17,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import pipes.LocalPlacement;
+import pipes.PipesPackage;
+import pipes.Product;
+import pipes.Wall;
+import pipes.WallRelation;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Wall</b></em>'.
@@ -30,8 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Pipes.impl.WallImpl#getPlacement <em>Placement</em>}</li>
- *   <li>{@link Pipes.impl.WallImpl#getOpenings <em>Openings</em>}</li>
+ *   <li>{@link pipes.impl.WallImpl#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link pipes.impl.WallImpl#getOpenings <em>Openings</em>}</li>
  * </ul>
  * </p>
  *

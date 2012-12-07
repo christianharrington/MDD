@@ -2,19 +2,19 @@ package IFC2Pipes
 
 import general.WorkflowComponentWithSlot
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
-import Pipes.impl.PipesFactoryImpl
-import Pipes.Model
-import Pipes.Opening
-import Pipes.LocalPlacement
-import Pipes.FlowSegment
-import Pipes.Product
+import pipes.impl.PipesFactoryImpl
+import pipes.Model
+import pipes.Opening
+import pipes.LocalPlacement
+import pipes.FlowSegment
+import pipes.Product
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 import java.util.ArrayList
-import Pipes.Axis2Placement3D
-import Pipes.Direction
+import pipes.Axis2Placement3D
+import pipes.Direction
 import general.InvalidIFCException
 import org.eclipse.xtext.xbase.lib.BooleanExtensions
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
