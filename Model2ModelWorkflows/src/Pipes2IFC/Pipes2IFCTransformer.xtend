@@ -33,6 +33,14 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.AxisType2
 import org.tech.iai.ifc.xml.ifc._2x3.final_.RefDirectionType1
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.Entity
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement
+import org.eclipse.emf.ecore.util.EcoreUtil
+import org.eclipse.emf.ecore.resource.Resource
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcDirection
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
@@ -268,21 +276,78 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	//End creating new object
 	
+	def private collectGarbage(IWorkflowContext ctx) {
+		val ifcModel = ctx.get(mainModelSlot) as Resource
+		var garbageCounter = 0
+		var refCounter = 0
+		
+		val ids = new HashMap<String, Entity>
+		val refs  = new ArrayList<Entity>
+		val refIds = new HashSet<String>
+		
+		ifcModel.contents.get(0).eAllContents.forEach[
+			if (it instanceof Entity) {
+				val e = it as Entity
+				if (e.ref != null) {
+					refs.add(e)
+					refIds.add(e.ref)
+				}
+				else if (e.id != null) {
+					ids.put(e.id, e)
+				}
+			}
+		]
+		
+		println("Collecting garbage from " + ids.size + " items")
+		val garbageToRemove = new ArrayList<String>()
+		for (e : ids.values) {
+			if (e instanceof IfcLocalPlacement || e instanceof IfcAxis2Placement3D || e instanceof IfcDirection || e instanceof IfcCartesianPoint) {
+				if (!refIds.contains(e.id)) {
+					EcoreUtil::delete(e)
+					
+					garbageToRemove.add(e.id)
+					garbageCounter = garbageCounter + 1
+				}
+			}
+		}
+		garbageToRemove.forEach[
+			ids.remove(it)
+		] 
+		println("Collected " + garbageCounter + " garbage items")
+		
+		println("Pruning " + refs.size + " refs")
+		for(e : refs) {
+			// The ref points to an entity which no longer exists
+			if (!ids.containsKey(e.ref)) {
+				EcoreUtil::delete(e)
+				
+				refCounter = refCounter + 1
+			}
+		}
+		
+		println("Pruned " + refCounter + " references")
+	}
+	
 	override invoke(IWorkflowContext ctx) {
 		println("Starting: Pipes2IFCTransformer")
 		//Initialization
+		// Get elements from context
 		pipesModel = ctx.get(pipesOpeningsSlot) as Model
+		
 		val openings = ctx.get(openingsSlot) as ArrayList<IfcOpeningElement>
 		val flowSegments = ctx.get(flowSegmentsSlot) as ArrayList<IfcFlowSegment>
 		
+		val entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
+		val guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
 		
+		// Create a list containing all openings and flowsegments
 		val openingsAndFlowSegments = new ArrayList<IfcProduct>()
 		openingsAndFlowSegments.addAll(openings)
 		openingsAndFlowSegments.addAll(flowSegments)
 		
+		val removedSet = new HashSet<String>()
 		markedSet = new HashSet<String>()
 		ifcFactory = new FinalFactoryImpl()
-		val guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
 				
 		//Run through entire object graph and update
 		//If the object is a new opening - add it
@@ -297,18 +362,22 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			}
 		]
 		
-		
 		//Remove deleted flow segments
 		//Doesn't remove anything else
 		//This will result in garbage object left in the model 
 		flowSegments.forEach[ifcF |
-			var found = pipesModel.elements.exists[f |
+			val found = pipesModel.elements.exists[f |
 				ifcF.globalId == f.GUID
 			]
 			if(!found) {
-				entityMap.remove(ifcF)
+				entityMap.remove(ifcF.id)
+				guidMap.remove(ifcF.globalId)
+				EcoreUtil::delete(ifcF)
+				removedSet.add(ifcF.id)
 			}
 		]
+		
+		collectGarbage(ctx)
 		
 		println("Done: Pipes2IFCTransformer")
 	}
