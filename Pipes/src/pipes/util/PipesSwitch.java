@@ -1,13 +1,13 @@
 /**
  */
-package pipes.util;
+package Pipes.util;
+
+import Pipes.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
-
-import pipes.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +19,7 @@ import pipes.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see pipes.PipesPackage
+ * @see Pipes.PipesPackage
  * @generated
  */
 public class PipesSwitch<T> extends Switch<T> {

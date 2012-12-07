@@ -1,11 +1,18 @@
 /**
  */
-package pipes.impl;
+package Pipes.impl;
+
+import Pipes.LocalPlacement;
+import Pipes.Opening;
+import Pipes.PipesPackage;
+import Pipes.Product;
+import Pipes.WallRelation;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -15,13 +22,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
-import pipes.LocalPlacement;
-import pipes.Opening;
-import pipes.PipesPackage;
-import pipes.Product;
-import pipes.WallRelation;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,8 +30,8 @@ import pipes.WallRelation;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link pipes.impl.OpeningImpl#getPlacement <em>Placement</em>}</li>
- *   <li>{@link pipes.impl.OpeningImpl#getWalls <em>Walls</em>}</li>
+ *   <li>{@link Pipes.impl.OpeningImpl#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link Pipes.impl.OpeningImpl#getWalls <em>Walls</em>}</li>
  * </ul>
  * </p>
  *

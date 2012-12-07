@@ -1,18 +1,18 @@
 /**
  */
-package pipes.impl;
+package Pipes.impl;
+
+import Pipes.Axis2Placement3D;
+import Pipes.LocalPlacement;
+import Pipes.PipesPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import pipes.Axis2Placement3D;
-import pipes.LocalPlacement;
-import pipes.PipesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,8 +21,8 @@ import pipes.PipesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link pipes.impl.LocalPlacementImpl#getAxis2placement3d <em>Axis2placement3d</em>}</li>
- *   <li>{@link pipes.impl.LocalPlacementImpl#getRelativeTo <em>Relative To</em>}</li>
+ *   <li>{@link Pipes.impl.LocalPlacementImpl#getAxis2placement3d <em>Axis2placement3d</em>}</li>
+ *   <li>{@link Pipes.impl.LocalPlacementImpl#getRelativeTo <em>Relative To</em>}</li>
  * </ul>
  * </p>
  *

@@ -1,6 +1,6 @@
 /**
  */
-package pipes;
+package Pipes;
 
 
 /**
@@ -11,12 +11,12 @@ package pipes;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link pipes.LocalPlacement#getAxis2placement3d <em>Axis2placement3d</em>}</li>
- *   <li>{@link pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}</li>
+ *   <li>{@link Pipes.LocalPlacement#getAxis2placement3d <em>Axis2placement3d</em>}</li>
+ *   <li>{@link Pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}</li>
  * </ul>
  * </p>
  *
- * @see pipes.PipesPackage#getLocalPlacement()
+ * @see Pipes.PipesPackage#getLocalPlacement()
  * @model
  * @generated
  */
@@ -25,20 +25,20 @@ public interface LocalPlacement extends GUIDElement {
 	 * Returns the value of the '<em><b>Axis2placement3d</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Axis2placement3d</em>' reference isn't clear,
+	 * If the meaning of the '<em>Axis2placement3d</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis2placement3d</em>' containment reference.
 	 * @see #setAxis2placement3d(Axis2Placement3D)
-	 * @see pipes.PipesPackage#getLocalPlacement_Axis2placement3d()
+	 * @see Pipes.PipesPackage#getLocalPlacement_Axis2placement3d()
 	 * @model containment="true"
 	 * @generated
 	 */
 	Axis2Placement3D getAxis2placement3d();
 
 	/**
-	 * Sets the value of the '{@link pipes.LocalPlacement#getAxis2placement3d <em>Axis2placement3d</em>}' containment reference.
+	 * Sets the value of the '{@link Pipes.LocalPlacement#getAxis2placement3d <em>Axis2placement3d</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Axis2placement3d</em>' containment reference.
@@ -51,20 +51,20 @@ public interface LocalPlacement extends GUIDElement {
 	 * Returns the value of the '<em><b>Relative To</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Relative To</em>' reference isn't clear,
+	 * If the meaning of the '<em>Relative To</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relative To</em>' containment reference.
 	 * @see #setRelativeTo(LocalPlacement)
-	 * @see pipes.PipesPackage#getLocalPlacement_RelativeTo()
+	 * @see Pipes.PipesPackage#getLocalPlacement_RelativeTo()
 	 * @model containment="true"
 	 * @generated
 	 */
 	LocalPlacement getRelativeTo();
 
 	/**
-	 * Sets the value of the '{@link pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}' containment reference.
+	 * Sets the value of the '{@link Pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Relative To</em>' containment reference.

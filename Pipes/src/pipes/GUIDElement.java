@@ -1,6 +1,6 @@
 /**
  */
-package pipes;
+package Pipes;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -12,13 +12,13 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link pipes.GUIDElement#getGUID <em>GUID</em>}</li>
- *   <li>{@link pipes.GUIDElement#getName <em>Name</em>}</li>
- *   <li>{@link pipes.GUIDElement#getDescription <em>Description</em>}</li>
+ *   <li>{@link Pipes.GUIDElement#getGUID <em>GUID</em>}</li>
+ *   <li>{@link Pipes.GUIDElement#getName <em>Name</em>}</li>
+ *   <li>{@link Pipes.GUIDElement#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
- * @see pipes.PipesPackage#getGUIDElement()
+ * @see Pipes.PipesPackage#getGUIDElement()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface GUIDElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>GUID</em>' attribute.
 	 * @see #setGUID(String)
-	 * @see pipes.PipesPackage#getGUIDElement_GUID()
+	 * @see Pipes.PipesPackage#getGUIDElement_GUID()
 	 * @model
 	 * @generated
 	 */
 	String getGUID();
 
 	/**
-	 * Sets the value of the '{@link pipes.GUIDElement#getGUID <em>GUID</em>}' attribute.
+	 * Sets the value of the '{@link Pipes.GUIDElement#getGUID <em>GUID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>GUID</em>' attribute.
@@ -59,14 +59,14 @@ public interface GUIDElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see pipes.PipesPackage#getGUIDElement_Name()
+	 * @see Pipes.PipesPackage#getGUIDElement_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link pipes.GUIDElement#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link Pipes.GUIDElement#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -85,14 +85,14 @@ public interface GUIDElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see pipes.PipesPackage#getGUIDElement_Description()
+	 * @see Pipes.PipesPackage#getGUIDElement_Description()
 	 * @model
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link pipes.GUIDElement#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link Pipes.GUIDElement#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.

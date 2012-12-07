@@ -1,6 +1,9 @@
 /**
  */
-package pipes.impl;
+package Pipes.impl;
+
+import Pipes.Direction;
+import Pipes.PipesPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -9,9 +12,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import pipes.Direction;
-import pipes.PipesPackage;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Direction</b></em>'.
@@ -19,9 +19,9 @@ import pipes.PipesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link pipes.impl.DirectionImpl#getX <em>X</em>}</li>
- *   <li>{@link pipes.impl.DirectionImpl#getY <em>Y</em>}</li>
- *   <li>{@link pipes.impl.DirectionImpl#getZ <em>Z</em>}</li>
+ *   <li>{@link Pipes.impl.DirectionImpl#getX <em>X</em>}</li>
+ *   <li>{@link Pipes.impl.DirectionImpl#getY <em>Y</em>}</li>
+ *   <li>{@link Pipes.impl.DirectionImpl#getZ <em>Z</em>}</li>
  * </ul>
  * </p>
  *

@@ -1,18 +1,18 @@
 /**
  */
-package pipes.impl;
+package Pipes.impl;
+
+import Pipes.LocalPlacement;
+import Pipes.PipesPackage;
+import Pipes.Product;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import pipes.LocalPlacement;
-import pipes.PipesPackage;
-import pipes.Product;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import pipes.Product;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link pipes.impl.ProductImpl#getPlacement <em>Placement</em>}</li>
+ *   <li>{@link Pipes.impl.ProductImpl#getPlacement <em>Placement</em>}</li>
  * </ul>
  * </p>
  *
