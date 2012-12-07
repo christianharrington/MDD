@@ -54,36 +54,27 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	Model pipesModel
 	HashMap<String, Entity> entityMap
 	
-	def private localPlacementIsChange(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
-		var ifcAxis2Placement3D = objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D
-		var lengthMeasure = objFromRef(objFromRef(ifcAxis2Placement3D, ctx).location.ifcCartesianPoint, ctx).coordinates.ifcLengthMeasure
-		var ifcX = lengthMeasure.get(0)
-		var ifcY = lengthMeasure.get(1)
-		var ifcZ = lengthMeasure.get(2)
-		var ifcRefDirection = objFromRef(ifcAxis2Placement3D, ctx).axis.ifcDirection
-		var ifcAxis = objFromRef(ifcAxis2Placement3D, ctx).refDirection.ifcDirection
-		var refRatios = objFromRef(ifcRefDirection, ctx).directionRatios.doubleWrapper
-		var axisRatios = objFromRef(ifcAxis, ctx).directionRatios.doubleWrapper
-		var refRatioX = refRatios.get(0)
-		var refRatioY = refRatios.get(1)
-		var refRatioZ = refRatios.get(2)
-		var axisRatioX = axisRatios.get(0)
-		var axisRatioY = axisRatios.get(1)
-		var axisRatioZ = axisRatios.get(2)
-		
-		o.axis2placement3d.cartesianX
-		o.axis2placement3d.cartesianY
-		o.axis2placement3d.cartesianZ
-		o.axis2placement3d.refDirection
-		o.axis2placement3d.axis
+	def private localPlacementIsChanged(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
+		if(product != null) {
+			return axis2Placement3DIsChanged(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)
+				|| localPlacementIsChanged(o.relativeTo, product.placementRelTo.ifcObjectPlacement as IfcLocalPlacement, ctx)
+		} else { 
+			return true
+		}
 	}
 	
-	def private axis2Placement3DIsChange(Axis2Placement3D o, IfcAxis2Placement3D product, IWorkflowContext ctx) {
-		
+	def private axis2Placement3DIsChanged(Axis2Placement3D o, IfcAxis2Placement3D product, IWorkflowContext ctx) {
+		var lengthMeasure = objFromRef(objFromRef(product, ctx).location.ifcCartesianPoint, ctx).coordinates.ifcLengthMeasure
+		return (o.cartesianX != lengthMeasure.get(0) || 
+			o.cartesianY != lengthMeasure.get(1) || 
+			o.cartesianZ != lengthMeasure.get(2) ||
+			directionIsChanged(o.refDirection, objFromRef(product, ctx).refDirection.ifcDirection, ctx) ||
+			directionIsChanged(o.axis, objFromRef(product, ctx).axis.ifcDirection, ctx))
 	}
 	
-	def private directionIsChanged(Direction o, IfcAxis2Placement3D product, IWorkflowContext ctx) {
-		
+	def private directionIsChanged(Direction o, IfcDirection product, IWorkflowContext ctx) {
+		var ratios = objFromRef(product, ctx).directionRatios.doubleWrapper
+		return o.x != ratios.get(0) || o.y != ratios.get(1) || o.z != ratios.get(2)
 	}
 	
 	// Update elements
