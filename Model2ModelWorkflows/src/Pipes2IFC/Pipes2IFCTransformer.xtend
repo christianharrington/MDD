@@ -55,21 +55,21 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	HashMap<String, Entity> entityMap
 	
 	def private localPlacementIsChange(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
-		var ifcAxis2Placement3D = objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D
-		var lengthMeasure = objFromRef(objFromRef(ifcAxis2Placement3D, ctx).location.ifcCartesianPoint, ctx).coordinates.ifcLengthMeasure
-		var ifcX = lengthMeasure.get(0)
-		var ifcY = lengthMeasure.get(1)
-		var ifcZ = lengthMeasure.get(2)
-		var ifcRefDirection = objFromRef(ifcAxis2Placement3D, ctx).axis.ifcDirection
-		var ifcAxis = objFromRef(ifcAxis2Placement3D, ctx).refDirection.ifcDirection
-		var refRatios = objFromRef(ifcRefDirection, ctx).directionRatios.doubleWrapper
-		var axisRatios = objFromRef(ifcAxis, ctx).directionRatios.doubleWrapper
-		var refRatioX = refRatios.get(0)
-		var refRatioY = refRatios.get(1)
-		var refRatioZ = refRatios.get(2)
-		var axisRatioX = axisRatios.get(0)
-		var axisRatioY = axisRatios.get(1)
-		var axisRatioZ = axisRatios.get(2)
+		val ifcAxis2Placement3D = objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D
+		val lengthMeasure = objFromRef(objFromRef(ifcAxis2Placement3D, ctx).location.ifcCartesianPoint, ctx).coordinates.ifcLengthMeasure
+		val ifcX = lengthMeasure.get(0)
+		val ifcY = lengthMeasure.get(1)
+		val ifcZ = lengthMeasure.get(2)
+		val ifcRefDirection = objFromRef(ifcAxis2Placement3D, ctx).axis.ifcDirection
+		val ifcAxis = objFromRef(ifcAxis2Placement3D, ctx).refDirection.ifcDirection
+		val refRatios = objFromRef(ifcRefDirection, ctx).directionRatios.doubleWrapper
+		val axisRatios = objFromRef(ifcAxis, ctx).directionRatios.doubleWrapper
+		val refRatioX = refRatios.get(0)
+		val refRatioY = refRatios.get(1)
+		val refRatioZ = refRatios.get(2)
+		val axisRatioX = axisRatios.get(0)
+		val axisRatioY = axisRatios.get(1)
+		val axisRatioZ = axisRatios.get(2)
 		
 		o.axis2placement3d.cartesianX
 		o.axis2placement3d.cartesianY
