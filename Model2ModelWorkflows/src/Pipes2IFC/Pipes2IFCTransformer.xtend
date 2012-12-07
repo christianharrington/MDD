@@ -34,19 +34,12 @@ import org.iso.standard._10303.part._28.version._2.xmlschema.common.Entity
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement
 import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.emf.ecore.resource.Resource
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcDirection
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
 import org.tech.iai.ifc.xml.ifc._2x3.final_.DirectionRatiosType
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.DoubleWrapperType
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.impl.CommonFactoryImpl
 import org.tech.iai.ifc.xml.ifc._2x3.final_.CoordinatesType1
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasureType
 import org.tech.iai.ifc.xml.ifc._2x3.final_.LocationType
-import org.eclipse.emf.ecore.resource.Resource
 import java.util.UUID
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
@@ -336,9 +329,6 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		val openings = ctx.get(openingsSlot) as ArrayList<IfcOpeningElement>
 		val flowSegments = ctx.get(flowSegmentsSlot) as ArrayList<IfcFlowSegment>
-		
-		val entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
-		val guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
 		
 		// Create a list containing all openings and flowsegments
 		val openingsAndFlowSegments = new ArrayList<IfcProduct>()
