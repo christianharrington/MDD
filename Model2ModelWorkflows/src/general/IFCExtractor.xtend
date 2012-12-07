@@ -16,6 +16,8 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 		// ]
 		return true
 	}
+	
+	private var highestId = 0
 		
 	override invoke(IWorkflowContext ctx) {
 		println("Starting: IFCPipesOpeningsExtractor")
@@ -32,6 +34,8 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 				val en = it as Entity
 				if (en.id != null) {
 					entityMap.put(en.id, en)
+					val id = Integer::parseInt(en.id.substring(1))
+					if (id > highestId) highestId = id 
 				}
 				
 				// If the object is and opening or flow segment, we need it for our model
@@ -55,6 +59,7 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 		ctx.put(openingsSlot, openings)
 		ctx.put(flowSegmentsSlot, flowSegments)
 		ctx.put(entityMapSlot, entityMap)
+		ctx.put(highestIdSlot, highestId)
 		println("Done: IFCPipesOpeningsExtractor")
 	}
 }
