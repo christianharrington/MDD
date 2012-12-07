@@ -55,7 +55,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	def private localPlacementIsChanged(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
 		if(product != null) {
 			return axis2Placement3DIsChanged(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)
-				|| localPlacementIsChanged(o.relativeTo, product.placementRelTo.ifcObjectPlacement as IfcLocalPlacement, ctx)
+				|| localPlacementIsChanged(o.relativeTo, objFromRef(product, ctx).placementRelTo.ifcObjectPlacement as IfcLocalPlacement, ctx)
 		} else { 
 			return true
 		}
@@ -109,7 +109,11 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 					}
 				]
 			]
-			updateIfcElement(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
+			if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
+				product.objectPlacement.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createLocalPlacement(o.placement))
+			}
+		
+			true
 		}
 	}
 	
@@ -117,14 +121,14 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		markedSet.add(o.GUID)
 		
 		updateMetaData(o, objFromRef(product, ctx))
-		
+		/*
 		o.openings.forEach[w |
 			extrModel.forEach[p |
 				if(w.GUID == p.globalId) {
 					updateIfcElement(w, objFromRef(p, ctx), ctx)
 				}					
 			]
-		]
+		] */
 		
 		true
 	}
@@ -145,13 +149,13 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def dispatch updateIfcElement(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
-		markedSet.add(o.GUID)
+		
 	
 		updateIfcElement(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)
 	}
 	
 	def dispatch updateIfcElement(Axis2Placement3D o, IfcAxis2Placement3D product, IWorkflowContext ctx){
-		markedSet.add(o.GUID)
+		
 		var lengthMeasure = objFromRef(objFromRef(product, ctx).location.ifcCartesianPoint, ctx).coordinates.ifcLengthMeasure
 		lengthMeasure.get(0).setValue(o.cartesianX)
 		lengthMeasure.get(1).setValue(o.cartesianY)

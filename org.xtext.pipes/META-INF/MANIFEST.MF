@@ -17,11 +17,11 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.antlr.runtime
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.xtext.example.pipes,
- org.xtext.example.pipes.services,
- org.xtext.example.pipes.parseTreeConstruction,
- org.xtext.example.pipes.parser.antlr,
- org.xtext.example.pipes.parser.antlr.internal,
- org.xtext.example.pipes.validation,
- org.xtext.example.pipes.scoping,
- org.xtext.example.pipes.formatting
+Export-Package: org.xtext.pipes,
+ org.xtext.pipes.services,
+ org.xtext.pipes.parseTreeConstruction,
+ org.xtext.pipes.parser.antlr,
+ org.xtext.pipes.parser.antlr.internal,
+ org.xtext.pipes.validation,
+ org.xtext.pipes.scoping,
+ org.xtext.pipes.formatting
