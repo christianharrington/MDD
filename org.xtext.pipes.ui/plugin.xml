@@ -6,42 +6,42 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="pipes"
-            id="org.xtext.example.pipes.Pipes"
+            id="org.xtext.pipes.Pipes"
             name="Pipes Editor">
         </editor>
     </extension>
     <extension
         point="org.eclipse.ui.handlers">
         <handler
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
             commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
             <activeWhen>
                 <reference
-                    definitionId="org.xtext.example.pipes.Pipes.Editor.opened">
+                    definitionId="org.xtext.pipes.Pipes.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
         <handler
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-            commandId="org.xtext.example.pipes.Pipes.validate">
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+            commandId="org.xtext.pipes.Pipes.validate">
          <activeWhen>
             <reference
-                    definitionId="org.xtext.example.pipes.Pipes.Editor.opened">
+                    definitionId="org.xtext.pipes.Pipes.Editor.opened">
             </reference>
          </activeWhen>
       </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
-        <definition id="org.xtext.example.pipes.Pipes.Editor.opened">
+        <definition id="org.xtext.pipes.Pipes.Editor.opened">
             <and>
                 <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="org.xtext.example.pipes.Pipes" 
+                        value="org.xtext.pipes.Pipes" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
@@ -50,33 +50,33 @@
     <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="org.xtext.example.pipes.Pipes"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="org.xtext.pipes.Pipes"
             name="Pipes">
-            <keywordReference id="org.xtext.example.pipes.ui.keyword_Pipes"/>
+            <keywordReference id="org.xtext.pipes.ui.keyword_Pipes"/>
         </page>
         <page
-            category="org.xtext.example.pipes.Pipes"
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-            id="org.xtext.example.pipes.Pipes.coloring"
+            category="org.xtext.pipes.Pipes"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            id="org.xtext.pipes.Pipes.coloring"
             name="Syntax Coloring">
-            <keywordReference id="org.xtext.example.pipes.ui.keyword_Pipes"/>
+            <keywordReference id="org.xtext.pipes.ui.keyword_Pipes"/>
         </page>
         <page
-            category="org.xtext.example.pipes.Pipes"
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-            id="org.xtext.example.pipes.Pipes.templates"
+            category="org.xtext.pipes.Pipes"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+            id="org.xtext.pipes.Pipes.templates"
             name="Templates">
-            <keywordReference id="org.xtext.example.pipes.ui.keyword_Pipes"/>
+            <keywordReference id="org.xtext.pipes.ui.keyword_Pipes"/>
         </page>
     </extension>
     <extension
             point="org.eclipse.ui.propertyPages">
         <page
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="org.xtext.example.pipes.Pipes"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="org.xtext.pipes.Pipes"
             name="Pipes">
-            <keywordReference id="org.xtext.example.pipes.ui.keyword_Pipes"/>
+            <keywordReference id="org.xtext.pipes.ui.keyword_Pipes"/>
             <enabledWhen>
 	            <adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -86,14 +86,14 @@
     <extension
         point="org.eclipse.ui.keywords">
         <keyword
-            id="org.xtext.example.pipes.ui.keyword_Pipes"
+            id="org.xtext.pipes.ui.keyword_Pipes"
             label="Pipes"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
       <command
             description="Trigger expensive validation"
-            id="org.xtext.example.pipes.Pipes.validate"
+            id="org.xtext.pipes.Pipes.validate"
             name="Validate">
       </command>
     </extension>
@@ -101,12 +101,12 @@
         <menuContribution
             locationURI="popup:#TextEditorContext?after=group.edit">
              <command
-                 commandId="org.xtext.example.pipes.Pipes.validate"
+                 commandId="org.xtext.pipes.Pipes.validate"
                  style="push"
                  tooltip="Trigger expensive validation">
             <visibleWhen checkEnabled="false">
                 <reference
-                    definitionId="org.xtext.example.pipes.Pipes.Editor.opened">
+                    definitionId="org.xtext.pipes.Pipes.Editor.opened">
                 </reference>
             </visibleWhen>
          </command>  
@@ -116,7 +116,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-                	<reference definitionId="org.xtext.example.pipes.Pipes.Editor.opened">
+                	<reference definitionId="org.xtext.pipes.Pipes.Editor.opened">
                 	</reference>
             	</visibleWhen>
 			</command>
@@ -124,11 +124,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 	    <handler
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
             commandId="org.eclipse.xtext.ui.editor.FindReferences">
             <activeWhen>
                 <reference
-                    definitionId="org.xtext.example.pipes.Pipes.Editor.opened">
+                    definitionId="org.xtext.pipes.Pipes.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
@@ -139,19 +139,19 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
 			type="pipes">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
             uriExtension="pipes">
         </resourceServiceProvider>
     </extension>
 
 
-    <!-- marker definitions for org.xtext.example.pipes.Pipes -->
+    <!-- marker definitions for org.xtext.pipes.Pipes -->
     <extension
             id="pipes.check.fast"
             name="Pipes Problem"
@@ -178,11 +178,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler 
-			class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="org.xtext.example.pipes.Pipes.Editor.opened">
+					definitionId="org.xtext.pipes.Pipes.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -202,52 +202,52 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.xtext.example.pipes.Pipes.Editor.opened"/>
+					<reference definitionId="org.xtext.pipes.Pipes.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
 
   <extension point="org.eclipse.compare.contentViewers">
-    <viewer id="org.xtext.example.pipes.Pipes.compare.contentViewers"
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+    <viewer id="org.xtext.pipes.Pipes.compare.contentViewers"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
             extensions="pipes">
     </viewer>
   </extension>
   <extension point="org.eclipse.compare.contentMergeViewers">
-    <viewer id="org.xtext.example.pipes.Pipes.compare.contentMergeViewers"
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+    <viewer id="org.xtext.pipes.Pipes.compare.contentMergeViewers"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
             extensions="pipes" label="Pipes Compare">
      </viewer>
   </extension>
   <extension point="org.eclipse.ui.editors.documentProviders">
-    <provider id="org.xtext.example.pipes.Pipes.editors.documentProviders"
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+    <provider id="org.xtext.pipes.Pipes.editors.documentProviders"
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
             extensions="pipes">
     </provider>
   </extension>
-    <!-- quickfix marker resolution generator for org.xtext.example.pipes.Pipes -->
+    <!-- quickfix marker resolution generator for org.xtext.pipes.Pipes -->
     <extension
             point="org.eclipse.ui.ide.markerResolution">
         <markerResolutionGenerator
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="org.xtext.example.pipes.ui.pipes.check.fast">
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.xtext.pipes.ui.pipes.check.fast">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
             </attribute>
         </markerResolutionGenerator>
         <markerResolutionGenerator
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="org.xtext.example.pipes.ui.pipes.check.normal">
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.xtext.pipes.ui.pipes.check.normal">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
             </attribute>
         </markerResolutionGenerator>
         <markerResolutionGenerator
-            class="org.xtext.example.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="org.xtext.example.pipes.ui.pipes.check.expensive">
+            class="org.xtext.pipes.ui.PipesExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.xtext.pipes.ui.pipes.check.expensive">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">

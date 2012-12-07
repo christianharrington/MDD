@@ -2,6 +2,7 @@
  */
 package pipes;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +21,7 @@ package pipes;
  * @model
  * @generated
  */
-public interface LocalPlacement extends GUIDElement {
+public interface LocalPlacement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Axis2placement3d</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -48,26 +49,26 @@ public interface LocalPlacement extends GUIDElement {
 	void setAxis2placement3d(Axis2Placement3D value);
 
 	/**
-	 * Returns the value of the '<em><b>Relative To</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Relative To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Relative To</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Relative To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relative To</em>' containment reference.
+	 * @return the value of the '<em>Relative To</em>' reference.
 	 * @see #setRelativeTo(LocalPlacement)
 	 * @see pipes.PipesPackage#getLocalPlacement_RelativeTo()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	LocalPlacement getRelativeTo();
 
 	/**
-	 * Sets the value of the '{@link pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}' containment reference.
+	 * Sets the value of the '{@link pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Relative To</em>' containment reference.
+	 * @param value the new value of the '<em>Relative To</em>' reference.
 	 * @see #getRelativeTo()
 	 * @generated
 	 */

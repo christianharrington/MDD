@@ -40,15 +40,6 @@ public interface PipesFactory extends EFactory {
 	Opening createOpening();
 
 	/**
-	 * Returns a new object of class '<em>Wall Relation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Wall Relation</em>'.
-	 * @generated
-	 */
-	WallRelation createWallRelation();
-
-	/**
 	 * Returns a new object of class '<em>Flow Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

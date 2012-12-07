@@ -58,7 +58,6 @@ public class PipesFactoryImpl extends EFactoryImpl implements PipesFactory {
 		switch (eClass.getClassifierID()) {
 			case PipesPackage.WALL: return createWall();
 			case PipesPackage.OPENING: return createOpening();
-			case PipesPackage.WALL_RELATION: return createWallRelation();
 			case PipesPackage.FLOW_SEGMENT: return createFlowSegment();
 			case PipesPackage.LOCAL_PLACEMENT: return createLocalPlacement();
 			case PipesPackage.AXIS2_PLACEMENT3_D: return createAxis2Placement3D();
@@ -88,16 +87,6 @@ public class PipesFactoryImpl extends EFactoryImpl implements PipesFactory {
 	public Opening createOpening() {
 		OpeningImpl opening = new OpeningImpl();
 		return opening;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public WallRelation createWallRelation() {
-		WallRelationImpl wallRelation = new WallRelationImpl();
-		return wallRelation;
 	}
 
 	/**
