@@ -283,7 +283,7 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGUIDElement_GUID() {
+	public EAttribute getGUIDElement_Name() {
 		return (EAttribute)guidElementEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -292,7 +292,7 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getGUIDElement_Name() {
+	public EAttribute getGUIDElement_ElementName() {
 		return (EAttribute)guidElementEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -424,8 +424,8 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 		createEReference(axis2Placement3DEClass, AXIS2_PLACEMENT3_D__REF_DIRECTION);
 
 		guidElementEClass = createEClass(GUID_ELEMENT);
-		createEAttribute(guidElementEClass, GUID_ELEMENT__GUID);
 		createEAttribute(guidElementEClass, GUID_ELEMENT__NAME);
+		createEAttribute(guidElementEClass, GUID_ELEMENT__ELEMENT_NAME);
 		createEAttribute(guidElementEClass, GUID_ELEMENT__DESCRIPTION);
 
 		modelEClass = createEClass(MODEL);
@@ -477,13 +477,13 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 		initEClass(wallEClass, Wall.class, "Wall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(openingEClass, Opening.class, "Opening", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOpening_Walls(), this.getWall(), null, "walls", null, 0, -1, Opening.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOpening_Walls(), this.getWall(), null, "walls", null, 0, -1, Opening.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(flowSegmentEClass, FlowSegment.class, "FlowSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(localPlacementEClass, LocalPlacement.class, "LocalPlacement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocalPlacement_Axis2placement3d(), this.getAxis2Placement3D(), null, "axis2placement3d", null, 0, 1, LocalPlacement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLocalPlacement_RelativeTo(), this.getLocalPlacement(), null, "relativeTo", null, 0, 1, LocalPlacement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLocalPlacement_RelativeTo(), this.getLocalPlacement(), null, "relativeTo", null, 0, 1, LocalPlacement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(axis2Placement3DEClass, Axis2Placement3D.class, "Axis2Placement3D", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAxis2Placement3D_CartesianX(), ecorePackage.getEDouble(), "cartesianX", null, 1, 1, Axis2Placement3D.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -493,8 +493,8 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 		initEReference(getAxis2Placement3D_RefDirection(), this.getDirection(), null, "refDirection", null, 1, 1, Axis2Placement3D.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(guidElementEClass, GUIDElement.class, "GUIDElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGUIDElement_GUID(), ecorePackage.getEString(), "GUID", null, 0, 1, GUIDElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGUIDElement_Name(), ecorePackage.getEString(), "Name", null, 0, 1, GUIDElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGUIDElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, GUIDElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGUIDElement_ElementName(), ecorePackage.getEString(), "elementName", null, 0, 1, GUIDElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGUIDElement_Description(), ecorePackage.getEString(), "Description", null, 0, 1, GUIDElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

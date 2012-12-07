@@ -66,22 +66,22 @@ public interface PipesPackage extends EPackage {
 	int GUID_ELEMENT = 5;
 
 	/**
-	 * The feature id for the '<em><b>GUID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUID_ELEMENT__GUID = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUID_ELEMENT__NAME = 1;
+	int GUID_ELEMENT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Element Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUID_ELEMENT__ELEMENT_NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -112,15 +112,6 @@ public interface PipesPackage extends EPackage {
 	int PRODUCT = 8;
 
 	/**
-	 * The feature id for the '<em><b>GUID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCT__GUID = GUID_ELEMENT__GUID;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,6 +119,15 @@ public interface PipesPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRODUCT__NAME = GUID_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Element Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__ELEMENT_NAME = GUID_ELEMENT__ELEMENT_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -167,15 +167,6 @@ public interface PipesPackage extends EPackage {
 	int WALL = 0;
 
 	/**
-	 * The feature id for the '<em><b>GUID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__GUID = PRODUCT__GUID;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -183,6 +174,15 @@ public interface PipesPackage extends EPackage {
 	 * @ordered
 	 */
 	int WALL__NAME = PRODUCT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Element Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALL__ELEMENT_NAME = PRODUCT__ELEMENT_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -222,15 +222,6 @@ public interface PipesPackage extends EPackage {
 	int OPENING = 1;
 
 	/**
-	 * The feature id for the '<em><b>GUID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPENING__GUID = PRODUCT__GUID;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -238,6 +229,15 @@ public interface PipesPackage extends EPackage {
 	 * @ordered
 	 */
 	int OPENING__NAME = PRODUCT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Element Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPENING__ELEMENT_NAME = PRODUCT__ELEMENT_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -258,7 +258,7 @@ public interface PipesPackage extends EPackage {
 	int OPENING__PLACEMENT = PRODUCT__PLACEMENT;
 
 	/**
-	 * The feature id for the '<em><b>Walls</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Walls</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -286,15 +286,6 @@ public interface PipesPackage extends EPackage {
 	int FLOW_SEGMENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>GUID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SEGMENT__GUID = PRODUCT__GUID;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -302,6 +293,15 @@ public interface PipesPackage extends EPackage {
 	 * @ordered
 	 */
 	int FLOW_SEGMENT__NAME = PRODUCT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Element Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_SEGMENT__ELEMENT_NAME = PRODUCT__ELEMENT_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -350,7 +350,7 @@ public interface PipesPackage extends EPackage {
 	int LOCAL_PLACEMENT__AXIS2PLACEMENT3D = 0;
 
 	/**
-	 * The feature id for the '<em><b>Relative To</b></em>' reference.
+	 * The feature id for the '<em><b>Relative To</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -527,10 +527,10 @@ public interface PipesPackage extends EPackage {
 	EClass getOpening();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link pipes.Opening#getWalls <em>Walls</em>}'.
+	 * Returns the meta object for the reference list '{@link pipes.Opening#getWalls <em>Walls</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Walls</em>'.
+	 * @return the meta object for the reference list '<em>Walls</em>'.
 	 * @see pipes.Opening#getWalls()
 	 * @see #getOpening()
 	 * @generated
@@ -569,10 +569,10 @@ public interface PipesPackage extends EPackage {
 	EReference getLocalPlacement_Axis2placement3d();
 
 	/**
-	 * Returns the meta object for the reference '{@link pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}'.
+	 * Returns the meta object for the containment reference '{@link pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Relative To</em>'.
+	 * @return the meta object for the containment reference '<em>Relative To</em>'.
 	 * @see pipes.LocalPlacement#getRelativeTo()
 	 * @see #getLocalPlacement()
 	 * @generated
@@ -655,17 +655,6 @@ public interface PipesPackage extends EPackage {
 	EClass getGUIDElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pipes.GUIDElement#getGUID <em>GUID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>GUID</em>'.
-	 * @see pipes.GUIDElement#getGUID()
-	 * @see #getGUIDElement()
-	 * @generated
-	 */
-	EAttribute getGUIDElement_GUID();
-
-	/**
 	 * Returns the meta object for the attribute '{@link pipes.GUIDElement#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -675,6 +664,17 @@ public interface PipesPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGUIDElement_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pipes.GUIDElement#getElementName <em>Element Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Element Name</em>'.
+	 * @see pipes.GUIDElement#getElementName()
+	 * @see #getGUIDElement()
+	 * @generated
+	 */
+	EAttribute getGUIDElement_ElementName();
 
 	/**
 	 * Returns the meta object for the attribute '{@link pipes.GUIDElement#getDescription <em>Description</em>}'.
@@ -815,7 +815,7 @@ public interface PipesPackage extends EPackage {
 		EClass OPENING = eINSTANCE.getOpening();
 
 		/**
-		 * The meta object literal for the '<em><b>Walls</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Walls</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -851,7 +851,7 @@ public interface PipesPackage extends EPackage {
 		EReference LOCAL_PLACEMENT__AXIS2PLACEMENT3D = eINSTANCE.getLocalPlacement_Axis2placement3d();
 
 		/**
-		 * The meta object literal for the '<em><b>Relative To</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Relative To</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -919,20 +919,20 @@ public interface PipesPackage extends EPackage {
 		EClass GUID_ELEMENT = eINSTANCE.getGUIDElement();
 
 		/**
-		 * The meta object literal for the '<em><b>GUID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GUID_ELEMENT__GUID = eINSTANCE.getGUIDElement_GUID();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute GUID_ELEMENT__NAME = eINSTANCE.getGUIDElement_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Element Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GUID_ELEMENT__ELEMENT_NAME = eINSTANCE.getGUIDElement_ElementName();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.

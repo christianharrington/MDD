@@ -49,26 +49,26 @@ public interface LocalPlacement extends EObject {
 	void setAxis2placement3d(Axis2Placement3D value);
 
 	/**
-	 * Returns the value of the '<em><b>Relative To</b></em>' reference.
+	 * Returns the value of the '<em><b>Relative To</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Relative To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relative To</em>' reference.
+	 * @return the value of the '<em>Relative To</em>' containment reference.
 	 * @see #setRelativeTo(LocalPlacement)
 	 * @see pipes.PipesPackage#getLocalPlacement_RelativeTo()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	LocalPlacement getRelativeTo();
 
 	/**
-	 * Sets the value of the '{@link pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}' reference.
+	 * Sets the value of the '{@link pipes.LocalPlacement#getRelativeTo <em>Relative To</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Relative To</em>' reference.
+	 * @param value the new value of the '<em>Relative To</em>' containment reference.
 	 * @see #getRelativeTo()
 	 * @generated
 	 */
