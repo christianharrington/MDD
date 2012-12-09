@@ -19,8 +19,8 @@ import pipes.PipesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link pipes.impl.GUIDElementImpl#getGUID <em>GUID</em>}</li>
  *   <li>{@link pipes.impl.GUIDElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link pipes.impl.GUIDElementImpl#getElementName <em>Element Name</em>}</li>
  *   <li>{@link pipes.impl.GUIDElementImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
@@ -28,26 +28,6 @@ import pipes.PipesPackage;
  * @generated
  */
 public class GUIDElementImpl extends EObjectImpl implements GUIDElement {
-	/**
-	 * The default value of the '{@link #getGUID() <em>GUID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGUID()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String GUID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getGUID() <em>GUID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGUID()
-	 * @generated
-	 * @ordered
-	 */
-	protected String guid = GUID_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,6 +47,26 @@ public class GUIDElementImpl extends EObjectImpl implements GUIDElement {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getElementName() <em>Element Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElementName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ELEMENT_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getElementName() <em>Element Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getElementName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String elementName = ELEMENT_NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -112,27 +112,6 @@ public class GUIDElementImpl extends EObjectImpl implements GUIDElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getGUID() {
-		return guid;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGUID(String newGUID) {
-		String oldGUID = guid;
-		guid = newGUID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.GUID_ELEMENT__GUID, oldGUID, guid));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -147,6 +126,27 @@ public class GUIDElementImpl extends EObjectImpl implements GUIDElement {
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.GUID_ELEMENT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getElementName() {
+		return elementName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setElementName(String newElementName) {
+		String oldElementName = elementName;
+		elementName = newElementName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.GUID_ELEMENT__ELEMENT_NAME, oldElementName, elementName));
 	}
 
 	/**
@@ -178,10 +178,10 @@ public class GUIDElementImpl extends EObjectImpl implements GUIDElement {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PipesPackage.GUID_ELEMENT__GUID:
-				return getGUID();
 			case PipesPackage.GUID_ELEMENT__NAME:
 				return getName();
+			case PipesPackage.GUID_ELEMENT__ELEMENT_NAME:
+				return getElementName();
 			case PipesPackage.GUID_ELEMENT__DESCRIPTION:
 				return getDescription();
 		}
@@ -196,11 +196,11 @@ public class GUIDElementImpl extends EObjectImpl implements GUIDElement {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PipesPackage.GUID_ELEMENT__GUID:
-				setGUID((String)newValue);
-				return;
 			case PipesPackage.GUID_ELEMENT__NAME:
 				setName((String)newValue);
+				return;
+			case PipesPackage.GUID_ELEMENT__ELEMENT_NAME:
+				setElementName((String)newValue);
 				return;
 			case PipesPackage.GUID_ELEMENT__DESCRIPTION:
 				setDescription((String)newValue);
@@ -217,11 +217,11 @@ public class GUIDElementImpl extends EObjectImpl implements GUIDElement {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PipesPackage.GUID_ELEMENT__GUID:
-				setGUID(GUID_EDEFAULT);
-				return;
 			case PipesPackage.GUID_ELEMENT__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case PipesPackage.GUID_ELEMENT__ELEMENT_NAME:
+				setElementName(ELEMENT_NAME_EDEFAULT);
 				return;
 			case PipesPackage.GUID_ELEMENT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
@@ -238,10 +238,10 @@ public class GUIDElementImpl extends EObjectImpl implements GUIDElement {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PipesPackage.GUID_ELEMENT__GUID:
-				return GUID_EDEFAULT == null ? guid != null : !GUID_EDEFAULT.equals(guid);
 			case PipesPackage.GUID_ELEMENT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case PipesPackage.GUID_ELEMENT__ELEMENT_NAME:
+				return ELEMENT_NAME_EDEFAULT == null ? elementName != null : !ELEMENT_NAME_EDEFAULT.equals(elementName);
 			case PipesPackage.GUID_ELEMENT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
@@ -258,10 +258,10 @@ public class GUIDElementImpl extends EObjectImpl implements GUIDElement {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (GUID: ");
-		result.append(guid);
-		result.append(", Name: ");
+		result.append(" (name: ");
 		result.append(name);
+		result.append(", elementName: ");
+		result.append(elementName);
 		result.append(", Description: ");
 		result.append(description);
 		result.append(')');

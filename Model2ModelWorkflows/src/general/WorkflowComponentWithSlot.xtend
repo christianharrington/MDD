@@ -12,8 +12,9 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	val String openingsSlot = 'openings'
 	val String flowSegmentsSlot = 'flowSegments'
 	val String entityMapSlot = 'entityMap'
-	val String highestIdSlot = 'highestId'
 	val String guidMapSlot = 'guidMap'
+	
+	private static var int highestId = 0
 
 	def getFileSlot() { fileSlot }
 	
@@ -46,4 +47,13 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 		}		
 	}
 	
+	def static setHighestId(int id) {
+		highestId = id
+	}
+	
+	def static getNewId() {
+		val s = "i" + highestId
+		highestId = highestId + 1
+		s
+	}
 }

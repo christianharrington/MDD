@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Opening extends Product {
 	/**
-	 * Returns the value of the '<em><b>Walls</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Walls</b></em>' reference list.
 	 * The list contents are of type {@link pipes.Wall}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -30,9 +30,9 @@ public interface Opening extends Product {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Walls</em>' containment reference list.
+	 * @return the value of the '<em>Walls</em>' reference list.
 	 * @see pipes.PipesPackage#getOpening_Walls()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Wall> getWalls();

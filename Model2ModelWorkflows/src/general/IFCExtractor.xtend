@@ -61,12 +61,13 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 			}
 		]
 		
+		WorkflowComponentWithSlot::setHighestId(highestId)
+		
 		println("Openings: " + openings.size + "\nFlow segments: " + flowSegments.size())
 
 		ctx.put(openingsSlot, openings)
 		ctx.put(flowSegmentsSlot, flowSegments)
 		ctx.put(entityMapSlot, entityMap)
-		ctx.put(highestIdSlot, highestId)
 		ctx.put(guidMapSlot, guidMap)
 		println("Done: IFCPipesOpeningsExtractor")
 	}

@@ -41,7 +41,7 @@ public class LocalPlacementImpl extends EObjectImpl implements LocalPlacement {
 	protected Axis2Placement3D axis2placement3d;
 
 	/**
-	 * The cached value of the '{@link #getRelativeTo() <em>Relative To</em>}' reference.
+	 * The cached value of the '{@link #getRelativeTo() <em>Relative To</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRelativeTo()
@@ -118,14 +118,6 @@ public class LocalPlacementImpl extends EObjectImpl implements LocalPlacement {
 	 * @generated
 	 */
 	public LocalPlacement getRelativeTo() {
-		if (relativeTo != null && relativeTo.eIsProxy()) {
-			InternalEObject oldRelativeTo = (InternalEObject)relativeTo;
-			relativeTo = (LocalPlacement)eResolveProxy(oldRelativeTo);
-			if (relativeTo != oldRelativeTo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, oldRelativeTo, relativeTo));
-			}
-		}
 		return relativeTo;
 	}
 
@@ -134,8 +126,14 @@ public class LocalPlacementImpl extends EObjectImpl implements LocalPlacement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocalPlacement basicGetRelativeTo() {
-		return relativeTo;
+	public NotificationChain basicSetRelativeTo(LocalPlacement newRelativeTo, NotificationChain msgs) {
+		LocalPlacement oldRelativeTo = relativeTo;
+		relativeTo = newRelativeTo;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, oldRelativeTo, newRelativeTo);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -144,10 +142,17 @@ public class LocalPlacementImpl extends EObjectImpl implements LocalPlacement {
 	 * @generated
 	 */
 	public void setRelativeTo(LocalPlacement newRelativeTo) {
-		LocalPlacement oldRelativeTo = relativeTo;
-		relativeTo = newRelativeTo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, oldRelativeTo, relativeTo));
+		if (newRelativeTo != relativeTo) {
+			NotificationChain msgs = null;
+			if (relativeTo != null)
+				msgs = ((InternalEObject)relativeTo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, null, msgs);
+			if (newRelativeTo != null)
+				msgs = ((InternalEObject)newRelativeTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, null, msgs);
+			msgs = basicSetRelativeTo(newRelativeTo, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO, newRelativeTo, newRelativeTo));
 	}
 
 	/**
@@ -160,6 +165,8 @@ public class LocalPlacementImpl extends EObjectImpl implements LocalPlacement {
 		switch (featureID) {
 			case PipesPackage.LOCAL_PLACEMENT__AXIS2PLACEMENT3D:
 				return basicSetAxis2placement3d(null, msgs);
+			case PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO:
+				return basicSetRelativeTo(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -175,8 +182,7 @@ public class LocalPlacementImpl extends EObjectImpl implements LocalPlacement {
 			case PipesPackage.LOCAL_PLACEMENT__AXIS2PLACEMENT3D:
 				return getAxis2placement3d();
 			case PipesPackage.LOCAL_PLACEMENT__RELATIVE_TO:
-				if (resolve) return getRelativeTo();
-				return basicGetRelativeTo();
+				return getRelativeTo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

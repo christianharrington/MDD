@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -33,7 +34,7 @@ import pipes.Wall;
  */
 public class OpeningImpl extends ProductImpl implements Opening {
 	/**
-	 * The cached value of the '{@link #getWalls() <em>Walls</em>}' containment reference list.
+	 * The cached value of the '{@link #getWalls() <em>Walls</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getWalls()
@@ -68,23 +69,9 @@ public class OpeningImpl extends ProductImpl implements Opening {
 	 */
 	public EList<Wall> getWalls() {
 		if (walls == null) {
-			walls = new EObjectContainmentEList<Wall>(Wall.class, this, PipesPackage.OPENING__WALLS);
+			walls = new EObjectResolvingEList<Wall>(Wall.class, this, PipesPackage.OPENING__WALLS);
 		}
 		return walls;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case PipesPackage.OPENING__WALLS:
-				return ((InternalEList<?>)getWalls()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
