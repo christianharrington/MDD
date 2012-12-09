@@ -83,9 +83,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def dispatch updateIfcElement(FlowSegment o, IfcFlowSegment product, IWorkflowContext ctx){
-		if(!markedSet.contains(o.GUID))
+		if(!markedSet.contains(o.name))
 		{
-			markedSet.add(o.GUID)
+			markedSet.add(o.name)
 			
 			updateMetaData(o, objFromRef(product, ctx))
 			
@@ -96,16 +96,16 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def dispatch updateIfcElement(Opening o, IfcOpeningElement product, IWorkflowContext ctx){
-		if(!markedSet.contains(o.GUID))
+		if(!markedSet.contains(o.name))
 		{
-			markedSet.add(o.GUID)
+			markedSet.add(o.name)
 			
 			updateMetaData(o, objFromRef(product, ctx))
 			
 			
 			o.walls.forEach[w |
 				extrModel.forEach[p |
-					if(w.GUID == p.globalId) {
+					if(w.name == p.globalId) {
 						updateIfcElement(w, objFromRef(p, ctx), ctx)
 					}
 				]
@@ -119,13 +119,13 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def dispatch updateIfcElement(Wall o, IfcWall product, IWorkflowContext ctx){
-		markedSet.add(o.GUID)
+		markedSet.add(o.name)
 		
 		updateMetaData(o, objFromRef(product, ctx))
 		/*
 		o.openings.forEach[w |
 			extrModel.forEach[p |
-				if(w.GUID == p.globalId) {
+				if(w.name == p.globalId) {
 					updateIfcElement(w, objFromRef(p, ctx), ctx)
 				}					
 			]
@@ -161,7 +161,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
 	// Creating new opening element
 	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createOpening(Opening o) {
-		f.setGlobalId(o.GUID)
+		f.setGlobalId(o.name)
 		f.setDescription(o.description)
 		f.setName(o.name)
 		
@@ -169,7 +169,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		for (w: o.walls) {
 			val rve = createIfcRelVoidsElementFromOpening(w, f)
-			entityMap.put(rve.GUID, )
+			//entityMap.put(rve.name, )
 		}
 
 		entityMap.put(f.globalId, f)
@@ -255,7 +255,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			FinalPackage::eINSTANCE.relatedOpeningElementType_IfcFeatureElementSubtraction, o
 		)
 		
-		val wall = guidMap.get(w.GUID) as IfcWall
+		val wall = guidMap.get(w.name) as IfcWall
 		f.relatingBuildingElement.eSet(FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, wall)
 		
 		//Find original wall
@@ -264,7 +264,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			if(pe instanceof Wall) {
 				entityMap.values.forEach[v |
 					if(v instanceof IfcRoot) {
-						if(pe.GUID == (v as IfcElement).globalId) {
+						if(pe.name == (v as IfcElement).globalId) {
 							f.relatingBuildingElement.ifcElementGroup.set(
 								FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, v as IfcElement
 							)
@@ -354,8 +354,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		//Run through entire object graph and update
 		//If the object is a new opening - add it
 		pipesModel.elements.forEach[po |
-			if(guidMap.containsKey(po.GUID)) {
-				updateIfcElement(po, guidMap.get(po.GUID), ctx)
+			if(guidMap.containsKey(po.name)) {
+				updateIfcElement(po, guidMap.get(po.name), ctx)
 			}
 			else {
 				if(po instanceof Opening) {
@@ -369,7 +369,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		//This will result in garbage object left in the model 
 		flowSegments.forEach[ifcF |
 			val found = pipesModel.elements.exists[f |
-				ifcF.globalId == f.GUID
+				ifcF.globalId == f.name
 			]
 			if(!found) {
 				entityMap.remove(ifcF.id)

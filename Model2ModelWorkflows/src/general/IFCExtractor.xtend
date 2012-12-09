@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import java.util.HashMap
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.Entity
 import java.util.ArrayList
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcWall
 
 class IFCExtractor extends WorkflowComponentWithSlot {
 	// Current doesn't work - always true
@@ -26,6 +27,7 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 		
 		val openings = new ArrayList<IfcOpeningElement>()
 		val flowSegments = new ArrayList<IfcFlowSegment>()
+		val walls = new ArrayList<IfcWall>()
 		val entityMap = new HashMap<String, Entity>()
 		val guidMap = new HashMap<String, Entity>()
 		
@@ -58,15 +60,25 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 						}
 					}
 				}
+				else if (en instanceof IfcWall) {
+					val w = en as IfcWall
+					if (w.id != null) {
+						walls.add(w)
+						if (!w.globalId.nullOrEmpty) {
+							guidMap.put(w.globalId, w)
+						}
+					}
+				}
 			}
 		]
 		
 		WorkflowComponentWithSlot::setHighestId(highestId)
 		
-		println("Openings: " + openings.size + "\nFlow segments: " + flowSegments.size())
+		println("Openings: " + openings.size + "\nFlow segments: " + flowSegments.size() + "\nWalls: " + walls.size())
 
 		ctx.put(openingsSlot, openings)
 		ctx.put(flowSegmentsSlot, flowSegments)
+		ctx.put(wallsSlot, walls)
 		ctx.put(entityMapSlot, entityMap)
 		ctx.put(guidMapSlot, guidMap)
 		println("Done: IFCPipesOpeningsExtractor")

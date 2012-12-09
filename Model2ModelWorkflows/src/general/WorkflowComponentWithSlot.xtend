@@ -11,6 +11,7 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	val String mainModelSlot = 'mainModel' //IFC main model object graph
 	val String openingsSlot = 'openings'
 	val String flowSegmentsSlot = 'flowSegments'
+	val String wallsSlot = 'walls'
 	val String entityMapSlot = 'entityMap'
 	val String guidMapSlot = 'guidMap'
 	
@@ -25,6 +26,8 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	def getOpeningsSlot() { openingsSlot }
 	
 	def getFlowSegmentsSlot() { flowSegmentsSlot }
+	
+	def getWallsSlot() { wallsSlot }
 	
 	def getEntityMapSlot() { entityMapSlot }
 	
