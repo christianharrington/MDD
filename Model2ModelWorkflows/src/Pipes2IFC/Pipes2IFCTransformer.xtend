@@ -166,7 +166,10 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		f.setObjectPlacement(createObjectPlacementType(o.placement))
 		
-		
+		for (w: o.walls) {
+			val rve = createIfcRelVoidsElementFromOpening(w, f)
+			entityMap.put(rve.GUID, )
+		}
 
 		entityMap.put(f.globalId, f)
 	}
@@ -251,7 +254,11 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			FinalPackage::eINSTANCE.relatedOpeningElementType_IfcFeatureElementSubtraction, o
 		)
 		
+		val wall = guidMap.get(w.GUID) as IfcWall
+		f.relatingBuildingElement.eSet(FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, wall)
+		
 		//Find original wall
+		/*
 		pipesModel.elements.forEach[pe |
 			if(pe instanceof Wall) {
 				entityMap.values.forEach[v |
@@ -264,7 +271,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 					}
 				]
 			}			
-		]	
+		]	*/
 	}
 	//End creating new object
 	
