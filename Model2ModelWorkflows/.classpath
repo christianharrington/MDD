@@ -36,5 +36,8 @@
 	<classpathentry kind="lib" path="dep/javax.inject_1.0.0.v20091030.jar"/>
 	<classpathentry kind="lib" path="dep/org.antlr.runtime_3.2.0.v201101311130.jar"/>
 	<classpathentry kind="lib" path="dep/org.antlr.runtime.source_3.2.0.v201101311130.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.xtext.pipes"/>
+	<classpathentry kind="lib" path="dep/org.eclipse.emf.mwe.utils_1.2.1.v201211130804.jar"/>
+	<classpathentry kind="lib" path="dep/org.eclipse.emf.mwe.utils.source_1.2.1.v201211130804.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
