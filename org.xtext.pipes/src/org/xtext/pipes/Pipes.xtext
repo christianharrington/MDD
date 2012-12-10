@@ -13,7 +13,7 @@ Model returns Model:
 
 
 EString returns ecore::EString:
-	STRING | ID;
+	STRING;
 
 WallRule returns Wall:
 	'Wall' name=EString
@@ -27,7 +27,7 @@ Opening returns Opening:
 		('Name' elementName=EString)?
 		('Description' Description=EString)?
 		'placement' placement=LocalPlacement
-		'walls' walls+=[Wall|ID] ( "," walls+=[Wall|ID])*
+		'walls' walls+=[Wall|STRING] ( "," walls+=[Wall|STRING])*
 	;
 
 
