@@ -31,7 +31,6 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
 import org.tech.iai.ifc.xml.ifc._2x3.final_.AxisType2
 import org.tech.iai.ifc.xml.ifc._2x3.final_.RefDirectionType1
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.Entity
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement
 import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.emf.ecore.resource.Resource
 import org.tech.iai.ifc.xml.ifc._2x3.final_.DirectionRatiosType
@@ -78,7 +77,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
 	// Update elements
 	def private updateMetaData(GUIDElement o, IfcRoot product) {
-		product.setName(o.name)
+		product.setName(o.elementName)
 		product.setDescription(o.description)
 	}
 	
@@ -111,7 +110,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 				]
 			]
 			if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
-				product.objectPlacement.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createLocalPlacement(o.placement))
+				val instance = FinalPackage::eINSTANCE
+				var op = product.eGet(instance.objectPlacementType_IfcObjectPlacement)
+				op = createLocalPlacement(o.placement)
 			}
 		
 			true
@@ -161,69 +162,101 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
 	// Creating new opening element
 	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createOpening(Opening o) {
-		f.setGlobalId(o.name)
+		val uuid = UUID::randomUUID().toString()
+		f.setGlobalId(uuid)
 		f.setDescription(o.description)
 		f.setName(o.name)
+		var id = newId
+		println('Opening with ID ' + id)
+		f.setId(id)
 		
 		f.setObjectPlacement(createObjectPlacementType(o.placement))
 		
+		var refOpening = createRefOpening(f.id)
 		for (w: o.walls) {
-			val rve = createIfcRelVoidsElementFromOpening(w, f)
-			//entityMap.put(rve.name, )
+			val rve = createRelVoidsElementFromOpening(w, refOpening)
+			entityMap.put(rve.id, rve)
 		}
 
-		entityMap.put(f.globalId, f)
+		entityMap.put(f.id, f)
+				
+	}
+	
+	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createRefOpening(String i) {
+		f.setRef(i)
 	}
 	
 	def ObjectPlacementType create f: ifcFactory.createObjectPlacementType() createObjectPlacementType(LocalPlacement p) {
-		//f.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE., createLocalPlacement(p))
 		val instance = FinalPackage::eINSTANCE
-		//f.ifcObjectPlacementGroup.add(fisk.objectPlacementType_IfcObjectPlacement, createLocalPlacement(p))
 		var op = f.eGet(instance.objectPlacementType_IfcObjectPlacement)
-		op = createLocalPlacement(p)
+		var ifcLocalPlacement = createLocalPlacement(p)
+		entityMap.put(ifcLocalPlacement.id, ifcLocalPlacement)
+		op = createRefLocalPlacement(ifcLocalPlacement.id)
 	}
 	
 	def IfcLocalPlacement create f: ifcFactory.createIfcLocalPlacement() createLocalPlacement(LocalPlacement p) {
+		f.setId(newId)
 		if(p.relativeTo != null) {
 			f.setPlacementRelTo(createPlacementRelToType(p))
 		}
 		f.setRelativePlacement(createRelativePlacementType(p))
 	}
 	
+	def IfcLocalPlacement create f: ifcFactory.createIfcLocalPlacement() createRefLocalPlacement(String i) {
+		f.setRef(i)
+	}
+	
 	def PlacementRelToType create f: ifcFactory.createPlacementRelToType createPlacementRelToType(LocalPlacement p) {
-		f.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createLocalPlacement(p))
+		var lp = createLocalPlacement(p)
+		entityMap.put(lp.id, lp)
+		f.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(lp.id))
 	}
 	
 	def RelativePlacementType create f: ifcFactory.createRelativePlacementType createRelativePlacementType(LocalPlacement p) {
-		// 
-		f.setIfcAxis2Placement3D(createAxis2Placement3D(p.axis2placement3d))
+		var axis2placement3d = createAxis2Placement3D(p.axis2placement3d)
+		entityMap.put(axis2placement3d.id, axis2placement3d)
+		f.setIfcAxis2Placement3D(createRefAxis2Placement3D(axis2placement3d.id))
 	}
 	
 	def IfcAxis2Placement3D create f: ifcFactory.createIfcAxis2Placement3D() createAxis2Placement3D(Axis2Placement3D a) {
+		f.setId(newId)
 		if(!(a.axis == null && a.refDirection == null)) {
 			f.setAxis(createAxisType2(a))
 			f.setRefDirection(createRefDirectionType1(a))
 		}
 		f.location = createLocationType()
-		f.location.setIfcCartesianPoint(createIfcCartesianPoint(a))
+		var cartesianPoint = createCartesianPoint(a)
+		entityMap.put(cartesianPoint.id, cartesianPoint)
+		f.location.setIfcCartesianPoint(createRefCartesianPoint(cartesianPoint.id))
+	}
+	
+	def IfcAxis2Placement3D create f: ifcFactory.createIfcAxis2Placement3D() createRefAxis2Placement3D(String i) {
+		f.setRef(i)
 	}
 	
 	def LocationType create f: ifcFactory.createLocationType() createLocationType() {}
 	
 	def AxisType2 create f: ifcFactory.createAxisType2() createAxisType2(Axis2Placement3D a) {
-		f.setIfcDirection(createIfcDirection(a.axis))
+		var axis = createDirection(a.axis)
+		f.setIfcDirection(createRefDirection(axis.id))
 	}
 	
 	def RefDirectionType1 create f: ifcFactory.createRefDirectionType1 createRefDirectionType1(Axis2Placement3D a) {
-		f.setIfcDirection(createIfcDirection(a.refDirection))
+		var ref = createDirection(a.axis)
+		f.setIfcDirection(createRefDirection(ref.id))
 	}
 	
-	def IfcDirection create f: ifcFactory.createIfcDirection() createIfcDirection(Direction d) {
+	def IfcDirection create f: ifcFactory.createIfcDirection() createDirection(Direction d) {
+		f.setId(newId)
 		f.directionRatios = createDirectionRatiosType()
 		var ratios = f.directionRatios.doubleWrapper
 		ratios.add(createDoubleWrapperTypeFromDouble(d.x))
 		ratios.add(createDoubleWrapperTypeFromDouble(d.y))
 		ratios.add(createDoubleWrapperTypeFromDouble(d.z))
+	}
+	
+	def IfcDirection create f: ifcFactory.createIfcDirection() createRefDirection(String i) {
+		f.setRef(i)
 	}
 	
 	def DirectionRatiosType create f: ifcFactory.createDirectionRatiosType() createDirectionRatiosType() {}
@@ -232,47 +265,42 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.setValue(d)
 	}
 	
-	def IfcCartesianPoint create f: ifcFactory.createIfcCartesianPoint createIfcCartesianPoint(Axis2Placement3D a) {
+	def IfcCartesianPoint create f: ifcFactory.createIfcCartesianPoint createCartesianPoint(Axis2Placement3D a) {
+		f.setId(newId)
 		f.coordinates = createCoordinatesType1()
 		var lengthMeasure = f.coordinates.ifcLengthMeasure
-		lengthMeasure.add(createIfcLengthMeasureTypeFromDouble(a.cartesianX))
-		lengthMeasure.add(createIfcLengthMeasureTypeFromDouble(a.cartesianY))
-		lengthMeasure.add(createIfcLengthMeasureTypeFromDouble(a.cartesianZ))
+		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianX))
+		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianY))
+		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianZ))
+	}
+	
+	def IfcCartesianPoint create f: ifcFactory.createIfcCartesianPoint createRefCartesianPoint(String i) {
+		f.setRef(i)
 	}
 	
 	def CoordinatesType1 create f: ifcFactory.createCoordinatesType1() createCoordinatesType1() {}
 	
-	def IfcLengthMeasureType create f: ifcFactory.createIfcLengthMeasureType() createIfcLengthMeasureTypeFromDouble(double d) {
+	def IfcLengthMeasureType create f: ifcFactory.createIfcLengthMeasureType() createLengthMeasureTypeFromDouble(double d) {
 		f.setValue(d)
 	}
 	
-	def IfcRelVoidsElement create f: ifcFactory.createIfcRelVoidsElement() createIfcRelVoidsElementFromOpening(Wall w, IfcOpeningElement o) {
+	def IfcRelVoidsElement create f: ifcFactory.createIfcRelVoidsElement() createRelVoidsElementFromOpening(Wall w, IfcOpeningElement o) {
 		val uuid = UUID::randomUUID().toString()
 		f.setGlobalId(uuid)
+		f.setId(newId)
 		
 		//Set opening
-		f.relatedOpeningElement.ifcFeatureElementSubtractionGroup.set(
+		f.relatedOpeningElement.ifcFeatureElementSubtraction.eSet(
 			FinalPackage::eINSTANCE.relatedOpeningElementType_IfcFeatureElementSubtraction, o
 		)
 		
 		val wall = guidMap.get(w.name) as IfcWall
-		f.relatingBuildingElement.eSet(FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, wall)
+		f.relatingBuildingElement.eSet(FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, createRefWall(wall.ref))
 		
-		//Find original wall
-		/*
-		pipesModel.elements.forEach[pe |
-			if(pe instanceof Wall) {
-				entityMap.values.forEach[v |
-					if(v instanceof IfcRoot) {
-						if(pe.name == (v as IfcElement).globalId) {
-							f.relatingBuildingElement.ifcElementGroup.set(
-								FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, v as IfcElement
-							)
-						}
-					}
-				]
-			}			
-		]	*/
+	}
+	
+	def IfcWall create f: ifcFactory.createIfcWall() createRefWall(String i) {
+		f.setRef(i)
 	}
 	//End creating new object
 	
