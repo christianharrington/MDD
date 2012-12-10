@@ -5692,6 +5692,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="final.ecore#//IfcElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute final.ecore#//IfcElement/tag"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference final.ecore#//IfcElement/HasOpenings"/>
     </genClasses>
     <genClasses image="false" ecoreClass="final.ecore#//IfcElementarySurface">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference final.ecore#//IfcElementarySurface/position"/>

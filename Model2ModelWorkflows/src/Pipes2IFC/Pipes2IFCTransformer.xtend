@@ -40,6 +40,13 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.CoordinatesType1
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasureType
 import org.tech.iai.ifc.xml.ifc._2x3.final_.LocationType
 import java.util.UUID
+import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.UosImpl
+import org.iso.standard._10303.part._28.version._2.xmlschema.common.CommonPackage
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.common.util.BasicEList
+import org.tech.iai.ifc.xml.ifc._2x3.final_.Uos
+import org.eclipse.emf.common.util.DelegatingEList
+import org.eclipse.emf.ecore.impl.EStructuralFeatureImpl$BasicFeatureMapEntry
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
@@ -170,6 +177,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		println('Opening with ID ' + id)
 		f.setId(id)
 		
+		
 		f.setObjectPlacement(createObjectPlacementType(o.placement))
 		
 		var refOpening = createRefOpening(f.id)
@@ -177,9 +185,25 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			val rve = createRelVoidsElementFromOpening(w, refOpening)
 			entityMap.put(rve.id, rve)
 		}
-
-		entityMap.put(f.id, f)
+		
+		val iter = resource.contents.get(0).eAllContents
+		val entityList = new BasicEList<Entity>()
+		while (iter.hasNext()) {
+			val item = iter.next()
+			if (item instanceof Uos) {
+				val uosItem = item as Uos
+				entityList.add(f)
+				entityList.addAll(uosItem.entity)
+				uosItem.eSet(FinalPackage::eINSTANCE.uos_Entity, entityList)
+				resource.contents.add(f)
+				//uosItem.group.
+				//val entry = new EStructuralFeatureImpl$SimpleFeatureMapEntry()
 				
+				//uosItem.entityGroup
+			}
+		}	
+
+		entityMap.put(f.id, f)	
 	}
 	
 	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createRefOpening(String i) {
@@ -408,6 +432,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		]
 		
 		collectGarbage(ctx)
+		ctx.put(mainModelSlot, resource)
 		
 		println("Done: Pipes2IFCTransformer")
 	}
