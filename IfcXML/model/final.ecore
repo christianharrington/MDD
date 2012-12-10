@@ -65300,8 +65300,8 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entity" upperBound="-1"
-        eType="ecore:EClass common.ecore#//Entity" changeable="false" volatile="true"
-        transient="true" derived="true" containment="true" resolveProxies="false">
+        eType="ecore:EClass common.ecore#//Entity" volatile="true" transient="true"
+        derived="true" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="Entity"/>
