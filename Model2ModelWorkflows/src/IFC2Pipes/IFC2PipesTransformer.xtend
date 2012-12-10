@@ -14,10 +14,8 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
-import java.util.ArrayList
 import pipes.Axis2Placement3D
 import pipes.Direction
-import general.InvalidIFCException
 import org.eclipse.xtext.xbase.lib.BooleanExtensions
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcWall

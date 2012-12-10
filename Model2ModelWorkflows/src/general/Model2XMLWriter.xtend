@@ -6,7 +6,6 @@ import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.xmi.XMLResource
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 
 class Model2XMLWriter extends WorkflowComponentWithSlot {
 	

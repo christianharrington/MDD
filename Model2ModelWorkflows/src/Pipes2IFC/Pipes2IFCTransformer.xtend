@@ -40,13 +40,8 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.CoordinatesType1
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasureType
 import org.tech.iai.ifc.xml.ifc._2x3.final_.LocationType
 import java.util.UUID
-import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.UosImpl
-import org.iso.standard._10303.part._28.version._2.xmlschema.common.CommonPackage
-import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.common.util.BasicEList
 import org.tech.iai.ifc.xml.ifc._2x3.final_.Uos
-import org.eclipse.emf.common.util.DelegatingEList
-import org.eclipse.emf.ecore.impl.EStructuralFeatureImpl$BasicFeatureMapEntry
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
