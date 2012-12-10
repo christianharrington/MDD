@@ -6,16 +6,23 @@ import general.IFC2ModelReader
 var ifcWritePath = 'bin/output.ifcxml'
 
 var IFCFilePath = 'NanoLabBuilding/Merging_test_small.ifcxml'
-var xmiReadPath = 'bin/instance.xmi'
+var pipesReadPath = 'NanoLabBuilding/example.pipes'
 
 Workflow {
 	
-	component = PipesXMI2ModelReader {
-		path = xmiReadPath
+	//Don't know if this is important
+	bean = org.eclipse.emf.mwe.utils.StandaloneSetup {
+		platformUri = "../"
+		registerGeneratedEPackage = "pipes.PipesPackage"
+		registerEcoreFile = "platform:/resource/Pipes/model/Pipes.ecore"
 	}
 	
 	component = IFC2ModelReader {
 		file = IFCFilePath
+	}
+	
+	component = Pipes2ModelReader {
+		path = pipesReadPath
 	}
 	
 	component = general.IFCExtractor {}
