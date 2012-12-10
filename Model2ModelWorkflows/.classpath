@@ -12,7 +12,6 @@
 	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.emf.mwe2.runtime_2.4.0.v201211130804.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.emf.mwe2.runtime.source_2.4.0.v201211130804.jar"/>
-	<classpathentry kind="lib" path="dep/org.eclipse.xpand_1.2.0.v201211130812.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.xpand.source_1.2.0.v201211130812.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.emf.common_2.8.0.v20120911-0500.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.emf.common.source_2.8.0.v20120911-0500.jar"/>
@@ -39,5 +38,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/org.xtext.pipes"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.emf.mwe.utils_1.2.1.v201211130804.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.emf.mwe.utils.source_1.2.1.v201211130804.jar"/>
+	<classpathentry kind="lib" path="dep/org.eclipse.xpand_1.2.0.v201211130812.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

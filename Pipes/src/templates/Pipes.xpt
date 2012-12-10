@@ -29,22 +29,19 @@ Pipes
 «DEFINE entry FOR Wall»
 Wall «name»
 	Name «elementName»
-	Description «Description»
 	placement «EXPAND entry FOR placement»
 «ENDDEFINE»
 
 «DEFINE entry FOR Opening»
 Opening «name»
 	Name «elementName»
-	Description «Description»
 	placement «EXPAND entry FOR placement»
 	walls
 «ENDDEFINE»
 
 «DEFINE entry FOR FlowSegment»
 Pipe «name»
-	Name «elementName»
-	Description «Description»
+	Name «this.elementName»
 	placement «EXPAND entry FOR placement»
 «ENDDEFINE»
 
