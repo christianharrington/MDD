@@ -1,0 +1,47 @@
+Walls
+	Wall hej
+		Name "SomeWall"
+		Description "Yup"
+		placement {
+			axis2placement3d 
+			{
+				cartesian (3.0, 5.0, 8.0)	
+				axis (3.0, 5.0)
+				refDir (6.0, 4.0)
+			}
+			
+		} and
+	Wall bro
+		Name "SomeOtherWall"
+		Description "Bum"
+		placement {
+			axis2placement3d 
+			{
+				cartesian (3.0, 5.0, 8.0)	
+				axis (3.0, 5.0)
+				refDir (6.0, 4.0)
+			}
+		}
+Openings
+	Opening du
+		Name "Shh"
+		placement {
+			axis2placement3d 
+			{
+				cartesian (3.0, 5.0, 8.0)	
+				axis (3.0, 5.0)
+				refDir (6.0, 4.0)
+			}
+		}	
+		walls hej
+Pipes
+	Pipe noidea
+		Name "Somename"
+		placement {
+			axis2placement3d 
+			{
+				cartesian (3.0, 5.0, 8.0)	
+				axis (3.0, 5.0)
+				refDir (6.0, 4.0)
+			}
+		}
