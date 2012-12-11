@@ -100,9 +100,9 @@ ruleEString
     }
 	:
 (
-{ before(grammarAccess.getEStringAccess().getAlternatives()); }
-(rule__EString__Alternatives)
-{ after(grammarAccess.getEStringAccess().getAlternatives()); }
+{ before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall()); }
+	RULE_STRING
+{ after(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall()); }
 )
 
 ;
@@ -308,28 +308,6 @@ finally {
 
 
 
-
-rule__EString__Alternatives
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); }
-	RULE_STRING
-{ after(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); }
-)
-
-    |(
-{ before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); }
-	RULE_ID
-{ after(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
 
 rule__EDouble__Alternatives_4_0
     @init {
@@ -3370,8 +3348,8 @@ rule__Opening__WallsAssignment_7
 (
 { before(grammarAccess.getOpeningAccess().getWallsWallCrossReference_7_0()); }
 (
-{ before(grammarAccess.getOpeningAccess().getWallsWallIDTerminalRuleCall_7_0_1()); }
-	RULE_ID{ after(grammarAccess.getOpeningAccess().getWallsWallIDTerminalRuleCall_7_0_1()); }
+{ before(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_7_0_1()); }
+	RULE_STRING{ after(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_7_0_1()); }
 )
 { after(grammarAccess.getOpeningAccess().getWallsWallCrossReference_7_0()); }
 )
@@ -3389,8 +3367,8 @@ rule__Opening__WallsAssignment_8_1
 (
 { before(grammarAccess.getOpeningAccess().getWallsWallCrossReference_8_1_0()); }
 (
-{ before(grammarAccess.getOpeningAccess().getWallsWallIDTerminalRuleCall_8_1_0_1()); }
-	RULE_ID{ after(grammarAccess.getOpeningAccess().getWallsWallIDTerminalRuleCall_8_1_0_1()); }
+{ before(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_8_1_0_1()); }
+	RULE_STRING{ after(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_8_1_0_1()); }
 )
 { after(grammarAccess.getOpeningAccess().getWallsWallCrossReference_8_1_0()); }
 )

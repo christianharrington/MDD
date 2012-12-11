@@ -248,7 +248,7 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 * @generated
 	 */
 	public EAttribute getAxis2Placement3D_CartesianZ() {
-		return (EAttribute)axis2Placement3DEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)axis2Placement3DEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -257,7 +257,7 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 * @generated
 	 */
 	public EReference getAxis2Placement3D_Axis() {
-		return (EReference)axis2Placement3DEClass.getEStructuralFeatures().get(3);
+		return (EReference)axis2Placement3DEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -266,7 +266,7 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 	 * @generated
 	 */
 	public EReference getAxis2Placement3D_RefDirection() {
-		return (EReference)axis2Placement3DEClass.getEStructuralFeatures().get(4);
+		return (EReference)axis2Placement3DEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -419,9 +419,9 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 		axis2Placement3DEClass = createEClass(AXIS2_PLACEMENT3_D);
 		createEAttribute(axis2Placement3DEClass, AXIS2_PLACEMENT3_D__CARTESIAN_X);
 		createEAttribute(axis2Placement3DEClass, AXIS2_PLACEMENT3_D__CARTESIAN_Y);
-		createEAttribute(axis2Placement3DEClass, AXIS2_PLACEMENT3_D__CARTESIAN_Z);
 		createEReference(axis2Placement3DEClass, AXIS2_PLACEMENT3_D__AXIS);
 		createEReference(axis2Placement3DEClass, AXIS2_PLACEMENT3_D__REF_DIRECTION);
+		createEAttribute(axis2Placement3DEClass, AXIS2_PLACEMENT3_D__CARTESIAN_Z);
 
 		guidElementEClass = createEClass(GUID_ELEMENT);
 		createEAttribute(guidElementEClass, GUID_ELEMENT__NAME);
@@ -488,14 +488,14 @@ public class PipesPackageImpl extends EPackageImpl implements PipesPackage {
 		initEClass(axis2Placement3DEClass, Axis2Placement3D.class, "Axis2Placement3D", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAxis2Placement3D_CartesianX(), ecorePackage.getEDouble(), "cartesianX", null, 1, 1, Axis2Placement3D.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAxis2Placement3D_CartesianY(), ecorePackage.getEDouble(), "cartesianY", null, 1, 1, Axis2Placement3D.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAxis2Placement3D_CartesianZ(), ecorePackage.getEDouble(), "cartesianZ", null, 1, 1, Axis2Placement3D.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAxis2Placement3D_Axis(), this.getDirection(), null, "axis", null, 1, 1, Axis2Placement3D.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAxis2Placement3D_RefDirection(), this.getDirection(), null, "refDirection", null, 1, 1, Axis2Placement3D.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAxis2Placement3D_CartesianZ(), ecorePackage.getEDouble(), "cartesianZ", null, 1, 1, Axis2Placement3D.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(guidElementEClass, GUIDElement.class, "GUIDElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGUIDElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, GUIDElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGUIDElement_ElementName(), ecorePackage.getEString(), "elementName", null, 0, 1, GUIDElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGUIDElement_Description(), ecorePackage.getEString(), "Description", null, 0, 1, GUIDElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGUIDElement_Description(), ecorePackage.getEString(), "description", null, 0, 1, GUIDElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModel_Elements(), this.getGUIDElement(), null, "elements", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

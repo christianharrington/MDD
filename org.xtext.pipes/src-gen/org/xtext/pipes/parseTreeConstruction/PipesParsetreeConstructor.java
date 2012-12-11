@@ -599,11 +599,11 @@ protected class Model_ElementsAssignment_9_1 extends AssignmentToken  {
 /************ begin Rule WallRule ****************
  *
  * WallRule returns Wall:
- * 	"Wall" name=EString "Name" elementName=EString "Description" Description=EString "placement" placement=LocalPlacement;
+ * 	"Wall" name=EString "Name" elementName=EString "Description" description=EString "placement" placement=LocalPlacement;
  *
  **/
 
-// "Wall" name=EString "Name" elementName=EString "Description" Description=EString "placement" placement=LocalPlacement
+// "Wall" name=EString "Name" elementName=EString "Description" description=EString "placement" placement=LocalPlacement
 protected class WallRule_Group extends GroupToken {
 	
 	public WallRule_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -765,7 +765,7 @@ protected class WallRule_DescriptionKeyword_4 extends KeywordToken  {
 
 }
 
-// Description=EString
+// description=EString
 protected class WallRule_DescriptionAssignment_5 extends AssignmentToken  {
 	
 	public WallRule_DescriptionAssignment_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -787,8 +787,8 @@ protected class WallRule_DescriptionAssignment_5 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("Description",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("Description");
+		if((value = eObjectConsumer.getConsumable("description",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("description");
 		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getWallRuleAccess().getDescriptionEStringParserRuleCall_5_0(), value, null)) {
 			type = AssignmentType.DATATYPE_RULE_CALL;
 			element = grammarAccess.getWallRuleAccess().getDescriptionEStringParserRuleCall_5_0();
@@ -874,13 +874,13 @@ protected class WallRule_PlacementAssignment_7 extends AssignmentToken  {
 /************ begin Rule Opening ****************
  *
  * Opening:
- * 	"Opening" name=EString ("Name" elementName=EString)? ("Description" Description=EString)? "placement"
- * 	placement=LocalPlacement "walls" walls+=[Wall] ("," walls+=[Wall])*;
+ * 	"Opening" name=EString ("Name" elementName=EString)? ("Description" description=EString)? "placement"
+ * 	placement=LocalPlacement "walls" walls+=[Wall|STRING] ("," walls+=[Wall|STRING])*;
  *
  **/
 
-// "Opening" name=EString ("Name" elementName=EString)? ("Description" Description=EString)? "placement"
-// placement=LocalPlacement "walls" walls+=[Wall] ("," walls+=[Wall])*
+// "Opening" name=EString ("Name" elementName=EString)? ("Description" description=EString)? "placement"
+// placement=LocalPlacement "walls" walls+=[Wall|STRING] ("," walls+=[Wall|STRING])*
 protected class Opening_Group extends GroupToken {
 	
 	public Opening_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1044,7 +1044,7 @@ protected class Opening_ElementNameAssignment_2_1 extends AssignmentToken  {
 }
 
 
-// ("Description" Description=EString)?
+// ("Description" description=EString)?
 protected class Opening_Group_3 extends GroupToken {
 	
 	public Opening_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1089,7 +1089,7 @@ protected class Opening_DescriptionKeyword_3_0 extends KeywordToken  {
 
 }
 
-// Description=EString
+// description=EString
 protected class Opening_DescriptionAssignment_3_1 extends AssignmentToken  {
 	
 	public Opening_DescriptionAssignment_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1111,8 +1111,8 @@ protected class Opening_DescriptionAssignment_3_1 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("Description",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("Description");
+		if((value = eObjectConsumer.getConsumable("description",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("description");
 		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getOpeningAccess().getDescriptionEStringParserRuleCall_3_1_0(), value, null)) {
 			type = AssignmentType.DATATYPE_RULE_CALL;
 			element = grammarAccess.getOpeningAccess().getDescriptionEStringParserRuleCall_3_1_0();
@@ -1216,7 +1216,7 @@ protected class Opening_WallsKeyword_6 extends KeywordToken  {
 
 }
 
-// walls+=[Wall]
+// walls+=[Wall|STRING]
 protected class Opening_WallsAssignment_7 extends AssignmentToken  {
 	
 	public Opening_WallsAssignment_7(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1253,7 +1253,7 @@ protected class Opening_WallsAssignment_7 extends AssignmentToken  {
 
 }
 
-// ("," walls+=[Wall])*
+// ("," walls+=[Wall|STRING])*
 protected class Opening_Group_8 extends GroupToken {
 	
 	public Opening_Group_8(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1298,7 +1298,7 @@ protected class Opening_CommaKeyword_8_0 extends KeywordToken  {
 
 }
 
-// walls+=[Wall]
+// walls+=[Wall|STRING]
 protected class Opening_WallsAssignment_8_1 extends AssignmentToken  {
 	
 	public Opening_WallsAssignment_8_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1343,12 +1343,12 @@ protected class Opening_WallsAssignment_8_1 extends AssignmentToken  {
 /************ begin Rule FlowSegment ****************
  *
  * FlowSegment:
- * 	"Pipe" name=EString ("Name" elementName=EString)? ("Description" Description=EString)? "placement"
+ * 	"Pipe" name=EString ("Name" elementName=EString)? ("Description" description=EString)? "placement"
  * 	placement=LocalPlacement;
  *
  **/
 
-// "Pipe" name=EString ("Name" elementName=EString)? ("Description" Description=EString)? "placement"
+// "Pipe" name=EString ("Name" elementName=EString)? ("Description" description=EString)? "placement"
 // placement=LocalPlacement
 protected class FlowSegment_Group extends GroupToken {
 	
@@ -1512,7 +1512,7 @@ protected class FlowSegment_ElementNameAssignment_2_1 extends AssignmentToken  {
 }
 
 
-// ("Description" Description=EString)?
+// ("Description" description=EString)?
 protected class FlowSegment_Group_3 extends GroupToken {
 	
 	public FlowSegment_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1557,7 +1557,7 @@ protected class FlowSegment_DescriptionKeyword_3_0 extends KeywordToken  {
 
 }
 
-// Description=EString
+// description=EString
 protected class FlowSegment_DescriptionAssignment_3_1 extends AssignmentToken  {
 	
 	public FlowSegment_DescriptionAssignment_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1579,8 +1579,8 @@ protected class FlowSegment_DescriptionAssignment_3_1 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("Description",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("Description");
+		if((value = eObjectConsumer.getConsumable("description",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("description");
 		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getFlowSegmentAccess().getDescriptionEStringParserRuleCall_3_1_0(), value, null)) {
 			type = AssignmentType.DATATYPE_RULE_CALL;
 			element = grammarAccess.getFlowSegmentAccess().getDescriptionEStringParserRuleCall_3_1_0();

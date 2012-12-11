@@ -18,14 +18,14 @@ EString returns ecore::EString:
 WallRule returns Wall:
 	'Wall' name=EString
 		'Name' elementName=EString
-		'Description' Description=EString
+		'Description' description=EString
 		'placement' placement=LocalPlacement
 	;
 
 Opening returns Opening:
 	'Opening' name=EString
 		('Name' elementName=EString)?
-		('Description' Description=EString)?
+		('Description' description=EString)?
 		'placement' placement=LocalPlacement
 		'walls' walls+=[Wall|STRING] ( "," walls+=[Wall|STRING])*
 	;
@@ -34,7 +34,7 @@ Opening returns Opening:
 FlowSegment returns FlowSegment:
 	'Pipe' name=EString
 		('Name' elementName=EString)?
-		('Description' Description=EString)?
+		('Description' description=EString)?
 		'placement' placement=LocalPlacement
 	;
 

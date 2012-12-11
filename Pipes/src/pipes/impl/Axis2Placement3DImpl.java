@@ -24,9 +24,9 @@ import pipes.PipesPackage;
  * <ul>
  *   <li>{@link pipes.impl.Axis2Placement3DImpl#getCartesianX <em>Cartesian X</em>}</li>
  *   <li>{@link pipes.impl.Axis2Placement3DImpl#getCartesianY <em>Cartesian Y</em>}</li>
- *   <li>{@link pipes.impl.Axis2Placement3DImpl#getCartesianZ <em>Cartesian Z</em>}</li>
  *   <li>{@link pipes.impl.Axis2Placement3DImpl#getAxis <em>Axis</em>}</li>
  *   <li>{@link pipes.impl.Axis2Placement3DImpl#getRefDirection <em>Ref Direction</em>}</li>
+ *   <li>{@link pipes.impl.Axis2Placement3DImpl#getCartesianZ <em>Cartesian Z</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,26 +74,6 @@ public class Axis2Placement3DImpl extends EObjectImpl implements Axis2Placement3
 	protected double cartesianY = CARTESIAN_Y_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCartesianZ() <em>Cartesian Z</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCartesianZ()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double CARTESIAN_Z_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getCartesianZ() <em>Cartesian Z</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCartesianZ()
-	 * @generated
-	 * @ordered
-	 */
-	protected double cartesianZ = CARTESIAN_Z_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getAxis() <em>Axis</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -112,6 +92,26 @@ public class Axis2Placement3DImpl extends EObjectImpl implements Axis2Placement3
 	 * @ordered
 	 */
 	protected Direction refDirection;
+
+	/**
+	 * The default value of the '{@link #getCartesianZ() <em>Cartesian Z</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCartesianZ()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double CARTESIAN_Z_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getCartesianZ() <em>Cartesian Z</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCartesianZ()
+	 * @generated
+	 * @ordered
+	 */
+	protected double cartesianZ = CARTESIAN_Z_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -309,12 +309,12 @@ public class Axis2Placement3DImpl extends EObjectImpl implements Axis2Placement3
 				return getCartesianX();
 			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Y:
 				return getCartesianY();
-			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z:
-				return getCartesianZ();
 			case PipesPackage.AXIS2_PLACEMENT3_D__AXIS:
 				return getAxis();
 			case PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION:
 				return getRefDirection();
+			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z:
+				return getCartesianZ();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -333,14 +333,14 @@ public class Axis2Placement3DImpl extends EObjectImpl implements Axis2Placement3
 			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Y:
 				setCartesianY((Double)newValue);
 				return;
-			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z:
-				setCartesianZ((Double)newValue);
-				return;
 			case PipesPackage.AXIS2_PLACEMENT3_D__AXIS:
 				setAxis((Direction)newValue);
 				return;
 			case PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION:
 				setRefDirection((Direction)newValue);
+				return;
+			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z:
+				setCartesianZ((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -360,14 +360,14 @@ public class Axis2Placement3DImpl extends EObjectImpl implements Axis2Placement3
 			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Y:
 				setCartesianY(CARTESIAN_Y_EDEFAULT);
 				return;
-			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z:
-				setCartesianZ(CARTESIAN_Z_EDEFAULT);
-				return;
 			case PipesPackage.AXIS2_PLACEMENT3_D__AXIS:
 				setAxis((Direction)null);
 				return;
 			case PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION:
 				setRefDirection((Direction)null);
+				return;
+			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z:
+				setCartesianZ(CARTESIAN_Z_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -385,12 +385,12 @@ public class Axis2Placement3DImpl extends EObjectImpl implements Axis2Placement3
 				return cartesianX != CARTESIAN_X_EDEFAULT;
 			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Y:
 				return cartesianY != CARTESIAN_Y_EDEFAULT;
-			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z:
-				return cartesianZ != CARTESIAN_Z_EDEFAULT;
 			case PipesPackage.AXIS2_PLACEMENT3_D__AXIS:
 				return axis != null;
 			case PipesPackage.AXIS2_PLACEMENT3_D__REF_DIRECTION:
 				return refDirection != null;
+			case PipesPackage.AXIS2_PLACEMENT3_D__CARTESIAN_Z:
+				return cartesianZ != CARTESIAN_Z_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

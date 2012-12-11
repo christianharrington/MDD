@@ -262,7 +262,7 @@ public class GUIDElementImpl extends EObjectImpl implements GUIDElement {
 		result.append(name);
 		result.append(", elementName: ");
 		result.append(elementName);
-		result.append(", Description: ");
+		result.append(", description: ");
 		result.append(description);
 		result.append(')');
 		return result.toString();

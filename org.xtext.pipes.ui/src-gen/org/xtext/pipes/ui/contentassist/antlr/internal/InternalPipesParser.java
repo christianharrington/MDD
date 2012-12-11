@@ -22,9 +22,9 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPipesParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'E'", "'e'", "'Walls'", "'Openings'", "'Pipes'", "'and'", "'Wall'", "'Name'", "'Description'", "'placement'", "'Opening'", "'walls'", "','", "'Pipe'", "'{'", "'}'", "'relativeTo'", "'axis2placement3d'", "'cartesian'", "'('", "')'", "'axis'", "'refDir'", "'-'", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'E'", "'e'", "'Walls'", "'Openings'", "'Pipes'", "'and'", "'Wall'", "'Name'", "'Description'", "'placement'", "'Opening'", "'walls'", "','", "'Pipe'", "'{'", "'}'", "'relativeTo'", "'axis2placement3d'", "'cartesian'", "'('", "')'", "'axis'", "'refDir'", "'-'", "'.'"
     };
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=6;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -55,7 +55,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
     public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int RULE_INT=6;
+    public static final int RULE_INT=5;
     public static final int RULE_WS=9;
 
     // delegates
@@ -203,31 +203,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleEString"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:97:1: ruleEString : ( ( rule__EString__Alternatives ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:97:1: ruleEString : ( RULE_STRING ) ;
     public final void ruleEString() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:101:2: ( ( ( rule__EString__Alternatives ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:102:1: ( ( rule__EString__Alternatives ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:101:2: ( ( RULE_STRING ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:102:1: ( RULE_STRING )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:102:1: ( ( rule__EString__Alternatives ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:103:1: ( rule__EString__Alternatives )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:102:1: ( RULE_STRING )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:103:1: RULE_STRING
             {
-             before(grammarAccess.getEStringAccess().getAlternatives()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:104:1: ( rule__EString__Alternatives )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:104:2: rule__EString__Alternatives
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__EString__Alternatives_in_ruleEString154);
-            rule__EString__Alternatives();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getEStringAccess().getAlternatives()); 
+             before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall()); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleEString154); 
+             after(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall()); 
 
             }
 
@@ -257,13 +247,13 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:118:1: ruleWallRule EOF
             {
              before(grammarAccess.getWallRuleRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleWallRule_in_entryRuleWallRule181);
+            pushFollow(FollowSets000.FOLLOW_ruleWallRule_in_entryRuleWallRule180);
             ruleWallRule();
 
             state._fsp--;
 
              after(grammarAccess.getWallRuleRule()); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleWallRule188); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleWallRule187); 
 
             }
 
@@ -296,7 +286,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:132:1: ( rule__WallRule__Group__0 )
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:132:2: rule__WallRule__Group__0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__0_in_ruleWallRule214);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__0_in_ruleWallRule213);
             rule__WallRule__Group__0();
 
             state._fsp--;
@@ -334,13 +324,13 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:146:1: ruleOpening EOF
             {
              before(grammarAccess.getOpeningRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleOpening_in_entryRuleOpening241);
+            pushFollow(FollowSets000.FOLLOW_ruleOpening_in_entryRuleOpening240);
             ruleOpening();
 
             state._fsp--;
 
              after(grammarAccess.getOpeningRule()); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOpening248); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOpening247); 
 
             }
 
@@ -373,7 +363,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:160:1: ( rule__Opening__Group__0 )
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:160:2: rule__Opening__Group__0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__0_in_ruleOpening274);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__0_in_ruleOpening273);
             rule__Opening__Group__0();
 
             state._fsp--;
@@ -411,13 +401,13 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:174:1: ruleFlowSegment EOF
             {
              before(grammarAccess.getFlowSegmentRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleFlowSegment_in_entryRuleFlowSegment301);
+            pushFollow(FollowSets000.FOLLOW_ruleFlowSegment_in_entryRuleFlowSegment300);
             ruleFlowSegment();
 
             state._fsp--;
 
              after(grammarAccess.getFlowSegmentRule()); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleFlowSegment308); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleFlowSegment307); 
 
             }
 
@@ -450,7 +440,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:188:1: ( rule__FlowSegment__Group__0 )
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:188:2: rule__FlowSegment__Group__0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__0_in_ruleFlowSegment334);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__0_in_ruleFlowSegment333);
             rule__FlowSegment__Group__0();
 
             state._fsp--;
@@ -488,13 +478,13 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:202:1: ruleLocalPlacement EOF
             {
              before(grammarAccess.getLocalPlacementRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleLocalPlacement_in_entryRuleLocalPlacement361);
+            pushFollow(FollowSets000.FOLLOW_ruleLocalPlacement_in_entryRuleLocalPlacement360);
             ruleLocalPlacement();
 
             state._fsp--;
 
              after(grammarAccess.getLocalPlacementRule()); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleLocalPlacement368); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleLocalPlacement367); 
 
             }
 
@@ -527,7 +517,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:216:1: ( rule__LocalPlacement__Group__0 )
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:216:2: rule__LocalPlacement__Group__0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__0_in_ruleLocalPlacement394);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__0_in_ruleLocalPlacement393);
             rule__LocalPlacement__Group__0();
 
             state._fsp--;
@@ -565,13 +555,13 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:230:1: ruleAxis2Placement3D EOF
             {
              before(grammarAccess.getAxis2Placement3DRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAxis2Placement3D_in_entryRuleAxis2Placement3D421);
+            pushFollow(FollowSets000.FOLLOW_ruleAxis2Placement3D_in_entryRuleAxis2Placement3D420);
             ruleAxis2Placement3D();
 
             state._fsp--;
 
              after(grammarAccess.getAxis2Placement3DRule()); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAxis2Placement3D428); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAxis2Placement3D427); 
 
             }
 
@@ -604,7 +594,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:244:1: ( rule__Axis2Placement3D__Group__0 )
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:244:2: rule__Axis2Placement3D__Group__0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__0_in_ruleAxis2Placement3D454);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__0_in_ruleAxis2Placement3D453);
             rule__Axis2Placement3D__Group__0();
 
             state._fsp--;
@@ -642,13 +632,13 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:258:1: ruleEDouble EOF
             {
              before(grammarAccess.getEDoubleRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_entryRuleEDouble481);
+            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_entryRuleEDouble480);
             ruleEDouble();
 
             state._fsp--;
 
              after(grammarAccess.getEDoubleRule()); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEDouble488); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEDouble487); 
 
             }
 
@@ -681,7 +671,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:272:1: ( rule__EDouble__Group__0 )
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:272:2: rule__EDouble__Group__0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__0_in_ruleEDouble514);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__0_in_ruleEDouble513);
             rule__EDouble__Group__0();
 
             state._fsp--;
@@ -719,13 +709,13 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:286:1: ruleDirection EOF
             {
              before(grammarAccess.getDirectionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleDirection_in_entryRuleDirection541);
+            pushFollow(FollowSets000.FOLLOW_ruleDirection_in_entryRuleDirection540);
             ruleDirection();
 
             state._fsp--;
 
              after(grammarAccess.getDirectionRule()); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDirection548); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDirection547); 
 
             }
 
@@ -758,7 +748,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:300:1: ( rule__Direction__Group__0 )
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:300:2: rule__Direction__Group__0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__0_in_ruleDirection574);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__0_in_ruleDirection573);
             rule__Direction__Group__0();
 
             state._fsp--;
@@ -788,21 +778,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleDirection"
 
 
-    // $ANTLR start "rule__EString__Alternatives"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:312:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( RULE_ID ) );
-    public final void rule__EString__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__EDouble__Alternatives_4_0"
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:312:1: rule__EDouble__Alternatives_4_0 : ( ( 'E' ) | ( 'e' ) );
+    public final void rule__EDouble__Alternatives_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:316:1: ( ( RULE_STRING ) | ( RULE_ID ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:316:1: ( ( 'E' ) | ( 'e' ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==RULE_STRING) ) {
+            if ( (LA1_0==11) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==RULE_ID) ) {
+            else if ( (LA1_0==12) ) {
                 alt1=2;
             }
             else {
@@ -813,84 +803,13 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:317:1: ( RULE_STRING )
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:317:1: ( 'E' )
                     {
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:317:1: ( RULE_STRING )
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:318:1: RULE_STRING
-                    {
-                     before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
-                    match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__EString__Alternatives610); 
-                     after(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:323:6: ( RULE_ID )
-                    {
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:323:6: ( RULE_ID )
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:324:1: RULE_ID
-                    {
-                     before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
-                    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__EString__Alternatives627); 
-                     after(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__EString__Alternatives"
-
-
-    // $ANTLR start "rule__EDouble__Alternatives_4_0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:334:1: rule__EDouble__Alternatives_4_0 : ( ( 'E' ) | ( 'e' ) );
-    public final void rule__EDouble__Alternatives_4_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:338:1: ( ( 'E' ) | ( 'e' ) )
-            int alt2=2;
-            int LA2_0 = input.LA(1);
-
-            if ( (LA2_0==11) ) {
-                alt2=1;
-            }
-            else if ( (LA2_0==12) ) {
-                alt2=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
-
-                throw nvae;
-            }
-            switch (alt2) {
-                case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:339:1: ( 'E' )
-                    {
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:339:1: ( 'E' )
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:340:1: 'E'
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:317:1: ( 'E' )
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:318:1: 'E'
                     {
                      before(grammarAccess.getEDoubleAccess().getEKeyword_4_0_0()); 
-                    match(input,11,FollowSets000.FOLLOW_11_in_rule__EDouble__Alternatives_4_0660); 
+                    match(input,11,FollowSets000.FOLLOW_11_in_rule__EDouble__Alternatives_4_0610); 
                      after(grammarAccess.getEDoubleAccess().getEKeyword_4_0_0()); 
 
                     }
@@ -899,13 +818,13 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:347:6: ( 'e' )
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:325:6: ( 'e' )
                     {
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:347:6: ( 'e' )
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:348:1: 'e'
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:325:6: ( 'e' )
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:326:1: 'e'
                     {
                      before(grammarAccess.getEDoubleAccess().getEKeyword_4_0_1()); 
-                    match(input,12,FollowSets000.FOLLOW_12_in_rule__EDouble__Alternatives_4_0680); 
+                    match(input,12,FollowSets000.FOLLOW_12_in_rule__EDouble__Alternatives_4_0630); 
                      after(grammarAccess.getEDoubleAccess().getEKeyword_4_0_1()); 
 
                     }
@@ -931,21 +850,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:362:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:340:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
     public final void rule__Model__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:366:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:367:2: rule__Model__Group__0__Impl rule__Model__Group__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:344:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:345:2: rule__Model__Group__0__Impl rule__Model__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0712);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0662);
             rule__Model__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__1_in_rule__Model__Group__0715);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__1_in_rule__Model__Group__0665);
             rule__Model__Group__1();
 
             state._fsp--;
@@ -969,21 +888,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:374:1: rule__Model__Group__0__Impl : ( () ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:352:1: rule__Model__Group__0__Impl : ( () ) ;
     public final void rule__Model__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:378:1: ( ( () ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:379:1: ( () )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:356:1: ( ( () ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:357:1: ( () )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:379:1: ( () )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:380:1: ()
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:357:1: ( () )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:358:1: ()
             {
              before(grammarAccess.getModelAccess().getModelAction_0()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:381:1: ()
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:383:1: 
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:359:1: ()
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:361:1: 
             {
             }
 
@@ -1006,21 +925,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:393:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:371:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
     public final void rule__Model__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:397:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:398:2: rule__Model__Group__1__Impl rule__Model__Group__2
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:375:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:376:2: rule__Model__Group__1__Impl rule__Model__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__1773);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__1723);
             rule__Model__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__2_in_rule__Model__Group__1776);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__2_in_rule__Model__Group__1726);
             rule__Model__Group__2();
 
             state._fsp--;
@@ -1044,20 +963,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:405:1: rule__Model__Group__1__Impl : ( 'Walls' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:383:1: rule__Model__Group__1__Impl : ( 'Walls' ) ;
     public final void rule__Model__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:409:1: ( ( 'Walls' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:410:1: ( 'Walls' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:387:1: ( ( 'Walls' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:388:1: ( 'Walls' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:410:1: ( 'Walls' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:411:1: 'Walls'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:388:1: ( 'Walls' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:389:1: 'Walls'
             {
              before(grammarAccess.getModelAccess().getWallsKeyword_1()); 
-            match(input,13,FollowSets000.FOLLOW_13_in_rule__Model__Group__1__Impl804); 
+            match(input,13,FollowSets000.FOLLOW_13_in_rule__Model__Group__1__Impl754); 
              after(grammarAccess.getModelAccess().getWallsKeyword_1()); 
 
             }
@@ -1081,21 +1000,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__2"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:424:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:402:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
     public final void rule__Model__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:428:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:429:2: rule__Model__Group__2__Impl rule__Model__Group__3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:406:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:407:2: rule__Model__Group__2__Impl rule__Model__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__2835);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__2785);
             rule__Model__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__3_in_rule__Model__Group__2838);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__3_in_rule__Model__Group__2788);
             rule__Model__Group__3();
 
             state._fsp--;
@@ -1119,23 +1038,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__2__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:436:1: rule__Model__Group__2__Impl : ( ( rule__Model__ElementsAssignment_2 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:414:1: rule__Model__Group__2__Impl : ( ( rule__Model__ElementsAssignment_2 ) ) ;
     public final void rule__Model__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:440:1: ( ( ( rule__Model__ElementsAssignment_2 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:441:1: ( ( rule__Model__ElementsAssignment_2 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:418:1: ( ( ( rule__Model__ElementsAssignment_2 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:419:1: ( ( rule__Model__ElementsAssignment_2 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:441:1: ( ( rule__Model__ElementsAssignment_2 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:442:1: ( rule__Model__ElementsAssignment_2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:419:1: ( ( rule__Model__ElementsAssignment_2 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:420:1: ( rule__Model__ElementsAssignment_2 )
             {
              before(grammarAccess.getModelAccess().getElementsAssignment_2()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:443:1: ( rule__Model__ElementsAssignment_2 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:443:2: rule__Model__ElementsAssignment_2
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:421:1: ( rule__Model__ElementsAssignment_2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:421:2: rule__Model__ElementsAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_2_in_rule__Model__Group__2__Impl865);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_2_in_rule__Model__Group__2__Impl815);
             rule__Model__ElementsAssignment_2();
 
             state._fsp--;
@@ -1166,21 +1085,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:453:1: rule__Model__Group__3 : rule__Model__Group__3__Impl rule__Model__Group__4 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:431:1: rule__Model__Group__3 : rule__Model__Group__3__Impl rule__Model__Group__4 ;
     public final void rule__Model__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:457:1: ( rule__Model__Group__3__Impl rule__Model__Group__4 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:458:2: rule__Model__Group__3__Impl rule__Model__Group__4
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:435:1: ( rule__Model__Group__3__Impl rule__Model__Group__4 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:436:2: rule__Model__Group__3__Impl rule__Model__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__3895);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__3845);
             rule__Model__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__4_in_rule__Model__Group__3898);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__4_in_rule__Model__Group__3848);
             rule__Model__Group__4();
 
             state._fsp--;
@@ -1204,35 +1123,35 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__3__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:465:1: rule__Model__Group__3__Impl : ( ( rule__Model__Group_3__0 )* ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:443:1: rule__Model__Group__3__Impl : ( ( rule__Model__Group_3__0 )* ) ;
     public final void rule__Model__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:469:1: ( ( ( rule__Model__Group_3__0 )* ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:470:1: ( ( rule__Model__Group_3__0 )* )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:447:1: ( ( ( rule__Model__Group_3__0 )* ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:448:1: ( ( rule__Model__Group_3__0 )* )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:470:1: ( ( rule__Model__Group_3__0 )* )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:471:1: ( rule__Model__Group_3__0 )*
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:448:1: ( ( rule__Model__Group_3__0 )* )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:449:1: ( rule__Model__Group_3__0 )*
             {
              before(grammarAccess.getModelAccess().getGroup_3()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:472:1: ( rule__Model__Group_3__0 )*
-            loop3:
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:450:1: ( rule__Model__Group_3__0 )*
+            loop2:
             do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+                int alt2=2;
+                int LA2_0 = input.LA(1);
 
-                if ( (LA3_0==16) ) {
-                    alt3=1;
+                if ( (LA2_0==16) ) {
+                    alt2=1;
                 }
 
 
-                switch (alt3) {
+                switch (alt2) {
             	case 1 :
-            	    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:472:2: rule__Model__Group_3__0
+            	    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:450:2: rule__Model__Group_3__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Model__Group_3__0_in_rule__Model__Group__3__Impl925);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Model__Group_3__0_in_rule__Model__Group__3__Impl875);
             	    rule__Model__Group_3__0();
 
             	    state._fsp--;
@@ -1242,7 +1161,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop3;
+            	    break loop2;
                 }
             } while (true);
 
@@ -1269,21 +1188,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__4"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:482:1: rule__Model__Group__4 : rule__Model__Group__4__Impl rule__Model__Group__5 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:460:1: rule__Model__Group__4 : rule__Model__Group__4__Impl rule__Model__Group__5 ;
     public final void rule__Model__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:486:1: ( rule__Model__Group__4__Impl rule__Model__Group__5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:487:2: rule__Model__Group__4__Impl rule__Model__Group__5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:464:1: ( rule__Model__Group__4__Impl rule__Model__Group__5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:465:2: rule__Model__Group__4__Impl rule__Model__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__4956);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__4906);
             rule__Model__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__5_in_rule__Model__Group__4959);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__5_in_rule__Model__Group__4909);
             rule__Model__Group__5();
 
             state._fsp--;
@@ -1307,20 +1226,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__4__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:494:1: rule__Model__Group__4__Impl : ( 'Openings' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:472:1: rule__Model__Group__4__Impl : ( 'Openings' ) ;
     public final void rule__Model__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:498:1: ( ( 'Openings' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:499:1: ( 'Openings' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:476:1: ( ( 'Openings' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:477:1: ( 'Openings' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:499:1: ( 'Openings' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:500:1: 'Openings'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:477:1: ( 'Openings' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:478:1: 'Openings'
             {
              before(grammarAccess.getModelAccess().getOpeningsKeyword_4()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Model__Group__4__Impl987); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__Model__Group__4__Impl937); 
              after(grammarAccess.getModelAccess().getOpeningsKeyword_4()); 
 
             }
@@ -1344,21 +1263,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:513:1: rule__Model__Group__5 : rule__Model__Group__5__Impl rule__Model__Group__6 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:491:1: rule__Model__Group__5 : rule__Model__Group__5__Impl rule__Model__Group__6 ;
     public final void rule__Model__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:517:1: ( rule__Model__Group__5__Impl rule__Model__Group__6 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:518:2: rule__Model__Group__5__Impl rule__Model__Group__6
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:495:1: ( rule__Model__Group__5__Impl rule__Model__Group__6 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:496:2: rule__Model__Group__5__Impl rule__Model__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__51018);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__5968);
             rule__Model__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__6_in_rule__Model__Group__51021);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__6_in_rule__Model__Group__5971);
             rule__Model__Group__6();
 
             state._fsp--;
@@ -1382,23 +1301,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__5__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:525:1: rule__Model__Group__5__Impl : ( ( rule__Model__ElementsAssignment_5 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:503:1: rule__Model__Group__5__Impl : ( ( rule__Model__ElementsAssignment_5 ) ) ;
     public final void rule__Model__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:529:1: ( ( ( rule__Model__ElementsAssignment_5 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:530:1: ( ( rule__Model__ElementsAssignment_5 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:507:1: ( ( ( rule__Model__ElementsAssignment_5 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:508:1: ( ( rule__Model__ElementsAssignment_5 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:530:1: ( ( rule__Model__ElementsAssignment_5 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:531:1: ( rule__Model__ElementsAssignment_5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:508:1: ( ( rule__Model__ElementsAssignment_5 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:509:1: ( rule__Model__ElementsAssignment_5 )
             {
              before(grammarAccess.getModelAccess().getElementsAssignment_5()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:532:1: ( rule__Model__ElementsAssignment_5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:532:2: rule__Model__ElementsAssignment_5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:510:1: ( rule__Model__ElementsAssignment_5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:510:2: rule__Model__ElementsAssignment_5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_5_in_rule__Model__Group__5__Impl1048);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_5_in_rule__Model__Group__5__Impl998);
             rule__Model__ElementsAssignment_5();
 
             state._fsp--;
@@ -1429,21 +1348,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__6"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:542:1: rule__Model__Group__6 : rule__Model__Group__6__Impl rule__Model__Group__7 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:520:1: rule__Model__Group__6 : rule__Model__Group__6__Impl rule__Model__Group__7 ;
     public final void rule__Model__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:546:1: ( rule__Model__Group__6__Impl rule__Model__Group__7 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:547:2: rule__Model__Group__6__Impl rule__Model__Group__7
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:524:1: ( rule__Model__Group__6__Impl rule__Model__Group__7 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:525:2: rule__Model__Group__6__Impl rule__Model__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__6__Impl_in_rule__Model__Group__61078);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__6__Impl_in_rule__Model__Group__61028);
             rule__Model__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__7_in_rule__Model__Group__61081);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__7_in_rule__Model__Group__61031);
             rule__Model__Group__7();
 
             state._fsp--;
@@ -1467,35 +1386,35 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__6__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:554:1: rule__Model__Group__6__Impl : ( ( rule__Model__Group_6__0 )* ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:532:1: rule__Model__Group__6__Impl : ( ( rule__Model__Group_6__0 )* ) ;
     public final void rule__Model__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:558:1: ( ( ( rule__Model__Group_6__0 )* ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:559:1: ( ( rule__Model__Group_6__0 )* )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:536:1: ( ( ( rule__Model__Group_6__0 )* ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:537:1: ( ( rule__Model__Group_6__0 )* )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:559:1: ( ( rule__Model__Group_6__0 )* )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:560:1: ( rule__Model__Group_6__0 )*
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:537:1: ( ( rule__Model__Group_6__0 )* )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:538:1: ( rule__Model__Group_6__0 )*
             {
              before(grammarAccess.getModelAccess().getGroup_6()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:561:1: ( rule__Model__Group_6__0 )*
-            loop4:
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:539:1: ( rule__Model__Group_6__0 )*
+            loop3:
             do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+                int alt3=2;
+                int LA3_0 = input.LA(1);
 
-                if ( (LA4_0==16) ) {
-                    alt4=1;
+                if ( (LA3_0==16) ) {
+                    alt3=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt3) {
             	case 1 :
-            	    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:561:2: rule__Model__Group_6__0
+            	    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:539:2: rule__Model__Group_6__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Model__Group_6__0_in_rule__Model__Group__6__Impl1108);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Model__Group_6__0_in_rule__Model__Group__6__Impl1058);
             	    rule__Model__Group_6__0();
 
             	    state._fsp--;
@@ -1505,7 +1424,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop4;
+            	    break loop3;
                 }
             } while (true);
 
@@ -1532,21 +1451,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__7"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:571:1: rule__Model__Group__7 : rule__Model__Group__7__Impl rule__Model__Group__8 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:549:1: rule__Model__Group__7 : rule__Model__Group__7__Impl rule__Model__Group__8 ;
     public final void rule__Model__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:575:1: ( rule__Model__Group__7__Impl rule__Model__Group__8 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:576:2: rule__Model__Group__7__Impl rule__Model__Group__8
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:553:1: ( rule__Model__Group__7__Impl rule__Model__Group__8 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:554:2: rule__Model__Group__7__Impl rule__Model__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__7__Impl_in_rule__Model__Group__71139);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__7__Impl_in_rule__Model__Group__71089);
             rule__Model__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__8_in_rule__Model__Group__71142);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__8_in_rule__Model__Group__71092);
             rule__Model__Group__8();
 
             state._fsp--;
@@ -1570,20 +1489,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__7__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:583:1: rule__Model__Group__7__Impl : ( 'Pipes' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:561:1: rule__Model__Group__7__Impl : ( 'Pipes' ) ;
     public final void rule__Model__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:587:1: ( ( 'Pipes' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:588:1: ( 'Pipes' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:565:1: ( ( 'Pipes' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:566:1: ( 'Pipes' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:588:1: ( 'Pipes' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:589:1: 'Pipes'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:566:1: ( 'Pipes' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:567:1: 'Pipes'
             {
              before(grammarAccess.getModelAccess().getPipesKeyword_7()); 
-            match(input,15,FollowSets000.FOLLOW_15_in_rule__Model__Group__7__Impl1170); 
+            match(input,15,FollowSets000.FOLLOW_15_in_rule__Model__Group__7__Impl1120); 
              after(grammarAccess.getModelAccess().getPipesKeyword_7()); 
 
             }
@@ -1607,21 +1526,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__8"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:602:1: rule__Model__Group__8 : rule__Model__Group__8__Impl rule__Model__Group__9 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:580:1: rule__Model__Group__8 : rule__Model__Group__8__Impl rule__Model__Group__9 ;
     public final void rule__Model__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:606:1: ( rule__Model__Group__8__Impl rule__Model__Group__9 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:607:2: rule__Model__Group__8__Impl rule__Model__Group__9
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:584:1: ( rule__Model__Group__8__Impl rule__Model__Group__9 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:585:2: rule__Model__Group__8__Impl rule__Model__Group__9
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__8__Impl_in_rule__Model__Group__81201);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__8__Impl_in_rule__Model__Group__81151);
             rule__Model__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__9_in_rule__Model__Group__81204);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__9_in_rule__Model__Group__81154);
             rule__Model__Group__9();
 
             state._fsp--;
@@ -1645,23 +1564,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__8__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:614:1: rule__Model__Group__8__Impl : ( ( rule__Model__ElementsAssignment_8 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:592:1: rule__Model__Group__8__Impl : ( ( rule__Model__ElementsAssignment_8 ) ) ;
     public final void rule__Model__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:618:1: ( ( ( rule__Model__ElementsAssignment_8 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:619:1: ( ( rule__Model__ElementsAssignment_8 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:596:1: ( ( ( rule__Model__ElementsAssignment_8 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:597:1: ( ( rule__Model__ElementsAssignment_8 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:619:1: ( ( rule__Model__ElementsAssignment_8 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:620:1: ( rule__Model__ElementsAssignment_8 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:597:1: ( ( rule__Model__ElementsAssignment_8 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:598:1: ( rule__Model__ElementsAssignment_8 )
             {
              before(grammarAccess.getModelAccess().getElementsAssignment_8()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:621:1: ( rule__Model__ElementsAssignment_8 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:621:2: rule__Model__ElementsAssignment_8
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:599:1: ( rule__Model__ElementsAssignment_8 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:599:2: rule__Model__ElementsAssignment_8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_8_in_rule__Model__Group__8__Impl1231);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_8_in_rule__Model__Group__8__Impl1181);
             rule__Model__ElementsAssignment_8();
 
             state._fsp--;
@@ -1692,16 +1611,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__9"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:631:1: rule__Model__Group__9 : rule__Model__Group__9__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:609:1: rule__Model__Group__9 : rule__Model__Group__9__Impl ;
     public final void rule__Model__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:635:1: ( rule__Model__Group__9__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:636:2: rule__Model__Group__9__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:613:1: ( rule__Model__Group__9__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:614:2: rule__Model__Group__9__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__9__Impl_in_rule__Model__Group__91261);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group__9__Impl_in_rule__Model__Group__91211);
             rule__Model__Group__9__Impl();
 
             state._fsp--;
@@ -1725,35 +1644,35 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__9__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:642:1: rule__Model__Group__9__Impl : ( ( rule__Model__Group_9__0 )* ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:620:1: rule__Model__Group__9__Impl : ( ( rule__Model__Group_9__0 )* ) ;
     public final void rule__Model__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:646:1: ( ( ( rule__Model__Group_9__0 )* ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:647:1: ( ( rule__Model__Group_9__0 )* )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:624:1: ( ( ( rule__Model__Group_9__0 )* ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:625:1: ( ( rule__Model__Group_9__0 )* )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:647:1: ( ( rule__Model__Group_9__0 )* )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:648:1: ( rule__Model__Group_9__0 )*
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:625:1: ( ( rule__Model__Group_9__0 )* )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:626:1: ( rule__Model__Group_9__0 )*
             {
              before(grammarAccess.getModelAccess().getGroup_9()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:649:1: ( rule__Model__Group_9__0 )*
-            loop5:
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:627:1: ( rule__Model__Group_9__0 )*
+            loop4:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA5_0==16) ) {
-                    alt5=1;
+                if ( (LA4_0==16) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt4) {
             	case 1 :
-            	    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:649:2: rule__Model__Group_9__0
+            	    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:627:2: rule__Model__Group_9__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Model__Group_9__0_in_rule__Model__Group__9__Impl1288);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Model__Group_9__0_in_rule__Model__Group__9__Impl1238);
             	    rule__Model__Group_9__0();
 
             	    state._fsp--;
@@ -1763,7 +1682,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop4;
                 }
             } while (true);
 
@@ -1790,21 +1709,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_3__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:679:1: rule__Model__Group_3__0 : rule__Model__Group_3__0__Impl rule__Model__Group_3__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:657:1: rule__Model__Group_3__0 : rule__Model__Group_3__0__Impl rule__Model__Group_3__1 ;
     public final void rule__Model__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:683:1: ( rule__Model__Group_3__0__Impl rule__Model__Group_3__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:684:2: rule__Model__Group_3__0__Impl rule__Model__Group_3__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:661:1: ( rule__Model__Group_3__0__Impl rule__Model__Group_3__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:662:2: rule__Model__Group_3__0__Impl rule__Model__Group_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_3__0__Impl_in_rule__Model__Group_3__01339);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_3__0__Impl_in_rule__Model__Group_3__01289);
             rule__Model__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_3__1_in_rule__Model__Group_3__01342);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_3__1_in_rule__Model__Group_3__01292);
             rule__Model__Group_3__1();
 
             state._fsp--;
@@ -1828,20 +1747,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_3__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:691:1: rule__Model__Group_3__0__Impl : ( 'and' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:669:1: rule__Model__Group_3__0__Impl : ( 'and' ) ;
     public final void rule__Model__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:695:1: ( ( 'and' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:696:1: ( 'and' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:673:1: ( ( 'and' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:674:1: ( 'and' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:696:1: ( 'and' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:697:1: 'and'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:674:1: ( 'and' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:675:1: 'and'
             {
              before(grammarAccess.getModelAccess().getAndKeyword_3_0()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__Model__Group_3__0__Impl1370); 
+            match(input,16,FollowSets000.FOLLOW_16_in_rule__Model__Group_3__0__Impl1320); 
              after(grammarAccess.getModelAccess().getAndKeyword_3_0()); 
 
             }
@@ -1865,16 +1784,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_3__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:710:1: rule__Model__Group_3__1 : rule__Model__Group_3__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:688:1: rule__Model__Group_3__1 : rule__Model__Group_3__1__Impl ;
     public final void rule__Model__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:714:1: ( rule__Model__Group_3__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:715:2: rule__Model__Group_3__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:692:1: ( rule__Model__Group_3__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:693:2: rule__Model__Group_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_3__1__Impl_in_rule__Model__Group_3__11401);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_3__1__Impl_in_rule__Model__Group_3__11351);
             rule__Model__Group_3__1__Impl();
 
             state._fsp--;
@@ -1898,23 +1817,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_3__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:721:1: rule__Model__Group_3__1__Impl : ( ( rule__Model__ElementsAssignment_3_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:699:1: rule__Model__Group_3__1__Impl : ( ( rule__Model__ElementsAssignment_3_1 ) ) ;
     public final void rule__Model__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:725:1: ( ( ( rule__Model__ElementsAssignment_3_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:726:1: ( ( rule__Model__ElementsAssignment_3_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:703:1: ( ( ( rule__Model__ElementsAssignment_3_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:704:1: ( ( rule__Model__ElementsAssignment_3_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:726:1: ( ( rule__Model__ElementsAssignment_3_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:727:1: ( rule__Model__ElementsAssignment_3_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:704:1: ( ( rule__Model__ElementsAssignment_3_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:705:1: ( rule__Model__ElementsAssignment_3_1 )
             {
              before(grammarAccess.getModelAccess().getElementsAssignment_3_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:728:1: ( rule__Model__ElementsAssignment_3_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:728:2: rule__Model__ElementsAssignment_3_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:706:1: ( rule__Model__ElementsAssignment_3_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:706:2: rule__Model__ElementsAssignment_3_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_3_1_in_rule__Model__Group_3__1__Impl1428);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_3_1_in_rule__Model__Group_3__1__Impl1378);
             rule__Model__ElementsAssignment_3_1();
 
             state._fsp--;
@@ -1945,21 +1864,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_6__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:742:1: rule__Model__Group_6__0 : rule__Model__Group_6__0__Impl rule__Model__Group_6__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:720:1: rule__Model__Group_6__0 : rule__Model__Group_6__0__Impl rule__Model__Group_6__1 ;
     public final void rule__Model__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:746:1: ( rule__Model__Group_6__0__Impl rule__Model__Group_6__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:747:2: rule__Model__Group_6__0__Impl rule__Model__Group_6__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:724:1: ( rule__Model__Group_6__0__Impl rule__Model__Group_6__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:725:2: rule__Model__Group_6__0__Impl rule__Model__Group_6__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_6__0__Impl_in_rule__Model__Group_6__01462);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_6__0__Impl_in_rule__Model__Group_6__01412);
             rule__Model__Group_6__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_6__1_in_rule__Model__Group_6__01465);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_6__1_in_rule__Model__Group_6__01415);
             rule__Model__Group_6__1();
 
             state._fsp--;
@@ -1983,20 +1902,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_6__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:754:1: rule__Model__Group_6__0__Impl : ( 'and' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:732:1: rule__Model__Group_6__0__Impl : ( 'and' ) ;
     public final void rule__Model__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:758:1: ( ( 'and' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:759:1: ( 'and' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:736:1: ( ( 'and' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:737:1: ( 'and' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:759:1: ( 'and' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:760:1: 'and'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:737:1: ( 'and' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:738:1: 'and'
             {
              before(grammarAccess.getModelAccess().getAndKeyword_6_0()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__Model__Group_6__0__Impl1493); 
+            match(input,16,FollowSets000.FOLLOW_16_in_rule__Model__Group_6__0__Impl1443); 
              after(grammarAccess.getModelAccess().getAndKeyword_6_0()); 
 
             }
@@ -2020,16 +1939,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_6__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:773:1: rule__Model__Group_6__1 : rule__Model__Group_6__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:751:1: rule__Model__Group_6__1 : rule__Model__Group_6__1__Impl ;
     public final void rule__Model__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:777:1: ( rule__Model__Group_6__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:778:2: rule__Model__Group_6__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:755:1: ( rule__Model__Group_6__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:756:2: rule__Model__Group_6__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_6__1__Impl_in_rule__Model__Group_6__11524);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_6__1__Impl_in_rule__Model__Group_6__11474);
             rule__Model__Group_6__1__Impl();
 
             state._fsp--;
@@ -2053,23 +1972,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_6__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:784:1: rule__Model__Group_6__1__Impl : ( ( rule__Model__ElementsAssignment_6_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:762:1: rule__Model__Group_6__1__Impl : ( ( rule__Model__ElementsAssignment_6_1 ) ) ;
     public final void rule__Model__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:788:1: ( ( ( rule__Model__ElementsAssignment_6_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:789:1: ( ( rule__Model__ElementsAssignment_6_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:766:1: ( ( ( rule__Model__ElementsAssignment_6_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:767:1: ( ( rule__Model__ElementsAssignment_6_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:789:1: ( ( rule__Model__ElementsAssignment_6_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:790:1: ( rule__Model__ElementsAssignment_6_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:767:1: ( ( rule__Model__ElementsAssignment_6_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:768:1: ( rule__Model__ElementsAssignment_6_1 )
             {
              before(grammarAccess.getModelAccess().getElementsAssignment_6_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:791:1: ( rule__Model__ElementsAssignment_6_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:791:2: rule__Model__ElementsAssignment_6_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:769:1: ( rule__Model__ElementsAssignment_6_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:769:2: rule__Model__ElementsAssignment_6_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_6_1_in_rule__Model__Group_6__1__Impl1551);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_6_1_in_rule__Model__Group_6__1__Impl1501);
             rule__Model__ElementsAssignment_6_1();
 
             state._fsp--;
@@ -2100,21 +2019,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_9__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:805:1: rule__Model__Group_9__0 : rule__Model__Group_9__0__Impl rule__Model__Group_9__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:783:1: rule__Model__Group_9__0 : rule__Model__Group_9__0__Impl rule__Model__Group_9__1 ;
     public final void rule__Model__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:809:1: ( rule__Model__Group_9__0__Impl rule__Model__Group_9__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:810:2: rule__Model__Group_9__0__Impl rule__Model__Group_9__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:787:1: ( rule__Model__Group_9__0__Impl rule__Model__Group_9__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:788:2: rule__Model__Group_9__0__Impl rule__Model__Group_9__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_9__0__Impl_in_rule__Model__Group_9__01585);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_9__0__Impl_in_rule__Model__Group_9__01535);
             rule__Model__Group_9__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_9__1_in_rule__Model__Group_9__01588);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_9__1_in_rule__Model__Group_9__01538);
             rule__Model__Group_9__1();
 
             state._fsp--;
@@ -2138,20 +2057,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_9__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:817:1: rule__Model__Group_9__0__Impl : ( 'and' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:795:1: rule__Model__Group_9__0__Impl : ( 'and' ) ;
     public final void rule__Model__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:821:1: ( ( 'and' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:822:1: ( 'and' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:799:1: ( ( 'and' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:800:1: ( 'and' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:822:1: ( 'and' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:823:1: 'and'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:800:1: ( 'and' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:801:1: 'and'
             {
              before(grammarAccess.getModelAccess().getAndKeyword_9_0()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__Model__Group_9__0__Impl1616); 
+            match(input,16,FollowSets000.FOLLOW_16_in_rule__Model__Group_9__0__Impl1566); 
              after(grammarAccess.getModelAccess().getAndKeyword_9_0()); 
 
             }
@@ -2175,16 +2094,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_9__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:836:1: rule__Model__Group_9__1 : rule__Model__Group_9__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:814:1: rule__Model__Group_9__1 : rule__Model__Group_9__1__Impl ;
     public final void rule__Model__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:840:1: ( rule__Model__Group_9__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:841:2: rule__Model__Group_9__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:818:1: ( rule__Model__Group_9__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:819:2: rule__Model__Group_9__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_9__1__Impl_in_rule__Model__Group_9__11647);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__Group_9__1__Impl_in_rule__Model__Group_9__11597);
             rule__Model__Group_9__1__Impl();
 
             state._fsp--;
@@ -2208,23 +2127,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_9__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:847:1: rule__Model__Group_9__1__Impl : ( ( rule__Model__ElementsAssignment_9_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:825:1: rule__Model__Group_9__1__Impl : ( ( rule__Model__ElementsAssignment_9_1 ) ) ;
     public final void rule__Model__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:851:1: ( ( ( rule__Model__ElementsAssignment_9_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:852:1: ( ( rule__Model__ElementsAssignment_9_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:829:1: ( ( ( rule__Model__ElementsAssignment_9_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:830:1: ( ( rule__Model__ElementsAssignment_9_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:852:1: ( ( rule__Model__ElementsAssignment_9_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:853:1: ( rule__Model__ElementsAssignment_9_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:830:1: ( ( rule__Model__ElementsAssignment_9_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:831:1: ( rule__Model__ElementsAssignment_9_1 )
             {
              before(grammarAccess.getModelAccess().getElementsAssignment_9_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:854:1: ( rule__Model__ElementsAssignment_9_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:854:2: rule__Model__ElementsAssignment_9_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:832:1: ( rule__Model__ElementsAssignment_9_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:832:2: rule__Model__ElementsAssignment_9_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_9_1_in_rule__Model__Group_9__1__Impl1674);
+            pushFollow(FollowSets000.FOLLOW_rule__Model__ElementsAssignment_9_1_in_rule__Model__Group_9__1__Impl1624);
             rule__Model__ElementsAssignment_9_1();
 
             state._fsp--;
@@ -2255,21 +2174,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:868:1: rule__WallRule__Group__0 : rule__WallRule__Group__0__Impl rule__WallRule__Group__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:846:1: rule__WallRule__Group__0 : rule__WallRule__Group__0__Impl rule__WallRule__Group__1 ;
     public final void rule__WallRule__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:872:1: ( rule__WallRule__Group__0__Impl rule__WallRule__Group__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:873:2: rule__WallRule__Group__0__Impl rule__WallRule__Group__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:850:1: ( rule__WallRule__Group__0__Impl rule__WallRule__Group__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:851:2: rule__WallRule__Group__0__Impl rule__WallRule__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__0__Impl_in_rule__WallRule__Group__01708);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__0__Impl_in_rule__WallRule__Group__01658);
             rule__WallRule__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__1_in_rule__WallRule__Group__01711);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__1_in_rule__WallRule__Group__01661);
             rule__WallRule__Group__1();
 
             state._fsp--;
@@ -2293,20 +2212,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:880:1: rule__WallRule__Group__0__Impl : ( 'Wall' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:858:1: rule__WallRule__Group__0__Impl : ( 'Wall' ) ;
     public final void rule__WallRule__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:884:1: ( ( 'Wall' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:885:1: ( 'Wall' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:862:1: ( ( 'Wall' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:863:1: ( 'Wall' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:885:1: ( 'Wall' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:886:1: 'Wall'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:863:1: ( 'Wall' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:864:1: 'Wall'
             {
              before(grammarAccess.getWallRuleAccess().getWallKeyword_0()); 
-            match(input,17,FollowSets000.FOLLOW_17_in_rule__WallRule__Group__0__Impl1739); 
+            match(input,17,FollowSets000.FOLLOW_17_in_rule__WallRule__Group__0__Impl1689); 
              after(grammarAccess.getWallRuleAccess().getWallKeyword_0()); 
 
             }
@@ -2330,21 +2249,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:899:1: rule__WallRule__Group__1 : rule__WallRule__Group__1__Impl rule__WallRule__Group__2 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:877:1: rule__WallRule__Group__1 : rule__WallRule__Group__1__Impl rule__WallRule__Group__2 ;
     public final void rule__WallRule__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:903:1: ( rule__WallRule__Group__1__Impl rule__WallRule__Group__2 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:904:2: rule__WallRule__Group__1__Impl rule__WallRule__Group__2
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:881:1: ( rule__WallRule__Group__1__Impl rule__WallRule__Group__2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:882:2: rule__WallRule__Group__1__Impl rule__WallRule__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__1__Impl_in_rule__WallRule__Group__11770);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__1__Impl_in_rule__WallRule__Group__11720);
             rule__WallRule__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__2_in_rule__WallRule__Group__11773);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__2_in_rule__WallRule__Group__11723);
             rule__WallRule__Group__2();
 
             state._fsp--;
@@ -2368,23 +2287,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:911:1: rule__WallRule__Group__1__Impl : ( ( rule__WallRule__NameAssignment_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:889:1: rule__WallRule__Group__1__Impl : ( ( rule__WallRule__NameAssignment_1 ) ) ;
     public final void rule__WallRule__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:915:1: ( ( ( rule__WallRule__NameAssignment_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:916:1: ( ( rule__WallRule__NameAssignment_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:893:1: ( ( ( rule__WallRule__NameAssignment_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:894:1: ( ( rule__WallRule__NameAssignment_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:916:1: ( ( rule__WallRule__NameAssignment_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:917:1: ( rule__WallRule__NameAssignment_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:894:1: ( ( rule__WallRule__NameAssignment_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:895:1: ( rule__WallRule__NameAssignment_1 )
             {
              before(grammarAccess.getWallRuleAccess().getNameAssignment_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:918:1: ( rule__WallRule__NameAssignment_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:918:2: rule__WallRule__NameAssignment_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:896:1: ( rule__WallRule__NameAssignment_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:896:2: rule__WallRule__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__NameAssignment_1_in_rule__WallRule__Group__1__Impl1800);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__NameAssignment_1_in_rule__WallRule__Group__1__Impl1750);
             rule__WallRule__NameAssignment_1();
 
             state._fsp--;
@@ -2415,21 +2334,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__2"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:928:1: rule__WallRule__Group__2 : rule__WallRule__Group__2__Impl rule__WallRule__Group__3 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:906:1: rule__WallRule__Group__2 : rule__WallRule__Group__2__Impl rule__WallRule__Group__3 ;
     public final void rule__WallRule__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:932:1: ( rule__WallRule__Group__2__Impl rule__WallRule__Group__3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:933:2: rule__WallRule__Group__2__Impl rule__WallRule__Group__3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:910:1: ( rule__WallRule__Group__2__Impl rule__WallRule__Group__3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:911:2: rule__WallRule__Group__2__Impl rule__WallRule__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__2__Impl_in_rule__WallRule__Group__21830);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__2__Impl_in_rule__WallRule__Group__21780);
             rule__WallRule__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__3_in_rule__WallRule__Group__21833);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__3_in_rule__WallRule__Group__21783);
             rule__WallRule__Group__3();
 
             state._fsp--;
@@ -2453,20 +2372,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__2__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:940:1: rule__WallRule__Group__2__Impl : ( 'Name' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:918:1: rule__WallRule__Group__2__Impl : ( 'Name' ) ;
     public final void rule__WallRule__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:944:1: ( ( 'Name' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:945:1: ( 'Name' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:922:1: ( ( 'Name' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:923:1: ( 'Name' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:945:1: ( 'Name' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:946:1: 'Name'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:923:1: ( 'Name' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:924:1: 'Name'
             {
              before(grammarAccess.getWallRuleAccess().getNameKeyword_2()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__WallRule__Group__2__Impl1861); 
+            match(input,18,FollowSets000.FOLLOW_18_in_rule__WallRule__Group__2__Impl1811); 
              after(grammarAccess.getWallRuleAccess().getNameKeyword_2()); 
 
             }
@@ -2490,21 +2409,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:959:1: rule__WallRule__Group__3 : rule__WallRule__Group__3__Impl rule__WallRule__Group__4 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:937:1: rule__WallRule__Group__3 : rule__WallRule__Group__3__Impl rule__WallRule__Group__4 ;
     public final void rule__WallRule__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:963:1: ( rule__WallRule__Group__3__Impl rule__WallRule__Group__4 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:964:2: rule__WallRule__Group__3__Impl rule__WallRule__Group__4
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:941:1: ( rule__WallRule__Group__3__Impl rule__WallRule__Group__4 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:942:2: rule__WallRule__Group__3__Impl rule__WallRule__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__3__Impl_in_rule__WallRule__Group__31892);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__3__Impl_in_rule__WallRule__Group__31842);
             rule__WallRule__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__4_in_rule__WallRule__Group__31895);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__4_in_rule__WallRule__Group__31845);
             rule__WallRule__Group__4();
 
             state._fsp--;
@@ -2528,23 +2447,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__3__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:971:1: rule__WallRule__Group__3__Impl : ( ( rule__WallRule__ElementNameAssignment_3 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:949:1: rule__WallRule__Group__3__Impl : ( ( rule__WallRule__ElementNameAssignment_3 ) ) ;
     public final void rule__WallRule__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:975:1: ( ( ( rule__WallRule__ElementNameAssignment_3 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:976:1: ( ( rule__WallRule__ElementNameAssignment_3 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:953:1: ( ( ( rule__WallRule__ElementNameAssignment_3 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:954:1: ( ( rule__WallRule__ElementNameAssignment_3 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:976:1: ( ( rule__WallRule__ElementNameAssignment_3 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:977:1: ( rule__WallRule__ElementNameAssignment_3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:954:1: ( ( rule__WallRule__ElementNameAssignment_3 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:955:1: ( rule__WallRule__ElementNameAssignment_3 )
             {
              before(grammarAccess.getWallRuleAccess().getElementNameAssignment_3()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:978:1: ( rule__WallRule__ElementNameAssignment_3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:978:2: rule__WallRule__ElementNameAssignment_3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:956:1: ( rule__WallRule__ElementNameAssignment_3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:956:2: rule__WallRule__ElementNameAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__ElementNameAssignment_3_in_rule__WallRule__Group__3__Impl1922);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__ElementNameAssignment_3_in_rule__WallRule__Group__3__Impl1872);
             rule__WallRule__ElementNameAssignment_3();
 
             state._fsp--;
@@ -2575,21 +2494,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__4"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:988:1: rule__WallRule__Group__4 : rule__WallRule__Group__4__Impl rule__WallRule__Group__5 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:966:1: rule__WallRule__Group__4 : rule__WallRule__Group__4__Impl rule__WallRule__Group__5 ;
     public final void rule__WallRule__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:992:1: ( rule__WallRule__Group__4__Impl rule__WallRule__Group__5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:993:2: rule__WallRule__Group__4__Impl rule__WallRule__Group__5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:970:1: ( rule__WallRule__Group__4__Impl rule__WallRule__Group__5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:971:2: rule__WallRule__Group__4__Impl rule__WallRule__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__4__Impl_in_rule__WallRule__Group__41952);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__4__Impl_in_rule__WallRule__Group__41902);
             rule__WallRule__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__5_in_rule__WallRule__Group__41955);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__5_in_rule__WallRule__Group__41905);
             rule__WallRule__Group__5();
 
             state._fsp--;
@@ -2613,20 +2532,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__4__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1000:1: rule__WallRule__Group__4__Impl : ( 'Description' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:978:1: rule__WallRule__Group__4__Impl : ( 'Description' ) ;
     public final void rule__WallRule__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1004:1: ( ( 'Description' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1005:1: ( 'Description' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:982:1: ( ( 'Description' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:983:1: ( 'Description' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1005:1: ( 'Description' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1006:1: 'Description'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:983:1: ( 'Description' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:984:1: 'Description'
             {
              before(grammarAccess.getWallRuleAccess().getDescriptionKeyword_4()); 
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__WallRule__Group__4__Impl1983); 
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__WallRule__Group__4__Impl1933); 
              after(grammarAccess.getWallRuleAccess().getDescriptionKeyword_4()); 
 
             }
@@ -2650,21 +2569,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1019:1: rule__WallRule__Group__5 : rule__WallRule__Group__5__Impl rule__WallRule__Group__6 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:997:1: rule__WallRule__Group__5 : rule__WallRule__Group__5__Impl rule__WallRule__Group__6 ;
     public final void rule__WallRule__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1023:1: ( rule__WallRule__Group__5__Impl rule__WallRule__Group__6 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1024:2: rule__WallRule__Group__5__Impl rule__WallRule__Group__6
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1001:1: ( rule__WallRule__Group__5__Impl rule__WallRule__Group__6 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1002:2: rule__WallRule__Group__5__Impl rule__WallRule__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__5__Impl_in_rule__WallRule__Group__52014);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__5__Impl_in_rule__WallRule__Group__51964);
             rule__WallRule__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__6_in_rule__WallRule__Group__52017);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__6_in_rule__WallRule__Group__51967);
             rule__WallRule__Group__6();
 
             state._fsp--;
@@ -2688,23 +2607,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__5__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1031:1: rule__WallRule__Group__5__Impl : ( ( rule__WallRule__DescriptionAssignment_5 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1009:1: rule__WallRule__Group__5__Impl : ( ( rule__WallRule__DescriptionAssignment_5 ) ) ;
     public final void rule__WallRule__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1035:1: ( ( ( rule__WallRule__DescriptionAssignment_5 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1036:1: ( ( rule__WallRule__DescriptionAssignment_5 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1013:1: ( ( ( rule__WallRule__DescriptionAssignment_5 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1014:1: ( ( rule__WallRule__DescriptionAssignment_5 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1036:1: ( ( rule__WallRule__DescriptionAssignment_5 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1037:1: ( rule__WallRule__DescriptionAssignment_5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1014:1: ( ( rule__WallRule__DescriptionAssignment_5 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1015:1: ( rule__WallRule__DescriptionAssignment_5 )
             {
              before(grammarAccess.getWallRuleAccess().getDescriptionAssignment_5()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1038:1: ( rule__WallRule__DescriptionAssignment_5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1038:2: rule__WallRule__DescriptionAssignment_5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1016:1: ( rule__WallRule__DescriptionAssignment_5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1016:2: rule__WallRule__DescriptionAssignment_5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__DescriptionAssignment_5_in_rule__WallRule__Group__5__Impl2044);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__DescriptionAssignment_5_in_rule__WallRule__Group__5__Impl1994);
             rule__WallRule__DescriptionAssignment_5();
 
             state._fsp--;
@@ -2735,21 +2654,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__6"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1048:1: rule__WallRule__Group__6 : rule__WallRule__Group__6__Impl rule__WallRule__Group__7 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1026:1: rule__WallRule__Group__6 : rule__WallRule__Group__6__Impl rule__WallRule__Group__7 ;
     public final void rule__WallRule__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1052:1: ( rule__WallRule__Group__6__Impl rule__WallRule__Group__7 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1053:2: rule__WallRule__Group__6__Impl rule__WallRule__Group__7
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1030:1: ( rule__WallRule__Group__6__Impl rule__WallRule__Group__7 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1031:2: rule__WallRule__Group__6__Impl rule__WallRule__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__6__Impl_in_rule__WallRule__Group__62074);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__6__Impl_in_rule__WallRule__Group__62024);
             rule__WallRule__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__7_in_rule__WallRule__Group__62077);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__7_in_rule__WallRule__Group__62027);
             rule__WallRule__Group__7();
 
             state._fsp--;
@@ -2773,20 +2692,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__6__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1060:1: rule__WallRule__Group__6__Impl : ( 'placement' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1038:1: rule__WallRule__Group__6__Impl : ( 'placement' ) ;
     public final void rule__WallRule__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1064:1: ( ( 'placement' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1065:1: ( 'placement' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1042:1: ( ( 'placement' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1043:1: ( 'placement' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1065:1: ( 'placement' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1066:1: 'placement'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1043:1: ( 'placement' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1044:1: 'placement'
             {
              before(grammarAccess.getWallRuleAccess().getPlacementKeyword_6()); 
-            match(input,20,FollowSets000.FOLLOW_20_in_rule__WallRule__Group__6__Impl2105); 
+            match(input,20,FollowSets000.FOLLOW_20_in_rule__WallRule__Group__6__Impl2055); 
              after(grammarAccess.getWallRuleAccess().getPlacementKeyword_6()); 
 
             }
@@ -2810,16 +2729,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__7"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1079:1: rule__WallRule__Group__7 : rule__WallRule__Group__7__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1057:1: rule__WallRule__Group__7 : rule__WallRule__Group__7__Impl ;
     public final void rule__WallRule__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1083:1: ( rule__WallRule__Group__7__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1084:2: rule__WallRule__Group__7__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1061:1: ( rule__WallRule__Group__7__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1062:2: rule__WallRule__Group__7__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__7__Impl_in_rule__WallRule__Group__72136);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__Group__7__Impl_in_rule__WallRule__Group__72086);
             rule__WallRule__Group__7__Impl();
 
             state._fsp--;
@@ -2843,23 +2762,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__Group__7__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1090:1: rule__WallRule__Group__7__Impl : ( ( rule__WallRule__PlacementAssignment_7 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1068:1: rule__WallRule__Group__7__Impl : ( ( rule__WallRule__PlacementAssignment_7 ) ) ;
     public final void rule__WallRule__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1094:1: ( ( ( rule__WallRule__PlacementAssignment_7 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1095:1: ( ( rule__WallRule__PlacementAssignment_7 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1072:1: ( ( ( rule__WallRule__PlacementAssignment_7 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1073:1: ( ( rule__WallRule__PlacementAssignment_7 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1095:1: ( ( rule__WallRule__PlacementAssignment_7 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1096:1: ( rule__WallRule__PlacementAssignment_7 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1073:1: ( ( rule__WallRule__PlacementAssignment_7 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1074:1: ( rule__WallRule__PlacementAssignment_7 )
             {
              before(grammarAccess.getWallRuleAccess().getPlacementAssignment_7()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1097:1: ( rule__WallRule__PlacementAssignment_7 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1097:2: rule__WallRule__PlacementAssignment_7
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1075:1: ( rule__WallRule__PlacementAssignment_7 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1075:2: rule__WallRule__PlacementAssignment_7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__WallRule__PlacementAssignment_7_in_rule__WallRule__Group__7__Impl2163);
+            pushFollow(FollowSets000.FOLLOW_rule__WallRule__PlacementAssignment_7_in_rule__WallRule__Group__7__Impl2113);
             rule__WallRule__PlacementAssignment_7();
 
             state._fsp--;
@@ -2890,21 +2809,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1123:1: rule__Opening__Group__0 : rule__Opening__Group__0__Impl rule__Opening__Group__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1101:1: rule__Opening__Group__0 : rule__Opening__Group__0__Impl rule__Opening__Group__1 ;
     public final void rule__Opening__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1127:1: ( rule__Opening__Group__0__Impl rule__Opening__Group__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1128:2: rule__Opening__Group__0__Impl rule__Opening__Group__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1105:1: ( rule__Opening__Group__0__Impl rule__Opening__Group__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1106:2: rule__Opening__Group__0__Impl rule__Opening__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__0__Impl_in_rule__Opening__Group__02209);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__0__Impl_in_rule__Opening__Group__02159);
             rule__Opening__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__1_in_rule__Opening__Group__02212);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__1_in_rule__Opening__Group__02162);
             rule__Opening__Group__1();
 
             state._fsp--;
@@ -2928,20 +2847,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1135:1: rule__Opening__Group__0__Impl : ( 'Opening' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1113:1: rule__Opening__Group__0__Impl : ( 'Opening' ) ;
     public final void rule__Opening__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1139:1: ( ( 'Opening' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1140:1: ( 'Opening' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1117:1: ( ( 'Opening' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1118:1: ( 'Opening' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1140:1: ( 'Opening' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1141:1: 'Opening'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1118:1: ( 'Opening' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1119:1: 'Opening'
             {
              before(grammarAccess.getOpeningAccess().getOpeningKeyword_0()); 
-            match(input,21,FollowSets000.FOLLOW_21_in_rule__Opening__Group__0__Impl2240); 
+            match(input,21,FollowSets000.FOLLOW_21_in_rule__Opening__Group__0__Impl2190); 
              after(grammarAccess.getOpeningAccess().getOpeningKeyword_0()); 
 
             }
@@ -2965,21 +2884,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1154:1: rule__Opening__Group__1 : rule__Opening__Group__1__Impl rule__Opening__Group__2 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1132:1: rule__Opening__Group__1 : rule__Opening__Group__1__Impl rule__Opening__Group__2 ;
     public final void rule__Opening__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1158:1: ( rule__Opening__Group__1__Impl rule__Opening__Group__2 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1159:2: rule__Opening__Group__1__Impl rule__Opening__Group__2
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1136:1: ( rule__Opening__Group__1__Impl rule__Opening__Group__2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1137:2: rule__Opening__Group__1__Impl rule__Opening__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__1__Impl_in_rule__Opening__Group__12271);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__1__Impl_in_rule__Opening__Group__12221);
             rule__Opening__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__2_in_rule__Opening__Group__12274);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__2_in_rule__Opening__Group__12224);
             rule__Opening__Group__2();
 
             state._fsp--;
@@ -3003,23 +2922,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1166:1: rule__Opening__Group__1__Impl : ( ( rule__Opening__NameAssignment_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1144:1: rule__Opening__Group__1__Impl : ( ( rule__Opening__NameAssignment_1 ) ) ;
     public final void rule__Opening__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1170:1: ( ( ( rule__Opening__NameAssignment_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1171:1: ( ( rule__Opening__NameAssignment_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1148:1: ( ( ( rule__Opening__NameAssignment_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1149:1: ( ( rule__Opening__NameAssignment_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1171:1: ( ( rule__Opening__NameAssignment_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1172:1: ( rule__Opening__NameAssignment_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1149:1: ( ( rule__Opening__NameAssignment_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1150:1: ( rule__Opening__NameAssignment_1 )
             {
              before(grammarAccess.getOpeningAccess().getNameAssignment_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1173:1: ( rule__Opening__NameAssignment_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1173:2: rule__Opening__NameAssignment_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1151:1: ( rule__Opening__NameAssignment_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1151:2: rule__Opening__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__NameAssignment_1_in_rule__Opening__Group__1__Impl2301);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__NameAssignment_1_in_rule__Opening__Group__1__Impl2251);
             rule__Opening__NameAssignment_1();
 
             state._fsp--;
@@ -3050,21 +2969,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__2"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1183:1: rule__Opening__Group__2 : rule__Opening__Group__2__Impl rule__Opening__Group__3 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1161:1: rule__Opening__Group__2 : rule__Opening__Group__2__Impl rule__Opening__Group__3 ;
     public final void rule__Opening__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1187:1: ( rule__Opening__Group__2__Impl rule__Opening__Group__3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1188:2: rule__Opening__Group__2__Impl rule__Opening__Group__3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1165:1: ( rule__Opening__Group__2__Impl rule__Opening__Group__3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1166:2: rule__Opening__Group__2__Impl rule__Opening__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__2__Impl_in_rule__Opening__Group__22331);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__2__Impl_in_rule__Opening__Group__22281);
             rule__Opening__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__3_in_rule__Opening__Group__22334);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__3_in_rule__Opening__Group__22284);
             rule__Opening__Group__3();
 
             state._fsp--;
@@ -3088,31 +3007,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__2__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1195:1: rule__Opening__Group__2__Impl : ( ( rule__Opening__Group_2__0 )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1173:1: rule__Opening__Group__2__Impl : ( ( rule__Opening__Group_2__0 )? ) ;
     public final void rule__Opening__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1199:1: ( ( ( rule__Opening__Group_2__0 )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1200:1: ( ( rule__Opening__Group_2__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1177:1: ( ( ( rule__Opening__Group_2__0 )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1178:1: ( ( rule__Opening__Group_2__0 )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1200:1: ( ( rule__Opening__Group_2__0 )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1201:1: ( rule__Opening__Group_2__0 )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1178:1: ( ( rule__Opening__Group_2__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1179:1: ( rule__Opening__Group_2__0 )?
             {
              before(grammarAccess.getOpeningAccess().getGroup_2()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1202:1: ( rule__Opening__Group_2__0 )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1180:1: ( rule__Opening__Group_2__0 )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA6_0==18) ) {
-                alt6=1;
+            if ( (LA5_0==18) ) {
+                alt5=1;
             }
-            switch (alt6) {
+            switch (alt5) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1202:2: rule__Opening__Group_2__0
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1180:2: rule__Opening__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_2__0_in_rule__Opening__Group__2__Impl2361);
+                    pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_2__0_in_rule__Opening__Group__2__Impl2311);
                     rule__Opening__Group_2__0();
 
                     state._fsp--;
@@ -3146,21 +3065,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1212:1: rule__Opening__Group__3 : rule__Opening__Group__3__Impl rule__Opening__Group__4 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1190:1: rule__Opening__Group__3 : rule__Opening__Group__3__Impl rule__Opening__Group__4 ;
     public final void rule__Opening__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1216:1: ( rule__Opening__Group__3__Impl rule__Opening__Group__4 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1217:2: rule__Opening__Group__3__Impl rule__Opening__Group__4
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1194:1: ( rule__Opening__Group__3__Impl rule__Opening__Group__4 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1195:2: rule__Opening__Group__3__Impl rule__Opening__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__3__Impl_in_rule__Opening__Group__32392);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__3__Impl_in_rule__Opening__Group__32342);
             rule__Opening__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__4_in_rule__Opening__Group__32395);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__4_in_rule__Opening__Group__32345);
             rule__Opening__Group__4();
 
             state._fsp--;
@@ -3184,31 +3103,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__3__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1224:1: rule__Opening__Group__3__Impl : ( ( rule__Opening__Group_3__0 )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1202:1: rule__Opening__Group__3__Impl : ( ( rule__Opening__Group_3__0 )? ) ;
     public final void rule__Opening__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1228:1: ( ( ( rule__Opening__Group_3__0 )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1229:1: ( ( rule__Opening__Group_3__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1206:1: ( ( ( rule__Opening__Group_3__0 )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1207:1: ( ( rule__Opening__Group_3__0 )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1229:1: ( ( rule__Opening__Group_3__0 )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1230:1: ( rule__Opening__Group_3__0 )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1207:1: ( ( rule__Opening__Group_3__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1208:1: ( rule__Opening__Group_3__0 )?
             {
              before(grammarAccess.getOpeningAccess().getGroup_3()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1231:1: ( rule__Opening__Group_3__0 )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1209:1: ( rule__Opening__Group_3__0 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA7_0==19) ) {
-                alt7=1;
+            if ( (LA6_0==19) ) {
+                alt6=1;
             }
-            switch (alt7) {
+            switch (alt6) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1231:2: rule__Opening__Group_3__0
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1209:2: rule__Opening__Group_3__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_3__0_in_rule__Opening__Group__3__Impl2422);
+                    pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_3__0_in_rule__Opening__Group__3__Impl2372);
                     rule__Opening__Group_3__0();
 
                     state._fsp--;
@@ -3242,21 +3161,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__4"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1241:1: rule__Opening__Group__4 : rule__Opening__Group__4__Impl rule__Opening__Group__5 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1219:1: rule__Opening__Group__4 : rule__Opening__Group__4__Impl rule__Opening__Group__5 ;
     public final void rule__Opening__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1245:1: ( rule__Opening__Group__4__Impl rule__Opening__Group__5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1246:2: rule__Opening__Group__4__Impl rule__Opening__Group__5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1223:1: ( rule__Opening__Group__4__Impl rule__Opening__Group__5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1224:2: rule__Opening__Group__4__Impl rule__Opening__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__4__Impl_in_rule__Opening__Group__42453);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__4__Impl_in_rule__Opening__Group__42403);
             rule__Opening__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__5_in_rule__Opening__Group__42456);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__5_in_rule__Opening__Group__42406);
             rule__Opening__Group__5();
 
             state._fsp--;
@@ -3280,20 +3199,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__4__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1253:1: rule__Opening__Group__4__Impl : ( 'placement' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1231:1: rule__Opening__Group__4__Impl : ( 'placement' ) ;
     public final void rule__Opening__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1257:1: ( ( 'placement' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1258:1: ( 'placement' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1235:1: ( ( 'placement' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1236:1: ( 'placement' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1258:1: ( 'placement' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1259:1: 'placement'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1236:1: ( 'placement' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1237:1: 'placement'
             {
              before(grammarAccess.getOpeningAccess().getPlacementKeyword_4()); 
-            match(input,20,FollowSets000.FOLLOW_20_in_rule__Opening__Group__4__Impl2484); 
+            match(input,20,FollowSets000.FOLLOW_20_in_rule__Opening__Group__4__Impl2434); 
              after(grammarAccess.getOpeningAccess().getPlacementKeyword_4()); 
 
             }
@@ -3317,21 +3236,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1272:1: rule__Opening__Group__5 : rule__Opening__Group__5__Impl rule__Opening__Group__6 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1250:1: rule__Opening__Group__5 : rule__Opening__Group__5__Impl rule__Opening__Group__6 ;
     public final void rule__Opening__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1276:1: ( rule__Opening__Group__5__Impl rule__Opening__Group__6 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1277:2: rule__Opening__Group__5__Impl rule__Opening__Group__6
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1254:1: ( rule__Opening__Group__5__Impl rule__Opening__Group__6 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1255:2: rule__Opening__Group__5__Impl rule__Opening__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__5__Impl_in_rule__Opening__Group__52515);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__5__Impl_in_rule__Opening__Group__52465);
             rule__Opening__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__6_in_rule__Opening__Group__52518);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__6_in_rule__Opening__Group__52468);
             rule__Opening__Group__6();
 
             state._fsp--;
@@ -3355,23 +3274,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__5__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1284:1: rule__Opening__Group__5__Impl : ( ( rule__Opening__PlacementAssignment_5 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1262:1: rule__Opening__Group__5__Impl : ( ( rule__Opening__PlacementAssignment_5 ) ) ;
     public final void rule__Opening__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1288:1: ( ( ( rule__Opening__PlacementAssignment_5 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1289:1: ( ( rule__Opening__PlacementAssignment_5 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1266:1: ( ( ( rule__Opening__PlacementAssignment_5 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1267:1: ( ( rule__Opening__PlacementAssignment_5 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1289:1: ( ( rule__Opening__PlacementAssignment_5 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1290:1: ( rule__Opening__PlacementAssignment_5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1267:1: ( ( rule__Opening__PlacementAssignment_5 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1268:1: ( rule__Opening__PlacementAssignment_5 )
             {
              before(grammarAccess.getOpeningAccess().getPlacementAssignment_5()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1291:1: ( rule__Opening__PlacementAssignment_5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1291:2: rule__Opening__PlacementAssignment_5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1269:1: ( rule__Opening__PlacementAssignment_5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1269:2: rule__Opening__PlacementAssignment_5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__PlacementAssignment_5_in_rule__Opening__Group__5__Impl2545);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__PlacementAssignment_5_in_rule__Opening__Group__5__Impl2495);
             rule__Opening__PlacementAssignment_5();
 
             state._fsp--;
@@ -3402,21 +3321,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__6"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1301:1: rule__Opening__Group__6 : rule__Opening__Group__6__Impl rule__Opening__Group__7 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1279:1: rule__Opening__Group__6 : rule__Opening__Group__6__Impl rule__Opening__Group__7 ;
     public final void rule__Opening__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1305:1: ( rule__Opening__Group__6__Impl rule__Opening__Group__7 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1306:2: rule__Opening__Group__6__Impl rule__Opening__Group__7
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1283:1: ( rule__Opening__Group__6__Impl rule__Opening__Group__7 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1284:2: rule__Opening__Group__6__Impl rule__Opening__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__6__Impl_in_rule__Opening__Group__62575);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__6__Impl_in_rule__Opening__Group__62525);
             rule__Opening__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__7_in_rule__Opening__Group__62578);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__7_in_rule__Opening__Group__62528);
             rule__Opening__Group__7();
 
             state._fsp--;
@@ -3440,20 +3359,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__6__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1313:1: rule__Opening__Group__6__Impl : ( 'walls' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1291:1: rule__Opening__Group__6__Impl : ( 'walls' ) ;
     public final void rule__Opening__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1317:1: ( ( 'walls' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1318:1: ( 'walls' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1295:1: ( ( 'walls' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1296:1: ( 'walls' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1318:1: ( 'walls' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1319:1: 'walls'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1296:1: ( 'walls' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1297:1: 'walls'
             {
              before(grammarAccess.getOpeningAccess().getWallsKeyword_6()); 
-            match(input,22,FollowSets000.FOLLOW_22_in_rule__Opening__Group__6__Impl2606); 
+            match(input,22,FollowSets000.FOLLOW_22_in_rule__Opening__Group__6__Impl2556); 
              after(grammarAccess.getOpeningAccess().getWallsKeyword_6()); 
 
             }
@@ -3477,21 +3396,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__7"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1332:1: rule__Opening__Group__7 : rule__Opening__Group__7__Impl rule__Opening__Group__8 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1310:1: rule__Opening__Group__7 : rule__Opening__Group__7__Impl rule__Opening__Group__8 ;
     public final void rule__Opening__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1336:1: ( rule__Opening__Group__7__Impl rule__Opening__Group__8 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1337:2: rule__Opening__Group__7__Impl rule__Opening__Group__8
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1314:1: ( rule__Opening__Group__7__Impl rule__Opening__Group__8 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1315:2: rule__Opening__Group__7__Impl rule__Opening__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__7__Impl_in_rule__Opening__Group__72637);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__7__Impl_in_rule__Opening__Group__72587);
             rule__Opening__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__8_in_rule__Opening__Group__72640);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__8_in_rule__Opening__Group__72590);
             rule__Opening__Group__8();
 
             state._fsp--;
@@ -3515,23 +3434,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__7__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1344:1: rule__Opening__Group__7__Impl : ( ( rule__Opening__WallsAssignment_7 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1322:1: rule__Opening__Group__7__Impl : ( ( rule__Opening__WallsAssignment_7 ) ) ;
     public final void rule__Opening__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1348:1: ( ( ( rule__Opening__WallsAssignment_7 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1349:1: ( ( rule__Opening__WallsAssignment_7 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1326:1: ( ( ( rule__Opening__WallsAssignment_7 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1327:1: ( ( rule__Opening__WallsAssignment_7 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1349:1: ( ( rule__Opening__WallsAssignment_7 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1350:1: ( rule__Opening__WallsAssignment_7 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1327:1: ( ( rule__Opening__WallsAssignment_7 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1328:1: ( rule__Opening__WallsAssignment_7 )
             {
              before(grammarAccess.getOpeningAccess().getWallsAssignment_7()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1351:1: ( rule__Opening__WallsAssignment_7 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1351:2: rule__Opening__WallsAssignment_7
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1329:1: ( rule__Opening__WallsAssignment_7 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1329:2: rule__Opening__WallsAssignment_7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__WallsAssignment_7_in_rule__Opening__Group__7__Impl2667);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__WallsAssignment_7_in_rule__Opening__Group__7__Impl2617);
             rule__Opening__WallsAssignment_7();
 
             state._fsp--;
@@ -3562,16 +3481,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__8"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1361:1: rule__Opening__Group__8 : rule__Opening__Group__8__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1339:1: rule__Opening__Group__8 : rule__Opening__Group__8__Impl ;
     public final void rule__Opening__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1365:1: ( rule__Opening__Group__8__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1366:2: rule__Opening__Group__8__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1343:1: ( rule__Opening__Group__8__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1344:2: rule__Opening__Group__8__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__8__Impl_in_rule__Opening__Group__82697);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group__8__Impl_in_rule__Opening__Group__82647);
             rule__Opening__Group__8__Impl();
 
             state._fsp--;
@@ -3595,35 +3514,35 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group__8__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1372:1: rule__Opening__Group__8__Impl : ( ( rule__Opening__Group_8__0 )* ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1350:1: rule__Opening__Group__8__Impl : ( ( rule__Opening__Group_8__0 )* ) ;
     public final void rule__Opening__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1376:1: ( ( ( rule__Opening__Group_8__0 )* ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1377:1: ( ( rule__Opening__Group_8__0 )* )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1354:1: ( ( ( rule__Opening__Group_8__0 )* ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1355:1: ( ( rule__Opening__Group_8__0 )* )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1377:1: ( ( rule__Opening__Group_8__0 )* )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1378:1: ( rule__Opening__Group_8__0 )*
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1355:1: ( ( rule__Opening__Group_8__0 )* )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1356:1: ( rule__Opening__Group_8__0 )*
             {
              before(grammarAccess.getOpeningAccess().getGroup_8()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1379:1: ( rule__Opening__Group_8__0 )*
-            loop8:
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1357:1: ( rule__Opening__Group_8__0 )*
+            loop7:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-                if ( (LA8_0==23) ) {
-                    alt8=1;
+                if ( (LA7_0==23) ) {
+                    alt7=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt7) {
             	case 1 :
-            	    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1379:2: rule__Opening__Group_8__0
+            	    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1357:2: rule__Opening__Group_8__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_8__0_in_rule__Opening__Group__8__Impl2724);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_8__0_in_rule__Opening__Group__8__Impl2674);
             	    rule__Opening__Group_8__0();
 
             	    state._fsp--;
@@ -3633,7 +3552,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop7;
                 }
             } while (true);
 
@@ -3660,21 +3579,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_2__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1407:1: rule__Opening__Group_2__0 : rule__Opening__Group_2__0__Impl rule__Opening__Group_2__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1385:1: rule__Opening__Group_2__0 : rule__Opening__Group_2__0__Impl rule__Opening__Group_2__1 ;
     public final void rule__Opening__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1411:1: ( rule__Opening__Group_2__0__Impl rule__Opening__Group_2__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1412:2: rule__Opening__Group_2__0__Impl rule__Opening__Group_2__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1389:1: ( rule__Opening__Group_2__0__Impl rule__Opening__Group_2__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1390:2: rule__Opening__Group_2__0__Impl rule__Opening__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_2__0__Impl_in_rule__Opening__Group_2__02773);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_2__0__Impl_in_rule__Opening__Group_2__02723);
             rule__Opening__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_2__1_in_rule__Opening__Group_2__02776);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_2__1_in_rule__Opening__Group_2__02726);
             rule__Opening__Group_2__1();
 
             state._fsp--;
@@ -3698,20 +3617,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_2__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1419:1: rule__Opening__Group_2__0__Impl : ( 'Name' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1397:1: rule__Opening__Group_2__0__Impl : ( 'Name' ) ;
     public final void rule__Opening__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1423:1: ( ( 'Name' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1424:1: ( 'Name' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1401:1: ( ( 'Name' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1402:1: ( 'Name' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1424:1: ( 'Name' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1425:1: 'Name'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1402:1: ( 'Name' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1403:1: 'Name'
             {
              before(grammarAccess.getOpeningAccess().getNameKeyword_2_0()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__Opening__Group_2__0__Impl2804); 
+            match(input,18,FollowSets000.FOLLOW_18_in_rule__Opening__Group_2__0__Impl2754); 
              after(grammarAccess.getOpeningAccess().getNameKeyword_2_0()); 
 
             }
@@ -3735,16 +3654,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_2__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1438:1: rule__Opening__Group_2__1 : rule__Opening__Group_2__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1416:1: rule__Opening__Group_2__1 : rule__Opening__Group_2__1__Impl ;
     public final void rule__Opening__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1442:1: ( rule__Opening__Group_2__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1443:2: rule__Opening__Group_2__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1420:1: ( rule__Opening__Group_2__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1421:2: rule__Opening__Group_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_2__1__Impl_in_rule__Opening__Group_2__12835);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_2__1__Impl_in_rule__Opening__Group_2__12785);
             rule__Opening__Group_2__1__Impl();
 
             state._fsp--;
@@ -3768,23 +3687,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_2__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1449:1: rule__Opening__Group_2__1__Impl : ( ( rule__Opening__ElementNameAssignment_2_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1427:1: rule__Opening__Group_2__1__Impl : ( ( rule__Opening__ElementNameAssignment_2_1 ) ) ;
     public final void rule__Opening__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1453:1: ( ( ( rule__Opening__ElementNameAssignment_2_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1454:1: ( ( rule__Opening__ElementNameAssignment_2_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1431:1: ( ( ( rule__Opening__ElementNameAssignment_2_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1432:1: ( ( rule__Opening__ElementNameAssignment_2_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1454:1: ( ( rule__Opening__ElementNameAssignment_2_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1455:1: ( rule__Opening__ElementNameAssignment_2_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1432:1: ( ( rule__Opening__ElementNameAssignment_2_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1433:1: ( rule__Opening__ElementNameAssignment_2_1 )
             {
              before(grammarAccess.getOpeningAccess().getElementNameAssignment_2_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1456:1: ( rule__Opening__ElementNameAssignment_2_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1456:2: rule__Opening__ElementNameAssignment_2_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1434:1: ( rule__Opening__ElementNameAssignment_2_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1434:2: rule__Opening__ElementNameAssignment_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__ElementNameAssignment_2_1_in_rule__Opening__Group_2__1__Impl2862);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__ElementNameAssignment_2_1_in_rule__Opening__Group_2__1__Impl2812);
             rule__Opening__ElementNameAssignment_2_1();
 
             state._fsp--;
@@ -3815,21 +3734,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_3__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1470:1: rule__Opening__Group_3__0 : rule__Opening__Group_3__0__Impl rule__Opening__Group_3__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1448:1: rule__Opening__Group_3__0 : rule__Opening__Group_3__0__Impl rule__Opening__Group_3__1 ;
     public final void rule__Opening__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1474:1: ( rule__Opening__Group_3__0__Impl rule__Opening__Group_3__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1475:2: rule__Opening__Group_3__0__Impl rule__Opening__Group_3__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1452:1: ( rule__Opening__Group_3__0__Impl rule__Opening__Group_3__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1453:2: rule__Opening__Group_3__0__Impl rule__Opening__Group_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_3__0__Impl_in_rule__Opening__Group_3__02896);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_3__0__Impl_in_rule__Opening__Group_3__02846);
             rule__Opening__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_3__1_in_rule__Opening__Group_3__02899);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_3__1_in_rule__Opening__Group_3__02849);
             rule__Opening__Group_3__1();
 
             state._fsp--;
@@ -3853,20 +3772,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_3__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1482:1: rule__Opening__Group_3__0__Impl : ( 'Description' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1460:1: rule__Opening__Group_3__0__Impl : ( 'Description' ) ;
     public final void rule__Opening__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1486:1: ( ( 'Description' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1487:1: ( 'Description' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1464:1: ( ( 'Description' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1465:1: ( 'Description' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1487:1: ( 'Description' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1488:1: 'Description'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1465:1: ( 'Description' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1466:1: 'Description'
             {
              before(grammarAccess.getOpeningAccess().getDescriptionKeyword_3_0()); 
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Opening__Group_3__0__Impl2927); 
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__Opening__Group_3__0__Impl2877); 
              after(grammarAccess.getOpeningAccess().getDescriptionKeyword_3_0()); 
 
             }
@@ -3890,16 +3809,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_3__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1501:1: rule__Opening__Group_3__1 : rule__Opening__Group_3__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1479:1: rule__Opening__Group_3__1 : rule__Opening__Group_3__1__Impl ;
     public final void rule__Opening__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1505:1: ( rule__Opening__Group_3__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1506:2: rule__Opening__Group_3__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1483:1: ( rule__Opening__Group_3__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1484:2: rule__Opening__Group_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_3__1__Impl_in_rule__Opening__Group_3__12958);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_3__1__Impl_in_rule__Opening__Group_3__12908);
             rule__Opening__Group_3__1__Impl();
 
             state._fsp--;
@@ -3923,23 +3842,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_3__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1512:1: rule__Opening__Group_3__1__Impl : ( ( rule__Opening__DescriptionAssignment_3_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1490:1: rule__Opening__Group_3__1__Impl : ( ( rule__Opening__DescriptionAssignment_3_1 ) ) ;
     public final void rule__Opening__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1516:1: ( ( ( rule__Opening__DescriptionAssignment_3_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1517:1: ( ( rule__Opening__DescriptionAssignment_3_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1494:1: ( ( ( rule__Opening__DescriptionAssignment_3_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1495:1: ( ( rule__Opening__DescriptionAssignment_3_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1517:1: ( ( rule__Opening__DescriptionAssignment_3_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1518:1: ( rule__Opening__DescriptionAssignment_3_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1495:1: ( ( rule__Opening__DescriptionAssignment_3_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1496:1: ( rule__Opening__DescriptionAssignment_3_1 )
             {
              before(grammarAccess.getOpeningAccess().getDescriptionAssignment_3_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1519:1: ( rule__Opening__DescriptionAssignment_3_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1519:2: rule__Opening__DescriptionAssignment_3_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1497:1: ( rule__Opening__DescriptionAssignment_3_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1497:2: rule__Opening__DescriptionAssignment_3_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__DescriptionAssignment_3_1_in_rule__Opening__Group_3__1__Impl2985);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__DescriptionAssignment_3_1_in_rule__Opening__Group_3__1__Impl2935);
             rule__Opening__DescriptionAssignment_3_1();
 
             state._fsp--;
@@ -3970,21 +3889,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_8__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1533:1: rule__Opening__Group_8__0 : rule__Opening__Group_8__0__Impl rule__Opening__Group_8__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1511:1: rule__Opening__Group_8__0 : rule__Opening__Group_8__0__Impl rule__Opening__Group_8__1 ;
     public final void rule__Opening__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1537:1: ( rule__Opening__Group_8__0__Impl rule__Opening__Group_8__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1538:2: rule__Opening__Group_8__0__Impl rule__Opening__Group_8__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1515:1: ( rule__Opening__Group_8__0__Impl rule__Opening__Group_8__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1516:2: rule__Opening__Group_8__0__Impl rule__Opening__Group_8__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_8__0__Impl_in_rule__Opening__Group_8__03019);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_8__0__Impl_in_rule__Opening__Group_8__02969);
             rule__Opening__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_8__1_in_rule__Opening__Group_8__03022);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_8__1_in_rule__Opening__Group_8__02972);
             rule__Opening__Group_8__1();
 
             state._fsp--;
@@ -4008,20 +3927,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_8__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1545:1: rule__Opening__Group_8__0__Impl : ( ',' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1523:1: rule__Opening__Group_8__0__Impl : ( ',' ) ;
     public final void rule__Opening__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1549:1: ( ( ',' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1550:1: ( ',' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1527:1: ( ( ',' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1528:1: ( ',' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1550:1: ( ',' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1551:1: ','
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1528:1: ( ',' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1529:1: ','
             {
              before(grammarAccess.getOpeningAccess().getCommaKeyword_8_0()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Opening__Group_8__0__Impl3050); 
+            match(input,23,FollowSets000.FOLLOW_23_in_rule__Opening__Group_8__0__Impl3000); 
              after(grammarAccess.getOpeningAccess().getCommaKeyword_8_0()); 
 
             }
@@ -4045,16 +3964,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_8__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1564:1: rule__Opening__Group_8__1 : rule__Opening__Group_8__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1542:1: rule__Opening__Group_8__1 : rule__Opening__Group_8__1__Impl ;
     public final void rule__Opening__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1568:1: ( rule__Opening__Group_8__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1569:2: rule__Opening__Group_8__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1546:1: ( rule__Opening__Group_8__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1547:2: rule__Opening__Group_8__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_8__1__Impl_in_rule__Opening__Group_8__13081);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__Group_8__1__Impl_in_rule__Opening__Group_8__13031);
             rule__Opening__Group_8__1__Impl();
 
             state._fsp--;
@@ -4078,23 +3997,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__Group_8__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1575:1: rule__Opening__Group_8__1__Impl : ( ( rule__Opening__WallsAssignment_8_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1553:1: rule__Opening__Group_8__1__Impl : ( ( rule__Opening__WallsAssignment_8_1 ) ) ;
     public final void rule__Opening__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1579:1: ( ( ( rule__Opening__WallsAssignment_8_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1580:1: ( ( rule__Opening__WallsAssignment_8_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1557:1: ( ( ( rule__Opening__WallsAssignment_8_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1558:1: ( ( rule__Opening__WallsAssignment_8_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1580:1: ( ( rule__Opening__WallsAssignment_8_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1581:1: ( rule__Opening__WallsAssignment_8_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1558:1: ( ( rule__Opening__WallsAssignment_8_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1559:1: ( rule__Opening__WallsAssignment_8_1 )
             {
              before(grammarAccess.getOpeningAccess().getWallsAssignment_8_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1582:1: ( rule__Opening__WallsAssignment_8_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1582:2: rule__Opening__WallsAssignment_8_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1560:1: ( rule__Opening__WallsAssignment_8_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1560:2: rule__Opening__WallsAssignment_8_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Opening__WallsAssignment_8_1_in_rule__Opening__Group_8__1__Impl3108);
+            pushFollow(FollowSets000.FOLLOW_rule__Opening__WallsAssignment_8_1_in_rule__Opening__Group_8__1__Impl3058);
             rule__Opening__WallsAssignment_8_1();
 
             state._fsp--;
@@ -4125,21 +4044,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1596:1: rule__FlowSegment__Group__0 : rule__FlowSegment__Group__0__Impl rule__FlowSegment__Group__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1574:1: rule__FlowSegment__Group__0 : rule__FlowSegment__Group__0__Impl rule__FlowSegment__Group__1 ;
     public final void rule__FlowSegment__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1600:1: ( rule__FlowSegment__Group__0__Impl rule__FlowSegment__Group__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1601:2: rule__FlowSegment__Group__0__Impl rule__FlowSegment__Group__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1578:1: ( rule__FlowSegment__Group__0__Impl rule__FlowSegment__Group__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1579:2: rule__FlowSegment__Group__0__Impl rule__FlowSegment__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__0__Impl_in_rule__FlowSegment__Group__03142);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__0__Impl_in_rule__FlowSegment__Group__03092);
             rule__FlowSegment__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__1_in_rule__FlowSegment__Group__03145);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__1_in_rule__FlowSegment__Group__03095);
             rule__FlowSegment__Group__1();
 
             state._fsp--;
@@ -4163,20 +4082,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1608:1: rule__FlowSegment__Group__0__Impl : ( 'Pipe' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1586:1: rule__FlowSegment__Group__0__Impl : ( 'Pipe' ) ;
     public final void rule__FlowSegment__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1612:1: ( ( 'Pipe' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1613:1: ( 'Pipe' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1590:1: ( ( 'Pipe' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1591:1: ( 'Pipe' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1613:1: ( 'Pipe' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1614:1: 'Pipe'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1591:1: ( 'Pipe' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1592:1: 'Pipe'
             {
              before(grammarAccess.getFlowSegmentAccess().getPipeKeyword_0()); 
-            match(input,24,FollowSets000.FOLLOW_24_in_rule__FlowSegment__Group__0__Impl3173); 
+            match(input,24,FollowSets000.FOLLOW_24_in_rule__FlowSegment__Group__0__Impl3123); 
              after(grammarAccess.getFlowSegmentAccess().getPipeKeyword_0()); 
 
             }
@@ -4200,21 +4119,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1627:1: rule__FlowSegment__Group__1 : rule__FlowSegment__Group__1__Impl rule__FlowSegment__Group__2 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1605:1: rule__FlowSegment__Group__1 : rule__FlowSegment__Group__1__Impl rule__FlowSegment__Group__2 ;
     public final void rule__FlowSegment__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1631:1: ( rule__FlowSegment__Group__1__Impl rule__FlowSegment__Group__2 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1632:2: rule__FlowSegment__Group__1__Impl rule__FlowSegment__Group__2
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1609:1: ( rule__FlowSegment__Group__1__Impl rule__FlowSegment__Group__2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1610:2: rule__FlowSegment__Group__1__Impl rule__FlowSegment__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__1__Impl_in_rule__FlowSegment__Group__13204);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__1__Impl_in_rule__FlowSegment__Group__13154);
             rule__FlowSegment__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__2_in_rule__FlowSegment__Group__13207);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__2_in_rule__FlowSegment__Group__13157);
             rule__FlowSegment__Group__2();
 
             state._fsp--;
@@ -4238,23 +4157,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1639:1: rule__FlowSegment__Group__1__Impl : ( ( rule__FlowSegment__NameAssignment_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1617:1: rule__FlowSegment__Group__1__Impl : ( ( rule__FlowSegment__NameAssignment_1 ) ) ;
     public final void rule__FlowSegment__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1643:1: ( ( ( rule__FlowSegment__NameAssignment_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1644:1: ( ( rule__FlowSegment__NameAssignment_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1621:1: ( ( ( rule__FlowSegment__NameAssignment_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1622:1: ( ( rule__FlowSegment__NameAssignment_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1644:1: ( ( rule__FlowSegment__NameAssignment_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1645:1: ( rule__FlowSegment__NameAssignment_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1622:1: ( ( rule__FlowSegment__NameAssignment_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1623:1: ( rule__FlowSegment__NameAssignment_1 )
             {
              before(grammarAccess.getFlowSegmentAccess().getNameAssignment_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1646:1: ( rule__FlowSegment__NameAssignment_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1646:2: rule__FlowSegment__NameAssignment_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1624:1: ( rule__FlowSegment__NameAssignment_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1624:2: rule__FlowSegment__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__NameAssignment_1_in_rule__FlowSegment__Group__1__Impl3234);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__NameAssignment_1_in_rule__FlowSegment__Group__1__Impl3184);
             rule__FlowSegment__NameAssignment_1();
 
             state._fsp--;
@@ -4285,21 +4204,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__2"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1656:1: rule__FlowSegment__Group__2 : rule__FlowSegment__Group__2__Impl rule__FlowSegment__Group__3 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1634:1: rule__FlowSegment__Group__2 : rule__FlowSegment__Group__2__Impl rule__FlowSegment__Group__3 ;
     public final void rule__FlowSegment__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1660:1: ( rule__FlowSegment__Group__2__Impl rule__FlowSegment__Group__3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1661:2: rule__FlowSegment__Group__2__Impl rule__FlowSegment__Group__3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1638:1: ( rule__FlowSegment__Group__2__Impl rule__FlowSegment__Group__3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1639:2: rule__FlowSegment__Group__2__Impl rule__FlowSegment__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__2__Impl_in_rule__FlowSegment__Group__23264);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__2__Impl_in_rule__FlowSegment__Group__23214);
             rule__FlowSegment__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__3_in_rule__FlowSegment__Group__23267);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__3_in_rule__FlowSegment__Group__23217);
             rule__FlowSegment__Group__3();
 
             state._fsp--;
@@ -4323,31 +4242,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__2__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1668:1: rule__FlowSegment__Group__2__Impl : ( ( rule__FlowSegment__Group_2__0 )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1646:1: rule__FlowSegment__Group__2__Impl : ( ( rule__FlowSegment__Group_2__0 )? ) ;
     public final void rule__FlowSegment__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1672:1: ( ( ( rule__FlowSegment__Group_2__0 )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1673:1: ( ( rule__FlowSegment__Group_2__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1650:1: ( ( ( rule__FlowSegment__Group_2__0 )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1651:1: ( ( rule__FlowSegment__Group_2__0 )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1673:1: ( ( rule__FlowSegment__Group_2__0 )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1674:1: ( rule__FlowSegment__Group_2__0 )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1651:1: ( ( rule__FlowSegment__Group_2__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1652:1: ( rule__FlowSegment__Group_2__0 )?
             {
              before(grammarAccess.getFlowSegmentAccess().getGroup_2()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1675:1: ( rule__FlowSegment__Group_2__0 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1653:1: ( rule__FlowSegment__Group_2__0 )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA9_0==18) ) {
-                alt9=1;
+            if ( (LA8_0==18) ) {
+                alt8=1;
             }
-            switch (alt9) {
+            switch (alt8) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1675:2: rule__FlowSegment__Group_2__0
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1653:2: rule__FlowSegment__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_2__0_in_rule__FlowSegment__Group__2__Impl3294);
+                    pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_2__0_in_rule__FlowSegment__Group__2__Impl3244);
                     rule__FlowSegment__Group_2__0();
 
                     state._fsp--;
@@ -4381,21 +4300,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1685:1: rule__FlowSegment__Group__3 : rule__FlowSegment__Group__3__Impl rule__FlowSegment__Group__4 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1663:1: rule__FlowSegment__Group__3 : rule__FlowSegment__Group__3__Impl rule__FlowSegment__Group__4 ;
     public final void rule__FlowSegment__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1689:1: ( rule__FlowSegment__Group__3__Impl rule__FlowSegment__Group__4 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1690:2: rule__FlowSegment__Group__3__Impl rule__FlowSegment__Group__4
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1667:1: ( rule__FlowSegment__Group__3__Impl rule__FlowSegment__Group__4 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1668:2: rule__FlowSegment__Group__3__Impl rule__FlowSegment__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__3__Impl_in_rule__FlowSegment__Group__33325);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__3__Impl_in_rule__FlowSegment__Group__33275);
             rule__FlowSegment__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__4_in_rule__FlowSegment__Group__33328);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__4_in_rule__FlowSegment__Group__33278);
             rule__FlowSegment__Group__4();
 
             state._fsp--;
@@ -4419,31 +4338,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__3__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1697:1: rule__FlowSegment__Group__3__Impl : ( ( rule__FlowSegment__Group_3__0 )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1675:1: rule__FlowSegment__Group__3__Impl : ( ( rule__FlowSegment__Group_3__0 )? ) ;
     public final void rule__FlowSegment__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1701:1: ( ( ( rule__FlowSegment__Group_3__0 )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1702:1: ( ( rule__FlowSegment__Group_3__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1679:1: ( ( ( rule__FlowSegment__Group_3__0 )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1680:1: ( ( rule__FlowSegment__Group_3__0 )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1702:1: ( ( rule__FlowSegment__Group_3__0 )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1703:1: ( rule__FlowSegment__Group_3__0 )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1680:1: ( ( rule__FlowSegment__Group_3__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1681:1: ( rule__FlowSegment__Group_3__0 )?
             {
              before(grammarAccess.getFlowSegmentAccess().getGroup_3()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1704:1: ( rule__FlowSegment__Group_3__0 )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1682:1: ( rule__FlowSegment__Group_3__0 )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA10_0==19) ) {
-                alt10=1;
+            if ( (LA9_0==19) ) {
+                alt9=1;
             }
-            switch (alt10) {
+            switch (alt9) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1704:2: rule__FlowSegment__Group_3__0
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1682:2: rule__FlowSegment__Group_3__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_3__0_in_rule__FlowSegment__Group__3__Impl3355);
+                    pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_3__0_in_rule__FlowSegment__Group__3__Impl3305);
                     rule__FlowSegment__Group_3__0();
 
                     state._fsp--;
@@ -4477,21 +4396,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__4"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1714:1: rule__FlowSegment__Group__4 : rule__FlowSegment__Group__4__Impl rule__FlowSegment__Group__5 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1692:1: rule__FlowSegment__Group__4 : rule__FlowSegment__Group__4__Impl rule__FlowSegment__Group__5 ;
     public final void rule__FlowSegment__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1718:1: ( rule__FlowSegment__Group__4__Impl rule__FlowSegment__Group__5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1719:2: rule__FlowSegment__Group__4__Impl rule__FlowSegment__Group__5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1696:1: ( rule__FlowSegment__Group__4__Impl rule__FlowSegment__Group__5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1697:2: rule__FlowSegment__Group__4__Impl rule__FlowSegment__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__4__Impl_in_rule__FlowSegment__Group__43386);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__4__Impl_in_rule__FlowSegment__Group__43336);
             rule__FlowSegment__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__5_in_rule__FlowSegment__Group__43389);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__5_in_rule__FlowSegment__Group__43339);
             rule__FlowSegment__Group__5();
 
             state._fsp--;
@@ -4515,20 +4434,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__4__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1726:1: rule__FlowSegment__Group__4__Impl : ( 'placement' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1704:1: rule__FlowSegment__Group__4__Impl : ( 'placement' ) ;
     public final void rule__FlowSegment__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1730:1: ( ( 'placement' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1731:1: ( 'placement' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1708:1: ( ( 'placement' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1709:1: ( 'placement' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1731:1: ( 'placement' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1732:1: 'placement'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1709:1: ( 'placement' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1710:1: 'placement'
             {
              before(grammarAccess.getFlowSegmentAccess().getPlacementKeyword_4()); 
-            match(input,20,FollowSets000.FOLLOW_20_in_rule__FlowSegment__Group__4__Impl3417); 
+            match(input,20,FollowSets000.FOLLOW_20_in_rule__FlowSegment__Group__4__Impl3367); 
              after(grammarAccess.getFlowSegmentAccess().getPlacementKeyword_4()); 
 
             }
@@ -4552,16 +4471,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1745:1: rule__FlowSegment__Group__5 : rule__FlowSegment__Group__5__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1723:1: rule__FlowSegment__Group__5 : rule__FlowSegment__Group__5__Impl ;
     public final void rule__FlowSegment__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1749:1: ( rule__FlowSegment__Group__5__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1750:2: rule__FlowSegment__Group__5__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1727:1: ( rule__FlowSegment__Group__5__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1728:2: rule__FlowSegment__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__5__Impl_in_rule__FlowSegment__Group__53448);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group__5__Impl_in_rule__FlowSegment__Group__53398);
             rule__FlowSegment__Group__5__Impl();
 
             state._fsp--;
@@ -4585,23 +4504,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group__5__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1756:1: rule__FlowSegment__Group__5__Impl : ( ( rule__FlowSegment__PlacementAssignment_5 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1734:1: rule__FlowSegment__Group__5__Impl : ( ( rule__FlowSegment__PlacementAssignment_5 ) ) ;
     public final void rule__FlowSegment__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1760:1: ( ( ( rule__FlowSegment__PlacementAssignment_5 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1761:1: ( ( rule__FlowSegment__PlacementAssignment_5 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1738:1: ( ( ( rule__FlowSegment__PlacementAssignment_5 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1739:1: ( ( rule__FlowSegment__PlacementAssignment_5 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1761:1: ( ( rule__FlowSegment__PlacementAssignment_5 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1762:1: ( rule__FlowSegment__PlacementAssignment_5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1739:1: ( ( rule__FlowSegment__PlacementAssignment_5 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1740:1: ( rule__FlowSegment__PlacementAssignment_5 )
             {
              before(grammarAccess.getFlowSegmentAccess().getPlacementAssignment_5()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1763:1: ( rule__FlowSegment__PlacementAssignment_5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1763:2: rule__FlowSegment__PlacementAssignment_5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1741:1: ( rule__FlowSegment__PlacementAssignment_5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1741:2: rule__FlowSegment__PlacementAssignment_5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__PlacementAssignment_5_in_rule__FlowSegment__Group__5__Impl3475);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__PlacementAssignment_5_in_rule__FlowSegment__Group__5__Impl3425);
             rule__FlowSegment__PlacementAssignment_5();
 
             state._fsp--;
@@ -4632,21 +4551,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group_2__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1785:1: rule__FlowSegment__Group_2__0 : rule__FlowSegment__Group_2__0__Impl rule__FlowSegment__Group_2__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1763:1: rule__FlowSegment__Group_2__0 : rule__FlowSegment__Group_2__0__Impl rule__FlowSegment__Group_2__1 ;
     public final void rule__FlowSegment__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1789:1: ( rule__FlowSegment__Group_2__0__Impl rule__FlowSegment__Group_2__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1790:2: rule__FlowSegment__Group_2__0__Impl rule__FlowSegment__Group_2__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1767:1: ( rule__FlowSegment__Group_2__0__Impl rule__FlowSegment__Group_2__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1768:2: rule__FlowSegment__Group_2__0__Impl rule__FlowSegment__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_2__0__Impl_in_rule__FlowSegment__Group_2__03517);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_2__0__Impl_in_rule__FlowSegment__Group_2__03467);
             rule__FlowSegment__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_2__1_in_rule__FlowSegment__Group_2__03520);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_2__1_in_rule__FlowSegment__Group_2__03470);
             rule__FlowSegment__Group_2__1();
 
             state._fsp--;
@@ -4670,20 +4589,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group_2__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1797:1: rule__FlowSegment__Group_2__0__Impl : ( 'Name' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1775:1: rule__FlowSegment__Group_2__0__Impl : ( 'Name' ) ;
     public final void rule__FlowSegment__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1801:1: ( ( 'Name' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1802:1: ( 'Name' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1779:1: ( ( 'Name' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1780:1: ( 'Name' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1802:1: ( 'Name' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1803:1: 'Name'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1780:1: ( 'Name' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1781:1: 'Name'
             {
              before(grammarAccess.getFlowSegmentAccess().getNameKeyword_2_0()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__FlowSegment__Group_2__0__Impl3548); 
+            match(input,18,FollowSets000.FOLLOW_18_in_rule__FlowSegment__Group_2__0__Impl3498); 
              after(grammarAccess.getFlowSegmentAccess().getNameKeyword_2_0()); 
 
             }
@@ -4707,16 +4626,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group_2__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1816:1: rule__FlowSegment__Group_2__1 : rule__FlowSegment__Group_2__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1794:1: rule__FlowSegment__Group_2__1 : rule__FlowSegment__Group_2__1__Impl ;
     public final void rule__FlowSegment__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1820:1: ( rule__FlowSegment__Group_2__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1821:2: rule__FlowSegment__Group_2__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1798:1: ( rule__FlowSegment__Group_2__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1799:2: rule__FlowSegment__Group_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_2__1__Impl_in_rule__FlowSegment__Group_2__13579);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_2__1__Impl_in_rule__FlowSegment__Group_2__13529);
             rule__FlowSegment__Group_2__1__Impl();
 
             state._fsp--;
@@ -4740,23 +4659,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group_2__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1827:1: rule__FlowSegment__Group_2__1__Impl : ( ( rule__FlowSegment__ElementNameAssignment_2_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1805:1: rule__FlowSegment__Group_2__1__Impl : ( ( rule__FlowSegment__ElementNameAssignment_2_1 ) ) ;
     public final void rule__FlowSegment__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1831:1: ( ( ( rule__FlowSegment__ElementNameAssignment_2_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1832:1: ( ( rule__FlowSegment__ElementNameAssignment_2_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1809:1: ( ( ( rule__FlowSegment__ElementNameAssignment_2_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1810:1: ( ( rule__FlowSegment__ElementNameAssignment_2_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1832:1: ( ( rule__FlowSegment__ElementNameAssignment_2_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1833:1: ( rule__FlowSegment__ElementNameAssignment_2_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1810:1: ( ( rule__FlowSegment__ElementNameAssignment_2_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1811:1: ( rule__FlowSegment__ElementNameAssignment_2_1 )
             {
              before(grammarAccess.getFlowSegmentAccess().getElementNameAssignment_2_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1834:1: ( rule__FlowSegment__ElementNameAssignment_2_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1834:2: rule__FlowSegment__ElementNameAssignment_2_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1812:1: ( rule__FlowSegment__ElementNameAssignment_2_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1812:2: rule__FlowSegment__ElementNameAssignment_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__ElementNameAssignment_2_1_in_rule__FlowSegment__Group_2__1__Impl3606);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__ElementNameAssignment_2_1_in_rule__FlowSegment__Group_2__1__Impl3556);
             rule__FlowSegment__ElementNameAssignment_2_1();
 
             state._fsp--;
@@ -4787,21 +4706,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group_3__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1848:1: rule__FlowSegment__Group_3__0 : rule__FlowSegment__Group_3__0__Impl rule__FlowSegment__Group_3__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1826:1: rule__FlowSegment__Group_3__0 : rule__FlowSegment__Group_3__0__Impl rule__FlowSegment__Group_3__1 ;
     public final void rule__FlowSegment__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1852:1: ( rule__FlowSegment__Group_3__0__Impl rule__FlowSegment__Group_3__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1853:2: rule__FlowSegment__Group_3__0__Impl rule__FlowSegment__Group_3__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1830:1: ( rule__FlowSegment__Group_3__0__Impl rule__FlowSegment__Group_3__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1831:2: rule__FlowSegment__Group_3__0__Impl rule__FlowSegment__Group_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_3__0__Impl_in_rule__FlowSegment__Group_3__03640);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_3__0__Impl_in_rule__FlowSegment__Group_3__03590);
             rule__FlowSegment__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_3__1_in_rule__FlowSegment__Group_3__03643);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_3__1_in_rule__FlowSegment__Group_3__03593);
             rule__FlowSegment__Group_3__1();
 
             state._fsp--;
@@ -4825,20 +4744,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group_3__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1860:1: rule__FlowSegment__Group_3__0__Impl : ( 'Description' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1838:1: rule__FlowSegment__Group_3__0__Impl : ( 'Description' ) ;
     public final void rule__FlowSegment__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1864:1: ( ( 'Description' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1865:1: ( 'Description' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1842:1: ( ( 'Description' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1843:1: ( 'Description' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1865:1: ( 'Description' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1866:1: 'Description'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1843:1: ( 'Description' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1844:1: 'Description'
             {
              before(grammarAccess.getFlowSegmentAccess().getDescriptionKeyword_3_0()); 
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__FlowSegment__Group_3__0__Impl3671); 
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__FlowSegment__Group_3__0__Impl3621); 
              after(grammarAccess.getFlowSegmentAccess().getDescriptionKeyword_3_0()); 
 
             }
@@ -4862,16 +4781,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group_3__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1879:1: rule__FlowSegment__Group_3__1 : rule__FlowSegment__Group_3__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1857:1: rule__FlowSegment__Group_3__1 : rule__FlowSegment__Group_3__1__Impl ;
     public final void rule__FlowSegment__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1883:1: ( rule__FlowSegment__Group_3__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1884:2: rule__FlowSegment__Group_3__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1861:1: ( rule__FlowSegment__Group_3__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1862:2: rule__FlowSegment__Group_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_3__1__Impl_in_rule__FlowSegment__Group_3__13702);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__Group_3__1__Impl_in_rule__FlowSegment__Group_3__13652);
             rule__FlowSegment__Group_3__1__Impl();
 
             state._fsp--;
@@ -4895,23 +4814,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__Group_3__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1890:1: rule__FlowSegment__Group_3__1__Impl : ( ( rule__FlowSegment__DescriptionAssignment_3_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1868:1: rule__FlowSegment__Group_3__1__Impl : ( ( rule__FlowSegment__DescriptionAssignment_3_1 ) ) ;
     public final void rule__FlowSegment__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1894:1: ( ( ( rule__FlowSegment__DescriptionAssignment_3_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1895:1: ( ( rule__FlowSegment__DescriptionAssignment_3_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1872:1: ( ( ( rule__FlowSegment__DescriptionAssignment_3_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1873:1: ( ( rule__FlowSegment__DescriptionAssignment_3_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1895:1: ( ( rule__FlowSegment__DescriptionAssignment_3_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1896:1: ( rule__FlowSegment__DescriptionAssignment_3_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1873:1: ( ( rule__FlowSegment__DescriptionAssignment_3_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1874:1: ( rule__FlowSegment__DescriptionAssignment_3_1 )
             {
              before(grammarAccess.getFlowSegmentAccess().getDescriptionAssignment_3_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1897:1: ( rule__FlowSegment__DescriptionAssignment_3_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1897:2: rule__FlowSegment__DescriptionAssignment_3_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1875:1: ( rule__FlowSegment__DescriptionAssignment_3_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1875:2: rule__FlowSegment__DescriptionAssignment_3_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__DescriptionAssignment_3_1_in_rule__FlowSegment__Group_3__1__Impl3729);
+            pushFollow(FollowSets000.FOLLOW_rule__FlowSegment__DescriptionAssignment_3_1_in_rule__FlowSegment__Group_3__1__Impl3679);
             rule__FlowSegment__DescriptionAssignment_3_1();
 
             state._fsp--;
@@ -4942,21 +4861,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1911:1: rule__LocalPlacement__Group__0 : rule__LocalPlacement__Group__0__Impl rule__LocalPlacement__Group__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1889:1: rule__LocalPlacement__Group__0 : rule__LocalPlacement__Group__0__Impl rule__LocalPlacement__Group__1 ;
     public final void rule__LocalPlacement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1915:1: ( rule__LocalPlacement__Group__0__Impl rule__LocalPlacement__Group__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1916:2: rule__LocalPlacement__Group__0__Impl rule__LocalPlacement__Group__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1893:1: ( rule__LocalPlacement__Group__0__Impl rule__LocalPlacement__Group__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1894:2: rule__LocalPlacement__Group__0__Impl rule__LocalPlacement__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__0__Impl_in_rule__LocalPlacement__Group__03763);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__0__Impl_in_rule__LocalPlacement__Group__03713);
             rule__LocalPlacement__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__1_in_rule__LocalPlacement__Group__03766);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__1_in_rule__LocalPlacement__Group__03716);
             rule__LocalPlacement__Group__1();
 
             state._fsp--;
@@ -4980,21 +4899,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1923:1: rule__LocalPlacement__Group__0__Impl : ( () ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1901:1: rule__LocalPlacement__Group__0__Impl : ( () ) ;
     public final void rule__LocalPlacement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1927:1: ( ( () ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1928:1: ( () )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1905:1: ( ( () ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1906:1: ( () )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1928:1: ( () )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1929:1: ()
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1906:1: ( () )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1907:1: ()
             {
              before(grammarAccess.getLocalPlacementAccess().getLocalPlacementAction_0()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1930:1: ()
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1932:1: 
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1908:1: ()
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1910:1: 
             {
             }
 
@@ -5017,21 +4936,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1942:1: rule__LocalPlacement__Group__1 : rule__LocalPlacement__Group__1__Impl rule__LocalPlacement__Group__2 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1920:1: rule__LocalPlacement__Group__1 : rule__LocalPlacement__Group__1__Impl rule__LocalPlacement__Group__2 ;
     public final void rule__LocalPlacement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1946:1: ( rule__LocalPlacement__Group__1__Impl rule__LocalPlacement__Group__2 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1947:2: rule__LocalPlacement__Group__1__Impl rule__LocalPlacement__Group__2
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1924:1: ( rule__LocalPlacement__Group__1__Impl rule__LocalPlacement__Group__2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1925:2: rule__LocalPlacement__Group__1__Impl rule__LocalPlacement__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__1__Impl_in_rule__LocalPlacement__Group__13824);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__1__Impl_in_rule__LocalPlacement__Group__13774);
             rule__LocalPlacement__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__2_in_rule__LocalPlacement__Group__13827);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__2_in_rule__LocalPlacement__Group__13777);
             rule__LocalPlacement__Group__2();
 
             state._fsp--;
@@ -5055,20 +4974,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1954:1: rule__LocalPlacement__Group__1__Impl : ( '{' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1932:1: rule__LocalPlacement__Group__1__Impl : ( '{' ) ;
     public final void rule__LocalPlacement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1958:1: ( ( '{' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1959:1: ( '{' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1936:1: ( ( '{' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1937:1: ( '{' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1959:1: ( '{' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1960:1: '{'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1937:1: ( '{' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1938:1: '{'
             {
              before(grammarAccess.getLocalPlacementAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__LocalPlacement__Group__1__Impl3855); 
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__LocalPlacement__Group__1__Impl3805); 
              after(grammarAccess.getLocalPlacementAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
@@ -5092,21 +5011,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group__2"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1973:1: rule__LocalPlacement__Group__2 : rule__LocalPlacement__Group__2__Impl rule__LocalPlacement__Group__3 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1951:1: rule__LocalPlacement__Group__2 : rule__LocalPlacement__Group__2__Impl rule__LocalPlacement__Group__3 ;
     public final void rule__LocalPlacement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1977:1: ( rule__LocalPlacement__Group__2__Impl rule__LocalPlacement__Group__3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1978:2: rule__LocalPlacement__Group__2__Impl rule__LocalPlacement__Group__3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1955:1: ( rule__LocalPlacement__Group__2__Impl rule__LocalPlacement__Group__3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1956:2: rule__LocalPlacement__Group__2__Impl rule__LocalPlacement__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__2__Impl_in_rule__LocalPlacement__Group__23886);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__2__Impl_in_rule__LocalPlacement__Group__23836);
             rule__LocalPlacement__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__3_in_rule__LocalPlacement__Group__23889);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__3_in_rule__LocalPlacement__Group__23839);
             rule__LocalPlacement__Group__3();
 
             state._fsp--;
@@ -5130,31 +5049,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group__2__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1985:1: rule__LocalPlacement__Group__2__Impl : ( ( rule__LocalPlacement__Group_2__0 )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1963:1: rule__LocalPlacement__Group__2__Impl : ( ( rule__LocalPlacement__Group_2__0 )? ) ;
     public final void rule__LocalPlacement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1989:1: ( ( ( rule__LocalPlacement__Group_2__0 )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1990:1: ( ( rule__LocalPlacement__Group_2__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1967:1: ( ( ( rule__LocalPlacement__Group_2__0 )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1968:1: ( ( rule__LocalPlacement__Group_2__0 )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1990:1: ( ( rule__LocalPlacement__Group_2__0 )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1991:1: ( rule__LocalPlacement__Group_2__0 )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1968:1: ( ( rule__LocalPlacement__Group_2__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1969:1: ( rule__LocalPlacement__Group_2__0 )?
             {
              before(grammarAccess.getLocalPlacementAccess().getGroup_2()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1992:1: ( rule__LocalPlacement__Group_2__0 )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1970:1: ( rule__LocalPlacement__Group_2__0 )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA11_0==27) ) {
-                alt11=1;
+            if ( (LA10_0==27) ) {
+                alt10=1;
             }
-            switch (alt11) {
+            switch (alt10) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1992:2: rule__LocalPlacement__Group_2__0
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1970:2: rule__LocalPlacement__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_2__0_in_rule__LocalPlacement__Group__2__Impl3916);
+                    pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_2__0_in_rule__LocalPlacement__Group__2__Impl3866);
                     rule__LocalPlacement__Group_2__0();
 
                     state._fsp--;
@@ -5188,21 +5107,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group__3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2002:1: rule__LocalPlacement__Group__3 : rule__LocalPlacement__Group__3__Impl rule__LocalPlacement__Group__4 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1980:1: rule__LocalPlacement__Group__3 : rule__LocalPlacement__Group__3__Impl rule__LocalPlacement__Group__4 ;
     public final void rule__LocalPlacement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2006:1: ( rule__LocalPlacement__Group__3__Impl rule__LocalPlacement__Group__4 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2007:2: rule__LocalPlacement__Group__3__Impl rule__LocalPlacement__Group__4
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1984:1: ( rule__LocalPlacement__Group__3__Impl rule__LocalPlacement__Group__4 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1985:2: rule__LocalPlacement__Group__3__Impl rule__LocalPlacement__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__3__Impl_in_rule__LocalPlacement__Group__33947);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__3__Impl_in_rule__LocalPlacement__Group__33897);
             rule__LocalPlacement__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__4_in_rule__LocalPlacement__Group__33950);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__4_in_rule__LocalPlacement__Group__33900);
             rule__LocalPlacement__Group__4();
 
             state._fsp--;
@@ -5226,31 +5145,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group__3__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2014:1: rule__LocalPlacement__Group__3__Impl : ( ( rule__LocalPlacement__Group_3__0 )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1992:1: rule__LocalPlacement__Group__3__Impl : ( ( rule__LocalPlacement__Group_3__0 )? ) ;
     public final void rule__LocalPlacement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2018:1: ( ( ( rule__LocalPlacement__Group_3__0 )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2019:1: ( ( rule__LocalPlacement__Group_3__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1996:1: ( ( ( rule__LocalPlacement__Group_3__0 )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1997:1: ( ( rule__LocalPlacement__Group_3__0 )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2019:1: ( ( rule__LocalPlacement__Group_3__0 )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2020:1: ( rule__LocalPlacement__Group_3__0 )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1997:1: ( ( rule__LocalPlacement__Group_3__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1998:1: ( rule__LocalPlacement__Group_3__0 )?
             {
              before(grammarAccess.getLocalPlacementAccess().getGroup_3()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2021:1: ( rule__LocalPlacement__Group_3__0 )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1999:1: ( rule__LocalPlacement__Group_3__0 )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA12_0==28) ) {
-                alt12=1;
+            if ( (LA11_0==28) ) {
+                alt11=1;
             }
-            switch (alt12) {
+            switch (alt11) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2021:2: rule__LocalPlacement__Group_3__0
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1999:2: rule__LocalPlacement__Group_3__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_3__0_in_rule__LocalPlacement__Group__3__Impl3977);
+                    pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_3__0_in_rule__LocalPlacement__Group__3__Impl3927);
                     rule__LocalPlacement__Group_3__0();
 
                     state._fsp--;
@@ -5284,16 +5203,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group__4"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2031:1: rule__LocalPlacement__Group__4 : rule__LocalPlacement__Group__4__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2009:1: rule__LocalPlacement__Group__4 : rule__LocalPlacement__Group__4__Impl ;
     public final void rule__LocalPlacement__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2035:1: ( rule__LocalPlacement__Group__4__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2036:2: rule__LocalPlacement__Group__4__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2013:1: ( rule__LocalPlacement__Group__4__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2014:2: rule__LocalPlacement__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__4__Impl_in_rule__LocalPlacement__Group__44008);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group__4__Impl_in_rule__LocalPlacement__Group__43958);
             rule__LocalPlacement__Group__4__Impl();
 
             state._fsp--;
@@ -5317,20 +5236,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group__4__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2042:1: rule__LocalPlacement__Group__4__Impl : ( '}' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2020:1: rule__LocalPlacement__Group__4__Impl : ( '}' ) ;
     public final void rule__LocalPlacement__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2046:1: ( ( '}' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2047:1: ( '}' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2024:1: ( ( '}' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2025:1: ( '}' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2047:1: ( '}' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2048:1: '}'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2025:1: ( '}' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2026:1: '}'
             {
              before(grammarAccess.getLocalPlacementAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,26,FollowSets000.FOLLOW_26_in_rule__LocalPlacement__Group__4__Impl4036); 
+            match(input,26,FollowSets000.FOLLOW_26_in_rule__LocalPlacement__Group__4__Impl3986); 
              after(grammarAccess.getLocalPlacementAccess().getRightCurlyBracketKeyword_4()); 
 
             }
@@ -5354,21 +5273,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group_2__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2071:1: rule__LocalPlacement__Group_2__0 : rule__LocalPlacement__Group_2__0__Impl rule__LocalPlacement__Group_2__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2049:1: rule__LocalPlacement__Group_2__0 : rule__LocalPlacement__Group_2__0__Impl rule__LocalPlacement__Group_2__1 ;
     public final void rule__LocalPlacement__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2075:1: ( rule__LocalPlacement__Group_2__0__Impl rule__LocalPlacement__Group_2__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2076:2: rule__LocalPlacement__Group_2__0__Impl rule__LocalPlacement__Group_2__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2053:1: ( rule__LocalPlacement__Group_2__0__Impl rule__LocalPlacement__Group_2__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2054:2: rule__LocalPlacement__Group_2__0__Impl rule__LocalPlacement__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_2__0__Impl_in_rule__LocalPlacement__Group_2__04077);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_2__0__Impl_in_rule__LocalPlacement__Group_2__04027);
             rule__LocalPlacement__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_2__1_in_rule__LocalPlacement__Group_2__04080);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_2__1_in_rule__LocalPlacement__Group_2__04030);
             rule__LocalPlacement__Group_2__1();
 
             state._fsp--;
@@ -5392,20 +5311,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group_2__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2083:1: rule__LocalPlacement__Group_2__0__Impl : ( 'relativeTo' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2061:1: rule__LocalPlacement__Group_2__0__Impl : ( 'relativeTo' ) ;
     public final void rule__LocalPlacement__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2087:1: ( ( 'relativeTo' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2088:1: ( 'relativeTo' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2065:1: ( ( 'relativeTo' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2066:1: ( 'relativeTo' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2088:1: ( 'relativeTo' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2089:1: 'relativeTo'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2066:1: ( 'relativeTo' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2067:1: 'relativeTo'
             {
              before(grammarAccess.getLocalPlacementAccess().getRelativeToKeyword_2_0()); 
-            match(input,27,FollowSets000.FOLLOW_27_in_rule__LocalPlacement__Group_2__0__Impl4108); 
+            match(input,27,FollowSets000.FOLLOW_27_in_rule__LocalPlacement__Group_2__0__Impl4058); 
              after(grammarAccess.getLocalPlacementAccess().getRelativeToKeyword_2_0()); 
 
             }
@@ -5429,16 +5348,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group_2__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2102:1: rule__LocalPlacement__Group_2__1 : rule__LocalPlacement__Group_2__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2080:1: rule__LocalPlacement__Group_2__1 : rule__LocalPlacement__Group_2__1__Impl ;
     public final void rule__LocalPlacement__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2106:1: ( rule__LocalPlacement__Group_2__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2107:2: rule__LocalPlacement__Group_2__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2084:1: ( rule__LocalPlacement__Group_2__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2085:2: rule__LocalPlacement__Group_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_2__1__Impl_in_rule__LocalPlacement__Group_2__14139);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_2__1__Impl_in_rule__LocalPlacement__Group_2__14089);
             rule__LocalPlacement__Group_2__1__Impl();
 
             state._fsp--;
@@ -5462,23 +5381,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group_2__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2113:1: rule__LocalPlacement__Group_2__1__Impl : ( ( rule__LocalPlacement__RelativeToAssignment_2_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2091:1: rule__LocalPlacement__Group_2__1__Impl : ( ( rule__LocalPlacement__RelativeToAssignment_2_1 ) ) ;
     public final void rule__LocalPlacement__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2117:1: ( ( ( rule__LocalPlacement__RelativeToAssignment_2_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2118:1: ( ( rule__LocalPlacement__RelativeToAssignment_2_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2095:1: ( ( ( rule__LocalPlacement__RelativeToAssignment_2_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2096:1: ( ( rule__LocalPlacement__RelativeToAssignment_2_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2118:1: ( ( rule__LocalPlacement__RelativeToAssignment_2_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2119:1: ( rule__LocalPlacement__RelativeToAssignment_2_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2096:1: ( ( rule__LocalPlacement__RelativeToAssignment_2_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2097:1: ( rule__LocalPlacement__RelativeToAssignment_2_1 )
             {
              before(grammarAccess.getLocalPlacementAccess().getRelativeToAssignment_2_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2120:1: ( rule__LocalPlacement__RelativeToAssignment_2_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2120:2: rule__LocalPlacement__RelativeToAssignment_2_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2098:1: ( rule__LocalPlacement__RelativeToAssignment_2_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2098:2: rule__LocalPlacement__RelativeToAssignment_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__RelativeToAssignment_2_1_in_rule__LocalPlacement__Group_2__1__Impl4166);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__RelativeToAssignment_2_1_in_rule__LocalPlacement__Group_2__1__Impl4116);
             rule__LocalPlacement__RelativeToAssignment_2_1();
 
             state._fsp--;
@@ -5509,21 +5428,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group_3__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2134:1: rule__LocalPlacement__Group_3__0 : rule__LocalPlacement__Group_3__0__Impl rule__LocalPlacement__Group_3__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2112:1: rule__LocalPlacement__Group_3__0 : rule__LocalPlacement__Group_3__0__Impl rule__LocalPlacement__Group_3__1 ;
     public final void rule__LocalPlacement__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2138:1: ( rule__LocalPlacement__Group_3__0__Impl rule__LocalPlacement__Group_3__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2139:2: rule__LocalPlacement__Group_3__0__Impl rule__LocalPlacement__Group_3__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2116:1: ( rule__LocalPlacement__Group_3__0__Impl rule__LocalPlacement__Group_3__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2117:2: rule__LocalPlacement__Group_3__0__Impl rule__LocalPlacement__Group_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_3__0__Impl_in_rule__LocalPlacement__Group_3__04200);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_3__0__Impl_in_rule__LocalPlacement__Group_3__04150);
             rule__LocalPlacement__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_3__1_in_rule__LocalPlacement__Group_3__04203);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_3__1_in_rule__LocalPlacement__Group_3__04153);
             rule__LocalPlacement__Group_3__1();
 
             state._fsp--;
@@ -5547,20 +5466,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group_3__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2146:1: rule__LocalPlacement__Group_3__0__Impl : ( 'axis2placement3d' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2124:1: rule__LocalPlacement__Group_3__0__Impl : ( 'axis2placement3d' ) ;
     public final void rule__LocalPlacement__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2150:1: ( ( 'axis2placement3d' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2151:1: ( 'axis2placement3d' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2128:1: ( ( 'axis2placement3d' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2129:1: ( 'axis2placement3d' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2151:1: ( 'axis2placement3d' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2152:1: 'axis2placement3d'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2129:1: ( 'axis2placement3d' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2130:1: 'axis2placement3d'
             {
              before(grammarAccess.getLocalPlacementAccess().getAxis2placement3dKeyword_3_0()); 
-            match(input,28,FollowSets000.FOLLOW_28_in_rule__LocalPlacement__Group_3__0__Impl4231); 
+            match(input,28,FollowSets000.FOLLOW_28_in_rule__LocalPlacement__Group_3__0__Impl4181); 
              after(grammarAccess.getLocalPlacementAccess().getAxis2placement3dKeyword_3_0()); 
 
             }
@@ -5584,16 +5503,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group_3__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2165:1: rule__LocalPlacement__Group_3__1 : rule__LocalPlacement__Group_3__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2143:1: rule__LocalPlacement__Group_3__1 : rule__LocalPlacement__Group_3__1__Impl ;
     public final void rule__LocalPlacement__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2169:1: ( rule__LocalPlacement__Group_3__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2170:2: rule__LocalPlacement__Group_3__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2147:1: ( rule__LocalPlacement__Group_3__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2148:2: rule__LocalPlacement__Group_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_3__1__Impl_in_rule__LocalPlacement__Group_3__14262);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Group_3__1__Impl_in_rule__LocalPlacement__Group_3__14212);
             rule__LocalPlacement__Group_3__1__Impl();
 
             state._fsp--;
@@ -5617,23 +5536,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Group_3__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2176:1: rule__LocalPlacement__Group_3__1__Impl : ( ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2154:1: rule__LocalPlacement__Group_3__1__Impl : ( ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 ) ) ;
     public final void rule__LocalPlacement__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2180:1: ( ( ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2181:1: ( ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2158:1: ( ( ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2159:1: ( ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2181:1: ( ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2182:1: ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2159:1: ( ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2160:1: ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 )
             {
              before(grammarAccess.getLocalPlacementAccess().getAxis2placement3dAssignment_3_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2183:1: ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2183:2: rule__LocalPlacement__Axis2placement3dAssignment_3_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2161:1: ( rule__LocalPlacement__Axis2placement3dAssignment_3_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2161:2: rule__LocalPlacement__Axis2placement3dAssignment_3_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Axis2placement3dAssignment_3_1_in_rule__LocalPlacement__Group_3__1__Impl4289);
+            pushFollow(FollowSets000.FOLLOW_rule__LocalPlacement__Axis2placement3dAssignment_3_1_in_rule__LocalPlacement__Group_3__1__Impl4239);
             rule__LocalPlacement__Axis2placement3dAssignment_3_1();
 
             state._fsp--;
@@ -5664,21 +5583,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2197:1: rule__Axis2Placement3D__Group__0 : rule__Axis2Placement3D__Group__0__Impl rule__Axis2Placement3D__Group__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2175:1: rule__Axis2Placement3D__Group__0 : rule__Axis2Placement3D__Group__0__Impl rule__Axis2Placement3D__Group__1 ;
     public final void rule__Axis2Placement3D__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2201:1: ( rule__Axis2Placement3D__Group__0__Impl rule__Axis2Placement3D__Group__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2202:2: rule__Axis2Placement3D__Group__0__Impl rule__Axis2Placement3D__Group__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2179:1: ( rule__Axis2Placement3D__Group__0__Impl rule__Axis2Placement3D__Group__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2180:2: rule__Axis2Placement3D__Group__0__Impl rule__Axis2Placement3D__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__0__Impl_in_rule__Axis2Placement3D__Group__04323);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__0__Impl_in_rule__Axis2Placement3D__Group__04273);
             rule__Axis2Placement3D__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__1_in_rule__Axis2Placement3D__Group__04326);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__1_in_rule__Axis2Placement3D__Group__04276);
             rule__Axis2Placement3D__Group__1();
 
             state._fsp--;
@@ -5702,20 +5621,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2209:1: rule__Axis2Placement3D__Group__0__Impl : ( '{' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2187:1: rule__Axis2Placement3D__Group__0__Impl : ( '{' ) ;
     public final void rule__Axis2Placement3D__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2213:1: ( ( '{' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2214:1: ( '{' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2191:1: ( ( '{' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2192:1: ( '{' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2214:1: ( '{' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2215:1: '{'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2192:1: ( '{' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2193:1: '{'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getLeftCurlyBracketKeyword_0()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__Axis2Placement3D__Group__0__Impl4354); 
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__Axis2Placement3D__Group__0__Impl4304); 
              after(grammarAccess.getAxis2Placement3DAccess().getLeftCurlyBracketKeyword_0()); 
 
             }
@@ -5739,21 +5658,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2228:1: rule__Axis2Placement3D__Group__1 : rule__Axis2Placement3D__Group__1__Impl rule__Axis2Placement3D__Group__2 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2206:1: rule__Axis2Placement3D__Group__1 : rule__Axis2Placement3D__Group__1__Impl rule__Axis2Placement3D__Group__2 ;
     public final void rule__Axis2Placement3D__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2232:1: ( rule__Axis2Placement3D__Group__1__Impl rule__Axis2Placement3D__Group__2 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2233:2: rule__Axis2Placement3D__Group__1__Impl rule__Axis2Placement3D__Group__2
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2210:1: ( rule__Axis2Placement3D__Group__1__Impl rule__Axis2Placement3D__Group__2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2211:2: rule__Axis2Placement3D__Group__1__Impl rule__Axis2Placement3D__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__1__Impl_in_rule__Axis2Placement3D__Group__14385);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__1__Impl_in_rule__Axis2Placement3D__Group__14335);
             rule__Axis2Placement3D__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__2_in_rule__Axis2Placement3D__Group__14388);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__2_in_rule__Axis2Placement3D__Group__14338);
             rule__Axis2Placement3D__Group__2();
 
             state._fsp--;
@@ -5777,20 +5696,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2240:1: rule__Axis2Placement3D__Group__1__Impl : ( 'cartesian' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2218:1: rule__Axis2Placement3D__Group__1__Impl : ( 'cartesian' ) ;
     public final void rule__Axis2Placement3D__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2244:1: ( ( 'cartesian' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2245:1: ( 'cartesian' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2222:1: ( ( 'cartesian' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2223:1: ( 'cartesian' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2245:1: ( 'cartesian' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2246:1: 'cartesian'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2223:1: ( 'cartesian' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2224:1: 'cartesian'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCartesianKeyword_1()); 
-            match(input,29,FollowSets000.FOLLOW_29_in_rule__Axis2Placement3D__Group__1__Impl4416); 
+            match(input,29,FollowSets000.FOLLOW_29_in_rule__Axis2Placement3D__Group__1__Impl4366); 
              after(grammarAccess.getAxis2Placement3DAccess().getCartesianKeyword_1()); 
 
             }
@@ -5814,21 +5733,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__2"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2259:1: rule__Axis2Placement3D__Group__2 : rule__Axis2Placement3D__Group__2__Impl rule__Axis2Placement3D__Group__3 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2237:1: rule__Axis2Placement3D__Group__2 : rule__Axis2Placement3D__Group__2__Impl rule__Axis2Placement3D__Group__3 ;
     public final void rule__Axis2Placement3D__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2263:1: ( rule__Axis2Placement3D__Group__2__Impl rule__Axis2Placement3D__Group__3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2264:2: rule__Axis2Placement3D__Group__2__Impl rule__Axis2Placement3D__Group__3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2241:1: ( rule__Axis2Placement3D__Group__2__Impl rule__Axis2Placement3D__Group__3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2242:2: rule__Axis2Placement3D__Group__2__Impl rule__Axis2Placement3D__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__2__Impl_in_rule__Axis2Placement3D__Group__24447);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__2__Impl_in_rule__Axis2Placement3D__Group__24397);
             rule__Axis2Placement3D__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__3_in_rule__Axis2Placement3D__Group__24450);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__3_in_rule__Axis2Placement3D__Group__24400);
             rule__Axis2Placement3D__Group__3();
 
             state._fsp--;
@@ -5852,20 +5771,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__2__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2271:1: rule__Axis2Placement3D__Group__2__Impl : ( '(' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2249:1: rule__Axis2Placement3D__Group__2__Impl : ( '(' ) ;
     public final void rule__Axis2Placement3D__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2275:1: ( ( '(' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2276:1: ( '(' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2253:1: ( ( '(' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2254:1: ( '(' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2276:1: ( '(' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2277:1: '('
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2254:1: ( '(' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2255:1: '('
             {
              before(grammarAccess.getAxis2Placement3DAccess().getLeftParenthesisKeyword_2()); 
-            match(input,30,FollowSets000.FOLLOW_30_in_rule__Axis2Placement3D__Group__2__Impl4478); 
+            match(input,30,FollowSets000.FOLLOW_30_in_rule__Axis2Placement3D__Group__2__Impl4428); 
              after(grammarAccess.getAxis2Placement3DAccess().getLeftParenthesisKeyword_2()); 
 
             }
@@ -5889,21 +5808,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2290:1: rule__Axis2Placement3D__Group__3 : rule__Axis2Placement3D__Group__3__Impl rule__Axis2Placement3D__Group__4 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2268:1: rule__Axis2Placement3D__Group__3 : rule__Axis2Placement3D__Group__3__Impl rule__Axis2Placement3D__Group__4 ;
     public final void rule__Axis2Placement3D__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2294:1: ( rule__Axis2Placement3D__Group__3__Impl rule__Axis2Placement3D__Group__4 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2295:2: rule__Axis2Placement3D__Group__3__Impl rule__Axis2Placement3D__Group__4
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2272:1: ( rule__Axis2Placement3D__Group__3__Impl rule__Axis2Placement3D__Group__4 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2273:2: rule__Axis2Placement3D__Group__3__Impl rule__Axis2Placement3D__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__3__Impl_in_rule__Axis2Placement3D__Group__34509);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__3__Impl_in_rule__Axis2Placement3D__Group__34459);
             rule__Axis2Placement3D__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__4_in_rule__Axis2Placement3D__Group__34512);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__4_in_rule__Axis2Placement3D__Group__34462);
             rule__Axis2Placement3D__Group__4();
 
             state._fsp--;
@@ -5927,23 +5846,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__3__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2302:1: rule__Axis2Placement3D__Group__3__Impl : ( ( rule__Axis2Placement3D__CartesianXAssignment_3 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2280:1: rule__Axis2Placement3D__Group__3__Impl : ( ( rule__Axis2Placement3D__CartesianXAssignment_3 ) ) ;
     public final void rule__Axis2Placement3D__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2306:1: ( ( ( rule__Axis2Placement3D__CartesianXAssignment_3 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2307:1: ( ( rule__Axis2Placement3D__CartesianXAssignment_3 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2284:1: ( ( ( rule__Axis2Placement3D__CartesianXAssignment_3 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2285:1: ( ( rule__Axis2Placement3D__CartesianXAssignment_3 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2307:1: ( ( rule__Axis2Placement3D__CartesianXAssignment_3 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2308:1: ( rule__Axis2Placement3D__CartesianXAssignment_3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2285:1: ( ( rule__Axis2Placement3D__CartesianXAssignment_3 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2286:1: ( rule__Axis2Placement3D__CartesianXAssignment_3 )
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCartesianXAssignment_3()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2309:1: ( rule__Axis2Placement3D__CartesianXAssignment_3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2309:2: rule__Axis2Placement3D__CartesianXAssignment_3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2287:1: ( rule__Axis2Placement3D__CartesianXAssignment_3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2287:2: rule__Axis2Placement3D__CartesianXAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__CartesianXAssignment_3_in_rule__Axis2Placement3D__Group__3__Impl4539);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__CartesianXAssignment_3_in_rule__Axis2Placement3D__Group__3__Impl4489);
             rule__Axis2Placement3D__CartesianXAssignment_3();
 
             state._fsp--;
@@ -5974,21 +5893,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__4"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2319:1: rule__Axis2Placement3D__Group__4 : rule__Axis2Placement3D__Group__4__Impl rule__Axis2Placement3D__Group__5 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2297:1: rule__Axis2Placement3D__Group__4 : rule__Axis2Placement3D__Group__4__Impl rule__Axis2Placement3D__Group__5 ;
     public final void rule__Axis2Placement3D__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2323:1: ( rule__Axis2Placement3D__Group__4__Impl rule__Axis2Placement3D__Group__5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2324:2: rule__Axis2Placement3D__Group__4__Impl rule__Axis2Placement3D__Group__5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2301:1: ( rule__Axis2Placement3D__Group__4__Impl rule__Axis2Placement3D__Group__5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2302:2: rule__Axis2Placement3D__Group__4__Impl rule__Axis2Placement3D__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__4__Impl_in_rule__Axis2Placement3D__Group__44569);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__4__Impl_in_rule__Axis2Placement3D__Group__44519);
             rule__Axis2Placement3D__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__5_in_rule__Axis2Placement3D__Group__44572);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__5_in_rule__Axis2Placement3D__Group__44522);
             rule__Axis2Placement3D__Group__5();
 
             state._fsp--;
@@ -6012,20 +5931,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__4__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2331:1: rule__Axis2Placement3D__Group__4__Impl : ( ',' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2309:1: rule__Axis2Placement3D__Group__4__Impl : ( ',' ) ;
     public final void rule__Axis2Placement3D__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2335:1: ( ( ',' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2336:1: ( ',' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2313:1: ( ( ',' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2314:1: ( ',' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2336:1: ( ',' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2337:1: ','
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2314:1: ( ',' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2315:1: ','
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCommaKeyword_4()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Axis2Placement3D__Group__4__Impl4600); 
+            match(input,23,FollowSets000.FOLLOW_23_in_rule__Axis2Placement3D__Group__4__Impl4550); 
              after(grammarAccess.getAxis2Placement3DAccess().getCommaKeyword_4()); 
 
             }
@@ -6049,21 +5968,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2350:1: rule__Axis2Placement3D__Group__5 : rule__Axis2Placement3D__Group__5__Impl rule__Axis2Placement3D__Group__6 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2328:1: rule__Axis2Placement3D__Group__5 : rule__Axis2Placement3D__Group__5__Impl rule__Axis2Placement3D__Group__6 ;
     public final void rule__Axis2Placement3D__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2354:1: ( rule__Axis2Placement3D__Group__5__Impl rule__Axis2Placement3D__Group__6 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2355:2: rule__Axis2Placement3D__Group__5__Impl rule__Axis2Placement3D__Group__6
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2332:1: ( rule__Axis2Placement3D__Group__5__Impl rule__Axis2Placement3D__Group__6 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2333:2: rule__Axis2Placement3D__Group__5__Impl rule__Axis2Placement3D__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__5__Impl_in_rule__Axis2Placement3D__Group__54631);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__5__Impl_in_rule__Axis2Placement3D__Group__54581);
             rule__Axis2Placement3D__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__6_in_rule__Axis2Placement3D__Group__54634);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__6_in_rule__Axis2Placement3D__Group__54584);
             rule__Axis2Placement3D__Group__6();
 
             state._fsp--;
@@ -6087,23 +6006,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__5__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2362:1: rule__Axis2Placement3D__Group__5__Impl : ( ( rule__Axis2Placement3D__CartesianYAssignment_5 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2340:1: rule__Axis2Placement3D__Group__5__Impl : ( ( rule__Axis2Placement3D__CartesianYAssignment_5 ) ) ;
     public final void rule__Axis2Placement3D__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2366:1: ( ( ( rule__Axis2Placement3D__CartesianYAssignment_5 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2367:1: ( ( rule__Axis2Placement3D__CartesianYAssignment_5 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2344:1: ( ( ( rule__Axis2Placement3D__CartesianYAssignment_5 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2345:1: ( ( rule__Axis2Placement3D__CartesianYAssignment_5 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2367:1: ( ( rule__Axis2Placement3D__CartesianYAssignment_5 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2368:1: ( rule__Axis2Placement3D__CartesianYAssignment_5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2345:1: ( ( rule__Axis2Placement3D__CartesianYAssignment_5 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2346:1: ( rule__Axis2Placement3D__CartesianYAssignment_5 )
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCartesianYAssignment_5()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2369:1: ( rule__Axis2Placement3D__CartesianYAssignment_5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2369:2: rule__Axis2Placement3D__CartesianYAssignment_5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2347:1: ( rule__Axis2Placement3D__CartesianYAssignment_5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2347:2: rule__Axis2Placement3D__CartesianYAssignment_5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__CartesianYAssignment_5_in_rule__Axis2Placement3D__Group__5__Impl4661);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__CartesianYAssignment_5_in_rule__Axis2Placement3D__Group__5__Impl4611);
             rule__Axis2Placement3D__CartesianYAssignment_5();
 
             state._fsp--;
@@ -6134,21 +6053,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__6"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2379:1: rule__Axis2Placement3D__Group__6 : rule__Axis2Placement3D__Group__6__Impl rule__Axis2Placement3D__Group__7 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2357:1: rule__Axis2Placement3D__Group__6 : rule__Axis2Placement3D__Group__6__Impl rule__Axis2Placement3D__Group__7 ;
     public final void rule__Axis2Placement3D__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2383:1: ( rule__Axis2Placement3D__Group__6__Impl rule__Axis2Placement3D__Group__7 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2384:2: rule__Axis2Placement3D__Group__6__Impl rule__Axis2Placement3D__Group__7
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2361:1: ( rule__Axis2Placement3D__Group__6__Impl rule__Axis2Placement3D__Group__7 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2362:2: rule__Axis2Placement3D__Group__6__Impl rule__Axis2Placement3D__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__6__Impl_in_rule__Axis2Placement3D__Group__64691);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__6__Impl_in_rule__Axis2Placement3D__Group__64641);
             rule__Axis2Placement3D__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__7_in_rule__Axis2Placement3D__Group__64694);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__7_in_rule__Axis2Placement3D__Group__64644);
             rule__Axis2Placement3D__Group__7();
 
             state._fsp--;
@@ -6172,20 +6091,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__6__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2391:1: rule__Axis2Placement3D__Group__6__Impl : ( ',' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2369:1: rule__Axis2Placement3D__Group__6__Impl : ( ',' ) ;
     public final void rule__Axis2Placement3D__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2395:1: ( ( ',' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2396:1: ( ',' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2373:1: ( ( ',' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2374:1: ( ',' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2396:1: ( ',' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2397:1: ','
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2374:1: ( ',' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2375:1: ','
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCommaKeyword_6()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Axis2Placement3D__Group__6__Impl4722); 
+            match(input,23,FollowSets000.FOLLOW_23_in_rule__Axis2Placement3D__Group__6__Impl4672); 
              after(grammarAccess.getAxis2Placement3DAccess().getCommaKeyword_6()); 
 
             }
@@ -6209,21 +6128,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__7"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2410:1: rule__Axis2Placement3D__Group__7 : rule__Axis2Placement3D__Group__7__Impl rule__Axis2Placement3D__Group__8 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2388:1: rule__Axis2Placement3D__Group__7 : rule__Axis2Placement3D__Group__7__Impl rule__Axis2Placement3D__Group__8 ;
     public final void rule__Axis2Placement3D__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2414:1: ( rule__Axis2Placement3D__Group__7__Impl rule__Axis2Placement3D__Group__8 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2415:2: rule__Axis2Placement3D__Group__7__Impl rule__Axis2Placement3D__Group__8
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2392:1: ( rule__Axis2Placement3D__Group__7__Impl rule__Axis2Placement3D__Group__8 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2393:2: rule__Axis2Placement3D__Group__7__Impl rule__Axis2Placement3D__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__7__Impl_in_rule__Axis2Placement3D__Group__74753);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__7__Impl_in_rule__Axis2Placement3D__Group__74703);
             rule__Axis2Placement3D__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__8_in_rule__Axis2Placement3D__Group__74756);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__8_in_rule__Axis2Placement3D__Group__74706);
             rule__Axis2Placement3D__Group__8();
 
             state._fsp--;
@@ -6247,23 +6166,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__7__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2422:1: rule__Axis2Placement3D__Group__7__Impl : ( ( rule__Axis2Placement3D__CartesianZAssignment_7 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2400:1: rule__Axis2Placement3D__Group__7__Impl : ( ( rule__Axis2Placement3D__CartesianZAssignment_7 ) ) ;
     public final void rule__Axis2Placement3D__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2426:1: ( ( ( rule__Axis2Placement3D__CartesianZAssignment_7 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2427:1: ( ( rule__Axis2Placement3D__CartesianZAssignment_7 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2404:1: ( ( ( rule__Axis2Placement3D__CartesianZAssignment_7 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2405:1: ( ( rule__Axis2Placement3D__CartesianZAssignment_7 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2427:1: ( ( rule__Axis2Placement3D__CartesianZAssignment_7 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2428:1: ( rule__Axis2Placement3D__CartesianZAssignment_7 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2405:1: ( ( rule__Axis2Placement3D__CartesianZAssignment_7 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2406:1: ( rule__Axis2Placement3D__CartesianZAssignment_7 )
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCartesianZAssignment_7()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2429:1: ( rule__Axis2Placement3D__CartesianZAssignment_7 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2429:2: rule__Axis2Placement3D__CartesianZAssignment_7
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2407:1: ( rule__Axis2Placement3D__CartesianZAssignment_7 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2407:2: rule__Axis2Placement3D__CartesianZAssignment_7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__CartesianZAssignment_7_in_rule__Axis2Placement3D__Group__7__Impl4783);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__CartesianZAssignment_7_in_rule__Axis2Placement3D__Group__7__Impl4733);
             rule__Axis2Placement3D__CartesianZAssignment_7();
 
             state._fsp--;
@@ -6294,21 +6213,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__8"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2439:1: rule__Axis2Placement3D__Group__8 : rule__Axis2Placement3D__Group__8__Impl rule__Axis2Placement3D__Group__9 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2417:1: rule__Axis2Placement3D__Group__8 : rule__Axis2Placement3D__Group__8__Impl rule__Axis2Placement3D__Group__9 ;
     public final void rule__Axis2Placement3D__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2443:1: ( rule__Axis2Placement3D__Group__8__Impl rule__Axis2Placement3D__Group__9 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2444:2: rule__Axis2Placement3D__Group__8__Impl rule__Axis2Placement3D__Group__9
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2421:1: ( rule__Axis2Placement3D__Group__8__Impl rule__Axis2Placement3D__Group__9 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2422:2: rule__Axis2Placement3D__Group__8__Impl rule__Axis2Placement3D__Group__9
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__8__Impl_in_rule__Axis2Placement3D__Group__84813);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__8__Impl_in_rule__Axis2Placement3D__Group__84763);
             rule__Axis2Placement3D__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__9_in_rule__Axis2Placement3D__Group__84816);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__9_in_rule__Axis2Placement3D__Group__84766);
             rule__Axis2Placement3D__Group__9();
 
             state._fsp--;
@@ -6332,20 +6251,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__8__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2451:1: rule__Axis2Placement3D__Group__8__Impl : ( ')' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2429:1: rule__Axis2Placement3D__Group__8__Impl : ( ')' ) ;
     public final void rule__Axis2Placement3D__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2455:1: ( ( ')' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2456:1: ( ')' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2433:1: ( ( ')' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2434:1: ( ')' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2456:1: ( ')' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2457:1: ')'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2434:1: ( ')' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2435:1: ')'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getRightParenthesisKeyword_8()); 
-            match(input,31,FollowSets000.FOLLOW_31_in_rule__Axis2Placement3D__Group__8__Impl4844); 
+            match(input,31,FollowSets000.FOLLOW_31_in_rule__Axis2Placement3D__Group__8__Impl4794); 
              after(grammarAccess.getAxis2Placement3DAccess().getRightParenthesisKeyword_8()); 
 
             }
@@ -6369,21 +6288,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__9"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2470:1: rule__Axis2Placement3D__Group__9 : rule__Axis2Placement3D__Group__9__Impl rule__Axis2Placement3D__Group__10 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2448:1: rule__Axis2Placement3D__Group__9 : rule__Axis2Placement3D__Group__9__Impl rule__Axis2Placement3D__Group__10 ;
     public final void rule__Axis2Placement3D__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2474:1: ( rule__Axis2Placement3D__Group__9__Impl rule__Axis2Placement3D__Group__10 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2475:2: rule__Axis2Placement3D__Group__9__Impl rule__Axis2Placement3D__Group__10
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2452:1: ( rule__Axis2Placement3D__Group__9__Impl rule__Axis2Placement3D__Group__10 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2453:2: rule__Axis2Placement3D__Group__9__Impl rule__Axis2Placement3D__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__9__Impl_in_rule__Axis2Placement3D__Group__94875);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__9__Impl_in_rule__Axis2Placement3D__Group__94825);
             rule__Axis2Placement3D__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__10_in_rule__Axis2Placement3D__Group__94878);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__10_in_rule__Axis2Placement3D__Group__94828);
             rule__Axis2Placement3D__Group__10();
 
             state._fsp--;
@@ -6407,20 +6326,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__9__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2482:1: rule__Axis2Placement3D__Group__9__Impl : ( 'axis' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2460:1: rule__Axis2Placement3D__Group__9__Impl : ( 'axis' ) ;
     public final void rule__Axis2Placement3D__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2486:1: ( ( 'axis' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2487:1: ( 'axis' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2464:1: ( ( 'axis' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2465:1: ( 'axis' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2487:1: ( 'axis' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2488:1: 'axis'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2465:1: ( 'axis' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2466:1: 'axis'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getAxisKeyword_9()); 
-            match(input,32,FollowSets000.FOLLOW_32_in_rule__Axis2Placement3D__Group__9__Impl4906); 
+            match(input,32,FollowSets000.FOLLOW_32_in_rule__Axis2Placement3D__Group__9__Impl4856); 
              after(grammarAccess.getAxis2Placement3DAccess().getAxisKeyword_9()); 
 
             }
@@ -6444,21 +6363,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__10"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2501:1: rule__Axis2Placement3D__Group__10 : rule__Axis2Placement3D__Group__10__Impl rule__Axis2Placement3D__Group__11 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2479:1: rule__Axis2Placement3D__Group__10 : rule__Axis2Placement3D__Group__10__Impl rule__Axis2Placement3D__Group__11 ;
     public final void rule__Axis2Placement3D__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2505:1: ( rule__Axis2Placement3D__Group__10__Impl rule__Axis2Placement3D__Group__11 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2506:2: rule__Axis2Placement3D__Group__10__Impl rule__Axis2Placement3D__Group__11
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2483:1: ( rule__Axis2Placement3D__Group__10__Impl rule__Axis2Placement3D__Group__11 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2484:2: rule__Axis2Placement3D__Group__10__Impl rule__Axis2Placement3D__Group__11
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__10__Impl_in_rule__Axis2Placement3D__Group__104937);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__10__Impl_in_rule__Axis2Placement3D__Group__104887);
             rule__Axis2Placement3D__Group__10__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__11_in_rule__Axis2Placement3D__Group__104940);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__11_in_rule__Axis2Placement3D__Group__104890);
             rule__Axis2Placement3D__Group__11();
 
             state._fsp--;
@@ -6482,23 +6401,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__10__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2513:1: rule__Axis2Placement3D__Group__10__Impl : ( ( rule__Axis2Placement3D__AxisAssignment_10 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2491:1: rule__Axis2Placement3D__Group__10__Impl : ( ( rule__Axis2Placement3D__AxisAssignment_10 ) ) ;
     public final void rule__Axis2Placement3D__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2517:1: ( ( ( rule__Axis2Placement3D__AxisAssignment_10 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2518:1: ( ( rule__Axis2Placement3D__AxisAssignment_10 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2495:1: ( ( ( rule__Axis2Placement3D__AxisAssignment_10 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2496:1: ( ( rule__Axis2Placement3D__AxisAssignment_10 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2518:1: ( ( rule__Axis2Placement3D__AxisAssignment_10 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2519:1: ( rule__Axis2Placement3D__AxisAssignment_10 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2496:1: ( ( rule__Axis2Placement3D__AxisAssignment_10 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2497:1: ( rule__Axis2Placement3D__AxisAssignment_10 )
             {
              before(grammarAccess.getAxis2Placement3DAccess().getAxisAssignment_10()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2520:1: ( rule__Axis2Placement3D__AxisAssignment_10 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2520:2: rule__Axis2Placement3D__AxisAssignment_10
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2498:1: ( rule__Axis2Placement3D__AxisAssignment_10 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2498:2: rule__Axis2Placement3D__AxisAssignment_10
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__AxisAssignment_10_in_rule__Axis2Placement3D__Group__10__Impl4967);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__AxisAssignment_10_in_rule__Axis2Placement3D__Group__10__Impl4917);
             rule__Axis2Placement3D__AxisAssignment_10();
 
             state._fsp--;
@@ -6529,21 +6448,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__11"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2530:1: rule__Axis2Placement3D__Group__11 : rule__Axis2Placement3D__Group__11__Impl rule__Axis2Placement3D__Group__12 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2508:1: rule__Axis2Placement3D__Group__11 : rule__Axis2Placement3D__Group__11__Impl rule__Axis2Placement3D__Group__12 ;
     public final void rule__Axis2Placement3D__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2534:1: ( rule__Axis2Placement3D__Group__11__Impl rule__Axis2Placement3D__Group__12 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2535:2: rule__Axis2Placement3D__Group__11__Impl rule__Axis2Placement3D__Group__12
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2512:1: ( rule__Axis2Placement3D__Group__11__Impl rule__Axis2Placement3D__Group__12 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2513:2: rule__Axis2Placement3D__Group__11__Impl rule__Axis2Placement3D__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__11__Impl_in_rule__Axis2Placement3D__Group__114997);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__11__Impl_in_rule__Axis2Placement3D__Group__114947);
             rule__Axis2Placement3D__Group__11__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__12_in_rule__Axis2Placement3D__Group__115000);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__12_in_rule__Axis2Placement3D__Group__114950);
             rule__Axis2Placement3D__Group__12();
 
             state._fsp--;
@@ -6567,20 +6486,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__11__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2542:1: rule__Axis2Placement3D__Group__11__Impl : ( 'refDir' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2520:1: rule__Axis2Placement3D__Group__11__Impl : ( 'refDir' ) ;
     public final void rule__Axis2Placement3D__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2546:1: ( ( 'refDir' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2547:1: ( 'refDir' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2524:1: ( ( 'refDir' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2525:1: ( 'refDir' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2547:1: ( 'refDir' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2548:1: 'refDir'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2525:1: ( 'refDir' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2526:1: 'refDir'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getRefDirKeyword_11()); 
-            match(input,33,FollowSets000.FOLLOW_33_in_rule__Axis2Placement3D__Group__11__Impl5028); 
+            match(input,33,FollowSets000.FOLLOW_33_in_rule__Axis2Placement3D__Group__11__Impl4978); 
              after(grammarAccess.getAxis2Placement3DAccess().getRefDirKeyword_11()); 
 
             }
@@ -6604,21 +6523,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__12"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2561:1: rule__Axis2Placement3D__Group__12 : rule__Axis2Placement3D__Group__12__Impl rule__Axis2Placement3D__Group__13 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2539:1: rule__Axis2Placement3D__Group__12 : rule__Axis2Placement3D__Group__12__Impl rule__Axis2Placement3D__Group__13 ;
     public final void rule__Axis2Placement3D__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2565:1: ( rule__Axis2Placement3D__Group__12__Impl rule__Axis2Placement3D__Group__13 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2566:2: rule__Axis2Placement3D__Group__12__Impl rule__Axis2Placement3D__Group__13
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2543:1: ( rule__Axis2Placement3D__Group__12__Impl rule__Axis2Placement3D__Group__13 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2544:2: rule__Axis2Placement3D__Group__12__Impl rule__Axis2Placement3D__Group__13
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__12__Impl_in_rule__Axis2Placement3D__Group__125059);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__12__Impl_in_rule__Axis2Placement3D__Group__125009);
             rule__Axis2Placement3D__Group__12__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__13_in_rule__Axis2Placement3D__Group__125062);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__13_in_rule__Axis2Placement3D__Group__125012);
             rule__Axis2Placement3D__Group__13();
 
             state._fsp--;
@@ -6642,23 +6561,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__12__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2573:1: rule__Axis2Placement3D__Group__12__Impl : ( ( rule__Axis2Placement3D__RefDirectionAssignment_12 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2551:1: rule__Axis2Placement3D__Group__12__Impl : ( ( rule__Axis2Placement3D__RefDirectionAssignment_12 ) ) ;
     public final void rule__Axis2Placement3D__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2577:1: ( ( ( rule__Axis2Placement3D__RefDirectionAssignment_12 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2578:1: ( ( rule__Axis2Placement3D__RefDirectionAssignment_12 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2555:1: ( ( ( rule__Axis2Placement3D__RefDirectionAssignment_12 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2556:1: ( ( rule__Axis2Placement3D__RefDirectionAssignment_12 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2578:1: ( ( rule__Axis2Placement3D__RefDirectionAssignment_12 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2579:1: ( rule__Axis2Placement3D__RefDirectionAssignment_12 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2556:1: ( ( rule__Axis2Placement3D__RefDirectionAssignment_12 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2557:1: ( rule__Axis2Placement3D__RefDirectionAssignment_12 )
             {
              before(grammarAccess.getAxis2Placement3DAccess().getRefDirectionAssignment_12()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2580:1: ( rule__Axis2Placement3D__RefDirectionAssignment_12 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2580:2: rule__Axis2Placement3D__RefDirectionAssignment_12
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2558:1: ( rule__Axis2Placement3D__RefDirectionAssignment_12 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2558:2: rule__Axis2Placement3D__RefDirectionAssignment_12
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__RefDirectionAssignment_12_in_rule__Axis2Placement3D__Group__12__Impl5089);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__RefDirectionAssignment_12_in_rule__Axis2Placement3D__Group__12__Impl5039);
             rule__Axis2Placement3D__RefDirectionAssignment_12();
 
             state._fsp--;
@@ -6689,16 +6608,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__13"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2590:1: rule__Axis2Placement3D__Group__13 : rule__Axis2Placement3D__Group__13__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2568:1: rule__Axis2Placement3D__Group__13 : rule__Axis2Placement3D__Group__13__Impl ;
     public final void rule__Axis2Placement3D__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2594:1: ( rule__Axis2Placement3D__Group__13__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2595:2: rule__Axis2Placement3D__Group__13__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2572:1: ( rule__Axis2Placement3D__Group__13__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2573:2: rule__Axis2Placement3D__Group__13__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__13__Impl_in_rule__Axis2Placement3D__Group__135119);
+            pushFollow(FollowSets000.FOLLOW_rule__Axis2Placement3D__Group__13__Impl_in_rule__Axis2Placement3D__Group__135069);
             rule__Axis2Placement3D__Group__13__Impl();
 
             state._fsp--;
@@ -6722,20 +6641,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__Group__13__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2601:1: rule__Axis2Placement3D__Group__13__Impl : ( '}' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2579:1: rule__Axis2Placement3D__Group__13__Impl : ( '}' ) ;
     public final void rule__Axis2Placement3D__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2605:1: ( ( '}' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2606:1: ( '}' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2583:1: ( ( '}' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2584:1: ( '}' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2606:1: ( '}' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2607:1: '}'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2584:1: ( '}' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2585:1: '}'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getRightCurlyBracketKeyword_13()); 
-            match(input,26,FollowSets000.FOLLOW_26_in_rule__Axis2Placement3D__Group__13__Impl5147); 
+            match(input,26,FollowSets000.FOLLOW_26_in_rule__Axis2Placement3D__Group__13__Impl5097); 
              after(grammarAccess.getAxis2Placement3DAccess().getRightCurlyBracketKeyword_13()); 
 
             }
@@ -6759,21 +6678,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2648:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2626:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
     public final void rule__EDouble__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2652:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2653:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2630:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2631:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__0__Impl_in_rule__EDouble__Group__05206);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__0__Impl_in_rule__EDouble__Group__05156);
             rule__EDouble__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__1_in_rule__EDouble__Group__05209);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__1_in_rule__EDouble__Group__05159);
             rule__EDouble__Group__1();
 
             state._fsp--;
@@ -6797,31 +6716,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2660:1: rule__EDouble__Group__0__Impl : ( ( '-' )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2638:1: rule__EDouble__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__EDouble__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2664:1: ( ( ( '-' )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2665:1: ( ( '-' )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2642:1: ( ( ( '-' )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2643:1: ( ( '-' )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2665:1: ( ( '-' )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2666:1: ( '-' )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2643:1: ( ( '-' )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2644:1: ( '-' )?
             {
              before(grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_0()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2667:1: ( '-' )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2645:1: ( '-' )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==34) ) {
-                alt13=1;
+            if ( (LA12_0==34) ) {
+                alt12=1;
             }
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2668:2: '-'
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2646:2: '-'
                     {
-                    match(input,34,FollowSets000.FOLLOW_34_in_rule__EDouble__Group__0__Impl5238); 
+                    match(input,34,FollowSets000.FOLLOW_34_in_rule__EDouble__Group__0__Impl5188); 
 
                     }
                     break;
@@ -6851,21 +6770,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2679:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2657:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
     public final void rule__EDouble__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2683:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2684:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2661:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2662:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__1__Impl_in_rule__EDouble__Group__15271);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__1__Impl_in_rule__EDouble__Group__15221);
             rule__EDouble__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__2_in_rule__EDouble__Group__15274);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__2_in_rule__EDouble__Group__15224);
             rule__EDouble__Group__2();
 
             state._fsp--;
@@ -6889,31 +6808,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2691:1: rule__EDouble__Group__1__Impl : ( ( RULE_INT )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2669:1: rule__EDouble__Group__1__Impl : ( ( RULE_INT )? ) ;
     public final void rule__EDouble__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2695:1: ( ( ( RULE_INT )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2696:1: ( ( RULE_INT )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2673:1: ( ( ( RULE_INT )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2674:1: ( ( RULE_INT )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2696:1: ( ( RULE_INT )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2697:1: ( RULE_INT )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2674:1: ( ( RULE_INT )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2675:1: ( RULE_INT )?
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2698:1: ( RULE_INT )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2676:1: ( RULE_INT )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA14_0==RULE_INT) ) {
-                alt14=1;
+            if ( (LA13_0==RULE_INT) ) {
+                alt13=1;
             }
-            switch (alt14) {
+            switch (alt13) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2698:3: RULE_INT
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2676:3: RULE_INT
                     {
-                    match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__EDouble__Group__1__Impl5302); 
+                    match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__EDouble__Group__1__Impl5252); 
 
                     }
                     break;
@@ -6943,21 +6862,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__2"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2708:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2686:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
     public final void rule__EDouble__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2712:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2713:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2690:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2691:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__2__Impl_in_rule__EDouble__Group__25333);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__2__Impl_in_rule__EDouble__Group__25283);
             rule__EDouble__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__3_in_rule__EDouble__Group__25336);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__3_in_rule__EDouble__Group__25286);
             rule__EDouble__Group__3();
 
             state._fsp--;
@@ -6981,20 +6900,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__2__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2720:1: rule__EDouble__Group__2__Impl : ( '.' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2698:1: rule__EDouble__Group__2__Impl : ( '.' ) ;
     public final void rule__EDouble__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2724:1: ( ( '.' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2725:1: ( '.' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2702:1: ( ( '.' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2703:1: ( '.' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2725:1: ( '.' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2726:1: '.'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2703:1: ( '.' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2704:1: '.'
             {
              before(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
-            match(input,35,FollowSets000.FOLLOW_35_in_rule__EDouble__Group__2__Impl5364); 
+            match(input,35,FollowSets000.FOLLOW_35_in_rule__EDouble__Group__2__Impl5314); 
              after(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
 
             }
@@ -7018,21 +6937,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2739:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl rule__EDouble__Group__4 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2717:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl rule__EDouble__Group__4 ;
     public final void rule__EDouble__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2743:1: ( rule__EDouble__Group__3__Impl rule__EDouble__Group__4 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2744:2: rule__EDouble__Group__3__Impl rule__EDouble__Group__4
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2721:1: ( rule__EDouble__Group__3__Impl rule__EDouble__Group__4 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2722:2: rule__EDouble__Group__3__Impl rule__EDouble__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__3__Impl_in_rule__EDouble__Group__35395);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__3__Impl_in_rule__EDouble__Group__35345);
             rule__EDouble__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__4_in_rule__EDouble__Group__35398);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__4_in_rule__EDouble__Group__35348);
             rule__EDouble__Group__4();
 
             state._fsp--;
@@ -7056,20 +6975,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__3__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2751:1: rule__EDouble__Group__3__Impl : ( RULE_INT ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2729:1: rule__EDouble__Group__3__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2755:1: ( ( RULE_INT ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2756:1: ( RULE_INT )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2733:1: ( ( RULE_INT ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2734:1: ( RULE_INT )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2756:1: ( RULE_INT )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2757:1: RULE_INT
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2734:1: ( RULE_INT )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2735:1: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3()); 
-            match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__EDouble__Group__3__Impl5425); 
+            match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__EDouble__Group__3__Impl5375); 
              after(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3()); 
 
             }
@@ -7093,16 +7012,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__4"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2768:1: rule__EDouble__Group__4 : rule__EDouble__Group__4__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2746:1: rule__EDouble__Group__4 : rule__EDouble__Group__4__Impl ;
     public final void rule__EDouble__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2772:1: ( rule__EDouble__Group__4__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2773:2: rule__EDouble__Group__4__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2750:1: ( rule__EDouble__Group__4__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2751:2: rule__EDouble__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__4__Impl_in_rule__EDouble__Group__45454);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group__4__Impl_in_rule__EDouble__Group__45404);
             rule__EDouble__Group__4__Impl();
 
             state._fsp--;
@@ -7126,31 +7045,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__4__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2779:1: rule__EDouble__Group__4__Impl : ( ( rule__EDouble__Group_4__0 )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2757:1: rule__EDouble__Group__4__Impl : ( ( rule__EDouble__Group_4__0 )? ) ;
     public final void rule__EDouble__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2783:1: ( ( ( rule__EDouble__Group_4__0 )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2784:1: ( ( rule__EDouble__Group_4__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2761:1: ( ( ( rule__EDouble__Group_4__0 )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2762:1: ( ( rule__EDouble__Group_4__0 )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2784:1: ( ( rule__EDouble__Group_4__0 )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2785:1: ( rule__EDouble__Group_4__0 )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2762:1: ( ( rule__EDouble__Group_4__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2763:1: ( rule__EDouble__Group_4__0 )?
             {
              before(grammarAccess.getEDoubleAccess().getGroup_4()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2786:1: ( rule__EDouble__Group_4__0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2764:1: ( rule__EDouble__Group_4__0 )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( ((LA15_0>=11 && LA15_0<=12)) ) {
-                alt15=1;
+            if ( ((LA14_0>=11 && LA14_0<=12)) ) {
+                alt14=1;
             }
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2786:2: rule__EDouble__Group_4__0
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2764:2: rule__EDouble__Group_4__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__0_in_rule__EDouble__Group__4__Impl5481);
+                    pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__0_in_rule__EDouble__Group__4__Impl5431);
                     rule__EDouble__Group_4__0();
 
                     state._fsp--;
@@ -7184,21 +7103,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2806:1: rule__EDouble__Group_4__0 : rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2784:1: rule__EDouble__Group_4__0 : rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 ;
     public final void rule__EDouble__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2810:1: ( rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2811:2: rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2788:1: ( rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2789:2: rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__0__Impl_in_rule__EDouble__Group_4__05522);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__0__Impl_in_rule__EDouble__Group_4__05472);
             rule__EDouble__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__1_in_rule__EDouble__Group_4__05525);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__1_in_rule__EDouble__Group_4__05475);
             rule__EDouble__Group_4__1();
 
             state._fsp--;
@@ -7222,23 +7141,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2818:1: rule__EDouble__Group_4__0__Impl : ( ( rule__EDouble__Alternatives_4_0 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2796:1: rule__EDouble__Group_4__0__Impl : ( ( rule__EDouble__Alternatives_4_0 ) ) ;
     public final void rule__EDouble__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2822:1: ( ( ( rule__EDouble__Alternatives_4_0 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2823:1: ( ( rule__EDouble__Alternatives_4_0 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2800:1: ( ( ( rule__EDouble__Alternatives_4_0 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2801:1: ( ( rule__EDouble__Alternatives_4_0 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2823:1: ( ( rule__EDouble__Alternatives_4_0 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2824:1: ( rule__EDouble__Alternatives_4_0 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2801:1: ( ( rule__EDouble__Alternatives_4_0 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2802:1: ( rule__EDouble__Alternatives_4_0 )
             {
              before(grammarAccess.getEDoubleAccess().getAlternatives_4_0()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2825:1: ( rule__EDouble__Alternatives_4_0 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2825:2: rule__EDouble__Alternatives_4_0
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2803:1: ( rule__EDouble__Alternatives_4_0 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2803:2: rule__EDouble__Alternatives_4_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Alternatives_4_0_in_rule__EDouble__Group_4__0__Impl5552);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Alternatives_4_0_in_rule__EDouble__Group_4__0__Impl5502);
             rule__EDouble__Alternatives_4_0();
 
             state._fsp--;
@@ -7269,21 +7188,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2835:1: rule__EDouble__Group_4__1 : rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2813:1: rule__EDouble__Group_4__1 : rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 ;
     public final void rule__EDouble__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2839:1: ( rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2840:2: rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2817:1: ( rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2818:2: rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__1__Impl_in_rule__EDouble__Group_4__15582);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__1__Impl_in_rule__EDouble__Group_4__15532);
             rule__EDouble__Group_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__2_in_rule__EDouble__Group_4__15585);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__2_in_rule__EDouble__Group_4__15535);
             rule__EDouble__Group_4__2();
 
             state._fsp--;
@@ -7307,31 +7226,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2847:1: rule__EDouble__Group_4__1__Impl : ( ( '-' )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2825:1: rule__EDouble__Group_4__1__Impl : ( ( '-' )? ) ;
     public final void rule__EDouble__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2851:1: ( ( ( '-' )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2852:1: ( ( '-' )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2829:1: ( ( ( '-' )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2830:1: ( ( '-' )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2852:1: ( ( '-' )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2853:1: ( '-' )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2830:1: ( ( '-' )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2831:1: ( '-' )?
             {
              before(grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_4_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2854:1: ( '-' )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2832:1: ( '-' )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA16_0==34) ) {
-                alt16=1;
+            if ( (LA15_0==34) ) {
+                alt15=1;
             }
-            switch (alt16) {
+            switch (alt15) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2855:2: '-'
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2833:2: '-'
                     {
-                    match(input,34,FollowSets000.FOLLOW_34_in_rule__EDouble__Group_4__1__Impl5614); 
+                    match(input,34,FollowSets000.FOLLOW_34_in_rule__EDouble__Group_4__1__Impl5564); 
 
                     }
                     break;
@@ -7361,16 +7280,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__2"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2866:1: rule__EDouble__Group_4__2 : rule__EDouble__Group_4__2__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2844:1: rule__EDouble__Group_4__2 : rule__EDouble__Group_4__2__Impl ;
     public final void rule__EDouble__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2870:1: ( rule__EDouble__Group_4__2__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2871:2: rule__EDouble__Group_4__2__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2848:1: ( rule__EDouble__Group_4__2__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2849:2: rule__EDouble__Group_4__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__2__Impl_in_rule__EDouble__Group_4__25647);
+            pushFollow(FollowSets000.FOLLOW_rule__EDouble__Group_4__2__Impl_in_rule__EDouble__Group_4__25597);
             rule__EDouble__Group_4__2__Impl();
 
             state._fsp--;
@@ -7394,20 +7313,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__2__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2877:1: rule__EDouble__Group_4__2__Impl : ( RULE_INT ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2855:1: rule__EDouble__Group_4__2__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2881:1: ( ( RULE_INT ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2882:1: ( RULE_INT )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2859:1: ( ( RULE_INT ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2860:1: ( RULE_INT )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2882:1: ( RULE_INT )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2883:1: RULE_INT
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2860:1: ( RULE_INT )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2861:1: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_4_2()); 
-            match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__EDouble__Group_4__2__Impl5674); 
+            match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__EDouble__Group_4__2__Impl5624); 
              after(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_4_2()); 
 
             }
@@ -7431,21 +7350,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2900:1: rule__Direction__Group__0 : rule__Direction__Group__0__Impl rule__Direction__Group__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2878:1: rule__Direction__Group__0 : rule__Direction__Group__0__Impl rule__Direction__Group__1 ;
     public final void rule__Direction__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2904:1: ( rule__Direction__Group__0__Impl rule__Direction__Group__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2905:2: rule__Direction__Group__0__Impl rule__Direction__Group__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2882:1: ( rule__Direction__Group__0__Impl rule__Direction__Group__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2883:2: rule__Direction__Group__0__Impl rule__Direction__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__0__Impl_in_rule__Direction__Group__05709);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__0__Impl_in_rule__Direction__Group__05659);
             rule__Direction__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__1_in_rule__Direction__Group__05712);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__1_in_rule__Direction__Group__05662);
             rule__Direction__Group__1();
 
             state._fsp--;
@@ -7469,20 +7388,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2912:1: rule__Direction__Group__0__Impl : ( '(' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2890:1: rule__Direction__Group__0__Impl : ( '(' ) ;
     public final void rule__Direction__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2916:1: ( ( '(' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2917:1: ( '(' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2894:1: ( ( '(' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2895:1: ( '(' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2917:1: ( '(' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2918:1: '('
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2895:1: ( '(' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2896:1: '('
             {
              before(grammarAccess.getDirectionAccess().getLeftParenthesisKeyword_0()); 
-            match(input,30,FollowSets000.FOLLOW_30_in_rule__Direction__Group__0__Impl5740); 
+            match(input,30,FollowSets000.FOLLOW_30_in_rule__Direction__Group__0__Impl5690); 
              after(grammarAccess.getDirectionAccess().getLeftParenthesisKeyword_0()); 
 
             }
@@ -7506,21 +7425,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2931:1: rule__Direction__Group__1 : rule__Direction__Group__1__Impl rule__Direction__Group__2 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2909:1: rule__Direction__Group__1 : rule__Direction__Group__1__Impl rule__Direction__Group__2 ;
     public final void rule__Direction__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2935:1: ( rule__Direction__Group__1__Impl rule__Direction__Group__2 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2936:2: rule__Direction__Group__1__Impl rule__Direction__Group__2
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2913:1: ( rule__Direction__Group__1__Impl rule__Direction__Group__2 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2914:2: rule__Direction__Group__1__Impl rule__Direction__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__1__Impl_in_rule__Direction__Group__15771);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__1__Impl_in_rule__Direction__Group__15721);
             rule__Direction__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__2_in_rule__Direction__Group__15774);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__2_in_rule__Direction__Group__15724);
             rule__Direction__Group__2();
 
             state._fsp--;
@@ -7544,23 +7463,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2943:1: rule__Direction__Group__1__Impl : ( ( rule__Direction__XAssignment_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2921:1: rule__Direction__Group__1__Impl : ( ( rule__Direction__XAssignment_1 ) ) ;
     public final void rule__Direction__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2947:1: ( ( ( rule__Direction__XAssignment_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2948:1: ( ( rule__Direction__XAssignment_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2925:1: ( ( ( rule__Direction__XAssignment_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2926:1: ( ( rule__Direction__XAssignment_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2948:1: ( ( rule__Direction__XAssignment_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2949:1: ( rule__Direction__XAssignment_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2926:1: ( ( rule__Direction__XAssignment_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2927:1: ( rule__Direction__XAssignment_1 )
             {
              before(grammarAccess.getDirectionAccess().getXAssignment_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2950:1: ( rule__Direction__XAssignment_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2950:2: rule__Direction__XAssignment_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2928:1: ( rule__Direction__XAssignment_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2928:2: rule__Direction__XAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__XAssignment_1_in_rule__Direction__Group__1__Impl5801);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__XAssignment_1_in_rule__Direction__Group__1__Impl5751);
             rule__Direction__XAssignment_1();
 
             state._fsp--;
@@ -7591,21 +7510,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__2"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2960:1: rule__Direction__Group__2 : rule__Direction__Group__2__Impl rule__Direction__Group__3 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2938:1: rule__Direction__Group__2 : rule__Direction__Group__2__Impl rule__Direction__Group__3 ;
     public final void rule__Direction__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2964:1: ( rule__Direction__Group__2__Impl rule__Direction__Group__3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2965:2: rule__Direction__Group__2__Impl rule__Direction__Group__3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2942:1: ( rule__Direction__Group__2__Impl rule__Direction__Group__3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2943:2: rule__Direction__Group__2__Impl rule__Direction__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__2__Impl_in_rule__Direction__Group__25831);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__2__Impl_in_rule__Direction__Group__25781);
             rule__Direction__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__3_in_rule__Direction__Group__25834);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__3_in_rule__Direction__Group__25784);
             rule__Direction__Group__3();
 
             state._fsp--;
@@ -7629,20 +7548,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__2__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2972:1: rule__Direction__Group__2__Impl : ( ',' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2950:1: rule__Direction__Group__2__Impl : ( ',' ) ;
     public final void rule__Direction__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2976:1: ( ( ',' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2977:1: ( ',' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2954:1: ( ( ',' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2955:1: ( ',' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2977:1: ( ',' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2978:1: ','
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2955:1: ( ',' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2956:1: ','
             {
              before(grammarAccess.getDirectionAccess().getCommaKeyword_2()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Direction__Group__2__Impl5862); 
+            match(input,23,FollowSets000.FOLLOW_23_in_rule__Direction__Group__2__Impl5812); 
              after(grammarAccess.getDirectionAccess().getCommaKeyword_2()); 
 
             }
@@ -7666,21 +7585,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2991:1: rule__Direction__Group__3 : rule__Direction__Group__3__Impl rule__Direction__Group__4 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2969:1: rule__Direction__Group__3 : rule__Direction__Group__3__Impl rule__Direction__Group__4 ;
     public final void rule__Direction__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2995:1: ( rule__Direction__Group__3__Impl rule__Direction__Group__4 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2996:2: rule__Direction__Group__3__Impl rule__Direction__Group__4
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2973:1: ( rule__Direction__Group__3__Impl rule__Direction__Group__4 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2974:2: rule__Direction__Group__3__Impl rule__Direction__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__3__Impl_in_rule__Direction__Group__35893);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__3__Impl_in_rule__Direction__Group__35843);
             rule__Direction__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__4_in_rule__Direction__Group__35896);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__4_in_rule__Direction__Group__35846);
             rule__Direction__Group__4();
 
             state._fsp--;
@@ -7704,23 +7623,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__3__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3003:1: rule__Direction__Group__3__Impl : ( ( rule__Direction__YAssignment_3 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2981:1: rule__Direction__Group__3__Impl : ( ( rule__Direction__YAssignment_3 ) ) ;
     public final void rule__Direction__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3007:1: ( ( ( rule__Direction__YAssignment_3 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3008:1: ( ( rule__Direction__YAssignment_3 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2985:1: ( ( ( rule__Direction__YAssignment_3 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2986:1: ( ( rule__Direction__YAssignment_3 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3008:1: ( ( rule__Direction__YAssignment_3 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3009:1: ( rule__Direction__YAssignment_3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2986:1: ( ( rule__Direction__YAssignment_3 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2987:1: ( rule__Direction__YAssignment_3 )
             {
              before(grammarAccess.getDirectionAccess().getYAssignment_3()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3010:1: ( rule__Direction__YAssignment_3 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3010:2: rule__Direction__YAssignment_3
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2988:1: ( rule__Direction__YAssignment_3 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2988:2: rule__Direction__YAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__YAssignment_3_in_rule__Direction__Group__3__Impl5923);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__YAssignment_3_in_rule__Direction__Group__3__Impl5873);
             rule__Direction__YAssignment_3();
 
             state._fsp--;
@@ -7751,21 +7670,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__4"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3020:1: rule__Direction__Group__4 : rule__Direction__Group__4__Impl rule__Direction__Group__5 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2998:1: rule__Direction__Group__4 : rule__Direction__Group__4__Impl rule__Direction__Group__5 ;
     public final void rule__Direction__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3024:1: ( rule__Direction__Group__4__Impl rule__Direction__Group__5 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3025:2: rule__Direction__Group__4__Impl rule__Direction__Group__5
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3002:1: ( rule__Direction__Group__4__Impl rule__Direction__Group__5 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3003:2: rule__Direction__Group__4__Impl rule__Direction__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__4__Impl_in_rule__Direction__Group__45953);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__4__Impl_in_rule__Direction__Group__45903);
             rule__Direction__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__5_in_rule__Direction__Group__45956);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__5_in_rule__Direction__Group__45906);
             rule__Direction__Group__5();
 
             state._fsp--;
@@ -7789,31 +7708,31 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__4__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3032:1: rule__Direction__Group__4__Impl : ( ( rule__Direction__Group_4__0 )? ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3010:1: rule__Direction__Group__4__Impl : ( ( rule__Direction__Group_4__0 )? ) ;
     public final void rule__Direction__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3036:1: ( ( ( rule__Direction__Group_4__0 )? ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3037:1: ( ( rule__Direction__Group_4__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3014:1: ( ( ( rule__Direction__Group_4__0 )? ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3015:1: ( ( rule__Direction__Group_4__0 )? )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3037:1: ( ( rule__Direction__Group_4__0 )? )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3038:1: ( rule__Direction__Group_4__0 )?
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3015:1: ( ( rule__Direction__Group_4__0 )? )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3016:1: ( rule__Direction__Group_4__0 )?
             {
              before(grammarAccess.getDirectionAccess().getGroup_4()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3039:1: ( rule__Direction__Group_4__0 )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3017:1: ( rule__Direction__Group_4__0 )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA17_0==23) ) {
-                alt17=1;
+            if ( (LA16_0==23) ) {
+                alt16=1;
             }
-            switch (alt17) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3039:2: rule__Direction__Group_4__0
+                    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3017:2: rule__Direction__Group_4__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Direction__Group_4__0_in_rule__Direction__Group__4__Impl5983);
+                    pushFollow(FollowSets000.FOLLOW_rule__Direction__Group_4__0_in_rule__Direction__Group__4__Impl5933);
                     rule__Direction__Group_4__0();
 
                     state._fsp--;
@@ -7847,16 +7766,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3049:1: rule__Direction__Group__5 : rule__Direction__Group__5__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3027:1: rule__Direction__Group__5 : rule__Direction__Group__5__Impl ;
     public final void rule__Direction__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3053:1: ( rule__Direction__Group__5__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3054:2: rule__Direction__Group__5__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3031:1: ( rule__Direction__Group__5__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3032:2: rule__Direction__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__5__Impl_in_rule__Direction__Group__56014);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group__5__Impl_in_rule__Direction__Group__55964);
             rule__Direction__Group__5__Impl();
 
             state._fsp--;
@@ -7880,20 +7799,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group__5__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3060:1: rule__Direction__Group__5__Impl : ( ')' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3038:1: rule__Direction__Group__5__Impl : ( ')' ) ;
     public final void rule__Direction__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3064:1: ( ( ')' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3065:1: ( ')' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3042:1: ( ( ')' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3043:1: ( ')' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3065:1: ( ')' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3066:1: ')'
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3043:1: ( ')' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3044:1: ')'
             {
              before(grammarAccess.getDirectionAccess().getRightParenthesisKeyword_5()); 
-            match(input,31,FollowSets000.FOLLOW_31_in_rule__Direction__Group__5__Impl6042); 
+            match(input,31,FollowSets000.FOLLOW_31_in_rule__Direction__Group__5__Impl5992); 
              after(grammarAccess.getDirectionAccess().getRightParenthesisKeyword_5()); 
 
             }
@@ -7917,21 +7836,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group_4__0"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3091:1: rule__Direction__Group_4__0 : rule__Direction__Group_4__0__Impl rule__Direction__Group_4__1 ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3069:1: rule__Direction__Group_4__0 : rule__Direction__Group_4__0__Impl rule__Direction__Group_4__1 ;
     public final void rule__Direction__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3095:1: ( rule__Direction__Group_4__0__Impl rule__Direction__Group_4__1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3096:2: rule__Direction__Group_4__0__Impl rule__Direction__Group_4__1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3073:1: ( rule__Direction__Group_4__0__Impl rule__Direction__Group_4__1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3074:2: rule__Direction__Group_4__0__Impl rule__Direction__Group_4__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group_4__0__Impl_in_rule__Direction__Group_4__06085);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group_4__0__Impl_in_rule__Direction__Group_4__06035);
             rule__Direction__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group_4__1_in_rule__Direction__Group_4__06088);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group_4__1_in_rule__Direction__Group_4__06038);
             rule__Direction__Group_4__1();
 
             state._fsp--;
@@ -7955,20 +7874,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group_4__0__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3103:1: rule__Direction__Group_4__0__Impl : ( ',' ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3081:1: rule__Direction__Group_4__0__Impl : ( ',' ) ;
     public final void rule__Direction__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3107:1: ( ( ',' ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3108:1: ( ',' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3085:1: ( ( ',' ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3086:1: ( ',' )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3108:1: ( ',' )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3109:1: ','
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3086:1: ( ',' )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3087:1: ','
             {
              before(grammarAccess.getDirectionAccess().getCommaKeyword_4_0()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Direction__Group_4__0__Impl6116); 
+            match(input,23,FollowSets000.FOLLOW_23_in_rule__Direction__Group_4__0__Impl6066); 
              after(grammarAccess.getDirectionAccess().getCommaKeyword_4_0()); 
 
             }
@@ -7992,16 +7911,16 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group_4__1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3122:1: rule__Direction__Group_4__1 : rule__Direction__Group_4__1__Impl ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3100:1: rule__Direction__Group_4__1 : rule__Direction__Group_4__1__Impl ;
     public final void rule__Direction__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3126:1: ( rule__Direction__Group_4__1__Impl )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3127:2: rule__Direction__Group_4__1__Impl
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3104:1: ( rule__Direction__Group_4__1__Impl )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3105:2: rule__Direction__Group_4__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group_4__1__Impl_in_rule__Direction__Group_4__16147);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__Group_4__1__Impl_in_rule__Direction__Group_4__16097);
             rule__Direction__Group_4__1__Impl();
 
             state._fsp--;
@@ -8025,23 +7944,23 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__Group_4__1__Impl"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3133:1: rule__Direction__Group_4__1__Impl : ( ( rule__Direction__ZAssignment_4_1 ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3111:1: rule__Direction__Group_4__1__Impl : ( ( rule__Direction__ZAssignment_4_1 ) ) ;
     public final void rule__Direction__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3137:1: ( ( ( rule__Direction__ZAssignment_4_1 ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3138:1: ( ( rule__Direction__ZAssignment_4_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3115:1: ( ( ( rule__Direction__ZAssignment_4_1 ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3116:1: ( ( rule__Direction__ZAssignment_4_1 ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3138:1: ( ( rule__Direction__ZAssignment_4_1 ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3139:1: ( rule__Direction__ZAssignment_4_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3116:1: ( ( rule__Direction__ZAssignment_4_1 ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3117:1: ( rule__Direction__ZAssignment_4_1 )
             {
              before(grammarAccess.getDirectionAccess().getZAssignment_4_1()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3140:1: ( rule__Direction__ZAssignment_4_1 )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3140:2: rule__Direction__ZAssignment_4_1
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3118:1: ( rule__Direction__ZAssignment_4_1 )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3118:2: rule__Direction__ZAssignment_4_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Direction__ZAssignment_4_1_in_rule__Direction__Group_4__1__Impl6174);
+            pushFollow(FollowSets000.FOLLOW_rule__Direction__ZAssignment_4_1_in_rule__Direction__Group_4__1__Impl6124);
             rule__Direction__ZAssignment_4_1();
 
             state._fsp--;
@@ -8072,20 +7991,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ElementsAssignment_2"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3155:1: rule__Model__ElementsAssignment_2 : ( ruleWallRule ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3133:1: rule__Model__ElementsAssignment_2 : ( ruleWallRule ) ;
     public final void rule__Model__ElementsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3159:1: ( ( ruleWallRule ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3160:1: ( ruleWallRule )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3137:1: ( ( ruleWallRule ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3138:1: ( ruleWallRule )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3160:1: ( ruleWallRule )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3161:1: ruleWallRule
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3138:1: ( ruleWallRule )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3139:1: ruleWallRule
             {
              before(grammarAccess.getModelAccess().getElementsWallRuleParserRuleCall_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleWallRule_in_rule__Model__ElementsAssignment_26213);
+            pushFollow(FollowSets000.FOLLOW_ruleWallRule_in_rule__Model__ElementsAssignment_26163);
             ruleWallRule();
 
             state._fsp--;
@@ -8113,20 +8032,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ElementsAssignment_3_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3170:1: rule__Model__ElementsAssignment_3_1 : ( ruleWallRule ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3148:1: rule__Model__ElementsAssignment_3_1 : ( ruleWallRule ) ;
     public final void rule__Model__ElementsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3174:1: ( ( ruleWallRule ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3175:1: ( ruleWallRule )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3152:1: ( ( ruleWallRule ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3153:1: ( ruleWallRule )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3175:1: ( ruleWallRule )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3176:1: ruleWallRule
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3153:1: ( ruleWallRule )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3154:1: ruleWallRule
             {
              before(grammarAccess.getModelAccess().getElementsWallRuleParserRuleCall_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleWallRule_in_rule__Model__ElementsAssignment_3_16244);
+            pushFollow(FollowSets000.FOLLOW_ruleWallRule_in_rule__Model__ElementsAssignment_3_16194);
             ruleWallRule();
 
             state._fsp--;
@@ -8154,20 +8073,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ElementsAssignment_5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3185:1: rule__Model__ElementsAssignment_5 : ( ruleOpening ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3163:1: rule__Model__ElementsAssignment_5 : ( ruleOpening ) ;
     public final void rule__Model__ElementsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3189:1: ( ( ruleOpening ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3190:1: ( ruleOpening )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3167:1: ( ( ruleOpening ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3168:1: ( ruleOpening )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3190:1: ( ruleOpening )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3191:1: ruleOpening
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3168:1: ( ruleOpening )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3169:1: ruleOpening
             {
              before(grammarAccess.getModelAccess().getElementsOpeningParserRuleCall_5_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleOpening_in_rule__Model__ElementsAssignment_56275);
+            pushFollow(FollowSets000.FOLLOW_ruleOpening_in_rule__Model__ElementsAssignment_56225);
             ruleOpening();
 
             state._fsp--;
@@ -8195,20 +8114,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ElementsAssignment_6_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3200:1: rule__Model__ElementsAssignment_6_1 : ( ruleOpening ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3178:1: rule__Model__ElementsAssignment_6_1 : ( ruleOpening ) ;
     public final void rule__Model__ElementsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3204:1: ( ( ruleOpening ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3205:1: ( ruleOpening )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3182:1: ( ( ruleOpening ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3183:1: ( ruleOpening )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3205:1: ( ruleOpening )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3206:1: ruleOpening
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3183:1: ( ruleOpening )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3184:1: ruleOpening
             {
              before(grammarAccess.getModelAccess().getElementsOpeningParserRuleCall_6_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleOpening_in_rule__Model__ElementsAssignment_6_16306);
+            pushFollow(FollowSets000.FOLLOW_ruleOpening_in_rule__Model__ElementsAssignment_6_16256);
             ruleOpening();
 
             state._fsp--;
@@ -8236,20 +8155,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ElementsAssignment_8"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3215:1: rule__Model__ElementsAssignment_8 : ( ruleFlowSegment ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3193:1: rule__Model__ElementsAssignment_8 : ( ruleFlowSegment ) ;
     public final void rule__Model__ElementsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3219:1: ( ( ruleFlowSegment ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3220:1: ( ruleFlowSegment )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3197:1: ( ( ruleFlowSegment ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3198:1: ( ruleFlowSegment )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3220:1: ( ruleFlowSegment )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3221:1: ruleFlowSegment
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3198:1: ( ruleFlowSegment )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3199:1: ruleFlowSegment
             {
              before(grammarAccess.getModelAccess().getElementsFlowSegmentParserRuleCall_8_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleFlowSegment_in_rule__Model__ElementsAssignment_86337);
+            pushFollow(FollowSets000.FOLLOW_ruleFlowSegment_in_rule__Model__ElementsAssignment_86287);
             ruleFlowSegment();
 
             state._fsp--;
@@ -8277,20 +8196,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ElementsAssignment_9_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3230:1: rule__Model__ElementsAssignment_9_1 : ( ruleFlowSegment ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3208:1: rule__Model__ElementsAssignment_9_1 : ( ruleFlowSegment ) ;
     public final void rule__Model__ElementsAssignment_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3234:1: ( ( ruleFlowSegment ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3235:1: ( ruleFlowSegment )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3212:1: ( ( ruleFlowSegment ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3213:1: ( ruleFlowSegment )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3235:1: ( ruleFlowSegment )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3236:1: ruleFlowSegment
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3213:1: ( ruleFlowSegment )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3214:1: ruleFlowSegment
             {
              before(grammarAccess.getModelAccess().getElementsFlowSegmentParserRuleCall_9_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleFlowSegment_in_rule__Model__ElementsAssignment_9_16368);
+            pushFollow(FollowSets000.FOLLOW_ruleFlowSegment_in_rule__Model__ElementsAssignment_9_16318);
             ruleFlowSegment();
 
             state._fsp--;
@@ -8318,20 +8237,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__NameAssignment_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3245:1: rule__WallRule__NameAssignment_1 : ( ruleEString ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3223:1: rule__WallRule__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__WallRule__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3249:1: ( ( ruleEString ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3250:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3227:1: ( ( ruleEString ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3228:1: ( ruleEString )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3250:1: ( ruleEString )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3251:1: ruleEString
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3228:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3229:1: ruleEString
             {
              before(grammarAccess.getWallRuleAccess().getNameEStringParserRuleCall_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__WallRule__NameAssignment_16399);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__WallRule__NameAssignment_16349);
             ruleEString();
 
             state._fsp--;
@@ -8359,20 +8278,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__ElementNameAssignment_3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3260:1: rule__WallRule__ElementNameAssignment_3 : ( ruleEString ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3238:1: rule__WallRule__ElementNameAssignment_3 : ( ruleEString ) ;
     public final void rule__WallRule__ElementNameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3264:1: ( ( ruleEString ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3265:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3242:1: ( ( ruleEString ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3243:1: ( ruleEString )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3265:1: ( ruleEString )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3266:1: ruleEString
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3243:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3244:1: ruleEString
             {
              before(grammarAccess.getWallRuleAccess().getElementNameEStringParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__WallRule__ElementNameAssignment_36430);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__WallRule__ElementNameAssignment_36380);
             ruleEString();
 
             state._fsp--;
@@ -8400,20 +8319,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__DescriptionAssignment_5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3275:1: rule__WallRule__DescriptionAssignment_5 : ( ruleEString ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3253:1: rule__WallRule__DescriptionAssignment_5 : ( ruleEString ) ;
     public final void rule__WallRule__DescriptionAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3279:1: ( ( ruleEString ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3280:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3257:1: ( ( ruleEString ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3258:1: ( ruleEString )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3280:1: ( ruleEString )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3281:1: ruleEString
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3258:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3259:1: ruleEString
             {
              before(grammarAccess.getWallRuleAccess().getDescriptionEStringParserRuleCall_5_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__WallRule__DescriptionAssignment_56461);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__WallRule__DescriptionAssignment_56411);
             ruleEString();
 
             state._fsp--;
@@ -8441,20 +8360,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__PlacementAssignment_7"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3290:1: rule__WallRule__PlacementAssignment_7 : ( ruleLocalPlacement ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3268:1: rule__WallRule__PlacementAssignment_7 : ( ruleLocalPlacement ) ;
     public final void rule__WallRule__PlacementAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3294:1: ( ( ruleLocalPlacement ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3295:1: ( ruleLocalPlacement )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3272:1: ( ( ruleLocalPlacement ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3273:1: ( ruleLocalPlacement )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3295:1: ( ruleLocalPlacement )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3296:1: ruleLocalPlacement
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3273:1: ( ruleLocalPlacement )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3274:1: ruleLocalPlacement
             {
              before(grammarAccess.getWallRuleAccess().getPlacementLocalPlacementParserRuleCall_7_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleLocalPlacement_in_rule__WallRule__PlacementAssignment_76492);
+            pushFollow(FollowSets000.FOLLOW_ruleLocalPlacement_in_rule__WallRule__PlacementAssignment_76442);
             ruleLocalPlacement();
 
             state._fsp--;
@@ -8482,20 +8401,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__NameAssignment_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3305:1: rule__Opening__NameAssignment_1 : ( ruleEString ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3283:1: rule__Opening__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Opening__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3309:1: ( ( ruleEString ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3310:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3287:1: ( ( ruleEString ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3288:1: ( ruleEString )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3310:1: ( ruleEString )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3311:1: ruleEString
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3288:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3289:1: ruleEString
             {
              before(grammarAccess.getOpeningAccess().getNameEStringParserRuleCall_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Opening__NameAssignment_16523);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Opening__NameAssignment_16473);
             ruleEString();
 
             state._fsp--;
@@ -8523,20 +8442,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__ElementNameAssignment_2_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3320:1: rule__Opening__ElementNameAssignment_2_1 : ( ruleEString ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3298:1: rule__Opening__ElementNameAssignment_2_1 : ( ruleEString ) ;
     public final void rule__Opening__ElementNameAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3324:1: ( ( ruleEString ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3325:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3302:1: ( ( ruleEString ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3303:1: ( ruleEString )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3325:1: ( ruleEString )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3326:1: ruleEString
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3303:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3304:1: ruleEString
             {
              before(grammarAccess.getOpeningAccess().getElementNameEStringParserRuleCall_2_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Opening__ElementNameAssignment_2_16554);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Opening__ElementNameAssignment_2_16504);
             ruleEString();
 
             state._fsp--;
@@ -8564,20 +8483,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__DescriptionAssignment_3_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3335:1: rule__Opening__DescriptionAssignment_3_1 : ( ruleEString ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3313:1: rule__Opening__DescriptionAssignment_3_1 : ( ruleEString ) ;
     public final void rule__Opening__DescriptionAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3339:1: ( ( ruleEString ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3340:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3317:1: ( ( ruleEString ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3318:1: ( ruleEString )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3340:1: ( ruleEString )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3341:1: ruleEString
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3318:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3319:1: ruleEString
             {
              before(grammarAccess.getOpeningAccess().getDescriptionEStringParserRuleCall_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Opening__DescriptionAssignment_3_16585);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Opening__DescriptionAssignment_3_16535);
             ruleEString();
 
             state._fsp--;
@@ -8605,20 +8524,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__PlacementAssignment_5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3350:1: rule__Opening__PlacementAssignment_5 : ( ruleLocalPlacement ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3328:1: rule__Opening__PlacementAssignment_5 : ( ruleLocalPlacement ) ;
     public final void rule__Opening__PlacementAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3354:1: ( ( ruleLocalPlacement ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3355:1: ( ruleLocalPlacement )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3332:1: ( ( ruleLocalPlacement ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3333:1: ( ruleLocalPlacement )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3355:1: ( ruleLocalPlacement )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3356:1: ruleLocalPlacement
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3333:1: ( ruleLocalPlacement )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3334:1: ruleLocalPlacement
             {
              before(grammarAccess.getOpeningAccess().getPlacementLocalPlacementParserRuleCall_5_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleLocalPlacement_in_rule__Opening__PlacementAssignment_56616);
+            pushFollow(FollowSets000.FOLLOW_ruleLocalPlacement_in_rule__Opening__PlacementAssignment_56566);
             ruleLocalPlacement();
 
             state._fsp--;
@@ -8646,25 +8565,25 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__WallsAssignment_7"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3365:1: rule__Opening__WallsAssignment_7 : ( ( RULE_ID ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3343:1: rule__Opening__WallsAssignment_7 : ( ( RULE_STRING ) ) ;
     public final void rule__Opening__WallsAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3369:1: ( ( ( RULE_ID ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3370:1: ( ( RULE_ID ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3347:1: ( ( ( RULE_STRING ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3348:1: ( ( RULE_STRING ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3370:1: ( ( RULE_ID ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3371:1: ( RULE_ID )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3348:1: ( ( RULE_STRING ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3349:1: ( RULE_STRING )
             {
              before(grammarAccess.getOpeningAccess().getWallsWallCrossReference_7_0()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3372:1: ( RULE_ID )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3373:1: RULE_ID
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3350:1: ( RULE_STRING )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3351:1: RULE_STRING
             {
-             before(grammarAccess.getOpeningAccess().getWallsWallIDTerminalRuleCall_7_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Opening__WallsAssignment_76651); 
-             after(grammarAccess.getOpeningAccess().getWallsWallIDTerminalRuleCall_7_0_1()); 
+             before(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_7_0_1()); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Opening__WallsAssignment_76601); 
+             after(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_7_0_1()); 
 
             }
 
@@ -8691,25 +8610,25 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__WallsAssignment_8_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3384:1: rule__Opening__WallsAssignment_8_1 : ( ( RULE_ID ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3362:1: rule__Opening__WallsAssignment_8_1 : ( ( RULE_STRING ) ) ;
     public final void rule__Opening__WallsAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3388:1: ( ( ( RULE_ID ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3389:1: ( ( RULE_ID ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3366:1: ( ( ( RULE_STRING ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3367:1: ( ( RULE_STRING ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3389:1: ( ( RULE_ID ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3390:1: ( RULE_ID )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3367:1: ( ( RULE_STRING ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3368:1: ( RULE_STRING )
             {
              before(grammarAccess.getOpeningAccess().getWallsWallCrossReference_8_1_0()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3391:1: ( RULE_ID )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3392:1: RULE_ID
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3369:1: ( RULE_STRING )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3370:1: RULE_STRING
             {
-             before(grammarAccess.getOpeningAccess().getWallsWallIDTerminalRuleCall_8_1_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Opening__WallsAssignment_8_16690); 
-             after(grammarAccess.getOpeningAccess().getWallsWallIDTerminalRuleCall_8_1_0_1()); 
+             before(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_8_1_0_1()); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Opening__WallsAssignment_8_16640); 
+             after(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_8_1_0_1()); 
 
             }
 
@@ -8736,20 +8655,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__NameAssignment_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3403:1: rule__FlowSegment__NameAssignment_1 : ( ruleEString ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3381:1: rule__FlowSegment__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__FlowSegment__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3407:1: ( ( ruleEString ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3408:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3385:1: ( ( ruleEString ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3386:1: ( ruleEString )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3408:1: ( ruleEString )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3409:1: ruleEString
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3386:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3387:1: ruleEString
             {
              before(grammarAccess.getFlowSegmentAccess().getNameEStringParserRuleCall_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__FlowSegment__NameAssignment_16725);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__FlowSegment__NameAssignment_16675);
             ruleEString();
 
             state._fsp--;
@@ -8777,20 +8696,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__ElementNameAssignment_2_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3418:1: rule__FlowSegment__ElementNameAssignment_2_1 : ( ruleEString ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3396:1: rule__FlowSegment__ElementNameAssignment_2_1 : ( ruleEString ) ;
     public final void rule__FlowSegment__ElementNameAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3422:1: ( ( ruleEString ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3423:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3400:1: ( ( ruleEString ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3401:1: ( ruleEString )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3423:1: ( ruleEString )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3424:1: ruleEString
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3401:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3402:1: ruleEString
             {
              before(grammarAccess.getFlowSegmentAccess().getElementNameEStringParserRuleCall_2_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__FlowSegment__ElementNameAssignment_2_16756);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__FlowSegment__ElementNameAssignment_2_16706);
             ruleEString();
 
             state._fsp--;
@@ -8818,20 +8737,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__DescriptionAssignment_3_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3433:1: rule__FlowSegment__DescriptionAssignment_3_1 : ( ruleEString ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3411:1: rule__FlowSegment__DescriptionAssignment_3_1 : ( ruleEString ) ;
     public final void rule__FlowSegment__DescriptionAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3437:1: ( ( ruleEString ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3438:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3415:1: ( ( ruleEString ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3416:1: ( ruleEString )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3438:1: ( ruleEString )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3439:1: ruleEString
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3416:1: ( ruleEString )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3417:1: ruleEString
             {
              before(grammarAccess.getFlowSegmentAccess().getDescriptionEStringParserRuleCall_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__FlowSegment__DescriptionAssignment_3_16787);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__FlowSegment__DescriptionAssignment_3_16737);
             ruleEString();
 
             state._fsp--;
@@ -8859,20 +8778,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__PlacementAssignment_5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3448:1: rule__FlowSegment__PlacementAssignment_5 : ( ruleLocalPlacement ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3426:1: rule__FlowSegment__PlacementAssignment_5 : ( ruleLocalPlacement ) ;
     public final void rule__FlowSegment__PlacementAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3452:1: ( ( ruleLocalPlacement ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3453:1: ( ruleLocalPlacement )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3430:1: ( ( ruleLocalPlacement ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3431:1: ( ruleLocalPlacement )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3453:1: ( ruleLocalPlacement )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3454:1: ruleLocalPlacement
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3431:1: ( ruleLocalPlacement )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3432:1: ruleLocalPlacement
             {
              before(grammarAccess.getFlowSegmentAccess().getPlacementLocalPlacementParserRuleCall_5_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleLocalPlacement_in_rule__FlowSegment__PlacementAssignment_56818);
+            pushFollow(FollowSets000.FOLLOW_ruleLocalPlacement_in_rule__FlowSegment__PlacementAssignment_56768);
             ruleLocalPlacement();
 
             state._fsp--;
@@ -8900,20 +8819,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__RelativeToAssignment_2_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3463:1: rule__LocalPlacement__RelativeToAssignment_2_1 : ( ruleLocalPlacement ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3441:1: rule__LocalPlacement__RelativeToAssignment_2_1 : ( ruleLocalPlacement ) ;
     public final void rule__LocalPlacement__RelativeToAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3467:1: ( ( ruleLocalPlacement ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3468:1: ( ruleLocalPlacement )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3445:1: ( ( ruleLocalPlacement ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3446:1: ( ruleLocalPlacement )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3468:1: ( ruleLocalPlacement )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3469:1: ruleLocalPlacement
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3446:1: ( ruleLocalPlacement )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3447:1: ruleLocalPlacement
             {
              before(grammarAccess.getLocalPlacementAccess().getRelativeToLocalPlacementParserRuleCall_2_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleLocalPlacement_in_rule__LocalPlacement__RelativeToAssignment_2_16849);
+            pushFollow(FollowSets000.FOLLOW_ruleLocalPlacement_in_rule__LocalPlacement__RelativeToAssignment_2_16799);
             ruleLocalPlacement();
 
             state._fsp--;
@@ -8941,20 +8860,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LocalPlacement__Axis2placement3dAssignment_3_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3478:1: rule__LocalPlacement__Axis2placement3dAssignment_3_1 : ( ruleAxis2Placement3D ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3456:1: rule__LocalPlacement__Axis2placement3dAssignment_3_1 : ( ruleAxis2Placement3D ) ;
     public final void rule__LocalPlacement__Axis2placement3dAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3482:1: ( ( ruleAxis2Placement3D ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3483:1: ( ruleAxis2Placement3D )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3460:1: ( ( ruleAxis2Placement3D ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3461:1: ( ruleAxis2Placement3D )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3483:1: ( ruleAxis2Placement3D )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3484:1: ruleAxis2Placement3D
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3461:1: ( ruleAxis2Placement3D )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3462:1: ruleAxis2Placement3D
             {
              before(grammarAccess.getLocalPlacementAccess().getAxis2placement3dAxis2Placement3DParserRuleCall_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAxis2Placement3D_in_rule__LocalPlacement__Axis2placement3dAssignment_3_16880);
+            pushFollow(FollowSets000.FOLLOW_ruleAxis2Placement3D_in_rule__LocalPlacement__Axis2placement3dAssignment_3_16830);
             ruleAxis2Placement3D();
 
             state._fsp--;
@@ -8982,20 +8901,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__CartesianXAssignment_3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3493:1: rule__Axis2Placement3D__CartesianXAssignment_3 : ( ruleEDouble ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3471:1: rule__Axis2Placement3D__CartesianXAssignment_3 : ( ruleEDouble ) ;
     public final void rule__Axis2Placement3D__CartesianXAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3497:1: ( ( ruleEDouble ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3498:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3475:1: ( ( ruleEDouble ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3476:1: ( ruleEDouble )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3498:1: ( ruleEDouble )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3499:1: ruleEDouble
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3476:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3477:1: ruleEDouble
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCartesianXEDoubleParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianXAssignment_36911);
+            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianXAssignment_36861);
             ruleEDouble();
 
             state._fsp--;
@@ -9023,20 +8942,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__CartesianYAssignment_5"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3508:1: rule__Axis2Placement3D__CartesianYAssignment_5 : ( ruleEDouble ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3486:1: rule__Axis2Placement3D__CartesianYAssignment_5 : ( ruleEDouble ) ;
     public final void rule__Axis2Placement3D__CartesianYAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3512:1: ( ( ruleEDouble ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3513:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3490:1: ( ( ruleEDouble ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3491:1: ( ruleEDouble )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3513:1: ( ruleEDouble )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3514:1: ruleEDouble
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3491:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3492:1: ruleEDouble
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCartesianYEDoubleParserRuleCall_5_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianYAssignment_56942);
+            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianYAssignment_56892);
             ruleEDouble();
 
             state._fsp--;
@@ -9064,20 +8983,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__CartesianZAssignment_7"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3523:1: rule__Axis2Placement3D__CartesianZAssignment_7 : ( ruleEDouble ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3501:1: rule__Axis2Placement3D__CartesianZAssignment_7 : ( ruleEDouble ) ;
     public final void rule__Axis2Placement3D__CartesianZAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3527:1: ( ( ruleEDouble ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3528:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3505:1: ( ( ruleEDouble ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3506:1: ( ruleEDouble )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3528:1: ( ruleEDouble )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3529:1: ruleEDouble
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3506:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3507:1: ruleEDouble
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCartesianZEDoubleParserRuleCall_7_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianZAssignment_76973);
+            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianZAssignment_76923);
             ruleEDouble();
 
             state._fsp--;
@@ -9105,20 +9024,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__AxisAssignment_10"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3538:1: rule__Axis2Placement3D__AxisAssignment_10 : ( ruleDirection ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3516:1: rule__Axis2Placement3D__AxisAssignment_10 : ( ruleDirection ) ;
     public final void rule__Axis2Placement3D__AxisAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3542:1: ( ( ruleDirection ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3543:1: ( ruleDirection )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3520:1: ( ( ruleDirection ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3521:1: ( ruleDirection )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3543:1: ( ruleDirection )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3544:1: ruleDirection
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3521:1: ( ruleDirection )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3522:1: ruleDirection
             {
              before(grammarAccess.getAxis2Placement3DAccess().getAxisDirectionParserRuleCall_10_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleDirection_in_rule__Axis2Placement3D__AxisAssignment_107004);
+            pushFollow(FollowSets000.FOLLOW_ruleDirection_in_rule__Axis2Placement3D__AxisAssignment_106954);
             ruleDirection();
 
             state._fsp--;
@@ -9146,20 +9065,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Axis2Placement3D__RefDirectionAssignment_12"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3553:1: rule__Axis2Placement3D__RefDirectionAssignment_12 : ( ruleDirection ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3531:1: rule__Axis2Placement3D__RefDirectionAssignment_12 : ( ruleDirection ) ;
     public final void rule__Axis2Placement3D__RefDirectionAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3557:1: ( ( ruleDirection ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3558:1: ( ruleDirection )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3535:1: ( ( ruleDirection ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3536:1: ( ruleDirection )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3558:1: ( ruleDirection )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3559:1: ruleDirection
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3536:1: ( ruleDirection )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3537:1: ruleDirection
             {
              before(grammarAccess.getAxis2Placement3DAccess().getRefDirectionDirectionParserRuleCall_12_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleDirection_in_rule__Axis2Placement3D__RefDirectionAssignment_127035);
+            pushFollow(FollowSets000.FOLLOW_ruleDirection_in_rule__Axis2Placement3D__RefDirectionAssignment_126985);
             ruleDirection();
 
             state._fsp--;
@@ -9187,20 +9106,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__XAssignment_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3568:1: rule__Direction__XAssignment_1 : ( ruleEDouble ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3546:1: rule__Direction__XAssignment_1 : ( ruleEDouble ) ;
     public final void rule__Direction__XAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3572:1: ( ( ruleEDouble ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3573:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3550:1: ( ( ruleEDouble ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3551:1: ( ruleEDouble )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3573:1: ( ruleEDouble )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3574:1: ruleEDouble
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3551:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3552:1: ruleEDouble
             {
              before(grammarAccess.getDirectionAccess().getXEDoubleParserRuleCall_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Direction__XAssignment_17066);
+            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Direction__XAssignment_17016);
             ruleEDouble();
 
             state._fsp--;
@@ -9228,20 +9147,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__YAssignment_3"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3583:1: rule__Direction__YAssignment_3 : ( ruleEDouble ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3561:1: rule__Direction__YAssignment_3 : ( ruleEDouble ) ;
     public final void rule__Direction__YAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3587:1: ( ( ruleEDouble ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3588:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3565:1: ( ( ruleEDouble ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3566:1: ( ruleEDouble )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3588:1: ( ruleEDouble )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3589:1: ruleEDouble
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3566:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3567:1: ruleEDouble
             {
              before(grammarAccess.getDirectionAccess().getYEDoubleParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Direction__YAssignment_37097);
+            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Direction__YAssignment_37047);
             ruleEDouble();
 
             state._fsp--;
@@ -9269,20 +9188,20 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Direction__ZAssignment_4_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3598:1: rule__Direction__ZAssignment_4_1 : ( ruleEDouble ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3576:1: rule__Direction__ZAssignment_4_1 : ( ruleEDouble ) ;
     public final void rule__Direction__ZAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3602:1: ( ( ruleEDouble ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3603:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3580:1: ( ( ruleEDouble ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3581:1: ( ruleEDouble )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3603:1: ( ruleEDouble )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3604:1: ruleEDouble
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3581:1: ( ruleEDouble )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3582:1: ruleEDouble
             {
              before(grammarAccess.getDirectionAccess().getZEDoubleParserRuleCall_4_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Direction__ZAssignment_4_17128);
+            pushFollow(FollowSets000.FOLLOW_ruleEDouble_in_rule__Direction__ZAssignment_4_17078);
             ruleEDouble();
 
             state._fsp--;
@@ -9320,304 +9239,302 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Model__Group__0_in_ruleModel94 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_entryRuleEString121 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleEString128 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EString__Alternatives_in_ruleEString154 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleWallRule_in_entryRuleWallRule181 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleWallRule188 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__0_in_ruleWallRule214 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOpening_in_entryRuleOpening241 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleOpening248 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__0_in_ruleOpening274 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFlowSegment_in_entryRuleFlowSegment301 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleFlowSegment308 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__0_in_ruleFlowSegment334 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLocalPlacement_in_entryRuleLocalPlacement361 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleLocalPlacement368 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__0_in_ruleLocalPlacement394 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAxis2Placement3D_in_entryRuleAxis2Placement3D421 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAxis2Placement3D428 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__0_in_ruleAxis2Placement3D454 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEDouble_in_entryRuleEDouble481 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEDouble488 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__0_in_ruleEDouble514 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDirection_in_entryRuleDirection541 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleDirection548 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__0_in_ruleDirection574 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_rule__EString__Alternatives610 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__EString__Alternatives627 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_11_in_rule__EDouble__Alternatives_4_0660 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__EDouble__Alternatives_4_0680 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0712 = new BitSet(new long[]{0x0000000000002000L});
-        public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__0715 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__1773 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__1776 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_13_in_rule__Model__Group__1__Impl804 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__2835 = new BitSet(new long[]{0x0000000000014000L});
-        public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__2838 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_2_in_rule__Model__Group__2__Impl865 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__3895 = new BitSet(new long[]{0x0000000000014000L});
-        public static final BitSet FOLLOW_rule__Model__Group__4_in_rule__Model__Group__3898 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_3__0_in_rule__Model__Group__3__Impl925 = new BitSet(new long[]{0x0000000000010002L});
-        public static final BitSet FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__4956 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_rule__Model__Group__5_in_rule__Model__Group__4959 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Model__Group__4__Impl987 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__51018 = new BitSet(new long[]{0x0000000000018000L});
-        public static final BitSet FOLLOW_rule__Model__Group__6_in_rule__Model__Group__51021 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_5_in_rule__Model__Group__5__Impl1048 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__6__Impl_in_rule__Model__Group__61078 = new BitSet(new long[]{0x0000000000018000L});
-        public static final BitSet FOLLOW_rule__Model__Group__7_in_rule__Model__Group__61081 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_6__0_in_rule__Model__Group__6__Impl1108 = new BitSet(new long[]{0x0000000000010002L});
-        public static final BitSet FOLLOW_rule__Model__Group__7__Impl_in_rule__Model__Group__71139 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_rule__Model__Group__8_in_rule__Model__Group__71142 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rule__Model__Group__7__Impl1170 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__8__Impl_in_rule__Model__Group__81201 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__Model__Group__9_in_rule__Model__Group__81204 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_8_in_rule__Model__Group__8__Impl1231 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__9__Impl_in_rule__Model__Group__91261 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_9__0_in_rule__Model__Group__9__Impl1288 = new BitSet(new long[]{0x0000000000010002L});
-        public static final BitSet FOLLOW_rule__Model__Group_3__0__Impl_in_rule__Model__Group_3__01339 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_rule__Model__Group_3__1_in_rule__Model__Group_3__01342 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__Model__Group_3__0__Impl1370 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_3__1__Impl_in_rule__Model__Group_3__11401 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_3_1_in_rule__Model__Group_3__1__Impl1428 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_6__0__Impl_in_rule__Model__Group_6__01462 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_rule__Model__Group_6__1_in_rule__Model__Group_6__01465 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__Model__Group_6__0__Impl1493 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_6__1__Impl_in_rule__Model__Group_6__11524 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_6_1_in_rule__Model__Group_6__1__Impl1551 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_9__0__Impl_in_rule__Model__Group_9__01585 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_rule__Model__Group_9__1_in_rule__Model__Group_9__01588 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__Model__Group_9__0__Impl1616 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_9__1__Impl_in_rule__Model__Group_9__11647 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_9_1_in_rule__Model__Group_9__1__Impl1674 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__0__Impl_in_rule__WallRule__Group__01708 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__1_in_rule__WallRule__Group__01711 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_rule__WallRule__Group__0__Impl1739 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__1__Impl_in_rule__WallRule__Group__11770 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__2_in_rule__WallRule__Group__11773 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__NameAssignment_1_in_rule__WallRule__Group__1__Impl1800 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__2__Impl_in_rule__WallRule__Group__21830 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__3_in_rule__WallRule__Group__21833 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__WallRule__Group__2__Impl1861 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__3__Impl_in_rule__WallRule__Group__31892 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__4_in_rule__WallRule__Group__31895 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__ElementNameAssignment_3_in_rule__WallRule__Group__3__Impl1922 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__4__Impl_in_rule__WallRule__Group__41952 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__5_in_rule__WallRule__Group__41955 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__WallRule__Group__4__Impl1983 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__5__Impl_in_rule__WallRule__Group__52014 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__6_in_rule__WallRule__Group__52017 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__DescriptionAssignment_5_in_rule__WallRule__Group__5__Impl2044 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__6__Impl_in_rule__WallRule__Group__62074 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__7_in_rule__WallRule__Group__62077 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__WallRule__Group__6__Impl2105 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__7__Impl_in_rule__WallRule__Group__72136 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__PlacementAssignment_7_in_rule__WallRule__Group__7__Impl2163 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__0__Impl_in_rule__Opening__Group__02209 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__Opening__Group__1_in_rule__Opening__Group__02212 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_rule__Opening__Group__0__Impl2240 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__1__Impl_in_rule__Opening__Group__12271 = new BitSet(new long[]{0x00000000001C0000L});
-        public static final BitSet FOLLOW_rule__Opening__Group__2_in_rule__Opening__Group__12274 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__NameAssignment_1_in_rule__Opening__Group__1__Impl2301 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__2__Impl_in_rule__Opening__Group__22331 = new BitSet(new long[]{0x00000000001C0000L});
-        public static final BitSet FOLLOW_rule__Opening__Group__3_in_rule__Opening__Group__22334 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_2__0_in_rule__Opening__Group__2__Impl2361 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__3__Impl_in_rule__Opening__Group__32392 = new BitSet(new long[]{0x00000000001C0000L});
-        public static final BitSet FOLLOW_rule__Opening__Group__4_in_rule__Opening__Group__32395 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_3__0_in_rule__Opening__Group__3__Impl2422 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__4__Impl_in_rule__Opening__Group__42453 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__Opening__Group__5_in_rule__Opening__Group__42456 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__Opening__Group__4__Impl2484 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__5__Impl_in_rule__Opening__Group__52515 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_rule__Opening__Group__6_in_rule__Opening__Group__52518 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__PlacementAssignment_5_in_rule__Opening__Group__5__Impl2545 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__6__Impl_in_rule__Opening__Group__62575 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_rule__Opening__Group__7_in_rule__Opening__Group__62578 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_rule__Opening__Group__6__Impl2606 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__7__Impl_in_rule__Opening__Group__72637 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_rule__Opening__Group__8_in_rule__Opening__Group__72640 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__WallsAssignment_7_in_rule__Opening__Group__7__Impl2667 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__8__Impl_in_rule__Opening__Group__82697 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_8__0_in_rule__Opening__Group__8__Impl2724 = new BitSet(new long[]{0x0000000000800002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_2__0__Impl_in_rule__Opening__Group_2__02773 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__Opening__Group_2__1_in_rule__Opening__Group_2__02776 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__Opening__Group_2__0__Impl2804 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_2__1__Impl_in_rule__Opening__Group_2__12835 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__ElementNameAssignment_2_1_in_rule__Opening__Group_2__1__Impl2862 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_3__0__Impl_in_rule__Opening__Group_3__02896 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__Opening__Group_3__1_in_rule__Opening__Group_3__02899 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Opening__Group_3__0__Impl2927 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_3__1__Impl_in_rule__Opening__Group_3__12958 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__DescriptionAssignment_3_1_in_rule__Opening__Group_3__1__Impl2985 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_8__0__Impl_in_rule__Opening__Group_8__03019 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_rule__Opening__Group_8__1_in_rule__Opening__Group_8__03022 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Opening__Group_8__0__Impl3050 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_8__1__Impl_in_rule__Opening__Group_8__13081 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__WallsAssignment_8_1_in_rule__Opening__Group_8__1__Impl3108 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__0__Impl_in_rule__FlowSegment__Group__03142 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__1_in_rule__FlowSegment__Group__03145 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_24_in_rule__FlowSegment__Group__0__Impl3173 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__1__Impl_in_rule__FlowSegment__Group__13204 = new BitSet(new long[]{0x00000000001C0000L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__2_in_rule__FlowSegment__Group__13207 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__NameAssignment_1_in_rule__FlowSegment__Group__1__Impl3234 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__2__Impl_in_rule__FlowSegment__Group__23264 = new BitSet(new long[]{0x00000000001C0000L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__3_in_rule__FlowSegment__Group__23267 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group_2__0_in_rule__FlowSegment__Group__2__Impl3294 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__3__Impl_in_rule__FlowSegment__Group__33325 = new BitSet(new long[]{0x00000000001C0000L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__4_in_rule__FlowSegment__Group__33328 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group_3__0_in_rule__FlowSegment__Group__3__Impl3355 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__4__Impl_in_rule__FlowSegment__Group__43386 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__5_in_rule__FlowSegment__Group__43389 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__FlowSegment__Group__4__Impl3417 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__5__Impl_in_rule__FlowSegment__Group__53448 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__PlacementAssignment_5_in_rule__FlowSegment__Group__5__Impl3475 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group_2__0__Impl_in_rule__FlowSegment__Group_2__03517 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group_2__1_in_rule__FlowSegment__Group_2__03520 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__FlowSegment__Group_2__0__Impl3548 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group_2__1__Impl_in_rule__FlowSegment__Group_2__13579 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__ElementNameAssignment_2_1_in_rule__FlowSegment__Group_2__1__Impl3606 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group_3__0__Impl_in_rule__FlowSegment__Group_3__03640 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group_3__1_in_rule__FlowSegment__Group_3__03643 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__FlowSegment__Group_3__0__Impl3671 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group_3__1__Impl_in_rule__FlowSegment__Group_3__13702 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__DescriptionAssignment_3_1_in_rule__FlowSegment__Group_3__1__Impl3729 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__0__Impl_in_rule__LocalPlacement__Group__03763 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__1_in_rule__LocalPlacement__Group__03766 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__1__Impl_in_rule__LocalPlacement__Group__13824 = new BitSet(new long[]{0x000000001C000000L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__2_in_rule__LocalPlacement__Group__13827 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__LocalPlacement__Group__1__Impl3855 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__2__Impl_in_rule__LocalPlacement__Group__23886 = new BitSet(new long[]{0x000000001C000000L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__3_in_rule__LocalPlacement__Group__23889 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__0_in_rule__LocalPlacement__Group__2__Impl3916 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__3__Impl_in_rule__LocalPlacement__Group__33947 = new BitSet(new long[]{0x000000001C000000L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__4_in_rule__LocalPlacement__Group__33950 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group_3__0_in_rule__LocalPlacement__Group__3__Impl3977 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__4__Impl_in_rule__LocalPlacement__Group__44008 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_rule__LocalPlacement__Group__4__Impl4036 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__0__Impl_in_rule__LocalPlacement__Group_2__04077 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__1_in_rule__LocalPlacement__Group_2__04080 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_27_in_rule__LocalPlacement__Group_2__0__Impl4108 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__1__Impl_in_rule__LocalPlacement__Group_2__14139 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__RelativeToAssignment_2_1_in_rule__LocalPlacement__Group_2__1__Impl4166 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group_3__0__Impl_in_rule__LocalPlacement__Group_3__04200 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group_3__1_in_rule__LocalPlacement__Group_3__04203 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_28_in_rule__LocalPlacement__Group_3__0__Impl4231 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group_3__1__Impl_in_rule__LocalPlacement__Group_3__14262 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Axis2placement3dAssignment_3_1_in_rule__LocalPlacement__Group_3__1__Impl4289 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__0__Impl_in_rule__Axis2Placement3D__Group__04323 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__1_in_rule__Axis2Placement3D__Group__04326 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__Axis2Placement3D__Group__0__Impl4354 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__1__Impl_in_rule__Axis2Placement3D__Group__14385 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__2_in_rule__Axis2Placement3D__Group__14388 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_29_in_rule__Axis2Placement3D__Group__1__Impl4416 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__2__Impl_in_rule__Axis2Placement3D__Group__24447 = new BitSet(new long[]{0x0000000C00000040L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__3_in_rule__Axis2Placement3D__Group__24450 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_rule__Axis2Placement3D__Group__2__Impl4478 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__3__Impl_in_rule__Axis2Placement3D__Group__34509 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__4_in_rule__Axis2Placement3D__Group__34512 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__CartesianXAssignment_3_in_rule__Axis2Placement3D__Group__3__Impl4539 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__4__Impl_in_rule__Axis2Placement3D__Group__44569 = new BitSet(new long[]{0x0000000C00000040L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__5_in_rule__Axis2Placement3D__Group__44572 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Axis2Placement3D__Group__4__Impl4600 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__5__Impl_in_rule__Axis2Placement3D__Group__54631 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__6_in_rule__Axis2Placement3D__Group__54634 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__CartesianYAssignment_5_in_rule__Axis2Placement3D__Group__5__Impl4661 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__6__Impl_in_rule__Axis2Placement3D__Group__64691 = new BitSet(new long[]{0x0000000C00000040L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__7_in_rule__Axis2Placement3D__Group__64694 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Axis2Placement3D__Group__6__Impl4722 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__7__Impl_in_rule__Axis2Placement3D__Group__74753 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__8_in_rule__Axis2Placement3D__Group__74756 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__CartesianZAssignment_7_in_rule__Axis2Placement3D__Group__7__Impl4783 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__8__Impl_in_rule__Axis2Placement3D__Group__84813 = new BitSet(new long[]{0x0000000100000000L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__9_in_rule__Axis2Placement3D__Group__84816 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_31_in_rule__Axis2Placement3D__Group__8__Impl4844 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__9__Impl_in_rule__Axis2Placement3D__Group__94875 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__10_in_rule__Axis2Placement3D__Group__94878 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_32_in_rule__Axis2Placement3D__Group__9__Impl4906 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__10__Impl_in_rule__Axis2Placement3D__Group__104937 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__11_in_rule__Axis2Placement3D__Group__104940 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__AxisAssignment_10_in_rule__Axis2Placement3D__Group__10__Impl4967 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__11__Impl_in_rule__Axis2Placement3D__Group__114997 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__12_in_rule__Axis2Placement3D__Group__115000 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_33_in_rule__Axis2Placement3D__Group__11__Impl5028 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__12__Impl_in_rule__Axis2Placement3D__Group__125059 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__13_in_rule__Axis2Placement3D__Group__125062 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__RefDirectionAssignment_12_in_rule__Axis2Placement3D__Group__12__Impl5089 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__13__Impl_in_rule__Axis2Placement3D__Group__135119 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_rule__Axis2Placement3D__Group__13__Impl5147 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__0__Impl_in_rule__EDouble__Group__05206 = new BitSet(new long[]{0x0000000C00000040L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__1_in_rule__EDouble__Group__05209 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_34_in_rule__EDouble__Group__0__Impl5238 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__1__Impl_in_rule__EDouble__Group__15271 = new BitSet(new long[]{0x0000000C00000040L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__2_in_rule__EDouble__Group__15274 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group__1__Impl5302 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__2__Impl_in_rule__EDouble__Group__25333 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__3_in_rule__EDouble__Group__25336 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_35_in_rule__EDouble__Group__2__Impl5364 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__3__Impl_in_rule__EDouble__Group__35395 = new BitSet(new long[]{0x0000000000001800L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__4_in_rule__EDouble__Group__35398 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group__3__Impl5425 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__4__Impl_in_rule__EDouble__Group__45454 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group_4__0_in_rule__EDouble__Group__4__Impl5481 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group_4__0__Impl_in_rule__EDouble__Group_4__05522 = new BitSet(new long[]{0x0000000400000040L});
-        public static final BitSet FOLLOW_rule__EDouble__Group_4__1_in_rule__EDouble__Group_4__05525 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Alternatives_4_0_in_rule__EDouble__Group_4__0__Impl5552 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group_4__1__Impl_in_rule__EDouble__Group_4__15582 = new BitSet(new long[]{0x0000000400000040L});
-        public static final BitSet FOLLOW_rule__EDouble__Group_4__2_in_rule__EDouble__Group_4__15585 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_34_in_rule__EDouble__Group_4__1__Impl5614 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group_4__2__Impl_in_rule__EDouble__Group_4__25647 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group_4__2__Impl5674 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__0__Impl_in_rule__Direction__Group__05709 = new BitSet(new long[]{0x0000000C00000040L});
-        public static final BitSet FOLLOW_rule__Direction__Group__1_in_rule__Direction__Group__05712 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_rule__Direction__Group__0__Impl5740 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__1__Impl_in_rule__Direction__Group__15771 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_rule__Direction__Group__2_in_rule__Direction__Group__15774 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__XAssignment_1_in_rule__Direction__Group__1__Impl5801 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__2__Impl_in_rule__Direction__Group__25831 = new BitSet(new long[]{0x0000000C00000040L});
-        public static final BitSet FOLLOW_rule__Direction__Group__3_in_rule__Direction__Group__25834 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Direction__Group__2__Impl5862 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__3__Impl_in_rule__Direction__Group__35893 = new BitSet(new long[]{0x0000000080800000L});
-        public static final BitSet FOLLOW_rule__Direction__Group__4_in_rule__Direction__Group__35896 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__YAssignment_3_in_rule__Direction__Group__3__Impl5923 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__4__Impl_in_rule__Direction__Group__45953 = new BitSet(new long[]{0x0000000080800000L});
-        public static final BitSet FOLLOW_rule__Direction__Group__5_in_rule__Direction__Group__45956 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group_4__0_in_rule__Direction__Group__4__Impl5983 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__5__Impl_in_rule__Direction__Group__56014 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_31_in_rule__Direction__Group__5__Impl6042 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group_4__0__Impl_in_rule__Direction__Group_4__06085 = new BitSet(new long[]{0x0000000C00000040L});
-        public static final BitSet FOLLOW_rule__Direction__Group_4__1_in_rule__Direction__Group_4__06088 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Direction__Group_4__0__Impl6116 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group_4__1__Impl_in_rule__Direction__Group_4__16147 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__ZAssignment_4_1_in_rule__Direction__Group_4__1__Impl6174 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleWallRule_in_rule__Model__ElementsAssignment_26213 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleWallRule_in_rule__Model__ElementsAssignment_3_16244 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOpening_in_rule__Model__ElementsAssignment_56275 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOpening_in_rule__Model__ElementsAssignment_6_16306 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFlowSegment_in_rule__Model__ElementsAssignment_86337 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFlowSegment_in_rule__Model__ElementsAssignment_9_16368 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__WallRule__NameAssignment_16399 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__WallRule__ElementNameAssignment_36430 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__WallRule__DescriptionAssignment_56461 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__WallRule__PlacementAssignment_76492 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__Opening__NameAssignment_16523 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__Opening__ElementNameAssignment_2_16554 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__Opening__DescriptionAssignment_3_16585 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__Opening__PlacementAssignment_56616 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Opening__WallsAssignment_76651 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Opening__WallsAssignment_8_16690 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__FlowSegment__NameAssignment_16725 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__FlowSegment__ElementNameAssignment_2_16756 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__FlowSegment__DescriptionAssignment_3_16787 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__FlowSegment__PlacementAssignment_56818 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__LocalPlacement__RelativeToAssignment_2_16849 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAxis2Placement3D_in_rule__LocalPlacement__Axis2placement3dAssignment_3_16880 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianXAssignment_36911 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianYAssignment_56942 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianZAssignment_76973 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDirection_in_rule__Axis2Placement3D__AxisAssignment_107004 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDirection_in_rule__Axis2Placement3D__RefDirectionAssignment_127035 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEDouble_in_rule__Direction__XAssignment_17066 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEDouble_in_rule__Direction__YAssignment_37097 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEDouble_in_rule__Direction__ZAssignment_4_17128 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleEString154 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleWallRule_in_entryRuleWallRule180 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleWallRule187 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__0_in_ruleWallRule213 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOpening_in_entryRuleOpening240 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleOpening247 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__0_in_ruleOpening273 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFlowSegment_in_entryRuleFlowSegment300 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleFlowSegment307 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__0_in_ruleFlowSegment333 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLocalPlacement_in_entryRuleLocalPlacement360 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleLocalPlacement367 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__0_in_ruleLocalPlacement393 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAxis2Placement3D_in_entryRuleAxis2Placement3D420 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleAxis2Placement3D427 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__0_in_ruleAxis2Placement3D453 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEDouble_in_entryRuleEDouble480 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEDouble487 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__0_in_ruleEDouble513 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDirection_in_entryRuleDirection540 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleDirection547 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group__0_in_ruleDirection573 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_11_in_rule__EDouble__Alternatives_4_0610 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__EDouble__Alternatives_4_0630 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0662 = new BitSet(new long[]{0x0000000000002000L});
+        public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__0665 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__1723 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__1726 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_13_in_rule__Model__Group__1__Impl754 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__2785 = new BitSet(new long[]{0x0000000000014000L});
+        public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__2788 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_2_in_rule__Model__Group__2__Impl815 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__3845 = new BitSet(new long[]{0x0000000000014000L});
+        public static final BitSet FOLLOW_rule__Model__Group__4_in_rule__Model__Group__3848 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group_3__0_in_rule__Model__Group__3__Impl875 = new BitSet(new long[]{0x0000000000010002L});
+        public static final BitSet FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__4906 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_rule__Model__Group__5_in_rule__Model__Group__4909 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__Model__Group__4__Impl937 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__5968 = new BitSet(new long[]{0x0000000000018000L});
+        public static final BitSet FOLLOW_rule__Model__Group__6_in_rule__Model__Group__5971 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_5_in_rule__Model__Group__5__Impl998 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__6__Impl_in_rule__Model__Group__61028 = new BitSet(new long[]{0x0000000000018000L});
+        public static final BitSet FOLLOW_rule__Model__Group__7_in_rule__Model__Group__61031 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group_6__0_in_rule__Model__Group__6__Impl1058 = new BitSet(new long[]{0x0000000000010002L});
+        public static final BitSet FOLLOW_rule__Model__Group__7__Impl_in_rule__Model__Group__71089 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_rule__Model__Group__8_in_rule__Model__Group__71092 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_15_in_rule__Model__Group__7__Impl1120 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__8__Impl_in_rule__Model__Group__81151 = new BitSet(new long[]{0x0000000000010000L});
+        public static final BitSet FOLLOW_rule__Model__Group__9_in_rule__Model__Group__81154 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_8_in_rule__Model__Group__8__Impl1181 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__9__Impl_in_rule__Model__Group__91211 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group_9__0_in_rule__Model__Group__9__Impl1238 = new BitSet(new long[]{0x0000000000010002L});
+        public static final BitSet FOLLOW_rule__Model__Group_3__0__Impl_in_rule__Model__Group_3__01289 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_rule__Model__Group_3__1_in_rule__Model__Group_3__01292 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_rule__Model__Group_3__0__Impl1320 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group_3__1__Impl_in_rule__Model__Group_3__11351 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_3_1_in_rule__Model__Group_3__1__Impl1378 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group_6__0__Impl_in_rule__Model__Group_6__01412 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_rule__Model__Group_6__1_in_rule__Model__Group_6__01415 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_rule__Model__Group_6__0__Impl1443 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group_6__1__Impl_in_rule__Model__Group_6__11474 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_6_1_in_rule__Model__Group_6__1__Impl1501 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group_9__0__Impl_in_rule__Model__Group_9__01535 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_rule__Model__Group_9__1_in_rule__Model__Group_9__01538 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_rule__Model__Group_9__0__Impl1566 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group_9__1__Impl_in_rule__Model__Group_9__11597 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__ElementsAssignment_9_1_in_rule__Model__Group_9__1__Impl1624 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__0__Impl_in_rule__WallRule__Group__01658 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__1_in_rule__WallRule__Group__01661 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_17_in_rule__WallRule__Group__0__Impl1689 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__1__Impl_in_rule__WallRule__Group__11720 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__2_in_rule__WallRule__Group__11723 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__NameAssignment_1_in_rule__WallRule__Group__1__Impl1750 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__2__Impl_in_rule__WallRule__Group__21780 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__3_in_rule__WallRule__Group__21783 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_rule__WallRule__Group__2__Impl1811 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__3__Impl_in_rule__WallRule__Group__31842 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__4_in_rule__WallRule__Group__31845 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__ElementNameAssignment_3_in_rule__WallRule__Group__3__Impl1872 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__4__Impl_in_rule__WallRule__Group__41902 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__5_in_rule__WallRule__Group__41905 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__WallRule__Group__4__Impl1933 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__5__Impl_in_rule__WallRule__Group__51964 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__6_in_rule__WallRule__Group__51967 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__DescriptionAssignment_5_in_rule__WallRule__Group__5__Impl1994 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__6__Impl_in_rule__WallRule__Group__62024 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__7_in_rule__WallRule__Group__62027 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_rule__WallRule__Group__6__Impl2055 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__7__Impl_in_rule__WallRule__Group__72086 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__PlacementAssignment_7_in_rule__WallRule__Group__7__Impl2113 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__0__Impl_in_rule__Opening__Group__02159 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Opening__Group__1_in_rule__Opening__Group__02162 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_21_in_rule__Opening__Group__0__Impl2190 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__1__Impl_in_rule__Opening__Group__12221 = new BitSet(new long[]{0x00000000001C0000L});
+        public static final BitSet FOLLOW_rule__Opening__Group__2_in_rule__Opening__Group__12224 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__NameAssignment_1_in_rule__Opening__Group__1__Impl2251 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__2__Impl_in_rule__Opening__Group__22281 = new BitSet(new long[]{0x00000000001C0000L});
+        public static final BitSet FOLLOW_rule__Opening__Group__3_in_rule__Opening__Group__22284 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_2__0_in_rule__Opening__Group__2__Impl2311 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__3__Impl_in_rule__Opening__Group__32342 = new BitSet(new long[]{0x00000000001C0000L});
+        public static final BitSet FOLLOW_rule__Opening__Group__4_in_rule__Opening__Group__32345 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_3__0_in_rule__Opening__Group__3__Impl2372 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__4__Impl_in_rule__Opening__Group__42403 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__Opening__Group__5_in_rule__Opening__Group__42406 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_rule__Opening__Group__4__Impl2434 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__5__Impl_in_rule__Opening__Group__52465 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_rule__Opening__Group__6_in_rule__Opening__Group__52468 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__PlacementAssignment_5_in_rule__Opening__Group__5__Impl2495 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__6__Impl_in_rule__Opening__Group__62525 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Opening__Group__7_in_rule__Opening__Group__62528 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_22_in_rule__Opening__Group__6__Impl2556 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__7__Impl_in_rule__Opening__Group__72587 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_rule__Opening__Group__8_in_rule__Opening__Group__72590 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__WallsAssignment_7_in_rule__Opening__Group__7__Impl2617 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__8__Impl_in_rule__Opening__Group__82647 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_8__0_in_rule__Opening__Group__8__Impl2674 = new BitSet(new long[]{0x0000000000800002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_2__0__Impl_in_rule__Opening__Group_2__02723 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Opening__Group_2__1_in_rule__Opening__Group_2__02726 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_rule__Opening__Group_2__0__Impl2754 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_2__1__Impl_in_rule__Opening__Group_2__12785 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__ElementNameAssignment_2_1_in_rule__Opening__Group_2__1__Impl2812 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_3__0__Impl_in_rule__Opening__Group_3__02846 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Opening__Group_3__1_in_rule__Opening__Group_3__02849 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__Opening__Group_3__0__Impl2877 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_3__1__Impl_in_rule__Opening__Group_3__12908 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__DescriptionAssignment_3_1_in_rule__Opening__Group_3__1__Impl2935 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_8__0__Impl_in_rule__Opening__Group_8__02969 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Opening__Group_8__1_in_rule__Opening__Group_8__02972 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_rule__Opening__Group_8__0__Impl3000 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_8__1__Impl_in_rule__Opening__Group_8__13031 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__WallsAssignment_8_1_in_rule__Opening__Group_8__1__Impl3058 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__0__Impl_in_rule__FlowSegment__Group__03092 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__1_in_rule__FlowSegment__Group__03095 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_24_in_rule__FlowSegment__Group__0__Impl3123 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__1__Impl_in_rule__FlowSegment__Group__13154 = new BitSet(new long[]{0x00000000001C0000L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__2_in_rule__FlowSegment__Group__13157 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__NameAssignment_1_in_rule__FlowSegment__Group__1__Impl3184 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__2__Impl_in_rule__FlowSegment__Group__23214 = new BitSet(new long[]{0x00000000001C0000L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__3_in_rule__FlowSegment__Group__23217 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group_2__0_in_rule__FlowSegment__Group__2__Impl3244 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__3__Impl_in_rule__FlowSegment__Group__33275 = new BitSet(new long[]{0x00000000001C0000L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__4_in_rule__FlowSegment__Group__33278 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group_3__0_in_rule__FlowSegment__Group__3__Impl3305 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__4__Impl_in_rule__FlowSegment__Group__43336 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__5_in_rule__FlowSegment__Group__43339 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_rule__FlowSegment__Group__4__Impl3367 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__5__Impl_in_rule__FlowSegment__Group__53398 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__PlacementAssignment_5_in_rule__FlowSegment__Group__5__Impl3425 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group_2__0__Impl_in_rule__FlowSegment__Group_2__03467 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group_2__1_in_rule__FlowSegment__Group_2__03470 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_rule__FlowSegment__Group_2__0__Impl3498 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group_2__1__Impl_in_rule__FlowSegment__Group_2__13529 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__ElementNameAssignment_2_1_in_rule__FlowSegment__Group_2__1__Impl3556 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group_3__0__Impl_in_rule__FlowSegment__Group_3__03590 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group_3__1_in_rule__FlowSegment__Group_3__03593 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__FlowSegment__Group_3__0__Impl3621 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group_3__1__Impl_in_rule__FlowSegment__Group_3__13652 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__DescriptionAssignment_3_1_in_rule__FlowSegment__Group_3__1__Impl3679 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__0__Impl_in_rule__LocalPlacement__Group__03713 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__1_in_rule__LocalPlacement__Group__03716 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__1__Impl_in_rule__LocalPlacement__Group__13774 = new BitSet(new long[]{0x000000001C000000L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__2_in_rule__LocalPlacement__Group__13777 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__LocalPlacement__Group__1__Impl3805 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__2__Impl_in_rule__LocalPlacement__Group__23836 = new BitSet(new long[]{0x000000001C000000L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__3_in_rule__LocalPlacement__Group__23839 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__0_in_rule__LocalPlacement__Group__2__Impl3866 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__3__Impl_in_rule__LocalPlacement__Group__33897 = new BitSet(new long[]{0x000000001C000000L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__4_in_rule__LocalPlacement__Group__33900 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group_3__0_in_rule__LocalPlacement__Group__3__Impl3927 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__4__Impl_in_rule__LocalPlacement__Group__43958 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_26_in_rule__LocalPlacement__Group__4__Impl3986 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__0__Impl_in_rule__LocalPlacement__Group_2__04027 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__1_in_rule__LocalPlacement__Group_2__04030 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_27_in_rule__LocalPlacement__Group_2__0__Impl4058 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__1__Impl_in_rule__LocalPlacement__Group_2__14089 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__RelativeToAssignment_2_1_in_rule__LocalPlacement__Group_2__1__Impl4116 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group_3__0__Impl_in_rule__LocalPlacement__Group_3__04150 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group_3__1_in_rule__LocalPlacement__Group_3__04153 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_28_in_rule__LocalPlacement__Group_3__0__Impl4181 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group_3__1__Impl_in_rule__LocalPlacement__Group_3__14212 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Axis2placement3dAssignment_3_1_in_rule__LocalPlacement__Group_3__1__Impl4239 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__0__Impl_in_rule__Axis2Placement3D__Group__04273 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__1_in_rule__Axis2Placement3D__Group__04276 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__Axis2Placement3D__Group__0__Impl4304 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__1__Impl_in_rule__Axis2Placement3D__Group__14335 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__2_in_rule__Axis2Placement3D__Group__14338 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_29_in_rule__Axis2Placement3D__Group__1__Impl4366 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__2__Impl_in_rule__Axis2Placement3D__Group__24397 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__3_in_rule__Axis2Placement3D__Group__24400 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_30_in_rule__Axis2Placement3D__Group__2__Impl4428 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__3__Impl_in_rule__Axis2Placement3D__Group__34459 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__4_in_rule__Axis2Placement3D__Group__34462 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__CartesianXAssignment_3_in_rule__Axis2Placement3D__Group__3__Impl4489 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__4__Impl_in_rule__Axis2Placement3D__Group__44519 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__5_in_rule__Axis2Placement3D__Group__44522 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_rule__Axis2Placement3D__Group__4__Impl4550 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__5__Impl_in_rule__Axis2Placement3D__Group__54581 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__6_in_rule__Axis2Placement3D__Group__54584 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__CartesianYAssignment_5_in_rule__Axis2Placement3D__Group__5__Impl4611 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__6__Impl_in_rule__Axis2Placement3D__Group__64641 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__7_in_rule__Axis2Placement3D__Group__64644 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_rule__Axis2Placement3D__Group__6__Impl4672 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__7__Impl_in_rule__Axis2Placement3D__Group__74703 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__8_in_rule__Axis2Placement3D__Group__74706 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__CartesianZAssignment_7_in_rule__Axis2Placement3D__Group__7__Impl4733 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__8__Impl_in_rule__Axis2Placement3D__Group__84763 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__9_in_rule__Axis2Placement3D__Group__84766 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_31_in_rule__Axis2Placement3D__Group__8__Impl4794 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__9__Impl_in_rule__Axis2Placement3D__Group__94825 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__10_in_rule__Axis2Placement3D__Group__94828 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_32_in_rule__Axis2Placement3D__Group__9__Impl4856 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__10__Impl_in_rule__Axis2Placement3D__Group__104887 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__11_in_rule__Axis2Placement3D__Group__104890 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__AxisAssignment_10_in_rule__Axis2Placement3D__Group__10__Impl4917 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__11__Impl_in_rule__Axis2Placement3D__Group__114947 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__12_in_rule__Axis2Placement3D__Group__114950 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_33_in_rule__Axis2Placement3D__Group__11__Impl4978 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__12__Impl_in_rule__Axis2Placement3D__Group__125009 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__13_in_rule__Axis2Placement3D__Group__125012 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__RefDirectionAssignment_12_in_rule__Axis2Placement3D__Group__12__Impl5039 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__13__Impl_in_rule__Axis2Placement3D__Group__135069 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_26_in_rule__Axis2Placement3D__Group__13__Impl5097 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__0__Impl_in_rule__EDouble__Group__05156 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__1_in_rule__EDouble__Group__05159 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_34_in_rule__EDouble__Group__0__Impl5188 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__1__Impl_in_rule__EDouble__Group__15221 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__2_in_rule__EDouble__Group__15224 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group__1__Impl5252 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__2__Impl_in_rule__EDouble__Group__25283 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__3_in_rule__EDouble__Group__25286 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_35_in_rule__EDouble__Group__2__Impl5314 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__3__Impl_in_rule__EDouble__Group__35345 = new BitSet(new long[]{0x0000000000001800L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__4_in_rule__EDouble__Group__35348 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group__3__Impl5375 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__4__Impl_in_rule__EDouble__Group__45404 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group_4__0_in_rule__EDouble__Group__4__Impl5431 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group_4__0__Impl_in_rule__EDouble__Group_4__05472 = new BitSet(new long[]{0x0000000400000020L});
+        public static final BitSet FOLLOW_rule__EDouble__Group_4__1_in_rule__EDouble__Group_4__05475 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Alternatives_4_0_in_rule__EDouble__Group_4__0__Impl5502 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group_4__1__Impl_in_rule__EDouble__Group_4__15532 = new BitSet(new long[]{0x0000000400000020L});
+        public static final BitSet FOLLOW_rule__EDouble__Group_4__2_in_rule__EDouble__Group_4__15535 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_34_in_rule__EDouble__Group_4__1__Impl5564 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group_4__2__Impl_in_rule__EDouble__Group_4__25597 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group_4__2__Impl5624 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group__0__Impl_in_rule__Direction__Group__05659 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__Direction__Group__1_in_rule__Direction__Group__05662 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_30_in_rule__Direction__Group__0__Impl5690 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group__1__Impl_in_rule__Direction__Group__15721 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_rule__Direction__Group__2_in_rule__Direction__Group__15724 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__XAssignment_1_in_rule__Direction__Group__1__Impl5751 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group__2__Impl_in_rule__Direction__Group__25781 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__Direction__Group__3_in_rule__Direction__Group__25784 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_rule__Direction__Group__2__Impl5812 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group__3__Impl_in_rule__Direction__Group__35843 = new BitSet(new long[]{0x0000000080800000L});
+        public static final BitSet FOLLOW_rule__Direction__Group__4_in_rule__Direction__Group__35846 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__YAssignment_3_in_rule__Direction__Group__3__Impl5873 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group__4__Impl_in_rule__Direction__Group__45903 = new BitSet(new long[]{0x0000000080800000L});
+        public static final BitSet FOLLOW_rule__Direction__Group__5_in_rule__Direction__Group__45906 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group_4__0_in_rule__Direction__Group__4__Impl5933 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group__5__Impl_in_rule__Direction__Group__55964 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_31_in_rule__Direction__Group__5__Impl5992 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group_4__0__Impl_in_rule__Direction__Group_4__06035 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__Direction__Group_4__1_in_rule__Direction__Group_4__06038 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_rule__Direction__Group_4__0__Impl6066 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group_4__1__Impl_in_rule__Direction__Group_4__16097 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__ZAssignment_4_1_in_rule__Direction__Group_4__1__Impl6124 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleWallRule_in_rule__Model__ElementsAssignment_26163 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleWallRule_in_rule__Model__ElementsAssignment_3_16194 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOpening_in_rule__Model__ElementsAssignment_56225 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOpening_in_rule__Model__ElementsAssignment_6_16256 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFlowSegment_in_rule__Model__ElementsAssignment_86287 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFlowSegment_in_rule__Model__ElementsAssignment_9_16318 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__WallRule__NameAssignment_16349 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__WallRule__ElementNameAssignment_36380 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__WallRule__DescriptionAssignment_56411 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__WallRule__PlacementAssignment_76442 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__Opening__NameAssignment_16473 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__Opening__ElementNameAssignment_2_16504 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__Opening__DescriptionAssignment_3_16535 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__Opening__PlacementAssignment_56566 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Opening__WallsAssignment_76601 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Opening__WallsAssignment_8_16640 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__FlowSegment__NameAssignment_16675 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__FlowSegment__ElementNameAssignment_2_16706 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__FlowSegment__DescriptionAssignment_3_16737 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__FlowSegment__PlacementAssignment_56768 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__LocalPlacement__RelativeToAssignment_2_16799 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAxis2Placement3D_in_rule__LocalPlacement__Axis2placement3dAssignment_3_16830 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianXAssignment_36861 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianYAssignment_56892 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEDouble_in_rule__Axis2Placement3D__CartesianZAssignment_76923 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDirection_in_rule__Axis2Placement3D__AxisAssignment_106954 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDirection_in_rule__Axis2Placement3D__RefDirectionAssignment_126985 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEDouble_in_rule__Direction__XAssignment_17016 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEDouble_in_rule__Direction__YAssignment_37047 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEDouble_in_rule__Direction__ZAssignment_4_17078 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

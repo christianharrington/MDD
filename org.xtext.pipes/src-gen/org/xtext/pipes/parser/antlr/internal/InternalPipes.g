@@ -236,22 +236,14 @@ ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(    this_STRING_0=RULE_STRING    {
+    this_STRING_0=RULE_STRING    {
 		$current.merge(this_STRING_0);
     }
 
     { 
-    newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
+    newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall()); 
     }
 
-    |    this_ID_1=RULE_ID    {
-		$current.merge(this_ID_1);
-    }
-
-    { 
-    newLeafNode(this_ID_1, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
-    }
-)
     ;
 
 
@@ -325,14 +317,14 @@ ruleWallRule returns [EObject current=null]
 		{ 
 	        newCompositeNode(grammarAccess.getWallRuleAccess().getDescriptionEStringParserRuleCall_5_0()); 
 	    }
-		lv_Description_5_0=ruleEString		{
+		lv_description_5_0=ruleEString		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getWallRuleRule());
 	        }
        		set(
        			$current, 
-       			"Description",
-        		lv_Description_5_0, 
+       			"description",
+        		lv_description_5_0, 
         		"EString");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -434,14 +426,14 @@ ruleOpening returns [EObject current=null]
 		{ 
 	        newCompositeNode(grammarAccess.getOpeningAccess().getDescriptionEStringParserRuleCall_3_1_0()); 
 	    }
-		lv_Description_5_0=ruleEString		{
+		lv_description_5_0=ruleEString		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getOpeningRule());
 	        }
        		set(
        			$current, 
-       			"Description",
-        		lv_Description_5_0, 
+       			"description",
+        		lv_description_5_0, 
         		"EString");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -480,7 +472,7 @@ ruleOpening returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getOpeningRule());
 	        }
         }
-	otherlv_9=RULE_ID
+	otherlv_9=RULE_STRING
 	{
 		newLeafNode(otherlv_9, grammarAccess.getOpeningAccess().getWallsWallCrossReference_7_0()); 
 	}
@@ -497,7 +489,7 @@ ruleOpening returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getOpeningRule());
 	        }
         }
-	otherlv_11=RULE_ID
+	otherlv_11=RULE_STRING
 	{
 		newLeafNode(otherlv_11, grammarAccess.getOpeningAccess().getWallsWallCrossReference_8_1_0()); 
 	}
@@ -577,14 +569,14 @@ ruleFlowSegment returns [EObject current=null]
 		{ 
 	        newCompositeNode(grammarAccess.getFlowSegmentAccess().getDescriptionEStringParserRuleCall_3_1_0()); 
 	    }
-		lv_Description_5_0=ruleEString		{
+		lv_description_5_0=ruleEString		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getFlowSegmentRule());
 	        }
        		set(
        			$current, 
-       			"Description",
-        		lv_Description_5_0, 
+       			"description",
+        		lv_description_5_0, 
         		"EString");
 	        afterParserOrEnumRuleCall();
 	    }
