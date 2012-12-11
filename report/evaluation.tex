@@ -1,14 +1,17 @@
 %!TEX root = ./report.tex
 \section{Evaluation}
-In this section we evaluate the solution, with reference to the desirable feature list. Furthermore, we discuss the methods used to verify the correctness of the product.
+In this section we evaluate the solution, with reference to the requirements of Section \ref{subsec:requirements}. Furthermore, we discuss the methods used to verify the correctness of the product. Recall that a usability evaluation of the Pipes DSL is outside the scope of the project as also described in Section \ref{subsec:requirements}. We conclude the section by evaluating our use of EMF for this particular domain.
 
-%Discussion of applicability of product. What should be done in order to make this project usable in a real world scenario?
+% Maybe: Discussion of applicability of product. What should be done in order to make this project usable in a real world scenario?
 
-%Point out: It is not relevant to have evaluations of the usability of the textual language as it is only experimental. One would obviously make a visual editor if the product should be usable.
-
-%What were the challenges?
-%- Saving the subset back to the server after editing. Synchronization problem
 %- Using MPS: it is not a freetext editor. We would want to improve on this later. XText is not flexible enough for this purpose.
+
+\paragraph{Working with a Partial Model}
+\paragraph{Correct Meta Model}
+\paragraph{Valid Model to Model Transformation (M2M)}
+\paragraph{A Simple DSL}
+\paragraph{Structural Editing}
+
 
 \subsection{Verification Methods}
 
@@ -21,20 +24,20 @@ Various testing scenarios
 \subsection{Threats to validity}
 Internal:
 Workflow components haven't been tested individually (internal inconsistencies are not accounted for). We only have 7 test buildings.
+Harrington point: We know that we only make changes to elements in our own domain in the IFC model and can show the correctness of the operations performed on these. But we have no way of showing that the open and save operations on the XML file work as intended. We say that our solution works correctly under the assumption that these methods work.
 
 External:
 Relevance of project. We only discussed this with Kaj and so the market for the product is not well-investigated.
-%Harrington point: We know that we only make changes to elements in our own domain in the IFC model and can show the correctness of the operations performed on these. But we have no way of showing that the open and save operations on the XML file work as intended. We say that our solution works correctly under the assumption that these methods work.
+
 
 
 
 \subsection{Use of EMF}
 \label{subsec:use_of_EMF}
-\paragraph{Large Ecore Meta Model} During this project, we encountered several problems with EMF, which we believe are due to the enormous size of the IFC meta model. Our meta model for IFC was generated from the XSD for the ifcXML. During this generation, several bugs were encountered, such as some methods not being generated (FIXME: reference), and methods exceeding the maximal size allowed by the Java Virtual Machine (FIXME: reference). While we were able to work around these bugs after some effort, they indicated that EMF had trouble handling meta models of this size (more than 2000 elements).
+\paragraph{Large Ecore Meta Model} During this project, we encountered several problems with EMF, which we believe are due to the large size of the IFC meta model. Our meta model for IFC was generated from the XSD for the ifcXML. During this generation, several bugs were encountered, such as some methods not being generated (FIXME: reference), and methods exceeding the maximal size allowed by the Java Virtual Machine (FIXME: reference). While we were able to work around these bugs after some effort, they indicated that EMF had trouble handling meta models of this size (more than 2,000 elements).
 
-When working with an instance of a realistic model, we experienced load and save times in excess of 10 minutes using the default XML resource deserializer. Several optimization methods were tried\footnote{EMF Performance Tips from EMF documentation can be found at \url{http://www.eclipse.org/modeling/emf/docs/performance/EMFPerformanceTips.html}}\footnote{Performance and Extensibility with EMF can be found at \url{http://www.slideshare.net/kenn.hussey/performance-and-extensibility-with-emf}}, to no effect. In the interest of time, we decided not to spend time writing a custom serializer/deserializer. Instead we decided to test with smaller subsets of the models we had available.
+When working with an instance of a realistic model, we experienced load and save times in excess of 10 minutes using the default XML resource deserializer. Several optimization methods were tried\footnote{EMF Performance Tips from EMF documentation can be found at \url{http://www.eclipse.org/modeling/emf/docs/performance/EMFPerformanceTips.html}}\footnote{Performance and Extensibility with EMF can be found at \url{http://www.slideshare.net/kenn.hussey/performance-and-extensibility-with-emf}} to no effect. We decided to test with smaller subsets of the models we had available.
 
 \paragraph{MWE2 Compiles with Errors} Worth noting is the fact that the static checker in Eclipse indicates that the Pipes2IFC MWE2 workflow has compile errors. This is not the case when actually running the solution and has been a source of general confusion.
-
 \paragraph{}
-Given the nature of the problems we experienced, and the large size of the IFC meta model and models, it would be appropriate to look into other modeling frameworks, or alternatively, attempt to minimise the size of the models.
+Given the nature of the problems we experienced, and the large size of the IFC meta model and usual building instance models, it would be appropriate to look into other modelling frameworks, or alternatively, attempt to minimise the size of the models.
