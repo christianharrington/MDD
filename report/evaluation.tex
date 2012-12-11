@@ -14,12 +14,9 @@ In this section we evaluate the solution, with reference to the requirements of 
 
 
 \subsection{Verification Methods}
+Due to the nature of the prototype an extensive and automated test suite for each MWE2 workflow component is infeasible. Only the synchronization features of the Main Model Updater component is interesting to validate, as it is the central component containing most, if not all, workflow logic.
 
-
-Example buildings
-Only black box testing feasible
-Various testing scenarios
-
+Two approaches have been used to ensure the correctness of the prototype. Firstly, a minor Xtend unit test suite has been written to verify the synchronization happening in the Main Model Updater. Secondly, a black box test of the entire prototype has been conducted with X input test building. The test results of these can be found in Appendix X (TODO insert ref) and cover both structural changes on pipes and openings and attribute updates on all types of objects within the domain.
 
 \subsection{Threats to validity}
 Internal:
@@ -28,9 +25,6 @@ Harrington point: We know that we only make changes to elements in our own domai
 
 External:
 Relevance of project. We only discussed this with Kaj and so the market for the product is not well-investigated.
-
-
-
 
 \subsection{Use of EMF}
 \label{subsec:use_of_EMF}
