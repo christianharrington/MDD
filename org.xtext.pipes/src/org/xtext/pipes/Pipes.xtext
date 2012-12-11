@@ -11,45 +11,45 @@ Model returns Model:
 	'Pipes' elements+=FlowSegment ( "and" elements+=FlowSegment)*
 	;
 
+//terminal PID: ( !('\\'|'"') )*;
 
 EString returns ecore::EString:
-	STRING;
+	ID|STRING;
 
 WallRule returns Wall:
-	'Wall' name=EString
-		'Name' elementName=EString
-		'Description' description=EString
-		'placement' placement=LocalPlacement
+	'Wall' name=ID
+		('Name' elementName=EString)?
+		('Description' description=EString)?
+		'Placement' placement=LocalPlacement
 	;
 
 Opening returns Opening:
-	'Opening' name=EString
+	'Opening' name=ID
 		('Name' elementName=EString)?
 		('Description' description=EString)?
-		'placement' placement=LocalPlacement
-		'walls' walls+=[Wall|STRING] ( "," walls+=[Wall|STRING])*
+		'Placement' placement=LocalPlacement
+		('Walls' walls+=[Wall|ID] ( "," walls+=[Wall|ID])*)?
 	;
 
-
 FlowSegment returns FlowSegment:
-	'Pipe' name=EString
+	'Pipe' name=ID
 		('Name' elementName=EString)?
 		('Description' description=EString)?
-		'placement' placement=LocalPlacement
+		'Placement' placement=LocalPlacement
 	;
 
 LocalPlacement returns LocalPlacement:
 	{LocalPlacement}
 	'{'
-		('relativeTo' relativeTo=LocalPlacement)?
-		('axis2placement3d' axis2placement3d=Axis2Placement3D)?
+		('RelativeTo' relativeTo=LocalPlacement)?
+		'Axis2Placement3d' axis2placement3d=Axis2Placement3D
 	'}';
 
 Axis2Placement3D returns Axis2Placement3D:
 	'{'
-		'cartesian' '('cartesianX=EDouble',' cartesianY=EDouble',' cartesianZ=EDouble ')'
-		'axis' axis=Direction
-		'refDir' refDirection=Direction
+		'Cartesian' '('cartesianX=EDouble',' cartesianY=EDouble',' cartesianZ=EDouble ')'
+		'Axis' axis=Direction
+		'RefDirection' refDirection=Direction
 	'}';
 
 EDouble returns ecore::EDouble:
