@@ -396,22 +396,13 @@ public interface PipesPackage extends EPackage {
 	int AXIS2_PLACEMENT3_D__CARTESIAN_Y = 1;
 
 	/**
-	 * The feature id for the '<em><b>Cartesian Z</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AXIS2_PLACEMENT3_D__CARTESIAN_Z = 2;
-
-	/**
 	 * The feature id for the '<em><b>Axis</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AXIS2_PLACEMENT3_D__AXIS = 3;
+	int AXIS2_PLACEMENT3_D__AXIS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Ref Direction</b></em>' containment reference.
@@ -420,7 +411,16 @@ public interface PipesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AXIS2_PLACEMENT3_D__REF_DIRECTION = 4;
+	int AXIS2_PLACEMENT3_D__REF_DIRECTION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Cartesian Z</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AXIS2_PLACEMENT3_D__CARTESIAN_Z = 4;
 
 	/**
 	 * The number of structural features of the '<em>Axis2 Placement3 D</em>' class.

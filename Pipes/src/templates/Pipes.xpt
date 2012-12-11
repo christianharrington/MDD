@@ -1,11 +1,14 @@
 «IMPORT pipes»
 «DEFINE main FOR Model»
 «FILE "output.pipes"»«LET elements.typeSelect(Wall) AS walls»«IF walls.size > 0»Walls
-«FOREACH walls AS e»«EXPAND entry FOR e»«ENDFOREACH»«ENDIF»«ENDLET»
+«FOREACH walls AS e SEPARATOR ' and
+'»«EXPAND entry FOR e»«ENDFOREACH»«ENDIF»«ENDLET»
 «LET elements.typeSelect(Opening) AS openings»«IF openings.size > 0»Openings
-«FOREACH openings AS e»«EXPAND entry FOR e»«ENDFOREACH»«ENDIF»«ENDLET»
+«FOREACH openings AS e SEPARATOR ' and
+'»«EXPAND entry FOR e»«ENDFOREACH»«ENDIF»«ENDLET»
 «LET elements.typeSelect(FlowSegment) AS flowsegments»«IF flowsegments.size > 0»Pipes
-«FOREACH flowsegments AS e»«EXPAND entry FOR e»«ENDFOREACH»«ENDIF»«ENDLET»
+«FOREACH flowsegments AS e SEPARATOR ' and
+'»«EXPAND entry FOR e»«ENDFOREACH»«ENDIF»«ENDLET»
 «ENDFILE»
 «ENDDEFINE»
 
@@ -13,31 +16,32 @@
 «EXPAND entry FOR this»
 «ENDDEFINE»
 
-«DEFINE entry FOR Wall»	Wall «name»
-		Name «elementName»
-		placement «EXPAND entry FOR placement»
-«ENDDEFINE»
+«DEFINE entry FOR Wall»	Wall «name»«IF this.elementName != null&&this.elementName.length > 0»
+		Name "«elementName»"«ENDIF»«IF this.description != null&&this.description.length > 0»
+		Description "«description»"«ENDIF»
+		Placement «EXPAND entry FOR placement»«ENDDEFINE»
 
-«DEFINE entry FOR Opening»	Opening «name»
-		Name «elementName»
-		placement «EXPAND entry FOR placement»
-		walls
-«ENDDEFINE»
+«DEFINE entry FOR Opening»	Opening «name»«IF this.elementName != null&&this.elementName.length > 0»
+		Name "«elementName»"«ENDIF»«IF this.description != null&&this.description.length > 0»
+		Description "«description»"«ENDIF»
+		Placement «EXPAND entry FOR placement»«IF walls != null&&this.walls.size > 0»
+		Walls «FOREACH this.walls AS w SEPARATOR ', '»KAGER
+		«ENDFOREACH»«ENDIF»«ENDDEFINE»
 
-«DEFINE entry FOR FlowSegment»	Pipe «name»
-		Name «this.elementName»
-		placement «EXPAND entry FOR placement»
-«ENDDEFINE»
+«DEFINE entry FOR FlowSegment»	Pipe «name»«IF this.elementName != null&&this.elementName.length > 0»
+		Name "«elementName»"«ENDIF»«IF this.description != null&&this.description.length > 0»
+		Description "«description»"«ENDIF»
+		Placement «EXPAND entry FOR placement»«ENDDEFINE»
 
 «DEFINE entry FOR LocalPlacement»{«IF this.relativeTo != null»
-			relativeTo «EXPAND entry FOR this.relativeTo»«ENDIF»«IF this.axis2placement3d != null»
-			axis2placement3d «EXPAND entry FOR this.axis2placement3d»	«ENDIF»
+			RelativeTo «EXPAND entry FOR this.relativeTo»«ENDIF»
+			Axis2Placement3d «EXPAND entry FOR this.axis2placement3d»
 		}«ENDDEFINE»
 
 «DEFINE entry FOR Axis2Placement3D»{
-				cartesian («cartesianX», «cartesianY», «cartesianZ»)
-				axis «EXPAND entry FOR this.axis»
-				refDir «EXPAND entry FOR this.refDirection»
+				Cartesian («cartesianX», «cartesianY», «cartesianZ»)
+				Axis «EXPAND entry FOR this.axis»
+				RefDirection «EXPAND entry FOR this.refDirection»
 			}«ENDDEFINE»
 
 «DEFINE entry FOR Direction»(«x», «y», «z»)«ENDDEFINE»
