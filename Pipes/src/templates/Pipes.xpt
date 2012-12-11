@@ -31,7 +31,7 @@
 
 «DEFINE entry FOR LocalPlacement»{«IF this.relativeTo != null»
 			relativeTo «EXPAND entry FOR this.relativeTo»«ENDIF»«IF this.axis2placement3d != null»
-			axis2placment3d «EXPAND entry FOR this.axis2placement3d»	«ENDIF»
+			axis2placement3d «EXPAND entry FOR this.axis2placement3d»	«ENDIF»
 		}«ENDDEFINE»
 
 «DEFINE entry FOR Axis2Placement3D»{

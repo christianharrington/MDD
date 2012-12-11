@@ -42,6 +42,7 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.LocationType
 import java.util.UUID
 import org.eclipse.emf.common.util.BasicEList
 import org.tech.iai.ifc.xml.ifc._2x3.final_.Uos
+import org.eclipse.emf.common.util.EList
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
@@ -164,10 +165,10 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
 	// Creating new opening element
 	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createOpening(Opening o) {
-		val uuid = UUID::randomUUID().toString()
+		val uuid = EcoreUtil::generateUUID() // UUID::randomUUID().toString()
 		f.setGlobalId(uuid)
 		f.setDescription(o.description)
-		f.setName(o.name)
+		f.setName(o.elementName)
 		var id = newId
 		println('Opening with ID ' + id)
 		f.setId(id)
@@ -190,13 +191,10 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 				entityList.add(f)
 				entityList.addAll(uosItem.entity)
 				uosItem.eSet(FinalPackage::eINSTANCE.uos_Entity, entityList)
-				resource.contents.add(f)
-				//uosItem.group.
-				//val entry = new EStructuralFeatureImpl$SimpleFeatureMapEntry()
-				
-				//uosItem.entityGroup
+				//var entities = uosItem.eGet(FinalPackage::eINSTANCE.uos_Entity) as EList<Entity>
+				//entities.add(f)
 			}
-		}	
+		}
 
 		entityMap.put(f.id, f)	
 	}
@@ -308,12 +306,15 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.setGlobalId(uuid)
 		f.setId(newId)
 		
+		f.relatedOpeningElement = ifcFactory.createRelatedOpeningElementType()
+		
 		//Set opening
-		f.relatedOpeningElement.ifcFeatureElementSubtraction.eSet(
+		f.relatedOpeningElement.eSet(
 			FinalPackage::eINSTANCE.relatedOpeningElementType_IfcFeatureElementSubtraction, o
 		)
 		
 		val wall = guidMap.get(w.name) as IfcWall
+		f.relatingBuildingElement = ifcFactory.createRelatingBuildingElementType()
 		f.relatingBuildingElement.eSet(FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, createRefWall(wall.ref))
 		
 	}

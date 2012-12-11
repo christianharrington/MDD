@@ -58942,8 +58942,8 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ifcFeatureElementSubtraction"
-        eType="#//IfcFeatureElementSubtraction" changeable="false" volatile="true"
-        transient="true" unsettable="true" derived="true" containment="true" resolveProxies="false">
+        eType="#//IfcFeatureElementSubtraction" volatile="true" transient="true" unsettable="true"
+        derived="true" containment="true" resolveProxies="false">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="IfcFeatureElementSubtraction"/>

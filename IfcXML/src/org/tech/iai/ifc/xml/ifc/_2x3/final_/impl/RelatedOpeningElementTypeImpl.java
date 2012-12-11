@@ -96,6 +96,15 @@ public class RelatedOpeningElementTypeImpl extends EObjectImpl implements Relate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setIfcFeatureElementSubtraction(IfcFeatureElementSubtraction newIfcFeatureElementSubtraction) {
+		((FeatureMap.Internal)getIfcFeatureElementSubtractionGroup()).set(FinalPackage.eINSTANCE.getRelatedOpeningElementType_IfcFeatureElementSubtraction(), newIfcFeatureElementSubtraction);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -135,6 +144,9 @@ public class RelatedOpeningElementTypeImpl extends EObjectImpl implements Relate
 			case FinalPackage.RELATED_OPENING_ELEMENT_TYPE__IFC_FEATURE_ELEMENT_SUBTRACTION_GROUP:
 				((FeatureMap.Internal)getIfcFeatureElementSubtractionGroup()).set(newValue);
 				return;
+			case FinalPackage.RELATED_OPENING_ELEMENT_TYPE__IFC_FEATURE_ELEMENT_SUBTRACTION:
+				setIfcFeatureElementSubtraction((IfcFeatureElementSubtraction)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -149,6 +161,9 @@ public class RelatedOpeningElementTypeImpl extends EObjectImpl implements Relate
 		switch (featureID) {
 			case FinalPackage.RELATED_OPENING_ELEMENT_TYPE__IFC_FEATURE_ELEMENT_SUBTRACTION_GROUP:
 				getIfcFeatureElementSubtractionGroup().clear();
+				return;
+			case FinalPackage.RELATED_OPENING_ELEMENT_TYPE__IFC_FEATURE_ELEMENT_SUBTRACTION:
+				setIfcFeatureElementSubtraction((IfcFeatureElementSubtraction)null);
 				return;
 		}
 		super.eUnset(featureID);
