@@ -123,23 +123,14 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class EStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EString");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall = (RuleCall)rule.eContents().get(1);
 		
-		////terminal PID: ( !('\\'|'"') )*;
 		//EString returns ecore::EString:
-		//	ID | STRING;
+		//	STRING;
 		public ParserRule getRule() { return rule; }
 
-		//ID | STRING
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
-
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+		public RuleCall getSTRINGTerminalRuleCall() { return cSTRINGTerminalRuleCall; }
 	}
 
 	public class WallRuleElements extends AbstractParserRuleElementFinder {
@@ -147,7 +138,7 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cWallKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNamePIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cNameKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cElementNameAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
@@ -161,21 +152,21 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPlacementLocalPlacementParserRuleCall_5_0 = (RuleCall)cPlacementAssignment_5.eContents().get(0);
 		
 		//WallRule returns Wall:
-		//	"Wall" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+		//	"Wall" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
 		//	placement=LocalPlacement;
 		public ParserRule getRule() { return rule; }
 
-		//"Wall" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement" placement=LocalPlacement
+		//"Wall" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement" placement=LocalPlacement
 		public Group getGroup() { return cGroup; }
 
 		//"Wall"
 		public Keyword getWallKeyword_0() { return cWallKeyword_0; }
 
-		//name=ID
+		//name=PID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//PID
+		public RuleCall getNamePIDTerminalRuleCall_1_0() { return cNamePIDTerminalRuleCall_1_0; }
 
 		//("Name" elementName=EString)?
 		public Group getGroup_2() { return cGroup_2; }
@@ -216,7 +207,7 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cOpeningKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNamePIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cNameKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cElementNameAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
@@ -232,30 +223,30 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cWallsKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Assignment cWallsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
 		private final CrossReference cWallsWallCrossReference_6_1_0 = (CrossReference)cWallsAssignment_6_1.eContents().get(0);
-		private final RuleCall cWallsWallIDTerminalRuleCall_6_1_0_1 = (RuleCall)cWallsWallCrossReference_6_1_0.eContents().get(1);
+		private final RuleCall cWallsWallPIDTerminalRuleCall_6_1_0_1 = (RuleCall)cWallsWallCrossReference_6_1_0.eContents().get(1);
 		private final Group cGroup_6_2 = (Group)cGroup_6.eContents().get(2);
 		private final Keyword cCommaKeyword_6_2_0 = (Keyword)cGroup_6_2.eContents().get(0);
 		private final Assignment cWallsAssignment_6_2_1 = (Assignment)cGroup_6_2.eContents().get(1);
 		private final CrossReference cWallsWallCrossReference_6_2_1_0 = (CrossReference)cWallsAssignment_6_2_1.eContents().get(0);
-		private final RuleCall cWallsWallIDTerminalRuleCall_6_2_1_0_1 = (RuleCall)cWallsWallCrossReference_6_2_1_0.eContents().get(1);
+		private final RuleCall cWallsWallPIDTerminalRuleCall_6_2_1_0_1 = (RuleCall)cWallsWallCrossReference_6_2_1_0.eContents().get(1);
 		
 		//Opening:
-		//	"Opening" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
-		//	placement=LocalPlacement ("Walls" walls+=[Wall] ("," walls+=[Wall])*)?;
+		//	"Opening" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+		//	placement=LocalPlacement ("Walls" walls+=[Wall|PID] ("," walls+=[Wall|PID])*)?;
 		public ParserRule getRule() { return rule; }
 
-		//"Opening" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
-		//placement=LocalPlacement ("Walls" walls+=[Wall] ("," walls+=[Wall])*)?
+		//"Opening" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+		//placement=LocalPlacement ("Walls" walls+=[Wall|PID] ("," walls+=[Wall|PID])*)?
 		public Group getGroup() { return cGroup; }
 
 		//"Opening"
 		public Keyword getOpeningKeyword_0() { return cOpeningKeyword_0; }
 
-		//name=ID
+		//name=PID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//PID
+		public RuleCall getNamePIDTerminalRuleCall_1_0() { return cNamePIDTerminalRuleCall_1_0; }
 
 		//("Name" elementName=EString)?
 		public Group getGroup_2() { return cGroup_2; }
@@ -290,35 +281,35 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 		//LocalPlacement
 		public RuleCall getPlacementLocalPlacementParserRuleCall_5_0() { return cPlacementLocalPlacementParserRuleCall_5_0; }
 
-		//("Walls" walls+=[Wall] ("," walls+=[Wall])*)?
+		//("Walls" walls+=[Wall|PID] ("," walls+=[Wall|PID])*)?
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"Walls"
 		public Keyword getWallsKeyword_6_0() { return cWallsKeyword_6_0; }
 
-		//walls+=[Wall]
+		//walls+=[Wall|PID]
 		public Assignment getWallsAssignment_6_1() { return cWallsAssignment_6_1; }
 
-		//[Wall]
+		//[Wall|PID]
 		public CrossReference getWallsWallCrossReference_6_1_0() { return cWallsWallCrossReference_6_1_0; }
 
-		//ID
-		public RuleCall getWallsWallIDTerminalRuleCall_6_1_0_1() { return cWallsWallIDTerminalRuleCall_6_1_0_1; }
+		//PID
+		public RuleCall getWallsWallPIDTerminalRuleCall_6_1_0_1() { return cWallsWallPIDTerminalRuleCall_6_1_0_1; }
 
-		//("," walls+=[Wall])*
+		//("," walls+=[Wall|PID])*
 		public Group getGroup_6_2() { return cGroup_6_2; }
 
 		//","
 		public Keyword getCommaKeyword_6_2_0() { return cCommaKeyword_6_2_0; }
 
-		//walls+=[Wall]
+		//walls+=[Wall|PID]
 		public Assignment getWallsAssignment_6_2_1() { return cWallsAssignment_6_2_1; }
 
-		//[Wall]
+		//[Wall|PID]
 		public CrossReference getWallsWallCrossReference_6_2_1_0() { return cWallsWallCrossReference_6_2_1_0; }
 
-		//ID
-		public RuleCall getWallsWallIDTerminalRuleCall_6_2_1_0_1() { return cWallsWallIDTerminalRuleCall_6_2_1_0_1; }
+		//PID
+		public RuleCall getWallsWallPIDTerminalRuleCall_6_2_1_0_1() { return cWallsWallPIDTerminalRuleCall_6_2_1_0_1; }
 	}
 
 	public class FlowSegmentElements extends AbstractParserRuleElementFinder {
@@ -326,7 +317,7 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPipeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNamePIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cNameKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cElementNameAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
@@ -340,21 +331,21 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPlacementLocalPlacementParserRuleCall_5_0 = (RuleCall)cPlacementAssignment_5.eContents().get(0);
 		
 		//FlowSegment:
-		//	"Pipe" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+		//	"Pipe" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
 		//	placement=LocalPlacement;
 		public ParserRule getRule() { return rule; }
 
-		//"Pipe" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement" placement=LocalPlacement
+		//"Pipe" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement" placement=LocalPlacement
 		public Group getGroup() { return cGroup; }
 
 		//"Pipe"
 		public Keyword getPipeKeyword_0() { return cPipeKeyword_0; }
 
-		//name=ID
+		//name=PID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//PID
+		public RuleCall getNamePIDTerminalRuleCall_1_0() { return cNamePIDTerminalRuleCall_1_0; }
 
 		//("Name" elementName=EString)?
 		public Group getGroup_2() { return cGroup_2; }
@@ -643,6 +634,7 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private ModelElements pModel;
+	private TerminalRule tPID;
 	private EStringElements pEString;
 	private WallRuleElements pWallRule;
 	private OpeningElements pOpening;
@@ -701,9 +693,14 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 		return getModelAccess().getRule();
 	}
 
-	////terminal PID: ( !('\\'|'"') )*;
+	//terminal PID:
+	//	"^"? ("a".."z" | "A".."Z" | "_" | "-" | "$" | "0".."9")*;
+	public TerminalRule getPIDRule() {
+		return (tPID != null) ? tPID : (tPID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "PID"));
+	} 
+
 	//EString returns ecore::EString:
-	//	ID | STRING;
+	//	STRING;
 	public EStringElements getEStringAccess() {
 		return (pEString != null) ? pEString : (pEString = new EStringElements());
 	}
@@ -713,7 +710,7 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//WallRule returns Wall:
-	//	"Wall" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+	//	"Wall" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
 	//	placement=LocalPlacement;
 	public WallRuleElements getWallRuleAccess() {
 		return (pWallRule != null) ? pWallRule : (pWallRule = new WallRuleElements());
@@ -724,8 +721,8 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Opening:
-	//	"Opening" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
-	//	placement=LocalPlacement ("Walls" walls+=[Wall] ("," walls+=[Wall])*)?;
+	//	"Opening" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+	//	placement=LocalPlacement ("Walls" walls+=[Wall|PID] ("," walls+=[Wall|PID])*)?;
 	public OpeningElements getOpeningAccess() {
 		return (pOpening != null) ? pOpening : (pOpening = new OpeningElements());
 	}
@@ -735,7 +732,7 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//FlowSegment:
-	//	"Pipe" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+	//	"Pipe" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
 	//	placement=LocalPlacement;
 	public FlowSegmentElements getFlowSegmentAccess() {
 		return (pFlowSegment != null) ? pFlowSegment : (pFlowSegment = new FlowSegmentElements());

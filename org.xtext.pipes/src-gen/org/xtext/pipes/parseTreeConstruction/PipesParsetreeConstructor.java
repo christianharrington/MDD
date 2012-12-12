@@ -599,12 +599,12 @@ protected class Model_ElementsAssignment_9_1 extends AssignmentToken  {
 /************ begin Rule WallRule ****************
  *
  * WallRule returns Wall:
- * 	"Wall" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+ * 	"Wall" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
  * 	placement=LocalPlacement;
  *
  **/
 
-// "Wall" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement" placement=LocalPlacement
+// "Wall" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement" placement=LocalPlacement
 protected class WallRule_Group extends GroupToken {
 	
 	public WallRule_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -654,7 +654,7 @@ protected class WallRule_WallKeyword_0 extends KeywordToken  {
 
 }
 
-// name=ID
+// name=PID
 protected class WallRule_NameAssignment_1 extends AssignmentToken  {
 	
 	public WallRule_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -678,9 +678,9 @@ protected class WallRule_NameAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getWallRuleAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getWallRuleAccess().getNamePIDTerminalRuleCall_1_0(), value, null)) {
 			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getWallRuleAccess().getNameIDTerminalRuleCall_1_0();
+			element = grammarAccess.getWallRuleAccess().getNamePIDTerminalRuleCall_1_0();
 			return obj;
 		}
 		return null;
@@ -924,13 +924,13 @@ protected class WallRule_PlacementAssignment_5 extends AssignmentToken  {
 /************ begin Rule Opening ****************
  *
  * Opening:
- * 	"Opening" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
- * 	placement=LocalPlacement ("Walls" walls+=[Wall] ("," walls+=[Wall])*)?;
+ * 	"Opening" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+ * 	placement=LocalPlacement ("Walls" walls+=[Wall|PID] ("," walls+=[Wall|PID])*)?;
  *
  **/
 
-// "Opening" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
-// placement=LocalPlacement ("Walls" walls+=[Wall] ("," walls+=[Wall])*)?
+// "Opening" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+// placement=LocalPlacement ("Walls" walls+=[Wall|PID] ("," walls+=[Wall|PID])*)?
 protected class Opening_Group extends GroupToken {
 	
 	public Opening_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -981,7 +981,7 @@ protected class Opening_OpeningKeyword_0 extends KeywordToken  {
 
 }
 
-// name=ID
+// name=PID
 protected class Opening_NameAssignment_1 extends AssignmentToken  {
 	
 	public Opening_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1005,9 +1005,9 @@ protected class Opening_NameAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getOpeningAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getOpeningAccess().getNamePIDTerminalRuleCall_1_0(), value, null)) {
 			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getOpeningAccess().getNameIDTerminalRuleCall_1_0();
+			element = grammarAccess.getOpeningAccess().getNamePIDTerminalRuleCall_1_0();
 			return obj;
 		}
 		return null;
@@ -1244,7 +1244,7 @@ protected class Opening_PlacementAssignment_5 extends AssignmentToken  {
 	}	
 }
 
-// ("Walls" walls+=[Wall] ("," walls+=[Wall])*)?
+// ("Walls" walls+=[Wall|PID] ("," walls+=[Wall|PID])*)?
 protected class Opening_Group_6 extends GroupToken {
 	
 	public Opening_Group_6(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1289,7 +1289,7 @@ protected class Opening_WallsKeyword_6_0 extends KeywordToken  {
 
 }
 
-// walls+=[Wall]
+// walls+=[Wall|PID]
 protected class Opening_WallsAssignment_6_1 extends AssignmentToken  {
 	
 	public Opening_WallsAssignment_6_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1326,7 +1326,7 @@ protected class Opening_WallsAssignment_6_1 extends AssignmentToken  {
 
 }
 
-// ("," walls+=[Wall])*
+// ("," walls+=[Wall|PID])*
 protected class Opening_Group_6_2 extends GroupToken {
 	
 	public Opening_Group_6_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1371,7 +1371,7 @@ protected class Opening_CommaKeyword_6_2_0 extends KeywordToken  {
 
 }
 
-// walls+=[Wall]
+// walls+=[Wall|PID]
 protected class Opening_WallsAssignment_6_2_1 extends AssignmentToken  {
 	
 	public Opening_WallsAssignment_6_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1417,12 +1417,12 @@ protected class Opening_WallsAssignment_6_2_1 extends AssignmentToken  {
 /************ begin Rule FlowSegment ****************
  *
  * FlowSegment:
- * 	"Pipe" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
+ * 	"Pipe" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement"
  * 	placement=LocalPlacement;
  *
  **/
 
-// "Pipe" name=ID ("Name" elementName=EString)? ("Description" description=EString)? "Placement" placement=LocalPlacement
+// "Pipe" name=PID ("Name" elementName=EString)? ("Description" description=EString)? "Placement" placement=LocalPlacement
 protected class FlowSegment_Group extends GroupToken {
 	
 	public FlowSegment_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1472,7 +1472,7 @@ protected class FlowSegment_PipeKeyword_0 extends KeywordToken  {
 
 }
 
-// name=ID
+// name=PID
 protected class FlowSegment_NameAssignment_1 extends AssignmentToken  {
 	
 	public FlowSegment_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1496,9 +1496,9 @@ protected class FlowSegment_NameAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getFlowSegmentAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getFlowSegmentAccess().getNamePIDTerminalRuleCall_1_0(), value, null)) {
 			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getFlowSegmentAccess().getNameIDTerminalRuleCall_1_0();
+			element = grammarAccess.getFlowSegmentAccess().getNamePIDTerminalRuleCall_1_0();
 			return obj;
 		}
 		return null;

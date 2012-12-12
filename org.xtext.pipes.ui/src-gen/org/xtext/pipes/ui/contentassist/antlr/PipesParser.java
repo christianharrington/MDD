@@ -37,7 +37,6 @@ public class PipesParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getEDoubleAccess().getAlternatives_4_0(), "rule__EDouble__Alternatives_4_0");
 					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
 					put(grammarAccess.getModelAccess().getGroup_3(), "rule__Model__Group_3__0");

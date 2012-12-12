@@ -234,6 +234,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createRefOpening(String i) {
+		
 		f.setRef(i)
 	}
 	
@@ -459,6 +460,18 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 				guidMap.remove(ifcF.globalId)
 				EcoreUtil::delete(ifcF)
 				removedSet.add(ifcF.id)
+			}
+		]
+		
+		openings.forEach[ifcO |
+			val found = pipesModel.elements.exists[o |
+				ifcO.globalId == o.name
+			]
+			if(!found) {
+				entityMap.remove(ifcO.id)
+				guidMap.remove(ifcO.globalId)
+				EcoreUtil::delete(ifcO)
+				removedSet.add(ifcO.id)
 			}
 		]
 		
