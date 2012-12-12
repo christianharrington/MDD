@@ -32,7 +32,8 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 	 
 	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening, IWorkflowContext ctx) {
 		val Opening op = createOpening(ifcOpening)
-		
+		println(ifcOpening.name)
+		println(ifcOpening.getClass())
 		val placement = objFromRef(ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
 		addLocalPlacement(op, placement, ctx)
 	

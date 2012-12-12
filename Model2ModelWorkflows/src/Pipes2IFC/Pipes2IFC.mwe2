@@ -20,9 +20,13 @@ Workflow {
 	component = IFC2ModelReader {
 		file = IFCFilePath
 	}
-	
+	/*
 	component = Pipes2ModelReader {
 		path = pipesReadPath
+	}*/
+	
+	component = PipesXMI2ModelReader {
+		path = "bin/instance.xmi"
 	}
 	
 	component = general.IFCExtractor {}
