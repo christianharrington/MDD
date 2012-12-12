@@ -4,34 +4,40 @@ In this section we evaluate the solution, with reference to the requirements of 
 
 % Maybe: Discussion of applicability of product. What should be done in order to make this project usable in a real world scenario?
 
-%- Using MPS: it is not a freetext editor. We would want to improve on this later. XText is not flexible enough for this purpose.
+\subsection{Requirements Evaluation}
+\label{subsec:requirements_evaluation}
+\paragraph{Working with a Partial Model} By using MWE2 workflows we are able to modularize the individual steps of the prototype. This achieves reusability and verifiability of each of the modular components. Note how, several workflow components have been reused in both workflows. We presented the informal IFC subset definition that we desired in Section \ref{subsec:problem_analysis}, but probably the most expressive depiction of the problem domain was achieved by creating the simple Ecore meta model in Figure \ref{fig:pipes_dsl_ecore_model}.
 
-\paragraph{Working with a Partial Model}
-\paragraph{Correct Meta Model}
-\paragraph{Valid Model to Model Transformation (M2M)}
-\paragraph{A Simple DSL}
-\paragraph{Structural Editing}
+\paragraph{Correct Meta Model} As explained in Section \ref{subsec:ifc_meta_model} the prototype uses the official IFC XSD to generate an Ecore metamodel that is both correct and easily updatable. However, there were certain serious drawbacks to this solution.
+
+During this project, we encountered several problems with EMF, which we believe are due to the large size of the IFC meta model. Our meta model for IFC was generated from the XSD for the ifcXML. During this generation, several bugs were encountered, such as some methods not being generated (FIXME: reference), and methods exceeding the maximal size allowed by the Java Virtual Machine (FIXME: reference). While we were able to work around these bugs after some effort, they indicated that EMF had trouble handling meta models of this size (more than 2,000 elements).
+
+When working with an instance of a realistic model, we experienced load and save times in excess of 10 minutes using the default XML resource deserializer. Several optimization methods were tried\footnote{EMF Performance Tips from EMF documentation can be found at \url{http://www.eclipse.org/modeling/emf/docs/performance/EMFPerformanceTips.html}}\footnote{Performance and Extensibility with EMF can be found at \url{http://www.slideshare.net/kenn.hussey/performance-and-extensibility-with-emf}} to no effect. We decided to test with smaller subsets of the test models (buildings) we had available.
+
+Given the nature of the problems we experienced, and the large size of the IFC metamodel and usual building instance models, it would be appropriate to look into other modelling frameworks, or alternatively, attempt to minimise the size of the models.
+
+\paragraph{Valid Model Transformations} The Xtend based model to model transformation from the partial IFC model to the Pipes model builds on a set of conversion rules. Validation of the transformation should therefore be reduced to the evaluation of these rules. We verify verify that each EClass of the target model has a corresponding rule. (TODO do test?) 
+
+Similarly, the model to text transformation from Pipes model instance to .pipes text format is based on a series of Xpand rules. Verifying this transformation is carried out as a part of the black box test described in \ref{subsec:verification_methods}, as the static checker of the generated Eclipse editor will spot any invalid text.
+
+\paragraph{A Simple DSL} Section \ref{subsec:pipes_dsl} describes the benefits of the particular DSL implementation of the prototype. It serves as a proof of concept that other subdomains of IFC can be edited in the same way. Being a modular component of the entire prototype the textual Pipes language implementation could be substituted with a visual one.
+
+\paragraph{Structural Editing} The structural editing on the partial model has, by far, been the most difficult unit of work in this project. Deleting elements is fairly simple, but a simple garbage collector had to be implemented as the EMF utility still lets the model root element preserve a reference to the object even when marked for deletion by the user. Adding elements, on the other hand, is a complex task when working with an EMF model instance. (TODO write how we solved the problem of adding)
 
 
 \subsection{Verification Methods}
+\label{subsec:verification_methods}
 Due to the nature of the prototype an extensive and automated test suite for each MWE2 workflow component is infeasible. Only the synchronization features of the Main Model Updater component is interesting to validate, as it is the central component containing most, if not all, workflow logic.
 
 Two approaches have been used to ensure the correctness of the prototype. Firstly, a minor Xtend unit test suite has been written to verify the synchronization happening in the Main Model Updater. Secondly, a black box test of the entire prototype has been conducted with X input test building. The test results of these can be found in Appendix X (TODO insert ref) and cover both structural changes on pipes and openings and attribute updates on all types of objects within the domain.
 
 \subsection{Threats to validity}
 Internal:
+M2M builds on Xtend that seems unstable.
 Workflow components haven't been tested individually (internal inconsistencies are not accounted for). We only have 7 test buildings.
 Harrington point: We know that we only make changes to elements in our own domain in the IFC model and can show the correctness of the operations performed on these. But we have no way of showing that the open and save operations on the XML file work as intended. We say that our solution works correctly under the assumption that these methods work.
 
 External:
 Relevance of project. We only discussed this with Kaj and so the market for the product is not well-investigated.
 
-\subsection{Use of EMF}
-\label{subsec:use_of_EMF}
-\paragraph{Large Ecore Meta Model} During this project, we encountered several problems with EMF, which we believe are due to the large size of the IFC meta model. Our meta model for IFC was generated from the XSD for the ifcXML. During this generation, several bugs were encountered, such as some methods not being generated (FIXME: reference), and methods exceeding the maximal size allowed by the Java Virtual Machine (FIXME: reference). While we were able to work around these bugs after some effort, they indicated that EMF had trouble handling meta models of this size (more than 2,000 elements).
 
-When working with an instance of a realistic model, we experienced load and save times in excess of 10 minutes using the default XML resource deserializer. Several optimization methods were tried\footnote{EMF Performance Tips from EMF documentation can be found at \url{http://www.eclipse.org/modeling/emf/docs/performance/EMFPerformanceTips.html}}\footnote{Performance and Extensibility with EMF can be found at \url{http://www.slideshare.net/kenn.hussey/performance-and-extensibility-with-emf}} to no effect. We decided to test with smaller subsets of the models we had available.
-
-\paragraph{MWE2 Compiles with Errors} Worth noting is the fact that the static checker in Eclipse indicates that the Pipes2IFC MWE2 workflow has compile errors. This is not the case when actually running the solution and has been a source of general confusion.
-\paragraph{}
-Given the nature of the problems we experienced, and the large size of the IFC meta model and usual building instance models, it would be appropriate to look into other modelling frameworks, or alternatively, attempt to minimise the size of the models.
