@@ -39,5 +39,7 @@
 	<classpathentry kind="lib" path="dep/org.eclipse.emf.mwe.utils_1.2.1.v201211130804.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.emf.mwe.utils.source_1.2.1.v201211130804.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.xpand_1.2.0.v201211130812.jar"/>
+	<classpathentry kind="lib" path="dep/org.eclipse.emf.edit_2.8.0.v20120917-0436.jar"/>
+	<classpathentry kind="lib" path="dep/org.eclipse.emf.edit.source_2.8.0.v20120917-0436.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

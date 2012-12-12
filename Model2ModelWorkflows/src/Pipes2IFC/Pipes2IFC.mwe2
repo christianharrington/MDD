@@ -6,7 +6,7 @@ import general.IFC2ModelReader
 var ifcWritePath = 'bin/output.ifcxml'
 
 var IFCFilePath = 'NanoLabBuilding/Merging_test_small.ifcxml'
-var pipesReadPath = 'NanoLabBuilding/example.pipes'
+var pipesReadPath = 'bin/output.pipes'
 
 Workflow {
 	
@@ -20,9 +20,13 @@ Workflow {
 	component = IFC2ModelReader {
 		file = IFCFilePath
 	}
-	
+	/*
 	component = Pipes2ModelReader {
 		path = pipesReadPath
+	}*/
+	
+	component = PipesXMI2ModelReader {
+		path = "bin/instance.xmi"
 	}
 	
 	component = general.IFCExtractor {}
