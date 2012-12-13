@@ -37,4 +37,8 @@ Workflow {
 		path = ifcWritePath
 	}
 	
+	component = org.eclipse.xpand2.Generator {
+      	expand = "templates::Entity::main FOR newElements"
+      	outlet = { path = "bin" }
+	}
 }

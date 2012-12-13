@@ -14,6 +14,7 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	val String wallsSlot = 'walls'
 	val String entityMapSlot = 'entityMap'
 	val String guidMapSlot = 'guidMap'
+	val String newElementsSlot = 'newElements'
 	
 	private static var int highestId = 0
 
@@ -34,6 +35,8 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	def getHighestIdSlot() { highestIdSlot }
 
 	def getGuidMapSlot() { guidMapSlot }
+	
+	def getNewElementsSlot() { newElementsSlot }
 
 	override postInvoke() {	}
 	
