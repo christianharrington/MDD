@@ -19,7 +19,7 @@ Workflow {
 	
 	component = IFC2ModelReader {
 		file = IFCFilePath
-	} 
+	}
 	
 	component = Pipes2ModelReader {
 		path = pipesReadPath

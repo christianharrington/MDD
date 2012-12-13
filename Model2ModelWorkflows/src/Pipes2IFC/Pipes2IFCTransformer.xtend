@@ -193,6 +193,39 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			val rve = createRelVoidsElementFromOpening(w, refOpening)
 			entityMap.put(rve.id, rve)
 		}
+		
+		
+		val iter = resource.contents.get(0).eAllContents
+		//val entityList = new BasicEList<Entity>()
+		val XMLHelperImpl helper = new XMLHelperImpl(resource as XMLResource)
+		val ResourceSet xmlResourceSet = resource.resourceSet
+		//helper.setExtendedMetaData(new BasicExtendedMetaData(xmlResourceSet.getPackageRegistry()))
+		val targetFeature = FinalPackage::eINSTANCE.uos_EntityGroup
+		while (iter.hasNext()) {
+			val item = iter.next()
+			if (item instanceof Uos) {
+				val uosItem = item as Uos
+				//entityList.add(f)
+				//entityList.addAll(uosItem.entity)
+				//uosItem.entityGroup.list(FinalPackage::eINSTANCE.uos_Entity).add(f)
+				//var entities = uosItem.eGet(FinalPackage::eINSTANCE.uos_Entity) as EList<Entity>
+				//entities.add(f)
+				
+				//val feature = helper.getFeature(uosItem.eClass, "_1", "ifcOpeningElement", true)
+				//val EStructuralFeature group = helper.extendedMetaData.getGroup(targetFeature)
+				//val FeatureMap featureMap = uosItem.eGet(targetFeature) as FeatureMap
+				//val EClassifier eClassifier = feature.getEType()
+				//featureMap.add(feature, f)
+				
+				val AdapterFactoryEditingDomain ed = new AdapterFactoryEditingDomain(new ComposedAdapterFactory(
+        												ComposedAdapterFactory$Descriptor$Registry::INSTANCE), new BasicCommandStack());
+				
+				//val EditingDomain ed = AdapterFactoryEditingDomain::getEditingDomainFor(uosItem)
+				val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
+				command.execute
+				//ed.execute(command)
+			}
+		}
 
 		entityMap.put(f.id, f)	
 		
