@@ -74,8 +74,6 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
 	def private localPlacementIsChanged(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
 		if(product != null && o != null) {
-			println(axis2Placement3DIsChanged(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)
-				|| localPlacementIsChanged(o.relativeTo, objFromRef(product, ctx).placementRelTo.ifcObjectPlacement as IfcLocalPlacement, ctx))
 			axis2Placement3DIsChanged(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)
 				|| localPlacementIsChanged(o.relativeTo, objFromRef(product, ctx).placementRelTo.ifcObjectPlacement as IfcLocalPlacement, ctx)
 		} else if (o != null) { 
@@ -85,7 +83,6 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
 	def private axis2Placement3DIsChanged(Axis2Placement3D o, IfcAxis2Placement3D product, IWorkflowContext ctx) {
 		var lengthMeasure = objFromRef(objFromRef(product, ctx).location.ifcCartesianPoint, ctx).coordinates.ifcLengthMeasure
-		println(o.cartesianX + " - " + lengthMeasure.get(0).value + " - " + o.cartesianY + " - " + lengthMeasure.get(1).value + " - " + o.cartesianZ + " - " + lengthMeasure.get(2).value)
 		return (o.cartesianX != lengthMeasure.get(0).value || 
 			o.cartesianY != lengthMeasure.get(1).value || 
 			o.cartesianZ != lengthMeasure.get(2).value ||
@@ -95,7 +92,6 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
 	def private directionIsChanged(Direction o, IfcDirection product, IWorkflowContext ctx) {
 		var ratios = objFromRef(product, ctx).directionRatios.doubleWrapper
-		println(o.x + " - " + ratios.get(0).value + " - " + o.y != ratios.get(1).value + " - " + o.z + " - " + ratios.get(2).value)
 		o.x != ratios.get(0).value || o.y != ratios.get(1).value || o.z != ratios.get(2).value
 	}
 	
@@ -133,13 +129,23 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 				]
 			]
 			if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
-				println("Found changed localplacement")
 				val instance = FinalPackage::eINSTANCE
-				var op = product.eGet(instance.objectPlacementType_IfcObjectPlacement)
 				var lp = createLocalPlacement(o.placement)
-				op = createRefLocalPlacement(lp.id)
+				var objectPlacement = createObjectPlacementType()
+				objectPlacement.eSet(instance.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(lp.id))
+				product.setObjectPlacement(objectPlacement) 
+				//var prt = ifcFactory.createPlacementRelToType()
+				/*
+				prt.eSet(instance.placementRelToType_IfcObjectPlacement, 
+						objFromRef((
+							objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement
+						), ctx).placementRelTo
+					.ifcObjectPlacement
+				) */
+				//lp.setPlacementRelTo(prt)
 				val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, lp)
 				command.execute
+				print("")
 			}
 			true
 		}
@@ -181,71 +187,39 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.setGlobalId(uuid)
 		f.setDescription(o.description)
 		f.setName(o.elementName)
-		var id = newId
-		println('Opening with ID ' + id)
-		f.setId(id)
+		f.setId(newId)
 		
+		val objectPlacementType = createObjectPlacementType()
+		f.setObjectPlacement(objectPlacementType)
+		var ifcLocalPlacement = createLocalPlacement(o.placement)
 		
-		f.setObjectPlacement(createObjectPlacementType(o.placement))
+		var t = objectPlacementType.eGet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement)
+		t = createRefLocalPlacement(ifcLocalPlacement.id)
+		
+		val Command addLocalPlacementCommand = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, ifcLocalPlacement)
+		addLocalPlacementCommand.execute
 		
 		var refOpening = createRefOpening(f.id)
 		for (w: o.walls) {
 			val rve = createRelVoidsElementFromOpening(w, refOpening)
 			entityMap.put(rve.id, rve)
 		}
-		
-		
-		val iter = resource.contents.get(0).eAllContents
-		//val entityList = new BasicEList<Entity>()
-		val XMLHelperImpl helper = new XMLHelperImpl(resource as XMLResource)
-		val ResourceSet xmlResourceSet = resource.resourceSet
-		//helper.setExtendedMetaData(new BasicExtendedMetaData(xmlResourceSet.getPackageRegistry()))
-		val targetFeature = FinalPackage::eINSTANCE.uos_EntityGroup
-		while (iter.hasNext()) {
-			val item = iter.next()
-			if (item instanceof Uos) {
-				val uosItem = item as Uos
-				//entityList.add(f)
-				//entityList.addAll(uosItem.entity)
-				//uosItem.entityGroup.list(FinalPackage::eINSTANCE.uos_Entity).add(f)
-				//var entities = uosItem.eGet(FinalPackage::eINSTANCE.uos_Entity) as EList<Entity>
-				//entities.add(f)
-				
-				//val feature = helper.getFeature(uosItem.eClass, "_1", "ifcOpeningElement", true)
-				//val EStructuralFeature group = helper.extendedMetaData.getGroup(targetFeature)
-				//val FeatureMap featureMap = uosItem.eGet(targetFeature) as FeatureMap
-				//val EClassifier eClassifier = feature.getEType()
-				//featureMap.add(feature, f)
-				
-				val AdapterFactoryEditingDomain ed = new AdapterFactoryEditingDomain(new ComposedAdapterFactory(
+						
+		val AdapterFactoryEditingDomain ed = new AdapterFactoryEditingDomain(new ComposedAdapterFactory(
         												ComposedAdapterFactory$Descriptor$Registry::INSTANCE), new BasicCommandStack());
-				
-				//val EditingDomain ed = AdapterFactoryEditingDomain::getEditingDomainFor(uosItem)
-				val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
-				command.execute
-				//ed.execute(command)
-			}
-		}
+		val Command addOpeningCommand = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
+		addOpeningCommand.execute
+
 
 		entityMap.put(f.id, f)	
-		
-		val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
-		command.execute
 	}
 	
 	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createRefOpening(String i) {
-		
 		f.setRef(i)
 	}
 	
-	def ObjectPlacementType create f: ifcFactory.createObjectPlacementType() createObjectPlacementType(LocalPlacement p) {
-		val instance = FinalPackage::eINSTANCE
-		var op = f.eGet(instance.objectPlacementType_IfcObjectPlacement)
-		var ifcLocalPlacement = createLocalPlacement(p)
-		entityMap.put(ifcLocalPlacement.id, ifcLocalPlacement)
-		op = createRefLocalPlacement(ifcLocalPlacement.id)
-		val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, ifcLocalPlacement)
-		command.execute
+	def ObjectPlacementType create f: ifcFactory.createObjectPlacementType() createObjectPlacementType() {
+		
 	}
 	
 	def IfcLocalPlacement create f: ifcFactory.createIfcLocalPlacement() createLocalPlacement(LocalPlacement p) {
@@ -263,7 +237,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	def PlacementRelToType create f: ifcFactory.createPlacementRelToType createPlacementRelToType(LocalPlacement p) {
 		var lp = createLocalPlacement(p)
 		entityMap.put(lp.id, lp)
-		f.ifcObjectPlacementGroup.set(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(lp.id))
+		f.ifcObjectPlacement.eSet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(lp.id))
 	}
 	
 	def RelativePlacementType create f: ifcFactory.createRelativePlacementType createRelativePlacementType(LocalPlacement p) {
@@ -280,7 +254,6 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		}
 		f.location = createLocationType()
 		var cartesianPoint = createCartesianPoint(a)
-		entityMap.put(cartesianPoint.id, cartesianPoint)
 		f.location.setIfcCartesianPoint(createRefCartesianPoint(cartesianPoint.id))
 		val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 		command.execute
