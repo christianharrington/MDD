@@ -11,7 +11,7 @@ Model returns Model:
 	'Pipes' elements+=FlowSegment ( "and" elements+=FlowSegment)*
 	;
 
-terminal PID  		: '^'?('a'..'z'|'A'..'Z'|'_'|'-'|'$'|'0'..'9')*;
+terminal PID: '<' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '>';
 
 EString returns ecore::EString:
 	STRING;

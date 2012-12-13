@@ -16,19 +16,19 @@
 «EXPAND entry FOR this»
 «ENDDEFINE»
 
-«DEFINE entry FOR Wall»	Wall «name»«IF this.elementName != null&&this.elementName.length > 0»
+«DEFINE entry FOR Wall»	Wall <«name»>«IF this.elementName != null&&this.elementName.length > 0»
 		Name "«elementName»"«ENDIF»«IF this.description != null&&this.description.length > 0»
 		Description "«description»"«ENDIF»
 		Placement «EXPAND entry FOR placement»«ENDDEFINE»
 
-«DEFINE entry FOR Opening»	Opening «name»«IF this.elementName != null&&this.elementName.length > 0»
+«DEFINE entry FOR Opening»	Opening <«name»>«IF this.elementName != null&&this.elementName.length > 0»
 		Name "«elementName»"«ENDIF»«IF this.description != null&&this.description.length > 0»
 		Description "«description»"«ENDIF»
 		Placement «EXPAND entry FOR placement»«IF walls != null&&this.walls.size > 0»
-		Walls «FOREACH this.walls AS w SEPARATOR ', '»KAGER
+		Walls «FOREACH this.walls AS w SEPARATOR ', '»<«w»>
 		«ENDFOREACH»«ENDIF»«ENDDEFINE»
 
-«DEFINE entry FOR FlowSegment»	Pipe «name»«IF this.elementName != null&&this.elementName.length > 0»
+«DEFINE entry FOR FlowSegment»	Pipe <«name»>«IF this.elementName != null&&this.elementName.length > 0»
 		Name "«elementName»"«ENDIF»«IF this.description != null&&this.description.length > 0»
 		Description "«description»"«ENDIF»
 		Placement «EXPAND entry FOR placement»«ENDDEFINE»

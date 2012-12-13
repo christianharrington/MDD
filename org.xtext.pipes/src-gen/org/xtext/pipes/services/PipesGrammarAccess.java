@@ -694,7 +694,7 @@ public class PipesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//terminal PID:
-	//	"^"? ("a".."z" | "A".."Z" | "_" | "-" | "$" | "0".."9")*;
+	//	"<" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* ">";
 	public TerminalRule getPIDRule() {
 		return (tPID != null) ? tPID : (tPID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "PID"));
 	} 
