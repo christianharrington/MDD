@@ -46,6 +46,8 @@ import org.eclipse.emf.common.command.Command
 import org.eclipse.emf.edit.command.AddCommand
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory
 import org.eclipse.emf.common.command.BasicCommandStack
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement
+import pipes.Product
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
@@ -98,7 +100,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			updateMetaData(o, objFromRef(product, ctx))
 			
 			// References
-			updateIfcElement(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
+			if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
+				updateIfcLocalPlacement(o, product, ctx)
+			}
 		}
 		
 	}
@@ -113,11 +117,13 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			o.walls.forEach[w |
 				extrModel.forEach[p |
 					if(w.name == p.globalId) {
-						updateIfcElement(w, objFromRef(p, ctx), ctx)
+						updateIfcElement(w, objFromRef(p, ctx) as IfcWall, ctx)
 					}
 				]
 			]
+			// Check if the localPlacement is changed. If it is, make a new one and set the references.
 			if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
+<<<<<<< HEAD
 				val instance = FinalPackage::eINSTANCE
 				var lp = createLocalPlacement(o.placement)
 				var objectPlacement = createObjectPlacementType()
@@ -137,6 +143,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 				val newElements = ctx.get(newElementsSlot) as Uos
 				newElements.entity.add(lp)
 				print("")
+=======
+				updateIfcLocalPlacement(o, product, ctx)
+>>>>>>> b599dd1ca81b6a6844d46c2b4ac620451abf950e
 			}
 			true
 		}
@@ -149,27 +158,47 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		true
 	}
 	
-	def dispatch updateIfcElement(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
-		updateIfcElement(o.axis2placement3d, objFromRef(product, ctx).relativePlacement.ifcAxis2Placement3D, ctx)
+	def updateIfcLocalPlacement(Product o, IfcElement product, IWorkflowContext ctx) {
+		// Find Id of old LocalPlacements relative localplacement
+		var String id
+		if((objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement).placementRelTo != null) {
+			id = (objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement).placementRelTo.ifcObjectPlacement.id
+		} else {
+			id = null
+		}
+		
+		val instance = FinalPackage::eINSTANCE
+		
+		var lp = createLocalPlacement(o.placement)
+		
+		// Create new LocalPlacement for element
+		var objectPlacement = createObjectPlacementType()
+		objectPlacement.eSet(instance.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(lp.id))
+		product.setObjectPlacement(objectPlacement) 
+		
+		// If the old Localplacements relative localplacement isn't null make a ref to it.
+		// Else set it to null
+		if(id != null) {
+			var prt = ifcFactory.createPlacementRelToType()
+			prt.eSet(instance.placementRelToType_IfcObjectPlacement, createRefLocalPlacement(id))
+			lp.setPlacementRelTo(prt)
+		} else {
+			lp.setPlacementRelTo(null)
+		}
+		
+		
+		val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, lp)
+		command.execute
+		true
 	}
 	
 	def dispatch updateIfcElement(Axis2Placement3D o, IfcAxis2Placement3D product, IWorkflowContext ctx){
-		
-		var lengthMeasure = objFromRef(objFromRef(product, ctx).location.ifcCartesianPoint, ctx).coordinates.ifcLengthMeasure
-		lengthMeasure.get(0).setValue(o.cartesianX)
-		lengthMeasure.get(1).setValue(o.cartesianY)
-		lengthMeasure.get(2).setValue(o.cartesianZ)
-		updateIfcElement(o.axis, objFromRef(product, ctx).axis.ifcDirection, ctx)
-		updateIfcElement(o.refDirection, objFromRef(product, ctx).refDirection.ifcDirection, ctx)
+		true
 	}
 		
 	def dispatch updateIfcElement(Direction o, IfcDirection product, IWorkflowContext ctx) {
-		var ratios = objFromRef(product, ctx).directionRatios.doubleWrapper
-		ratios.get(0).setValue(o.x)
-		ratios.get(1).setValue(o.y)
-		ratios.get(2).setValue(o.z)
 		true
-	}
+	} 
 	// End update elements
 	
 	// Creating new opening element
@@ -244,6 +273,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		if(!(a.axis == null && a.refDirection == null)) {
 			f.setAxis(createAxisType2(a))
 			f.setRefDirection(createRefDirectionType1(a))
+		} else {
+			println("")
 		}
 		f.location = createLocationType()
 		var cartesianPoint = createCartesianPoint(a)
@@ -266,7 +297,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def RefDirectionType1 create f: ifcFactory.createRefDirectionType1 createRefDirectionType1(Axis2Placement3D a) {
-		var ref = createDirection(a.axis)
+		var ref = createDirection(a.refDirection)
 		f.setIfcDirection(createRefDirection(ref.id))
 	}
 	

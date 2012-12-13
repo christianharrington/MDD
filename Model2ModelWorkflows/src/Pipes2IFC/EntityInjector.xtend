@@ -19,52 +19,47 @@ class EntityInjector extends WorkflowComponentWithSlot {
 	}*/
 	
 	var String sourcePath
-	var String injectPath
+	var String input
 	var String outputPath
 	
 	def getSourcePath() { sourcePath }
 	def setSourcePath(String path) { sourcePath = path }
 
-	def getInjectPath() { injectPath }
-	def setInjectPath(String path) { injectPath = path }
+	def getInput() { input }
+	def setInput(String path) { input = path }
 	
 	def getOutputPath() { outputPath }
 	def setOutputPath(String path) { outputPath = path }
 	
+	
+	
 	override invoke(IWorkflowContext ctx) {
-		val BufferedReader mainBr = new BufferedReader(new InputStreamReader(new FileInputStream(sourcePath)))
-		val BufferedReader inputBr = new BufferedReader(new InputStreamReader(new FileInputStream(injectPath)))
-		val BufferedWriter mainWr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputPath)))
+		val BufferedReader sourceBr = new BufferedReader(new InputStreamReader(new FileInputStream(sourcePath)))
+		val BufferedWriter outputWr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputPath)))
 		
 		val searchString = "</_1:uos>"
-		var mainLine = mainBr.readLine()
-		var trimLine = mainLine.trim
-		while (!trimLine.startsWith(searchString)) {
-			mainWr.write(mainLine)
-			mainWr.newLine()
-			mainLine = mainBr.readLine()
-			trimLine = mainLine.trim
+		var sourceLine = sourceBr.readLine()
+		var trimLine = sourceLine.trim
+		while (sourceLine != null && !trimLine.startsWith(searchString)) {
+			outputWr.write(sourceLine)
+			outputWr.newLine()
+			sourceLine = sourceBr.readLine()
+			if (sourceLine != null) trimLine = sourceLine.trim
 		}
 		
-		// mainLine now points to uos-line; if null, an exception is thrown
-		if (mainLine == null) throw new MalformedIFCXMLException("File " + sourcePath + " does not have a " + searchString + " tag")
+		// sourceLine now points to uos-line; if null, an exception is thrown
+		if (sourceLine == null) throw new MalformedIFCXMLException("File " + sourcePath + " does not have a " + searchString + " tag")
 		
-		var inputLine = inputBr.readLine
-		while (inputLine != null) {
-			mainWr.write(inputLine)
-			mainWr.newLine()
-			inputLine = inputBr.readLine
+		outputWr.write(input)
+		
+		while (sourceLine != null) {
+			outputWr.write(sourceLine)
+			outputWr.newLine()
+			sourceLine = sourceBr.readLine()
 		}
 		
-		while (mainLine != null) {
-			mainWr.write(mainLine)
-			mainWr.newLine()
-			mainLine = mainBr.readLine()
-		}
-		
-		mainBr.close
-		inputBr.close
-		mainWr.close
+		sourceBr.close
+		outputWr.close
 	}
 	
 }
