@@ -125,25 +125,6 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			]
 			// Check if the localPlacement is changed. If it is, make a new one and set the references.
 			if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
-				val instance = FinalPackage::eINSTANCE
-				var lp = createLocalPlacement(o.placement)
-				var objectPlacement = createObjectPlacementType()
-				objectPlacement.eSet(instance.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(lp.id))
-				product.setObjectPlacement(objectPlacement) 
-				//var prt = ifcFactory.createPlacementRelToType()
-				/*
-				prt.eSet(instance.placementRelToType_IfcObjectPlacement, 
-						objFromRef((
-							objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement
-						), ctx).placementRelTo
-					.ifcObjectPlacement
-				) */
-				//lp.setPlacementRelTo(prt)
-				/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, lp)
-				command.execute*/
-				val newElements = ctx.get(newElementsSlot) as Uos
-				newElements.entity.add(lp)
-				print("")
 				updateIfcLocalPlacement(o, product, ctx)
 			}
 			true
