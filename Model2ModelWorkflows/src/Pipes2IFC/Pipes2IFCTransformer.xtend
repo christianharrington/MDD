@@ -202,7 +202,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		//val entityList = new BasicEList<Entity>()
 		val XMLHelperImpl helper = new XMLHelperImpl(resource as XMLResource)
 		val ResourceSet xmlResourceSet = resource.resourceSet
-		helper.setExtendedMetaData(new BasicExtendedMetaData(xmlResourceSet.getPackageRegistry()))
+		//helper.setExtendedMetaData(new BasicExtendedMetaData(xmlResourceSet.getPackageRegistry()))
 		val targetFeature = FinalPackage::eINSTANCE.uos_EntityGroup
 		while (iter.hasNext()) {
 			val item = iter.next()
@@ -224,7 +224,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
         												ComposedAdapterFactory$Descriptor$Registry::INSTANCE), new BasicCommandStack());
 				
 				//val EditingDomain ed = AdapterFactoryEditingDomain::getEditingDomainFor(uosItem)
-				val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_EntityGroup, f)
+				val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 				command.execute
 				//ed.execute(command)
 			}
