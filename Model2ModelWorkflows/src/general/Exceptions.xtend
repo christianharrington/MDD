@@ -37,3 +37,21 @@ class InvalidEntityException extends Exception {
 		super(cause)
 	}
 }
+
+class MalformedIFCXMLException extends Exception {
+	new() {
+		super()
+	}
+	
+	new(String message) {
+		super(message)
+	}
+	
+	new(String message, Throwable cause) {
+		super(message, cause)
+	}
+	
+	new(Throwable cause) {
+		super(cause)
+	}
+}
