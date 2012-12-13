@@ -19,21 +19,22 @@ class EntityInjector extends WorkflowComponentWithSlot {
 	}*/
 	
 	var String sourcePath
-	var String injectPath
+	var String input
 	var String outputPath
 	
 	def getSourcePath() { sourcePath }
 	def setSourcePath(String path) { sourcePath = path }
 
-	def getInjectPath() { injectPath }
-	def setInjectPath(String path) { injectPath = path }
+	def getInput() { input }
+	def setInput(String path) { input = path }
 	
 	def getOutputPath() { outputPath }
 	def setOutputPath(String path) { outputPath = path }
 	
+	
+	
 	override invoke(IWorkflowContext ctx) {
 		val BufferedReader sourceBr = new BufferedReader(new InputStreamReader(new FileInputStream(sourcePath)))
-		val BufferedReader injectBr = new BufferedReader(new InputStreamReader(new FileInputStream(injectPath)))
 		val BufferedWriter outputWr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputPath)))
 		
 		val searchString = "</_1:uos>"
@@ -49,12 +50,7 @@ class EntityInjector extends WorkflowComponentWithSlot {
 		// sourceLine now points to uos-line; if null, an exception is thrown
 		if (sourceLine == null) throw new MalformedIFCXMLException("File " + sourcePath + " does not have a " + searchString + " tag")
 		
-		var inputLine = injectBr.readLine
-		while (inputLine != null) {
-			outputWr.write(inputLine)
-			outputWr.newLine()
-			inputLine = injectBr.readLine
-		}
+		outputWr.write(input)
 		
 		while (sourceLine != null) {
 			outputWr.write(sourceLine)
@@ -63,7 +59,6 @@ class EntityInjector extends WorkflowComponentWithSlot {
 		}
 		
 		sourceBr.close
-		injectBr.close
 		outputWr.close
 	}
 	
