@@ -10,7 +10,6 @@ import pipes.FlowSegment
 import pipes.Wall
 import pipes.Axis2Placement3D
 import java.util.HashSet
-import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.FinalFactoryImpl
 import org.tech.iai.ifc.xml.ifc._2x3.final_.FinalFactory
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
@@ -41,18 +40,7 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.CoordinatesType1
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasureType
 import org.tech.iai.ifc.xml.ifc._2x3.final_.LocationType
 import java.util.UUID
-import org.eclipse.emf.common.util.BasicEList
 import org.tech.iai.ifc.xml.ifc._2x3.final_.Uos
-import org.eclipse.emf.common.util.EList
-import org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl
-import org.eclipse.emf.ecore.xmi.XMLResource
-import org.eclipse.emf.ecore.EStructuralFeature
-import org.eclipse.emf.ecore.util.ExtendedMetaData
-import org.eclipse.emf.ecore.util.FeatureMap
-import org.eclipse.emf.ecore.EClassifier
-import org.eclipse.emf.ecore.resource.ResourceSet
-import org.eclipse.emf.ecore.util.BasicExtendedMetaData
-import org.eclipse.emf.edit.domain.EditingDomain
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain
 import org.eclipse.emf.common.command.Command
 import org.eclipse.emf.edit.command.AddCommand
@@ -71,6 +59,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	Resource resource
 	Uos uosItem
 	AdapterFactoryEditingDomain ed
+	Uos newElements
 	
 	def private localPlacementIsChanged(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
 		if(product != null && o != null) {
@@ -143,8 +132,10 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 					.ifcObjectPlacement
 				) */
 				//lp.setPlacementRelTo(prt)
-				val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, lp)
-				command.execute
+				/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, lp)
+				command.execute*/
+				val newElements = ctx.get(newElementsSlot) as Uos
+				newElements.entity.add(lp)
 				print("")
 			}
 			true
@@ -196,8 +187,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		var t = objectPlacementType.eGet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement)
 		t = createRefLocalPlacement(ifcLocalPlacement.id)
 		
-		val Command addLocalPlacementCommand = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, ifcLocalPlacement)
-		addLocalPlacementCommand.execute
+		/*val Command addLocalPlacementCommand = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, ifcLocalPlacement)
+		addLocalPlacementCommand.execute*/
+		newElements.entity.add(ifcLocalPlacement)
 		
 		var refOpening = createRefOpening(f.id)
 		for (w: o.walls) {
@@ -205,12 +197,13 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			entityMap.put(rve.id, rve)
 		}
 						
-		val AdapterFactoryEditingDomain ed = new AdapterFactoryEditingDomain(new ComposedAdapterFactory(
+		/*val AdapterFactoryEditingDomain ed = new AdapterFactoryEditingDomain(new ComposedAdapterFactory(
         												ComposedAdapterFactory$Descriptor$Registry::INSTANCE), new BasicCommandStack());
 		val Command addOpeningCommand = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
-		addOpeningCommand.execute
-
-
+		
+		addOpeningCommand.execute*/
+		newElements.entity.add(f)
+		
 		entityMap.put(f.id, f)	
 	}
 	
@@ -255,8 +248,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.location = createLocationType()
 		var cartesianPoint = createCartesianPoint(a)
 		f.location.setIfcCartesianPoint(createRefCartesianPoint(cartesianPoint.id))
-		val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
-		command.execute
+		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
+		command.execute*/
+		newElements.entity.add(f)
 		
 	}
 	
@@ -283,8 +277,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		ratios.add(createDoubleWrapperTypeFromDouble(d.x))
 		ratios.add(createDoubleWrapperTypeFromDouble(d.y))
 		ratios.add(createDoubleWrapperTypeFromDouble(d.z))
-		val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
-		command.execute
+		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
+		command.execute*/
+		newElements.entity.add(f)
 	}
 	
 	def IfcDirection create f: ifcFactory.createIfcDirection() createRefDirection(String i) {
@@ -304,8 +299,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianX))
 		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianY))
 		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianZ))
-		val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
-		command.execute
+		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
+		command.execute*/
+		newElements.entity.add(f)
 	}
 	
 	def IfcCartesianPoint create f: ifcFactory.createIfcCartesianPoint createRefCartesianPoint(String i) {
@@ -333,8 +329,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		val wall = guidMap.get(w.name) as IfcWall
 		f.relatingBuildingElement = ifcFactory.createRelatingBuildingElementType()
 		f.relatingBuildingElement.eSet(FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, createRefWall(wall.ref))
-		val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
-		command.execute		
+		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
+		command.execute*/
+		newElements.entity.add(f)
 	}
 	
 	def IfcWall create f: ifcFactory.createIfcWall() createRefWall(String i) {
@@ -416,6 +413,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
 		guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
 		resource = ctx.get(mainModelSlot) as Resource
+		
+		newElements = ifcFactory.createUos
 		
 		val iter = resource.contents.get(0).eAllContents
 		while (iter.hasNext()) {
