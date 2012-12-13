@@ -22,10 +22,9 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPipesParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_PID", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'E'", "'e'", "'Walls'", "'Openings'", "'Pipes'", "'and'", "'Wall'", "'Placement'", "'Name'", "'Description'", "'Opening'", "','", "'Pipe'", "'{'", "'Axis2Placement3d'", "'}'", "'RelativeTo'", "'Cartesian'", "'('", "')'", "'Axis'", "'RefDirection'", "'-'", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'E'", "'e'", "'Walls'", "'Openings'", "'Pipes'", "'and'", "'Wall'", "'Placement'", "'Name'", "'Description'", "'Opening'", "','", "'Pipe'", "'{'", "'Axis2Placement3d'", "'}'", "'RelativeTo'", "'Cartesian'", "'('", "')'", "'Axis'", "'RefDirection'", "'-'", "'.'"
     };
-    public static final int RULE_PID=6;
-    public static final int RULE_ID=7;
+    public static final int RULE_ID=6;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -34,12 +33,12 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=11;
+    public static final int RULE_ANY_OTHER=10;
     public static final int T__21=21;
     public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=9;
+    public static final int RULE_SL_COMMENT=8;
     public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=8;
+    public static final int RULE_ML_COMMENT=7;
     public static final int T__30=30;
     public static final int T__19=19;
     public static final int T__31=31;
@@ -49,14 +48,14 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
     public static final int T__16=16;
     public static final int T__34=34;
     public static final int T__15=15;
-    public static final int T__35=35;
     public static final int T__18=18;
     public static final int T__17=17;
     public static final int T__12=12;
+    public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_INT=5;
-    public static final int RULE_WS=10;
+    public static final int RULE_WS=9;
 
     // delegates
     // delegators
@@ -789,10 +788,10 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==12) ) {
+            if ( (LA1_0==11) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==13) ) {
+            else if ( (LA1_0==12) ) {
                 alt1=2;
             }
             else {
@@ -809,7 +808,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
                     // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:318:1: 'E'
                     {
                      before(grammarAccess.getEDoubleAccess().getEKeyword_4_0_0()); 
-                    match(input,12,FollowSets000.FOLLOW_12_in_rule__EDouble__Alternatives_4_0610); 
+                    match(input,11,FollowSets000.FOLLOW_11_in_rule__EDouble__Alternatives_4_0610); 
                      after(grammarAccess.getEDoubleAccess().getEKeyword_4_0_0()); 
 
                     }
@@ -824,7 +823,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
                     // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:326:1: 'e'
                     {
                      before(grammarAccess.getEDoubleAccess().getEKeyword_4_0_1()); 
-                    match(input,13,FollowSets000.FOLLOW_13_in_rule__EDouble__Alternatives_4_0630); 
+                    match(input,12,FollowSets000.FOLLOW_12_in_rule__EDouble__Alternatives_4_0630); 
                      after(grammarAccess.getEDoubleAccess().getEKeyword_4_0_1()); 
 
                     }
@@ -976,7 +975,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:389:1: 'Walls'
             {
              before(grammarAccess.getModelAccess().getWallsKeyword_1()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Model__Group__1__Impl754); 
+            match(input,13,FollowSets000.FOLLOW_13_in_rule__Model__Group__1__Impl754); 
              after(grammarAccess.getModelAccess().getWallsKeyword_1()); 
 
             }
@@ -1142,7 +1141,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==17) ) {
+                if ( (LA2_0==16) ) {
                     alt2=1;
                 }
 
@@ -1239,7 +1238,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:478:1: 'Openings'
             {
              before(grammarAccess.getModelAccess().getOpeningsKeyword_4()); 
-            match(input,15,FollowSets000.FOLLOW_15_in_rule__Model__Group__4__Impl937); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__Model__Group__4__Impl937); 
              after(grammarAccess.getModelAccess().getOpeningsKeyword_4()); 
 
             }
@@ -1405,7 +1404,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==17) ) {
+                if ( (LA3_0==16) ) {
                     alt3=1;
                 }
 
@@ -1502,7 +1501,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:567:1: 'Pipes'
             {
              before(grammarAccess.getModelAccess().getPipesKeyword_7()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__Model__Group__7__Impl1120); 
+            match(input,15,FollowSets000.FOLLOW_15_in_rule__Model__Group__7__Impl1120); 
              after(grammarAccess.getModelAccess().getPipesKeyword_7()); 
 
             }
@@ -1663,7 +1662,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==17) ) {
+                if ( (LA4_0==16) ) {
                     alt4=1;
                 }
 
@@ -1760,7 +1759,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:675:1: 'and'
             {
              before(grammarAccess.getModelAccess().getAndKeyword_3_0()); 
-            match(input,17,FollowSets000.FOLLOW_17_in_rule__Model__Group_3__0__Impl1320); 
+            match(input,16,FollowSets000.FOLLOW_16_in_rule__Model__Group_3__0__Impl1320); 
              after(grammarAccess.getModelAccess().getAndKeyword_3_0()); 
 
             }
@@ -1915,7 +1914,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:738:1: 'and'
             {
              before(grammarAccess.getModelAccess().getAndKeyword_6_0()); 
-            match(input,17,FollowSets000.FOLLOW_17_in_rule__Model__Group_6__0__Impl1443); 
+            match(input,16,FollowSets000.FOLLOW_16_in_rule__Model__Group_6__0__Impl1443); 
              after(grammarAccess.getModelAccess().getAndKeyword_6_0()); 
 
             }
@@ -2070,7 +2069,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:801:1: 'and'
             {
              before(grammarAccess.getModelAccess().getAndKeyword_9_0()); 
-            match(input,17,FollowSets000.FOLLOW_17_in_rule__Model__Group_9__0__Impl1566); 
+            match(input,16,FollowSets000.FOLLOW_16_in_rule__Model__Group_9__0__Impl1566); 
              after(grammarAccess.getModelAccess().getAndKeyword_9_0()); 
 
             }
@@ -2225,7 +2224,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:864:1: 'Wall'
             {
              before(grammarAccess.getWallRuleAccess().getWallKeyword_0()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__WallRule__Group__0__Impl1689); 
+            match(input,17,FollowSets000.FOLLOW_17_in_rule__WallRule__Group__0__Impl1689); 
              after(grammarAccess.getWallRuleAccess().getWallKeyword_0()); 
 
             }
@@ -2389,7 +2388,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==20) ) {
+            if ( (LA5_0==19) ) {
                 alt5=1;
             }
             switch (alt5) {
@@ -2485,7 +2484,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==21) ) {
+            if ( (LA6_0==20) ) {
                 alt6=1;
             }
             switch (alt6) {
@@ -2577,7 +2576,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:982:1: 'Placement'
             {
              before(grammarAccess.getWallRuleAccess().getPlacementKeyword_4()); 
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__WallRule__Group__4__Impl1933); 
+            match(input,18,FollowSets000.FOLLOW_18_in_rule__WallRule__Group__4__Impl1933); 
              after(grammarAccess.getWallRuleAccess().getPlacementKeyword_4()); 
 
             }
@@ -2732,7 +2731,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1053:1: 'Name'
             {
              before(grammarAccess.getWallRuleAccess().getNameKeyword_2_0()); 
-            match(input,20,FollowSets000.FOLLOW_20_in_rule__WallRule__Group_2__0__Impl2064); 
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__WallRule__Group_2__0__Impl2064); 
              after(grammarAccess.getWallRuleAccess().getNameKeyword_2_0()); 
 
             }
@@ -2887,7 +2886,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1116:1: 'Description'
             {
              before(grammarAccess.getWallRuleAccess().getDescriptionKeyword_3_0()); 
-            match(input,21,FollowSets000.FOLLOW_21_in_rule__WallRule__Group_3__0__Impl2187); 
+            match(input,20,FollowSets000.FOLLOW_20_in_rule__WallRule__Group_3__0__Impl2187); 
              after(grammarAccess.getWallRuleAccess().getDescriptionKeyword_3_0()); 
 
             }
@@ -3042,7 +3041,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1179:1: 'Opening'
             {
              before(grammarAccess.getOpeningAccess().getOpeningKeyword_0()); 
-            match(input,22,FollowSets000.FOLLOW_22_in_rule__Opening__Group__0__Impl2310); 
+            match(input,21,FollowSets000.FOLLOW_21_in_rule__Opening__Group__0__Impl2310); 
              after(grammarAccess.getOpeningAccess().getOpeningKeyword_0()); 
 
             }
@@ -3206,7 +3205,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==20) ) {
+            if ( (LA7_0==19) ) {
                 alt7=1;
             }
             switch (alt7) {
@@ -3302,7 +3301,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==21) ) {
+            if ( (LA8_0==20) ) {
                 alt8=1;
             }
             switch (alt8) {
@@ -3394,7 +3393,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1297:1: 'Placement'
             {
              before(grammarAccess.getOpeningAccess().getPlacementKeyword_4()); 
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Opening__Group__4__Impl2554); 
+            match(input,18,FollowSets000.FOLLOW_18_in_rule__Opening__Group__4__Impl2554); 
              after(grammarAccess.getOpeningAccess().getPlacementKeyword_4()); 
 
             }
@@ -3553,7 +3552,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==14) ) {
+            if ( (LA9_0==13) ) {
                 alt9=1;
             }
             switch (alt9) {
@@ -3645,7 +3644,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1399:1: 'Name'
             {
              before(grammarAccess.getOpeningAccess().getNameKeyword_2_0()); 
-            match(input,20,FollowSets000.FOLLOW_20_in_rule__Opening__Group_2__0__Impl2748); 
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__Opening__Group_2__0__Impl2748); 
              after(grammarAccess.getOpeningAccess().getNameKeyword_2_0()); 
 
             }
@@ -3800,7 +3799,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1462:1: 'Description'
             {
              before(grammarAccess.getOpeningAccess().getDescriptionKeyword_3_0()); 
-            match(input,21,FollowSets000.FOLLOW_21_in_rule__Opening__Group_3__0__Impl2871); 
+            match(input,20,FollowSets000.FOLLOW_20_in_rule__Opening__Group_3__0__Impl2871); 
              after(grammarAccess.getOpeningAccess().getDescriptionKeyword_3_0()); 
 
             }
@@ -3955,7 +3954,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1525:1: 'Walls'
             {
              before(grammarAccess.getOpeningAccess().getWallsKeyword_6_0()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Opening__Group_6__0__Impl2994); 
+            match(input,13,FollowSets000.FOLLOW_13_in_rule__Opening__Group_6__0__Impl2994); 
              after(grammarAccess.getOpeningAccess().getWallsKeyword_6_0()); 
 
             }
@@ -4116,7 +4115,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
                 int alt10=2;
                 int LA10_0 = input.LA(1);
 
-                if ( (LA10_0==23) ) {
+                if ( (LA10_0==22) ) {
                     alt10=1;
                 }
 
@@ -4213,7 +4212,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1619:1: ','
             {
              before(grammarAccess.getOpeningAccess().getCommaKeyword_6_2_0()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Opening__Group_6_2__0__Impl3180); 
+            match(input,22,FollowSets000.FOLLOW_22_in_rule__Opening__Group_6_2__0__Impl3180); 
              after(grammarAccess.getOpeningAccess().getCommaKeyword_6_2_0()); 
 
             }
@@ -4368,7 +4367,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1682:1: 'Pipe'
             {
              before(grammarAccess.getFlowSegmentAccess().getPipeKeyword_0()); 
-            match(input,24,FollowSets000.FOLLOW_24_in_rule__FlowSegment__Group__0__Impl3303); 
+            match(input,23,FollowSets000.FOLLOW_23_in_rule__FlowSegment__Group__0__Impl3303); 
              after(grammarAccess.getFlowSegmentAccess().getPipeKeyword_0()); 
 
             }
@@ -4532,7 +4531,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==20) ) {
+            if ( (LA11_0==19) ) {
                 alt11=1;
             }
             switch (alt11) {
@@ -4628,7 +4627,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==21) ) {
+            if ( (LA12_0==20) ) {
                 alt12=1;
             }
             switch (alt12) {
@@ -4720,7 +4719,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1800:1: 'Placement'
             {
              before(grammarAccess.getFlowSegmentAccess().getPlacementKeyword_4()); 
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__FlowSegment__Group__4__Impl3547); 
+            match(input,18,FollowSets000.FOLLOW_18_in_rule__FlowSegment__Group__4__Impl3547); 
              after(grammarAccess.getFlowSegmentAccess().getPlacementKeyword_4()); 
 
             }
@@ -4875,7 +4874,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1871:1: 'Name'
             {
              before(grammarAccess.getFlowSegmentAccess().getNameKeyword_2_0()); 
-            match(input,20,FollowSets000.FOLLOW_20_in_rule__FlowSegment__Group_2__0__Impl3678); 
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__FlowSegment__Group_2__0__Impl3678); 
              after(grammarAccess.getFlowSegmentAccess().getNameKeyword_2_0()); 
 
             }
@@ -5030,7 +5029,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:1934:1: 'Description'
             {
              before(grammarAccess.getFlowSegmentAccess().getDescriptionKeyword_3_0()); 
-            match(input,21,FollowSets000.FOLLOW_21_in_rule__FlowSegment__Group_3__0__Impl3801); 
+            match(input,20,FollowSets000.FOLLOW_20_in_rule__FlowSegment__Group_3__0__Impl3801); 
              after(grammarAccess.getFlowSegmentAccess().getDescriptionKeyword_3_0()); 
 
             }
@@ -5260,7 +5259,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2028:1: '{'
             {
              before(grammarAccess.getLocalPlacementAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__LocalPlacement__Group__1__Impl3985); 
+            match(input,24,FollowSets000.FOLLOW_24_in_rule__LocalPlacement__Group__1__Impl3985); 
              after(grammarAccess.getLocalPlacementAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
@@ -5339,7 +5338,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==28) ) {
+            if ( (LA13_0==27) ) {
                 alt13=1;
             }
             switch (alt13) {
@@ -5431,7 +5430,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2088:1: 'Axis2Placement3d'
             {
              before(grammarAccess.getLocalPlacementAccess().getAxis2Placement3dKeyword_3()); 
-            match(input,26,FollowSets000.FOLLOW_26_in_rule__LocalPlacement__Group__3__Impl4108); 
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__LocalPlacement__Group__3__Impl4108); 
              after(grammarAccess.getLocalPlacementAccess().getAxis2Placement3dKeyword_3()); 
 
             }
@@ -5586,7 +5585,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2147:1: '}'
             {
              before(grammarAccess.getLocalPlacementAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,27,FollowSets000.FOLLOW_27_in_rule__LocalPlacement__Group__5__Impl4227); 
+            match(input,26,FollowSets000.FOLLOW_26_in_rule__LocalPlacement__Group__5__Impl4227); 
              after(grammarAccess.getLocalPlacementAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -5661,7 +5660,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2190:1: 'RelativeTo'
             {
              before(grammarAccess.getLocalPlacementAccess().getRelativeToKeyword_2_0()); 
-            match(input,28,FollowSets000.FOLLOW_28_in_rule__LocalPlacement__Group_2__0__Impl4301); 
+            match(input,27,FollowSets000.FOLLOW_27_in_rule__LocalPlacement__Group_2__0__Impl4301); 
              after(grammarAccess.getLocalPlacementAccess().getRelativeToKeyword_2_0()); 
 
             }
@@ -5816,7 +5815,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2253:1: '{'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getLeftCurlyBracketKeyword_0()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__Axis2Placement3D__Group__0__Impl4424); 
+            match(input,24,FollowSets000.FOLLOW_24_in_rule__Axis2Placement3D__Group__0__Impl4424); 
              after(grammarAccess.getAxis2Placement3DAccess().getLeftCurlyBracketKeyword_0()); 
 
             }
@@ -5891,7 +5890,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2284:1: 'Cartesian'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCartesianKeyword_1()); 
-            match(input,29,FollowSets000.FOLLOW_29_in_rule__Axis2Placement3D__Group__1__Impl4486); 
+            match(input,28,FollowSets000.FOLLOW_28_in_rule__Axis2Placement3D__Group__1__Impl4486); 
              after(grammarAccess.getAxis2Placement3DAccess().getCartesianKeyword_1()); 
 
             }
@@ -5966,7 +5965,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2315:1: '('
             {
              before(grammarAccess.getAxis2Placement3DAccess().getLeftParenthesisKeyword_2()); 
-            match(input,30,FollowSets000.FOLLOW_30_in_rule__Axis2Placement3D__Group__2__Impl4548); 
+            match(input,29,FollowSets000.FOLLOW_29_in_rule__Axis2Placement3D__Group__2__Impl4548); 
              after(grammarAccess.getAxis2Placement3DAccess().getLeftParenthesisKeyword_2()); 
 
             }
@@ -6126,7 +6125,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2375:1: ','
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCommaKeyword_4()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Axis2Placement3D__Group__4__Impl4670); 
+            match(input,22,FollowSets000.FOLLOW_22_in_rule__Axis2Placement3D__Group__4__Impl4670); 
              after(grammarAccess.getAxis2Placement3DAccess().getCommaKeyword_4()); 
 
             }
@@ -6286,7 +6285,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2435:1: ','
             {
              before(grammarAccess.getAxis2Placement3DAccess().getCommaKeyword_6()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Axis2Placement3D__Group__6__Impl4792); 
+            match(input,22,FollowSets000.FOLLOW_22_in_rule__Axis2Placement3D__Group__6__Impl4792); 
              after(grammarAccess.getAxis2Placement3DAccess().getCommaKeyword_6()); 
 
             }
@@ -6446,7 +6445,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2495:1: ')'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getRightParenthesisKeyword_8()); 
-            match(input,31,FollowSets000.FOLLOW_31_in_rule__Axis2Placement3D__Group__8__Impl4914); 
+            match(input,30,FollowSets000.FOLLOW_30_in_rule__Axis2Placement3D__Group__8__Impl4914); 
              after(grammarAccess.getAxis2Placement3DAccess().getRightParenthesisKeyword_8()); 
 
             }
@@ -6521,7 +6520,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2526:1: 'Axis'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getAxisKeyword_9()); 
-            match(input,32,FollowSets000.FOLLOW_32_in_rule__Axis2Placement3D__Group__9__Impl4976); 
+            match(input,31,FollowSets000.FOLLOW_31_in_rule__Axis2Placement3D__Group__9__Impl4976); 
              after(grammarAccess.getAxis2Placement3DAccess().getAxisKeyword_9()); 
 
             }
@@ -6681,7 +6680,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2586:1: 'RefDirection'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getRefDirectionKeyword_11()); 
-            match(input,33,FollowSets000.FOLLOW_33_in_rule__Axis2Placement3D__Group__11__Impl5098); 
+            match(input,32,FollowSets000.FOLLOW_32_in_rule__Axis2Placement3D__Group__11__Impl5098); 
              after(grammarAccess.getAxis2Placement3DAccess().getRefDirectionKeyword_11()); 
 
             }
@@ -6836,7 +6835,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2645:1: '}'
             {
              before(grammarAccess.getAxis2Placement3DAccess().getRightCurlyBracketKeyword_13()); 
-            match(input,27,FollowSets000.FOLLOW_27_in_rule__Axis2Placement3D__Group__13__Impl5217); 
+            match(input,26,FollowSets000.FOLLOW_26_in_rule__Axis2Placement3D__Group__13__Impl5217); 
              after(grammarAccess.getAxis2Placement3DAccess().getRightCurlyBracketKeyword_13()); 
 
             }
@@ -6915,14 +6914,14 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt14=2;
             int LA14_0 = input.LA(1);
 
-            if ( (LA14_0==34) ) {
+            if ( (LA14_0==33) ) {
                 alt14=1;
             }
             switch (alt14) {
                 case 1 :
                     // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2706:2: '-'
                     {
-                    match(input,34,FollowSets000.FOLLOW_34_in_rule__EDouble__Group__0__Impl5308); 
+                    match(input,33,FollowSets000.FOLLOW_33_in_rule__EDouble__Group__0__Impl5308); 
 
                     }
                     break;
@@ -7095,7 +7094,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2764:1: '.'
             {
              before(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
-            match(input,35,FollowSets000.FOLLOW_35_in_rule__EDouble__Group__2__Impl5434); 
+            match(input,34,FollowSets000.FOLLOW_34_in_rule__EDouble__Group__2__Impl5434); 
              after(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
 
             }
@@ -7244,7 +7243,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( ((LA16_0>=12 && LA16_0<=13)) ) {
+            if ( ((LA16_0>=11 && LA16_0<=12)) ) {
                 alt16=1;
             }
             switch (alt16) {
@@ -7425,14 +7424,14 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( (LA17_0==34) ) {
+            if ( (LA17_0==33) ) {
                 alt17=1;
             }
             switch (alt17) {
                 case 1 :
                     // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2893:2: '-'
                     {
-                    match(input,34,FollowSets000.FOLLOW_34_in_rule__EDouble__Group_4__1__Impl5684); 
+                    match(input,33,FollowSets000.FOLLOW_33_in_rule__EDouble__Group_4__1__Impl5684); 
 
                     }
                     break;
@@ -7583,7 +7582,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:2956:1: '('
             {
              before(grammarAccess.getDirectionAccess().getLeftParenthesisKeyword_0()); 
-            match(input,30,FollowSets000.FOLLOW_30_in_rule__Direction__Group__0__Impl5810); 
+            match(input,29,FollowSets000.FOLLOW_29_in_rule__Direction__Group__0__Impl5810); 
              after(grammarAccess.getDirectionAccess().getLeftParenthesisKeyword_0()); 
 
             }
@@ -7743,7 +7742,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3016:1: ','
             {
              before(grammarAccess.getDirectionAccess().getCommaKeyword_2()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Direction__Group__2__Impl5932); 
+            match(input,22,FollowSets000.FOLLOW_22_in_rule__Direction__Group__2__Impl5932); 
              after(grammarAccess.getDirectionAccess().getCommaKeyword_2()); 
 
             }
@@ -7907,7 +7906,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( (LA18_0==23) ) {
+            if ( (LA18_0==22) ) {
                 alt18=1;
             }
             switch (alt18) {
@@ -7994,7 +7993,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3104:1: ')'
             {
              before(grammarAccess.getDirectionAccess().getRightParenthesisKeyword_5()); 
-            match(input,31,FollowSets000.FOLLOW_31_in_rule__Direction__Group__5__Impl6112); 
+            match(input,30,FollowSets000.FOLLOW_30_in_rule__Direction__Group__5__Impl6112); 
              after(grammarAccess.getDirectionAccess().getRightParenthesisKeyword_5()); 
 
             }
@@ -8069,7 +8068,7 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3147:1: ','
             {
              before(grammarAccess.getDirectionAccess().getCommaKeyword_4_0()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Direction__Group_4__0__Impl6186); 
+            match(input,22,FollowSets000.FOLLOW_22_in_rule__Direction__Group_4__0__Impl6186); 
              after(grammarAccess.getDirectionAccess().getCommaKeyword_4_0()); 
 
             }
@@ -8419,21 +8418,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallRule__NameAssignment_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3283:1: rule__WallRule__NameAssignment_1 : ( RULE_PID ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3283:1: rule__WallRule__NameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__WallRule__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3287:1: ( ( RULE_PID ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3288:1: ( RULE_PID )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3287:1: ( ( RULE_STRING ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3288:1: ( RULE_STRING )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3288:1: ( RULE_PID )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3289:1: RULE_PID
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3288:1: ( RULE_STRING )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3289:1: RULE_STRING
             {
-             before(grammarAccess.getWallRuleAccess().getNamePIDTerminalRuleCall_1_0()); 
-            match(input,RULE_PID,FollowSets000.FOLLOW_RULE_PID_in_rule__WallRule__NameAssignment_16469); 
-             after(grammarAccess.getWallRuleAccess().getNamePIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getWallRuleAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__WallRule__NameAssignment_16469); 
+             after(grammarAccess.getWallRuleAccess().getNameSTRINGTerminalRuleCall_1_0()); 
 
             }
 
@@ -8579,21 +8578,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__NameAssignment_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3343:1: rule__Opening__NameAssignment_1 : ( RULE_PID ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3343:1: rule__Opening__NameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Opening__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3347:1: ( ( RULE_PID ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3348:1: ( RULE_PID )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3347:1: ( ( RULE_STRING ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3348:1: ( RULE_STRING )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3348:1: ( RULE_PID )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3349:1: RULE_PID
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3348:1: ( RULE_STRING )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3349:1: RULE_STRING
             {
-             before(grammarAccess.getOpeningAccess().getNamePIDTerminalRuleCall_1_0()); 
-            match(input,RULE_PID,FollowSets000.FOLLOW_RULE_PID_in_rule__Opening__NameAssignment_16593); 
-             after(grammarAccess.getOpeningAccess().getNamePIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getOpeningAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Opening__NameAssignment_16593); 
+             after(grammarAccess.getOpeningAccess().getNameSTRINGTerminalRuleCall_1_0()); 
 
             }
 
@@ -8739,25 +8738,25 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__WallsAssignment_6_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3403:1: rule__Opening__WallsAssignment_6_1 : ( ( RULE_PID ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3403:1: rule__Opening__WallsAssignment_6_1 : ( ( RULE_STRING ) ) ;
     public final void rule__Opening__WallsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3407:1: ( ( ( RULE_PID ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3408:1: ( ( RULE_PID ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3407:1: ( ( ( RULE_STRING ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3408:1: ( ( RULE_STRING ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3408:1: ( ( RULE_PID ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3409:1: ( RULE_PID )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3408:1: ( ( RULE_STRING ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3409:1: ( RULE_STRING )
             {
              before(grammarAccess.getOpeningAccess().getWallsWallCrossReference_6_1_0()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3410:1: ( RULE_PID )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3411:1: RULE_PID
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3410:1: ( RULE_STRING )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3411:1: RULE_STRING
             {
-             before(grammarAccess.getOpeningAccess().getWallsWallPIDTerminalRuleCall_6_1_0_1()); 
-            match(input,RULE_PID,FollowSets000.FOLLOW_RULE_PID_in_rule__Opening__WallsAssignment_6_16721); 
-             after(grammarAccess.getOpeningAccess().getWallsWallPIDTerminalRuleCall_6_1_0_1()); 
+             before(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_6_1_0_1()); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Opening__WallsAssignment_6_16721); 
+             after(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_6_1_0_1()); 
 
             }
 
@@ -8784,25 +8783,25 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Opening__WallsAssignment_6_2_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3422:1: rule__Opening__WallsAssignment_6_2_1 : ( ( RULE_PID ) ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3422:1: rule__Opening__WallsAssignment_6_2_1 : ( ( RULE_STRING ) ) ;
     public final void rule__Opening__WallsAssignment_6_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3426:1: ( ( ( RULE_PID ) ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3427:1: ( ( RULE_PID ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3426:1: ( ( ( RULE_STRING ) ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3427:1: ( ( RULE_STRING ) )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3427:1: ( ( RULE_PID ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3428:1: ( RULE_PID )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3427:1: ( ( RULE_STRING ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3428:1: ( RULE_STRING )
             {
              before(grammarAccess.getOpeningAccess().getWallsWallCrossReference_6_2_1_0()); 
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3429:1: ( RULE_PID )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3430:1: RULE_PID
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3429:1: ( RULE_STRING )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3430:1: RULE_STRING
             {
-             before(grammarAccess.getOpeningAccess().getWallsWallPIDTerminalRuleCall_6_2_1_0_1()); 
-            match(input,RULE_PID,FollowSets000.FOLLOW_RULE_PID_in_rule__Opening__WallsAssignment_6_2_16760); 
-             after(grammarAccess.getOpeningAccess().getWallsWallPIDTerminalRuleCall_6_2_1_0_1()); 
+             before(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_6_2_1_0_1()); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Opening__WallsAssignment_6_2_16760); 
+             after(grammarAccess.getOpeningAccess().getWallsWallSTRINGTerminalRuleCall_6_2_1_0_1()); 
 
             }
 
@@ -8829,21 +8828,21 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FlowSegment__NameAssignment_1"
-    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3441:1: rule__FlowSegment__NameAssignment_1 : ( RULE_PID ) ;
+    // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3441:1: rule__FlowSegment__NameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__FlowSegment__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3445:1: ( ( RULE_PID ) )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3446:1: ( RULE_PID )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3445:1: ( ( RULE_STRING ) )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3446:1: ( RULE_STRING )
             {
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3446:1: ( RULE_PID )
-            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3447:1: RULE_PID
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3446:1: ( RULE_STRING )
+            // ../org.xtext.pipes.ui/src-gen/org/xtext/pipes/ui/contentassist/antlr/internal/InternalPipes.g:3447:1: RULE_STRING
             {
-             before(grammarAccess.getFlowSegmentAccess().getNamePIDTerminalRuleCall_1_0()); 
-            match(input,RULE_PID,FollowSets000.FOLLOW_RULE_PID_in_rule__FlowSegment__NameAssignment_16795); 
-             after(grammarAccess.getFlowSegmentAccess().getNamePIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getFlowSegmentAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__FlowSegment__NameAssignment_16795); 
+             after(grammarAccess.getFlowSegmentAccess().getNameSTRINGTerminalRuleCall_1_0()); 
 
             }
 
@@ -9431,252 +9430,252 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleDirection_in_entryRuleDirection540 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleDirection547 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Direction__Group__0_in_ruleDirection573 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__EDouble__Alternatives_4_0610 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_13_in_rule__EDouble__Alternatives_4_0630 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0662 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_11_in_rule__EDouble__Alternatives_4_0610 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__EDouble__Alternatives_4_0630 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0662 = new BitSet(new long[]{0x0000000000002000L});
         public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__0665 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__1723 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__1723 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__1726 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Model__Group__1__Impl754 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__2785 = new BitSet(new long[]{0x0000000000028000L});
+        public static final BitSet FOLLOW_13_in_rule__Model__Group__1__Impl754 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__2785 = new BitSet(new long[]{0x0000000000014000L});
         public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__2788 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Model__ElementsAssignment_2_in_rule__Model__Group__2__Impl815 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__3845 = new BitSet(new long[]{0x0000000000028000L});
+        public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__3845 = new BitSet(new long[]{0x0000000000014000L});
         public static final BitSet FOLLOW_rule__Model__Group__4_in_rule__Model__Group__3848 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_3__0_in_rule__Model__Group__3__Impl875 = new BitSet(new long[]{0x0000000000020002L});
-        public static final BitSet FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__4906 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_rule__Model__Group_3__0_in_rule__Model__Group__3__Impl875 = new BitSet(new long[]{0x0000000000010002L});
+        public static final BitSet FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__4906 = new BitSet(new long[]{0x0000000000200000L});
         public static final BitSet FOLLOW_rule__Model__Group__5_in_rule__Model__Group__4909 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rule__Model__Group__4__Impl937 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__5968 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_14_in_rule__Model__Group__4__Impl937 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__5968 = new BitSet(new long[]{0x0000000000018000L});
         public static final BitSet FOLLOW_rule__Model__Group__6_in_rule__Model__Group__5971 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Model__ElementsAssignment_5_in_rule__Model__Group__5__Impl998 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__6__Impl_in_rule__Model__Group__61028 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_rule__Model__Group__6__Impl_in_rule__Model__Group__61028 = new BitSet(new long[]{0x0000000000018000L});
         public static final BitSet FOLLOW_rule__Model__Group__7_in_rule__Model__Group__61031 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_6__0_in_rule__Model__Group__6__Impl1058 = new BitSet(new long[]{0x0000000000020002L});
-        public static final BitSet FOLLOW_rule__Model__Group__7__Impl_in_rule__Model__Group__71089 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_rule__Model__Group_6__0_in_rule__Model__Group__6__Impl1058 = new BitSet(new long[]{0x0000000000010002L});
+        public static final BitSet FOLLOW_rule__Model__Group__7__Impl_in_rule__Model__Group__71089 = new BitSet(new long[]{0x0000000000800000L});
         public static final BitSet FOLLOW_rule__Model__Group__8_in_rule__Model__Group__71092 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__Model__Group__7__Impl1120 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group__8__Impl_in_rule__Model__Group__81151 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_15_in_rule__Model__Group__7__Impl1120 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Model__Group__8__Impl_in_rule__Model__Group__81151 = new BitSet(new long[]{0x0000000000010000L});
         public static final BitSet FOLLOW_rule__Model__Group__9_in_rule__Model__Group__81154 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Model__ElementsAssignment_8_in_rule__Model__Group__8__Impl1181 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Model__Group__9__Impl_in_rule__Model__Group__91211 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_9__0_in_rule__Model__Group__9__Impl1238 = new BitSet(new long[]{0x0000000000020002L});
-        public static final BitSet FOLLOW_rule__Model__Group_3__0__Impl_in_rule__Model__Group_3__01289 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_rule__Model__Group_9__0_in_rule__Model__Group__9__Impl1238 = new BitSet(new long[]{0x0000000000010002L});
+        public static final BitSet FOLLOW_rule__Model__Group_3__0__Impl_in_rule__Model__Group_3__01289 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_rule__Model__Group_3__1_in_rule__Model__Group_3__01292 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_rule__Model__Group_3__0__Impl1320 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_rule__Model__Group_3__0__Impl1320 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Model__Group_3__1__Impl_in_rule__Model__Group_3__11351 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Model__ElementsAssignment_3_1_in_rule__Model__Group_3__1__Impl1378 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_6__0__Impl_in_rule__Model__Group_6__01412 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_rule__Model__Group_6__0__Impl_in_rule__Model__Group_6__01412 = new BitSet(new long[]{0x0000000000200000L});
         public static final BitSet FOLLOW_rule__Model__Group_6__1_in_rule__Model__Group_6__01415 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_rule__Model__Group_6__0__Impl1443 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_rule__Model__Group_6__0__Impl1443 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Model__Group_6__1__Impl_in_rule__Model__Group_6__11474 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Model__ElementsAssignment_6_1_in_rule__Model__Group_6__1__Impl1501 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Model__Group_9__0__Impl_in_rule__Model__Group_9__01535 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_rule__Model__Group_9__0__Impl_in_rule__Model__Group_9__01535 = new BitSet(new long[]{0x0000000000800000L});
         public static final BitSet FOLLOW_rule__Model__Group_9__1_in_rule__Model__Group_9__01538 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_rule__Model__Group_9__0__Impl1566 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_rule__Model__Group_9__0__Impl1566 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Model__Group_9__1__Impl_in_rule__Model__Group_9__11597 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Model__ElementsAssignment_9_1_in_rule__Model__Group_9__1__Impl1624 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__0__Impl_in_rule__WallRule__Group__01658 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__0__Impl_in_rule__WallRule__Group__01658 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__WallRule__Group__1_in_rule__WallRule__Group__01661 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__WallRule__Group__0__Impl1689 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__1__Impl_in_rule__WallRule__Group__11720 = new BitSet(new long[]{0x0000000000380000L});
+        public static final BitSet FOLLOW_17_in_rule__WallRule__Group__0__Impl1689 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__1__Impl_in_rule__WallRule__Group__11720 = new BitSet(new long[]{0x00000000001C0000L});
         public static final BitSet FOLLOW_rule__WallRule__Group__2_in_rule__WallRule__Group__11723 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__NameAssignment_1_in_rule__WallRule__Group__1__Impl1750 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__2__Impl_in_rule__WallRule__Group__21780 = new BitSet(new long[]{0x0000000000380000L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__2__Impl_in_rule__WallRule__Group__21780 = new BitSet(new long[]{0x00000000001C0000L});
         public static final BitSet FOLLOW_rule__WallRule__Group__3_in_rule__WallRule__Group__21783 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__Group_2__0_in_rule__WallRule__Group__2__Impl1810 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__3__Impl_in_rule__WallRule__Group__31841 = new BitSet(new long[]{0x0000000000380000L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__3__Impl_in_rule__WallRule__Group__31841 = new BitSet(new long[]{0x00000000001C0000L});
         public static final BitSet FOLLOW_rule__WallRule__Group__4_in_rule__WallRule__Group__31844 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__Group_3__0_in_rule__WallRule__Group__3__Impl1871 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__WallRule__Group__4__Impl_in_rule__WallRule__Group__41902 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__WallRule__Group__4__Impl_in_rule__WallRule__Group__41902 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_rule__WallRule__Group__5_in_rule__WallRule__Group__41905 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__WallRule__Group__4__Impl1933 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_rule__WallRule__Group__4__Impl1933 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__Group__5__Impl_in_rule__WallRule__Group__51964 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__PlacementAssignment_5_in_rule__WallRule__Group__5__Impl1991 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__Group_2__0__Impl_in_rule__WallRule__Group_2__02033 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__WallRule__Group_2__1_in_rule__WallRule__Group_2__02036 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__WallRule__Group_2__0__Impl2064 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__WallRule__Group_2__0__Impl2064 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__Group_2__1__Impl_in_rule__WallRule__Group_2__12095 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__ElementNameAssignment_2_1_in_rule__WallRule__Group_2__1__Impl2122 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__Group_3__0__Impl_in_rule__WallRule__Group_3__02156 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__WallRule__Group_3__1_in_rule__WallRule__Group_3__02159 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_rule__WallRule__Group_3__0__Impl2187 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_rule__WallRule__Group_3__0__Impl2187 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__Group_3__1__Impl_in_rule__WallRule__Group_3__12218 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__WallRule__DescriptionAssignment_3_1_in_rule__WallRule__Group_3__1__Impl2245 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__0__Impl_in_rule__Opening__Group__02279 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__Opening__Group__0__Impl_in_rule__Opening__Group__02279 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__Opening__Group__1_in_rule__Opening__Group__02282 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_rule__Opening__Group__0__Impl2310 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__1__Impl_in_rule__Opening__Group__12341 = new BitSet(new long[]{0x0000000000380000L});
+        public static final BitSet FOLLOW_21_in_rule__Opening__Group__0__Impl2310 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__1__Impl_in_rule__Opening__Group__12341 = new BitSet(new long[]{0x00000000001C0000L});
         public static final BitSet FOLLOW_rule__Opening__Group__2_in_rule__Opening__Group__12344 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__NameAssignment_1_in_rule__Opening__Group__1__Impl2371 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__2__Impl_in_rule__Opening__Group__22401 = new BitSet(new long[]{0x0000000000380000L});
+        public static final BitSet FOLLOW_rule__Opening__Group__2__Impl_in_rule__Opening__Group__22401 = new BitSet(new long[]{0x00000000001C0000L});
         public static final BitSet FOLLOW_rule__Opening__Group__3_in_rule__Opening__Group__22404 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__Group_2__0_in_rule__Opening__Group__2__Impl2431 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__3__Impl_in_rule__Opening__Group__32462 = new BitSet(new long[]{0x0000000000380000L});
+        public static final BitSet FOLLOW_rule__Opening__Group__3__Impl_in_rule__Opening__Group__32462 = new BitSet(new long[]{0x00000000001C0000L});
         public static final BitSet FOLLOW_rule__Opening__Group__4_in_rule__Opening__Group__32465 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__Group_3__0_in_rule__Opening__Group__3__Impl2492 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__4__Impl_in_rule__Opening__Group__42523 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__Opening__Group__4__Impl_in_rule__Opening__Group__42523 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_rule__Opening__Group__5_in_rule__Opening__Group__42526 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Opening__Group__4__Impl2554 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group__5__Impl_in_rule__Opening__Group__52585 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_18_in_rule__Opening__Group__4__Impl2554 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group__5__Impl_in_rule__Opening__Group__52585 = new BitSet(new long[]{0x0000000000002000L});
         public static final BitSet FOLLOW_rule__Opening__Group__6_in_rule__Opening__Group__52588 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__PlacementAssignment_5_in_rule__Opening__Group__5__Impl2615 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__Group__6__Impl_in_rule__Opening__Group__62645 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__Group_6__0_in_rule__Opening__Group__6__Impl2672 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__Group_2__0__Impl_in_rule__Opening__Group_2__02717 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__Opening__Group_2__1_in_rule__Opening__Group_2__02720 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__Opening__Group_2__0__Impl2748 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__Opening__Group_2__0__Impl2748 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__Group_2__1__Impl_in_rule__Opening__Group_2__12779 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__ElementNameAssignment_2_1_in_rule__Opening__Group_2__1__Impl2806 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__Group_3__0__Impl_in_rule__Opening__Group_3__02840 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__Opening__Group_3__1_in_rule__Opening__Group_3__02843 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_rule__Opening__Group_3__0__Impl2871 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_rule__Opening__Group_3__0__Impl2871 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__Group_3__1__Impl_in_rule__Opening__Group_3__12902 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__DescriptionAssignment_3_1_in_rule__Opening__Group_3__1__Impl2929 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_6__0__Impl_in_rule__Opening__Group_6__02963 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__Opening__Group_6__0__Impl_in_rule__Opening__Group_6__02963 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__Opening__Group_6__1_in_rule__Opening__Group_6__02966 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Opening__Group_6__0__Impl2994 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_6__1__Impl_in_rule__Opening__Group_6__13025 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_13_in_rule__Opening__Group_6__0__Impl2994 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_6__1__Impl_in_rule__Opening__Group_6__13025 = new BitSet(new long[]{0x0000000000400000L});
         public static final BitSet FOLLOW_rule__Opening__Group_6__2_in_rule__Opening__Group_6__13028 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__WallsAssignment_6_1_in_rule__Opening__Group_6__1__Impl3055 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__Group_6__2__Impl_in_rule__Opening__Group_6__23085 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_6_2__0_in_rule__Opening__Group_6__2__Impl3112 = new BitSet(new long[]{0x0000000000800002L});
-        public static final BitSet FOLLOW_rule__Opening__Group_6_2__0__Impl_in_rule__Opening__Group_6_2__03149 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__Opening__Group_6_2__0_in_rule__Opening__Group_6__2__Impl3112 = new BitSet(new long[]{0x0000000000400002L});
+        public static final BitSet FOLLOW_rule__Opening__Group_6_2__0__Impl_in_rule__Opening__Group_6_2__03149 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__Opening__Group_6_2__1_in_rule__Opening__Group_6_2__03152 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Opening__Group_6_2__0__Impl3180 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_22_in_rule__Opening__Group_6_2__0__Impl3180 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__Group_6_2__1__Impl_in_rule__Opening__Group_6_2__13211 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Opening__WallsAssignment_6_2_1_in_rule__Opening__Group_6_2__1__Impl3238 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__0__Impl_in_rule__FlowSegment__Group__03272 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__0__Impl_in_rule__FlowSegment__Group__03272 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group__1_in_rule__FlowSegment__Group__03275 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_24_in_rule__FlowSegment__Group__0__Impl3303 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__1__Impl_in_rule__FlowSegment__Group__13334 = new BitSet(new long[]{0x0000000000380000L});
+        public static final BitSet FOLLOW_23_in_rule__FlowSegment__Group__0__Impl3303 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__1__Impl_in_rule__FlowSegment__Group__13334 = new BitSet(new long[]{0x00000000001C0000L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group__2_in_rule__FlowSegment__Group__13337 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__NameAssignment_1_in_rule__FlowSegment__Group__1__Impl3364 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__2__Impl_in_rule__FlowSegment__Group__23394 = new BitSet(new long[]{0x0000000000380000L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__2__Impl_in_rule__FlowSegment__Group__23394 = new BitSet(new long[]{0x00000000001C0000L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group__3_in_rule__FlowSegment__Group__23397 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group_2__0_in_rule__FlowSegment__Group__2__Impl3424 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__3__Impl_in_rule__FlowSegment__Group__33455 = new BitSet(new long[]{0x0000000000380000L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__3__Impl_in_rule__FlowSegment__Group__33455 = new BitSet(new long[]{0x00000000001C0000L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group__4_in_rule__FlowSegment__Group__33458 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group_3__0_in_rule__FlowSegment__Group__3__Impl3485 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__FlowSegment__Group__4__Impl_in_rule__FlowSegment__Group__43516 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__FlowSegment__Group__4__Impl_in_rule__FlowSegment__Group__43516 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group__5_in_rule__FlowSegment__Group__43519 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__FlowSegment__Group__4__Impl3547 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_rule__FlowSegment__Group__4__Impl3547 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group__5__Impl_in_rule__FlowSegment__Group__53578 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__PlacementAssignment_5_in_rule__FlowSegment__Group__5__Impl3605 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group_2__0__Impl_in_rule__FlowSegment__Group_2__03647 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group_2__1_in_rule__FlowSegment__Group_2__03650 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__FlowSegment__Group_2__0__Impl3678 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__FlowSegment__Group_2__0__Impl3678 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group_2__1__Impl_in_rule__FlowSegment__Group_2__13709 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__ElementNameAssignment_2_1_in_rule__FlowSegment__Group_2__1__Impl3736 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group_3__0__Impl_in_rule__FlowSegment__Group_3__03770 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group_3__1_in_rule__FlowSegment__Group_3__03773 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_rule__FlowSegment__Group_3__0__Impl3801 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_rule__FlowSegment__Group_3__0__Impl3801 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__Group_3__1__Impl_in_rule__FlowSegment__Group_3__13832 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__FlowSegment__DescriptionAssignment_3_1_in_rule__FlowSegment__Group_3__1__Impl3859 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__0__Impl_in_rule__LocalPlacement__Group__03893 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__0__Impl_in_rule__LocalPlacement__Group__03893 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_rule__LocalPlacement__Group__1_in_rule__LocalPlacement__Group__03896 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__1__Impl_in_rule__LocalPlacement__Group__13954 = new BitSet(new long[]{0x0000000014000000L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__1__Impl_in_rule__LocalPlacement__Group__13954 = new BitSet(new long[]{0x000000000A000000L});
         public static final BitSet FOLLOW_rule__LocalPlacement__Group__2_in_rule__LocalPlacement__Group__13957 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__LocalPlacement__Group__1__Impl3985 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__2__Impl_in_rule__LocalPlacement__Group__24016 = new BitSet(new long[]{0x0000000014000000L});
+        public static final BitSet FOLLOW_24_in_rule__LocalPlacement__Group__1__Impl3985 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__2__Impl_in_rule__LocalPlacement__Group__24016 = new BitSet(new long[]{0x000000000A000000L});
         public static final BitSet FOLLOW_rule__LocalPlacement__Group__3_in_rule__LocalPlacement__Group__24019 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__0_in_rule__LocalPlacement__Group__2__Impl4046 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__3__Impl_in_rule__LocalPlacement__Group__34077 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__3__Impl_in_rule__LocalPlacement__Group__34077 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_rule__LocalPlacement__Group__4_in_rule__LocalPlacement__Group__34080 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_rule__LocalPlacement__Group__3__Impl4108 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group__4__Impl_in_rule__LocalPlacement__Group__44139 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_25_in_rule__LocalPlacement__Group__3__Impl4108 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group__4__Impl_in_rule__LocalPlacement__Group__44139 = new BitSet(new long[]{0x0000000004000000L});
         public static final BitSet FOLLOW_rule__LocalPlacement__Group__5_in_rule__LocalPlacement__Group__44142 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__LocalPlacement__Axis2placement3dAssignment_4_in_rule__LocalPlacement__Group__4__Impl4169 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__LocalPlacement__Group__5__Impl_in_rule__LocalPlacement__Group__54199 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_27_in_rule__LocalPlacement__Group__5__Impl4227 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__0__Impl_in_rule__LocalPlacement__Group_2__04270 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_26_in_rule__LocalPlacement__Group__5__Impl4227 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__0__Impl_in_rule__LocalPlacement__Group_2__04270 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__1_in_rule__LocalPlacement__Group_2__04273 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_28_in_rule__LocalPlacement__Group_2__0__Impl4301 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_27_in_rule__LocalPlacement__Group_2__0__Impl4301 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__LocalPlacement__Group_2__1__Impl_in_rule__LocalPlacement__Group_2__14332 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__LocalPlacement__RelativeToAssignment_2_1_in_rule__LocalPlacement__Group_2__1__Impl4359 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__0__Impl_in_rule__Axis2Placement3D__Group__04393 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__0__Impl_in_rule__Axis2Placement3D__Group__04393 = new BitSet(new long[]{0x0000000010000000L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__1_in_rule__Axis2Placement3D__Group__04396 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__Axis2Placement3D__Group__0__Impl4424 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__1__Impl_in_rule__Axis2Placement3D__Group__14455 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_24_in_rule__Axis2Placement3D__Group__0__Impl4424 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__1__Impl_in_rule__Axis2Placement3D__Group__14455 = new BitSet(new long[]{0x0000000020000000L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__2_in_rule__Axis2Placement3D__Group__14458 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_29_in_rule__Axis2Placement3D__Group__1__Impl4486 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__2__Impl_in_rule__Axis2Placement3D__Group__24517 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_28_in_rule__Axis2Placement3D__Group__1__Impl4486 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__2__Impl_in_rule__Axis2Placement3D__Group__24517 = new BitSet(new long[]{0x0000000600000020L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__3_in_rule__Axis2Placement3D__Group__24520 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_rule__Axis2Placement3D__Group__2__Impl4548 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__3__Impl_in_rule__Axis2Placement3D__Group__34579 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_29_in_rule__Axis2Placement3D__Group__2__Impl4548 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__3__Impl_in_rule__Axis2Placement3D__Group__34579 = new BitSet(new long[]{0x0000000000400000L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__4_in_rule__Axis2Placement3D__Group__34582 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__CartesianXAssignment_3_in_rule__Axis2Placement3D__Group__3__Impl4609 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__4__Impl_in_rule__Axis2Placement3D__Group__44639 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__4__Impl_in_rule__Axis2Placement3D__Group__44639 = new BitSet(new long[]{0x0000000600000020L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__5_in_rule__Axis2Placement3D__Group__44642 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Axis2Placement3D__Group__4__Impl4670 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__5__Impl_in_rule__Axis2Placement3D__Group__54701 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_22_in_rule__Axis2Placement3D__Group__4__Impl4670 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__5__Impl_in_rule__Axis2Placement3D__Group__54701 = new BitSet(new long[]{0x0000000000400000L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__6_in_rule__Axis2Placement3D__Group__54704 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__CartesianYAssignment_5_in_rule__Axis2Placement3D__Group__5__Impl4731 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__6__Impl_in_rule__Axis2Placement3D__Group__64761 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__6__Impl_in_rule__Axis2Placement3D__Group__64761 = new BitSet(new long[]{0x0000000600000020L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__7_in_rule__Axis2Placement3D__Group__64764 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Axis2Placement3D__Group__6__Impl4792 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__7__Impl_in_rule__Axis2Placement3D__Group__74823 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_22_in_rule__Axis2Placement3D__Group__6__Impl4792 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__7__Impl_in_rule__Axis2Placement3D__Group__74823 = new BitSet(new long[]{0x0000000040000000L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__8_in_rule__Axis2Placement3D__Group__74826 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__CartesianZAssignment_7_in_rule__Axis2Placement3D__Group__7__Impl4853 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__8__Impl_in_rule__Axis2Placement3D__Group__84883 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__8__Impl_in_rule__Axis2Placement3D__Group__84883 = new BitSet(new long[]{0x0000000080000000L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__9_in_rule__Axis2Placement3D__Group__84886 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_31_in_rule__Axis2Placement3D__Group__8__Impl4914 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__9__Impl_in_rule__Axis2Placement3D__Group__94945 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_30_in_rule__Axis2Placement3D__Group__8__Impl4914 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__9__Impl_in_rule__Axis2Placement3D__Group__94945 = new BitSet(new long[]{0x0000000020000000L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__10_in_rule__Axis2Placement3D__Group__94948 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_32_in_rule__Axis2Placement3D__Group__9__Impl4976 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__10__Impl_in_rule__Axis2Placement3D__Group__105007 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_31_in_rule__Axis2Placement3D__Group__9__Impl4976 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__10__Impl_in_rule__Axis2Placement3D__Group__105007 = new BitSet(new long[]{0x0000000100000000L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__11_in_rule__Axis2Placement3D__Group__105010 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__AxisAssignment_10_in_rule__Axis2Placement3D__Group__10__Impl5037 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__11__Impl_in_rule__Axis2Placement3D__Group__115067 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__11__Impl_in_rule__Axis2Placement3D__Group__115067 = new BitSet(new long[]{0x0000000020000000L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__12_in_rule__Axis2Placement3D__Group__115070 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_33_in_rule__Axis2Placement3D__Group__11__Impl5098 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__12__Impl_in_rule__Axis2Placement3D__Group__125129 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_32_in_rule__Axis2Placement3D__Group__11__Impl5098 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__12__Impl_in_rule__Axis2Placement3D__Group__125129 = new BitSet(new long[]{0x0000000004000000L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__13_in_rule__Axis2Placement3D__Group__125132 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__RefDirectionAssignment_12_in_rule__Axis2Placement3D__Group__12__Impl5159 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Axis2Placement3D__Group__13__Impl_in_rule__Axis2Placement3D__Group__135189 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_27_in_rule__Axis2Placement3D__Group__13__Impl5217 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__0__Impl_in_rule__EDouble__Group__05276 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_26_in_rule__Axis2Placement3D__Group__13__Impl5217 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__0__Impl_in_rule__EDouble__Group__05276 = new BitSet(new long[]{0x0000000600000020L});
         public static final BitSet FOLLOW_rule__EDouble__Group__1_in_rule__EDouble__Group__05279 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_34_in_rule__EDouble__Group__0__Impl5308 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__1__Impl_in_rule__EDouble__Group__15341 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_33_in_rule__EDouble__Group__0__Impl5308 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__1__Impl_in_rule__EDouble__Group__15341 = new BitSet(new long[]{0x0000000600000020L});
         public static final BitSet FOLLOW_rule__EDouble__Group__2_in_rule__EDouble__Group__15344 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group__1__Impl5372 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__EDouble__Group__2__Impl_in_rule__EDouble__Group__25403 = new BitSet(new long[]{0x0000000000000020L});
         public static final BitSet FOLLOW_rule__EDouble__Group__3_in_rule__EDouble__Group__25406 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_35_in_rule__EDouble__Group__2__Impl5434 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group__3__Impl_in_rule__EDouble__Group__35465 = new BitSet(new long[]{0x0000000000003000L});
+        public static final BitSet FOLLOW_34_in_rule__EDouble__Group__2__Impl5434 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EDouble__Group__3__Impl_in_rule__EDouble__Group__35465 = new BitSet(new long[]{0x0000000000001800L});
         public static final BitSet FOLLOW_rule__EDouble__Group__4_in_rule__EDouble__Group__35468 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group__3__Impl5495 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__EDouble__Group__4__Impl_in_rule__EDouble__Group__45524 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__EDouble__Group_4__0_in_rule__EDouble__Group__4__Impl5551 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group_4__0__Impl_in_rule__EDouble__Group_4__05592 = new BitSet(new long[]{0x0000000400000020L});
+        public static final BitSet FOLLOW_rule__EDouble__Group_4__0__Impl_in_rule__EDouble__Group_4__05592 = new BitSet(new long[]{0x0000000200000020L});
         public static final BitSet FOLLOW_rule__EDouble__Group_4__1_in_rule__EDouble__Group_4__05595 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__EDouble__Alternatives_4_0_in_rule__EDouble__Group_4__0__Impl5622 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EDouble__Group_4__1__Impl_in_rule__EDouble__Group_4__15652 = new BitSet(new long[]{0x0000000400000020L});
+        public static final BitSet FOLLOW_rule__EDouble__Group_4__1__Impl_in_rule__EDouble__Group_4__15652 = new BitSet(new long[]{0x0000000200000020L});
         public static final BitSet FOLLOW_rule__EDouble__Group_4__2_in_rule__EDouble__Group_4__15655 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_34_in_rule__EDouble__Group_4__1__Impl5684 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_33_in_rule__EDouble__Group_4__1__Impl5684 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__EDouble__Group_4__2__Impl_in_rule__EDouble__Group_4__25717 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group_4__2__Impl5744 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__0__Impl_in_rule__Direction__Group__05779 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__Direction__Group__0__Impl_in_rule__Direction__Group__05779 = new BitSet(new long[]{0x0000000600000020L});
         public static final BitSet FOLLOW_rule__Direction__Group__1_in_rule__Direction__Group__05782 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_rule__Direction__Group__0__Impl5810 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__1__Impl_in_rule__Direction__Group__15841 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_29_in_rule__Direction__Group__0__Impl5810 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group__1__Impl_in_rule__Direction__Group__15841 = new BitSet(new long[]{0x0000000000400000L});
         public static final BitSet FOLLOW_rule__Direction__Group__2_in_rule__Direction__Group__15844 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Direction__XAssignment_1_in_rule__Direction__Group__1__Impl5871 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__2__Impl_in_rule__Direction__Group__25901 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_rule__Direction__Group__2__Impl_in_rule__Direction__Group__25901 = new BitSet(new long[]{0x0000000600000020L});
         public static final BitSet FOLLOW_rule__Direction__Group__3_in_rule__Direction__Group__25904 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Direction__Group__2__Impl5932 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__3__Impl_in_rule__Direction__Group__35963 = new BitSet(new long[]{0x0000000080800000L});
+        public static final BitSet FOLLOW_22_in_rule__Direction__Group__2__Impl5932 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group__3__Impl_in_rule__Direction__Group__35963 = new BitSet(new long[]{0x0000000040400000L});
         public static final BitSet FOLLOW_rule__Direction__Group__4_in_rule__Direction__Group__35966 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Direction__YAssignment_3_in_rule__Direction__Group__3__Impl5993 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group__4__Impl_in_rule__Direction__Group__46023 = new BitSet(new long[]{0x0000000080800000L});
+        public static final BitSet FOLLOW_rule__Direction__Group__4__Impl_in_rule__Direction__Group__46023 = new BitSet(new long[]{0x0000000040400000L});
         public static final BitSet FOLLOW_rule__Direction__Group__5_in_rule__Direction__Group__46026 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Direction__Group_4__0_in_rule__Direction__Group__4__Impl6053 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Direction__Group__5__Impl_in_rule__Direction__Group__56084 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_31_in_rule__Direction__Group__5__Impl6112 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Direction__Group_4__0__Impl_in_rule__Direction__Group_4__06155 = new BitSet(new long[]{0x0000000C00000020L});
+        public static final BitSet FOLLOW_30_in_rule__Direction__Group__5__Impl6112 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Direction__Group_4__0__Impl_in_rule__Direction__Group_4__06155 = new BitSet(new long[]{0x0000000600000020L});
         public static final BitSet FOLLOW_rule__Direction__Group_4__1_in_rule__Direction__Group_4__06158 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Direction__Group_4__0__Impl6186 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_22_in_rule__Direction__Group_4__0__Impl6186 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Direction__Group_4__1__Impl_in_rule__Direction__Group_4__16217 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Direction__ZAssignment_4_1_in_rule__Direction__Group_4__1__Impl6244 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleWallRule_in_rule__Model__ElementsAssignment_26283 = new BitSet(new long[]{0x0000000000000002L});
@@ -9685,17 +9684,17 @@ public class InternalPipesParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleOpening_in_rule__Model__ElementsAssignment_6_16376 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleFlowSegment_in_rule__Model__ElementsAssignment_86407 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleFlowSegment_in_rule__Model__ElementsAssignment_9_16438 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_PID_in_rule__WallRule__NameAssignment_16469 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__WallRule__NameAssignment_16469 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__WallRule__ElementNameAssignment_2_16500 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__WallRule__DescriptionAssignment_3_16531 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__WallRule__PlacementAssignment_56562 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_PID_in_rule__Opening__NameAssignment_16593 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Opening__NameAssignment_16593 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__Opening__ElementNameAssignment_2_16624 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__Opening__DescriptionAssignment_3_16655 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__Opening__PlacementAssignment_56686 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_PID_in_rule__Opening__WallsAssignment_6_16721 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_PID_in_rule__Opening__WallsAssignment_6_2_16760 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_PID_in_rule__FlowSegment__NameAssignment_16795 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Opening__WallsAssignment_6_16721 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Opening__WallsAssignment_6_2_16760 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__FlowSegment__NameAssignment_16795 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__FlowSegment__ElementNameAssignment_2_16826 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__FlowSegment__DescriptionAssignment_3_16857 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleLocalPlacement_in_rule__FlowSegment__PlacementAssignment_56888 = new BitSet(new long[]{0x0000000000000002L});
