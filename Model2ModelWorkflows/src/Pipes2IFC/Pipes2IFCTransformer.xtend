@@ -48,6 +48,8 @@ import org.eclipse.emf.edit.provider.ComposedAdapterFactory
 import org.eclipse.emf.common.command.BasicCommandStack
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement
 import pipes.Product
+import org.eclipse.emf.common.util.EList
+import org.eclipse.emf.common.util.BasicEList
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
@@ -61,7 +63,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	Resource resource
 	Uos uosItem
 	AdapterFactoryEditingDomain ed
-	Uos newElements
+	ArrayList<Entity> newElements
 	
 	def private localPlacementIsChanged(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
 		if(product != null && o != null) {
@@ -123,7 +125,6 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			]
 			// Check if the localPlacement is changed. If it is, make a new one and set the references.
 			if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
-<<<<<<< HEAD
 				val instance = FinalPackage::eINSTANCE
 				var lp = createLocalPlacement(o.placement)
 				var objectPlacement = createObjectPlacementType()
@@ -143,9 +144,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 				val newElements = ctx.get(newElementsSlot) as Uos
 				newElements.entity.add(lp)
 				print("")
-=======
 				updateIfcLocalPlacement(o, product, ctx)
->>>>>>> b599dd1ca81b6a6844d46c2b4ac620451abf950e
 			}
 			true
 		}
@@ -187,8 +186,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		}
 		
 		
-		val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, lp)
-		command.execute
+		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, lp)
+		command.execute*/
+		newElements.add(lp)
 		true
 	}
 	
@@ -218,7 +218,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		/*val Command addLocalPlacementCommand = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, ifcLocalPlacement)
 		addLocalPlacementCommand.execute*/
-		newElements.entity.add(ifcLocalPlacement)
+		newElements.add(ifcLocalPlacement)
 		
 		var refOpening = createRefOpening(f.id)
 		for (w: o.walls) {
@@ -231,7 +231,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		val Command addOpeningCommand = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 		
 		addOpeningCommand.execute*/
-		newElements.entity.add(f)
+		newElements.add(f)
 		
 		entityMap.put(f.id, f)	
 	}
@@ -281,7 +281,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.location.setIfcCartesianPoint(createRefCartesianPoint(cartesianPoint.id))
 		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 		command.execute*/
-		newElements.entity.add(f)
+		newElements.add(f)
 		
 	}
 	
@@ -310,7 +310,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		ratios.add(createDoubleWrapperTypeFromDouble(d.z))
 		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 		command.execute*/
-		newElements.entity.add(f)
+		newElements.add(f)
 	}
 	
 	def IfcDirection create f: ifcFactory.createIfcDirection() createRefDirection(String i) {
@@ -332,7 +332,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianZ))
 		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 		command.execute*/
-		newElements.entity.add(f)
+		newElements.add(f)
 	}
 	
 	def IfcCartesianPoint create f: ifcFactory.createIfcCartesianPoint createRefCartesianPoint(String i) {
@@ -362,7 +362,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.relatingBuildingElement.eSet(FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, createRefWall(wall.ref))
 		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 		command.execute*/
-		newElements.entity.add(f)
+		newElements.add(f)
 	}
 	
 	def IfcWall create f: ifcFactory.createIfcWall() createRefWall(String i) {
@@ -445,7 +445,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
 		resource = ctx.get(mainModelSlot) as Resource
 		
-		newElements = ifcFactory.createUos
+		newElements = new ArrayList<Entity>()
 		
 		val iter = resource.contents.get(0).eAllContents
 		while (iter.hasNext()) {
@@ -500,6 +500,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		collectGarbage(ctx)
 		ctx.put(mainModelSlot, resource)
+		ctx.put(newElementsSlot, newElements)
 		
 		println("Done: Pipes2IFCTransformer")
 	}

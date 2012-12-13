@@ -3,6 +3,7 @@ module Pipes2IFC.Pipes2IFC
 import general.Model2XMLWriter
 import general.IFC2ModelReader
 
+var ifcWritePathTemp = 'bin/output.tmp.ifcxml'
 var ifcWritePath = 'bin/output.ifcxml'
 
 var IFCFilePath = 'NanoLabBuilding/Merging_test_small.ifcxml'
@@ -34,11 +35,13 @@ Workflow {
 	component = Pipes2IFCTransformer {}
 	
 	component = Model2XMLWriter {
-		path = ifcWritePath
+		path = ifcWritePathTemp
 	}
 	
-	component = org.eclipse.xpand2.Generator {
-      	expand = "templates::Entity::main FOR newElements"
-      	outlet = { path = "bin" }
+	component = EntityXMLWriter {}
+	
+	component = Pipes2IFC.EntityInjector {
+		sourcePath = ifcWritePathTemp
+		outputPath = ifcWritePath
 	}
 }

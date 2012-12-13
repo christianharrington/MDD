@@ -19,14 +19,10 @@ class EntityInjector extends WorkflowComponentWithSlot {
 	}*/
 	
 	var String sourcePath
-	var String input
 	var String outputPath
 	
 	def getSourcePath() { sourcePath }
 	def setSourcePath(String path) { sourcePath = path }
-
-	def getInput() { input }
-	def setInput(String path) { input = path }
 	
 	def getOutputPath() { outputPath }
 	def setOutputPath(String path) { outputPath = path }
@@ -34,6 +30,8 @@ class EntityInjector extends WorkflowComponentWithSlot {
 	
 	
 	override invoke(IWorkflowContext ctx) {
+		val input = ctx.get(newElementsXMLSlot) as String
+		
 		val BufferedReader sourceBr = new BufferedReader(new InputStreamReader(new FileInputStream(sourcePath)))
 		val BufferedWriter outputWr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputPath)))
 		
