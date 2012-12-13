@@ -3,9 +3,7 @@ package IFC2Pipes
 import general.WorkflowComponentWithSlot
 import java.util.Collections
 import java.util.Map
-import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.URI
-import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.Resource$Factory$Registry
 import org.eclipse.emf.ecore.resource.ResourceSet
@@ -21,7 +19,7 @@ class PipesModel2XMIWriter extends WorkflowComponentWithSlot {
 	def setPath(String path) { this.path = path }
 	
 	def getPath() { path }
-	
+	/*
 	def private walkModel(EList<EObject> contents, EObject e) {
 		if (!contents.contains(e)) {
 			contents.add(e);
@@ -29,7 +27,7 @@ class PipesModel2XMIWriter extends WorkflowComponentWithSlot {
 				walkModel(contents, ee);
 			}
 		}
-	}
+	}*/
 	
 	override invoke(IWorkflowContext ctx) {	
 		println("Starting: PipesModel2XMIWriter")
@@ -43,9 +41,9 @@ class PipesModel2XMIWriter extends WorkflowComponentWithSlot {
 	    val Resource resource = resSet.createResource(URI::createURI(getPath()));
 	    
 	    resource.contents.add(targetModel)
-	    println(targetModel.elements.size())
+	    println("Target model elements: " + targetModel.elements.size())
 	    resource.save(Collections::EMPTY_MAP)
-	    println("Starting: PipesModel2XMIWriter")
+	    println("Done: PipesModel2XMIWriter")
 	}
 	
 }

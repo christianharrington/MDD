@@ -2,6 +2,7 @@
  */
 package pipes;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,9 +14,9 @@ package pipes;
  * <ul>
  *   <li>{@link pipes.Axis2Placement3D#getCartesianX <em>Cartesian X</em>}</li>
  *   <li>{@link pipes.Axis2Placement3D#getCartesianY <em>Cartesian Y</em>}</li>
- *   <li>{@link pipes.Axis2Placement3D#getCartesianZ <em>Cartesian Z</em>}</li>
  *   <li>{@link pipes.Axis2Placement3D#getAxis <em>Axis</em>}</li>
  *   <li>{@link pipes.Axis2Placement3D#getRefDirection <em>Ref Direction</em>}</li>
+ *   <li>{@link pipes.Axis2Placement3D#getCartesianZ <em>Cartesian Z</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,7 +24,7 @@ package pipes;
  * @model
  * @generated
  */
-public interface Axis2Placement3D extends GUIDElement {
+public interface Axis2Placement3D extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Cartesian X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -106,7 +107,7 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * Returns the value of the '<em><b>Axis</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Axis</em>' reference isn't clear,
+	 * If the meaning of the '<em>Axis</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -132,7 +133,7 @@ public interface Axis2Placement3D extends GUIDElement {
 	 * Returns the value of the '<em><b>Ref Direction</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ref Direction</em>' reference isn't clear,
+	 * If the meaning of the '<em>Ref Direction</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

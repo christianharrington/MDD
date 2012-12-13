@@ -50,11 +50,22 @@ public interface RelatedOpeningElementType extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ifc Feature Element Subtraction</em>' containment reference.
+	 * @see #setIfcFeatureElementSubtraction(IfcFeatureElementSubtraction)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getRelatedOpeningElementType_IfcFeatureElementSubtraction()
-	 * @model containment="true" unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
+	 * @model containment="true" unsettable="true" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='IfcFeatureElementSubtraction' namespace='##targetNamespace' group='IfcFeatureElementSubtraction:group'"
 	 * @generated
 	 */
 	IfcFeatureElementSubtraction getIfcFeatureElementSubtraction();
+
+	/**
+	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.RelatedOpeningElementType#getIfcFeatureElementSubtraction <em>Ifc Feature Element Subtraction</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ifc Feature Element Subtraction</em>' containment reference.
+	 * @see #getIfcFeatureElementSubtraction()
+	 * @generated
+	 */
+	void setIfcFeatureElementSubtraction(IfcFeatureElementSubtraction value);
 
 } // RelatedOpeningElementType

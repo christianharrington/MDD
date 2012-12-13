@@ -20,21 +20,21 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Opening extends GUIDElement, Product {
+public interface Opening extends Product {
 	/**
-	 * Returns the value of the '<em><b>Walls</b></em>' containment reference list.
-	 * The list contents are of type {@link pipes.WallRelation}.
+	 * Returns the value of the '<em><b>Walls</b></em>' reference list.
+	 * The list contents are of type {@link pipes.Wall}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Walls</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Walls</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Walls</em>' containment reference list.
+	 * @return the value of the '<em>Walls</em>' reference list.
 	 * @see pipes.PipesPackage#getOpening_Walls()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<WallRelation> getWalls();
+	EList<Wall> getWalls();
 
 } // Opening

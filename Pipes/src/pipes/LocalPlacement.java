@@ -2,6 +2,7 @@
  */
 package pipes;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +21,12 @@ package pipes;
  * @model
  * @generated
  */
-public interface LocalPlacement extends GUIDElement {
+public interface LocalPlacement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Axis2placement3d</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Axis2placement3d</em>' reference isn't clear,
+	 * If the meaning of the '<em>Axis2placement3d</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

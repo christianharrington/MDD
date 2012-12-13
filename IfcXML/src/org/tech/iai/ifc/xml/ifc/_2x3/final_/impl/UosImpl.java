@@ -2,6 +2,7 @@
  */
 package org.tech.iai.ifc.xml.ifc._2x3.final_.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -136,6 +137,7 @@ public class UosImpl extends org.iso.standard._10303.part._28.version._2.xmlsche
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -144,6 +146,10 @@ public class UosImpl extends org.iso.standard._10303.part._28.version._2.xmlsche
 				return;
 			case FinalPackage.UOS__ENTITY_GROUP:
 				((FeatureMap.Internal)getEntityGroup()).set(newValue);
+				return;
+			case FinalPackage.UOS__ENTITY:
+				getEntity().clear();
+				getEntity().addAll((Collection<? extends Entity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -162,6 +168,9 @@ public class UosImpl extends org.iso.standard._10303.part._28.version._2.xmlsche
 				return;
 			case FinalPackage.UOS__ENTITY_GROUP:
 				getEntityGroup().clear();
+				return;
+			case FinalPackage.UOS__ENTITY:
+				getEntity().clear();
 				return;
 		}
 		super.eUnset(featureID);

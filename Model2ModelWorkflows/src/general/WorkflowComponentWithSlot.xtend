@@ -11,8 +11,13 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	val String mainModelSlot = 'mainModel' //IFC main model object graph
 	val String openingsSlot = 'openings'
 	val String flowSegmentsSlot = 'flowSegments'
+	val String wallsSlot = 'walls'
 	val String entityMapSlot = 'entityMap'
-
+	val String guidMapSlot = 'guidMap'
+	val String newElementsSlot = 'newElements'
+	val String newElementsXMLSlot = 'newElementsXML'
+	
+	private static var int highestId = 0
 
 	def getFileSlot() { fileSlot }
 	
@@ -24,8 +29,18 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	
 	def getFlowSegmentsSlot() { flowSegmentsSlot }
 	
+	def getWallsSlot() { wallsSlot }
+	
 	def getEntityMapSlot() { entityMapSlot }
 	
+	def getHighestIdSlot() { highestIdSlot }
+
+	def getGuidMapSlot() { guidMapSlot }
+	
+	def getNewElementsSlot() { newElementsSlot }
+	
+	def getNewElementsXMLSlot() { newElementsXMLSlot }
+
 	override postInvoke() {	}
 	
 	override preInvoke() { }
@@ -41,4 +56,13 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 		}		
 	}
 	
+	def static setHighestId(int id) {
+		highestId = id
+	}
+	
+	def static getNewId() {
+		highestId = highestId + 1
+		val s = "i" + highestId
+		s
+	}
 }

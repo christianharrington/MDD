@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import java.util.HashMap
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.Entity
 import java.util.ArrayList
+import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcWall
 
 class IFCExtractor extends WorkflowComponentWithSlot {
 	// Current doesn't work - always true
@@ -16,6 +17,8 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 		// ]
 		return true
 	}
+	
+	private var highestId = 0
 		
 	override invoke(IWorkflowContext ctx) {
 		println("Starting: IFCPipesOpeningsExtractor")
@@ -24,7 +27,9 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 		
 		val openings = new ArrayList<IfcOpeningElement>()
 		val flowSegments = new ArrayList<IfcFlowSegment>()
+		val walls = new ArrayList<IfcWall>()
 		val entityMap = new HashMap<String, Entity>()
+		val guidMap = new HashMap<String, Entity>()
 		
 		ifcResource.contents.get(0).eAllContents.forEach[
 			if (it instanceof Entity) {
@@ -32,6 +37,8 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 				val en = it as Entity
 				if (en.id != null) {
 					entityMap.put(en.id, en)
+					val id = Integer::parseInt(en.id.substring(1))
+					if (id > highestId) highestId = id 
 				}
 				
 				// If the object is and opening or flow segment, we need it for our model
@@ -39,22 +46,41 @@ class IFCExtractor extends WorkflowComponentWithSlot {
 					val op = en as IfcOpeningElement
 					if (op.id != null) {
 						openings.add(op)
+						if (!op.globalId.nullOrEmpty) {
+							guidMap.put(op.globalId, op)
+						}
 					}
 				}
 				else if (en instanceof IfcFlowSegment) {
 					val fs = en as IfcFlowSegment
 					if (fs.id != null) {
 						flowSegments.add(fs)
+						if (!fs.globalId.nullOrEmpty) {
+							guidMap.put(fs.globalId, fs)
+						}
 					}
 				}
-			}		
+				else if (en instanceof IfcWall) {
+					val w = en as IfcWall
+					if (w.id != null) {
+						walls.add(w)
+						if (!w.globalId.nullOrEmpty) {
+							guidMap.put(w.globalId, w)
+						}
+					}
+				}
+			}
 		]
 		
-		println("Openings: " + openings.size + "\nFlow segments: " + flowSegments.size())
+		WorkflowComponentWithSlot::setHighestId(highestId)
+		
+		println("Openings: " + openings.size + "\nFlow segments: " + flowSegments.size() + "\nWalls: " + walls.size())
 
 		ctx.put(openingsSlot, openings)
 		ctx.put(flowSegmentsSlot, flowSegments)
+		ctx.put(wallsSlot, walls)
 		ctx.put(entityMapSlot, entityMap)
+		ctx.put(guidMapSlot, guidMap)
 		println("Done: IFCPipesOpeningsExtractor")
 	}
 }

@@ -2,7 +2,6 @@
  */
 package pipes;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,12 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Product extends GUIDElement {
-
 	/**
 	 * Returns the value of the '<em><b>Placement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Placement</em>' reference isn't clear,
+	 * If the meaning of the '<em>Placement</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -47,4 +45,5 @@ public interface Product extends GUIDElement {
 	 * @generated
 	 */
 	void setPlacement(LocalPlacement value);
+
 } // Product

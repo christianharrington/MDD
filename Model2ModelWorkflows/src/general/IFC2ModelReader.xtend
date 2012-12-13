@@ -4,10 +4,7 @@ import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import general.WorkflowComponentWithSlot
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceFactoryRegistryImpl;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.CommonPackage;
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.impl.CommonFactoryImpl;
@@ -16,8 +13,6 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage;
 import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.FinalFactoryImpl;
 import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.FinalPackageImpl;
 import org.tech.iai.ifc.xml.ifc._2x3.final_.util.FinalResourceFactoryImpl;
-import java.util.HashMap
-import java.util.Map
 
 class IFC2ModelReader extends WorkflowComponentWithSlot {	
 	String file
@@ -37,13 +32,12 @@ class IFC2ModelReader extends WorkflowComponentWithSlot {
 		commonPackage.setEFactoryInstance(new CommonFactoryImpl())
 		finalPackage.setEFactoryInstance(new FinalFactoryImpl())
 		
-		val Map<String, Object> options = new HashMap<String, Object>()
-		options.put(XMLResource::OPTION_EXTENDED_META_DATA, Boolean::TRUE)
+		val resFactory = new FinalResourceFactoryImpl()
+		//val Resource resource = resourceSet.getResource(URI::createFileURI(ctx.get(getFile()) as String), true)
+		val XMLResource resource = resFactory.createResource(URI::createFileURI(file)) as XMLResource
+		val options = resource.getDefaultLoadOptions()
 		options.put(XMLResource::OPTION_ENCODING, "UTF-8")
 		
-		val ResourceSet resourceSet = new ResourceSetImpl()
-		//val Resource resource = resourceSet.getResource(URI::createFileURI(ctx.get(getFile()) as String), true)
-		val Resource resource = resourceSet.getResource(URI::createFileURI(file), true)
 		resource.load(options)
 		
 		ctx.put(mainModelSlot, resource)
@@ -52,8 +46,5 @@ class IFC2ModelReader extends WorkflowComponentWithSlot {
 	
 	def getFile() { file }	
 	def setFile(String file) { this.file = file  }
-	
-	def getSchema() { schema }	
-	def setSchema(String schema) { this.schema = schema  }
 }
 	

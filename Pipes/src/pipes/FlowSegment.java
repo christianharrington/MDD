@@ -13,6 +13,5 @@ package pipes;
  * @model
  * @generated
  */
-public interface FlowSegment extends GUIDElement, Product {
-
+public interface FlowSegment extends Product {
 } // FlowSegment

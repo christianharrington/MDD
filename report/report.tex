@@ -9,8 +9,11 @@
 % \usepackage[center]{caption}
 
 \usepackage{enumitem}
-\usepackage[margin=1.5in]{geometry}
+\usepackage[T1]{fontenc} % Fixed missing font warning for \maketitle
+%\usepackage[margin=1.5in]{geometry}
 \usepackage{url}
+\usepackage[multiple]{footmisc} % DOUBLE FOOTNOTES ACROSS THE SKY
+\renewcommand{\footnotemargin}{3.99pt}
 
 % %% to make urls look better in bibliography
 % \makeatletter
@@ -32,7 +35,7 @@
 % \tableofcontents
 
 \mainmatter              % start of the contributionsmainmatter
-\title{DSL for Textual Editing of IFC partial model\thanks{Supervised by Andrzej Wasowski, IT University of Copenhagen, Denmark}}
+\title{DSL for Textual Editing of IFC partial model}
 
 \author{Nicolai Dahl Blicher-Petersen \and Christian Harrington \and
 Thomas Hallier Didriksen \and Sune Alkærsig \and Anders Høst Kjærgaard\\
@@ -56,7 +59,7 @@ Industry Foundation Classes (IFC) are often big and complex, and a key challenge
 
 \input{introduction}
 \input{background}
-\input{desirable_features}
+\input{problem_analysis_requirements}
 \input{solution} %Describe the solution
 \input{evaluation}
 \input{future_work}

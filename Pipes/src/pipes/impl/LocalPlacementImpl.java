@@ -3,12 +3,13 @@
 package pipes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import pipes.Axis2Placement3D;
 import pipes.LocalPlacement;
@@ -28,7 +29,7 @@ import pipes.PipesPackage;
  *
  * @generated
  */
-public class LocalPlacementImpl extends GUIDElementImpl implements LocalPlacement {
+public class LocalPlacementImpl extends EObjectImpl implements LocalPlacement {
 	/**
 	 * The cached value of the '{@link #getAxis2placement3d() <em>Axis2placement3d</em>}' containment reference.
 	 * <!-- begin-user-doc -->

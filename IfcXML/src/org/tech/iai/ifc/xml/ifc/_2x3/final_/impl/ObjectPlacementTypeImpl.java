@@ -96,6 +96,15 @@ public class ObjectPlacementTypeImpl extends EObjectImpl implements ObjectPlacem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setIfcObjectPlacement(IfcObjectPlacement newIfcObjectPlacement) {
+		((FeatureMap.Internal)getIfcObjectPlacementGroup()).set(FinalPackage.eINSTANCE.getObjectPlacementType_IfcObjectPlacement(), newIfcObjectPlacement);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -135,6 +144,9 @@ public class ObjectPlacementTypeImpl extends EObjectImpl implements ObjectPlacem
 			case FinalPackage.OBJECT_PLACEMENT_TYPE__IFC_OBJECT_PLACEMENT_GROUP:
 				((FeatureMap.Internal)getIfcObjectPlacementGroup()).set(newValue);
 				return;
+			case FinalPackage.OBJECT_PLACEMENT_TYPE__IFC_OBJECT_PLACEMENT:
+				setIfcObjectPlacement((IfcObjectPlacement)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -149,6 +161,9 @@ public class ObjectPlacementTypeImpl extends EObjectImpl implements ObjectPlacem
 		switch (featureID) {
 			case FinalPackage.OBJECT_PLACEMENT_TYPE__IFC_OBJECT_PLACEMENT_GROUP:
 				getIfcObjectPlacementGroup().clear();
+				return;
+			case FinalPackage.OBJECT_PLACEMENT_TYPE__IFC_OBJECT_PLACEMENT:
+				setIfcObjectPlacement((IfcObjectPlacement)null);
 				return;
 		}
 		super.eUnset(featureID);

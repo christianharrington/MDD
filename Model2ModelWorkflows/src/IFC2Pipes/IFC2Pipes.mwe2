@@ -1,14 +1,15 @@
 module IFC2Pipes.IFC2Pipes
 
 import general.IFC2ModelReader
+import org.eclipse.emf.mwe.utils.*
 
 var IFCFilePath = 'NanoLabBuilding/Merging_test_small.ifcxml'
 var xmiWritePath = 'bin/instance.xmi'
 
-var server = "pillar.christianharrington.com"
+/*var server = "pillar.christianharrington.com"
 var user = "cnha@itu.dk"
 var password = "password"
-var poid = "536638"
+var poid = "536638"*/
 
 Workflow {
 	//component = general.BimServer2XMLFileWriter {
@@ -25,6 +26,11 @@ Workflow {
 	component = general.IFCExtractor {}
 	
 	component = IFC2PipesTransformer {}
+	
+	component = org.eclipse.xpand2.Generator {
+      	expand = "templates::Pipes::main FOR pipesOpenings"
+      	outlet = { path = "bin" }
+	}
 
 	component = PipesModel2XMIWriter {
 		path = xmiWritePath

@@ -82,13 +82,6 @@ public class PipesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PipesPackage.WALL_RELATION: {
-				WallRelation wallRelation = (WallRelation)theEObject;
-				T result = caseWallRelation(wallRelation);
-				if (result == null) result = caseGUIDElement(wallRelation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case PipesPackage.FLOW_SEGMENT: {
 				FlowSegment flowSegment = (FlowSegment)theEObject;
 				T result = caseFlowSegment(flowSegment);
@@ -100,14 +93,12 @@ public class PipesSwitch<T> extends Switch<T> {
 			case PipesPackage.LOCAL_PLACEMENT: {
 				LocalPlacement localPlacement = (LocalPlacement)theEObject;
 				T result = caseLocalPlacement(localPlacement);
-				if (result == null) result = caseGUIDElement(localPlacement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PipesPackage.AXIS2_PLACEMENT3_D: {
 				Axis2Placement3D axis2Placement3D = (Axis2Placement3D)theEObject;
 				T result = caseAxis2Placement3D(axis2Placement3D);
-				if (result == null) result = caseGUIDElement(axis2Placement3D);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -167,21 +158,6 @@ public class PipesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOpening(Opening object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Wall Relation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Wall Relation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWallRelation(WallRelation object) {
 		return null;
 	}
 

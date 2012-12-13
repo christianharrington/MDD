@@ -72,7 +72,7 @@ public interface Uos extends org.iso.standard._10303.part._28.version._2.xmlsche
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entity</em>' containment reference list.
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getUos_Entity()
-	 * @model containment="true" transient="true" changeable="false" volatile="true" derived="true"
+	 * @model containment="true" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='Entity' namespace='urn:iso.org:standard:10303:part(28):version(2):xmlschema:common' group='urn:iso.org:standard:10303:part(28):version(2):xmlschema:common#Entity:group'"
 	 * @generated
 	 */
