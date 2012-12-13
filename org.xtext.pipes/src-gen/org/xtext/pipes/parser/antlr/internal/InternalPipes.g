@@ -270,9 +270,9 @@ ruleWallRule returns [EObject current=null]
     }
 (
 (
-		lv_name_1_0=RULE_PID
+		lv_name_1_0=RULE_STRING
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getWallRuleAccess().getNamePIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getWallRuleAccess().getNameSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -282,7 +282,7 @@ ruleWallRule returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"PID");
+        		"STRING");
 	    }
 
 )
@@ -379,9 +379,9 @@ ruleOpening returns [EObject current=null]
     }
 (
 (
-		lv_name_1_0=RULE_PID
+		lv_name_1_0=RULE_STRING
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getOpeningAccess().getNamePIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getOpeningAccess().getNameSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -391,7 +391,7 @@ ruleOpening returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"PID");
+        		"STRING");
 	    }
 
 )
@@ -472,7 +472,7 @@ ruleOpening returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getOpeningRule());
 	        }
         }
-	otherlv_9=RULE_PID
+	otherlv_9=RULE_STRING
 	{
 		newLeafNode(otherlv_9, grammarAccess.getOpeningAccess().getWallsWallCrossReference_6_1_0()); 
 	}
@@ -489,7 +489,7 @@ ruleOpening returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getOpeningRule());
 	        }
         }
-	otherlv_11=RULE_PID
+	otherlv_11=RULE_STRING
 	{
 		newLeafNode(otherlv_11, grammarAccess.getOpeningAccess().getWallsWallCrossReference_6_2_1_0()); 
 	}
@@ -522,9 +522,9 @@ ruleFlowSegment returns [EObject current=null]
     }
 (
 (
-		lv_name_1_0=RULE_PID
+		lv_name_1_0=RULE_STRING
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getFlowSegmentAccess().getNamePIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getFlowSegmentAccess().getNameSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -534,7 +534,7 @@ ruleFlowSegment returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"PID");
+        		"STRING");
 	    }
 
 )
@@ -1000,8 +1000,6 @@ ruleDirection returns [EObject current=null]
 
 
 
-
-RULE_PID : '<' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '>';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

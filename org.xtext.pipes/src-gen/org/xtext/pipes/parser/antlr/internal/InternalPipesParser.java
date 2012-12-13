@@ -21,10 +21,9 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPipesParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_PID", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Walls'", "'and'", "'Openings'", "'Pipes'", "'Wall'", "'Name'", "'Description'", "'Placement'", "'Opening'", "','", "'Pipe'", "'{'", "'RelativeTo'", "'Axis2Placement3d'", "'}'", "'Cartesian'", "'('", "')'", "'Axis'", "'RefDirection'", "'-'", "'.'", "'E'", "'e'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Walls'", "'and'", "'Openings'", "'Pipes'", "'Wall'", "'Name'", "'Description'", "'Placement'", "'Opening'", "','", "'Pipe'", "'{'", "'RelativeTo'", "'Axis2Placement3d'", "'}'", "'Cartesian'", "'('", "')'", "'Axis'", "'RefDirection'", "'-'", "'.'", "'E'", "'e'"
     };
-    public static final int RULE_PID=5;
-    public static final int RULE_ID=7;
+    public static final int RULE_ID=6;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -33,12 +32,12 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=11;
+    public static final int RULE_ANY_OTHER=10;
     public static final int T__21=21;
     public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=9;
+    public static final int RULE_SL_COMMENT=8;
     public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=8;
+    public static final int RULE_ML_COMMENT=7;
     public static final int T__30=30;
     public static final int T__19=19;
     public static final int T__31=31;
@@ -48,14 +47,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
     public static final int T__16=16;
     public static final int T__34=34;
     public static final int T__15=15;
-    public static final int T__35=35;
     public static final int T__18=18;
     public static final int T__17=17;
     public static final int T__12=12;
+    public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int RULE_INT=6;
-    public static final int RULE_WS=10;
+    public static final int RULE_INT=5;
+    public static final int RULE_WS=9;
 
     // delegates
     // delegators
@@ -175,7 +174,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleModel131); 
+            otherlv_1=(Token)match(input,11,FollowSets000.FOLLOW_11_in_ruleModel131); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getModelAccess().getWallsKeyword_1());
                 
@@ -216,7 +215,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==13) ) {
+                if ( (LA1_0==12) ) {
                     alt1=1;
                 }
 
@@ -225,7 +224,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:108:4: otherlv_3= 'and' ( (lv_elements_4_0= ruleWallRule ) )
             	    {
-            	    otherlv_3=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleModel165); 
+            	    otherlv_3=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleModel165); 
 
             	        	newLeafNode(otherlv_3, grammarAccess.getModelAccess().getAndKeyword_3_0());
             	        
@@ -269,7 +268,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleModel200); 
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleModel200); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getModelAccess().getOpeningsKeyword_4());
                 
@@ -310,7 +309,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==13) ) {
+                if ( (LA2_0==12) ) {
                     alt2=1;
                 }
 
@@ -319,7 +318,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:152:4: otherlv_7= 'and' ( (lv_elements_8_0= ruleOpening ) )
             	    {
-            	    otherlv_7=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleModel234); 
+            	    otherlv_7=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleModel234); 
 
             	        	newLeafNode(otherlv_7, grammarAccess.getModelAccess().getAndKeyword_6_0());
             	        
@@ -363,7 +362,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_9=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleModel269); 
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleModel269); 
 
                 	newLeafNode(otherlv_9, grammarAccess.getModelAccess().getPipesKeyword_7());
                 
@@ -404,7 +403,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==13) ) {
+                if ( (LA3_0==12) ) {
                     alt3=1;
                 }
 
@@ -413,7 +412,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:196:4: otherlv_11= 'and' ( (lv_elements_12_0= ruleFlowSegment ) )
             	    {
-            	    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleModel303); 
+            	    otherlv_11=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleModel303); 
 
             	        	newLeafNode(otherlv_11, grammarAccess.getModelAccess().getAndKeyword_9_0());
             	        
@@ -587,7 +586,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWallRule"
-    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:263:1: ruleWallRule returns [EObject current=null] : (otherlv_0= 'Wall' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) ) ;
+    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:263:1: ruleWallRule returns [EObject current=null] : (otherlv_0= 'Wall' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) ) ;
     public final EObject ruleWallRule() throws RecognitionException {
         EObject current = null;
 
@@ -606,25 +605,25 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:266:28: ( (otherlv_0= 'Wall' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) ) )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:267:1: (otherlv_0= 'Wall' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:266:28: ( (otherlv_0= 'Wall' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:267:1: (otherlv_0= 'Wall' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) )
             {
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:267:1: (otherlv_0= 'Wall' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:267:3: otherlv_0= 'Wall' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:267:1: (otherlv_0= 'Wall' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:267:3: otherlv_0= 'Wall' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) )
             {
-            otherlv_0=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleWallRule504); 
+            otherlv_0=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleWallRule504); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getWallRuleAccess().getWallKeyword_0());
                 
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:271:1: ( (lv_name_1_0= RULE_PID ) )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:272:1: (lv_name_1_0= RULE_PID )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:271:1: ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:272:1: (lv_name_1_0= RULE_STRING )
             {
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:272:1: (lv_name_1_0= RULE_PID )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:273:3: lv_name_1_0= RULE_PID
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:272:1: (lv_name_1_0= RULE_STRING )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:273:3: lv_name_1_0= RULE_STRING
             {
-            lv_name_1_0=(Token)match(input,RULE_PID,FollowSets000.FOLLOW_RULE_PID_in_ruleWallRule521); 
+            lv_name_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleWallRule521); 
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getWallRuleAccess().getNamePIDTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getWallRuleAccess().getNameSTRINGTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
@@ -634,7 +633,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"PID");
+                    		"STRING");
             	    
 
             }
@@ -646,14 +645,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==17) ) {
+            if ( (LA4_0==16) ) {
                 alt4=1;
             }
             switch (alt4) {
                 case 1 :
                     // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:289:4: otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) )
                     {
-                    otherlv_2=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleWallRule539); 
+                    otherlv_2=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleWallRule539); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getWallRuleAccess().getNameKeyword_2_0());
                         
@@ -698,14 +697,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==18) ) {
+            if ( (LA5_0==17) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
                     // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:311:6: otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) )
                     {
-                    otherlv_4=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleWallRule575); 
+                    otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleWallRule575); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getWallRuleAccess().getDescriptionKeyword_3_0());
                         
@@ -746,7 +745,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleWallRule610); 
+            otherlv_6=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleWallRule610); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getWallRuleAccess().getPlacementKeyword_4());
                 
@@ -838,7 +837,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpening"
-    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:372:1: ruleOpening returns [EObject current=null] : (otherlv_0= 'Opening' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) (otherlv_8= 'Walls' ( (otherlv_9= RULE_PID ) ) (otherlv_10= ',' ( (otherlv_11= RULE_PID ) ) )* )? ) ;
+    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:372:1: ruleOpening returns [EObject current=null] : (otherlv_0= 'Opening' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) (otherlv_8= 'Walls' ( (otherlv_9= RULE_STRING ) ) (otherlv_10= ',' ( (otherlv_11= RULE_STRING ) ) )* )? ) ;
     public final EObject ruleOpening() throws RecognitionException {
         EObject current = null;
 
@@ -861,25 +860,25 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:375:28: ( (otherlv_0= 'Opening' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) (otherlv_8= 'Walls' ( (otherlv_9= RULE_PID ) ) (otherlv_10= ',' ( (otherlv_11= RULE_PID ) ) )* )? ) )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:376:1: (otherlv_0= 'Opening' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) (otherlv_8= 'Walls' ( (otherlv_9= RULE_PID ) ) (otherlv_10= ',' ( (otherlv_11= RULE_PID ) ) )* )? )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:375:28: ( (otherlv_0= 'Opening' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) (otherlv_8= 'Walls' ( (otherlv_9= RULE_STRING ) ) (otherlv_10= ',' ( (otherlv_11= RULE_STRING ) ) )* )? ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:376:1: (otherlv_0= 'Opening' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) (otherlv_8= 'Walls' ( (otherlv_9= RULE_STRING ) ) (otherlv_10= ',' ( (otherlv_11= RULE_STRING ) ) )* )? )
             {
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:376:1: (otherlv_0= 'Opening' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) (otherlv_8= 'Walls' ( (otherlv_9= RULE_PID ) ) (otherlv_10= ',' ( (otherlv_11= RULE_PID ) ) )* )? )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:376:3: otherlv_0= 'Opening' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) (otherlv_8= 'Walls' ( (otherlv_9= RULE_PID ) ) (otherlv_10= ',' ( (otherlv_11= RULE_PID ) ) )* )?
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:376:1: (otherlv_0= 'Opening' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) (otherlv_8= 'Walls' ( (otherlv_9= RULE_STRING ) ) (otherlv_10= ',' ( (otherlv_11= RULE_STRING ) ) )* )? )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:376:3: otherlv_0= 'Opening' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) (otherlv_8= 'Walls' ( (otherlv_9= RULE_STRING ) ) (otherlv_10= ',' ( (otherlv_11= RULE_STRING ) ) )* )?
             {
-            otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleOpening714); 
+            otherlv_0=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleOpening714); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getOpeningAccess().getOpeningKeyword_0());
                 
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:380:1: ( (lv_name_1_0= RULE_PID ) )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:381:1: (lv_name_1_0= RULE_PID )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:380:1: ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:381:1: (lv_name_1_0= RULE_STRING )
             {
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:381:1: (lv_name_1_0= RULE_PID )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:382:3: lv_name_1_0= RULE_PID
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:381:1: (lv_name_1_0= RULE_STRING )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:382:3: lv_name_1_0= RULE_STRING
             {
-            lv_name_1_0=(Token)match(input,RULE_PID,FollowSets000.FOLLOW_RULE_PID_in_ruleOpening731); 
+            lv_name_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleOpening731); 
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getOpeningAccess().getNamePIDTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getOpeningAccess().getNameSTRINGTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
@@ -889,7 +888,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"PID");
+                    		"STRING");
             	    
 
             }
@@ -901,14 +900,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==17) ) {
+            if ( (LA6_0==16) ) {
                 alt6=1;
             }
             switch (alt6) {
                 case 1 :
                     // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:398:4: otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) )
                     {
-                    otherlv_2=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleOpening749); 
+                    otherlv_2=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleOpening749); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getOpeningAccess().getNameKeyword_2_0());
                         
@@ -953,14 +952,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==18) ) {
+            if ( (LA7_0==17) ) {
                 alt7=1;
             }
             switch (alt7) {
                 case 1 :
                     // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:420:6: otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) )
                     {
-                    otherlv_4=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleOpening785); 
+                    otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleOpening785); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getOpeningAccess().getDescriptionKeyword_3_0());
                         
@@ -1001,7 +1000,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleOpening820); 
+            otherlv_6=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleOpening820); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getOpeningAccess().getPlacementKeyword_4());
                 
@@ -1036,33 +1035,33 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:464:2: (otherlv_8= 'Walls' ( (otherlv_9= RULE_PID ) ) (otherlv_10= ',' ( (otherlv_11= RULE_PID ) ) )* )?
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:464:2: (otherlv_8= 'Walls' ( (otherlv_9= RULE_STRING ) ) (otherlv_10= ',' ( (otherlv_11= RULE_STRING ) ) )* )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==12) ) {
+            if ( (LA9_0==11) ) {
                 alt9=1;
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:464:4: otherlv_8= 'Walls' ( (otherlv_9= RULE_PID ) ) (otherlv_10= ',' ( (otherlv_11= RULE_PID ) ) )*
+                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:464:4: otherlv_8= 'Walls' ( (otherlv_9= RULE_STRING ) ) (otherlv_10= ',' ( (otherlv_11= RULE_STRING ) ) )*
                     {
-                    otherlv_8=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleOpening854); 
+                    otherlv_8=(Token)match(input,11,FollowSets000.FOLLOW_11_in_ruleOpening854); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getOpeningAccess().getWallsKeyword_6_0());
                         
-                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:468:1: ( (otherlv_9= RULE_PID ) )
-                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:469:1: (otherlv_9= RULE_PID )
+                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:468:1: ( (otherlv_9= RULE_STRING ) )
+                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:469:1: (otherlv_9= RULE_STRING )
                     {
-                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:469:1: (otherlv_9= RULE_PID )
-                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:470:3: otherlv_9= RULE_PID
+                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:469:1: (otherlv_9= RULE_STRING )
+                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:470:3: otherlv_9= RULE_STRING
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getOpeningRule());
                     	        }
                             
-                    otherlv_9=(Token)match(input,RULE_PID,FollowSets000.FOLLOW_RULE_PID_in_ruleOpening874); 
+                    otherlv_9=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleOpening874); 
 
                     		newLeafNode(otherlv_9, grammarAccess.getOpeningAccess().getWallsWallCrossReference_6_1_0()); 
                     	
@@ -1072,37 +1071,37 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:481:2: (otherlv_10= ',' ( (otherlv_11= RULE_PID ) ) )*
+                    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:481:2: (otherlv_10= ',' ( (otherlv_11= RULE_STRING ) ) )*
                     loop8:
                     do {
                         int alt8=2;
                         int LA8_0 = input.LA(1);
 
-                        if ( (LA8_0==21) ) {
+                        if ( (LA8_0==20) ) {
                             alt8=1;
                         }
 
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:481:4: otherlv_10= ',' ( (otherlv_11= RULE_PID ) )
+                    	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:481:4: otherlv_10= ',' ( (otherlv_11= RULE_STRING ) )
                     	    {
-                    	    otherlv_10=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleOpening887); 
+                    	    otherlv_10=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleOpening887); 
 
                     	        	newLeafNode(otherlv_10, grammarAccess.getOpeningAccess().getCommaKeyword_6_2_0());
                     	        
-                    	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:485:1: ( (otherlv_11= RULE_PID ) )
-                    	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:486:1: (otherlv_11= RULE_PID )
+                    	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:485:1: ( (otherlv_11= RULE_STRING ) )
+                    	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:486:1: (otherlv_11= RULE_STRING )
                     	    {
-                    	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:486:1: (otherlv_11= RULE_PID )
-                    	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:487:3: otherlv_11= RULE_PID
+                    	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:486:1: (otherlv_11= RULE_STRING )
+                    	    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:487:3: otherlv_11= RULE_STRING
                     	    {
 
                     	    			if (current==null) {
                     	    	            current = createModelElement(grammarAccess.getOpeningRule());
                     	    	        }
                     	            
-                    	    otherlv_11=(Token)match(input,RULE_PID,FollowSets000.FOLLOW_RULE_PID_in_ruleOpening907); 
+                    	    otherlv_11=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleOpening907); 
 
                     	    		newLeafNode(otherlv_11, grammarAccess.getOpeningAccess().getWallsWallCrossReference_6_2_1_0()); 
                     	    	
@@ -1184,7 +1183,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFlowSegment"
-    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:515:1: ruleFlowSegment returns [EObject current=null] : (otherlv_0= 'Pipe' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) ) ;
+    // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:515:1: ruleFlowSegment returns [EObject current=null] : (otherlv_0= 'Pipe' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) ) ;
     public final EObject ruleFlowSegment() throws RecognitionException {
         EObject current = null;
 
@@ -1203,25 +1202,25 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:518:28: ( (otherlv_0= 'Pipe' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) ) )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:519:1: (otherlv_0= 'Pipe' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:518:28: ( (otherlv_0= 'Pipe' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:519:1: (otherlv_0= 'Pipe' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) )
             {
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:519:1: (otherlv_0= 'Pipe' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:519:3: otherlv_0= 'Pipe' ( (lv_name_1_0= RULE_PID ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:519:1: (otherlv_0= 'Pipe' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:519:3: otherlv_0= 'Pipe' ( (lv_name_1_0= RULE_STRING ) ) (otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) ) )? (otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) ) )? otherlv_6= 'Placement' ( (lv_placement_7_0= ruleLocalPlacement ) )
             {
-            otherlv_0=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleFlowSegment994); 
+            otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleFlowSegment994); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFlowSegmentAccess().getPipeKeyword_0());
                 
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:523:1: ( (lv_name_1_0= RULE_PID ) )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:524:1: (lv_name_1_0= RULE_PID )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:523:1: ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:524:1: (lv_name_1_0= RULE_STRING )
             {
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:524:1: (lv_name_1_0= RULE_PID )
-            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:525:3: lv_name_1_0= RULE_PID
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:524:1: (lv_name_1_0= RULE_STRING )
+            // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:525:3: lv_name_1_0= RULE_STRING
             {
-            lv_name_1_0=(Token)match(input,RULE_PID,FollowSets000.FOLLOW_RULE_PID_in_ruleFlowSegment1011); 
+            lv_name_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleFlowSegment1011); 
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getFlowSegmentAccess().getNamePIDTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getFlowSegmentAccess().getNameSTRINGTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
@@ -1231,7 +1230,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"PID");
+                    		"STRING");
             	    
 
             }
@@ -1243,14 +1242,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==17) ) {
+            if ( (LA10_0==16) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
                     // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:541:4: otherlv_2= 'Name' ( (lv_elementName_3_0= ruleEString ) )
                     {
-                    otherlv_2=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleFlowSegment1029); 
+                    otherlv_2=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleFlowSegment1029); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getFlowSegmentAccess().getNameKeyword_2_0());
                         
@@ -1295,14 +1294,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==18) ) {
+            if ( (LA11_0==17) ) {
                 alt11=1;
             }
             switch (alt11) {
                 case 1 :
                     // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:563:6: otherlv_4= 'Description' ( (lv_description_5_0= ruleEString ) )
                     {
-                    otherlv_4=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleFlowSegment1065); 
+                    otherlv_4=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleFlowSegment1065); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getFlowSegmentAccess().getDescriptionKeyword_3_0());
                         
@@ -1343,7 +1342,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleFlowSegment1100); 
+            otherlv_6=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleFlowSegment1100); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getFlowSegmentAccess().getPlacementKeyword_4());
                 
@@ -1468,7 +1467,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleLocalPlacement1213); 
+            otherlv_1=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleLocalPlacement1213); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getLocalPlacementAccess().getLeftCurlyBracketKeyword_1());
                 
@@ -1476,14 +1475,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==24) ) {
+            if ( (LA12_0==23) ) {
                 alt12=1;
             }
             switch (alt12) {
                 case 1 :
                     // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:638:3: otherlv_2= 'RelativeTo' ( (lv_relativeTo_3_0= ruleLocalPlacement ) )
                     {
-                    otherlv_2=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleLocalPlacement1226); 
+                    otherlv_2=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleLocalPlacement1226); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getLocalPlacementAccess().getRelativeToKeyword_2_0());
                         
@@ -1524,7 +1523,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleLocalPlacement1261); 
+            otherlv_4=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleLocalPlacement1261); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getLocalPlacementAccess().getAxis2Placement3dKeyword_3());
                 
@@ -1559,7 +1558,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleLocalPlacement1294); 
+            otherlv_6=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleLocalPlacement1294); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getLocalPlacementAccess().getRightCurlyBracketKeyword_5());
                 
@@ -1653,15 +1652,15 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:707:1: (otherlv_0= '{' otherlv_1= 'Cartesian' otherlv_2= '(' ( (lv_cartesianX_3_0= ruleEDouble ) ) otherlv_4= ',' ( (lv_cartesianY_5_0= ruleEDouble ) ) otherlv_6= ',' ( (lv_cartesianZ_7_0= ruleEDouble ) ) otherlv_8= ')' otherlv_9= 'Axis' ( (lv_axis_10_0= ruleDirection ) ) otherlv_11= 'RefDirection' ( (lv_refDirection_12_0= ruleDirection ) ) otherlv_13= '}' )
             // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:707:3: otherlv_0= '{' otherlv_1= 'Cartesian' otherlv_2= '(' ( (lv_cartesianX_3_0= ruleEDouble ) ) otherlv_4= ',' ( (lv_cartesianY_5_0= ruleEDouble ) ) otherlv_6= ',' ( (lv_cartesianZ_7_0= ruleEDouble ) ) otherlv_8= ')' otherlv_9= 'Axis' ( (lv_axis_10_0= ruleDirection ) ) otherlv_11= 'RefDirection' ( (lv_refDirection_12_0= ruleDirection ) ) otherlv_13= '}'
             {
-            otherlv_0=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleAxis2Placement3D1377); 
+            otherlv_0=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleAxis2Placement3D1377); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getAxis2Placement3DAccess().getLeftCurlyBracketKeyword_0());
                 
-            otherlv_1=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleAxis2Placement3D1389); 
+            otherlv_1=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleAxis2Placement3D1389); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getAxis2Placement3DAccess().getCartesianKeyword_1());
                 
-            otherlv_2=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleAxis2Placement3D1401); 
+            otherlv_2=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleAxis2Placement3D1401); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getAxis2Placement3DAccess().getLeftParenthesisKeyword_2());
                 
@@ -1696,7 +1695,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleAxis2Placement3D1434); 
+            otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleAxis2Placement3D1434); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getAxis2Placement3DAccess().getCommaKeyword_4());
                 
@@ -1731,7 +1730,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleAxis2Placement3D1467); 
+            otherlv_6=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleAxis2Placement3D1467); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getAxis2Placement3DAccess().getCommaKeyword_6());
                 
@@ -1766,11 +1765,11 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleAxis2Placement3D1500); 
+            otherlv_8=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleAxis2Placement3D1500); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getAxis2Placement3DAccess().getRightParenthesisKeyword_8());
                 
-            otherlv_9=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleAxis2Placement3D1512); 
+            otherlv_9=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleAxis2Placement3D1512); 
 
                 	newLeafNode(otherlv_9, grammarAccess.getAxis2Placement3DAccess().getAxisKeyword_9());
                 
@@ -1805,7 +1804,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_11=(Token)match(input,31,FollowSets000.FOLLOW_31_in_ruleAxis2Placement3D1545); 
+            otherlv_11=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleAxis2Placement3D1545); 
 
                 	newLeafNode(otherlv_11, grammarAccess.getAxis2Placement3DAccess().getRefDirectionKeyword_11());
                 
@@ -1840,7 +1839,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleAxis2Placement3D1578); 
+            otherlv_13=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleAxis2Placement3D1578); 
 
                 	newLeafNode(otherlv_13, grammarAccess.getAxis2Placement3DAccess().getRightCurlyBracketKeyword_13());
                 
@@ -1923,14 +1922,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==32) ) {
+            if ( (LA13_0==31) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
                     // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:855:2: kw= '-'
                     {
-                    kw=(Token)match(input,32,FollowSets000.FOLLOW_32_in_ruleEDouble1665); 
+                    kw=(Token)match(input,31,FollowSets000.FOLLOW_31_in_ruleEDouble1665); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_0()); 
@@ -1965,7 +1964,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            kw=(Token)match(input,33,FollowSets000.FOLLOW_33_in_ruleEDouble1703); 
+            kw=(Token)match(input,32,FollowSets000.FOLLOW_32_in_ruleEDouble1703); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
@@ -1981,7 +1980,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( ((LA17_0>=34 && LA17_0<=35)) ) {
+            if ( ((LA17_0>=33 && LA17_0<=34)) ) {
                 alt17=1;
             }
             switch (alt17) {
@@ -1992,10 +1991,10 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                     int alt15=2;
                     int LA15_0 = input.LA(1);
 
-                    if ( (LA15_0==34) ) {
+                    if ( (LA15_0==33) ) {
                         alt15=1;
                     }
-                    else if ( (LA15_0==35) ) {
+                    else if ( (LA15_0==34) ) {
                         alt15=2;
                     }
                     else {
@@ -2008,7 +2007,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:881:2: kw= 'E'
                             {
-                            kw=(Token)match(input,34,FollowSets000.FOLLOW_34_in_ruleEDouble1738); 
+                            kw=(Token)match(input,33,FollowSets000.FOLLOW_33_in_ruleEDouble1738); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getEDoubleAccess().getEKeyword_4_0_0()); 
@@ -2019,7 +2018,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                         case 2 :
                             // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:888:2: kw= 'e'
                             {
-                            kw=(Token)match(input,35,FollowSets000.FOLLOW_35_in_ruleEDouble1757); 
+                            kw=(Token)match(input,34,FollowSets000.FOLLOW_34_in_ruleEDouble1757); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getEDoubleAccess().getEKeyword_4_0_1()); 
@@ -2034,14 +2033,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
-                    if ( (LA16_0==32) ) {
+                    if ( (LA16_0==31) ) {
                         alt16=1;
                     }
                     switch (alt16) {
                         case 1 :
                             // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:894:2: kw= '-'
                             {
-                            kw=(Token)match(input,32,FollowSets000.FOLLOW_32_in_ruleEDouble1772); 
+                            kw=(Token)match(input,31,FollowSets000.FOLLOW_31_in_ruleEDouble1772); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_4_1()); 
@@ -2146,7 +2145,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:927:1: (otherlv_0= '(' ( (lv_x_1_0= ruleEDouble ) ) otherlv_2= ',' ( (lv_y_3_0= ruleEDouble ) ) (otherlv_4= ',' ( (lv_z_5_0= ruleEDouble ) ) )? otherlv_6= ')' )
             // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:927:3: otherlv_0= '(' ( (lv_x_1_0= ruleEDouble ) ) otherlv_2= ',' ( (lv_y_3_0= ruleEDouble ) ) (otherlv_4= ',' ( (lv_z_5_0= ruleEDouble ) ) )? otherlv_6= ')'
             {
-            otherlv_0=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleDirection1883); 
+            otherlv_0=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleDirection1883); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDirectionAccess().getLeftParenthesisKeyword_0());
                 
@@ -2181,7 +2180,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleDirection1916); 
+            otherlv_2=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleDirection1916); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getDirectionAccess().getCommaKeyword_2());
                 
@@ -2220,14 +2219,14 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( (LA18_0==21) ) {
+            if ( (LA18_0==20) ) {
                 alt18=1;
             }
             switch (alt18) {
                 case 1 :
                     // ../org.xtext.pipes/src-gen/org/xtext/pipes/parser/antlr/internal/InternalPipes.g:971:4: otherlv_4= ',' ( (lv_z_5_0= ruleEDouble ) )
                     {
-                    otherlv_4=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleDirection1950); 
+                    otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleDirection1950); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getDirectionAccess().getCommaKeyword_4_0());
                         
@@ -2268,7 +2267,7 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleDirection1985); 
+            otherlv_6=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleDirection1985); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getDirectionAccess().getRightParenthesisKeyword_5());
                 
@@ -2300,98 +2299,98 @@ public class InternalPipesParser extends AbstractInternalAntlrParser {
     private static class FollowSets000 {
         public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_ruleModel131 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_ruleWallRule_in_ruleModel152 = new BitSet(new long[]{0x0000000000006000L});
-        public static final BitSet FOLLOW_13_in_ruleModel165 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_ruleWallRule_in_ruleModel186 = new BitSet(new long[]{0x0000000000006000L});
-        public static final BitSet FOLLOW_14_in_ruleModel200 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_ruleOpening_in_ruleModel221 = new BitSet(new long[]{0x000000000000A000L});
-        public static final BitSet FOLLOW_13_in_ruleModel234 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_ruleOpening_in_ruleModel255 = new BitSet(new long[]{0x000000000000A000L});
-        public static final BitSet FOLLOW_15_in_ruleModel269 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_ruleFlowSegment_in_ruleModel290 = new BitSet(new long[]{0x0000000000002002L});
-        public static final BitSet FOLLOW_13_in_ruleModel303 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_ruleFlowSegment_in_ruleModel324 = new BitSet(new long[]{0x0000000000002002L});
+        public static final BitSet FOLLOW_11_in_ruleModel131 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_ruleWallRule_in_ruleModel152 = new BitSet(new long[]{0x0000000000003000L});
+        public static final BitSet FOLLOW_12_in_ruleModel165 = new BitSet(new long[]{0x0000000000008000L});
+        public static final BitSet FOLLOW_ruleWallRule_in_ruleModel186 = new BitSet(new long[]{0x0000000000003000L});
+        public static final BitSet FOLLOW_13_in_ruleModel200 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_ruleOpening_in_ruleModel221 = new BitSet(new long[]{0x0000000000005000L});
+        public static final BitSet FOLLOW_12_in_ruleModel234 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_ruleOpening_in_ruleModel255 = new BitSet(new long[]{0x0000000000005000L});
+        public static final BitSet FOLLOW_14_in_ruleModel269 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_ruleFlowSegment_in_ruleModel290 = new BitSet(new long[]{0x0000000000001002L});
+        public static final BitSet FOLLOW_12_in_ruleModel303 = new BitSet(new long[]{0x0000000000200000L});
+        public static final BitSet FOLLOW_ruleFlowSegment_in_ruleModel324 = new BitSet(new long[]{0x0000000000001002L});
         public static final BitSet FOLLOW_ruleEString_in_entryRuleEString363 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleEString374 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_STRING_in_ruleEString413 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleWallRule_in_entryRuleWallRule457 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleWallRule467 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_ruleWallRule504 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_PID_in_ruleWallRule521 = new BitSet(new long[]{0x00000000000E0000L});
-        public static final BitSet FOLLOW_17_in_ruleWallRule539 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleWallRule560 = new BitSet(new long[]{0x00000000000C0000L});
-        public static final BitSet FOLLOW_18_in_ruleWallRule575 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleWallRule596 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_19_in_ruleWallRule610 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_15_in_ruleWallRule504 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleWallRule521 = new BitSet(new long[]{0x0000000000070000L});
+        public static final BitSet FOLLOW_16_in_ruleWallRule539 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleWallRule560 = new BitSet(new long[]{0x0000000000060000L});
+        public static final BitSet FOLLOW_17_in_ruleWallRule575 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleWallRule596 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_18_in_ruleWallRule610 = new BitSet(new long[]{0x0000000000400000L});
         public static final BitSet FOLLOW_ruleLocalPlacement_in_ruleWallRule631 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleOpening_in_entryRuleOpening667 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleOpening677 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_ruleOpening714 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_PID_in_ruleOpening731 = new BitSet(new long[]{0x00000000000E0000L});
-        public static final BitSet FOLLOW_17_in_ruleOpening749 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleOpening770 = new BitSet(new long[]{0x00000000000C0000L});
-        public static final BitSet FOLLOW_18_in_ruleOpening785 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleOpening806 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_19_in_ruleOpening820 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_ruleLocalPlacement_in_ruleOpening841 = new BitSet(new long[]{0x0000000000001002L});
-        public static final BitSet FOLLOW_12_in_ruleOpening854 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_PID_in_ruleOpening874 = new BitSet(new long[]{0x0000000000200002L});
-        public static final BitSet FOLLOW_21_in_ruleOpening887 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_PID_in_ruleOpening907 = new BitSet(new long[]{0x0000000000200002L});
+        public static final BitSet FOLLOW_19_in_ruleOpening714 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleOpening731 = new BitSet(new long[]{0x0000000000070000L});
+        public static final BitSet FOLLOW_16_in_ruleOpening749 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleOpening770 = new BitSet(new long[]{0x0000000000060000L});
+        public static final BitSet FOLLOW_17_in_ruleOpening785 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleOpening806 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_18_in_ruleOpening820 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_ruleLocalPlacement_in_ruleOpening841 = new BitSet(new long[]{0x0000000000000802L});
+        public static final BitSet FOLLOW_11_in_ruleOpening854 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleOpening874 = new BitSet(new long[]{0x0000000000100002L});
+        public static final BitSet FOLLOW_20_in_ruleOpening887 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleOpening907 = new BitSet(new long[]{0x0000000000100002L});
         public static final BitSet FOLLOW_ruleFlowSegment_in_entryRuleFlowSegment947 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleFlowSegment957 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_ruleFlowSegment994 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_PID_in_ruleFlowSegment1011 = new BitSet(new long[]{0x00000000000E0000L});
-        public static final BitSet FOLLOW_17_in_ruleFlowSegment1029 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleFlowSegment1050 = new BitSet(new long[]{0x00000000000C0000L});
-        public static final BitSet FOLLOW_18_in_ruleFlowSegment1065 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleFlowSegment1086 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_19_in_ruleFlowSegment1100 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_21_in_ruleFlowSegment994 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleFlowSegment1011 = new BitSet(new long[]{0x0000000000070000L});
+        public static final BitSet FOLLOW_16_in_ruleFlowSegment1029 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleFlowSegment1050 = new BitSet(new long[]{0x0000000000060000L});
+        public static final BitSet FOLLOW_17_in_ruleFlowSegment1065 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleFlowSegment1086 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_18_in_ruleFlowSegment1100 = new BitSet(new long[]{0x0000000000400000L});
         public static final BitSet FOLLOW_ruleLocalPlacement_in_ruleFlowSegment1121 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleLocalPlacement_in_entryRuleLocalPlacement1157 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleLocalPlacement1167 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_ruleLocalPlacement1213 = new BitSet(new long[]{0x0000000003000000L});
-        public static final BitSet FOLLOW_24_in_ruleLocalPlacement1226 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_ruleLocalPlacement_in_ruleLocalPlacement1247 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_25_in_ruleLocalPlacement1261 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_ruleAxis2Placement3D_in_ruleLocalPlacement1282 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_26_in_ruleLocalPlacement1294 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_22_in_ruleLocalPlacement1213 = new BitSet(new long[]{0x0000000001800000L});
+        public static final BitSet FOLLOW_23_in_ruleLocalPlacement1226 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_ruleLocalPlacement_in_ruleLocalPlacement1247 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_24_in_ruleLocalPlacement1261 = new BitSet(new long[]{0x0000000000400000L});
+        public static final BitSet FOLLOW_ruleAxis2Placement3D_in_ruleLocalPlacement1282 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_25_in_ruleLocalPlacement1294 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleAxis2Placement3D_in_entryRuleAxis2Placement3D1330 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleAxis2Placement3D1340 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_ruleAxis2Placement3D1377 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_27_in_ruleAxis2Placement3D1389 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_28_in_ruleAxis2Placement3D1401 = new BitSet(new long[]{0x0000000300000040L});
-        public static final BitSet FOLLOW_ruleEDouble_in_ruleAxis2Placement3D1422 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_21_in_ruleAxis2Placement3D1434 = new BitSet(new long[]{0x0000000300000040L});
-        public static final BitSet FOLLOW_ruleEDouble_in_ruleAxis2Placement3D1455 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_21_in_ruleAxis2Placement3D1467 = new BitSet(new long[]{0x0000000300000040L});
-        public static final BitSet FOLLOW_ruleEDouble_in_ruleAxis2Placement3D1488 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_29_in_ruleAxis2Placement3D1500 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_30_in_ruleAxis2Placement3D1512 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_ruleDirection_in_ruleAxis2Placement3D1533 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_31_in_ruleAxis2Placement3D1545 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_ruleDirection_in_ruleAxis2Placement3D1566 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_26_in_ruleAxis2Placement3D1578 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_22_in_ruleAxis2Placement3D1377 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_26_in_ruleAxis2Placement3D1389 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_27_in_ruleAxis2Placement3D1401 = new BitSet(new long[]{0x0000000180000020L});
+        public static final BitSet FOLLOW_ruleEDouble_in_ruleAxis2Placement3D1422 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_20_in_ruleAxis2Placement3D1434 = new BitSet(new long[]{0x0000000180000020L});
+        public static final BitSet FOLLOW_ruleEDouble_in_ruleAxis2Placement3D1455 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_20_in_ruleAxis2Placement3D1467 = new BitSet(new long[]{0x0000000180000020L});
+        public static final BitSet FOLLOW_ruleEDouble_in_ruleAxis2Placement3D1488 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_28_in_ruleAxis2Placement3D1500 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_29_in_ruleAxis2Placement3D1512 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_ruleDirection_in_ruleAxis2Placement3D1533 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_30_in_ruleAxis2Placement3D1545 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_ruleDirection_in_ruleAxis2Placement3D1566 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_25_in_ruleAxis2Placement3D1578 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEDouble_in_entryRuleEDouble1615 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleEDouble1626 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_32_in_ruleEDouble1665 = new BitSet(new long[]{0x0000000200000040L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleEDouble1683 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_33_in_ruleEDouble1703 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleEDouble1718 = new BitSet(new long[]{0x0000000C00000002L});
-        public static final BitSet FOLLOW_34_in_ruleEDouble1738 = new BitSet(new long[]{0x0000000100000040L});
-        public static final BitSet FOLLOW_35_in_ruleEDouble1757 = new BitSet(new long[]{0x0000000100000040L});
-        public static final BitSet FOLLOW_32_in_ruleEDouble1772 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_31_in_ruleEDouble1665 = new BitSet(new long[]{0x0000000100000020L});
+        public static final BitSet FOLLOW_RULE_INT_in_ruleEDouble1683 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_32_in_ruleEDouble1703 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_INT_in_ruleEDouble1718 = new BitSet(new long[]{0x0000000600000002L});
+        public static final BitSet FOLLOW_33_in_ruleEDouble1738 = new BitSet(new long[]{0x0000000080000020L});
+        public static final BitSet FOLLOW_34_in_ruleEDouble1757 = new BitSet(new long[]{0x0000000080000020L});
+        public static final BitSet FOLLOW_31_in_ruleEDouble1772 = new BitSet(new long[]{0x0000000000000020L});
         public static final BitSet FOLLOW_RULE_INT_in_ruleEDouble1789 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleDirection_in_entryRuleDirection1836 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleDirection1846 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_28_in_ruleDirection1883 = new BitSet(new long[]{0x0000000300000040L});
-        public static final BitSet FOLLOW_ruleEDouble_in_ruleDirection1904 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_21_in_ruleDirection1916 = new BitSet(new long[]{0x0000000300000040L});
-        public static final BitSet FOLLOW_ruleEDouble_in_ruleDirection1937 = new BitSet(new long[]{0x0000000020200000L});
-        public static final BitSet FOLLOW_21_in_ruleDirection1950 = new BitSet(new long[]{0x0000000300000040L});
-        public static final BitSet FOLLOW_ruleEDouble_in_ruleDirection1971 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_29_in_ruleDirection1985 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_27_in_ruleDirection1883 = new BitSet(new long[]{0x0000000180000020L});
+        public static final BitSet FOLLOW_ruleEDouble_in_ruleDirection1904 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_20_in_ruleDirection1916 = new BitSet(new long[]{0x0000000180000020L});
+        public static final BitSet FOLLOW_ruleEDouble_in_ruleDirection1937 = new BitSet(new long[]{0x0000000010100000L});
+        public static final BitSet FOLLOW_20_in_ruleDirection1950 = new BitSet(new long[]{0x0000000180000020L});
+        public static final BitSet FOLLOW_ruleEDouble_in_ruleDirection1971 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_28_in_ruleDirection1985 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 
