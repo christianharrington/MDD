@@ -32,39 +32,39 @@ class EntityInjector extends WorkflowComponentWithSlot {
 	def setOutputPath(String path) { outputPath = path }
 	
 	override invoke(IWorkflowContext ctx) {
-		val BufferedReader mainBr = new BufferedReader(new InputStreamReader(new FileInputStream(sourcePath)))
-		val BufferedReader inputBr = new BufferedReader(new InputStreamReader(new FileInputStream(injectPath)))
-		val BufferedWriter mainWr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputPath)))
+		val BufferedReader sourceBr = new BufferedReader(new InputStreamReader(new FileInputStream(sourcePath)))
+		val BufferedReader injectBr = new BufferedReader(new InputStreamReader(new FileInputStream(injectPath)))
+		val BufferedWriter outputWr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputPath)))
 		
 		val searchString = "</_1:uos>"
-		var mainLine = mainBr.readLine()
-		var trimLine = mainLine.trim
-		while (!trimLine.startsWith(searchString)) {
-			mainWr.write(mainLine)
-			mainWr.newLine()
-			mainLine = mainBr.readLine()
-			trimLine = mainLine.trim
+		var sourceLine = sourceBr.readLine()
+		var trimLine = sourceLine.trim
+		while (sourceLine != null && !trimLine.startsWith(searchString)) {
+			outputWr.write(sourceLine)
+			outputWr.newLine()
+			sourceLine = sourceBr.readLine()
+			if (sourceLine != null) trimLine = sourceLine.trim
 		}
 		
-		// mainLine now points to uos-line; if null, an exception is thrown
-		if (mainLine == null) throw new MalformedIFCXMLException("File " + sourcePath + " does not have a " + searchString + " tag")
+		// sourceLine now points to uos-line; if null, an exception is thrown
+		if (sourceLine == null) throw new MalformedIFCXMLException("File " + sourcePath + " does not have a " + searchString + " tag")
 		
-		var inputLine = inputBr.readLine
+		var inputLine = injectBr.readLine
 		while (inputLine != null) {
-			mainWr.write(inputLine)
-			mainWr.newLine()
-			inputLine = inputBr.readLine
+			outputWr.write(inputLine)
+			outputWr.newLine()
+			inputLine = injectBr.readLine
 		}
 		
-		while (mainLine != null) {
-			mainWr.write(mainLine)
-			mainWr.newLine()
-			mainLine = mainBr.readLine()
+		while (sourceLine != null) {
+			outputWr.write(sourceLine)
+			outputWr.newLine()
+			sourceLine = sourceBr.readLine()
 		}
 		
-		mainBr.close
-		inputBr.close
-		mainWr.close
+		sourceBr.close
+		injectBr.close
+		outputWr.close
 	}
 	
 }
