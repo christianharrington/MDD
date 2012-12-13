@@ -55,8 +55,8 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	}
 	
 	def static getNewId() {
-		val s = "i" + highestId
 		highestId = highestId + 1
+		val s = "i" + highestId
 		s
 	}
 }
