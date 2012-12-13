@@ -25,6 +25,10 @@ Workflow {
 		path = pipesReadPath
 	}
 	
+	/*component = PipesXMI2ModelReader {
+		path = "bin/instance.xmi"
+	}*/
+	
 	component = general.IFCExtractor {}
 	
 	component = Pipes2IFCTransformer {}

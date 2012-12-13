@@ -11,6 +11,7 @@ import pipes.Wall
 import pipes.Axis2Placement3D
 import java.util.HashSet
 import org.tech.iai.ifc.xml.ifc._2x3.final_.impl.FinalFactoryImpl
+import org.tech.iai.ifc.xml.ifc._2x3.final_.FinalFactory
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcProduct
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
@@ -35,7 +36,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.emf.ecore.resource.Resource
 import org.tech.iai.ifc.xml.ifc._2x3.final_.DirectionRatiosType
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.DoubleWrapperType
-import org.iso.standard._10303.part._28.version._2.xmlschema.common.impl.CommonFactoryImpl
+import org.iso.standard._10303.part._28.version._2.xmlschema.common.CommonFactory
 import org.tech.iai.ifc.xml.ifc._2x3.final_.CoordinatesType1
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLengthMeasureType
 import org.tech.iai.ifc.xml.ifc._2x3.final_.LocationType
@@ -43,11 +44,25 @@ import java.util.UUID
 import org.eclipse.emf.common.util.BasicEList
 import org.tech.iai.ifc.xml.ifc._2x3.final_.Uos
 import org.eclipse.emf.common.util.EList
+import org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl
+import org.eclipse.emf.ecore.xmi.XMLResource
+import org.eclipse.emf.ecore.EStructuralFeature
+import org.eclipse.emf.ecore.util.ExtendedMetaData
+import org.eclipse.emf.ecore.util.FeatureMap
+import org.eclipse.emf.ecore.EClassifier
+import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.emf.ecore.util.BasicExtendedMetaData
+import org.eclipse.emf.edit.domain.EditingDomain
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain
+import org.eclipse.emf.common.command.Command
+import org.eclipse.emf.edit.command.AddCommand
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory
+import org.eclipse.emf.common.command.BasicCommandStack
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	
-	FinalFactoryImpl ifcFactory
-	CommonFactoryImpl commonFactory
+	FinalFactory ifcFactory
+	CommonFactory commonFactory
 	HashSet<String> markedSet
 	ArrayList<IfcProduct> extrModel
 	Model pipesModel
@@ -182,17 +197,36 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			entityMap.put(rve.id, rve)
 		}
 		
+		
 		val iter = resource.contents.get(0).eAllContents
-		val entityList = new BasicEList<Entity>()
+		//val entityList = new BasicEList<Entity>()
+		val XMLHelperImpl helper = new XMLHelperImpl(resource as XMLResource)
+		val ResourceSet xmlResourceSet = resource.resourceSet
+		//helper.setExtendedMetaData(new BasicExtendedMetaData(xmlResourceSet.getPackageRegistry()))
+		val targetFeature = FinalPackage::eINSTANCE.uos_EntityGroup
 		while (iter.hasNext()) {
 			val item = iter.next()
 			if (item instanceof Uos) {
 				val uosItem = item as Uos
-				entityList.add(f)
-				entityList.addAll(uosItem.entity)
-				uosItem.eSet(FinalPackage::eINSTANCE.uos_Entity, entityList)
+				//entityList.add(f)
+				//entityList.addAll(uosItem.entity)
+				//uosItem.entityGroup.list(FinalPackage::eINSTANCE.uos_Entity).add(f)
 				//var entities = uosItem.eGet(FinalPackage::eINSTANCE.uos_Entity) as EList<Entity>
 				//entities.add(f)
+				
+				//val feature = helper.getFeature(uosItem.eClass, "_1", "ifcOpeningElement", true)
+				//val EStructuralFeature group = helper.extendedMetaData.getGroup(targetFeature)
+				//val FeatureMap featureMap = uosItem.eGet(targetFeature) as FeatureMap
+				//val EClassifier eClassifier = feature.getEType()
+				//featureMap.add(feature, f)
+				
+				val AdapterFactoryEditingDomain ed = new AdapterFactoryEditingDomain(new ComposedAdapterFactory(
+        												ComposedAdapterFactory$Descriptor$Registry::INSTANCE), new BasicCommandStack());
+				
+				//val EditingDomain ed = AdapterFactoryEditingDomain::getEditingDomainFor(uosItem)
+				val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
+				command.execute
+				//ed.execute(command)
 			}
 		}
 
@@ -200,6 +234,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createRefOpening(String i) {
+		
 		f.setRef(i)
 	}
 	
@@ -392,8 +427,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		val removedSet = new HashSet<String>()
 		markedSet = new HashSet<String>()
-		ifcFactory = new FinalFactoryImpl()
-		commonFactory = new CommonFactoryImpl()
+		ifcFactory = FinalFactory::eINSTANCE
+		commonFactory = CommonFactory::eINSTANCE
 		
 		entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
 		guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
@@ -407,6 +442,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			}
 			else {
 				if(po instanceof Opening) {
+					println(po.name)
 					createOpening(po as Opening)
 				}
 			}
@@ -424,6 +460,18 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 				guidMap.remove(ifcF.globalId)
 				EcoreUtil::delete(ifcF)
 				removedSet.add(ifcF.id)
+			}
+		]
+		
+		openings.forEach[ifcO |
+			val found = pipesModel.elements.exists[o |
+				ifcO.globalId == o.name
+			]
+			if(!found) {
+				entityMap.remove(ifcO.id)
+				guidMap.remove(ifcO.globalId)
+				EcoreUtil::delete(ifcO)
+				removedSet.add(ifcO.id)
 			}
 		]
 		

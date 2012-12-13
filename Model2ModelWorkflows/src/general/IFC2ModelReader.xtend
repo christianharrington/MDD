@@ -37,13 +37,12 @@ class IFC2ModelReader extends WorkflowComponentWithSlot {
 		commonPackage.setEFactoryInstance(new CommonFactoryImpl())
 		finalPackage.setEFactoryInstance(new FinalFactoryImpl())
 		
-		val Map<String, Object> options = new HashMap<String, Object>()
-		options.put(XMLResource::OPTION_EXTENDED_META_DATA, Boolean::TRUE)
+		val resFactory = new FinalResourceFactoryImpl()
+		//val Resource resource = resourceSet.getResource(URI::createFileURI(ctx.get(getFile()) as String), true)
+		val XMLResource resource = resFactory.createResource(URI::createFileURI(file)) as XMLResource
+		val options = resource.getDefaultLoadOptions()
 		options.put(XMLResource::OPTION_ENCODING, "UTF-8")
 		
-		val ResourceSet resourceSet = new ResourceSetImpl()
-		//val Resource resource = resourceSet.getResource(URI::createFileURI(ctx.get(getFile()) as String), true)
-		val Resource resource = resourceSet.getResource(URI::createFileURI(file), true)
 		resource.load(options)
 		
 		ctx.put(mainModelSlot, resource)
