@@ -103,10 +103,6 @@
         <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//GUIDElement/elementName"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_6GmVF0H2EeKI0tCQP1SDcA"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_6GmVGEH2EeKI0tCQP1SDcA" type="2001">
-        <element xmi:type="ecore:EAttribute" href="Pipes.ecore#//GUIDElement/Description"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_6GmVGUH2EeKI0tCQP1SDcA"/>
-      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_6GluBUH2EeKI0tCQP1SDcA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_6GluBkH2EeKI0tCQP1SDcA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_6GluB0H2EeKI0tCQP1SDcA"/>
