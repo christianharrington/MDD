@@ -50,11 +50,22 @@ public interface PlacementRelToType extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ifc Object Placement</em>' containment reference.
+	 * @see #setIfcObjectPlacement(IfcObjectPlacement)
 	 * @see org.tech.iai.ifc.xml.ifc._2x3.final_.FinalPackage#getPlacementRelToType_IfcObjectPlacement()
-	 * @model containment="true" unsettable="true" transient="true" changeable="false" volatile="true" derived="true"
+	 * @model containment="true" unsettable="true" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='IfcObjectPlacement' namespace='##targetNamespace' group='IfcObjectPlacement:group'"
 	 * @generated
 	 */
 	IfcObjectPlacement getIfcObjectPlacement();
+
+	/**
+	 * Sets the value of the '{@link org.tech.iai.ifc.xml.ifc._2x3.final_.PlacementRelToType#getIfcObjectPlacement <em>Ifc Object Placement</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ifc Object Placement</em>' containment reference.
+	 * @see #getIfcObjectPlacement()
+	 * @generated
+	 */
+	void setIfcObjectPlacement(IfcObjectPlacement value);
 
 } // PlacementRelToType

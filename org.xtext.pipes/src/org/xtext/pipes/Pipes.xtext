@@ -11,28 +11,28 @@ Model returns Model:
 	'Pipes' elements+=FlowSegment ( "and" elements+=FlowSegment)*
 	;
 
-terminal PID  		: '^'?('a'..'z'|'A'..'Z'|'_'|'-'|'$'|'0'..'9')*;
+//terminal PID:'<' '^'?('a'..'z'|'A'..'Z'|'_'|'-'|'$'|'0'..'9')* '>';
 
 EString returns ecore::EString:
 	STRING;
 
 WallRule returns Wall:
-	'Wall' name=PID
+	'Wall' name=STRING
 		('Name' elementName=EString)?
 		('Description' description=EString)?
 		'Placement' placement=LocalPlacement
 	;
 
 Opening returns Opening:
-	'Opening' name=PID
+	'Opening' name=STRING
 		('Name' elementName=EString)?
 		('Description' description=EString)?
 		'Placement' placement=LocalPlacement
-		('Walls' walls+=[Wall|PID] ( "," walls+=[Wall|PID])*)?
+		('Walls' walls+=[Wall|STRING] ( "," walls+=[Wall|STRING])*)?
 	;
 
 FlowSegment returns FlowSegment:
-	'Pipe' name=PID
+	'Pipe' name=STRING
 		('Name' elementName=EString)?
 		('Description' description=EString)?
 		'Placement' placement=LocalPlacement
