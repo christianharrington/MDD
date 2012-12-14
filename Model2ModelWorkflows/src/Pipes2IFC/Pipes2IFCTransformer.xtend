@@ -183,7 +183,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	// End update elements
 	
 	// Creating new opening element
-	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createOpening(Opening o) {
+	def IfcOpeningElement createOpening(Opening o) {
+		val f = ifcFactory.createIfcOpeningElement()
 		val uuid = EcoreUtil::generateUUID() // UUID::randomUUID().toString()
 		f.setGlobalId(uuid)
 		f.setDescription(o.description)
@@ -194,8 +195,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.setObjectPlacement(objectPlacementType)
 		var ifcLocalPlacement = createLocalPlacement(o.placement)
 		
-		var t = objectPlacementType.eGet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement)
-		t = createRefLocalPlacement(ifcLocalPlacement.id)
+		objectPlacementType.eSet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(ifcLocalPlacement.id))
+		//t = 
 		
 		/*val Command addLocalPlacementCommand = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, ifcLocalPlacement)
 		addLocalPlacementCommand.execute*/
@@ -215,41 +216,59 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		newElements.add(f)
 		
 		entityMap.put(f.id, f)	
-	}
-	
-	def IfcOpeningElement create f: ifcFactory.createIfcOpeningElement() createRefOpening(String i) {
-		f.setRef(i)
-	}
-	
-	def ObjectPlacementType create f: ifcFactory.createObjectPlacementType() createObjectPlacementType() {
 		
+		f
 	}
 	
-	def IfcLocalPlacement create f: ifcFactory.createIfcLocalPlacement() createLocalPlacement(LocalPlacement p) {
+	def IfcOpeningElement createRefOpening(String i) {
+		val f = ifcFactory.createIfcOpeningElement()
+		f.setRef(i)
+		
+		f
+	}
+	
+	def ObjectPlacementType createObjectPlacementType() {
+		ifcFactory.createObjectPlacementType()
+	}
+	
+	def IfcLocalPlacement createLocalPlacement(LocalPlacement p) {
+		val f = ifcFactory.createIfcLocalPlacement()
 		f.setId(newId)
 		if(p.relativeTo != null) {
 			f.setPlacementRelTo(createPlacementRelToType(p))
 		}
 		f.setRelativePlacement(createRelativePlacementType(p))
+		
+		f
 	}
 	
-	def IfcLocalPlacement create f: ifcFactory.createIfcLocalPlacement() createRefLocalPlacement(String i) {
+	def IfcLocalPlacement createRefLocalPlacement(String i) {
+		val f = ifcFactory.createIfcLocalPlacement()
 		f.setRef(i)
+		
+		f
 	}
 	
-	def PlacementRelToType create f: ifcFactory.createPlacementRelToType createPlacementRelToType(LocalPlacement p) {
-		var lp = createLocalPlacement(p)
+	def PlacementRelToType createPlacementRelToType(LocalPlacement p) {
+		val f = ifcFactory.createPlacementRelToType
+		val lp = createLocalPlacement(p)
 		entityMap.put(lp.id, lp)
 		f.ifcObjectPlacement.eSet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(lp.id))
+		
+		f
 	}
 	
-	def RelativePlacementType create f: ifcFactory.createRelativePlacementType createRelativePlacementType(LocalPlacement p) {
-		var axis2placement3d = createAxis2Placement3D(p.axis2placement3d)
+	def RelativePlacementType createRelativePlacementType(LocalPlacement p) {
+		val f = ifcFactory.createRelativePlacementType
+		val axis2placement3d = createAxis2Placement3D(p.axis2placement3d)
 		entityMap.put(axis2placement3d.id, axis2placement3d)
 		f.setIfcAxis2Placement3D(createRefAxis2Placement3D(axis2placement3d.id))
+		
+		f
 	}
 	
-	def IfcAxis2Placement3D create f: ifcFactory.createIfcAxis2Placement3D() createAxis2Placement3D(Axis2Placement3D a) {
+	def IfcAxis2Placement3D createAxis2Placement3D(Axis2Placement3D a) {
+		val f = ifcFactory.createIfcAxis2Placement3D()
 		f.setId(newId)
 		if(!(a.axis == null && a.refDirection == null)) {
 			f.setAxis(createAxisType2(a))
@@ -264,47 +283,67 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		command.execute*/
 		newElements.add(f)
 		
+		f
 	}
 	
-	def IfcAxis2Placement3D create f: ifcFactory.createIfcAxis2Placement3D() createRefAxis2Placement3D(String i) {
+	def IfcAxis2Placement3D createRefAxis2Placement3D(String i) {
+		val f = ifcFactory.createIfcAxis2Placement3D()
 		f.setRef(i)
+		
+		f
 	}
 	
 	def LocationType create f: ifcFactory.createLocationType() createLocationType() {}
 	
-	def AxisType2 create f: ifcFactory.createAxisType2() createAxisType2(Axis2Placement3D a) {
-		var axis = createDirection(a.axis)
+	def AxisType2 createAxisType2(Axis2Placement3D a) {
+		val f = ifcFactory.createAxisType2()
+		val axis = createDirection(a.axis)
 		f.setIfcDirection(createRefDirection(axis.id))
+		
+		f
 	}
 	
-	def RefDirectionType1 create f: ifcFactory.createRefDirectionType1 createRefDirectionType1(Axis2Placement3D a) {
-		var ref = createDirection(a.refDirection)
+	def RefDirectionType1 createRefDirectionType1(Axis2Placement3D a) {
+		val f = ifcFactory.createRefDirectionType1
+		val ref = createDirection(a.refDirection)
 		f.setIfcDirection(createRefDirection(ref.id))
+		
+		f
 	}
 	
-	def IfcDirection create f: ifcFactory.createIfcDirection() createDirection(Direction d) {
+	def IfcDirection createDirection(Direction d) {
+		val f = ifcFactory.createIfcDirection() 
 		f.setId(newId)
-		f.directionRatios = createDirectionRatiosType()
-		var ratios = f.directionRatios.doubleWrapper
-		ratios.add(createDoubleWrapperTypeFromDouble(d.x))
-		ratios.add(createDoubleWrapperTypeFromDouble(d.y))
-		ratios.add(createDoubleWrapperTypeFromDouble(d.z))
+		f.directionRatios = ifcFactory.createDirectionRatiosType()
+		f.directionRatios.doubleWrapper.add(createDoubleWrapperTypeFromDouble(d.x))
+		f.directionRatios.doubleWrapper.add(createDoubleWrapperTypeFromDouble(d.y))
+		f.directionRatios.doubleWrapper.add(createDoubleWrapperTypeFromDouble(d.z))
 		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 		command.execute*/
 		newElements.add(f)
+		f
 	}
 	
-	def IfcDirection create f: ifcFactory.createIfcDirection() createRefDirection(String i) {
+	def IfcDirection createRefDirection(String i) {
+		val f = ifcFactory.createIfcDirection()
 		f.setRef(i)
+		
+		f
 	}
 	
-	def DirectionRatiosType create f: ifcFactory.createDirectionRatiosType() createDirectionRatiosType() {}
+	def DirectionRatiosType createDirectionRatiosType() {		
+		ifcFactory.createDirectionRatiosType()
+	}
 	
-	def DoubleWrapperType create f: commonFactory.createDoubleWrapperType() createDoubleWrapperTypeFromDouble(double d) {
+	def DoubleWrapperType createDoubleWrapperTypeFromDouble(double d) {
+		val f = commonFactory.createDoubleWrapperType()
+		
 		f.setValue(d)
+		f
 	}
 	
-	def IfcCartesianPoint create f: ifcFactory.createIfcCartesianPoint createCartesianPoint(Axis2Placement3D a) {
+	def IfcCartesianPoint createCartesianPoint(Axis2Placement3D a) {
+		val f = ifcFactory.createIfcCartesianPoint
 		f.setId(newId)
 		f.coordinates = createCoordinatesType1()
 		var lengthMeasure = f.coordinates.ifcLengthMeasure
@@ -314,6 +353,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 		command.execute*/
 		newElements.add(f)
+		
+		f
 	}
 	
 	def IfcCartesianPoint create f: ifcFactory.createIfcCartesianPoint createRefCartesianPoint(String i) {

@@ -1,5 +1,5 @@
 package general
-
+ 
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment

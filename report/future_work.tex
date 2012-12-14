@@ -1,23 +1,21 @@
 %!TEX root = ./report.tex
-\section{Future Work}
-\label{sec:future_work}
-There are several areas of the solution that could be improved. Below the improvements we prioritise the highest are summarised.
-\subsection{Meta model}
-As described in Section \ref{Evaluation_EMF}, the meta model we used has several problems. Most of these problems could be solved by a better model, such as one we discovered, which is made by Jim Steel\footnote{Jim Steel's model can be found at \url{http://www.emn.fr/z-info/atlanmod/index.php/Ecore#ifc2x3_0.1}}. This model is much simpler than the one generated from the ifcXML XSD, and seems to be easier to work with. Using this model would necessitate writing serializers, which would hopefully also improve load times.
-\subsection{Synchronization}
-    BIM projects should support distributed collaborative work on models. For example, we see that BIMserver is implemented with a notification system that can notify users when a model, or parts of a model, is changed. This indicates that if client software is to be useful in a real world scenario, it should be able to synchronize with the central model. As it was outside the scope of this project to require this kind of synchronization, the final solution is rather static compared to what is desirable. Currently no real synchronization takes place. We update the extracted sub-set of the source model with PipesDSL that has been edited. This resembles source-incrementality (\cite{czarnecki06} pp. 14), and will be important for fast synchronization with a big source model like IFC. Still we do this without considering that the source model could have changed. Also, the workflow from IFC to pipes, will always create, or overwrite, the target model without considering a scenario where an existing target model is being edited. To be able to approach the synchronization problem, we believe it should be possible to expand on the current transformation implemented with Xtend. To be able to track changes and examine models before synchronization, we could use traceability\cite{czarnecki06} to record what rules have been applied to the elements in the models. Xtend offers a class called M2MTraceElement\cite{xtendtrace} for this.
-
-\section{Plan for Future Projects}
+\section{Ideas for Future Projects}
 \label{sec:plan_for_future_projects}
-A meta goal of this pilot study was to increase the BIM knowledge of the environmentally concerned ITU research initiative, Energy Futures. As a part of this project, we have developed the following plan that could be used in future follow-up projects.
+An overall goal of this pilot study was to increase the BIM knowledge of the environmentally concerned ITU research initiative, Energy Futures. With this project as a point of departure, we have developed the following plan for future follow-up projects.
 
-There are several areas of this solution that can be improved. Below the improvements we prioritise the highest are summarised.
 \paragraph{Meta model}
 As described in Section \ref{subsec:requirements_evaluation}, the meta model we used has several problems. Most of these problems could be solved by a better model, such as one we discovered, which is made by Jim Steel\footnote{Jim Steel's model can be found at \url{http://www.emn.fr/z-info/atlanmod/index.php/Ecore#ifc2x3_0.1}}. This model is much simpler than the one generated from the ifcXML XSD, and seems to be easier to work with. Using this model would necessitate writing serializers, which would hopefully also improve load times.
-\paragraph{MVD}
+
 % Study these papers:
 %	"Feature-Based Survey of Model Transformation Approaches",
 %	"The View Update Problem for XML",
 %	"From model transformation to incremental bidirectional model synchronization" (very technical paper)
+\subsection{Synchronisation}
+    BIM projects should support distributed collaborative work on models. For example, we see that BIMserver is implemented with a notification system that can notify users when a model, or parts of a model, is changed. This indicates that if client software is to be useful in a real world scenario, it should be able to synchronize with the central model. As it was outside the scope of this project to require this kind of synchronization, the final solution is rather static compared to what is desirable. Currently no real synchronization takes place. We update the extracted sub-set of the source model with the PipesDSL that has been edited. This resembles source-incrementality (\cite{czarnecki06} pp. 14), and will be important for fast synchronization with a big source model like IFC. Still we do this without considering that the source model could have changed. Also, the workflow from IFC to pipes, will always create, or overwrite, the target model without considering a scenario where an existing target model is being edited. To be able to approach the synchronization problem, we believe it should be possible to expand on the current transformation implemented with Xtend. To be able to track changes and examine models before synchronization, we could use traceability\cite{czarnecki06} to record what rules have been applied to the elements in the models. Xtend offers a class called M2MTraceElement\cite{xtendtrace} for this.
+
+
+
+\paragraph{MVD}
+
 \paragraph{DSL}
 
