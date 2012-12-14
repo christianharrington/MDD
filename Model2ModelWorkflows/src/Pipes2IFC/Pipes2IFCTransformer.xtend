@@ -64,6 +64,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	Uos uosItem
 	AdapterFactoryEditingDomain ed
 	ArrayList<Entity> newElements
+	HashSet<String> addedIdSet
 	
 	def private localPlacementIsChanged(LocalPlacement o, IfcLocalPlacement product, IWorkflowContext ctx) {
 		if(product != null && o != null) {
@@ -125,7 +126,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			]
 			// Check if the localPlacement is changed. If it is, make a new one and set the references.
 			if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
-				updateIfcLocalPlacement(o, product, ctx)
+				updateIfcLocalPlacement(o, product, ctx)				
 			}
 			true
 		}
@@ -135,6 +136,11 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		markedSet.add(o.name)
 		
 		updateMetaData(o, objFromRef(product, ctx))
+		
+		// Check if the localPlacement is changed. If it is, make a new one and set the references.
+		if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
+			updateIfcLocalPlacement(o, product, ctx)
+		}
 		true
 	}
 	
@@ -143,43 +149,42 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		var String id
 		if((objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement).placementRelTo != null) {
 			id = (objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement).placementRelTo.ifcObjectPlacement.id
+			println("1")
 		} else {
 			id = null
+			println("2")
 		}
 		
 		val instance = FinalPackage::eINSTANCE
-		
-		var lp = createLocalPlacement(o.placement)
-		
+				
 		// Create new LocalPlacement for element
+		/*
 		var objectPlacement = createObjectPlacementType()
 		objectPlacement.eSet(instance.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(lp.id))
-		product.setObjectPlacement(objectPlacement) 
+		println(lp.id)
+		product.setObjectPlacement(objectPlacement) */
+		
+		val objectPlacementType = createObjectPlacementType()
+		product.setObjectPlacement(objectPlacementType)
+		var ifcLocalPlacement = createLocalPlacement(o.placement)
+		
+		objectPlacementType.eSet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(ifcLocalPlacement.id))
+		
 		
 		// If the old Localplacements relative localplacement isn't null make a ref to it.
 		// Else set it to null
 		if(id != null) {
 			var prt = ifcFactory.createPlacementRelToType()
 			prt.eSet(instance.placementRelToType_IfcObjectPlacement, createRefLocalPlacement(id))
-			lp.setPlacementRelTo(prt)
+			ifcLocalPlacement.setPlacementRelTo(prt)
+			println("3")
 		} else {
-			lp.setPlacementRelTo(null)
+			println("4")
 		}
-		
-		
-		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, lp)
-		command.execute*/
-		newElements.add(lp)
+		addedIdSet.add(ifcLocalPlacement.id)
+		newElements.add(ifcLocalPlacement)
 		true
-	}
-	
-	def dispatch updateIfcElement(Axis2Placement3D o, IfcAxis2Placement3D product, IWorkflowContext ctx){
-		true
-	}
-		
-	def dispatch updateIfcElement(Direction o, IfcDirection product, IWorkflowContext ctx) {
-		true
-	} 
+	}	
 	// End update elements
 	
 	// Creating new opening element
@@ -196,7 +201,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		var ifcLocalPlacement = createLocalPlacement(o.placement)
 		
 		objectPlacementType.eSet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(ifcLocalPlacement.id))
-		//t = 
+		
 		
 		/*val Command addLocalPlacementCommand = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, ifcLocalPlacement)
 		addLocalPlacementCommand.execute*/
@@ -243,7 +248,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	}
 	
 	def IfcLocalPlacement createRefLocalPlacement(String i) {
-		val f = ifcFactory.createIfcLocalPlacement()
+		var f = ifcFactory.createIfcLocalPlacement()
 		f.setRef(i)
 		
 		f
@@ -293,7 +298,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f
 	}
 	
-	def LocationType create f: ifcFactory.createLocationType() createLocationType() {}
+	def LocationType createLocationType() {
+		ifcFactory.createLocationType()
+	}
 	
 	def AxisType2 createAxisType2(Axis2Placement3D a) {
 		val f = ifcFactory.createAxisType2()
@@ -349,6 +356,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		var lengthMeasure = f.coordinates.ifcLengthMeasure
 		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianX))
 		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianY))
+		
 		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianZ))
 		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 		command.execute*/
@@ -357,17 +365,24 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f
 	}
 	
-	def IfcCartesianPoint create f: ifcFactory.createIfcCartesianPoint createRefCartesianPoint(String i) {
+	def IfcCartesianPoint createRefCartesianPoint(String i) {
+		val f = ifcFactory.createIfcCartesianPoint 
 		f.setRef(i)
+		f
 	}
 	
-	def CoordinatesType1 create f: ifcFactory.createCoordinatesType1() createCoordinatesType1() {}
+	def CoordinatesType1 createCoordinatesType1() {
+		ifcFactory.createCoordinatesType1() 
+	}
 	
-	def IfcLengthMeasureType create f: ifcFactory.createIfcLengthMeasureType() createLengthMeasureTypeFromDouble(double d) {
+	def IfcLengthMeasureType createLengthMeasureTypeFromDouble(double d) {
+		var f = ifcFactory.createIfcLengthMeasureType() 
 		f.setValue(d)
+		f
 	}
 	
-	def IfcRelVoidsElement create f: ifcFactory.createIfcRelVoidsElement() createRelVoidsElementFromOpening(Wall w, IfcOpeningElement o) {
+	def IfcRelVoidsElement createRelVoidsElementFromOpening(Wall w, IfcOpeningElement o) {
+		val f = ifcFactory.createIfcRelVoidsElement()
 		val uuid = UUID::randomUUID().toString()
 		f.setGlobalId(uuid)
 		f.setId(newId)
@@ -385,10 +400,13 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		/*val Command command = AddCommand::create(ed, uosItem, FinalPackage::eINSTANCE.uos_Entity, f)
 		command.execute*/
 		newElements.add(f)
+		f
 	}
 	
-	def IfcWall create f: ifcFactory.createIfcWall() createRefWall(String i) {
+	def IfcWall createRefWall(String i) {
+		val f = ifcFactory.createIfcWall() 
 		f.setRef(i)
+		f
 	}
 	//End creating new object
 	
@@ -434,7 +452,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		println("Pruning " + refs.size + " refs")
 		for(e : refs) {
 			// The ref points to an entity which no longer exists
-			if (!ids.containsKey(e.ref)) {
+			if (!ids.containsKey(e.ref) && !addedIdSet.contains(e.ref)) {
 				EcoreUtil::delete(e)
 				
 				refCounter = refCounter + 1
@@ -460,8 +478,10 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		val removedSet = new HashSet<String>()
 		markedSet = new HashSet<String>()
+		addedIdSet = new HashSet<String>()
 		ifcFactory = FinalFactory::eINSTANCE
 		commonFactory = CommonFactory::eINSTANCE
+		
 		
 		entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
 		guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
@@ -483,7 +503,10 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		//If the object is a new opening - add it
 		pipesModel.elements.forEach[po |
 			if(guidMap.containsKey(po.name)) {
-				updateIfcElement(po, guidMap.get(po.name), ctx)
+				if(po instanceof Product) {
+					updateIfcElement(po as Product, guidMap.get(po.name) as IfcElement, ctx)
+				
+				}
 			}
 			else {
 				if(po instanceof Opening) {
@@ -520,7 +543,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			}
 		]
 		
-		collectGarbage(ctx)
+		//collectGarbage(ctx)
 		ctx.put(mainModelSlot, resource)
 		ctx.put(newElementsSlot, newElements)
 		
