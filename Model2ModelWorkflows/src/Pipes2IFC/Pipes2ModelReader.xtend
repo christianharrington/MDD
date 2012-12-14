@@ -10,17 +10,12 @@ import org.eclipse.xtext.resource.XtextResourceSet
 import org.eclipse.xtext.resource.XtextResource
 
 class Pipes2ModelReader extends WorkflowComponentWithSlot {
-	
 	String path
 	
-	def getPath() { path }
-	def setPath(String path) { this.path = path }
-	
 	override invoke(IWorkflowContext ctx) {
-	
+		println("Starting: Pipes2ModelReader")
 		// Initialize the model	
 		//new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri("../")
-		print("Starting .pipes model loading")
 		
 		var injector = new PipesStandaloneSetup().createInjectorAndDoEMFRegistration()
 		var resourceSet = injector.getInstance(typeof(XtextResourceSet))
@@ -31,8 +26,10 @@ class Pipes2ModelReader extends WorkflowComponentWithSlot {
 		    URI::createURI(path), true);
 		var model = resource.getContents().get(0) as Model;
 		
-		print("Done .pipes model loading")
-		
-		ctx.put(pipesOpeningsSlot, model)
+		ctx.put(pipesModelSlot, model)
+		println("Done: PipesModelReader")
 	}
+	
+	def getPath() { path }
+	def setPath(String path) { this.path = path }
 }

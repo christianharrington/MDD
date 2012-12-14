@@ -10,27 +10,12 @@ import java.io.FileInputStream
 import java.io.FileOutputStream
 import general.MalformedIFCXMLException
 
-class EntityInjector extends WorkflowComponentWithSlot {
-	/*
-	def static void main(String[] args) {
-		println("Start")
-		EntityInjector::inject("bin/output.ifcxml", "bin/input.ifcxml")
-		println("Done")
-	}*/
-	
+class EntityInjector extends WorkflowComponentWithSlot {	
 	var String sourcePath
 	var String outputPath
-	
-	def getSourcePath() { sourcePath }
-	def setSourcePath(String path) { sourcePath = path }
-	
-	def getOutputPath() { outputPath }
-	def setOutputPath(String path) { outputPath = path }
-	
-	
-	
+
 	override invoke(IWorkflowContext ctx) {
-		val input = ctx.get(newElementsXMLSlot) as String
+		val input = ctx.get(newEntitiesXMLSlot) as String
 		
 		val BufferedReader sourceBr = new BufferedReader(new InputStreamReader(new FileInputStream(sourcePath)))
 		val BufferedWriter outputWr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputPath)))
@@ -60,4 +45,9 @@ class EntityInjector extends WorkflowComponentWithSlot {
 		outputWr.close
 	}
 	
+	def getSourcePath() { sourcePath }
+	def setSourcePath(String path) { sourcePath = path }
+	
+	def getOutputPath() { outputPath }
+	def setOutputPath(String path) { outputPath = path }
 }

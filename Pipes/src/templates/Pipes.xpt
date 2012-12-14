@@ -1,6 +1,6 @@
 «IMPORT pipes»
 «DEFINE main FOR Model»
-«FILE "output.pipes"»«LET elements.typeSelect(Wall) AS walls»«IF walls.size > 0»Walls
+«FILE "pipesModel.pipes"»«LET elements.typeSelect(Wall) AS walls»«IF walls.size > 0»Walls
 «FOREACH walls AS e SEPARATOR ' and
 '»«EXPAND entry FOR e»«ENDFOREACH»«ENDIF»«ENDLET»
 «LET elements.typeSelect(Opening) AS openings»«IF openings.size > 0»Openings

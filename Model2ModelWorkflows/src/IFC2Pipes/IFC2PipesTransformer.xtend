@@ -7,33 +7,23 @@ import java.util.ArrayList
 import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import pipes.Model
 import pipes.Opening
-import pipes.LocalPlacement
 import pipes.FlowSegment
 import pipes.Product
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
-import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcAxis2Placement3D
-import pipes.Axis2Placement3D
-import pipes.Direction
 import org.eclipse.xtext.xbase.lib.BooleanExtensions
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcWall
 import pipes.Wall
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
-	
 	PipesFactoryImpl pipesFactory
 	
-	/*
-	 addXXX(targetModelElement e1, sourceModelElement e2)
-	 * create new targetModelElements with factory
-	 */
-	 
+	// Openings
 	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening, IWorkflowContext ctx) {
-		val Opening op = createOpening(ifcOpening)
-		println(ifcOpening.name)
-		println(ifcOpening.getClass())
+		val op = createOpening(ifcOpening)
+		
 		val placement = objFromRef(ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
 		addLocalPlacement(op, placement, ctx)
 	
@@ -46,8 +36,9 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		op.description = ifcOpening.description		
 	}
 	
+	// Flow segments
 	def private addFlowSegment(Model pipesModel, IfcFlowSegment ifcFlowSegment, IWorkflowContext ctx) {
-		val FlowSegment fs = createFlowSegment(ifcFlowSegment)
+		val fs = createFlowSegment(ifcFlowSegment)	
 		
 		val placement = objFromRef(ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
 		addLocalPlacement(fs, placement, ctx)		
@@ -61,20 +52,36 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		fs.description = ifcFlowSegment.description		
 	}
 	
+	// Walls
+	def private addWall(Model pipesModel, IfcWall ifcWall, IWorkflowContext ctx) {
+		val Wall w = createWall(ifcWall)
+		
+		val placement = objFromRef(ifcWall.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
+		addLocalPlacement(w, placement, ctx)		
+		
+		pipesModel.elements.add(w)
+	}
+	
+	def private Wall create w: pipesFactory.createWall() createWall(IfcWall ifcWall) {
+		w.elementName = ifcWall.name
+		w.name = ifcWall.globalId
+		w.description = ifcWall.description
+	}
+	
+	// Local placements
 	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement, IWorkflowContext ctx) {
-		val LocalPlacement lp = pipesFactory.createLocalPlacement()
-		val Axis2Placement3D axis = pipesFactory.createAxis2Placement3D()
-		val Direction axisDir = pipesFactory.createDirection()
-		val Direction refDir = pipesFactory.createDirection()
+		val lp = pipesFactory.createLocalPlacement()
+		val axis = pipesFactory.createAxis2Placement3D()
+		val axisDir = pipesFactory.createDirection()
+		val refDir = pipesFactory.createDirection()
 		
-		val IfcAxis2Placement3D ifcAxis = objFromRef(ifcLocalPlacement.relativePlacement.ifcAxis2Placement3D, ctx)
+		val ifcAxis = objFromRef(ifcLocalPlacement.relativePlacement.ifcAxis2Placement3D, ctx)
 		
-		val IfcCartesianPoint loc = objFromRef(ifcAxis.location.ifcCartesianPoint as IfcCartesianPoint, ctx)
+		val loc = objFromRef(ifcAxis.location.ifcCartesianPoint as IfcCartesianPoint, ctx)
 		
 		//Coordinates are X,Y,Z http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcgeometryresource/lexical/ifccartesianpoint.htm
 		if(loc.coordinates.ifcLengthMeasure.size != 3){
-			println("Non 3D cartesian point for local placement. Count " + loc.coordinates.ifcLengthMeasure.size)
-			System::exit(1)
+			throw new InvalidIFCException("Non 3D cartesian point for local placement. Count " + loc.coordinates.ifcLengthMeasure.size)
 		}
 		axis.cartesianX = loc.coordinates.ifcLengthMeasure.get(0).value
 		axis.cartesianY = loc.coordinates.ifcLengthMeasure.get(1).value
@@ -109,26 +116,9 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		
 		product.placement = lp;
 	}
-	
-	def private addWall(Model pipesModel, IfcWall ifcWall, IWorkflowContext ctx) {
-		val Wall w = createWall(ifcWall)
-		
-		val placement = objFromRef(ifcWall.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
-		addLocalPlacement(w, placement, ctx)		
-		
-		pipesModel.elements.add(w)
-	}
-	
-	def private Wall create w: pipesFactory.createWall() createWall(IfcWall ifcWall) {
-		w.elementName = ifcWall.name
-		w.name = ifcWall.globalId
-		w.description = ifcWall.description
-	}
-	
-	//def private addDirection(Axis2Placement3D a2p, )
 
 	override invoke(IWorkflowContext ctx) {
-		println("Starting: IFC2PipesTransformer")
+		println('Starting: IFC2PipesTransformer')
 		// Get openings and flow segments from the context
 		val openings = ctx.get(openingsSlot) as ArrayList<IfcOpeningElement>
 		val flowSegments = ctx.get(flowSegmentsSlot) as ArrayList<IfcFlowSegment>
@@ -153,7 +143,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 			addWall(pipesModel, it, ctx)
 		]
 		
-		ctx.put(pipesOpeningsSlot, pipesModel)
-		println("Done: IFC2PipesTransformer")
+		ctx.put(pipesModelSlot, pipesModel)
+		println('Done: IFC2PipesTransformer')
 	}
 }

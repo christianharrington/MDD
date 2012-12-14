@@ -41,5 +41,11 @@
 	<classpathentry kind="lib" path="dep/org.eclipse.xpand_1.2.0.v201211130812.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.emf.edit_2.8.0.v20120917-0436.jar"/>
 	<classpathentry kind="lib" path="dep/org.eclipse.emf.edit.source_2.8.0.v20120917-0436.jar"/>
+	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24-plugins.jar"/>
+	<classpathentry kind="lib" path="dep/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="dep/slf4j-api-1.6.2.jar"/>
+	<classpathentry kind="lib" path="dep/slf4j-log4j12-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24-utils.jar"/>
+	<classpathentry kind="lib" path="dep/commons-io-1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

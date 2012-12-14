@@ -6,24 +6,29 @@ import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import org.iso.standard._10303.part._28.version._2.xmlschema.common.Entity
 
 abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
-	val String fileSlot = 'file' // The path to the XML file
-	val String pipesOpeningsSlot = 'pipesOpenings' //Pipes DSL object graph
-	val String mainModelSlot = 'mainModel' //IFC main model object graph
-	val String openingsSlot = 'openings'
-	val String flowSegmentsSlot = 'flowSegments'
-	val String wallsSlot = 'walls'
-	val String entityMapSlot = 'entityMap'
-	val String guidMapSlot = 'guidMap'
-	val String newElementsSlot = 'newElements'
-	val String newElementsXMLSlot = 'newElementsXML'
+	val pipesModelSlot = 'pipesModel' //Pipes DSL object graph
+	val ifcModelSlot = 'ifcModel' //IFC model object graph
+	val ifcModelPathSlot = 'ifcModelPath' // The path to the XML file containing the IFC model
+	
+	// The extracted openings, flow segments and walls
+	val openingsSlot = 'openings'
+	val flowSegmentsSlot = 'flowSegments'
+	val wallsSlot = 'walls'
+	
+	// Map from ids & guids
+	val id2EntityMapSlot = 'id2EntityMap'
+	val guid2ProductMapSlot = 'guid2ProductMap'
+	
+	val newEntitiesSlot = 'newEntities' // New entities that will be added to the model
+	val newEntitiesXMLSlot = 'newEntitiesXML' // The XML string that represents the above entities
 	
 	private static var int highestId = 0
-
-	def getFileSlot() { fileSlot }
 	
-	def getPipesOpeningsSlot() { pipesOpeningsSlot }
+	def getPipesModelSlot() { pipesModelSlot }
 
-	def getMainModelSlot() { mainModelSlot }
+	def getIFCModelSlot() { ifcModelSlot }
+	
+	def getIFCModelPathSlot() { ifcModelPathSlot }
 	
 	def getOpeningsSlot() { openingsSlot }
 	
@@ -31,15 +36,15 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	
 	def getWallsSlot() { wallsSlot }
 	
-	def getEntityMapSlot() { entityMapSlot }
+	def getId2EntityMapSlot() { id2EntityMapSlot }
+	
+	def getGuid2ProductMapSlot() { guid2ProductMapSlot }
+	
+	def getNewEntitiesSlot() { newEntitiesSlot }
+	
+	def getNewEntitiesXMLSlot() { newEntitiesXMLSlot }
 	
 	def getHighestIdSlot() { highestIdSlot }
-
-	def getGuidMapSlot() { guidMapSlot }
-	
-	def getNewElementsSlot() { newElementsSlot }
-	
-	def getNewElementsXMLSlot() { newElementsXMLSlot }
 
 	override postInvoke() {	}
 	
@@ -48,7 +53,7 @@ abstract class WorkflowComponentWithSlot implements IWorkflowComponent {
 	def <T extends Entity> T objFromRef(T refObject, IWorkflowContext ctx) {
 		if (refObject.id != null && refObject.ref == null) return refObject
 		else if (refObject.ref != null) {
-			val entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
+			val entityMap = ctx.get(id2EntityMapSlot) as HashMap<String, Entity>
 			entityMap.get(refObject.ref) as T
 		}
 		else {

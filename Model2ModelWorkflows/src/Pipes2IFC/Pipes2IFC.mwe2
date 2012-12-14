@@ -6,42 +6,55 @@ import general.IFC2ModelReader
 var ifcWritePathTemp = 'bin/output.tmp.ifcxml'
 var ifcWritePath = 'bin/output.ifcxml'
 
-var IFCFilePath = 'NanoLabBuilding/Merging_test_small.ifcxml'
-var pipesReadPath = 'bin/output.pipes'
-
 Workflow {
-	
-	//Don't know if this is important
+	// Register the Pipes package
 	bean = org.eclipse.emf.mwe.utils.StandaloneSetup {
 		platformUri = "../"
 		registerGeneratedEPackage = "pipes.PipesPackage"
 		registerEcoreFile = "platform:/resource/Pipes/model/Pipes.ecore"
 	}
 	
+	// Reads the IFC model from disk
 	component = IFC2ModelReader {
-		file = IFCFilePath
+		path = 'bin/ifcModel.ifcxml'
 	}
 	
+	// Reads the Pipes model from disk
 	component = Pipes2ModelReader {
-		path = pipesReadPath
+		path = 'bin/pipesModel.pipes'
 	}
-	/*
-	component = PipesXMI2ModelReader {
+	
+	// Reads the Pipes model in XMI format from disk
+	/*component = PipesXMI2ModelReader {
 		path = "bin/instance.xmi"
 	} */
 	
+	// Extracts the relevant entities from the IFC model
 	component = general.IFCExtractor {}
 	
+	// Performs the transformation to the IFC model
 	component = Pipes2IFCTransformer {}
 	
-	component = Model2XMLWriter {
+	// Writes the IFC model to disk
+	component = general.IFCModel2XMLWriter {
 		path = ifcWritePathTemp
 	}
 	
+	// Produces ifcXML for the new entities
 	component = EntityXMLWriter {}
 	
+	// Inserts the new XML into the ifcXML for the model
 	component = Pipes2IFC.EntityInjector {
 		sourcePath = ifcWritePathTemp
 		outputPath = ifcWritePath
+	}
+	
+	// Upload the new version to the BimServer
+	component = XML2BimServer {
+		filePath = 'bin/ifcModel.ifcxml'
+		server = 'pillar.christianharrington.com'
+		user = 'cnha@itu.dk'
+		password = 'password'
+		poid = '536638'
 	}
 }

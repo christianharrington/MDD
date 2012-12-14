@@ -42,17 +42,12 @@ import org.tech.iai.ifc.xml.ifc._2x3.final_.LocationType
 import java.util.UUID
 import org.tech.iai.ifc.xml.ifc._2x3.final_.Uos
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain
-import org.eclipse.emf.common.command.Command
-import org.eclipse.emf.edit.command.AddCommand
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory
 import org.eclipse.emf.common.command.BasicCommandStack
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcElement
 import pipes.Product
-import org.eclipse.emf.common.util.EList
-import org.eclipse.emf.common.util.BasicEList
 
 class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
-	
 	FinalFactory ifcFactory
 	CommonFactory commonFactory
 	HashSet<String> markedSet
@@ -393,7 +388,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	//End creating new object
 	
 	def private collectGarbage(IWorkflowContext ctx) {
-		val ifcModel = ctx.get(mainModelSlot) as Resource
+		val ifcModel = ctx.get(IFCModelSlot) as Resource
 		var garbageCounter = 0
 		var refCounter = 0
 		
@@ -448,7 +443,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		println("Starting: Pipes2IFCTransformer")
 		//Initialization
 		// Get elements from context
-		pipesModel = ctx.get(pipesOpeningsSlot) as Model
+		pipesModel = ctx.get(pipesModelSlot) as Model
 		
 		val openings = ctx.get(openingsSlot) as ArrayList<IfcOpeningElement>
 		val flowSegments = ctx.get(flowSegmentsSlot) as ArrayList<IfcFlowSegment>
@@ -463,9 +458,9 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		ifcFactory = FinalFactory::eINSTANCE
 		commonFactory = CommonFactory::eINSTANCE
 		
-		entityMap = ctx.get(entityMapSlot) as HashMap<String, Entity>
-		guidMap = ctx.get(guidMapSlot) as HashMap<String, Entity>
-		resource = ctx.get(mainModelSlot) as Resource
+		entityMap = ctx.get(id2EntityMapSlot) as HashMap<String, Entity>
+		guidMap = ctx.get(guid2ProductMapSlot) as HashMap<String, Entity>
+		resource = ctx.get(IFCModelSlot) as Resource
 		
 		newElements = new ArrayList<Entity>()
 		
@@ -521,8 +516,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		]
 		
 		collectGarbage(ctx)
-		ctx.put(mainModelSlot, resource)
-		ctx.put(newElementsSlot, newElements)
+		ctx.put(IFCModelSlot, resource)
+		ctx.put(newEntitiesSlot, newElements)
 		
 		println("Done: Pipes2IFCTransformer")
 	}

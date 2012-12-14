@@ -13,11 +13,7 @@ import pipes.Model
 import pipes.PipesPackage
 
 class PipesXMI2ModelReader extends WorkflowComponentWithSlot {
-	
 	String path
-	
-	def getPath() { path }
-	def setPath(String path) { this.path = path }
 	
 	override invoke(IWorkflowContext ctx) {
 		// Initialize the model
@@ -31,7 +27,9 @@ class PipesXMI2ModelReader extends WorkflowComponentWithSlot {
 
     	var Resource resource = resSet.getResource(URI::createURI(path), true)
     	
-    	ctx.put(pipesOpeningsSlot, resource.contents.get(0) as Model)
+    	ctx.put(pipesModelSlot, resource.contents.get(0) as Model)
 	}
 	
+	def getPath() { path }
+	def setPath(String path) { this.path = path }
 }
