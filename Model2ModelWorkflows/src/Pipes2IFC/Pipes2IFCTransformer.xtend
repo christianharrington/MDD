@@ -144,21 +144,19 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		if((objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement).placementRelTo != null) {
 			id = (objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement).placementRelTo.ifcObjectPlacement.id
 		} else { id = null }
-		
-		val instance = FinalPackage::eINSTANCE
 				
 		// Create new LocalPlacement for element		
 		val objectPlacementType = createObjectPlacementType()
 		product.setObjectPlacement(objectPlacementType)
 		var ifcLocalPlacement = createLocalPlacement(o.placement)
 		
-		objectPlacementType.eSet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(ifcLocalPlacement.id))
+		objectPlacementType.setIfcObjectPlacement(createRefLocalPlacement(ifcLocalPlacement.id))
 		
 		// If the old Localplacements relative localplacement isn't null make a ref to it.
 		// Else set it to null
 		if(id != null) {
 			var prt = ifcFactory.createPlacementRelToType()
-			prt.eSet(instance.placementRelToType_IfcObjectPlacement, createRefLocalPlacement(id))
+			prt.setIfcObjectPlacement(createRefLocalPlacement(id))
 			ifcLocalPlacement.setPlacementRelTo(prt)
 		} else { id = null }
 		
@@ -172,6 +170,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 	def IfcOpeningElement createOpening(Opening o) {
 		val f = ifcFactory.createIfcOpeningElement()
 		val uuid = EcoreUtil::generateUUID() // UUID::randomUUID().toString()
+		o.name = uuid
 		f.setGlobalId(uuid)
 		f.setDescription(o.description)
 		f.setName(o.elementName)
@@ -181,7 +180,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.setObjectPlacement(objectPlacementType)
 		var ifcLocalPlacement = createLocalPlacement(o.placement)
 		
-		objectPlacementType.eSet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(ifcLocalPlacement.id))
+		objectPlacementType.setIfcObjectPlacement(createRefLocalPlacement(ifcLocalPlacement.id))
 		
 		newElements.add(ifcLocalPlacement)
 		
@@ -191,8 +190,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			entityMap.put(rve.id, rve)
 		}		
 
-		newElements.add(f)
-		
+		newElements.add(f)	
 		entityMap.put(f.id, f)	
 		
 		f
@@ -217,6 +215,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		}
 		f.setRelativePlacement(createRelativePlacementType(p))
 		
+		entityMap.put(f.id, f)
+		
 		f
 	}
 	
@@ -231,7 +231,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		val f = ifcFactory.createPlacementRelToType
 		val lp = createLocalPlacement(p)
 		entityMap.put(lp.id, lp)
-		f.ifcObjectPlacement.eSet(FinalPackage::eINSTANCE.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(lp.id))
+		
+		f.setIfcObjectPlacement(createRefLocalPlacement(lp.id))
 		
 		f
 	}
@@ -257,6 +258,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		var cartesianPoint = createCartesianPoint(a)
 		f.location.setIfcCartesianPoint(createRefCartesianPoint(cartesianPoint.id))
 		
+		entityMap.put(f.id, f)
 		newElements.add(f)
 		
 		f
@@ -297,6 +299,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.directionRatios.doubleWrapper.add(createDoubleWrapperTypeFromDouble(d.y))
 		f.directionRatios.doubleWrapper.add(createDoubleWrapperTypeFromDouble(d.z))
 		
+		entityMap.put(f.id, f)
 		newElements.add(f)
 		f
 	}
@@ -329,6 +332,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		lengthMeasure.add(createLengthMeasureTypeFromDouble(a.cartesianZ))
 		
+		entityMap.put(f.id, f)	
 		newElements.add(f)
 		
 		f
@@ -356,17 +360,17 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		f.setGlobalId(uuid)
 		f.setId(newId)
 		
-		f.relatedOpeningElement = ifcFactory.createRelatedOpeningElementType()
+		f.setRelatedOpeningElement(ifcFactory.createRelatedOpeningElementType())
 		
 		//Set opening
-		f.relatedOpeningElement.eSet(
-			FinalPackage::eINSTANCE.relatedOpeningElementType_IfcFeatureElementSubtraction, o
-		)
+		f.relatedOpeningElement.setIfcFeatureElementSubtraction(o)
 		
 		val wall = guidMap.get(w.name) as IfcWall
-		f.relatingBuildingElement = ifcFactory.createRelatingBuildingElementType()
-		f.relatingBuildingElement.eSet(FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, createRefWall(wall.ref))
+		f.setRelatingBuildingElement(ifcFactory.createRelatingBuildingElementType())
 		
+		f.relatingBuildingElement.eSet(FinalPackage::eINSTANCE.relatedBuildingElementType_IfcElement, wall)
+		
+		entityMap.put(f.id, f)
 		newElements.add(f)
 		f
 	}
@@ -444,7 +448,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		openingsAndFlowSegments.addAll(openings)
 		openingsAndFlowSegments.addAll(flowSegments)
 		
-		val removedSet = new HashSet<String>()
+		val removedSet = new HashSet<IfcProduct>()
 		markedSet = new HashSet<String>()
 		addedIdSet = new HashSet<String>()
 		ifcFactory = FinalFactory::eINSTANCE
@@ -492,7 +496,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 				entityMap.remove(ifcF.id)
 				guidMap.remove(ifcF.globalId)
 				EcoreUtil::delete(ifcF)
-				removedSet.add(ifcF.id)
+				removedSet.add(ifcF)
 			}
 		]
 		
@@ -504,7 +508,14 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 				entityMap.remove(ifcO.id)
 				guidMap.remove(ifcO.globalId)
 				EcoreUtil::delete(ifcO)
-				removedSet.add(ifcO.id)
+				removedSet.add(ifcO)
+			}
+		]
+		
+		removedSet.forEach[
+			switch it {
+				FlowSegment: flowSegments.remove(it)
+				IfcOpeningElement: openings.remove(it)
 			}
 		]
 
