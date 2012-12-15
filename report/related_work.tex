@@ -1,5 +1,6 @@
 %!TEX root = ./report.tex
 \section{Related Work}
+\label{sec:related_work}
 The problem of partial model editing and synchronization/updating is a common one. Here we present a couple of closely related projects as well as other important alternative approaches and resources.
 
 %A Graphical User Interface for Handling IFC Partial Model exchange
@@ -8,10 +9,10 @@ Nour argues that the exchange of partial models is one of the central challenges
 %BSPro COM-Server -- interoperability between software tools using industrial foundation classes
 Karola et al. describe an early solution to the partial model extraction and update problem implemented as middleware software. The BSPro COM-Server bridges various existing tools each needing a specific subset of IFC, making interoperability possible \cite{karola02}.
 
-%Towards a Framework for a Domain Specific Open Query Language for Building Information Models 
+%Towards a Framework for a Domain Specific Open Query Language for Building Information Models
 Another way to derive and edit subsets of an IFC model is through the use of the BIM Query Language\,\cite{mazairac10}. This language provides access to IFC models via an SQL-like syntax, with SELECT, UPDATE and DELETE queries and WHERE-clauses. The queried model is stored on a BIMServer. While the BIM Query Language does provide much more flexibility in terms of extraction and editing of IFC data when compared to the solution presented in this paper, it does not provide the same closeness to the domain.
 
-%Design guidelines for DSLs 
+%Design guidelines for DSLs
 As the design of the concrete syntax for the presented DSL has been a minor aspect of our solution, it is far from perfect. The guidelines for DSL design presented by Karsai et al. \,\cite{karsai09} has been used as the basis for the preliminary design of the DSL, and further work in this direction will most likely benefit from the guidelines' focus on simplicity and domain concepts.
 
 %From model transformation to incremental bidirectional model synchronization

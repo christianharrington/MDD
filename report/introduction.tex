@@ -14,10 +14,10 @@ Building Information Modeling (BIM) is the process of modeling various physical 
 
 In a real-life scenario, engineers usually work on separate parts of a building model using advanced visual tools such as Revit\footnote{An overview of Revit products can be found at \url{http://usa.autodesk.com/revit/}}. Due to the complexity of most BIM projects, the IFC files grow big and incomprehensible for humans to read or edit, and effectively a challenge for software that wants to work with the models. It is desirable to be able to work with aspects of a model such as heating, electrical wiring or plumbing independently. In this paper we present a setup, that demonstrates that such editing on a subset of an IFC model is feasible using modern modeling tools like Eclipse Modeling Foundation (EMF), Xtend and Xtext.
 
-\paragraph{Problem}
+\subsubsection{Problem}
 In particular, we focus on solving a common problem\,\cite[pp. 20]{jorgensen10} of combining a construction model with a plumbing model in a manageable way. When modeling buildings, the structure of the building and its plumbing installations, are modeled separately\,\cite[pp. 19--20]{jorgensen10}. The structure describes which walls are bearing and which walls have openings for plumbing.  Because of this separate modeling, it is possible for plumbing installations to be inconsistent with the structure. For example, a pipe could intersect a solid wall, without an opening for it to go through. This could result in a situation at the construction site where a planned installation is not possible in reality. This problem has been defined by Kaj A. Jørgensen, associate professor at Aalborg University, who has substantial domain knowledge through his work with methodologies for building modelling\footnote{Kaj Jørgensens page at Aalborg University: \url{http://www.kaj.person.aau.dk/}}.
 
-\paragraph{Solution}
+\subsubsection{Solution}
 Due to the difficulties mentioned above, it would be desirable if the construction engineer had an easy way to find these collisions and solve them, by making an opening or moving the installation\,\cite{jorgensen12}. To facilitate this, we will…
 \begin{itemize}
 \item Produce an analysis of the subset of IFC used to define pipe installations, and develop a simple, textual domain specific language (DSL), called PipesDSL, to specify these installations.
@@ -27,10 +27,10 @@ Due to the difficulties mentioned above, it would be desirable if the constructi
 \item Ideas for future BIM-related projects in the Model Driven Development course, based on this project.
 \end{itemize}
 
-\paragraph{Workflow}
+\subsubsection{Workflow}
 \label{sec:workflow}
 A workflow starts and ends at the server. We save a construction and plumbing model at BIMserver, which then merges the two. This source IFC model is retrieved by our client, and the relevant parts are extracted and transformed to PipesDSL. An editor for PipesDSL is launched, and the user can edit and verify its data and structure. Finally these changes are updated in the source model, and stored server-side. The solution is extensible and constitutes as a good starting point for future automation and visualization, which will be discussed in Section \ref{sec:plan_for_future_projects}.
 
 %TODO: consider adding connection to your project for all sub sections paragraphs
 \paragraph{}
-In the following we will give some background on the problem space. Then we will present a list of desirable features for a solution doing partial editing on a large model such as IFC. Our prototype is then described and evaluated with test buildings and reference to the desirable features. Finally we suggest ideas for future projects and conclude on our findings.
+This paper is structured as follows. In section \ref{sec:background} we will give some background on the problem space, and in section \ref{sec:problem_analysis_and_requirements} we do a problem analysis and list requirements. Section \ref{sec:solution} describes the solution, which we evaluate in section \ref{sec:evaluation}. In section \ref{sec:plan_for_future_projects} we suggest ideas for future projects. Section \ref{sec:related_work} lists related work, and we conclude on our findings in section \ref{sec:conclusion}.
