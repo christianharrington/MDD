@@ -101,8 +101,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			if(localPlacementIsChanged(o.placement, objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)) {
 				updateIfcLocalPlacement(o, product, ctx)
 			}
-		}
-		
+		}		
 	}
 	
 	def dispatch updateIfcElement(Opening o, IfcOpeningElement product, IWorkflowContext ctx){
@@ -152,13 +151,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		val instance = FinalPackage::eINSTANCE
 				
-		// Create new LocalPlacement for element
-		/*
-		var objectPlacement = createObjectPlacementType()
-		objectPlacement.eSet(instance.objectPlacementType_IfcObjectPlacement, createRefLocalPlacement(lp.id))
-		println(lp.id)
-		product.setObjectPlacement(objectPlacement) */
-		
+		// Create new LocalPlacement for element		
 		val objectPlacementType = createObjectPlacementType()
 		product.setObjectPlacement(objectPlacementType)
 		var ifcLocalPlacement = createLocalPlacement(o.placement)
