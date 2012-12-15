@@ -143,11 +143,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		var String id
 		if((objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement).placementRelTo != null) {
 			id = (objFromRef(product, ctx).objectPlacement.ifcObjectPlacement as IfcLocalPlacement).placementRelTo.ifcObjectPlacement.id
-			println("1")
-		} else {
-			id = null
-			println("2")
-		}
+		} else { id = null }
 		
 		val instance = FinalPackage::eINSTANCE
 				
@@ -164,10 +160,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			var prt = ifcFactory.createPlacementRelToType()
 			prt.eSet(instance.placementRelToType_IfcObjectPlacement, createRefLocalPlacement(id))
 			ifcLocalPlacement.setPlacementRelTo(prt)
-			println("3")
-		} else {
-			println("4")
-		}
+		} else { id = null }
+		
 		addedIdSet.add(ifcLocalPlacement.id)
 		newElements.add(ifcLocalPlacement)
 		true
@@ -257,9 +251,8 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		if(!(a.axis == null && a.refDirection == null)) {
 			f.setAxis(createAxisType2(a))
 			f.setRefDirection(createRefDirectionType1(a))
-		} else {
-			println("")
 		}
+		
 		f.location = createLocationType()
 		var cartesianPoint = createCartesianPoint(a)
 		f.location.setIfcCartesianPoint(createRefCartesianPoint(cartesianPoint.id))
@@ -479,12 +472,10 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 			if(guidMap.containsKey(po.name)) {
 				if(po instanceof Product) {
 					updateIfcElement(po as Product, guidMap.get(po.name) as IfcElement, ctx)
-				
 				}
 			}
 			else {
 				if(po instanceof Opening) {
-					println(po.name)
 					createOpening(po as Opening)
 				}
 			}

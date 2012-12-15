@@ -16,7 +16,7 @@ Workflow {
 	
 	// Reads the IFC model from disk
 	component = IFC2ModelReader {
-		path = 'bin/ifcModel.ifcxml'
+		path = 'NanoLabBuilding/Merging_test_small.ifcxml'
 	}
 	
 	// Reads the Pipes model from disk
@@ -31,6 +31,8 @@ Workflow {
 	
 	// Extracts the relevant entities from the IFC model
 	component = general.IFCExtractor {}
+	
+	component = tests.TestIFCExtractor {}
 	
 	// Performs the transformation to the IFC model
 	component = Pipes2IFCTransformer {}
@@ -49,12 +51,18 @@ Workflow {
 		outputPath = ifcWritePath
 	}
 	
+	component = IFC2ModelReader {
+		path = ifcWritePath
+	}
+	
+	component = tests.TestTransformers {}
+	
 	// Upload the new version to the BimServer
-	component = XML2BimServer {
+	/*component = XML2BimServer {
 		filePath = ifcWritePath
 		server = 'pillar.christianharrington.com'
 		user = 'cnha@itu.dk'
 		password = 'password'
 		poid = '536638'
-	}
+	}*/
 }
