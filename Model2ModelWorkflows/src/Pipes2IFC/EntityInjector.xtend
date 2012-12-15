@@ -20,10 +20,14 @@ class EntityInjector extends WorkflowComponentWithSlot {
 		val BufferedReader sourceBr = new BufferedReader(new InputStreamReader(new FileInputStream(sourcePath)))
 		val BufferedWriter outputWr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputPath)))
 		
-		val searchString = "</_1:uos>"
+		val searchUos = "</_1:uos>"
+		val searchLocalPlacement = '<_1:IfcObjectPlacement xsi:type="_1:IfcLocalPlacement"'
 		var sourceLine = sourceBr.readLine()
 		var trimLine = sourceLine.trim
-		while (sourceLine != null && !trimLine.startsWith(searchString)) {
+		while (sourceLine != null && !trimLine.startsWith(searchUos)) {
+			if (trimLine.startsWith(searchLocalPlacement)) {
+				sourceLine = sourceLine.replaceAll(searchLocalPlacement, "<_1:IfcLocalPlacement")
+			}
 			outputWr.write(sourceLine)
 			outputWr.newLine()
 			sourceLine = sourceBr.readLine()
@@ -31,7 +35,7 @@ class EntityInjector extends WorkflowComponentWithSlot {
 		}
 		
 		// sourceLine now points to uos-line; if null, an exception is thrown
-		if (sourceLine == null) throw new MalformedIFCXMLException("File " + sourcePath + " does not have a " + searchString + " tag")
+		if (sourceLine == null) throw new MalformedIFCXMLException("File " + sourcePath + " does not have a " + searchUos + " tag")
 		
 		outputWr.write(input)
 		

@@ -1,0 +1,41 @@
+module IFC2Pipes.IFC2Pipes
+
+import general.IFC2ModelReader
+import org.eclipse.emf.mwe.utils.*
+
+Workflow {
+	// Downloads the IFC model from BimServer
+	/*component = general.BimServer2XML {
+		filePath = 'bin/ifcModel.ifcxml'
+		server = 'pillar.christianharrington.com'
+		user = 'cnha@itu.dk'
+		password = 'password'
+		poid = '536638'
+	}*/
+	
+	// Reads the IFC model into memory
+	component = IFC2ModelReader {
+		path = 'NanoLabBuilding/Merging_test_small.ifcxml'
+	}
+	
+	// Extracts the relevant entities from the IFC model
+	component = general.IFCExtractor {}
+	
+	component = tests.TestIFCExtractor {}
+	
+	// Performs the transformation to the Pipes model
+	component = IFC2PipesTransformer {}
+	
+	component = tests.TestTransformers {}
+	
+	// Writes the Pipes model to a .pipes file
+	component = org.eclipse.xpand2.Generator {
+      	expand = "templates::Pipes::main FOR pipesModel"
+      	outlet = { path = "bin" }
+	}
+
+	// Writes the Pipes model to an XMI
+	/*component = PipesModel2XMIWriter {
+		path = 'bin/pipesModel.xmi'
+	}*/
+}

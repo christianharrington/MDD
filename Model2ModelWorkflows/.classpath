@@ -47,5 +47,7 @@
 	<classpathentry kind="lib" path="dep/slf4j-log4j12-1.6.2.jar"/>
 	<classpathentry kind="lib" path="lib/bimserver-1.1.0-2012-06-24-utils.jar"/>
 	<classpathentry kind="lib" path="dep/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="dep/junit.jar"/>
+	<classpathentry kind="lib" path="dep/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
