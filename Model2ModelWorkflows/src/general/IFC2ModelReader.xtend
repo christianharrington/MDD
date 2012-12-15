@@ -37,6 +37,7 @@ class IFC2ModelReader extends WorkflowComponentWithSlot {
 		val XMLResource resource = resFactory.createResource(URI::createFileURI(path)) as XMLResource
 		val options = resource.getDefaultLoadOptions()
 		options.put(XMLResource::OPTION_ENCODING, "UTF-8")
+		options.put(XMLResource::OPTION_EXTENDED_META_DATA, Boolean::TRUE)
 		
 		resource.load(options)
 		
