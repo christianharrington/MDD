@@ -8,7 +8,6 @@ import org.eclipse.emf.mwe2.runtime.workflow.IWorkflowContext
 import pipes.Model
 import pipes.Opening
 import pipes.FlowSegment
-import pipes.Product
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcOpeningElement
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcFlowSegment
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcLocalPlacement
@@ -16,24 +15,28 @@ import org.eclipse.xtext.xbase.lib.BooleanExtensions
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcCartesianPoint
 import org.tech.iai.ifc.xml.ifc._2x3.final_.IfcWall
 import pipes.Wall
+import pipes.PipesFactory
+import pipes.LocalPlacement
 
 class IFC2PipesTransformer extends WorkflowComponentWithSlot {
-	PipesFactoryImpl pipesFactory
+	PipesFactory pipesFactory
 	
 	// Openings
 	def private addOpening(Model pipesModel, IfcOpeningElement ifcOpening, IWorkflowContext ctx) {
 		val op = createOpening(ifcOpening)
 		
 		val placement = objFromRef(ifcOpening.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
-		addLocalPlacement(op, placement, ctx)
+		op.placement = createLocalPlacement(placement, ctx)
 	
 		pipesModel.elements.add(op)
 	}
 	
-	def private Opening create op: pipesFactory.createOpening() createOpening(IfcOpeningElement ifcOpening) {
+	def private Opening createOpening(IfcOpeningElement ifcOpening) {
+		val op = pipesFactory.createOpening()
 		op.elementName = ifcOpening.name
 		op.name = ifcOpening.globalId
-		op.description = ifcOpening.description		
+		op.description = ifcOpening.description
+		op
 	}
 	
 	// Flow segments
@@ -41,15 +44,17 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		val fs = createFlowSegment(ifcFlowSegment)	
 		
 		val placement = objFromRef(ifcFlowSegment.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
-		addLocalPlacement(fs, placement, ctx)		
+		fs.placement = createLocalPlacement(placement, ctx)		
 		
 		pipesModel.elements.add(fs)
 	}
 	
-	def private FlowSegment create fs: pipesFactory.createFlowSegment() createFlowSegment(IfcFlowSegment ifcFlowSegment) {
+	def private FlowSegment createFlowSegment(IfcFlowSegment ifcFlowSegment) {
+		val fs = pipesFactory.createFlowSegment()
 		fs.elementName = ifcFlowSegment.name
 		fs.name = ifcFlowSegment.globalId
-		fs.description = ifcFlowSegment.description		
+		fs.description = ifcFlowSegment.description
+		fs	
 	}
 	
 	// Walls
@@ -57,19 +62,21 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		val Wall w = createWall(ifcWall)
 		
 		val placement = objFromRef(ifcWall.objectPlacement.ifcObjectPlacement as IfcLocalPlacement, ctx)
-		addLocalPlacement(w, placement, ctx)		
+		w.placement = createLocalPlacement(placement, ctx)
 		
 		pipesModel.elements.add(w)
 	}
 	
-	def private Wall create w: pipesFactory.createWall() createWall(IfcWall ifcWall) {
+	def private Wall createWall(IfcWall ifcWall) {
+		val w = pipesFactory.createWall()
 		w.elementName = ifcWall.name
 		w.name = ifcWall.globalId
 		w.description = ifcWall.description
+		w
 	}
 	
 	// Local placements
-	def private addLocalPlacement(Product product, IfcLocalPlacement ifcLocalPlacement, IWorkflowContext ctx) {
+	def private LocalPlacement createLocalPlacement(IfcLocalPlacement ifcLocalPlacement, IWorkflowContext ctx) {
 		val lp = pipesFactory.createLocalPlacement()
 		val axis = pipesFactory.createAxis2Placement3D()
 		val axisDir = pipesFactory.createDirection()
@@ -114,7 +121,11 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		axis.refDirection = refDir
 		lp.axis2placement3d = axis
 		
-		product.placement = lp;
+		if (ifcLocalPlacement.placementRelTo != null && ifcLocalPlacement.placementRelTo.ifcObjectPlacement != null) {
+			lp.relativeTo = createLocalPlacement(ifcLocalPlacement.placementRelTo.ifcObjectPlacement as IfcLocalPlacement, ctx)
+		}
+		
+		lp
 	}
 
 	override invoke(IWorkflowContext ctx) {
@@ -125,7 +136,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		val walls = ctx.get(wallsSlot) as ArrayList<IfcWall>
 		
 		// Creates a pipe factory, iterates through openings and flow segments to transforms them
-		pipesFactory = new PipesFactoryImpl()
+		pipesFactory = PipesFactoryImpl::eINSTANCE
 		val pipesModel = pipesFactory.createModel()
 		
 		println("Openings: " + openings.size())
