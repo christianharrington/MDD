@@ -122,7 +122,7 @@ class IFC2PipesTransformer extends WorkflowComponentWithSlot {
 		lp.axis2placement3d = axis
 		
 		if (ifcLocalPlacement.placementRelTo != null && ifcLocalPlacement.placementRelTo.ifcObjectPlacement != null) {
-			lp.relativeTo = createLocalPlacement(ifcLocalPlacement.placementRelTo.ifcObjectPlacement as IfcLocalPlacement, ctx)
+			lp.relativeTo = createLocalPlacement(objFromRef(ifcLocalPlacement.placementRelTo.ifcObjectPlacement as IfcLocalPlacement, ctx), ctx)
 		}
 		
 		lp
