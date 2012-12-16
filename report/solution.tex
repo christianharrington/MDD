@@ -16,8 +16,15 @@ Before moving into a more technical description of the workflows facilitating th
 \begin{figure}[t]
     \centering
         \includegraphics[width=110mm]{images/PipesEcoreModel.png}
-    \caption{Pipes DSL Ecore Model}
+    \caption{Pipes DSL Ecore meta model.}
     \label{fig:pipes_dsl_ecore_model}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+        \includegraphics[width=120mm]{images/pipesAndExpressExample.png}
+    \caption{A comparison of an opening specification in the Pipes DSL (left) and the IFC EXPRESS format (right) with placement references and metadata.}
+    \label{fig:pipes_express_comparison}
 \end{figure}
 
 Figure \ref{fig:pipes_dsl_ecore_model} shows the Ecore model that the DSL is built on. Compared to Figure \ref{fig:ifcheirachy} all the critical elements of the domain are still present, but the inheritance hierarchy has been greatly simplified. As it can be seen Wall, Opening and Pipe are top level elements each with a physical location specified by the LocalPlacement reference. Figure (TODO INSERT IMAGE) depicts an example of an opening and a pipe as they are defined in an uncluttered and easily manageable way, compared to the EXPRESS format.
