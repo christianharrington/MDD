@@ -32,14 +32,14 @@ Before moving into a more technical description of the workflows facilitating th
     \label{fig:pipes_express_comparison}
 \end{figure}
 
-Figure \ref{fig:pipes_dsl_ecore_model} shows the Ecore model that the DSL is built upon. Compared to Figure \ref{fig:ifcheirachy}, all the critical elements of the domain are still present, but the inheritance hierarchy has been greatly simplified. As shown, Opening and Pipe are top level elements, each with a physical location specified by the LocalPlacement reference. Figure \ref{fig:pipes_express_comparison} depicts an example of an opening and a pipe as they are defined in the Pipes DSL in an uncluttered and manageable way, compared to the IFC-EXPRESS format. The textual syntax has been created from the Ecore meta model using Xtext, which also provides an editor with syntax highlighting and autocompletion.\footnote{For more information on Xtext, see \url{http://www.eclipse.org/Xtext/}} This editor is launched as an Eclipse instance.
+Figure \ref{fig:pipes_dsl_ecore_model} shows the Ecore model that the DSL is built upon. Compared to Figure \ref{fig:ifcheirachy}, all the critical elements of the domain are still present, but the inheritance hierarchy has been greatly simplified. As shown, Opening and Pipe are top level elements, each with a physical location specified by the LocalPlacement reference. Figure \ref{fig:pipes_express_comparison} depicts an example of an opening and a pipe as they are defined in the Pipes DSL in an uncluttered and manageable way, compared to the IFC-EXPRESS format. The textual syntax has been created from the Ecore meta model using Xtext, which also provides an editor with syntax highlighting and autocompletion. This editor is launched as an Eclipse instance.
 
 \subsection{BIMServer}
 The overall workflow of the end product is shown in Figure \ref{fig:overall_product_workflow}. As described in J\o rgensen's workflow document\,\cite{jorgensen12}, a construction model and a plumbing model are combined into one single model that needs to be verified. So-called openings, i.e. holes in walls and floors, need to be present where the plumbing model defines pipes to be installed. The merging of these models is executed on the BIMServer by the user as the first step of the workflow. When the models have been merged, the client application can retrieve the merged model as ifcXML. The user is now allowed to edit and add elements to the subset of the model on the client side before saving the building back to the BIMServer as ifcXML.
 
 Note that the solution does not take concurrent editing by multiple clients into account, although BIMServer does support version control and change notifications for this exact purpose.
 
-\begin{figure}[t]
+\begin{figure}[h]
     \centering
         \includegraphics[width=70mm]{images/CompleteWorkflow.pdf}
     \caption{Overall product workflow starting with a merge of two models. The user can edit a subset of the model through the client-side application.}
@@ -49,28 +49,28 @@ Note that the solution does not take concurrent editing by multiple clients into
 Although many tools exist for this job, we let a BIMServer instance handle the initial merging of plumbing and construction models. An advantage of the BIMServer is that it also provides conversion tools, which allows the user to retrieve the saved building in other formats as well as a Java client library\,\cite{beetz10}.
 
 \subsection{Client Side}
-Figure \ref{fig:IFC2PipesWorkflow} shows the IFC to Pipes workflow retrieving an IFC model from the BIMServer as XML, processing it to the corresponding Java object graph, extracting the pipes and opening elements and converting these to an editable DSL instance, which is in turn saved to disk as an XMI file. The XML file loaded from the server is saved to the local disk for use by the second workflow explained below.
+The client side of the prototype is implemented as a two MWE2 workflows, and a textual editor for the Pipes DSL. The workflows, called IFC2Pipes and Pipes2IFC, invoke a series of workflow components, implemented in Xtend. The IFC2Pipes workflow executes the transformations from IFC to the Pipes DSL, after which the textual editor can be used to modify the Pipes DSL model. When the editing is complete, the Pipes2IFC workflow is run to update the IFC model based on the changes in the Pipes DSL model.
 
 \begin{figure}[t]
     \centering
         \includegraphics[width=114mm]{images/IFC2Pipes.pdf}
-    \caption{Client-side workflow. Processes ifcXML from BIMServer and outputs a .pipes file, loadable in the Pipes DSL editor.}
+    \caption{IFC2Pipes workflow. Processes ifcXML from BIMServer and outputs a .pipes file, loadable in the Pipes DSL editor.}
     \label{fig:IFC2PipesWorkflow}
 \end{figure}
-
-The extraction process where relevant IFC elements are collected from the main model for conversion is implemented by a simple filtering mechanism extracting the pipe and opening elements. The real work of the IFC to Pipes workflow is done when this extract is converted to the corresponding Pipes DSL instance in the second to last step of the workflow. By utilizing the convenient model to model transformation language features of the Xtend language, each object is transformed from the IFC model to the corresponding PipesDSL object. Every IFC object inside the solution domain specified in Section \ref{subsec:problem_analysis} has a transformation rule specified here, making the conversion possible.
-
-The second client side MWE2 workflow, Pipes to IFC, is depicted on Figure \ref{fig:Pipes2IFCWorkflow}, where the user-edited XMI file is loaded into a Main Model Updater workflow component together with the non-updated extracted instance of the main model. Notice how the extraction is loaded in using the same workflow modules as in the first workflow, except the XML file is not fetched from the server but from the local disk. This makes for an easier update process in the Main Model Updater as the extracted instance is guaranteed not to have changed while the user was editing the XMI file. After the main model instance has been updated to reflect the users changes it is converted to XML and this new file is saved back to the BIMServer.
+\subsubsection{IFC2Pipes}
+Figure \ref{fig:IFC2PipesWorkflow} illustrates the first workflow. The newest revision of the IFC model is downloaded from BIMServer as ifcXML, and cached on disk. This is deserialised by an auto-generated deserialiser, which was produced alongside the meta model. After the model has been loaded into memory, the relevant elements (see Section \ref{subsec:requirements}) are extracted by a workflow component, IFCExtractor. These elements are passed to the IFC2PipesTransformer component, which creates a Pipes DSL model based on the extracted elements. This is done by creating a Pipes DSL model equivalent for each extracted element, preserving the GUID. Finally, using an Xpand template, textual Pipes DSL is generated, and serialised to a file on disk.
 
 \begin{figure}[t]
     \centering
         \includegraphics[width=120mm]{images/Pipes2IFC.pdf}
-    \caption{Client-side workflow. First it updates the main IFC model with the changes written in the Pipes DSL editor, then sends the main model back to BIMServer.}
+    \caption{Pipes2IFC workflow. Updates the main IFC model with the changes written in the Pipes DSL editor, then sends the IFC model back to BIMServer.}
     \label{fig:Pipes2IFCWorkflow}
 \end{figure}
-
-Clearly, most of the work in this workflow lies with the Main Model Updater, which uses a pattern match-like dispatch language feature of Xtend to elegantly update the Java object graph of the extracted model. The routine runs through all elements in the Java object graph to update the corresponding Pipes DSL objects by looking at matching GUIDs. Only traversing an extract of the main model guarantees a better running time and still guarantees a correct update procedure, as the Pipes DSL does not allow any updates to elements outside of this extract anyway.
-
-\subsubsection{Adding and Removing} The setup not only supports updating the attributes of elements, it also allows the user to do structural changes on the model. The Main Model Updater looks for elements in the Pipes DSL object graph without a GUID to determine if a new element should be created in the IFC model. This feature allows the user to add missing openings for pipe segments and is therefore crucial for the usefulness of the end product.
-
-Likewise, if the updater fails to find an element in Pipes DSL object graph that corresponds to the existing one in the Java object graph it means the element has been deleted and that the Main Model Updater should take appropriate action to update references
+\subsubsection{Pipes2IFC}
+Figure \ref{fig:Pipes2IFCWorkflow} shows the second workflow. As MWE2 workflows run in their own processes, it is necessary to deserialise the model again, this time using the cached ifcXML. Consequently, the IFCExtractor must also be invoked again. The edited Pipes DSL file is also deserialised and instantiated as a model. By comparing the two models, the Pipes2IFCTransformer updates the IFC model. To determine if an element has been added, updated, or removed, the GUIDs of the elements in the two models are used in the following way.
+\begin{itemize}
+\item If a GUID appears on an element in the Pipes DSL model, which does not exist in the IFC model, the element is transformed to its IFC equivalent, and added to the IFC model.
+\item If a GUID exists in both models, but the elements have different metadata, the IFC element is updated.
+\item If a GUID exists in the IFC model, but not in the Pipes DSL mode, it is removed from the IFC model.
+\end{itemize}
+When the IFC model has been appropriately updated, a simple garbage collection routine removes any orphaned elements or references, and the model is serialized as ifcXML, and sent to BIMServer as a new revision.
