@@ -1,37 +1,36 @@
 %!TEX root = ./report.tex
 \section{Related Work}
 \label{sec:related_work}
-The problem of partial model editing and synchronization/updating is a common one. Here we present a couple of closely related projects as well as other important alternative approaches and resources.
+The problem of partial model editing and synchronization is a common one. Here we present a couple of closely related projects as well as other important alternative approaches and resources.
 
 %A Graphical User Interface for Handling IFC Partial Model exchange
-Nour argues that the exchange of partial models is one of the central challenges of widespread use of a central model for BIM, mainly IFC\,\cite{nour08}. Although we do not adopt his idea of end-user filtering through the use of MVD, our approach does incorporate software filtering for defining a working subset of IFC. For the central IFC data repository, BIMServer has been used\,\cite{beetz10}.
+Nour argues that the exchange of partial models is one of the central challenges of widespread use of a central model for BIM, mainly IFC\,\cite{nour08}. Although we do not adopt his idea of end-user filtering through the use of MVD, our approach does incorporate software filtering for defining a working subset of IFC.
 
 %BSPro COM-Server -- interoperability between software tools using industrial foundation classes
-Karola et al. describe an early solution to the partial model extraction and update problem implemented as middleware software. The BSPro COM-Server bridges various existing tools each needing a specific subset of IFC, making interoperability possible \cite{karola02}.
-
-%Towards a Framework for a Domain Specific Open Query Language for Building Information Models
-Another way to derive and edit subsets of an IFC model is through the use of the BIM Query Language\,\cite{mazairac10}. This language provides access to IFC models via an SQL-like syntax, with SELECT, UPDATE and DELETE queries and WHERE-clauses. The queried model is stored on a BIMServer. While the BIM Query Language does provide much more flexibility in terms of extraction and editing of IFC data when compared to the solution presented in this paper, it does not provide the same closeness to the domain.
-
-%Design guidelines for DSLs
-As the design of the concrete syntax for the presented DSL has been a minor aspect of our solution, it is far from perfect. The guidelines for DSL design presented by Karsai et al. \,\cite{karsai09} has been used as the basis for the preliminary design of the DSL, and further work in this direction will most likely benefit from the guidelines' focus on simplicity and domain concepts.
-
-%From model transformation to incremental bidirectional model synchronization
-%The View Update Problem for XML
-Staworko et al.\,\cite{staworko10} define and discuss the view-update problem for instances where both the view and the source are XML documents. Although our solution has an XMI-backed view with a concrete syntax realised by the DSL, the formalizations of both the view-update problem and its solutions are very relevant for the future work on our synchronization logic.
-
+Karola et al. describe an early solution to the partial model extraction and update problem implemented as middleware. The BSPro COM-Server bridges various existing tools, each requiring a specific subset of IFC, making interoperability possible \cite{karola02}.
 
 %Embedded Software Development with Projectional Language Workbenches
 %PrEdE: a Projectional Editor for the Eclipse Modeling Framework
-An alternative to our approach allowing free source text editing is projectional editing. As specified by Tomasetti et al.\,\cite{tomasetti11}, projectional editors operate directly on the model, and thus no model synchronization is involved. An example of a projectional editor is Jetbrains MPS\footnote{Jetbrains MPS can be found at \url{http://www.jetbrains.com/mps/}}. One advantage of this approach is that it is impossible to create inconsistent models. However, it also means a loss of notational flexibility, seeing that any notation must adhere directly to the model when no grammar or parser is involved\,\cite{conf/models/Voelter10}. Consequently, in order to be able to bring the notation as close to the domain as possible, a projectional editor has not been desirable for our solution.
+An alternative to our approach, allowing free source text editing, is projectional editing. As specified by Tomasetti et al.\,\cite{tomasetti11}, projectional editors operate directly on the model, and thus no model synchronization is involved. An example of a projectional editor is Jetbrains MPS\footnote{Jetbrains MPS can be found at \url{http://www.jetbrains.com/mps/}}. This approach trades loss of notational flexibility for a guarantee of model consistency\,\cite{conf/models/Voelter10}. Consequently, in order to bring the notation as close to the domain as possible, a projectional editor was not desirable for our solution.
+
+%Towards a Framework for a Domain Specific Open Query Language for Building Information Models 
+Another way to derive and edit subsets of an IFC model is through the use of the BIM Query Language\,\cite{mazairac10}. This language provides access to IFC models via an SQL-like syntax. The queried model is stored on a BIMServer. While the BIM Query Language does provide much more flexibility in terms of extraction and editing of IFC data when compared to the solution presented in this paper, it does not provide the same closeness to the chosen subdomain.
+
+%From model transformation to incremental bidirectional model synchronization
+%The View Update Problem for XML
+Staworko et al. define and discuss the view-update problem for instances where both the view and the source are XML documents\,\cite{staworko10}. Any Ecore model, i.e. also the Pipes DSL model, can be converted to XMI thus making the formalizations of both the view-update problem and its solutions are very relevant for the future work on our synchronization logic.
 
 %Feature-Based Survey of Model Transformation Approaches
 The model transformations used in our solution has mainly been realized through the direct manipulation approach described by Czarnecki et al.\,\cite{czarnecki06}, facilitated by the dispatch method feature of Xtend and the clarity of the Modeling Workflow Engine 2.
 
+%TODO reference this paper somewhere in the paper
+%Design guidelines for DSLs 
+As the design of the concrete syntax for the presented DSL has been a minor aspect of our solution, it is far from perfect. The guidelines for DSL design presented by Karsai et al.\,\cite{karsai09} has been used as the basis for the preliminary design of the DSL, and further work in this direction will most likely benefit from the guidelines.
 
 
 
 
 
 
-%Industry Foundation Classes And Interoperable Commercial Software In Support Of Design Of Energy-Efficient Buildings
+%TODO: include a reference to this somewhere in the report: Industry Foundation Classes And Interoperable Commercial Software In Support Of Design Of Energy-Efficient Buildings
 

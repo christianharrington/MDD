@@ -15,7 +15,7 @@ Workflow {
 	
 	// Reads the IFC model into memory
 	component = IFC2ModelReader {
-		path = 'NanoLabBuilding/Merging_test_small.ifcxml'
+		path = 'NanoLabBuilding/Mathias_test_0.ifcxml'
 	}
 	
 	// Extracts the relevant entities from the IFC model
