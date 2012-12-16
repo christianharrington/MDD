@@ -35,18 +35,18 @@ Before moving into a more technical description of the workflows facilitating th
 Figure \ref{fig:pipes_dsl_ecore_model} shows the Ecore model that the DSL is built upon. Compared to Figure \ref{fig:ifcheirachy}, all the critical elements of the domain are still present, but the inheritance hierarchy has been greatly simplified. As shown, Opening and Pipe are top level elements, each with a physical location specified by the LocalPlacement reference. Figure \ref{fig:pipes_express_comparison} depicts an example of an opening and a pipe as they are defined in an uncluttered and manageable way, compared to the IFC-EXPRESS format.
 
 \subsection{BIMServer}
-The overall workflow of the end product is shown in Figure \ref{fig:overall_product_workflow}. As described in J\o rgensen's workflow document\,\cite{jorgensen12}, a construction model and a plumbing model are combined into one single model that needs to be verified. So-called openings, i.e. holes in walls and floors, need to be present where the plumbing model defines pipes to be installed. The merging of these models is executed on the BIMServer by the user as the first step of the workflow. When merging has finished, the client side of the solution can retrieve the merged building as XML. The user is now allowed to edit and add elements to the subset of the model on the client side before saving the building back to the BIMServer as XML.
+The overall workflow of the end product is shown in Figure \ref{fig:overall_product_workflow}. As described in J\o rgensen's workflow document\,\cite{jorgensen12}, a construction model and a plumbing model are combined into one single model that needs to be verified. So-called openings, i.e. holes in walls and floors, need to be present where the plumbing model defines pipes to be installed. The merging of these models is executed on the BIMServer by the user as the first step of the workflow. When the models have been merged, the client application can retrieve the merged model as ifcXML. The user is now allowed to edit and add elements to the subset of the model on the client side before saving the building back to the BIMServer as ifcXML.
 
-Note that the solution does not take concurrent editing by multiple clients into account although the BIMServer does support version control as well as merging. We will leave it for future work to ensure correct handling of current editing by clients.
+Note that the solution does not take concurrent editing by multiple clients into account, although BIMServer does support version control and change notifications for this exact purpose.
 
 \begin{figure}[t]
     \centering
         \includegraphics[width=70mm]{images/CompleteWorkflow.pdf}
-    \caption{Overall product porkflow starting with merging of two models. The user can edit a subset of the model through the client side of the prototype.}
+    \caption{Overall product workflow starting with a merge of two models. The user can edit a subset of the model through the client-side application.}
     \label{fig:overall_product_workflow}
 \end{figure}
 
-We let a BIMServer handle the initial merging of plumbing and construction models although many tools exist for this job. The special advantage of the BIMServer is that it also provides, conversion tools allowing the user to retrieve the saved building in other formats as well as Java client library in addition to the above mentioned version control features. In particular the Java client library is important for automating the workflow, as it allows for programmatic server communication.
+Although many tools exist for this job, we let a BIMServer instance handle the initial merging of plumbing and construction models. An advantage of the BIMServer is that it also provides conversion tools, which allows the user to retrieve the saved building in other formats as well as a Java client library.
 
 \subsection{Client Side}
 Figure \ref{fig:IFC2PipesWorkflow} shows the IFC to Pipes workflow retrieving an IFC model from the BIMServer as XML, processing it to the corresponding Java object graph, extracting the pipes and opening elements and converting these to an editable DSL instance, which is in turn saved to disk as an XMI file. The XML file loaded from the server is saved to the local disk for use by the second workflow explained below.
