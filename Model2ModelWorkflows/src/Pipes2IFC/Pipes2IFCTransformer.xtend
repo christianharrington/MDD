@@ -514,7 +514,7 @@ class Pipes2IFCTransformer extends WorkflowComponentWithSlot {
 		
 		removedSet.forEach[
 			switch it {
-				FlowSegment: flowSegments.remove(it)
+				IfcFlowSegment: flowSegments.remove(it)	
 				IfcOpeningElement: openings.remove(it)
 			}
 		]
