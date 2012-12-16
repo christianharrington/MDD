@@ -46,7 +46,7 @@ Note that the solution does not take concurrent editing by multiple clients into
     \label{fig:overall_product_workflow}
 \end{figure}
 
-Although many tools exist for this job, we let a BIMServer instance handle the initial merging of plumbing and construction models. An advantage of the BIMServer is that it also provides conversion tools, which allows the user to retrieve the saved building in other formats as well as a Java client library.
+Although many tools exist for this job, we let a BIMServer instance handle the initial merging of plumbing and construction models. An advantage of the BIMServer is that it also provides conversion tools, which allows the user to retrieve the saved building in other formats as well as a Java client library\,\cite{beetz10}.
 
 \subsection{Client Side}
 Figure \ref{fig:IFC2PipesWorkflow} shows the IFC to Pipes workflow retrieving an IFC model from the BIMServer as XML, processing it to the corresponding Java object graph, extracting the pipes and opening elements and converting these to an editable DSL instance, which is in turn saved to disk as an XMI file. The XML file loaded from the server is saved to the local disk for use by the second workflow explained below.
