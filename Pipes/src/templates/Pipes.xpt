@@ -19,24 +19,25 @@
 «DEFINE entry FOR Wall»	Wall "«name»"«IF this.elementName != null&&this.elementName.length > 0»
 		Name "«elementName»"«ENDIF»«IF this.description != null&&this.description.length > 0»
 		Description "«description»"«ENDIF»
-		Placement «EXPAND entry FOR placement»«ENDDEFINE»
+		«EXPAND entry FOR placement»«ENDDEFINE»
 
 «DEFINE entry FOR Opening»	Opening "«name»"«IF this.elementName != null&&this.elementName.length > 0»
 		Name "«elementName»"«ENDIF»«IF this.description != null&&this.description.length > 0»
 		Description "«description»"«ENDIF»
-		Placement «EXPAND entry FOR placement»«IF walls != null&&this.walls.size > 0»
+		«EXPAND entry FOR placement»«IF walls != null&&this.walls.size > 0»
 		Walls «FOREACH this.walls AS w SEPARATOR ', '»"«w»"
 		«ENDFOREACH»«ENDIF»«ENDDEFINE»
 
 «DEFINE entry FOR FlowSegment»	Pipe "«name»"«IF this.elementName != null&&this.elementName.length > 0»
 		Name "«elementName»"«ENDIF»«IF this.description != null&&this.description.length > 0»
 		Description "«description»"«ENDIF»
-		Placement «EXPAND entry FOR placement»«ENDDEFINE»
+		«EXPAND entry FOR placement»«ENDDEFINE»
 
-«DEFINE entry FOR LocalPlacement»{«IF this.relativeTo != null»
-			RelativeTo «EXPAND entry FOR this.relativeTo»«ENDIF»
-			Axis2Placement3d «EXPAND entry FOR this.axis2placement3d»
-		}«ENDDEFINE»
+«DEFINE entry FOR LocalPlacement»Placement {
+			Axis2Placement3d «EXPAND entry FOR this.axis2placement3d»«IF this.relativeTo != null»
+			RelativeTo 
+					«EXPAND entry FOR this.relativeTo»
+			«ENDIF»		}«ENDDEFINE»
 
 «DEFINE entry FOR Axis2Placement3D»{
 				Cartesian («cartesianX», «cartesianY», «cartesianZ»)
