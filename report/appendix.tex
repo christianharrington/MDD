@@ -4,6 +4,34 @@
 \section{Results of Black Box Tests}
 \label{app:blackboxtests}
 %Test
-\section{Results of Automated Tests}
+%VERY IMPORTANT TODO: mention which test buildings were used and where they can be found.
+
+
+\section{Automated Tests}
 \label{app:automatedtests}
-%test
+The workflow components used for tests can be found in the Eclipse project under: Model2ModelWorkflows/src/tests. These components work as a part of two test workflows similar to the ones used in the actual prototype. The only difference is that test components have been inserted after extraction and transformation components. The IFC2Pipes.mwe2 workflow is thus tested by the IFC2PipesTest.mwe2 workflow and the Pipes2IFC.mwe2 workflow is tested by the Pipes2IFCTest.mwe2 workflow.
+
+\subsubsection{Testing Element Extraction}
+The TestIFCExtractor workflow component verifies that the extraction process executed with a correct result. On any input building it checks that the number of extracted IfcProducts correspons to the number of products that should be extracted by looking directly at the ifcXML. For each of the extracted product elements it tests for a valid GUID and ID. On all input models of Appendix \ref{app:blackboxtests} the test passes.
+
+\subsubsection{Testing IFC to Pipes Model Transformation}
+The following consistency verification between elements in the IFC and Pipes models are carried out:
+
+\begin{itemize}
+	\item IfcFlowSegment <-> FlowSegment
+	\item IfcOpening <-> Opening
+	\item IfcWall <-> Wall
+	\item IfcLocalPlacement <-> LocalPlacement
+	\item IfcAxis2Placement3d <-> Axis2Placement3D
+	\item IfcDirection <-> Direction
+\end{itemize}
+
+By going through all extracted IFC products after the model to model transformation and comparing them to the elements of the Pipes model, the TestTransformers test component automates transformation testing of the subdomain. All consistency tests on all input buildings from Appendix \ref{app:blackboxtests} pass the tests.
+
+\subsubsection{Testing Pipes to IFC Update Routine}
+The TestTransformer test component is used for the purpose of testing the Pipes to IFC Update Routine as well. The same consistency checks are performed after the Pipes2IFCTransformer, which performs this routine. The same element relations, as above, are tested. All consistency tests on all input buildings from Appendix \ref{app:blackboxtests} pass the tests.
+
+
+
+
+
