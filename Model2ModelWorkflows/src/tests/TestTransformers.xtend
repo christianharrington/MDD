@@ -73,7 +73,7 @@ class TestTransformers extends WorkflowComponentWithSlot {
 				println(it.globalId)
 			}
 			
-			Assert::assertTrue('Opening does not exist in Pipes model', guid2PipesProductMap.containsKey(it.globalId))
+			Assert::assertTrue('Product does not exist in Pipes model', guid2PipesProductMap.containsKey(it.globalId))
 			
 			val pipesOpening = guid2PipesProductMap.get(it.globalId)
 			
