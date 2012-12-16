@@ -8,11 +8,11 @@ The solution combines several open source technologies to attain an extensible s
 % BIMServer - tightly coupled, but handles .ifc. Handles references as string
 % Jim Steel model. Seems to be better, but we have no deserializer.
 \label{subsec:ifc_meta_model}
-The prototype uses a meta model for IFC that is auto-generated from the XML Schema Definition (XSD) of ifcXML\footnote{ifcXML XSD: \url{http://buildingsmart-tech.org/ifcXML/IFC2x3/FINAL/IFC2X3.xsd}}. This allows it to utilize the XML serialiser and deserialiser provided by EMF to convert ifcXML to and from its Java representation. The advantage of using these tools is that we are able to rely on well-tested and widely used software, thus removing the serialisation steps as potential sources of error. However, generating the meta model from an XSD also means that the client application of the prototype only supports ifcXML, and not  the more widely used IFC-EXPRESS format. Because BIMServer accepts and generates both formats, this is a minor concern. But it means that the client side of the prototype relies on BIMServer for IFC-EXPRESS handling.
+The prototype uses a meta model for IFC that is auto-generated from the XML Schema Definition (XSD) of ifcXML.\footnote{ifcXML XSD: \url{http://buildingsmart-tech.org/ifcXML/IFC2x3/FINAL/IFC2X3.xsd}} This allows it to utilise the XML serialiser and deserialiser provided by EMF to convert ifcXML to and from its Java representation. The advantage of using these tools is that we are able to rely on well-tested and widely used software, thus removing the serialisation steps as potential sources of error. However, generating the meta model from an XSD also means that the client application of the prototype only supports ifcXML, and not  the more widely used IFC-EXPRESS format. Because BIMServer accepts and generates both formats, this is a minor concern. But it means that the client side of the prototype relies on BIMServer for IFC-EXPRESS handling.
 
 Although we chose not to use it, BIMServer also provides a meta model for IFC. This meta model comes with a custom serialiser and deserialiser for IFC-EXPRESS. We found that using this model and the provided serialisation tools was undesirable, as it would mean that the client application of the prototype would be completely dependent on the BIMServer. An advantage of using this meta model would be that it resembles the documented IFC specification more closely than the auto-generated meta model (even though both are equally correct). Specifically, the BIMServer meta model models inverse relationships, which are not represented as intuitively in the auto-generated meta model.
 
-A third meta model for IFC has been created by Jim Steel, Lecturer at the University of Queensland.\footnote{Jim Steel's page at the University of Queensland: \url{http://itee.uq.edu.au/~uqjstee8/}}\footnote{Jim Steel's model can be found at \url{http://www.emn.fr/z-info/atlanmod/index.php/Ecore#ifc2x3_0.1}} This meta model seems to model all relationships better than the two aforementioned models, but does not provide a deserialiser to any IFC format. As it is not within the scope of this project to create a deserialiser, for such a meta model, it was not used. However, using this model could considered as a future improvement.
+A third meta model for IFC has been created by Jim Steel, Lecturer at the University of Queensland.\footnote{Jim Steel at the University of Queensland: \url{http://itee.uq.edu.au/~uqjstee8/}}\footnote{Jim Steel's model can be found at \url{http://www.emn.fr/z-info/atlanmod/index.php/Ecore#ifc2x3_0.1}} This meta model seems to model all relationships better than the two aforementioned models, but does not provide a deserialiser to any IFC format. As it is not within the scope of this project to create a deserialiser for such a meta model, it was not used. However, using this meta model could be considered as a future improvement.
 
 \subsection{Pipes DSL}
 \label{subsec:pipes_dsl}
@@ -53,7 +53,7 @@ Figure \ref{fig:IFC2PipesWorkflow} shows the IFC to Pipes workflow retrieving an
 
 \begin{figure}[t]
     \centering
-        \includegraphics[width=120mm]{images/IFC2Pipes.pdf}
+        \includegraphics[width=114mm]{images/IFC2Pipes.pdf}
     \caption{Client-side workflow. Processes ifcXML from BIMServer and outputs a .pipes file, loadable in the Pipes DSL editor.}
     \label{fig:IFC2PipesWorkflow}
 \end{figure}
