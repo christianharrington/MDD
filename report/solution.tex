@@ -1,14 +1,14 @@
 %!TEX root = ./report.tex
 \section{Solution}
 \label{sec:solution}
-The solution combines several open source technologies to attain an extensible solution with two reusable MWE2 client side workflows at its core. The setup allows the user to edit a subset of IFC in an auto-generated Eclipse editor in between the two workflows. The main model is stored on a BIMServer for merging, version control, and the possibility of collaboration through the client-server design pattern, as this section will explain further. The prototype serves as an open source alternative to similar, proprietary BIM software.
+Our prototype combines several open source technologies to attain an extensible solution with two reusable MWE2 client side workflows at its core. The setup allows the user to edit a subset of IFC in an auto-generated Eclipse editor in between the two workflows. The two building models are stored on a BIMServer for possible merging, version control, and collaboration through the client-server design pattern, as this section will explain further. The prototype serves as an open source alternative to similar, proprietary BIM software.
 
 \subsection{IFC Meta Model}
 % Our meta model is generated from ifcXML XSD, only handles ifcXML
 % BIMServer - tightly coupled, but handles .ifc. Handles references as string
 % Jim Steel model. Seems to be better, but we have no deserializer.
 \label{subsec:ifc_meta_model}
-The prototype uses a meta model for IFC that is auto-generated from the XML Schema Definition (XSD) of ifcXML.\footnote{ifcXML XSD: \url{http://buildingsmart-tech.org/ifcXML/IFC2x3/FINAL/IFC2X3.xsd}} This allows it to utilise the XML serialiser and deserialiser provided by EMF to convert ifcXML to and from its Java representation. The advantage of using these tools is that we are able to rely on well-tested and widely used software, thus removing the serialisation steps as potential sources of error. However, generating the meta model from an XSD also means that the client application of the prototype only supports ifcXML, and not  the more widely used IFC-EXPRESS format. Because BIMServer accepts and generates both formats, this is a minor concern. But it means that the client side of the prototype relies on BIMServer for IFC-EXPRESS handling.
+The prototype uses an IFC meta model that is auto-generated from the XML Schema Definition (XSD) of ifcXML.\footnote{ifcXML XSD: \url{http://buildingsmart-tech.org/ifcXML/IFC2x3/FINAL/IFC2X3.xsd}} This allows utilisation of the XML serialiser and deserialiser provided by EMF to convert ifcXML to and from its Java representation.  One of the advantages of using these tools is that we do not have to develop any serialisers ourselves. However, generating the meta model from an XSD also means that the client application of the prototype only supports ifcXML, and not  the more widely used IFC-EXPRESS format. Because BIMServer accepts and generates both formats, this is a minor concern. But it means that the client side of the prototype relies on BIMServer for IFC-EXPRESS handling.
 
 Although we chose not to use it, BIMServer also provides a meta model for IFC. This meta model comes with a custom serialiser and deserialiser for IFC-EXPRESS. We found that using this model and the provided serialisation tools was undesirable, as it would mean that the client application of the prototype would be completely dependent on the BIMServer. An advantage of using this meta model would be that it resembles the documented IFC specification more closely than the auto-generated meta model (even though both are equally correct). Specifically, the BIMServer meta model models inverse relationships, which are not represented as intuitively in the auto-generated meta model.
 
@@ -16,7 +16,6 @@ A third meta model for IFC has been created by Jim Steel, Lecturer at the Univer
 
 \subsection{Pipes DSL}
 \label{subsec:pipes_dsl}
-Before moving into a more technical description of the workflows facilitating the final solution, we here present the simple Pipes DSL, which serves as the front-end of the prototype.
 
 \begin{figure}[t]
     \centering
@@ -28,11 +27,11 @@ Before moving into a more technical description of the workflows facilitating th
 \begin{figure}[t]
     \centering
         \includegraphics[width=120mm]{images/pipesAndExpressExample.png}
-    \caption{A comparison of an opening specification in the Pipes DSL (left) and the IFC EXPRESS format (right) with placement references and metadata.}
+    \caption{A comparison of an opening specification in the Pipes DSL (left) and the IFC-EXPRESS format (right) with placement references and metadata.}
     \label{fig:pipes_express_comparison}
 \end{figure}
 
-Figure \ref{fig:pipes_dsl_ecore_model} shows the Ecore model that the DSL is built upon. Compared to Figure \ref{fig:ifcheirachy}, all the critical elements of the domain are still present, but the inheritance hierarchy has been greatly simplified. As shown, Opening and Pipe are top level elements, each with a physical location specified by the LocalPlacement reference. Figure \ref{fig:pipes_express_comparison} depicts an example of an opening and a pipe as they are defined in the Pipes DSL in an uncluttered and manageable way, compared to the IFC-EXPRESS format. The textual syntax has been created from the Ecore meta model using Xtext, which also provides an editor with syntax highlighting and autocompletion. This editor is launched as an Eclipse instance.
+The simple Pipes DSL serves as the front-end of the prototype. Figure \ref{fig:pipes_dsl_ecore_model} shows the Ecore model that the DSL is built upon. Compared to Figure \ref{fig:ifcheirachy}, all the critical elements of the domain are still present, but the inheritance hierarchy has been greatly simplified. As shown, Opening, Wall, and FlowSegment are top level elements, each with a physical location specified by the LocalPlacement reference. Figure \ref{fig:pipes_express_comparison} depicts an example of an opening as it is defined in the Pipes DSL in an uncluttered and manageable way, compared to the IFC-EXPRESS format. The textual syntax has been created from the Pipes DSL meta model using Xtext, which also provides an editor with syntax highlighting and autocompletion. The editor is launched as an Eclipse instance.
 
 \subsection{BIMServer}
 The overall workflow of the end product is shown in Figure \ref{fig:overall_product_workflow}. As described in J\o rgensen's workflow document\,\cite{jorgensen12}, a construction model and a plumbing model are combined into one single model that needs to be verified. So-called openings, i.e. holes in walls and floors, need to be present where the plumbing model defines pipes to be installed. The merging of these models is executed on the BIMServer by the user as the first step of the workflow. When the models have been merged, the client application can retrieve the merged model as ifcXML. The user is now allowed to edit and add elements to the subset of the model on the client side before saving the building back to the BIMServer as ifcXML.
