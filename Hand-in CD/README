@@ -16,6 +16,11 @@ This disc contains:
 
 
 How to run our code
+1. Prerequisite
+2. Opening the projects
+3. Running the code
+4. Changing the source model
+5. Testing
 
 [1] Prerequisite
 In order to run our code you need to have Eclipse (http://www.eclipse.org/) installed along with Eclipse modeling tools (http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junosr1). Furthermore, the Xtend and Xtext extensions from this package are needed.
@@ -44,7 +49,7 @@ Before running the code the model code must be generated. To do this open the .g
 
 To run the two workflows first locate Model2ModelWorkflows/src/IFC2Pipes/IFC2Pipes.mwe2 in the Eclipse package explorer. Run this file as a MWE2 Workflow. A pipesModel.pipes has now been generated in the /bin folder. To open this, run the Xtext project as an Eclipse application and locate the generated .pipes file and open it. When changes have been made, and saved to the .pipes file, the second workflow can be run. This is done in a similar fashion to the first workflow, but is located in Model2ModelWorkflows/src/Pipes2IFC/Pipes2IFC.mwe2.
 
-[4] Changing source model
+[4] Changing the source model
 Out of the box the prototype loads a specific model from a BIMServer. To change what BIMServer is used locate and change in the two workflows the following:
 
 component = general.BimServer2XML {
@@ -74,3 +79,7 @@ component = IFC2ModelReader {
 }
 
 Now run both workflows as normal.
+
+[5] Testing
+
+To execute the tests of the prototype run the IFC2PipesTest.mwe2 and Pipes2IFCTest.mwe2 workflows in the same way as with normal execution.
