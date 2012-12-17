@@ -47,8 +47,8 @@ Note that the solution does not take concurrent editing by multiple clients into
 
 Although many tools exist for this job, we let a BIMServer instance handle the initial merging of plumbing and construction models. An advantage of the BIMServer is that it also provides conversion tools, which allows the user to retrieve the saved building in other formats as well as a Java client library\,\cite{beetz10}.
 
-\subsection{Client Side}
-The client side of the prototype is implemented as a two MWE2 workflows, and a textual editor for the Pipes DSL. The workflows, called IFC2Pipes and Pipes2IFC, invoke a series of workflow components, implemented in Xtend. The IFC2Pipes workflow executes the transformations from IFC to the Pipes DSL, after which the textual editor can be used to modify the Pipes DSL model. When the editing is complete, the Pipes2IFC workflow is run to update the IFC model based on the changes in the Pipes DSL model.
+\subsection{Client Application of the Prototype}
+The client side of the prototype is implemented as two MWE2 workflows and a textual editor for the Pipes DSL. The workflows, called IFC2Pipes and Pipes2IFC, invoke a series of workflow components, implemented in Xtend. The IFC2Pipes workflow executes the transformations from IFC to the Pipes DSL, after which the textual editor can be used to modify the Pipes DSL model. When the editing is complete, the Pipes2IFC workflow is run to update the IFC model, based on the changes in the Pipes DSL model.
 
 \begin{figure}[t]
     \centering
@@ -57,7 +57,7 @@ The client side of the prototype is implemented as a two MWE2 workflows, and a t
     \label{fig:IFC2PipesWorkflow}
 \end{figure}
 \subsubsection{IFC2Pipes}
-Figure \ref{fig:IFC2PipesWorkflow} illustrates the first workflow. The newest revision of the IFC model is downloaded from BIMServer as ifcXML, and cached on disk. This is deserialised by an auto-generated deserialiser, which was produced alongside the meta model. After the model has been loaded into memory, the relevant elements (see Section \ref{subsec:requirements}) are extracted by a workflow component, IFCExtractor. These elements are passed to the IFC2PipesTransformer component, which creates a Pipes DSL model based on the extracted elements. This is done by creating a Pipes DSL model equivalent for each extracted element, preserving the GUID. Finally, using an Xpand template, textual Pipes DSL is generated, and serialised to a file on disk.
+Figure \ref{fig:IFC2PipesWorkflow} illustrates the first workflow. The newest revision of the IFC model is downloaded from BIMServer as ifcXML, and cached on disk. This is deserialised by the deserialiser. After the model has been loaded into memory, the relevant elements (see Section \ref{subsec:requirements}) are extracted by a workflow component, IFCExtractor. These elements are passed to the IFC2PipesTransformer component, which creates a Pipes DSL model based on the extracted elements. This is done by creating a Pipes DSL model equivalent for each extracted element, preserving the globalId. Finally, using an Xpand template, concrete syntex for the Pipes DSL is generated, and serialised to a file on disk.
 
 \begin{figure}[t]
     \centering
@@ -66,10 +66,10 @@ Figure \ref{fig:IFC2PipesWorkflow} illustrates the first workflow. The newest re
     \label{fig:Pipes2IFCWorkflow}
 \end{figure}
 \subsubsection{Pipes2IFC}
-Figure \ref{fig:Pipes2IFCWorkflow} shows the second workflow. As MWE2 workflows run in their own processes, it is necessary to deserialise the model again, this time using the cached ifcXML. Consequently, the IFCExtractor must also be invoked again. The edited Pipes DSL file is also deserialised and instantiated as a model. By comparing the two models, the Pipes2IFCTransformer updates the IFC model. To determine if an element has been added, updated, or removed, the GUIDs of the elements in the two models are used in the following way.
+Figure \ref{fig:Pipes2IFCWorkflow} shows the second workflow. As MWE2 workflows run in their own processes, it is necessary to deserialise the IFC model again, this time using the cached ifcXML. Consequently, the IFCExtractor must also be invoked again to get instance of the extracted model. The Pipes2IFCTransformer will then compare the extracted model with an instance of the edited Pipes DSL, and update the IFC model with the result. To determine if an element has been added, updated, or removed, Pipes2IFCTransformer will check globalIds in the following way:
 \begin{itemize}
-\item If a GUID appears on an element in the Pipes DSL model, which does not exist in the IFC model, the element is transformed to its IFC equivalent, and added to the IFC model.
-\item If a GUID exists in both models, but the elements have different metadata, the IFC element is updated.
-\item If a GUID exists in the IFC model, but not in the Pipes DSL mode, it is removed from the IFC model.
+\item If a globalId appears on an element in the Pipes DSL model, which does not exist in the IFC model, the element is transformed to its IFC equivalent, and added to the IFC model.
+\item If a globalId exists in both models, but the elements have different metadata, the IFC element is updated.
+\item If a globalId exists in the IFC model, but not in the Pipes DSL mode, it is removed from the IFC model.
 \end{itemize}
-When the IFC model has been appropriately updated, a simple garbage collection routine removes any orphaned elements or references, and the model is serialized as ifcXML, and sent to BIMServer as a new revision.
+When the IFC model has been appropriately updated, a simple cleanup routine removes any orphaned elements or references, and the model is serialised as ifcXML. The ifcXML is then sent to BIMServer as a new revision.
