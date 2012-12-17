@@ -14,7 +14,9 @@ Workflow {
 	}
 	
 	// Reads the IFC model into memory
-	component = IFC2ModelReader {}
+	component = IFC2ModelReader {
+		path = ''
+	}
 	
 	// Extracts the relevant entities from the IFC model
 	component = general.IFCExtractor {}
