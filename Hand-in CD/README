@@ -1,0 +1,85 @@
+DSL for Textual Editing of IFC Partial Model
+
+Date: 16/12/12
+
+Authors:
+Nicolai Dahl Blicher-Petersen (ndbl@itu.dk)
+Christian Harrington (cnha@itu.dk)
+Thomas Hallier Didriksen (thdi@itu.dk)
+Anders Høst Kjærgaard (ahkj@itu.dk)
+Sune Alkærsig (sual@itu.dk)
+
+This disc contains:
+    - The paper discussing the development of the prototype
+    - The source code of the prototype
+    - Prototype test data (located in Prototype/Model2ModelWorkflows/NanoLabBuilding/)
+
+
+How to run our code
+1. Prerequisite
+2. Opening the projects
+3. Running the code
+4. Changing the source model
+5. Testing
+
+[1] Prerequisite
+In order to run our code you need to have Eclipse (http://www.eclipse.org/) installed along with Eclipse modeling tools (http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junosr1). Furthermore, the Xtend and Xtext extensions from this package are needed.
+
+[2] Opening the projects
+Included on this disc is an Eclipse workspace containing all the needed projects needed to run the prototype. Simply open this workspace with Eclipse. 
+
+Contained in the workspace are the following projects:
+    IfcXML - The auto generated IFC model.
+    Model2ModelWorkflows - The two workflows performing the Model-to-model transformations.
+    org.xtext.pipes - Xtext, most notably containing the grammar for the Pipes DSL
+    org.xtext.pipes.sdk - Xtext sdk
+    org.xtext.pipes.ui - Xtext ui
+    Pipes - The model of the Pipes DSL
+
+The source is also available on Github (https://github.com/christianharrington/MDD).
+
+Note that Eclipse might claim that there is an error with the following description:
+
+A value of type 'org.eclipse.xpand2.Generator' can not be assigned to the feature org.eclipse.emf.mwe2.runtime.workflow.AbstractCompositeWorkflowComponent.addComponent(org.eclipse.emf.mwe2.runtime.workflow.IWorkflowComponent)	IFC2Pipes.mwe2	/Model2ModelWorkflows/src/IFC2Pipes	line: 28 /Model2ModelWorkflows/src/IFC2Pipes/IFC2Pipes.mwe2	MWE2 Problem
+
+This error is not an actual error, and the prototype runs perfectly with it.
+
+[3] Running the code
+Before running the code the model code must be generated. To do this open the .genmodel files, right click the root element and select "Generate Model Code". This is already done in the projects and should not be needed.
+
+To run the two workflows first locate Model2ModelWorkflows/src/IFC2Pipes/IFC2Pipes.mwe2 in the Eclipse package explorer. Run this file as a MWE2 Workflow. A pipesModel.pipes has now been generated in the /bin folder. To open this, run the Xtext project as an Eclipse application and locate the generated .pipes file and open it. When changes have been made, and saved to the .pipes file, the second workflow can be run. This is done in a similar fashion to the first workflow, but is located in Model2ModelWorkflows/src/Pipes2IFC/Pipes2IFC.mwe2.
+
+[4] Changing the source model
+Out of the box the prototype loads a specific model from a BIMServer. To change what BIMServer is used locate and change in the two workflows the following:
+
+component = general.BimServer2XML {
+	filePath = 'bin/ifcModel.ifcxml'
+	server = 'pillar.christianharrington.com'
+	user = 'cnha@itu.dk'
+	password = 'password'
+	poid = '536638'
+}
+
+Change the information to your wnated BIMServer. filePath is the path to which the downloaded ifcXML files is downloaded, and poid is the id of the project on the server.
+
+To run local files rather than BIMServer files a few changes are needed in the workflows. In both you need to comment out the following:
+
+component = general.BimServer2XML {
+	filePath = 'bin/ifcModel.ifcxml'
+	server = 'pillar.christianharrington.com'
+	user = 'cnha@itu.dk'
+	password = 'password'
+	poid = '536638'
+}
+
+Secondly set the path of IFC2ModelReader (in both workflows) to the wanted file. I.e.:
+
+component = IFC2ModelReader {
+	path = 'NanoLabBuilding/Merging_test_small.ifcxml'
+}
+
+Now run both workflows as normal.
+
+[5] Testing
+
+To execute the tests of the prototype run the IFC2PipesTest.mwe2 and Pipes2IFCTest.mwe2 workflows in the same way as with normal execution.
